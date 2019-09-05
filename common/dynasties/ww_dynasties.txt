@@ -8,3 +8,15 @@
     name = "LeBaron" 
 	culture = arixan
 }
+2029093 = { 
+    name = "Vega" 
+	culture = arixan
+}
+2029094 = { 
+    name = "Johnson" 
+	culture = arixan
+}
+2029095 = { 
+    name = "Rios" 
+	culture = arixan
+}

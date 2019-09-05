@@ -165,7 +165,7 @@
 	culture = arixan
 	religion = woolleyite
 	martial = 5
-	diplomacy = 4
+	diplomacy = 6
 	stewardship = 5
 	intrigue = 5
 	learning = 5
@@ -180,5 +180,71 @@
 	trait = greedy
 	2631.2.22 = {
 	    birth = yes
+	}
+	2662.3.7 = {
+	    add_spouse = 1967124
+	}
+	2664.4.5 = {
+	    add_spouse = 1967123
+	}
+	2664.11.9 = {
+	    add_spouse = 1967125
+	}
+}
+
+1967123 = {
+	name = "Marilu"
+	dynasty = 2029093 # Vega
+	female = yes
+	culture = arixan
+	religion = woolleyite
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 6
+	learning = 5
+	2644.10.3 = {
+	    birth = yes
+	}
+	2664.4.5 = {
+	    add_spouse = 1967122
+	}
+}
+
+1967124 = {
+	name = "Linda"
+	dynasty = 2029094 # Johnson
+	female = yes
+	culture = arixan
+	religion = woolleyite
+	martial = 5
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 5
+	learning = 6
+	2642.6.5 = {
+	    birth = yes
+	}
+	2664.4.5 = {
+	    add_spouse = 1967122
+	}
+}
+
+1967125 = {
+	name = "Theresa"
+	dynasty = 2029095 # Rios
+	female = yes
+	culture = arixan
+	religion = woolleyite
+	martial = 5
+	diplomacy = 4
+	stewardship = 4
+	intrigue = 4
+	learning = 5
+	2648.6.5 = {
+	    birth = yes
+	}
+	2664.11.9 = {
+	    add_spouse = 1967122
 	}
 }
