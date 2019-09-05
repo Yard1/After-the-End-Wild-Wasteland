@@ -1,0 +1,7 @@
+2653.1.1 = {
+	holding_dynasty = 2029092
+	liege="d_calumet"
+}
+2653.1.1 = { #Ervil LeBaron
+	holder = 1967122
+}

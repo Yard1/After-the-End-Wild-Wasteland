@@ -1,0 +1,184 @@
+### Lakotah
+
+1889026 = {
+	name = "Ned"
+	dynasty = 1889009 # Pitchstone
+	culture = mountainer
+	religion = americanist
+	diplomacy = 0
+	martial = 8
+	stewardship = 3
+	intrigue = 5
+	learning = 5
+	trait = brilliant_strategist
+	trait = strong
+	trait = impaler
+	trait = wroth
+	trait = diligent
+	trait = proud
+	trait = brave
+	trait = zealous
+	trait = cruel
+	trait = unyielding_leader
+	give_nickname = nick_stonewall 
+	2636.3.3 ={
+		birth=yes
+	}
+	2636.3.3 = { 
+	    effect = {
+			add_artifact = ate_firearm
+		} 
+    }
+	2700.1.1 = {
+	    death=yes
+	}
+}
+
+### Great Lakes 
+
+1967118 = {
+	name = "Morgan"
+	dynasty = 1789000 # Avondale
+	culture = chicagoan
+	religion = americanist
+	martial = 6
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 7
+	learning = 7
+	trait = intricate_webweaver
+	trait = shrewd
+	trait = cynical
+	trait = depressed
+	trait = ambitious
+	trait = patient
+	trait = scarred
+	trait = paranoid
+	trait = shy
+	trait = celibate
+	father = 666112
+	give_nickname = nick_the_accursed
+	2626.4.7 = {
+	    birth = yes
+	}
+	2647.7.21 = {
+	    add_spouse = 1967119 
+	}
+	2652.6.21 = {
+	    effect = {
+		    add_artifact = terminus_est
+		} 
+	}
+	2653.6.21 = {
+		effect = { 
+		    add_rival = 1967120
+			add_rival = 1967121
+		}
+	}
+}
+
+1967119 = {
+	name = "Mary"
+	dynasty = 2029091 # Goldfield
+	female = yes
+	culture = grangelander
+	religion = catholic
+	martial = 6
+	diplomacy = 3
+	stewardship = 5
+	intrigue = 5
+	learning = 3
+	trait = charismatic_negotiator
+	trait = fair
+	trait = kind
+	trait = charitable
+	trait = patient
+	trait = uncouth
+	trait = honest
+	trait = sympathy_oldworld
+	2629.5.8 = {
+	    birth = yes
+	}
+	2647.7.21 = {
+	    add_spouse = 1967118
+	}
+	2653.6.21 = {
+	    death = {
+			death_reason = death_childbirth
+		}
+	}
+}
+
+1967120 = {
+	name="Stanislaus"
+	dynasty = 1789000 # Avondale
+	culture = chicagoan
+	religion = americanist
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 5
+	learning = 5
+	trait = rowdy
+	trait = willful
+	trait = robust
+	trait = kind
+	trait = twin
+	father = 1967118
+	mother = 1967119
+	2653.6.21 = {
+	    birth = yes
+		effect = { 
+		    add_rival = 1967118 
+		}
+	}
+}
+
+1967121 = {
+	name="Eleanor"
+	dynasty = 1789000 # Avondale
+	female = yes
+	culture = chicagoan
+	religion = americanist
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 5
+	learning = 5
+	trait = affectionate
+	trait = playful
+	trait = fair
+	trait = twin
+	father = 1967118
+	mother = 1967119
+	2653.6.21 = {
+	    birth = yes
+		effect = { 
+		    add_rival = 1967118 
+		}
+	}
+}
+
+1967122 = {
+	name="Ervil"
+	dynasty = 2029092 # LeBaron
+	culture = arixan
+	religion = woolleyite
+	martial = 5
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 5
+	learning = 5
+	trait = flamboyant_schemer
+	trait = shrewd
+	trait = zealous
+	trait = ambitious
+	trait = patient
+	trait = lustful
+	trait = cruel
+	trait = hedonist
+	trait = greedy
+	2631.2.22 = {
+	    birth = yes
+	}
+}

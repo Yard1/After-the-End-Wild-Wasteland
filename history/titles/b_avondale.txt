@@ -1,0 +1,10 @@
+2380.1.1 = {
+	holding_dynasty = 1789000
+	liege="d_calumet"
+}
+2581.1.17 = { #Anatol Avondale
+	holder = 666112
+}
+2653.1.1 = { #Morgan Avondale
+	holder = 1967118
+}

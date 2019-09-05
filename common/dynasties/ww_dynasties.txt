@@ -1,0 +1,10 @@
+###Wild Wasteland
+
+2029091 = { 
+    name = "Goldfield" 
+	culture = grangelander 
+}
+2029092 = { 
+    name = "LeBaron" 
+	culture = arixan
+}
