@@ -1,0 +1,32 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+# Hamiltonians/Madisonians
+
+hamiltonian;Madisonian;;;;;;;;;;;;;x
+hamiltonian_DESC;Madisonians differ from mainstream Americanism in that they consider the judicary the supreme branch of the government. Legends of Justices of the Supreme Court fighting against tyrannical Presidents and Congressmen have filled them with a conviction that a Chief Justice of the Supreme Court is the superior authority on all matters spiritual and temporal.;;;;;;;;;;;;;x
+
+d_supreme_court;The Supreme Court;;;;;;;;;;;;;x
+d_supreme_court_adj;Supreme Judical;;;;;;;;;;;;;x
+create_supreme_court;Restore the Supreme Court;;;;;;;;;;;;;x
+create_supreme_court_desc;If I am pious enough and control Rome, I can create a Fraticelli Pope to serve as the head of the faith in opposition to the vile Catholic Pope.;;;;;;;;;;;;;x
+restore_supreme_court_in_dc;Restore the Papacy in Rome;;;;;;;;;;;;;x
+restore_supreme_court_in_dc_desc;The Holy Father has lost control of his secular domain, but it is within my power to restore the Eternal City to him!;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_RELIGION_1_A;Rome, for centuries the center of Christendom, is in Fraticelli hands. This has given me an opportunity to create a Fraticelli Papacy, which shall do away with the scandalous display of wealth that the Catholic Papacy has long been guilty of.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_RELIGION_1_B;Rome, for centuries the center of Christendom, is in Fraticelli hands. [From.GetTitledFirstName] has therefore seen fit to create a Fraticelly Papacy, claiming it shall do away with the scandalous display of wealth that the Catholic Papacy has long been guilty of.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_RELIGION_3_A;I have granted Rome to its rightful ruler, so that the Fraticelli Pope may lead his Church from accommodations befitting his stature. The Pope shall soon take up his abode in the offices historically occupied by his Catholic predecessors.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_RELIGION_3_B;[From.GetTitledFirstName] has granted Rome to its rightful ruler, so that the Fraticelli Pope may lead his Church from accommodations befitting his stature. The Pope shall soon take up his abode in the offices historically occupied by his Catholic predecessors.;;;;;;;;;;;;;x
+title_chief_justice;Justice;;;;;;;;;;;;;x
+expected_next_title_chief_justice;Expected Next Justice;;;;;;;;;;;;;x
+expected_next_title_chief_justice_tooltip;This judge is probably next in line for a Justiceship when one becomes available.;;;;;;;;;;;;;x
+best_candidate_title_chief_justice;My Best Justice Candidate;;;;;;;;;;;;;x
+best_candidate_title_chief_justice_tooltip;Of all the judges in my realm, this one is the likeliest to get appointed Justice by the Chief Justice.;;;;;;;;;;;;;x
+PREFERATI_HAMILTONIAN;Senior Justice;;;;;;;;;;;;;x
+PREFERATI_HAMILTONIAN_TOOLTIP;The Senior Justice of the Supreme Court is the judge next in line to become Chief Justice;;;;;;;;;;;;;x
+COLLEGE_OF_CARDINALS_HAMILTONIAN;Supreme Court;;;;;;;;;;;;;x
+CAMPAIGN_FUND_HAMILTONIAN;Campaign Donation;;;;;;;;;;;;;x
+
+# Militarists
+
+jeffersonian;Militarist;;;;;;;;;;;;;x
+jeffersonian_DESC;Militarism is a splinter Americanist movement that formed as a consequence of the death of President Wyatt Kelleher at the hands of the Deitsch. Finding inspiration in the legends of America's ancient heroes: The United States Military, the Militarists have denounced the Post-Event Presidency as a pathetic farce, and sworn that they shall one day reunite America, by fire and sword if need be.;;;;;;;;;;;;;x
+GOD_ROOSEVELT:0 "Roosevelt"
