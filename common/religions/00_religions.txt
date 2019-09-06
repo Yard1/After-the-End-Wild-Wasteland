@@ -2207,15 +2207,19 @@ oldworld = {
 		seafarer = yes
 		female_temple_holders = yes
 		raised_vassal_opinion_loss = no
+		hard_to_convert = yes
 		
-		priests_can_marry = yes
-
 		aggression = 1.5 # ALL THE LAND IS HOLY
 
 		intermarry = americanist
 		intermarry = hamiltonian
 		intermarry = libertarian
 		
+		character_modifier = {
+			same_religion_opinion = 10 
+			castle_vassal_min_levy = 0.05
+			martial = 2
+		}
 	}
 
 	libertarian = {
