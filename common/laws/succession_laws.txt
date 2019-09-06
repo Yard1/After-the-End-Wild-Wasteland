@@ -89,6 +89,7 @@ succession_laws = {
 				title = e_usa
 			}
 			holder_scope = {
+				NOT = { religion_group = american_native } #uses Eldership instead
 				OR = {
 					independent = yes
 					NOT = {
@@ -122,6 +123,7 @@ succession_laws = {
 				holder_scope = { is_tribal = yes }
 			}
 			is_primary_type_title = no
+			NOT = { has_landed_title = d_confederated }
 		}
 		allow = {
 			holder_scope = {
@@ -131,20 +133,20 @@ succession_laws = {
 					custom_tooltip = { 
 						text = TT_NOT_UNREFORMED_PAGAN
 						hidden_tooltip = {
-							NOR = { 
+							NOR = {
 								religion = norse_pagan
 								religion = revelationist
-								religion = rust_cultist
 								religion = occultist
 								religion = thelemic
 								religion = celtic_pagan
 								religion = espiritista
+								religion = midewiwin
+								religion = raven_tales
 								religion = pagan
 							}
 						}
 					}
 				}
-				NOT = { holder_scope = { government = constitutional_rep } }
 				in_revolt = no
 				conditional_tooltip = {
 					trigger = {
@@ -203,6 +205,7 @@ succession_laws = {
 				title = e_usa
 			}
 			holder_scope = {
+				NOT = { religion_group = american_native } #uses Eldership instead
 				is_nomadic = no
 				OR = {
 					independent = yes
@@ -257,7 +260,6 @@ succession_laws = {
 						}
 					}
 				}
-				NOT = { holder_scope = { government = constitutional_rep } }
 			}
 			holder_scope = {
 				show_scope_change = no
@@ -330,7 +332,7 @@ succession_laws = {
 					}
 				}
 				NOR = {
-					has_religion_feature = religion_matriarchal
+					matriarchal_religion = yes
 					has_religion_feature = religion_patriarchal
 				}
 				is_merchant_republic = no
@@ -357,6 +359,7 @@ succession_laws = {
 				holder_scope = { is_tribal = yes }
 			}
 			is_primary_type_title = no
+			NOT = { has_landed_title = d_confederated }
 			NOT = { holder_scope = { government = military_governorate } }
 			#NOT = { holder_scope = { government = chinese_imperial_government } }
 		}
@@ -399,7 +402,6 @@ succession_laws = {
 				show_scope_change = no
 				in_revolt = no
 			}
-			NOT = { holder_scope = { government = constitutional_rep } }
 		}
 		effect = {
 			succession = {
@@ -449,6 +451,8 @@ succession_laws = {
 				
 				OR = {
 					NOT = { religion_group = pagan_group }
+					NOT = { religion = midewiwin }
+					NOT = { religion = raven_tales }
 					is_reformed_religion = yes
 					is_patrician = yes
 				}
@@ -569,7 +573,6 @@ succession_laws = {
 				}
 				has_law = centralization_4
 			}
-			NOT = { holder_scope = { government = constitutional_rep } }
 		}
 		
 		effect = {
@@ -612,6 +615,8 @@ succession_laws = {
 						}
 						OR = {
 							NOT = { religion_group = pagan_group }
+							NOT = { religion = midewiwin }
+							NOT = { religion = raven_tales }
 							religion = thelemic
 							religion = thelemic_reformed
 							is_reformed_religion = yes
@@ -727,7 +732,6 @@ succession_laws = {
 				}
 				has_law = centralization_4
 			}
-			NOT = { holder_scope = { government = constitutional_rep } }
 		}
 		
 		effect = {
@@ -775,6 +779,8 @@ succession_laws = {
 				
 				OR = {
 					NOT = { religion_group = pagan_group }
+					NOT = { religion = midewiwin }
+					NOT = { religion = raven_tales }
 					is_reformed_religion = yes
 					has_law = succession_voting_power_1
 					OR = { 
@@ -881,6 +887,8 @@ succession_laws = {
 				
 				OR = {
 					NOT = { religion_group = pagan_group }
+					NOT = { religion = midewiwin }
+					NOT = { religion = raven_tales }
 					is_reformed_religion = yes
 					has_law = succession_voting_power_1
 					has_law = succ_feudal_elective # Keep it even if you revoke Full Council Authority
@@ -916,7 +924,6 @@ succession_laws = {
 					}
 				}
 			}
-			NOT = { holder_scope = { government = constitutional_rep } }
 		}
 		allow = {
 			custom_tooltip = {
@@ -925,7 +932,6 @@ succession_laws = {
 					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
 				}
 			}
-			NOT = { holder_scope = { government = constitutional_rep } }
 		}
 		effect = {
 			succession = {
@@ -945,8 +951,17 @@ succession_laws = {
 		feudal_opinion = -5
 		potential = {
 			holder_scope = {
-				has_landed_title = e_usa
-				NOT = { religion_group = pagan_group }
+				OR = {
+					AND = {
+						has_landed_title = e_usa
+						NOT = { religion_group = pagan_group }
+					}
+					AND = {
+						has_landed_title = e_redcoat_dominion
+						religion = thelemic
+						culture = british
+					}
+				}
 				is_nomadic = no
 				is_merchant_republic = no
 				is_patrician = no
@@ -983,7 +998,6 @@ succession_laws = {
 					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
 				}
 			}
-			NOT = { holder_scope = { government = constitutional_rep } }
 		}
 		effect = {
 			succession = {
@@ -1112,7 +1126,6 @@ succession_laws = {
 				}
 				has_law = centralization_4
 			}
-			NOT = { holder_scope = { government = constitutional_rep } }
 		}
 		effect = {
 			succession = {
@@ -1148,7 +1161,6 @@ succession_laws = {
 					AND = {
 						NOT = { religion = norse_pagan }
 						NOT = { religion = revelationist }
-						NOT = { religion = rust_cultist }
 						NOT = { religion = occultist }
 						NOT = { religion = thelemic }
 						NOT = { religion = pagan }
@@ -1263,7 +1275,6 @@ succession_laws = {
 				}
 				has_law = centralization_4
 			}
-			NOT = { holder_scope = { government = constitutional_rep } }
 		}
 		
 		effect = {
@@ -1290,7 +1301,7 @@ succession_laws = {
 						is_theocracy = no
 					}
 					AND = {
-						has_religion_feature = religion_matriarchal
+						matriarchal_religion = yes
 						is_theocracy = no
 					}
 				}
@@ -1323,7 +1334,7 @@ succession_laws = {
 					is_primary_type_title = no
 				}
 			}
-			NAND = { 
+			NAND = {
 				has_law = succession_voting_power_1
 				OR = { 
 					has_law = succ_feudal_elective 
@@ -1340,13 +1351,13 @@ succession_laws = {
 			always = no
 		}			
 	}
+	
 	succ_papal_succession = {
 		potential = {
 			OR = {
 				title = k_papal_state
 				title = k_ursuline
 				title = d_quorum_of_the_twelve
-				title = d_supreme_court
 				AND = {
 					title = d_celtic_pagan_reformed
 					has_religion_feature = religion_theocratic_head
@@ -1393,7 +1404,6 @@ succession_laws = {
 			}
 			NOR = {
 				title = k_papal_state
-				title = d_supreme_court
 				title = k_ursuline
 				title = d_quorum_of_the_twelve
 				title = d_celtic_pagan_reformed
@@ -1421,12 +1431,15 @@ succession_laws = {
 				is_landless_type_title = yes
 				holder_scope = { is_theocracy = no }
 				holder_scope = { 
-					NOT = { religion = catholic }
-					NOT = { religion = ursuline }
-					NOT = { religion = high_church }
-					NOT = { religion = bickertonite }
-					NOT = { religion = strangite }
-					NOT = { religion = hamiltonian }
+					NOR = { 
+						religion = catholic
+						religion = ursuline
+						religion = high_church
+						religion = bickertonite
+						religion = strangite
+						religion = hamiltonian
+						religion = libertarian 
+					}
 				}
 			}
 			holder_scope = { 
@@ -1480,6 +1493,7 @@ succession_laws = {
 					religion = bickertonite
 					religion = strangite
 					religion = hamiltonian
+					religion = libertarian
 				}
 				is_merchant_republic = no
 				OR = {
@@ -1544,46 +1558,6 @@ succession_laws = {
 		}			
 	}
 	
-	succ_constitutional_elective = {
-		oldest_child_opinion = -5
-		child_opinion = -5
-		dynasty_opinion = -5
-		feudal_opinion = 10
-		potential = {
-			holder_scope = {
-				OR = {
-					has_landed_title = e_byzantium
-					has_landed_title = e_roman_empire
-					government = constitutional_rep
-				}
-				NOT = { religion_group = muslim }
-				is_nomadic = no
-				is_merchant_republic = no
-				is_patrician = no
-			}
-			NOT = { holder_scope = { government = confucian_bureaucracy } }
-			NOT = { holder_scope = { government = chinese_imperial_government } }
-
-		}
-		allow = {
-			custom_tooltip = {
-				text = not_forced_tt
-				hidden_tooltip = {
-					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
-				}
-			}
-		}
-		effect = {
-			succession = {
-				base_type = feudal_elective
-				voting_rules = constitutional_elective
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}			
-	}
-	
 	succ_offmap_succession = {
 		potential = {
 			holder_scope = {
@@ -1608,90 +1582,29 @@ gender_laws = {
 	cognatic_succession = {
 		potential = {
 			holder_scope = {
-				NOT = { has_religion_feature = religion_matriarchal }
-				NOT = { has_religion_feature = religion_equal }
-				OR = {
-					NOT = { tier = baron }
-					is_theocracy = yes
-					is_republic = yes
-				}
-				OR = {
-					independent = yes
-					NOT = {
-						any_liege = {
-							holy_order = yes
-						}
-					}
-					is_merchant_republic = yes
-				}
-				OR = {
-					AND = {
-						NOT = { religion = gaian }
-						#has_horde_culture = no
-						#is_tribal = no
-						#is_nomadic = no
-						#is_merchant_republic = no
-						is_patrician = no
-						
-						NAND = {
-							OR = {
-								is_theocracy = yes
-								holy_order = yes
-							}
-							OR = {
-								religion = ursuline
-								religion = gaian
-							}
-						}
-					}
-					AND = {
-						has_dlc = "Zeus"
-						OR = {
-							ROOT = { holder_scope = { primary_title = { has_law = status_of_women_3 } } }
-							ROOT = { holder_scope = { primary_title = { has_law = status_of_women_4 } } }
-							has_game_rule = {
-								name = gender
-								value = all
-							}
-						}
-						OR = {
-							is_patrician = no
-							liege = {
-								primary_title = {
-									OR = {
-										has_law = true_cognatic_succession
-										has_law = cognatic_succession
-									}
-								}
-							}
-						}
-					}
-				}
+				equal_religion = no
+				NOT = { has_religion_feature = religion_feature_midewiwin }
 			}
-			
-			is_landless_type_title = no
-			
-			OR = {
-				AND = {
-					tier = baron
-					is_theocracy = no
-					is_republic = no
-				}
-				holder_scope = {
-					is_theocracy = no
-					is_republic = no
-				}
-			}
-			
-			is_primary_type_title = no
 		}
-		allow = {
-			NOT = { holder_scope = { government = constitutional_rep } }
-			NOT = { holder_scope = { government = mconstitutional_rep } }
-		}
+		
 		effect = {
 			gender_succ = cognatic
 			set_allows_matrilineal_marriage = yes
+			
+			hidden_tooltip = { #Patrician family workaround
+				holder_scope = {
+					if = {
+						limit = {
+							is_patrician = yes
+							primary_title = {
+								title = PREVPREV
+							}
+						}
+						family_palace = { gender_succ = cognatic }
+						recalc_succession = yes
+					}
+				}
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -1706,25 +1619,12 @@ gender_laws = {
 	
 		potential = {
 			holder_scope = {
-				NOT = { religion = gaian }
-				NOT = { religion = neomayan }
-				NOT = { has_religion_feature = religion_matriarchal } 
-				NOT = { has_religion_feature = religion_equal }
-				NAND = {
-					OR = {
-						is_theocracy = yes
-						holy_order = yes
-					}
-					OR = {
-						religion = ursuline
-						religion = gaian
-					}
-				}
+				equal_religion = no
+				NOT = { has_religion_feature = religion_feature_midewiwin }
 			}
 		}
 		allow = {
-			NOT = { holder_scope = { government = constitutional_rep } }
-			NOT = { holder_scope = { government = mconstitutional_rep } }
+			gender_equality_trigger = no
 		}
 		effect = {
 			gender_succ = agnatic
@@ -1738,12 +1638,18 @@ gender_laws = {
 			
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					name = gender
-					value = all
-				}
+				gender_equality_trigger = yes
 			}
 			
+			modifier = {
+				factor = 50
+				holder_scope = {
+					is_theocracy = yes
+					religion_allows_female_temple_holders = no
+					religion_allows_male_temple_holders = yes
+				}
+			}
+
 			modifier = {
 				factor = 100
 				holder_scope = {
@@ -1751,13 +1657,16 @@ gender_laws = {
 						religion_group = christian
 						religion_group = afro_syncretic
 						religion_group = oldworld
-						culture_group = californian
-						culture = iroquois
+						has_feminist_culture_trigger = yes
+						gender_equality_trigger = yes
 					}
-					primary_title = {
-						NOT = { has_law = status_of_women_3 }
-						NOT = { has_law = status_of_women_4 }
-					}
+				}
+			}
+
+			modifier = {
+				factor = 0
+				holder_scope = {
+					gender_equality_trigger = yes
 				}
 			}
 		}
@@ -1767,121 +1676,55 @@ gender_laws = {
 		male_dynasty_opinion = -5
 		
 		potential = { 
-			holder_scope = { NOT = { has_religion_feature = religion_matriarchal } }
-			holder_scope = { NOT = { has_religion_feature = religion_patriarchal } }
-			OR = {
-				AND = {
-					has_dlc = "Zeus"
-					has_game_rule = {
-						name = gender
-						value = all
+			holder_scope = {
+				OR = {
+					gender_equality_trigger = yes
+					has_feminist_culture_trigger = yes
+					AND = {
+						is_theocracy = yes
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = yes
 					}
-					#is_patrician = no
-				}
-				holder_scope = {
-					OR = {
-						AND = {
-							OR = {
-								NAND = {
-									OR = {
-										is_theocracy = yes
-										holy_order = yes
-									}
-									OR = {
-										religion = ursuline
-										religion = gaian
-									}
-								}
-								OR = {
-									religion = celtic_pagan
-									religion = celtic_pagan_reformed
-								}
-							}
-							has_horde_culture = no
-							#is_tribal = no
-							is_nomadic = no
-							#is_merchant_republic = no
-							#is_patrician = no
-						}
-						government = constitutional_rep
-						government = mconstitutional_rep
-						has_religion_feature = religion_equal
-						has_religion_feature = religion_feature_rust_cultist
-						AND = {
-							has_dlc = "Zeus"
-							ROOT = { holder_scope = { primary_title = { has_law = status_of_women_4 } } }
-							OR = {
-								is_patrician = no
-								liege = {
-									primary_title = {
-										OR = {
-											has_law = true_cognatic_succession
-											has_law = cognatic_succession
-										}
-									}
-								}
-							}
-						}
+					any_owned_bloodline = {
+						has_bloodline_flag = bloodline_true_cognatic
 					}
 				}
 			}
-			
-			is_landless_type_title = no
-			
-			OR = {
-				AND = {
-					tier = baron
-					is_theocracy = no
-					is_republic = no
-				}
-				holder_scope = {
-					is_theocracy = no
-					OR = {
-						is_republic = no
-						is_patrician = yes
-					}
-				}
-				holder_scope = {
-					has_religion_feature = religion_equal
-				}
-			}
-			
-			is_primary_type_title = no
 		}
 		allow = {
+			matriarchal_religion = no
+			NOT = { has_religion_feature = religion_patriarchal }
 			OR = {
-				holder_scope = {
-					OR = {
-						religion = gaian
-						religion = ursuline
-						religion = sol_invicta
-						religion = reform
-						religion = neomayan
-						religion = united_church
-						religion = neognostic
-						religion_group = oldworld
-						culture_group = north_atlantic
-						culture_group = californian
-						culture_group = north_pacific
-						culture_group = lacustrine
-						culture = iroquois
-						has_religion_feature = religion_equal
-						government = constitutional_rep
-						government = mconstitutional_rep
-					}
+				gender_equality_trigger = yes
+				has_feminist_culture_trigger = yes
+				AND = {
+					is_theocracy = yes
+					religion_allows_female_temple_holders = yes
+					religion_allows_male_temple_holders = yes
 				}
-				OR = {
-					ROOT = { holder_scope = { primary_title = { has_law = status_of_women_4 } } }
-					has_game_rule = {
-						name = gender
-						value = all
-					}
+				any_owned_bloodline = {
+					has_bloodline_flag = bloodline_true_cognatic
 				}
 			}
 		}
 		effect = {
 			gender_succ = true_cognatic
 			set_allows_matrilineal_marriage = yes
+			
+			hidden_tooltip = { #Patrician family workaround
+				holder_scope = {
+					if = {
+						limit = {
+							is_patrician = yes
+							primary_title = {
+								title = PREVPREV
+							}
+						}
+						family_palace = { gender_succ = true_cognatic }
+						recalc_succession = yes
+					}
+				}
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -1893,15 +1736,31 @@ gender_laws = {
 				factor = 0.1
 				NOT = {
 					holder_scope = {
-						has_religion_feature = religion_equal
+						OR = {
+							equal_religion = yes
+							has_religion_feature = religion_feature_midewiwin
+							AND = {
+								is_theocracy = yes
+								religion_allows_female_temple_holders = yes
+								religion_allows_male_temple_holders = yes
+							}
+						}
 					}
 				}
 			}
-			
+
 			modifier = {
-				factor = 100
+				factor = 50
 				holder_scope = {
-					has_religion_feature = religion_equal
+					OR = {
+						equal_religion = yes
+						has_religion_feature = religion_feature_midewiwin
+						AND = {
+							is_theocracy = yes
+							religion_allows_female_temple_holders = yes
+							religion_allows_male_temple_holders = yes
+						}
+					}
 				}
 			}
 		}
@@ -1914,19 +1773,18 @@ gender_laws = {
 		potential = {
 			holder_scope = {
 				OR = {
-					has_religion_feature = religion_matriarchal
-					religion = gaian
-					religion = neomayan
+					matriarchal_religion = yes
+					any_owned_bloodline = {
+						has_bloodline_flag = bloodline_enatic
+					}
 					AND = {
-						OR = {
-							is_theocracy = yes
-							holy_order = yes
-						}
-						OR = {
-							religion = ursuline
-							religion = gaian
-							religion = neomayan
-						}
+						is_theocracy = yes
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = no
+					}
+					AND = {
+						holy_order = yes
+						religion = libertarian
 					}
 				}
 			}
@@ -1936,14 +1794,41 @@ gender_laws = {
 		}
 		effect = {
 			gender_succ = enatic
-			set_allows_matrilineal_marriage = yes
+			
+			hidden_tooltip = { #Patrician family workaround
+				holder_scope = {
+					if = {
+						limit = {
+							is_patrician = yes
+							primary_title = {
+								title = PREVPREV
+							}
+						}
+						family_palace = { gender_succ = enatic }
+						recalc_succession = yes
+					}
+				}
+			}
 		}
 		revoke_allowed = {
 			always = no
 		}
 		default_selection = {
 			factor = 1
-			
+			modifier = {
+				factor = 100
+				is_theocracy = yes
+				religion_allows_female_temple_holders = yes
+				religion_allows_male_temple_holders = no
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					matriarchal_religion = yes
+					religion = libertarian
+				}
+				holy_order = yes
+			}
 		}
 	}
 	
@@ -1954,32 +1839,42 @@ gender_laws = {
 		potential = {
 			holder_scope = {
 				OR = {
-					has_religion_feature = religion_matriarchal
+					matriarchal_religion = yes
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_enatic_cognatic 
 					}
-					religion = gaian
-					religion = neomayan					
-				}
-				NAND = {
-					OR = {
+					AND = {
 						is_theocracy = yes
-						holy_order = yes
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = no
 					}
-					OR = {
-						religion = ursuline
-						religion = gaian
+					AND = {
+						holy_order = yes
+						religion = libertarian
 					}
 				}
 			}
-			
-			is_landless_type_title = no
 		}
 		allow = {
 			
 		}
 		effect = {
 			gender_succ = enatic_cognatic
+			
+			hidden_tooltip = { #Patrician family workaround
+				holder_scope = {
+					if = {
+						limit = {
+							is_patrician = yes
+							primary_title = {
+								title = PREVPREV
+							}
+						}
+						family_palace = { gender_succ = enatic_cognatic }
+						recalc_succession = yes
+					}
+				}
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -1992,7 +1887,7 @@ gender_laws = {
 				NOT = {
 					holder_scope = {
 						OR = {
-							has_religion_feature = religion_matriarchal
+							matriarchal_religion = yes
 							any_owned_bloodline = {
 								has_bloodline_flag = bloodline_enatic_cognatic 
 							}
@@ -2005,7 +1900,7 @@ gender_laws = {
 				factor = 100
 				holder_scope = {
 					OR = {
-						has_religion_feature = religion_matriarchal
+						matriarchal_religion = yes
 						any_owned_bloodline = {
 							has_bloodline_flag = bloodline_enatic_cognatic 
 						}

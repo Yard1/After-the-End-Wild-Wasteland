@@ -8,7 +8,9 @@ d_supreme_court = {
 	title = "CHIEF_JUSTICE"
 	title_female = "CHIEF_JUSTICE"
 	foa = "JUDGE_FOA"
-	location_ruler_title = yes
+	location_ruler_title = no
+	dynasty_title_names = yes
+	short_name = yes
 	
 	allow = {
 		always = no # Only by special decision

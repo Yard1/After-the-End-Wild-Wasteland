@@ -449,7 +449,7 @@ de_jure_laws = {
 					religion = high_church
 					religion = mormon
 					religion = hamiltonian
-					#religion = bickertonite
+					religion = libertarian
 					#religion = strangite
 				}
 				is_tribal = no
@@ -498,6 +498,7 @@ de_jure_laws = {
 					religion = high_church
 					religion = mormon
 					religion = hamiltonian
+					religion = libertarian
 					#religion = bickertonite
 					#religion = strangite
 				}

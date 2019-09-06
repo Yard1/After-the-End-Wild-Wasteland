@@ -1,0 +1,152 @@
+namespace = miscATEWW
+
+character_event = {
+	id = miscATEWW.1
+	desc = "Make sure newly spawned characters in AI holy orders/theocracies make sense"
+	is_triggered_only = yes
+	hide_window = yes
+	only_men = yes
+
+	trigger = {
+		FROM = { character = no }
+		dynasty = NONE
+		FROMFROM = {
+			ai = yes
+			gender_equality_trigger = yes
+			OR = {
+				holy_order = yes
+				is_theocracy = yes
+				mercenary = yes
+				primary_title = { is_landless_type_title = yes }
+			}
+		}
+	}
+	
+	option = {
+		log = "miscATEWW.1: [Root.GetBestName] in [FromFrom.GetBestName] ([FromFrom.Religion.GetName])"
+		if = {
+			limit = {
+				FROMFROM = { 
+					OR = {
+						holy_order = yes
+						has_landed_title = d_nancy_harts
+					}
+				}
+			}
+			#all female
+			if = {
+				limit = {
+					FROMFROM = {
+						OR = {
+							matriarchal_religion = yes
+							religion = libertarian
+							has_landed_title = d_nancy_harts
+						}
+					}
+				}
+				set_gender = female
+			}
+			else_if = {
+				#60/40
+				limit = {
+					FROMFROM = {
+						equal_religion = yes
+					}
+				}
+				random_list = {
+					60 = {
+
+					}
+					40 = {
+						set_gender = female
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					trait = detached_priest
+					trait = martial_cleric
+					trait = scholarly_theologian
+					trait = mastermind_theologian
+				}
+			}
+			if = {
+				limit = {
+					FROMFROM = {
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = no
+					}
+				}
+				set_gender = female
+			}
+			else_if = {
+				limit = {
+					FROMFROM = {
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = yes
+					}
+				}
+				random_list = {
+					60 = {
+
+					}
+					40 = {
+						set_gender = female
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				FROMFROM = { matriarchal_religion = yes }
+			}
+			random_list = {
+				20 = {
+
+				}
+				80 = {
+					set_gender = female
+				}
+			}
+		}
+		else = {
+			random_list = {
+				60 = {
+
+				}
+				40 = {
+					set_gender = female
+				}
+			}
+		}
+		if = {
+			limit = { is_female = yes }
+			random_list = {
+				25 = {
+					create_random_soldier = {
+						culture = ROOT
+						female = yes
+						dynasty = NONE
+					}
+					new_character = {
+						ROOT = { copy_name = PREV }
+						death = yes
+					}
+				}
+				75 = {
+					random_character = {
+						limit = { 
+							is_female = yes
+							culture = ROOT
+							dynasty = NONE
+							NOT = { liege = { character = FROMFROM } } 
+						}
+						ROOT = { copy_name = PREV }
+					}
+				}
+			}
+		}
+	}
+}

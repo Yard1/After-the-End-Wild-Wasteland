@@ -10,9 +10,9 @@ d_supreme_court_adj;Supreme Judical;;;;;;;;;;;;;x
 JUDICARY;Judicary;;;;;;;;;;;;;x
 CHIEF_JUSTICE;Chief Justice;;;;;;;;;;;;;x
 create_supreme_court;Restore the Supreme Court;;;;;;;;;;;;;x
-create_supreme_court_desc;If I am pious enough and control Rome, I can create a Fraticelli Pope to serve as the head of the faith in opposition to the vile Catholic Pope.;;;;;;;;;;;;;x
-restore_supreme_court_in_dc;Restore the Papacy in Rome;;;;;;;;;;;;;x
-restore_supreme_court_in_dc_desc;The Holy Father has lost control of his secular domain, but it is within my power to restore the Eternal City to him!;;;;;;;;;;;;;x
+create_supreme_court_desc;If I am patriotic enough and control Washington, I can restore the Supreme Court to its rightful place, so that it may guide all patriots, as Madison wanted.;;;;;;;;;;;;;x
+restore_supreme_court_in_dc;Restore the Supreme Court in Washington;;;;;;;;;;;;;x
+restore_supreme_court_in_dc_desc;The Chief Justice has lost control of Washington, but it is within my power to restore the Capital to him!;;;;;;;;;;;;;x
 EVTDESC_ATE_WWW_RELIGION_1_A;Rome, for centuries the center of Christendom, is in Fraticelli hands. This has given me an opportunity to create a Fraticelli Papacy, which shall do away with the scandalous display of wealth that the Catholic Papacy has long been guilty of.;;;;;;;;;;;;;x
 EVTDESC_ATE_WWW_RELIGION_1_B;Rome, for centuries the center of Christendom, is in Fraticelli hands. [From.GetTitledFirstName] has therefore seen fit to create a Fraticelly Papacy, claiming it shall do away with the scandalous display of wealth that the Catholic Papacy has long been guilty of.;;;;;;;;;;;;;x
 EVTDESC_ATE_WWW_RELIGION_3_A;I have granted Rome to its rightful ruler, so that the Fraticelli Pope may lead his Church from accommodations befitting his stature. The Pope shall soon take up his abode in the offices historically occupied by his Catholic predecessors.;;;;;;;;;;;;;x

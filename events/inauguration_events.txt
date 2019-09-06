@@ -764,8 +764,7 @@ letter_event = {
 				}
 				modifier = {
 					factor = 0
-					NOT = { trait = bad_priest_christian }
-					NOT = { trait = bad_priest_mormon }
+					NOT = { trait = bad_priest_americanist }
 					NOT = { trait = hedonist }
 				}
 				modifier = {
@@ -1190,8 +1189,7 @@ letter_event = {
 				modifier = {
 					factor = 0
 					NOR = {
-						trait = bad_priest_christian
-						trait = bad_priest_mormon
+						trait = bad_priest_americanist
 						trait = hedonist
 					}
 				}
@@ -3958,7 +3956,7 @@ character_event = {
 	}
 	option = { #Will not go.
 		name = EVTOPTBHF20394
-		hidden_tooltip = { liege = { character_event = { id = AFI.139 days = 15 random = 15 } } } #Notify.
+		hidden_tooltip = { liege = { character_event = { id = AFI.130 days = 15 random = 15 } } } #Notify.
 
 		liege = {
 				show_scope_change = no	
