@@ -4,4 +4,4 @@ user_dir = "After the End Fan Fork - Wild Wasteland"
 
 picture = "After The End Fan Fork.jpg"
 
-dependencies = { "After the End Fan Fork" }
+dependencies = { "After the End Fan Fork" "After the End Fan Fork - Americanist Flavor" }
