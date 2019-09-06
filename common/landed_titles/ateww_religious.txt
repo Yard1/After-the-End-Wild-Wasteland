@@ -40,8 +40,11 @@ d_forscom = {
 	foa = "JUDGE_FOA"
 	location_ruler_title = yes
 	
-	allow = {
-		always = no # Only by special decision
+	allow = { #only via special decision
+		has_global_flag = general_of_army
+		religion = jeffersonian
+		num_of_holy_sites = 3
+		piety = 500
 	}
 	
 	# Always exists
