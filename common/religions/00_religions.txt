@@ -2205,7 +2205,7 @@ oldworld = {
 
 		god_names = {
 			GOD_THE_FOUNDERS GOD_WASHINGTON GOD_ROOSEVELT GOD_THE_FLAG
-			GOD_EISENHOWER GOD_REAGAN GOD_TRUMAN GOD_JACKSON
+			GOD_EISENHOWER GOD_REAGAN GOD_TRUMAN GOD_JACKSON GOD_UNCLE_SAM
 		}
 
 		crusade_name = LIBERATION_WAR
@@ -2264,14 +2264,14 @@ oldworld = {
 			GOD_LADY_LIBERTY GOD_THE_PRESIDENTS GOD_THE_FLAG GOD_OUR_LADY
 		}
 		
-		#investiture = yes
+		investiture = yes
+		can_have_antipopes = no
 		can_excommunicate = yes
 		can_grant_claim = yes
 		can_grant_divorce = yes
 		allow_viking_invasion = yes
 		can_grant_invasion_cb = invasion
 		allow_rivermovement = yes
-		female_temple_holders = yes
 		female_temple_holders = yes
 		male_temple_holders = no
 		feminist = yes
