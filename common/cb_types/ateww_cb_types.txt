@@ -1,0 +1,158 @@
+## normal scopes(including posttitle scopes) ##
+# ROOT = receiver
+# FROM = giver
+# <no scope change> = attacker or receiver
+## title scopes ##
+# ROOT = receiver
+# FROM = giver
+# <no scope change> = thirdparty landed title	
+#
+# the following effects/triggers exists (example execution order: on_success->on_success_title->on_success_posttitle):
+# is_valid, is_valid_title, on_add, on_add_title, on_add_posttitle, on_success, on_success_title, on_success_posttitle, on_fail, on_fail_title, on_fail_posttitle, on_reverse_demand, on_reverse_demand_title, on_reverse_demand_posttitle
+#
+# Added on_attacker_leader_death, on_defender_leader_death and on_thirdparty_death, which all trigger when corresponding character dies
+# These three all have war scopes, which currently has the following scope changes: 
+# attacker, defender, thirdparty(only valid if thirdparty character is involved), thirdparty_title(only valid if thirdparty title is involved)
+#
+# ai_will_do: modifies value AI places on the CB compared to other CBs (default: 1) Note: is in title scope
+# can_use_gui: If otherwise valid, the CB is listed in the Diplo View, but you can't declare war unless 'can_use_gui' is also valid (also shows a trigger tooltip.)
+#
+
+# max_defender_occupation_score/max_attacker_occupation_score - Defines how much war score it is possible for the defender/attacker to gain by occupying provinces. Defaults to 100. Make sure the CB has ticking warscore if using this or you could end up with never-ending wars
+# hostages_block_cb	- Defaults to "yes". If set to "no", the defender having close relatives of yours imprisoned does not prevent you from declaring war
+
+# Impious Saint induced Catholic Civil War (enable for Ursulines later)
+depose_impious_judge = {
+	name = CB_NAME_DEPOSE_IMPIOUS_JUDGE
+	war_name = WAR_NAME_DEPOSE_IMPIOUS_JUDGE
+	sprite = 29
+	truce_days = 0
+	is_permanent = yes
+	allow_whitepeace = no
+	
+	defender_unoccupied_warscore = yes
+	
+	allowed_to_target_tributaries = no
+	
+	sort_priority = 750
+	
+	can_use = {
+		always = no #Can only be initiated through special means
+	}
+	
+	is_valid = {
+		FROM = {
+			trait = bad_priest_americanist
+			hidden_tooltip = {
+				AND = {
+					religion = hamiltonian
+					has_landed_title = d_supreme_court
+				}
+			}
+			independent = yes
+		}
+	}
+
+	on_success = {
+		custom_tooltip = {
+			text = depose_impious_pope_cb_win_TT
+			any_attacker = {
+				piety = 100
+			}
+		}
+		FROM = {
+			show_scope_change = no
+			abdicate = yes
+		}
+
+		FROM = {
+			show_scope_change = no
+			religion_authority = {
+				modifier = depose_impious_pope_modifier
+			}
+		}
+
+		hidden_tooltip = {
+			any_defender = {
+				set_character_flag = impious_papal_defender
+			}
+			any_playable_ruler = {
+				limit = {
+					religion = FROM
+				}
+				narrative_event = { id = HF.40094 }
+			}
+			ROOT = {
+				narrative_event = { id = HF.40094 }
+			}
+			d_supreme_court = {
+				owner = {
+					save_event_target_as = current_pope
+					reverse_imprison = FROM
+				}
+			}
+			any_attacker = {
+				reverse_opinion = {
+					modifier = opinion_grateful
+					who = event_target:current_pope
+					years = 10
+				}
+			}
+		}
+	}
+
+	on_reverse_demand = {
+		custom_tooltip = {
+			text = depose_impious_pope_cb_lose_TT
+			any_attacker = {
+				add_trait = excommunicated
+				piety = -100
+			}
+		}
+
+		FROM = {
+			show_scope_change = no
+			religion_authority = {
+				modifier = failed_to_depose_impious_pope_modifier
+			}
+		}
+
+		hidden_tooltip = {
+			any_defender = {
+				set_character_flag = impious_papal_defender
+			}
+			any_playable_ruler = {
+				limit = {
+					religion = FRON
+				}
+				narrative_event = { id = HF.40095 }
+			}
+			ROOT = {
+				narrative_event = { id = HF.40095 }
+			}
+		}
+
+	}
+
+	on_attacker_leader_death = {
+		if = { limit = { has_global_flag = pre_catholic_civil_war }
+			end_war = invalid
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}

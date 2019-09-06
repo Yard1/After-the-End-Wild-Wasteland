@@ -1,0 +1,44 @@
+#GetHouseOfWorship 			Gets name for house of worship of character's religion (character)
+#GetReligiousRite 			Gets name for a common religious rite (character)
+#GetReligionWarrior
+#GetReligionWarriorPlural
+#GetReligiousPerson
+#GetArtifactSource			Gets name for bodypart artifact's source (saint, holy man, hero)
+#GetArtifactSourceCap
+
+#GetBeastString
+
+###RELIGION###
+defined_text = {
+	name = GetWhoTheyServe
+
+	text = {
+		localisation_key = title_hamiltonian_justice
+		trigger = {
+			religion = hamiltonian
+		}
+	}
+	text = {
+		localisation_key = GOD_LADY_LIBERTY
+		trigger = {
+			religion = libertanian
+		}
+	}
+}
+
+defined_text = {
+	name = GetHLGroupName
+
+	text = {
+		localisation_key = JUDICARY
+		trigger = {
+			religion = hamiltonian
+		}
+	}
+	text = {
+		localisation_key = d_libertarian
+		trigger = {
+			religion = libertanian
+		}
+	}
+}

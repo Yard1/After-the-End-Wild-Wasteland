@@ -7,6 +7,8 @@ hamiltonian_DESC;Madisonians differ from mainstream Americanism in that they con
 
 d_supreme_court;The Supreme Court;;;;;;;;;;;;;x
 d_supreme_court_adj;Supreme Judical;;;;;;;;;;;;;x
+JUDICARY;Judicary;;;;;;;;;;;;;x
+CHIEF_JUSTICE;Chief Justice;;;;;;;;;;;;;x
 create_supreme_court;Restore the Supreme Court;;;;;;;;;;;;;x
 create_supreme_court_desc;If I am pious enough and control Rome, I can create a Fraticelli Pope to serve as the head of the faith in opposition to the vile Catholic Pope.;;;;;;;;;;;;;x
 restore_supreme_court_in_dc;Restore the Papacy in Rome;;;;;;;;;;;;;x
@@ -15,15 +17,46 @@ EVTDESC_ATE_WWW_RELIGION_1_A;Rome, for centuries the center of Christendom, is i
 EVTDESC_ATE_WWW_RELIGION_1_B;Rome, for centuries the center of Christendom, is in Fraticelli hands. [From.GetTitledFirstName] has therefore seen fit to create a Fraticelly Papacy, claiming it shall do away with the scandalous display of wealth that the Catholic Papacy has long been guilty of.;;;;;;;;;;;;;x
 EVTDESC_ATE_WWW_RELIGION_3_A;I have granted Rome to its rightful ruler, so that the Fraticelli Pope may lead his Church from accommodations befitting his stature. The Pope shall soon take up his abode in the offices historically occupied by his Catholic predecessors.;;;;;;;;;;;;;x
 EVTDESC_ATE_WWW_RELIGION_3_B;[From.GetTitledFirstName] has granted Rome to its rightful ruler, so that the Fraticelli Pope may lead his Church from accommodations befitting his stature. The Pope shall soon take up his abode in the offices historically occupied by his Catholic predecessors.;;;;;;;;;;;;;x
-title_chief_justice;Justice;;;;;;;;;;;;;x
-expected_next_title_chief_justice;Expected Next Justice;;;;;;;;;;;;;x
-expected_next_title_chief_justice_tooltip;This judge is probably next in line for a Justiceship when one becomes available.;;;;;;;;;;;;;x
-best_candidate_title_chief_justice;My Best Justice Candidate;;;;;;;;;;;;;x
-best_candidate_title_chief_justice_tooltip;Of all the judges in my realm, this one is the likeliest to get appointed Justice by the Chief Justice.;;;;;;;;;;;;;x
+title_hamiltonian_justice;Justice;;;;;;;;;;;;;x
+expected_next_title_hamiltonian_justice;Expected Next Justice;;;;;;;;;;;;;x
+expected_next_title_hamiltonian_justice_tooltip;This judge is probably next in line for a Justiceship when one becomes available.;;;;;;;;;;;;;x
+best_candidate_title_hamiltonian_justice;My Best Justice Candidate;;;;;;;;;;;;;x
+best_candidate_title_hamiltonian_justice_tooltip;Of all the judges in my realm, this one is the likeliest to get appointed Justice by the Chief Justice.;;;;;;;;;;;;;x
 PREFERATI_HAMILTONIAN;Senior Justice;;;;;;;;;;;;;x
 PREFERATI_HAMILTONIAN_TOOLTIP;The Senior Justice of the Supreme Court is the judge next in line to become Chief Justice;;;;;;;;;;;;;x
 COLLEGE_OF_CARDINALS_HAMILTONIAN;Supreme Court;;;;;;;;;;;;;x
 CAMPAIGN_FUND_HAMILTONIAN;Campaign Donation;;;;;;;;;;;;;x
+JUDGE_FOA;Your Honor;;;;;;;;;;;;;x
+CB_NAME_DEPOSE_IMPIOUS_JUDGE;Depose Impious [Root.GetProperReligiousHead];;;;;;;;;;;;;x
+WAR_NAME_DEPOSE_IMPIOUS_JUDGE;$FIRST_ADJ$ War for the [Root.GetConclaveName];;;;;;;;;;;;;x
+depose_impious_judge_desc;A war over the [Root.GetConclaveName], and what is the righteous way forward for the faith.;;;;;;;;;;;;;x
+depose_impious_judge_modifier;Overthrew immoral [Root.GetProperReligiousHead];;;;;;;;;;;;;x
+failed_to_depose_impious_judge_modifier;Impious [Root.GetProperReligiousHead] won the war for the [Root.GetConclaveName];;;;;;;;;;;;;x
+sendforsupremejudge
+scorned_the_judge;By not seeking legitimacy directly from the [Root.GetConclaveName], your inauguration will §ROffend§! the §Y[Root.GetProperReligiousHead]§!.;;;;;;;;;;;;;x
+
+EVTOPTZAFI1;Only the [Root.GetProperReligiousHead] will do!;;;;;;;;;;;;;x
+sendforsupremejudge;Write a letter to [Root.GetProperReligiousHead], asking them to inaugurate you as [Root.GetTitle].;;;;;;;;;;;;;x
+EVTDESCBAFI5;To the Illuminating [Root.GetTitledName],\nI shall be honored to officiate [Root.GetHerHisCap] [Root.GetHonorific]'s inauguration, provided that [Root.GetHerHisCap] [Root.GetHonorific] donates a sizable sum of money to [Root.GetProperReligiousHead]'s preservation efforts as a show of [Root.GetHerHisCap] devotion.\n\nEver [Root.GetHerHis] [Root.GetHonorific]'s servant\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTDESCDAFI100;Now that I have the [Root.GetProperReligiousHead] to officiate my inauguration, I must decide how much I wish to spend on the ceremony leading up to it.;;;;;;;;;;;;;x
+VERY_WELL;Very well.;;;;;;;;;;;;;x
+tooltip_gain_inaug_by_sjudge;[Root.GetTitledName] gains the trait Inaugurated by [Root.GetProperReligiousHead];;;;;;;;;;;;;x
+inaug_by_sjudge;Inaugurated by [Root.GetProperReligiousHead];;;;;;;;;;;;;x
+inaug_by_sjudge_desc;This ruler was inaugurated by [Root.GetCrownedByDesc].\nA formal inauguration is considered by many a fundamental step in the legitimization of any proper [Root.Religion.GetName] [Root.GetTitle].;;;;;;;;;;;;;x
+EVTDESCAFI200;To the Illustrious [Root.GetTitledName],\nI shall be honored to officiate [Root.GetHerHisCap] [Root.GetHonorific]'s inauguration, provided that [Root.GetHerHisCap] [Root.GetHonorific] show [Root.GetHerHisCap] devotion by organizing a private feast in honor of an ardent servant of Justice such as I am.\n\nEver [Root.GetHerHis] [Root.GetHonorific]'s servant\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTDESCHFA20240;To the Patriotic [Root.GetTitledName],\nI shall be honored to officiate [Root.GetHerHisCap] [Root.GetHonorific]'s inauguration, provided that [Root.GetHerHisCap] [Root.GetHonorific] show [Root.GetHerHisCap] devotion by donating the [scoped_artifact.GetName] [Root.GetSheHe] holds for the good of all patriots.;;;;;;;;;;;;;x
+EVTDESCAFI202;To [Root.GetTitledName],\nI shall be glad to conduct your inauguration, as [Root.GetHighGodName] intended - as soon as you recognize that the Judicary is no servant to any ruler, but to blind and fair Justice, equal and independent for all. \n\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTDESCBAFI202;To [Root.GetTitledName],\nI shall be glad to conduct your inauguration, as [Root.GetHighGodName] intended - as soon as you recognize that the Order is no servant to any earthly ruler, but to our illustrious Lady. \n\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTOPTBAFI202;[Root.GetProperReligiousHead] or not, you are still my vassal.;;;;;;;;;;;;;x
+EVTDESCAFI203;To [Root.GetTitledName],\nI shall be glad to conduct your inauguration, as soon as you make a one-time increase to the budget of the Judicary. \n\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTDESCBAFI203;To [Root.GetTitledName],\nI shall be glad to conduct your inauguration, as soon as you make a donation to [From.GetHLGroupName]. \n\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTDESCHFA20213;To [Root.GetTitledName],\nI shall be glad to conduct your inauguration, as soon as you officially proclaim that it is no business of the [Root.GetTitle] to appoint members of the judicary. \n\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTDESCAFI205;To [Root.GetTitledName],\nI shall be glad to conduct your inauguration, as soon as you prove your devotion to [From.Religion.GetHighGodNameCap] by waging war against a most criminal ruler whose wickedness made worthy of official censure. \n\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTDESCAFI206;To [Root.GetTitledName],\nI shall be glad to conduct your inauguration, but first, let us celebrate this joyous occasion with a lavish feast. \n\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTDESCHFBAFI208;[FromFrom.GetTitledFirstName] made good use of my money: the mansion has been filled to the brim with wine and whores. Soon after the start of the celebration for my upcoming coronation, the crowd of lechers and drunks invited to the party are already debasing themselves in the most abominable acts imaginable.;;;;;;;;;;;;;x
+EVTDESCBAFI212;When my guards come to recover me in the morning, I barely remember anything of what has happened last night. I am fairly certain to remember, amongst other things, seeing [coronation_priest.GetTitledFirstName] crown me on top of a fountain of wine, as naked as on the day [coronation_priest.GetSheHe] was born.;;;;;;;;;;;;;x
+
+
 
 # Militarists
 

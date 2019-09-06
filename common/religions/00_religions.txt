@@ -722,6 +722,7 @@ christian = {
 		can_retire_to_monastery = yes
 		priests_can_inherit = yes
 		female_temple_holders = yes
+		male_temple_holders = no
 		priests_can_inherit = no
 		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
@@ -1427,10 +1428,10 @@ cult_of_saints= {
 	color = { 0.8 0.2 0.1 }
 	
 	male_names = {
-		Jesús Pedro Pablo Cristóbal Cristián José Juan Diego
+		Jesï¿½s Pedro Pablo Cristï¿½bal Cristiï¿½n Josï¿½ Juan Diego
 	}
 	female_names = {
-		Maria Benedicta Magdalena Fátima Sarita
+		Maria Benedicta Magdalena Fï¿½tima Sarita
 	}
 	
 	#default interface
@@ -1554,6 +1555,7 @@ pacific = {
 		can_grant_divorce = yes
 		priests_can_inherit = yes
 		priests_can_marry = yes
+		female_temple_holders = yes
 		allow_rivermovement = yes
 		
 		religious_clothing_head = 10
@@ -1601,6 +1603,10 @@ pacific = {
 		allow_rivermovement = yes
 		female_temple_holders = yes
 		raised_vassal_opinion_loss = no
+		allows_matrilineal_marriage = yes
+		women_can_take_consorts = yes
+		men_can_take_consorts = no
+		male_temple_holders = no
 
 		religious_clothing_head = 16
 		religious_clothing_priest = 16
@@ -2113,8 +2119,8 @@ oldworld = {
 		allow_viking_invasion = yes
 		can_grant_invasion_cb = invasion
 		allow_rivermovement = yes
-		#female_temple_holders = yes
-		#feminist = yes
+		female_temple_holders = yes
+		feminist = yes
 		
 		priests_can_marry = yes
 		
@@ -2145,9 +2151,11 @@ oldworld = {
 
 		interface_skin = { americanist_interface }
 		
+		high_god_name = GOD_MADISON
+
 		god_names = {
-			GOD_THE_FOUNDERS GOD_WASHINGTON GOD_THE_FLAG
-			GOD_ADAMS GOD_HAMILTON GOD_LINCOLN GOD_UNCLE_SAM
+			GOD_THE_FOUNDERS GOD_WASHINGTON GOD_JEFFERSON GOD_THE_FLAG
+			GOD_ADAMS GOD_MADISON GOD_LINCOLN GOD_UNCLE_SAM
 		}
 		
 		crusade_name = LIBERATION_WAR
@@ -2155,11 +2163,17 @@ oldworld = {
 		priest_title = JUDGE
 		piety_name = PATRIOTISM
 		
-		can_grant_claim = yes
+		investiture = yes
+		can_have_antipopes = no
+		can_excommunicate = yes
 		can_grant_divorce = yes
-		allow_viking_invasion = yes
 		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		allow_viking_invasion = yes
+		priests_can_inherit = yes
+		female_temple_holders = yes
 		allow_rivermovement = yes
+		feminist = yes
 		
 		priests_can_marry = yes
 
@@ -2186,10 +2200,12 @@ oldworld = {
 		color = { 0.2 0.2 0.7 }
 		
 		interface_skin = { americanist_interface }
+
+		high_god_name = GOD_UNCLE_SAM
 		
 		god_names = {
 			GOD_THE_FOUNDERS GOD_WASHINGTON GOD_JEFFERSON GOD_THE_FLAG
-			GOD_MADISON GOD_LINCOLN GOD_UNCLE_SAM
+			GOD_ADAMS GOD_MADISON GOD_HAMILTON GOD_LINCOLN GOD_ROOSEVELT GOD_UNCLE_SAM
 		}
 
 		crusade_name = LIBERATION_WAR
@@ -2255,10 +2271,12 @@ oldworld = {
 		can_grant_invasion_cb = invasion
 		allow_rivermovement = yes
 		female_temple_holders = yes
+		female_temple_holders = yes
+		male_temple_holders = no
 		feminist = yes
 		
 		priests_can_marry = no
-		priests_can_inherit = no
+		priests_can_inherit = yes
 		psc_marriage = no # Disallow uncle-nice and aunt-nephew marriages
 		
 		intermarry = americanist

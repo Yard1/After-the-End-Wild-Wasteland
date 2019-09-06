@@ -1,0 +1,139 @@
+add_namespace = ATE_WWW_RELIGION
+
+# Establishing the Supreme Court
+character_event = {
+	id = ATE_WWW_RELIGION.1
+	desc = {
+		text = EVTDESC_ATE_WWW_RELIGION_1_A
+		trigger = {
+			character = FROM
+		}
+	}
+	desc = {
+		text = EVTDESC_ATE_WWW_RELIGION_1_b
+		trigger = {
+			NOT = { character = FROM }
+		}
+	}
+	picture = GFX_evt_capitol_building
+	border = GFX_event_normal_frame_religion
+	
+	major = yes
+
+	is_triggered_only = yes
+	major_trigger = {
+		religion_group = oldworld
+	}
+	
+	only_playable = yes
+	
+	option = {
+		name = EVTOPTA_SOA_4200
+		trigger = {
+			religion = hamiltonian
+		}
+	}
+	option = {
+		name = EVTOPTB_SOA_4200
+		trigger = {
+			religion = americanist
+		}
+	}
+	option = {
+		name = EVTOPTC_SOA_4200
+		trigger = {
+			NOR = {
+				religion = hamiltonian
+				religion = americanist
+			}
+		}
+	}
+}
+
+# Supreme Court Chief Justice immediately loses claim if he or liege is no longer Hamiltonian
+character_event = {
+	id = ATE_WWW_RELIGION.2
+
+	hide_window = yes
+
+	only_playable = yes
+	
+	trigger = {
+		d_supreme_court = {
+			any_claimant = {
+				OR = {
+					NOT = { religion = hamiltonian }
+					any_liege = { NOT = { religion = hamiltonian } }
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		d_supreme_court = {
+			any_claimant = {
+				limit = {
+					OR = {
+						NOT = { religion = hamiltonian }
+						any_liege = { NOT = { religion = hamiltonian } }
+					}
+				}
+				remove_claim = d_supreme_court
+			}
+		}
+	}
+}
+
+# Restore the Pope in Rome
+character_event = {
+	id = ATE_WWW_RELIGION.3
+	desc = {
+		text = EVTDESC_ATE_WWW_RELIGION_3_B
+		trigger = {
+			character = FROM
+		}
+	}
+	desc = {
+		text = EVTDESC_ATE_WWW_RELIGION_3_B
+		trigger = {
+			NOT = { character = FROM }
+		}
+	}
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+	
+	#major = yes
+	
+	is_triggered_only = yes
+	#major_trigger = {
+	#	religion_group = christian
+	#}
+	
+	only_playable = yes
+	
+	option = {
+		name = EVTOPTA_SOA_4200
+		trigger = {
+			religion = hamiltonian
+		}
+	}
+	option = {
+		name = EVTOPTB_SOA_4200
+		trigger = {
+			religion = americanist
+		}
+	}
+	option = {
+		name = EVTOPTC_SOA_4200
+		trigger = {
+			NOR = {
+				religion = hamiltonian
+				religion = americanist
+			}
+		}
+	}
+}

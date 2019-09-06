@@ -1,0 +1,29 @@
+d_supreme_court = {
+	color={ 60 59 110 }
+	color2={ 220 220 0 }
+
+	capital = 63 # Washington
+
+	
+	title = "CHIEF_JUSTICE"
+	title_female = "CHIEF_JUSTICE"
+	foa = "JUDGE_FOA"
+	location_ruler_title = yes
+	
+	allow = {
+		always = no # Only by special decision
+	}
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = hamiltonian
+	
+	religion = hamiltonian
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	assimilate = no # Nothing drifts in or out
+}

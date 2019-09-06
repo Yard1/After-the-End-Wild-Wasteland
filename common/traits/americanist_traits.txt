@@ -1,0 +1,182 @@
+washington = {
+	religious = yes
+	monthly_character_prestige = 0.5
+	vassal_opinion = 15
+	same_opinion = 10
+	random = no
+}
+jefferson = {
+	religious = yes
+	stewardship = 2
+	church_opinion = -5
+	same_opinion = 10
+	global_tax_modifier = .2
+	random = no
+}
+lincoln = {
+	religious = yes
+	learning = 2
+	monthly_character_prestige = 0.5	
+	monthly_character_piety = 0.5
+	church_opinion = 5
+	same_opinion = 10
+	random = no
+}
+roosevelt = {
+	religious = yes
+	martial = 2
+	monthly_character_prestige = 0.5	
+	combat_rating = 1
+	vassal_opinion = 5
+	same_opinion = 10
+	random = no
+}
+
+patriot = {
+	random = no
+	customizer = no
+	church_opinion = 100
+}
+
+
+speaker = {
+	customizer = no
+	random = no
+	cached = yes
+	general_opinion = 10
+}
+demrep = {
+	random = no
+	customizer = no
+	same_opinion = 25
+	opposite_opinion = -40
+	
+	cached = yes
+	
+	opposites = {
+		am_loyalist
+		am_loyalist_pl
+	}
+}
+demrep_pl = {
+	random = no
+	customizer = no
+	same_opinion = 25
+	opposite_opinion = -40
+	
+	cached = yes
+	
+	opposites = {
+		am_loyalist
+		am_loyalist_pl
+	}
+}
+am_loyalist = {
+	random = no
+	customizer = no
+	same_opinion = 25
+	opposite_opinion = -40
+	
+	cached = yes
+	
+	opposites = {
+		demrep
+		demrep_pl
+	}
+}
+am_loyalist_pl = {
+	random = no
+	customizer = no
+	same_opinion = 25
+	opposite_opinion = -40
+	
+	cached = yes
+	
+	opposites = {
+		demrep
+		demrep_pl
+	}
+}
+on_campaign_party = {
+	customizer = no
+	random = no
+	cached = yes
+}
+on_campaign_speaker = {
+	customizer = no
+	random = no
+	cached = yes
+}
+
+tyrant = {
+	customizer = no
+	random = no
+	vassal_opinion = -100
+	
+	male_insult = INSULT_TYRANT
+	female_insult = INSULT_TYRANT
+	male_insult_adj = INSULT_TYRANNICAL
+	female_insult_adj = INSULT_TYRANNICAL
+}
+
+inaug_by_judge = {
+	opposites =  {
+		inaug_by_cjudge
+		inaug_prez
+		inaug_by_sjudge
+	}
+	
+	monthly_character_prestige = 0.05
+	monthly_character_piety = 0.1
+	
+	customizer = no
+	random = no
+}
+inaug_by_cjudge = {
+	opposites =  {
+		inaug_by_judge
+		inaug_prez
+		inaug_by_sjudge
+	}
+	church_opinion = 5
+	
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.25
+	
+	customizer = no
+	random = no
+}
+inaug_by_sjudge = {
+	opposites =  {
+		inaug_by_judge
+		inaug_prez
+		inaug_by_cjudge
+	}
+	church_opinion = 7
+	
+	monthly_character_prestige = 0.35
+	monthly_character_piety = 0.35
+	
+	customizer = no
+	random = no
+}
+inaug_prez = {
+	opposites =  {
+		inaug_by_judge
+		inaug_by_cjudge
+		inaug_by_sjudge
+	}
+	church_opinion = 10
+	
+	monthly_character_prestige = 0.5
+	monthly_character_piety = 0.5
+	
+	customizer = no
+	random = no
+}
+
+medal_freedom = {
+	monthly_character_prestige = 1
+	same_religion_opinion = 15
+	random = no
+}
