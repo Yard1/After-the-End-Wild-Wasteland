@@ -54,6 +54,7 @@ d_forscom = {
 	
 	# Cannot be held as a secondary title
 	primary = yes
+	short_name = yes
 	
 	assimilate = no # Nothing drifts in or out
 	
