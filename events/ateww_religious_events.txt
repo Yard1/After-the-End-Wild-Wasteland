@@ -137,3 +137,55 @@ character_event = {
 		}
 	}
 }
+
+narrative_event = {
+	id = ATE_WWW_RELIGION.4
+	title = EVTNAME_general_of_army
+	desc = EVTDESC_general_of_army
+	picture = GFX_evt_coronation
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = general_of_army }
+	}
+	
+	immediate = {
+		set_global_flag = general_of_army
+		d_forscom = { grant_title = ROOT }
+	}
+	
+	option = {
+		name = EVTOPTA_general_of_army
+		trigger = {
+			religion = jeffersonian
+			NOT = { has_landed_title = d_forscom }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_general_of_army
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_general_of_army
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = jeffersonian }
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_general_of_army
+		trigger = {
+			religion = jeffersonian
+			has_landed_title = d_forscom
+		}
+	}
+}

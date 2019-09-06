@@ -2222,6 +2222,7 @@ oldworld = {
 		allow_looting = yes
 		seafarer = yes
 		female_temple_holders = yes
+		feminist = yes
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		hard_to_convert = yes

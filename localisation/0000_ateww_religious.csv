@@ -69,4 +69,33 @@ GOD_REAGAN;Reagan;;;;;;;;;;;;;x
 GOD_TRUMAN;Truman;;;;;;;;;;;;;x
 GOD_JACKSON;Jackson;;;;;;;;;;;;;x
 
+become_general_of_army;Restore the Army Forces Command;;;;;;;;;;;;;x
+become_general_of_army_desc;With some of the most important holy sites of the Militarist faith now under my direct control the time has come to bring order back to America by restoring the Army Forces Command;;;;;;;;;;;;;x
+EVTNAME_general_of_army;The General Of The Army;;;;;;;;;;;;;x
+EVTDESC_general_of_army;Since the humiliating defeat and death of President Kelleher at the hands of the Deitsch the Militarist faithful have shunned the Post-Event Presidency which in turn, earned them the ire of the Americanist faith. However, times have changed and now it is the "true" Americanists that find themselves outnumbered and outgunned, as from humble beginnings [Root.GetFullName] has not only managed to extend the reach of the Militarist faith but also united a vast majority of the faithful under [Root.GetHerselfHimself] banner. Sensing an opportunity [Root.GetFullName] has proclaimed [Root.GetHerselfHimself] the "General Of The Army" and has laid claim to all of America, from sea to shining sea...;;;;;;;;;;;;x
+EVTOPTA_general_of_army;Pass the ammunition!;;;;;;;;;;;;;x
+EVTOPTB_general_of_army;Damned heathens!;;;;;;;;;;;;;x
+EVTOPTC_general_of_army;Interesting...;;;;;;;;;;;;;x
+EVTOPTD_general_of_army;Here comes the General!;;;;;;;;;;;;;x
+
+d_forscom;Army Forces Command;;;;;;;;;;;;;x
+d_forscom_adj;Command;;;;;;;;;;;;;x
+GENERAL_OF_ARMY;General Of The Army;;;;;;;;;;;;;x
+
 CORPSMAN;Corpsman;;;;;;;;;;;;;x
+temple_barony_of_jeffersonian;Commandery of;;;;;;;;;;;;;x
+temple_baron_jeffersonian;Corpsman;;;;;;;;;;;;;x
+temple_baron_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x
+temple_baron_jeffersonians;Corpsmen;;;;;;;;;;;;;x
+temple_county_of_jeffersonian;County Commandery of;;;;;;;;;;;;;x
+temple_count_jeffersonian;Corpsman;;;;;;;;;;;;;x
+temple_count_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x
+temple_duchy_of_jeffersonian;High Commanders of;;;;;;;;;;;;;x
+temple_duke_jeffersonian;Corpsman;;;;;;;;;;;;;x
+temple_duke_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x
+temple_kingdom_of_jeffersonian;General Commandery of;;;;;;;;;;;;;x
+temple_king_jeffersonian;Corpsman;;;;;;;;;;;;;x
+temple_king_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x
+temple_empire_of_jeffersonian;Supreme Commandery of;;;;;;;;;;;;;x
+temple_emperor_jeffersonian;Corpsman;;;;;;;;;;;;;x
+temple_emperor_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x
