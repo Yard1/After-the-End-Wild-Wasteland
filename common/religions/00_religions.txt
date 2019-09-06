@@ -2202,15 +2202,15 @@ oldworld = {
 		interface_skin = { americanist_interface }
 
 		high_god_name = GOD_UNCLE_SAM
-		
+
 		god_names = {
-			GOD_THE_FOUNDERS GOD_WASHINGTON GOD_JEFFERSON GOD_THE_FLAG
-			GOD_ADAMS GOD_MADISON GOD_HAMILTON GOD_LINCOLN GOD_ROOSEVELT GOD_UNCLE_SAM
+			GOD_THE_FOUNDERS GOD_WASHINGTON GOD_ROOSEVELT GOD_THE_FLAG
+			GOD_EISENHOWER GOD_REAGAN GOD_TRUMAN GOD_JACKSON
 		}
 
 		crusade_name = LIBERATION_WAR
 		scripture_name = THE_PAPERS
-		priest_title = JUDGE
+		priest_title = CORPSMAN
 		piety_name = PATRIOTISM
 		
 		priests_can_marry = yes
@@ -2222,6 +2222,7 @@ oldworld = {
 		allow_looting = yes
 		seafarer = yes
 		female_temple_holders = yes
+		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
 		hard_to_convert = yes
 		
@@ -2233,7 +2234,7 @@ oldworld = {
 		
 		character_modifier = {
 			same_religion_opinion = 10 
-			castle_vassal_min_levy = 0.05
+			levy_size = 0.10
 			martial = 2
 		}
 	}
