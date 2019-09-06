@@ -1,0 +1,114 @@
+namespace = ATE_WWW_DEBUG
+
+# Establishing the Supreme Court
+character_event = {
+	id = ATE_WWW_DEBUG.1
+	desc = "DEBUG"
+	picture = GFX_evt_capitol_building
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "americanist"
+		any_independent_ruler = {
+			any_realm_character = {
+				limit = {
+					OR = {
+						religion = jeffersonian
+						religion = libertarian
+						religion = hamiltonian
+					}
+				}
+				religion = americanist
+			}
+		}
+	}
+
+	option = {
+		name = "jeffersonian"
+		any_independent_ruler = {
+			any_realm_character = {
+				limit = {
+					OR = {
+						religion = americanist
+						religion = libertarian
+						religion = hamiltonian
+					}
+				}
+				religion = jeffersonian
+			}
+		}
+	}
+
+	option = {
+		name = "libertarian"
+		any_independent_ruler = {
+			any_realm_character = {
+				limit = {
+					OR = {
+						religion = jeffersonian
+						religion = americanist
+						religion = hamiltonian
+					}
+				}
+				religion = libertarian
+			}
+		}
+	}
+
+	option = {
+		name = "hamiltonian"
+		any_independent_ruler = {
+			any_realm_character = {
+				limit = {
+					OR = {
+						religion = jeffersonian
+						religion = libertarian
+						religion = americanist
+					}
+				}
+				religion = hamiltonian
+			}
+		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_DEBUG.2
+	desc = "DEBUG"
+	picture = GFX_evt_capitol_building
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "americanist"
+		religion = americanist
+			any_realm_character = {
+				religion = americanist
+			}
+	}
+
+	option = {
+		name = "jeffersonian"
+		religion = jeffersonian
+			any_realm_character = {
+				religion = jeffersonian
+			}
+	}
+
+	option = {
+		name = "libertarian"
+		religion = libertarian
+			any_realm_character = {
+				religion = libertarian
+			}
+	}
+
+	option = {
+		name = "hamiltonian"
+		religion = hamiltonian
+			any_realm_character = {
+				religion = hamiltonian
+			}
+	}
+}

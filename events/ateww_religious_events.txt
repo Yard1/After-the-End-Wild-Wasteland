@@ -1,4 +1,4 @@
-add_namespace = ATE_WWW_RELIGION
+namespace = ATE_WWW_RELIGION
 
 # Establishing the Supreme Court
 character_event = {
