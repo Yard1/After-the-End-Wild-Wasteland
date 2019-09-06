@@ -69,4 +69,24 @@ GOD_REAGAN;Reagan;;;;;;;;;;;;;x
 GOD_TRUMAN;Truman;;;;;;;;;;;;;x
 GOD_JACKSON;Jackson;;;;;;;;;;;;;x
 
+d_forscom;Army Forces Command;;;;;;;;;;;;;x
+d_forscom_adj;Command;;;;;;;;;;;;;x
+GENERAL_OF_ARMY;General Of The Army;;;;;;;;;;;;;x
+
 CORPSMAN;Corpsman;;;;;;;;;;;;;x
+temple_barony_of_jeffersonian;Commandery of;;;;;;;;;;;;;x
+temple_baron_jeffersonian;Corpsman;;;;;;;;;;;;;x
+temple_baron_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x
+temple_baron_jeffersonians;Corpsmen;;;;;;;;;;;;;x
+temple_county_of_jeffersonian;County Commandery of;;;;;;;;;;;;;x
+temple_count_jeffersonian;Corpsman;;;;;;;;;;;;;x
+temple_count_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x
+temple_duchy_of_jeffersonian;High Commanders of;;;;;;;;;;;;;x
+temple_duke_jeffersonian;Corpsman;;;;;;;;;;;;;x
+temple_duke_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x
+temple_kingdom_of_jeffersonian;General Commandery of;;;;;;;;;;;;;x
+temple_king_jeffersonian;Corpsman;;;;;;;;;;;;;x
+temple_king_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x
+temple_empire_of_jeffersonian;Supreme Commandery of;;;;;;;;;;;;;x
+temple_emperor_jeffersonian;Corpsman;;;;;;;;;;;;;x
+temple_emperor_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x

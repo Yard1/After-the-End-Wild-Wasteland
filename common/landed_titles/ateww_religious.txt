@@ -27,3 +27,36 @@ d_supreme_court = {
 	
 	assimilate = no # Nothing drifts in or out
 }
+
+d_forscom = {
+	color={ 60 59 110 }
+	color2={ 220 220 0 }
+
+	capital = 137 # Fayeteville/Fort Bragg
+
+	
+	title = "GENERAL_OF_ARMY"
+	title_female = "GENERAL_OF_ARMY"
+	foa = "JUDGE_FOA"
+	location_ruler_title = yes
+	
+	allow = {
+		always = no # Only by special decision
+	}
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = jeffersonian
+	
+	religion = jeffersonian
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	assimilate = no # Nothing drifts in or out
+	
+	dynasty_title_names = no
+	caliphate = yes
+}
