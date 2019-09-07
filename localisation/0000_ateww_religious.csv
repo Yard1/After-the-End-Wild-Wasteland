@@ -125,23 +125,23 @@ d_forscom;Army Forces Command;;;;;;;;;;;;;x
 d_forscom_adj;Command;;;;;;;;;;;;;x
 GENERAL_OF_ARMY;General Of The Army;;;;;;;;;;;;;x
 
-CORPSMAN;Corpsman;;;;;;;;;;;;;x
-temple_barony_of_jeffersonian;Commandery of;;;;;;;;;;;;;x
-temple_baron_jeffersonian;Corpsman;;;;;;;;;;;;;x
-temple_baron_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x
-temple_baron_jeffersonians;Corpsmen;;;;;;;;;;;;;x
-temple_county_of_jeffersonian;County Commandery of;;;;;;;;;;;;;x
-temple_count_jeffersonian;Corpsman;;;;;;;;;;;;;x
-temple_count_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x
-temple_duchy_of_jeffersonian;High Commanders of;;;;;;;;;;;;;x
-temple_duke_jeffersonian;Corpsman;;;;;;;;;;;;;x
-temple_duke_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x
-temple_kingdom_of_jeffersonian;General Commandery of;;;;;;;;;;;;;x
-temple_king_jeffersonian;Corpsman;;;;;;;;;;;;;x
-temple_king_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x
-temple_empire_of_jeffersonian;Supreme Commandery of;;;;;;;;;;;;;x
-temple_emperor_jeffersonian;Corpsman;;;;;;;;;;;;;x
-temple_emperor_female_jeffersonian;Corpswoman;;;;;;;;;;;;;x
+CORPSMAN;Hospitalman;;;;;;;;;;;;;x
+temple_barony_of_jeffersonian;Infirmary of;;;;;;;;;;;;;x
+temple_baron_jeffersonian;Hospitalman;;;;;;;;;;;;;x
+temple_baron_female_jeffersonian;Hospitalwoman;;;;;;;;;;;;;x
+temple_baron_jeffersonians;Hospitalmen;;;;;;;;;;;;;x
+temple_county_of_jeffersonian;Hospital of;;;;;;;;;;;;;x
+temple_count_jeffersonian;Hospital Corpsman;;;;;;;;;;;;;x
+temple_count_female_jeffersonian;Hospital Corpswoman;;;;;;;;;;;;;x
+temple_duchy_of_jeffersonian;Regional Hospital of;;;;;;;;;;;;;x
+temple_duke_jeffersonian;Hospital Corpsman First Class;;;;;;;;;;;;;x
+temple_duke_female_jeffersonian;Hospital Corpswoman First Class;;;;;;;;;;;;;x
+temple_kingdom_of_jeffersonian;State Hospital of;;;;;;;;;;;;;x
+temple_king_jeffersonian;Chief Hospital Corpsman;;;;;;;;;;;;;x
+temple_king_female_jeffersonian;Chief Hospital Corpswoman;;;;;;;;;;;;;x
+temple_empire_of_jeffersonian;National Hospital of;;;;;;;;;;;;;x
+temple_emperor_jeffersonian;Master Chief Hospital Corpsman;;;;;;;;;;;;;x
+temple_emperor_female_jeffersonian;Master Chief Hospital Corpswoman;;;;;;;;;;;;;x
 
 # Bloodlines 
 barron;Barron Blood;;;;;;;;;;;;;x
