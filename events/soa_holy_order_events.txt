@@ -14272,6 +14272,10 @@ character_event = {
 		custom_tooltip = {
 			text = expelling_holy_order_event_tooltip_a
 		}
+		if = {
+			limit = { society_member_of = monastic_order_libertarian }
+			leave_society = yes
+		}
 		hidden_tooltip = {
 			d_libertarian = {
 				holder_scope = {

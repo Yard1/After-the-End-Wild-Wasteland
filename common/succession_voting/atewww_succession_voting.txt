@@ -121,43 +121,242 @@
 
 libertarian_elective = {
 	elector_selection = {
-		max_amount = 1
+		max_amount = 5
 		days = -5 		
 		additive_modifier = { #Emperor is always an Elector.
-			value = 30
+			value = 300
+			FROMFROM = { 
+				holder_scope = { character = ROOT }
+			}
+		}
+		additive_modifier = {
+			value = 200
+			society_rank == 4
+		}
+		additive_modifier = {
+			value = 50
+			society_rank == 3
+		}
+		additive_modifier = {
+			value = 20
+			society_rank == 2
+		}
+		additive_modifier = {
+			value = 6
+			society_rank == 1
+		}
+	}
+	elector_vote_strength = {
+		days = 1
+		additive_modifier = { #Emperor is always an Elector.
+			value = 2
 			FROMFROM = { 
 				holder_scope = { character = ROOT }
 			}
 		}
 	}
-	elector_vote_strength = {
-		days = 1
-	}
 	candidate_vote_score = {
 		days = 0
 		additive_modifier = {
-			value = 100
-			localisation_key = tooltip_feudal_elector_vote_spiritual_education
+			value = 50
+			localisation_key = tooltip_feudal_elector_vote_piety_positive
 			FROM = { 
 				society_rank == 4
 			}
 		}
 
 		additive_modifier = {
-			value = 50
-			localisation_key = tooltip_feudal_elector_vote_spiritual_education
+			value = 25
+			localisation_key = tooltip_feudal_elector_vote_piety_positive
 			FROM = { 
 				society_rank == 3
 			}
 		}
 
 		additive_modifier = {
-			value = 25
-			localisation_key = tooltip_feudal_elector_vote_spiritual_education
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_piety_positive
 			FROM = { 
 				society_rank == 2
 			}
 		}
+		#Prestige
+		additive_modifier = { 
+			value = -20
+			localisation_key = tooltip_feudal_elector_vote_prestige_negative
+			NOT = { 
+				character = FROM
+			}
+			FROM = { NOT = { prestige = -1000 } }
+		}
+		additive_modifier = { 
+			value = -15
+			localisation_key = tooltip_feudal_elector_vote_prestige_negative
+			NOT = { 
+				character = FROM
+			}
+			FROM = { prestige = -1000 }
+			FROM = { NOT = { prestige = -500 } }
+		}
+		additive_modifier = { 
+			value = -10
+			localisation_key = tooltip_feudal_elector_vote_prestige_negative
+			NOT = { 
+				character = FROM
+			}
+			FROM = { prestige = -500 }
+			FROM = { NOT = { prestige = -250 } }
+		}
+		additive_modifier = { 
+			value = -5
+			localisation_key = tooltip_feudal_elector_vote_prestige_negative
+			NOT = { 
+				character = FROM
+			}
+			FROM = { prestige = -250 }
+			FROM = { NOT = { prestige = 0 } }
+		}
+		additive_modifier = { 
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_prestige_positive
+			NOT = { 
+				character = FROM
+			}
+			FROM = { prestige = 250 }
+			FROM = { NOT = { prestige = 500 } }
+		}
+		additive_modifier = { 
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_prestige_positive
+			NOT = { 
+				character = FROM
+			}
+			FROM = { prestige = 500 }
+			FROM = { NOT = { prestige = 1000 } }
+		}
+		additive_modifier = { 
+			value = 15
+			localisation_key = tooltip_feudal_elector_vote_prestige_positive
+			NOT = { 
+				character = FROM
+			}
+			FROM = { prestige = 1000 }
+		}
+		
+		#Piety
+		additive_modifier = { 
+			value = -20
+			localisation_key = tooltip_feudal_elector_vote_piety_negative
+			NOT = { 
+				character = FROM
+			}
+			FROM = { NOT = { piety = -500 } }
+		}
+		additive_modifier = { 
+			value = -15
+			localisation_key = tooltip_feudal_elector_vote_piety_negative
+			NOT = { 
+				character = FROM
+			}
+			FROM = { piety = -500 }
+			FROM = { NOT = { piety = -250 } }
+		}
+		additive_modifier = { 
+			value = -10
+			localisation_key = tooltip_feudal_elector_vote_piety_negative
+			NOT = { 
+				character = FROM
+			}
+			FROM = { piety = -250 }
+			FROM = { NOT = { piety = -100 } }
+		}
+		additive_modifier = { 
+			value = -5
+			localisation_key = tooltip_feudal_elector_vote_piety_negative
+			NOT = { 
+				character = FROM
+			}
+			FROM = { piety = -100 }
+			FROM = { NOT = { piety = 0 } }
+		}
+		additive_modifier = { 
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_piety_positive
+			NOT = { 
+				character = FROM
+			}
+			FROM = { piety = 100 }
+			FROM = { NOT = { piety = 250 } }
+		}
+		additive_modifier = { 
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_piety_positive
+			NOT = { 
+				character = FROM
+			}
+			FROM = { piety = 250 }
+			FROM = { NOT = { piety = 500 } }
+		}
+		additive_modifier = { 
+			value = 15
+			localisation_key = tooltip_feudal_elector_vote_piety_positive
+			NOT = { 
+				character = FROM
+			}
+			FROM = { piety = 500 }
+		}
+		##########################   Elector voting himself   ##########################
+		additive_modifier = {
+			value = 15
+			localisation_key = tooltip_feudal_elector_vote_myself
+			character = FROM
+			NOR = {
+				trait = humble
+				trait = content
+				trait = craven
+				trait = slothful
+				trait = stressed
+				trait = depressed
+				trait = ambitious
+				trait = zealous
+				trait = just
+			}
+		}
+		additive_modifier = {
+			value = -15
+			localisation_key = tooltip_feudal_elector_vote_not_myself
+			character = FROM
+			NOT = { trait = ambitious }
+			OR = {
+				trait = humble
+				trait = content
+				trait = craven
+				trait = slothful
+				trait = stressed
+				trait = depressed
+			}
+		}
+		additive_modifier = {
+			value = 30
+			localisation_key = tooltip_feudal_elector_vote_myself_ambitious
+			character = FROM
+			trait = ambitious
+			NOR = {
+				trait = zealous
+				trait = just
+			}
+		}
+		additive_modifier = {
+			value = 15
+			localisation_key = tooltip_feudal_elector_vote_myself_ambitious
+			character = FROM
+			trait = ambitious
+			OR = {
+				AND = { trait = zealous NOT = { trait = just } }
+				AND = { trait = just NOT = { trait = zealous } }
+			}
+		}
+
 
 		##Ageism##
 		#Candidates will favor older candidates, barring exceptional circumstances. Note that, after a candidate reaches the age of 65, the value drops sharply.
@@ -556,7 +755,7 @@ libertarian_elective = {
 		}
 		additive_modifier = {
 			value = 10
-			localisation_key = tooltip_feudal_elector_vote_physician
+			localisation_key = tooltip_feudal_elector_vote_spiritual_education
 			NOT = { character = FROM } 
 			FROM = { 
 				trait = scholar
@@ -564,7 +763,7 @@ libertarian_elective = {
 		}
 		additive_modifier = {
 			value = 15
-			localisation_key = tooltip_feudal_elector_vote_physician
+			localisation_key = tooltip_feudal_elector_vote_spiritual_education
 			NOT = { character = FROM } 
 			FROM = { 
 				trait = theologian
@@ -1264,7 +1463,6 @@ libertarian_elective = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_greedy_negative
 			NOT = { character = FROM } 
-			NOT = { is_merchant_republic = yes }
 			OR = { 
 				trait = arbitrary #
 				NOT = { trait = greedy }
@@ -1375,8 +1573,22 @@ libertarian_elective = {
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_arbitrary_negative
 			NOT = { character = FROM } 
+			NOR = { 
+				trait = just
+				trait = zealous
+				trait = arbitrary #Arbitraception
+			}
+			FROM = { 
+				trait = arbitrary
+			}
+		}
+		additive_modifier = { #Shunned for being Arbitrary. (Americanists absolutely despise arbitrary presidents.)
+			value = -100
+			localisation_key = tooltip_feudal_elector_vote_arbitrary_negative
+			NOT = { character = FROM } 
 			OR = { 
 				trait = just
+				trait = zealous
 				trait = arbitrary #Arbitraception
 			}
 			FROM = { 
@@ -1895,19 +2107,53 @@ libertarian_elective = {
 				value = 75
 			}
 		}
+
+		additive_modifier = { #Shunned for loving the heathens
+			value = -15
+			localisation_key = tooltip_feudal_elector_vote_sympathy_heathens
+			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { 
+				trait = zealous
+			}
+			FROM = { 
+				has_sympathy_trait_trigger = yes
+			}
+			FROMFROM = { 
+				holder_scope = { character = ROOT } 
+			}
+		}
+
+		additive_modifier = { #Shunned for loving the heathens
+			value = -35
+			localisation_key = tooltip_feudal_elector_vote_sympathy_heathens
+			NOT = { character = FROM } #Do not judge yourself.
+			trait = zealous
+			FROM = { 
+				has_sympathy_trait_trigger = yes
+			}
+			FROMFROM = { 
+				holder_scope = { character = ROOT } 
+			}
+		}
 	}
 	
 	#ROOT = Current Title holder, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Null
-	candidate_trigger = { #Close relatives, claimants, marshals. No mutilations (if byzantine)
+	candidate_trigger = {
 		NOT = { character = FROM } #Not the current ruler.
 		FROM = {
 			is_female = yes
 			religion = libertarian
 			is_adult = yes
-			excommunicated = no
 			society_member_of = monastic_order_libertarian
-			any_liege = { 
-				character = ROOT
+			OR = {
+				any_liege = { 
+					character = ROOT
+				}
+				is_landless = yes
+				AND = {
+					is_priest = yes
+					NOT = { has_law = investiture_law_1 }
+				}
 			}
 			NOR = {
 				trait = cat

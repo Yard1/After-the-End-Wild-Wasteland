@@ -2398,7 +2398,7 @@ decisions = {
 	}
 	
 
-	expel_libertanians = {
+	expel_libertarian = {
 		only_independent = yes
 		ai = no
 

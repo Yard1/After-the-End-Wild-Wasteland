@@ -1547,12 +1547,10 @@ monastic_order_ursuline = {
 			ai = yes
 			is_female = yes
 		   	religion = ursuline
+			controls_religion = no
 			age = 16
 			is_in_society = no
-			OR = {
-				NOT = { higher_tier_than = DUKE }
-				has_landed_title = k_ursuline
-			}
+			NOT = { higher_tier_than = DUKE }
 			NOR = {
 				mercenary = yes
 				holy_order = yes

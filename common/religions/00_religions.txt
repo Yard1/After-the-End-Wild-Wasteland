@@ -2094,6 +2094,13 @@ oldworld = {
 		icon = 4
 		heresy_icon = 5
 		
+		male_names = {
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Theodore George John Thomas James Benjamin Andrew Franklin
+		}
+		female_names = {
+			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
+		}
+
 		color = { 0.3 0.3 0.8 }
 		
 		interface_skin = { americanist_interface }
@@ -2150,6 +2157,13 @@ oldworld = {
 		
 		color = { 0.4 0.4 0.9 }
 
+		male_names = {
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Theodore George John Thomas James Benjamin Andrew Franklin
+		}
+		female_names = {
+			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
+		}
+
 		interface_skin = { americanist_interface }
 		
 		high_god_name = GOD_MADISON
@@ -2200,6 +2214,13 @@ oldworld = {
 		
 		color = { 0.2 0.2 0.7 }
 		
+		male_names = {
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Theodore George John Thomas James Andrew Ulysses Harry Richard Ronald Dwight Franklin
+		}
+		female_names = {
+			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
+		}
+
 		interface_skin = { americanist_interface }
 
 		high_god_name = GOD_UNCLE_SAM
@@ -2254,6 +2275,16 @@ oldworld = {
 		
 		interface_skin = { americanist_interface }
 
+		male_names = {
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Theodore George John Thomas James Benjamin Andrew Franklin
+			Artemis Pax Hector Apollo Evander Ares Jason Perseus Pan Linus Zeno Damon Ajax Helios Adonis Alexander Bastian Ulysses
+			Silvanus Hermes
+		}
+		female_names = {
+			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
+			Acantha Althea Anthea Ariadne Artemis Astra Athena Aurora Calypso Cassandra Ceres Clio Daphne Diana Fortuna Hera Hestia Ianthe Irene Iris Cora Leto Luna Melia Minerva Nike 
+			Pallas Pax Penelope Phyllis Rhea Selene Thalassa Venus Xanthe
+		}
 		
 		crusade_name = LIBERATION_WAR
 		scripture_name = THE_PAPERS
@@ -2307,6 +2338,13 @@ oldworld = {
 		
 		interface_skin = { consumerist_interface }
 		
+		male_names = {
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich
+		}
+		female_names = {
+			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
+		}
+
 		crusade_name = MARKETING_CAMPAIGN
 		scripture_name = THE_CATALOG
 		priest_title = ENTREPENUER
@@ -2363,6 +2401,13 @@ oldworld = {
 			GOD_THE_DOLLAR GOD_THE_INVISIBLE_HAND GOD_THE_FREE_MARKET GOD_MAMMON
 		}
 
+		male_names = {
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich
+		}
+		female_names = {
+			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
+		}
+
 		can_grant_divorce = yes
 		allow_viking_invasion = yes
 		can_grant_invasion_cb = invasion
@@ -2406,6 +2451,14 @@ oldworld = {
 		evil_god_names = {
 			THE_DEMON_CORE THE_VOID
 		}
+
+		male_names = {
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Robert Albert Leo Hans Ernest Klaus Glenn 
+		}
+		female_names = {
+			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
+		}
+
 		crusade_name = FIRST_STRIKE
 		can_call_crusade = yes #overlooked this somehow
 		scripture_name = THE_LEGENDS
@@ -2446,6 +2499,13 @@ oldworld = {
 		color = { 0.6 0.4 0.2 }
 		
 		interface_skin = { atomicist_interface }
+
+		male_names = {
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Robert Albert Leo Hans Ernest Klaus Glenn 
+		}
+		female_names = {
+			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
+		}
 
 		high_god_name = GOD_THE_SHIELD #radiation shielding
 
@@ -2494,6 +2554,13 @@ oldworld = {
 
 		high_god_name = GOD_FATHER_FORD #removed this blatant 40k reference
 
+		male_names = {
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Henry
+		}
+		female_names = {
+			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
+		}
+
 		god_names = {
 			GOD_FATHER_FORD GOD_THE_MACHINE_SPIRITS GOD_VULCAN GOD_FATHER_BESSEMER
 		}
@@ -2530,6 +2597,13 @@ oldworld = {
 		graphical_culture = muslimgfx
 		
 		parent = rust_cultist
+
+		male_names = {
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Henry
+		}
+		female_names = {
+			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
+		}
 
 		icon = 19
 		heresy_icon = 13

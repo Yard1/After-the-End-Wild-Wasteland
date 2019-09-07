@@ -4404,7 +4404,7 @@ defined_text = {
 ##HOLY ORDERS##
 defined_text = {
 	name = GetMOGod
-
+	use_first_valid = yes
 	text = {
 		localisation_key = String_God
 		trigger = {
@@ -4433,17 +4433,14 @@ defined_text = {
 			society_member_of = monastic_order_hindu
 		}
 	}
-	text = {
+	fallback_text = {
 		localisation_key = String_The_Divine
-		trigger = {
-			has_alternate_start_parameter = { key = religion_names value = random }
-		}
 	}
 }
 
 defined_text = {
 	name = GetMOSaint
-	
+	use_first_valid = yes
 	text = {
 		localisation_key = String_Saint_Benedict
 		trigger = {
@@ -4507,17 +4504,14 @@ defined_text = {
 			society_member_of = monastic_order_jewish
 		}
 	}
-	text = {
+	fallback_text = {
 		localisation_key = String_The_Holy_One
-		trigger = {
-			has_alternate_start_parameter = { key = religion_names value = random }
-		}
 	}
 }
 
 defined_text = {
 	name = GetMOBuilding
-
+	use_first_valid = yes
 	text = {
 		localisation_key = String_monastery
 		trigger = {
@@ -4553,17 +4547,14 @@ defined_text = {
 			society_member_of = monastic_order_jewish
 		}
 	}
-	text = {
+	fallback_text = {
 		localisation_key = String_temple
-		trigger = {
-			has_alternate_start_parameter = { key = religion_names value = random }
-		}
 	}
 }
 
 defined_text = {
 	name = GetMOLeader #unique to AtE
-	
+	use_first_valid = yes
 	text = {
 		localisation_key = String_Abbot
 		trigger = {
@@ -4597,19 +4588,21 @@ defined_text = {
 			society_member_of = monastic_order_jewish
 		}
 	}
-	
 	text = {
-		localisation_key = String_Guru
+		localisation_key = FIRST_LADY
 		trigger = {
-			has_alternate_start_parameter = { key = religion_names value = random }
+			society_member_of = monastic_order_libertarian
 		}
+	}
+	fallback_text = {
+		localisation_key = String_Guru
 	}
 }
 
 
 defined_text = {
 	name = GetMOCode
-
+	use_first_valid = yes
 	text = {
 		localisation_key = String_the_Rule_of_Saint_Benedict
 		trigger = {
@@ -4673,16 +4666,14 @@ defined_text = {
 			society_member_of = monastic_order_jewish
 		}
 	}
-	text = {
+	fallback_text = {
 		localisation_key = String_the_Holy_Text
-		trigger = {
-			has_alternate_start_parameter = { key = religion_names value = random }
-		}
 	}
 }
 
 defined_text = {
 	name = GetMOGreeting
+	use_first_valid = yes
 	text = {
 		localisation_key = String_Gods_blessing_upon_thee
 		trigger = {
@@ -4707,16 +4698,14 @@ defined_text = {
 			society_member_of = monastic_order_jewish
 		}
 	}
-	text = {
+	fallback_text = {
 		localisation_key = String_Peace_be_upon_you
-		trigger = {
-			has_alternate_start_parameter = { key = religion_names value = random }
-		}
 	}
 }
 
 defined_text = {
 	name = GetMOFarewell
+	use_first_valid = yes
 	text = {
 		localisation_key = String_Go_with_God
 		trigger = {
@@ -4745,11 +4734,8 @@ defined_text = {
 			society_member_of = monastic_order_jewish
 		}
 	}
-	text = {
+	fallback_text = {
 		localisation_key = String_Blessings_upon_you
-		trigger = {
-			has_alternate_start_parameter = { key = religion_names value = random }
-		}
 	}
 }
 
@@ -4988,7 +4974,12 @@ defined_text = {
 		}
 		localisation_key = Holy_Order_Raven_Tales
 	}
-	
+	text = {
+		trigger = {
+			religion = libertarian
+		}
+		localisation_key = d_libertarial
+	}
 	fallback_text = {
 		localisation_key = Holy_Order_Generic
 	}

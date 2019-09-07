@@ -440,6 +440,9 @@ de_jure_laws = {
 		show_as_title = yes
 		group = investiture_law
 		default = yes
+		default_selection = {
+			factor = 10
+		}
 		potential = {
 			holder_scope = {
 				OR = {

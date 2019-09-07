@@ -1625,8 +1625,17 @@ gender_laws = {
 	
 		potential = {
 			holder_scope = {
-				equal_religion = no
-				NOT = { has_religion_feature = religion_feature_midewiwin }
+				OR = {
+					AND = {
+						is_theocracy = yes
+						religion_allows_female_temple_holders = no
+						religion_allows_male_temple_holders = yes
+					}
+					AND = {
+						equal_religion = no
+						NOT = { has_religion_feature = religion_feature_midewiwin }
+					}
+				}
 			}
 		}
 		allow = {

@@ -1102,12 +1102,13 @@ character_event = {
 							can_join_society = monastic_order_libertarian
 						}
 						modifier = {
-							factor = 1000
+							factor = 500
 							OR = {
 								has_landed_title = d_libertarian
 								liege = {
 									has_landed_title = d_libertarian
 								}
+								is_priest = yes
 							}
 						}
 						modifier = {
@@ -1119,7 +1120,6 @@ character_event = {
 								trait = theologian
 								trait = gardener
 								learning = 16
-								is_priest = yes
 							}
 						}
 						modifier = {

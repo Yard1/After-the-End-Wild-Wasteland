@@ -24,7 +24,6 @@ character_event = {
 		if = {
 			limit = {
 				FROM = { character = no }
-				dynasty = NONE
 			}
 			if = {
 				limit = {
@@ -127,10 +126,18 @@ character_event = {
 				limit = { is_female = yes }
 				random_list = {
 					25 = {
+						modifier = {
+							factor = 2
+							NOT = {
+								total_years_played = 2
+							}
+							
+						}
 						create_random_soldier = {
 							culture = ROOT
+							religion = ROOT
 							female = yes
-							dynasty = NONE
+							dynasty = culture
 						}
 						new_character = {
 							ROOT = { copy_name = PREV }
@@ -142,14 +149,22 @@ character_event = {
 							limit = { 
 								is_female = yes
 								culture = ROOT
-								dynasty = NONE
 								NOT = { liege = { character = FROMFROM } } 
+							}
+							preferred_limit = {
+								religion = ROOT
 							}
 							ROOT = { copy_name = PREV }
 						}
 					}
 				}
 			}
+		}
+		if = {
+			limit = {
+				religion = libertarian
+			}
+			character_event = { id = miscATEWW.3 days = 1 }
 		}
 		if = {
 			limit = {
@@ -395,4 +410,21 @@ character_event = {
 			}
 		}
 	}
+}
+
+character_event = {
+	id = miscATEWW.3
+	desc = "Make sure newly spawned characters in AI holy orders/theocracies make sense"
+	is_triggered_only = yes
+	hide_window = yes
+	religion = libertarian
+	trigger = {
+		is_priest = yes
+		NOT = { society_member_of = monastic_order_libertarian }
+		can_join_society = monastic_order_libertarian
+	}
+	option = {
+		join_society = monastic_order_libertarian
+	}
+	
 }

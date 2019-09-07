@@ -10947,6 +10947,7 @@ character_event = {
 						is_ruler = yes
 					}
 					character_event = { id = misc.6 }
+					character_event = { id = miscATEWW.2 }
 				}
 
 				if = {
@@ -10982,6 +10983,35 @@ character_event = {
 						is_adult = yes
 					}
 					character_event = { id = SOAATE.100 }
+				}
+			}
+
+			dejure_liege_title = {
+				if = {
+					limit = {
+						higher_tier_than = DUKE
+						NAND = {
+							has_law = investiture_law_0
+							has_law = investiture_law_1
+						}
+						is_law_potential = investiture_law_0
+					}
+					add_law = investiture_law_0
+				}
+			}
+		}
+		d_libertarian = {
+			holder_scope = {
+				b_hendersonville_TN = {
+					c_nashville = {
+						holder_scope = {
+							gain_title = PREVPREV
+						}
+					}
+					make_capital_holding = yes
+				}
+				b_nashville_TN = {
+					gain_title = PREV
 				}
 			}
 		}
@@ -11560,53 +11590,59 @@ character_event = {
 				age = 60
 				religion = libertarian
 			} }
+
+			10 = { create_random_priest = {
+				random_traits = yes
+				female = yes
+				dynasty = random
+				age = 30
+				religion = libertarian
+			} }
+			10 = { create_random_priest = {
+				random_traits = yes
+				female = yes
+				dynasty = random
+				age = 35
+				religion = libertarian
+			} }
+			10 = { create_random_priest = {
+				random_traits = yes
+				female = yes
+				dynasty = random
+				age = 40
+				religion = libertarian
+			} }
+			20 = { create_random_priest = {
+				random_traits = yes
+				female = yes
+				dynasty = random
+				age = 45
+				religion = libertarian
+			} }
+			20 = { create_random_priest = {
+				random_traits = yes
+				female = yes
+				dynasty = random
+				age = 50
+				religion = libertarian
+			} }
+			20 = { create_random_priest = {
+				random_traits = yes
+				female = yes
+				dynasty = random
+				age = 55
+				religion = libertarian
+			} }
+			10 = { create_random_priest = {
+				random_traits = yes
+				female = yes
+				dynasty = random
+				age = 60
+				religion = libertarian
+			} }
 		}
 		new_character = {
 			#character_event = { id = misc.3 } # Diversity
-			random_list = {
-				20 = {
-					change_learning = 1
-				}
-				20 = {
-					change_learning = 2
-				}
-				10 = {
-					modifier = {
-						factor = 2
-						learning < 5
-					}
-					change_learning = 3
-				}
-				10 = {
-					modifier = {
-						factor = 2
-						learning < 4
-					}
-					change_learning = 4
-				}
-			}
-			random_list = {
-				20 = {
-					change_diplomacy = 1
-				}
-				20 = {
-					change_diplomacy = 2
-				}
-				10 = {
-					modifier = {
-						factor = 2
-						diplomacy < 5
-					}
-					change_diplomacy = 3
-				}
-				10 = {
-					modifier = {
-						factor = 2
-						diplomacy < 5
-					}
-					change_diplomacy = 4
-				}
-			}
 			remove_trait = craven
 			remove_trait = weak
 			remove_trait = clubfooted
@@ -11616,6 +11652,7 @@ character_event = {
 				any_demesne_title = { gain_title = PREVPREV }
 			}
 			character_event = { id = misc.6 }
+			character_event = { id = miscATEWW.1 }
 		}
 	}
 }

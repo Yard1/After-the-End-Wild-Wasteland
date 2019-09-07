@@ -12,9 +12,12 @@ EVTOPTBHF20207;I will not risk my [son_holyorder_candidate.GetSonDaughter]'s lif
 EVTDESCAFI213;To the Just [Root.GetTitledName],\nI shall be honored to officiate [Root.GetHerHisCap] [Root.GetHonorific]'s inauguration, provided that [Root.GetHerHisCap] [Root.GetHonorific] show [Root.GetHerHisCap] patriotism by allowing one of [Root.GetHerHisCap] [son_holyorder_candidate.GetSonDaughter]s to do [son_holyorder_candidate.GetHerHis] part in the struggle to preserve America by joining [son_holyorder_host.PrimaryTitle.GetFullName].\n\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
 
 # Libertarians
-
-monastic_order_libertarian;The [d_libertarian.GetBaseName];;;;;;;;;;;;;x
-monastic_order_libertarian_desc;The [d_libertarian.GetBaseName] is one of the most ancient and respected Americanist orders. What started as a small group of women dedicated to preservation and protection of the Statue of Liberty, grew into its own splinter faith, diverging from the Americanist mainstream. The First Lady of the Order is overall responsible for all Libertarians, and all sanctioned Libertarian preachers are members of the Order.;;;;;;;;;;;;;x
+String_Temple;[This.GetHouseOfWorshipCap];Temple;Tempel;;Templo;;;;;;;;;x
+String_temple;te[This.GetHouseOfWorship]mple;e temple;Tempel;;templo;;;;;;;;;x
+String_temple;temple;e temple;Tempel;;templo;;;;;;;;;x
+monastic_order_libertarian;The Order of Our Lady Liberty;;;;;;;;;;;;;x
+monastic_order_libertarian_desc;The Order of Our Lady Liberty is one of the most ancient and respected Americanist orders. What started as a small group of women dedicated to preservation and protection of the Statue of Liberty, grew into its own splinter faith, diverging from the Americanist mainstream. The First Lady of the Order is overall responsible for all Libertarians, and all sanctioned Libertarian preachers are members of the Order.;;;;;;;;;;;;;x
+monastic_order_libertarian_leader;First Lady;;;;;;;;;;;;;x
 monastic_order_libertarian_leader_desc;[d_libertarian.Holder.GetTitle];;;;;;;;;;;;;x
 monastic_order_libertarian_rank_1_female;Fellow;;;;;;;;;;;;;x
 monastic_order_libertarian_rank_2_female;Sister;;;;;;;;;;;;;x
@@ -34,6 +37,9 @@ EVTOPT_MNM_ATEWWW_13;a;;;;;;;;;;;;;x
 EVTOPTC_MNM_4610_bust;Start planning the theft of the §YMarble Bust§!!;;;;;;;;;;;;;x
 EVTOPTC_MNM_4610_money;Start planning the theft of §YOld World Money§!!;;;;;;;;;;;;;x
 
+succ_libertarian_elective;Libertarian Elective;;;;;;;;;;;;;x
+libertarian_elective;Libertarian Elective;;;;;;;;;;;;;x
+
 # Hamiltonians/Madisonians
 
 hamiltonian;Madisonian;;;;;;;;;;;;;x
@@ -47,10 +53,10 @@ create_supreme_court;Restore the Supreme Court;;;;;;;;;;;;;x
 create_supreme_court_desc;If I am patriotic enough and control Washington, I can restore the Supreme Court to its rightful place, so that it may guide all patriots, as Madison wanted.;;;;;;;;;;;;;x
 restore_supreme_court_in_dc;Restore the Supreme Court in Washington;;;;;;;;;;;;;x
 restore_supreme_court_in_dc_desc;The Chief Justice has lost control of Washington, but it is within my power to restore the Capital to him!;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_RELIGION_1_A;Rome, for centuries the center of Christendom, is in Fraticelli hands. This has given me an opportunity to create a Fraticelli Papacy, which shall do away with the scandalous display of wealth that the Catholic Papacy has long been guilty of.;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_RELIGION_1_B;Rome, for centuries the center of Christendom, is in Fraticelli hands. [From.GetTitledFirstName] has therefore seen fit to create a Fraticelly Papacy, claiming it shall do away with the scandalous display of wealth that the Catholic Papacy has long been guilty of.;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_RELIGION_3_A;I have granted Rome to its rightful ruler, so that the Fraticelli Pope may lead his Church from accommodations befitting his stature. The Pope shall soon take up his abode in the offices historically occupied by his Catholic predecessors.;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_RELIGION_3_B;[From.GetTitledFirstName] has granted Rome to its rightful ruler, so that the Fraticelli Pope may lead his Church from accommodations befitting his stature. The Pope shall soon take up his abode in the offices historically occupied by his Catholic predecessors.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_RELIGION_1_A;Washington, for centuries the capitol of the United States, is in Madisonian hands. This has given me an opportunity to restore the Supreme Court to its rightful place, so that it may guide all patriots, as Madison wanted.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_RELIGION_1_B;Washington, for centuries the capitol of the United States, is in Madisonian hands. [From.GetTitledFirstName] has therefore seen fit to restore the Supreme Court to its rightful place, claiming that it is Madison's will.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_RELIGION_3_A;I have granted Washington to its rightful ruler, so that the Chief Justice may adjudicate in the building of the Supreme Court. The Chief Justice shall soon take up [d_supreme_court.GetHerHis] abode in the offices historically occupied by [d_supreme_court.GetHerHis] pre-Calamity predecessors.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_RELIGION_3_B;[From.GetTitledFirstName] has granted Washington to its rightful ruler, so that the Chief Justice may adjudicate in the building of the Supreme Court. The Chief Justice shall soon take up [d_supreme_court.GetHerHis] abode in the offices historically occupied by [d_supreme_court.GetHerHis] pre-Calamity predecessors.;;;;;;;;;;;;;x
 title_hamiltonian_justice;Justice;;;;;;;;;;;;;x
 expected_next_title_hamiltonian_justice;Expected Next Justice;;;;;;;;;;;;;x
 expected_next_title_hamiltonian_justice_tooltip;This judge is probably next in line for a Justiceship when one becomes available.;;;;;;;;;;;;;x

@@ -42,6 +42,9 @@ monastic_order_libertarian = {
 			NOT = { has_law = investiture_law_1 }
 		}
 		NOT = { trait = excommunicated }
+		NOT = {
+			has_character_modifier = expelled_d_libertarian
+		}
 		custom_tooltip = {
 			text = did_not_betray_society
 			NOT = { has_character_flag = betrayed_monastic_order_libertarian }
@@ -54,6 +57,9 @@ monastic_order_libertarian = {
 
 	show_society = {
 		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
 			religion = libertarian
 			society_member_of = monastic_order_libertarian
 		}
@@ -193,6 +199,10 @@ monastic_order_libertarian = {
 			value = 2
 		}
 		has_trait = {
+			trait = arbitrary
+			value = -4
+		}
+		has_trait = {
 			trait = craven
 			value = -3
 		}
@@ -213,13 +223,13 @@ monastic_order_libertarian = {
 		value = 10
 		modifier = {
 			has_landed_title = d_libertarian
-			factor = 25
+			factor = 50
 		}
 		modifier = {
 			any_heir_title = {
 				title = d_libertarian
 			}
-			factor = 2.5
+			factor = 10
 		}
 		modifier = {
 			any_liege = {
@@ -306,6 +316,14 @@ monastic_order_libertarian = {
 		modifier = {
 			trait = slothful
 			factor = 0.9
+		}
+		modifier = {
+			trait = lustful
+			factor = 0.9
+		}
+		modifier = {
+			trait = arbitrary
+			factor = 0.6
 		}
 		modifier = {
 			higher_tier_than = DUKE

@@ -1,6 +1,6 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_expel_libertanians"
+		name = "GFX_expel_libertarian"
 		texturefile = "gfx\\interface\\decision_icon_expel_holy_order.dds"
 	}
 	spriteType = {
