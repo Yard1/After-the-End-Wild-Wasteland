@@ -22,6 +22,7 @@ character_event = {
 	option = {
 		name = EVTOPTZAFI1
 		trigger = { 
+			higher_tier_than = DUKE
 			NOT = { trait = excommunicated }
 			OR = {
 				religion = hamiltonian
@@ -207,13 +208,8 @@ character_event = {
 					religion = hamiltonian
 					religion = libertarian
 				}
-				AND = {
-					lower_tier_than = EMPEROR
-					OR = {
-						NOT = { religion = hamiltonian }
-						primary_title = { has_law = investiture_law_1 }
-					}
-				}
+				lower_tier_than = EMPEROR
+				primary_title = { has_law = investiture_law_1 }
 			}
 			any_realm_character = {
 				is_theocracy = yes
@@ -292,10 +288,8 @@ character_event = {
 					religion = hamiltonian
 					religion = libertarian
 				}
-				AND = {
-					lower_tier_than = EMPEROR
-					primary_title = { has_law = investiture_law_1 }
-				}
+				lower_tier_than = EMPEROR
+				primary_title = { has_law = investiture_law_1 }
 			}
 			any_realm_character = {
 				is_theocracy = yes
@@ -1105,10 +1099,14 @@ letter_event = {
 			30 = {  
 				modifier = {
 					factor = 0
-					OR = {
-						NOT = { religion = hamiltonian }
-						FROM = { NOT = { primary_title = { has_law = investiture_law_1 } } }
+					NOR = { 
+						religion = hamiltonian 
+						religion = libertarian 
 					}
+				}
+				modifier = {
+					factor = 0
+					FROM = { NOT = { primary_title = { has_law = investiture_law_1 } } }
 				}
 				modifier = {
 					factor = 2
@@ -2749,6 +2747,7 @@ character_event = {
 	}
 }
 
+
 #Crowned King: the Coronation ceremony has concluded. END OF THE LINE. HIDDEN FOR REDUNDANCY.
 character_event = {
 	id = AFI.111
@@ -2780,16 +2779,10 @@ character_event = {
 					chance = 30 
 					character_event = { id = AFI.122 days = 50 random = 50 } #Peasants are still celebrating after the coronation. What do you do?
 				}
-			}
-			if = { 
-				limit = { has_character_flag = flag_extravagant_coronation } 
 				random = { 
 					chance = 30 
 					character_event = { id = AFI.123 days = 50 random = 50 } #Word of great coronation spreads, giving additional prestige.
 				}
-			}
-			if = { 
-				limit = { has_character_flag = flag_extravagant_coronation } 
 				random = { 
 					chance = 30 
 					character_event = { id = AFI.124 days = 150 random = 150 } #Capital economy increased because of coronation.
@@ -4536,8 +4529,9 @@ letter_event = {
 			}
 		}
 		set_character_flag = flag_crowned_by_pope
-		FROM = { save_event_target_as = coronation_priest 
-				show_scope_change = no	
+		FROM = { 
+			save_event_target_as = coronation_priest 
+			show_scope_change = no	
 			opinion = {
 				modifier = opinion_supposed_to_crown
 				months = 1
@@ -4901,7 +4895,7 @@ letter_event = {
 		ai_chance = { factor = 100 }
 	}
 	option = {	#End of the line
-		name = EVTOPTBAFI203
+		name = EVTOPTBHF20212
 		custom_tooltip = { text = inauguration_cancelled }
 		#clr_character_flag = flag_preparing_coronation #Replaced by timed modifier
 		ai_chance = { factor = 0 }
@@ -4915,7 +4909,10 @@ letter_event = {
 	border = GFX_event_letter_frame_religion
 
 	trigger = {
-		religion = hamiltonian
+		OR = {
+			religion = hamiltonian
+			religion = libertarian
+		}
 	}
 	is_triggered_only = yes
 	

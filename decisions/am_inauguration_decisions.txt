@@ -23,6 +23,7 @@ decisions = {
 			}	
 			NOT = { trait = inaug_by_judge }
 			NOT = { trait = inaug_by_cjudge }
+			NOT = { trait = inaug_by_sjudge }
 			NOT = { trait = inaug_prez }
 			NOT = { government = order_government }
 		} 
