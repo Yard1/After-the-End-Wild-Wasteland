@@ -1,0 +1,976 @@
+#### HOLY ORDERS ####
+
+d_knights_of_columbus = {
+
+	color = { 137 191 244 } #
+	color2= { 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 46 # Quinnipiac
+
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	culture = gothamite
+	religion = catholic
+	
+	landless = yes
+	holy_order = yes
+	primary = yes
+	monthly_income = 6
+
+	mercenary_type = d_knights_of_columbus_composition
+}
+
+d_knights_of_peter_claver = {
+
+	color = { 210 28 129 } #
+	color2= { 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 1124 # New Orleans
+
+	title = "SUPREME_KNIGHT"
+	foa = "SIR_KNIGHT_FOA"
+
+	culture = creole
+	religion = catholic
+	
+	landless = yes	
+	holy_order = yes	
+	primary = yes
+	monthly_income = 4
+
+	mercenary_type = d_knights_of_peter_claver_composition
+}
+
+d_lebanon_brethren = {
+
+	color = { 101 101 81 } #
+	color2= { 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 50 # Lehigh
+
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	culture = deitsch
+	religion = anabaptist
+	
+	landless = yes
+	holy_order = yes
+	primary = yes
+	monthly_income = 1
+
+	mercenary_type = d_lebanon_brethren_composition
+}
+
+d_st_ursulas_chosen = {
+
+	color = { 150 180 240 } #
+	color2= { 255 255 255 }
+
+	short_name = yes
+	
+	graphical_culture = holygfx
+	
+	capital = 1199 # Cap Diamant
+
+	title = "GRANDMASTER"
+	title_female = "SISTER_MILITANT"
+	foa = "SISTER_MILITANT_FOA"
+
+	religion = ursuline
+	
+	culture = quebecois
+	
+	landless = yes
+	holy_order = yes
+	primary = yes
+	monthly_income = 4
+
+	mercenary_type = d_st_ursulas_chosen_composition
+}
+
+k_ursuline_state = { #used for Northern Crusade stuff I guess
+	color = { 150 180 240 }
+	color2= { 255 255 255 }
+
+	graphical_culture = holygfx
+
+	title = "GRANDMASTER"
+	title = "SISTER_MILITANT"
+	foa = "SISTER_MILITANT_FOA"
+
+	holy_order = yes
+	mercenary_type = d_st_ursulas_chosen_composition
+
+	short_name = yes
+
+	assimilate = no
+
+	# Parent Religion
+	religion = ursuline
+
+	culture = quebecois
+
+	# Cannot be held as a secondary title
+	primary = yes
+
+	# Extra income due to donations, etc
+	monthly_income = 12 # (Must be an integer between 1 and 512)	
+}
+
+
+d_masked_knights = {
+
+	color = { 192 192 192 } #
+	color2= { 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 231 # Laredo
+	
+	short_name = yes
+
+	title = "CAMPEON"
+	foa = "CAMPEON_FOA"
+
+	culture = norteno
+	religion = sacred_heart
+	
+	landless = yes
+	holy_order = yes
+	primary = yes
+	monthly_income = 10
+
+	mercenary_type = d_masked_knights_composition
+}
+
+
+d_men_in_black = {
+	color={ 100 100 0 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = hashshashingfx
+	
+	capital = 93 # Bull Run
+	
+	title = "DIRECTOR"
+	title_female = "DIRECTOR"
+	foa = "GRANDHEADMASTER_FOA"
+	
+	culture = beltway
+	religion = americanist
+	
+	holy_order = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	monthly_income = 6
+
+	mercenary_type = hashshashin_composition
+			
+	pagan_coa = {
+		template = 0
+		layer = {
+			texture = 1
+			texture_internal = 1
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+		religion = "americanist"
+	}
+}
+
+d_midwestern_brotherhood = {
+	color={ 0 134 228 }
+	color2={ 255 255 255 }
+
+	capital = 170 # Chicago
+	
+	title = "SUPREME_KNIGHT"
+	foa = "SIR_KNIGHT_FOA"
+
+	religion = rust_cultist
+	culture = chicagoan
+
+	holy_order = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 6
+
+	mercenary_type = d_steel_brotherhood_composition
+}
+
+d_flaming_sword = {
+	color={ 65 105 225 }
+	color2={ 255 255 255 }
+
+	capital = 1019 # Nashville
+	
+	title = "GRAND_MASTER"
+	foa = "GRAND_MASTER_FOA"
+
+	religion = revelationist_reformed
+	culture = riverlander
+	
+	holy_order = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 6
+
+	mercenary_type = d_flaming_sword_composition
+}
+
+d_fm = {
+	color={ 2 11 148 }
+	color2={ 255 255 255 }
+
+	capital = 69 # Boston
+	
+	title = "GRAND_MASTER"
+	foa = "GRAND_MASTER_FOA"
+
+	religion = occultist_reformed
+	culture = yankee
+	
+	holy_order = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 6
+
+	mercenary_type = d_fm_composition
+}
+
+d_fh = {
+	color={ 16 30 225 }
+	color2={ 255 255 255 }
+
+	capital = 1157 # Green Bay
+	
+	title = "THANE"
+	foa = "THANE_FOA"
+	
+	religion = norse_pagan_reformed
+	culture = northlander
+
+	holy_order = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 6
+
+	mercenary_type = d_fh_composition
+}
+
+d_oto = {
+	color={ 240 240 240 }
+	color2={ 255 255 255 }
+
+	capital = 68 # Plymouth
+		
+	religion = thelemic_reformed
+	culture = british
+
+	title = "FRATER_SUPERIOR"
+	foa = "FRATER_SUPERIOR_FOA"
+
+	holy_order = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 6
+
+	mercenary_type = d_oto_composition
+}
+
+
+d_national_cathedral = {
+
+	color={ 120 0 145 }
+	color2={ 255 255 255 }
+	graphical_culture = orthodoxholygfx
+	
+	capital = 63 # Washington
+
+	religion = evangelical
+	culture = beltway
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	holy_order = yes	
+	landless = yes	
+	primary = yes
+	monthly_income = 2
+
+	mercenary_type = d_national_cathedral_composition
+}
+
+d_uel = {
+	color={ 225 170 145 }
+	color2={ 255 255 255 }
+	graphical_culture = holygfx
+	
+	capital = 1271 # Toronto
+
+	religion = confederated
+	culture = ontarian
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	holy_order = yes
+	landless = yes
+	primary = yes
+	monthly_income = 2
+	
+	mercenary_type = d_uel_composition
+}
+
+d_keepers_of_the_green_peace = {
+	color={ 20 185 22 }
+	color2={ 255 255 255 }
+
+	capital = 534 # Multnomah/Portland
+	
+	religion = gaian
+	culture = cascadian
+
+	title = "CAPTAIN"
+	title_female = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	holy_order = yes
+	landless = yes
+	primary = yes
+	monthly_income = 2
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_keepers_of_the_green_peace_composition
+}
+
+d_lightbringers = {
+	color={ 234 197 76 }
+	color2={ 255 255 255 }
+
+	capital = 3054 # Patzcuaro
+		
+	religion = sol_invicta	
+	culture = mixtec
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	holy_order = yes
+	landless = yes
+	primary = yes
+	monthly_income = 2
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_lightbringers_composition
+}
+
+d_dead_sun = {
+	color={ 114 75 6 }
+	color2={ 255 255 255 }
+
+	capital = 3085 # Atenas de Jalisco
+	
+	religion = mictlantec	
+	culture = mixtec
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	holy_order = yes
+	landless = yes
+	primary = yes
+	monthly_income = 2
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_dead_sun_composition
+}
+
+d_shomrim = {
+	color={ 20 100 255 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = jewishholygfx
+	
+	capital = 2 # Brooklyn
+
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = jewish
+	culture = yiddish
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_shomrim_composition
+}
+
+d_nauvoo_legion = {
+	color={ 32 39 255 }
+	color2={ 150 80 0 }
+	
+	capital = 430 # Salt Lake
+
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = mormon
+	culture = utahn
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 6 # (Must be an integer between 1 and 512)
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_nauvoo_legion_composition 
+}
+
+d_st_pats = {
+	color={ 0 105 63 }
+	color2={ 255 255 255 }
+	
+	capital = 1271 # Toronto
+
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = high_church
+	culture = ontarian
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 6 # (Must be an integer between 1 and 512)
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_st_pats_composition
+}
+
+d_golden_bears = {
+	color={ 0 105 63 }
+	color2={ 255 255 255 }
+	
+	capital = 2032 # Alameda
+
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = cetic
+	culture = bayfolk
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 6 # (Must be an integer between 1 and 512)
+	
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_golden_bears_composition
+}
+
+d_oppenheimer = {
+
+	color={ 255 255 255 }
+	
+	capital = 423 # Los Alamos
+
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = atomicist
+	
+	culture = arixan
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 1 # (Must be an integer between 1 and 512)
+
+	mercenary_type = d_oppenheimer_composition
+}
+
+d_order_of_brotherhood = {
+	
+	color = { 234 211 63 }
+	
+	capital = 3169 #Bluefields
+	
+	title = "GRAND_MASTER"
+	foa = "GRAND_MASTER_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion
+	religion = falling_star
+	
+	culture = miskito
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	#Extra income due to donations, etc
+	monthly_income = 1
+	
+	mercenary_type = d_order_of_brotherhood_composition
+}
+
+d_followers_arjuna = {
+	color={ 255 0 0 }
+	color2={ 255 255 255 }
+	
+	capital = 3270 # Georgetown
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	culture = guyanese
+	
+	# Parent Religion 
+	religion = hindu
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 1 # (Must be an integer between 1 and 512)
+	
+	mercenary_type = followers_arjuna_composition
+}
+
+d_albion_legion = {
+	color={ 243 174 0 }
+	color2={ 255 255 255 }
+	
+	capital = 3199 # Sogamoso
+	
+	title = "COLONEL"
+	foa = "COLONEL_FOA"
+	
+	#Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	culture = cartagenero
+	
+	# Parent Religion
+	religion = gracia_divina
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 1
+	
+	mercenary_type = d_albion_legion_composition
+}
+
+d_judah_lions = {
+
+	color={ 180 165 70 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 1174 # Surrey
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = rastafarian
+	
+	culture = west_indian
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 1 # (Must be an integer between 1 and 512)
+
+	mercenary_type = judah_lions_composition
+}
+
+d_saint_expedit = {
+
+	color={ 91 127 0 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 1124 # New Orleans
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = voodoo
+	
+	culture = creole
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 1 # (Must be an integer between 1 and 512)
+
+	mercenary_type = saint_expedit_composition
+}
+
+d_followers_ogun = {
+
+	color={ 128 128 128 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 1113 # Sierra Maestra
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = santeria
+	
+	culture = afrocubano
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 1 # (Must be an integer between 1 and 512)
+
+	mercenary_type = followers_ogun_composition
+}
+
+d_warriors_guaicaipuro = {
+
+	color={ 127 51 0 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 648 # Miranda
+	
+	title = "WARCHIEF"
+	foa = "WARCHIEF_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = espiritista_reformed
+	
+	culture = wayuu
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 1 # (Must be an integer between 1 and 512)
+
+	mercenary_type = warriors_guaicaipuro_composition
+}
+
+d_all_tribes = {
+
+	color={ 133 4 5 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 382 # Porcupine
+	
+	title = "WARCHIEF"
+	foa = "WARCHIEF_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = peyotist	
+	
+	culture = sioux
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 1 # (Must be an integer between 1 and 512)
+
+	mercenary_type = all_tribes_composition
+}
+
+d_rebels_male = {
+
+	color={ 0 126 195 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 672 # Boa Vista
+	
+	title = "WARCHIEF"
+	foa = "WARCHIEF_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = candomble	
+	
+	culture = baiano
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 1 # (Must be an integer between 1 and 512)
+
+	mercenary_type = rebels_male_composition
+}
+
+d_code_keepers = {
+
+	color={ 254 255 3 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 1197 # New Providence
+	
+	title = "WARCHIEF"
+	foa = "WARCHIEF_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = brethren	
+	
+	culture = west_indian
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # twice as much cause they're pirates
+
+	mercenary_type = code_keepers_composition
+}
+
+d_golden_archers = {
+
+	color = { 190 160 60 }
+	color2= { 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 170 # Chicago
+
+	title = "DIRECTOR"
+	foa = "DIRECTOR_FOA"
+
+	culture = chicagoan
+	religion = consumerist
+	
+	landless = yes
+	holy_order = yes
+	primary = yes
+	monthly_income = 6
+
+	mercenary_type = golden_archers_composition
+}
+
+d_round_table = {
+	
+	color={ 75 75 75 }
+	color2={ 255 255 255 }
+	
+	capital = 2078 #St Johns
+
+	title = "WARCHIEF"
+	foa = "WARCHIEF_FOA"
+	
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	
+	# Parent Religion 
+	religion = celtic_pagan
+	
+	monthly_income = 1
+	
+	culture = newfie
+	
+	# Cannot be held as a secondary title
+	primary = yes
+
+	strength_growth_per_century = 0.1
+
+	mercenary_type = fianna_composition
+
+	dynasty_title_names = no
+}
+
+d_salvation_army = {
+
+	color={ 239 62 66 }
+	color2={ 255 255 255 }
+	graphical_culture = orthodoxholygfx
+	
+	capital = 63 # Washington
+
+	religion = evangelical
+	culture = southron
+	
+	title = "GENERAL"
+	foa = "GENERAL_FOA"
+	
+	holy_order = yes	
+	landless = yes	
+	primary = yes
+	monthly_income = 2
+
+	mercenary_type = d_salvation_army_composition
+}
+
+d_three_fires = {
+	color = { 197 133 41 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 290 # Manitoulin
+	
+	religion = midewiwin_reformed
+	culture = ojibwe
+	
+	title = "WARCHIEF"
+	foa = "WARCHIEF_FOA"
+	
+	holy_order = yes	
+	landless = yes	
+	primary = yes
+	monthly_income = 2
+	
+	mercenary_type = d_three_fires_composition
+}
+
+d_taxet_warriors = {
+	color={ 159 20 20 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 548 # Vancouver
+	
+	religion = raven_tales_reformed
+	culture = haida
+	
+	title = "WARCHIEF"
+	foa = "WARCHIEF_FOA"
+	
+	holy_order = yes	
+	landless = yes	
+	primary = yes
+	monthly_income = 2
+	
+	mercenary_type = d_taxet_warriors_composition
+}

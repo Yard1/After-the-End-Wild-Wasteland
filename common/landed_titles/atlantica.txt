@@ -994,7 +994,6 @@ e_atlantica = {
 				holy_site = evangelical
 				holy_site = anabaptist
 				holy_site = americanist
-				holy_site = libertarian
 				holy_site = consumerist #actual closest province to KoP mall
 				
 				deitsch = "Filadelfi"
@@ -1244,6 +1243,7 @@ e_atlantica = {
 		thelemic_reformed = 50
 		norse_pagan_reformed = 25
 		consumerist = 300 # consolidate northeast
+		atomicist = 200
 		
 		culture = deitsch
 		

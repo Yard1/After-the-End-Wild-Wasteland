@@ -1,0 +1,242 @@
+holy_order_check_active_trigger = {
+	OR = {
+		AND = {
+			religion_group = oldworld
+			OR = {
+				d_libertarian = { holder_scope = { character = yes religion = PREVPREV } }
+				d_men_in_black = { holder_scope = { character = yes religion = PREVPREV } }
+				d_midwestern_brotherhood = { holder_scope = { character = yes religion = PREVPREV } }
+				d_oppenheimer = { holder_scope = { character = yes religion = PREVPREV } }
+				d_golden_archers = { holder_scope = { character = yes religion = PREVPREV } }
+			}
+		}
+		AND = {
+			religion_group = pagan_group
+			OR = {
+				d_red_dragons = { holder_scope = { character = yes religion = PREVPREV } }
+				d_flaming_sword = { holder_scope = { character = yes religion = PREVPREV } }
+				d_fm = { holder_scope = { character = yes religion = PREVPREV } }
+				d_fh = { holder_scope = { character = yes religion = PREVPREV } }
+				d_oto = { holder_scope = { character = yes religion = PREVPREV } }
+				d_round_table = { holder_scope = { character = yes religion = PREVPREV } }
+				d_three_fires = { holder_scope = { character = yes religion = PREVPREV } }
+				d_taxet_warriors = { holder_scope = { character = yes religion = PREVPREV } }
+			}
+		}
+		AND = {
+			religion_group = christian
+			OR = {
+				d_knights_of_columbus = { holder_scope = { character = yes religion = PREVPREV } }
+				d_knights_of_peter_claver = { holder_scope = { character = yes religion = PREVPREV } }
+				d_lebanon_brethren = { holder_scope = { character = yes religion = PREVPREV } }
+				d_st_ursulas_chosen = { holder_scope = { character = yes religion = PREVPREV } }
+				k_ursuline_state = { holder_scope = { character = yes religion = PREVPREV } }
+				d_national_cathedral = { holder_scope = { character = yes religion = PREVPREV } }
+				d_uel = { holder_scope = { character = yes religion = PREVPREV } }
+				d_st_pats = { holder_scope = { character = yes religion = PREVPREV } }
+				d_order_of_brotherhood = { holder_scope = { character = yes religion = PREVPREV } }
+				d_salvation_army = { holder_scope = { character = yes religion = PREVPREV } }
+			}
+		}
+		AND = {
+			religion_group = pacific
+			OR = {
+				d_keepers_of_the_green_peace = { holder_scope = { character = yes religion = PREVPREV } }
+				d_golden_bears = { holder_scope = { character = yes religion = PREVPREV } }
+			}
+		}
+		AND = {
+			religion_group = cult_of_saints
+			OR = {
+				d_masked_knights = { holder_scope = { character = yes religion = PREVPREV } }
+				d_albion_legion = { holder_scope = { character = yes religion = PREVPREV } }
+			}
+		}
+		AND = {
+			religion_group = mesoamerican_gods
+			OR = {
+				d_lightbringers = { holder_scope = { character = yes religion = PREVPREV } }
+				d_dead_sun = { holder_scope = { character = yes religion = PREVPREV } }
+			}
+		}
+		AND = {
+			religion_group = jewish_group
+			d_shomrim = { holder_scope = { character = yes religion = PREVPREV } }
+		}
+		AND = {
+			religion_group = latter_day_saints
+			d_nauvoo_legion = { holder_scope = { character = yes religion = PREVPREV } }
+		}
+		AND = {
+			religion_group = indian_group
+			d_followers_arjuna = { holder_scope = { character = yes religion = PREVPREV } }
+		}
+		AND = {
+			religion_group = afro_syncretic
+			OR = {
+				d_judah_lions = { holder_scope = { character = yes religion = PREVPREV } }
+				d_saint_expedit = { holder_scope = { character = yes religion = PREVPREV } }
+				d_followers_ogun = { holder_scope = { character = yes religion = PREVPREV } }
+				d_warriors_guaicaipuro = { holder_scope = { character = yes religion = PREVPREV } }
+				d_rebels_male = { holder_scope = { character = yes religion = PREVPREV } }
+			}
+		}
+		AND = {
+			religion_group = american_native
+			d_all_tribes = { holder_scope = { character = yes religion = PREVPREV } }
+		}
+		AND = {
+			religion_group = pirate
+			d_code_keepers = { holder_scope = { character = yes religion = PREVPREV } }
+		}
+	}
+}
+
+can_join_any_holy_order_trigger = {
+	OR = {
+		AND = {
+			religion_group = oldworld
+			OR = {
+				d_libertarian = { holy_order_can_PREV_join = yes }
+				d_men_in_black = { holy_order_can_PREV_join = yes }
+				d_midwestern_brotherhood = { holy_order_can_PREV_join = yes }
+				d_oppenheimer = { holy_order_can_PREV_join = yes }
+				d_golden_archers = { holy_order_can_PREV_join = yes }
+			}
+		}
+		AND = {
+			religion_group = pagan_group
+			OR = {
+				d_red_dragons = { holy_order_can_PREV_join = yes }
+				d_flaming_sword = { holy_order_can_PREV_join = yes }
+				d_fm = { holy_order_can_PREV_join = yes }
+				d_fh = { holy_order_can_PREV_join = yes }
+				d_oto = { holy_order_can_PREV_join = yes }
+				d_round_table = { holy_order_can_PREV_join = yes }
+				d_three_fires = { holy_order_can_PREV_join = yes }
+				d_taxet_warriors = { holy_order_can_PREV_join = yes }
+			}
+		}
+		AND = {
+			religion_group = christian
+			OR = {
+				d_knights_of_columbus = { holy_order_can_PREV_join = yes }
+				d_knights_of_peter_claver = { holy_order_can_PREV_join = yes }
+				d_lebanon_brethren = { holy_order_can_PREV_join = yes }
+				d_st_ursulas_chosen = { holy_order_can_PREV_join = yes }
+				k_ursuline_state = { holy_order_can_PREV_join = yes }
+				d_national_cathedral = { holy_order_can_PREV_join = yes }
+				d_uel = { holy_order_can_PREV_join = yes }
+				d_st_pats = { holy_order_can_PREV_join = yes }
+				d_order_of_brotherhood = { holy_order_can_PREV_join = yes }
+				d_salvation_army = { holy_order_can_PREV_join = yes }
+			}
+		}
+		AND = {
+			religion_group = pacific
+			OR = {
+				d_keepers_of_the_green_peace = { holy_order_can_PREV_join = yes }
+				d_golden_bears = { holy_order_can_PREV_join = yes }
+			}
+		}
+		AND = {
+			religion_group = cult_of_saints
+			OR = {
+				d_masked_knights = { holy_order_can_PREV_join = yes }
+				d_albion_legion = { holy_order_can_PREV_join = yes }
+			}
+		}
+		AND = {
+			religion_group = mesoamerican_gods
+			OR = {
+				d_lightbringers = { holy_order_can_PREV_join = yes }
+				d_dead_sun = { holy_order_can_PREV_join = yes }
+			}
+		}
+		AND = {
+			religion_group = jewish_group
+			d_shomrim = { holy_order_can_PREV_join = yes }
+		}
+		AND = {
+			religion_group = latter_day_saints
+			d_nauvoo_legion = { holy_order_can_PREV_join = yes }
+		}
+		AND = {
+			religion_group = indian_group
+			d_followers_arjuna = { holy_order_can_PREV_join = yes }
+		}
+		AND = {
+			religion_group = afro_syncretic
+			OR = {
+				d_judah_lions = { holy_order_can_PREV_join = yes }
+				d_saint_expedit = { holy_order_can_PREV_join = yes }
+				d_followers_ogun = { holy_order_can_PREV_join = yes }
+				d_warriors_guaicaipuro = { holy_order_can_PREV_join = yes }
+				d_rebels_male = { holy_order_can_PREV_join = yes }
+			}
+		}
+		AND = {
+			religion_group = american_native
+			d_all_tribes = { holy_order_can_PREV_join = yes }
+		}
+		AND = {
+			religion_group = pirate
+			d_code_keepers = { holy_order_can_PREV_join = yes }
+		}
+	}
+}
+
+holy_order_can_PREV_join = {
+	holder_scope = { 
+		character = yes religion = PREVPREV
+	}
+	OR = {
+		has_law = true_cognatic_succession
+		AND = {
+			PREV = { is_female = no }
+			OR = {
+				has_law = agnatic_succession
+				has_law = cognatic_succession
+			}
+		}
+		AND = {
+			PREV = { is_female = yes }
+			OR = {
+				has_law = enatic_succession
+				has_law = enatic_cognatic_succession
+			}
+		}
+	}
+}
+
+holy_order_has_same_religion_as_PREV = {
+	holder_scope = { 
+		character = yes religion = PREVPREV
+	}
+}
+
+religion_priests_cant_marry = {
+	OR = {
+		religion = falling_star
+		religion = sacred_heart
+		religion = gracia_divina
+		religion = sol_invicta
+		religion = mictlantec
+		religion = neomayan
+		religion = libertarian
+		religion = catholic
+		religion = neognostic
+		religion = sedevacantist
+		religion = nestorian
+		religion = ursuline
+		religion = angeline
+		religion = confederated
+		religion = high_church
+	}
+}
+
+holy_order_is_celibate = {
+	holder_scope = {
+		religion_priests_cant_marry = yes
+	}
+}

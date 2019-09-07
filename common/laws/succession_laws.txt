@@ -618,7 +618,6 @@ succession_laws = {
 							NOT = { religion = midewiwin }
 							NOT = { religion = raven_tales }
 							religion = thelemic
-							religion = thelemic_reformed
 							is_reformed_religion = yes
 						}
 					}
@@ -1404,6 +1403,7 @@ succession_laws = {
 			}
 			NOR = {
 				title = k_papal_state
+				title = d_libertarian
 				title = k_ursuline
 				title = d_quorum_of_the_twelve
 				title = d_celtic_pagan_reformed
@@ -1582,9 +1582,15 @@ gender_laws = {
 	cognatic_succession = {
 		potential = {
 			holder_scope = {
-				equal_religion = no
-				NOT = { has_religion_feature = religion_feature_midewiwin }
+				OR = {
+					AND = {
+						equal_religion = no
+						NOT = { has_religion_feature = religion_feature_midewiwin }
+					}
+					has_bloodline_flag = bloodline_effect_cognatic
+				}
 			}
+			is_landless_type_title = no
 		}
 		
 		effect = {
@@ -1686,7 +1692,7 @@ gender_laws = {
 						religion_allows_male_temple_holders = yes
 					}
 					any_owned_bloodline = {
-						has_bloodline_flag = bloodline_true_cognatic
+						has_bloodline_flag = bloodline_effect_cognatic
 					}
 				}
 			}
@@ -1703,7 +1709,7 @@ gender_laws = {
 					religion_allows_male_temple_holders = yes
 				}
 				any_owned_bloodline = {
-					has_bloodline_flag = bloodline_true_cognatic
+					has_bloodline_flag = bloodline_effect_cognatic
 				}
 			}
 		}
@@ -1854,6 +1860,7 @@ gender_laws = {
 					}
 				}
 			}
+			is_landless_type_title = no
 		}
 		allow = {
 			

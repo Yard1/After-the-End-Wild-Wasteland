@@ -255,7 +255,7 @@ d_occultist_reformed = {
 	religion = occultist_reformed
 	
 	# Cannot be held as a secondary title
-	primary = yes
+	# primary = yes
 	
 	dynasty_title_names = no    # Will not be named "Seljuk", etc.
 }
@@ -277,6 +277,7 @@ d_rust_cultist = { #ayo, the wu is back
 		religion = rust_cultist
 		num_of_holy_sites = 3
 		piety = 500
+		wealth = 250
 	}
 	
 	caliphate = yes
@@ -461,7 +462,7 @@ d_libertarian = {
 
 	graphical_culture = holygfx
 	
-	capital = 4 # Nashville?
+	capital = 1019 # Nashville?
 	creation_requires_capital = no
 	
 	dignity = 100 # Counted as having this many more counties than it does
@@ -920,7 +921,9 @@ d_monetarist = {
 			trait = mirza
 			trait = sayyid
 			trait = investor
-			wealth = 5000
+			religion = monetarist
+			wealth = 200
+			#lowered barriers for entry and added an obvious requirement
 		}
 		NOT = { has_global_flag = consumerist_revolt_ongoing }
 		NOT = { has_global_flag = monetarist_heresy }
@@ -936,7 +939,7 @@ d_monetarist = {
 	#}
 	
 	# Cannot be held as a secondary title
-	primary = yes
+	# primary = yes
 	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }

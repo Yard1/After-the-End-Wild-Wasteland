@@ -1,0 +1,39 @@
+ROOT_join_PREV_holy_order_holder = {
+		if = {
+			limit = {
+				has_minor_title = title_commander
+			}
+			remove_title = title_commander
+		}
+		if = {
+			limit = {
+				has_minor_title = title_appointed_regent
+			}
+			remove_title = title_appointed_regent
+		}
+		if = {
+			limit = {
+				has_minor_title = title_patrician_heir
+			}
+			remove_title = title_patrician_heir
+		}
+		clear_wealth = PREV
+		if = {
+			limit = {
+				PREV = {
+					primary_title = {
+						holy_order_is_celibate = yes
+					}
+				}
+			}
+			spouse = {
+				remove_spouse = spouse
+				character_event = { id = SoA.2863 }
+			}
+			set_character_flag = flag_papal_celibacy
+			add_trait = celibate
+		}
+		move_character = PREV
+		end_inaccessibility_effect = yes #removes in_hiding or in_seclusion
+	}
+}

@@ -112,3 +112,21 @@ character_event = {
 			}
 	}
 }
+
+character_event = {
+	id = ATE_WWW_DEBUG.3
+	desc = "DEBUG"
+	picture = GFX_evt_capitol_building
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "I should be visible if you are libertanian!"
+		trigger = { is_monastic_member_trigger = yes }
+	}
+
+	option = {
+		name = "always visible!"
+	}
+
+}

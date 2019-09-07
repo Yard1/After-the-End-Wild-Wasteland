@@ -468,7 +468,7 @@ american_native = {
 		raised_vassal_opinion_loss = no
 		max_consorts = 2
 		priests_can_marry = yes
-		can_demand_religious_conversion = no
+		#can_demand_religious_conversion = no
 		
 		reformed = raven_tales_reformed
 		
@@ -535,6 +535,7 @@ christian = {
 		can_call_crusade = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
+		priests_can_marry = no
 		allow_rivermovement = yes
 		
 		religious_clothing_head = 0
@@ -1428,10 +1429,10 @@ cult_of_saints= {
 	color = { 0.8 0.2 0.1 }
 	
 	male_names = {
-		Jesï¿½s Pedro Pablo Cristï¿½bal Cristiï¿½n Josï¿½ Juan Diego
+		Jesús Pedro Pablo Cristóbal Cristián José Juan Diego
 	}
 	female_names = {
-		Maria Benedicta Magdalena Fï¿½tima Sarita
+		Maria Benedicta Magdalena Fátima Sarita
 	}
 	
 	#default interface
@@ -2369,7 +2370,7 @@ oldworld = {
 		can_grant_claim = yes
 		priests_can_marry = yes
 		priests_can_inherit = yes
-		uses_jizya_tax = no
+		uses_jizya_tax = yes
 		max_wives = 4
 		
 		religious_clothing_head = 18

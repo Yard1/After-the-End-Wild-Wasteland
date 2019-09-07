@@ -1099,13 +1099,6 @@ letter_event = {
 			30 = {  
 				modifier = {
 					factor = 0
-					NOR = { 
-						religion = hamiltonian 
-						religion = libertarian 
-					}
-				}
-				modifier = {
-					factor = 0
 					FROM = { NOT = { primary_title = { has_law = investiture_law_1 } } }
 				}
 				modifier = {
@@ -1289,6 +1282,138 @@ letter_event = {
 				}
 				FROM = { letter_event = { id = AFI.207 } } #Give me an artifact.
 			}
+			10 = { 
+				trigger = { #Check if holy orders exist.
+					FROM = { 
+						age = 16
+						can_join_any_holy_order_trigger = yes
+						is_married = no
+						is_ruler = no
+						is_female = no
+						prisoner = no
+						NOT = { trait = incapable }
+						liege = { character = FROM }
+						FROM = {
+							NOT = { 
+								current_heir = { character = PREVPREV }
+							}
+						}
+						NOR = { 
+							trait = monk 
+							trait = nun
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = { 
+						any_child = { 
+							count = 3
+							age = 16
+							can_join_any_holy_order_trigger = yes
+							is_married = no
+							is_ruler = no
+							is_female = no
+							prisoner = no
+							NOT = { trait = incapable }
+							liege = { character = FROM }
+							FROM = {
+								NOT = { 
+									current_heir = { character = PREVPREV }
+								}
+							}
+							NOR = { 
+								trait = monk 
+								trait = nun
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = { 
+						any_child = { 
+							count = 4
+							age = 16
+							can_join_any_holy_order_trigger = yes
+							is_married = no
+							is_ruler = no
+							is_female = no
+							prisoner = no
+							NOT = { trait = incapable }
+							liege = { character = FROM }
+							FROM = {
+								NOT = { 
+									current_heir = { character = PREVPREV }
+								}
+							}
+							NOR = { 
+								trait = monk 
+								trait = nun
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = { 
+						any_child = { 
+							count = 5
+							age = 16
+							can_join_any_holy_order_trigger = yes
+							is_married = no
+							is_ruler = no
+							is_female = no
+							prisoner = no
+							NOT = { trait = incapable }
+							liege = { character = FROM }
+							FROM = {
+								NOT = { 
+									current_heir = { character = PREVPREV }
+								}
+							}
+							NOR = { 
+								trait = monk 
+								trait = nun
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.5
+					FROM = { 
+						any_child = { 
+							count = 6
+							age = 16
+							can_join_any_holy_order_trigger = yes
+							is_married = no
+							is_ruler = no
+							is_female = no
+							prisoner = no
+							NOT = { trait = incapable }
+							liege = { character = FROM }
+							FROM = {
+								NOT = { 
+									current_heir = { character = PREVPREV }
+								}
+							}
+							NOR = { 
+								trait = monk 
+								trait = nun
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 0.25
+					trait = bad_priest_christian
+				}
+				modifier = {
+					factor = 0.25
+					trait = cynical
+				}
+				FROM = { letter_event = { id = AFI.213 } } #Send son to holy order.
+			} 
 			#Removed this land thing because I'm not gonna recode all that rofl
 		}
 	}
@@ -6071,5 +6196,112 @@ character_event = {
 		clr_character_flag = flag_papal_orgy_lustful
 		clr_character_flag = flag_papal_orgy_glutton
 		hidden_tooltip = { character_event = { id = AFI.100 } } #Proceed with the coronation.
+	}
+}
+
+#King: Bishop asks for son to join holy order.
+letter_event = {
+	id = AFI.213
+	desc = EVTDESCAFI213
+	border = GFX_event_letter_frame_religion
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_child = { 
+			limit = { 
+				is_adult = yes
+				religion = FROM
+				can_join_any_holy_order_trigger = yes
+				NOR = { 
+					trait = monk 
+					trait = nun
+				} 
+				is_married = no
+				is_ruler = no
+				prisoner = no
+				NOT = { trait = incapable }
+				ROOT = {
+					NOT = { 
+						current_heir = { character = PREVPREV }
+					}
+				}
+				liege = { character = ROOT }
+			}
+			save_event_target_as = son_holyorder_candidate
+		}
+		random_playable_ruler = {
+			limit = {
+				religion = FROM
+				holy_order = yes
+				primary_title = {
+					OR = {
+						has_law = true_cognatic_succession
+						AND = {
+							event_target:son_holyorder_candidate = { is_female = no }
+							OR = {
+								has_law = agnatic_succession
+								has_law = cognatic_succession
+							}
+						}
+						AND = {
+							event_target:son_holyorder_candidate = { is_female = yes }
+							OR = {
+								has_law = enatic_succession
+								has_law = enatic_cognatic_succession
+							}
+						}
+					}
+				}
+			}
+			preferred_limit = { 
+				reverse_opinion = { 
+					who = FROM
+					value = 50 
+				}
+			}
+			preferred_limit = { 
+				reverse_opinion = { 
+					who = FROM
+					value = 20 
+				}
+			}
+			save_event_target_as = son_holyorder_host
+		}
+	}
+	
+	
+	option = {
+		name = EVTOPTAHF20207
+		set_character_flag = flag_crowned_by_pope
+		show_portrait = event_target:son_holyorder_host
+		FROM = { save_event_target_as = coronation_priest
+				show_scope_change = no	
+			opinion = {
+				modifier = opinion_supposed_to_crown
+				months = 1
+				who = ROOT
+			}
+			reverse_opinion = {
+				modifier = opinion_supposed_to_crown
+				months = 1
+				who = ROOT
+			}
+		}
+		event_target:son_holyorder_host = { 
+			show_scope_change = no
+			event_target:son_holyorder_candidate = { 
+				show_scope_change = no
+				ROOT_join_PREV_holy_order_holder = yes
+			}
+		}
+		hidden_tooltip = { character_event = { id = AFI.100 } } #Go to budget event
+		ai_chance = { factor = 100 }
+	}
+	option = {	#End of the line
+		name = EVTOPTBHF20207
+		custom_tooltip = { text = coronation_canceled }
+		#clr_character_flag = flag_preparing_coronation #Replaced by timed modifier
+		ai_chance = { factor = 0 }
 	}
 }

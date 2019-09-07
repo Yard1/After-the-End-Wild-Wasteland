@@ -5,11 +5,8 @@ character_event = {
 	desc = "Make sure newly spawned characters in AI holy orders/theocracies make sense"
 	is_triggered_only = yes
 	hide_window = yes
-	only_men = yes
 
 	trigger = {
-		FROM = { character = no }
-		dynasty = NONE
 		FROMFROM = {
 			ai = yes
 			gender_equality_trigger = yes
@@ -26,33 +23,97 @@ character_event = {
 		log = "miscATEWW.1: [Root.GetBestName] in [FromFrom.GetBestName] ([FromFrom.Religion.GetName])"
 		if = {
 			limit = {
-				FROMFROM = { 
-					OR = {
-						holy_order = yes
-						has_landed_title = d_nancy_harts
-					}
-				}
+				FROM = { character = no }
+				dynasty = NONE
 			}
-			#all female
 			if = {
 				limit = {
-					FROMFROM = {
+					FROMFROM = { 
 						OR = {
-							matriarchal_religion = yes
-							religion = libertarian
+							holy_order = yes
 							has_landed_title = d_nancy_harts
 						}
 					}
 				}
-				set_gender = female
-			}
-			else_if = {
-				#60/40
-				limit = {
-					FROMFROM = {
-						equal_religion = yes
+				#all female
+				if = {
+					limit = {
+						FROMFROM = {
+							OR = {
+								matriarchal_religion = yes
+								religion = libertarian
+								has_landed_title = d_nancy_harts
+							}
+						}
+					}
+					set_gender = female
+				}
+				else_if = {
+					#60/40
+					limit = {
+						FROMFROM = {
+							equal_religion = yes
+						}
+					}
+					random_list = {
+						60 = {
+
+						}
+						40 = {
+							set_gender = female
+						}
 					}
 				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						trait = detached_priest
+						trait = martial_cleric
+						trait = scholarly_theologian
+						trait = mastermind_theologian
+					}
+				}
+				if = {
+					limit = {
+						FROMFROM = {
+							religion_allows_female_temple_holders = yes
+							religion_allows_male_temple_holders = no
+						}
+					}
+					set_gender = female
+				}
+				else_if = {
+					limit = {
+						FROMFROM = {
+							religion_allows_female_temple_holders = yes
+							religion_allows_male_temple_holders = yes
+						}
+					}
+					random_list = {
+						60 = {
+
+						}
+						40 = {
+							set_gender = female
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROMFROM = { matriarchal_religion = yes }
+				}
+				random_list = {
+					20 = {
+
+					}
+					80 = {
+						set_gender = female
+					}
+				}
+			}
+			else = {
 				random_list = {
 					60 = {
 
@@ -60,90 +121,275 @@ character_event = {
 					40 = {
 						set_gender = female
 					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				OR = {
-					trait = detached_priest
-					trait = martial_cleric
-					trait = scholarly_theologian
-					trait = mastermind_theologian
 				}
 			}
 			if = {
-				limit = {
-					FROMFROM = {
-						religion_allows_female_temple_holders = yes
-						religion_allows_male_temple_holders = no
-					}
-				}
-				set_gender = female
-			}
-			else_if = {
-				limit = {
-					FROMFROM = {
-						religion_allows_female_temple_holders = yes
-						religion_allows_male_temple_holders = yes
-					}
-				}
+				limit = { is_female = yes }
 				random_list = {
-					60 = {
-
+					25 = {
+						create_random_soldier = {
+							culture = ROOT
+							female = yes
+							dynasty = NONE
+						}
+						new_character = {
+							ROOT = { copy_name = PREV }
+							death = yes
+						}
 					}
-					40 = {
-						set_gender = female
+					75 = {
+						random_character = {
+							limit = { 
+								is_female = yes
+								culture = ROOT
+								dynasty = NONE
+								NOT = { liege = { character = FROMFROM } } 
+							}
+							ROOT = { copy_name = PREV }
+						}
 					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				FROMFROM = { matriarchal_religion = yes }
-			}
-			random_list = {
-				20 = {
-
-				}
-				80 = {
-					set_gender = female
-				}
-			}
-		}
-		else = {
-			random_list = {
-				60 = {
-
-				}
-				40 = {
-					set_gender = female
 				}
 			}
 		}
 		if = {
-			limit = { is_female = yes }
-			random_list = {
-				25 = {
-					create_random_soldier = {
-						culture = ROOT
-						female = yes
-						dynasty = NONE
-					}
-					new_character = {
-						ROOT = { copy_name = PREV }
-						death = yes
+			limit = {
+				FROMFROM = { holy_order = yes }
+			}
+			FROMFROM = {
+				ROOT = { clear_wealth = PREV }
+				character_event = { id = miscATEWW.2 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = miscATEWW.2
+	desc = "Make sure newly spawned characters in AI holy orders/theocracies make sense"
+	is_triggered_only = yes
+	hide_window = yes
+	only_rulers = yes
+	trigger = {
+		holy_order = yes
+	}
+	
+	option = {
+		log = "miscATEWW.2: Fire for [Root.GetTitledName] ([Root.Religion.GetName])"
+		if = {
+			limit = {
+				primary_title = {
+					holy_order_is_celibate = yes
+				}
+			}
+			spouse = {
+				remove_spouse = spouse
+				character_event = { id = SoA.2863 }
+			}
+			set_character_flag = flag_papal_celibacy
+			add_trait = celibate
+		}
+		if = {
+			limit = { has_landed_title = d_men_in_black }
+			if = {
+				limit = { 
+					independent = yes 
+					NOR = {  
+						religion = americanist
+						religion = jeffersonian
+						religion = hamiltonian
+						religion = libertarian
 					}
 				}
-				75 = {
-					random_character = {
-						limit = { 
-							is_female = yes
-							culture = ROOT
-							dynasty = NONE
-							NOT = { liege = { character = FROMFROM } } 
+				religion = americanist
+				abandon_heresy = yes
+			}
+			else_if = {
+				limit = {
+					liege = {
+						NOR = {
+							religion = americanist
+							religion = jeffersonian
+							religion = hamiltonian
+							religion = libertarian
 						}
-						ROOT = { copy_name = PREV }
+					}
+					NOR = { 
+						secret_religion = americanist 
+						secret_religion = jeffersonian
+						secret_religion = hamiltonian
+						secret_religion = libertarian
+					}
+				}
+				clear_secret_religion = yes
+				set_secret_religion = americanist
+			}
+
+			#Try and force them to lvl 3 of the assassins
+			if = {
+				limit = { NOT = { society_member_of = the_assassins } }
+				join_society = the_assassins
+			}
+			if = {
+				limit = {
+					society_rank = {
+						rank == 1
+						society = the_assassins
+					}
+				}
+				society_rank_up = {
+					rank = 2
+					society = the_assassins
+				}
+			}
+			else_if = {
+				limit = {
+					society_rank = {
+						rank == 2
+						society = the_assassins
+					}
+				}
+				society_rank_up = {
+					rank = 1
+					society = the_assassins
+				}
+			}
+		}
+		if = {
+			limit = { has_landed_title = d_libertarian }
+			log = "miscATEWW.2: [Root.GetTitledName] in libertarian block"
+			primary_title = {
+				if = {
+					limit = {
+						NOT = { has_law = succ_libertarian_elective }
+					}
+					add_law = succ_libertarian_elective
+				}
+			}
+			#Changes religion
+			if = {
+				limit = { 
+					NOT  = { religion = libertarian }
+				}
+				religion = libertarian
+			}
+
+			#Try and force them to lvl 4 of the order
+			if = {
+				limit = { NOT = { society_member_of = monastic_order_libertarian } }
+				join_society = monastic_order_libertarian
+			}
+			if = {
+				limit = {
+					society_rank = {
+						rank == 1
+						society = monastic_order_libertarian
+					}
+				}
+				society_rank_up = {
+					rank = 3
+					society = monastic_order_libertarian
+				}
+			}
+			else_if = {
+				limit = {
+					society_rank = {
+						rank == 2
+						society = monastic_order_libertarian
+					}
+				}
+				society_rank_up = {
+					rank = 2
+					society = monastic_order_libertarian
+				}
+			}
+			else_if = {
+				limit = {
+					society_rank = {
+						rank == 3
+						society = monastic_order_libertarian
+					}
+				}
+				society_rank_up = {
+					rank = 1
+					society = monastic_order_libertarian
+				}
+			}
+			if = {
+				limit = { is_society_grandmaster = no }
+				set_society_grandmaster = yes
+			}
+		}
+		any_realm_character = {
+			if = {
+				limit = {
+					ROOT = {
+						primary_title = {
+							holy_order_is_celibate = yes
+						}
+					}
+				}
+				spouse = {
+					remove_spouse = spouse
+					character_event = { id = SoA.2863 }
+				}
+				set_character_flag = flag_papal_celibacy
+				add_trait = celibate
+				if = {
+					limit = {
+						ROOT = {
+							has_landed_title = d_men_in_black
+							OR = {
+								religion = americanist
+								religion = jeffersonian
+								religion = hamiltonian
+								religion = libertarian
+							}
+						}
+					}
+					if = {
+						limit = {
+							NOR = {
+								religion = americanist
+								religion = jeffersonian
+								religion = hamiltonian
+								religion = libertarian
+							}
+						}
+						religion = americanist
+						abandon_heresy = yes
+					}
+					if = {
+						limit = {
+							is_adult = yes
+							prisoner = no
+							NOT = { trait = incapable }
+						}
+						join_society = the_assassins
+					}
+				}
+				else_if = {
+					limit = {
+						ROOT = {
+							has_landed_title = d_libertarian
+							religion = libertarian
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								religion = libertarian
+							}
+						}
+						religion = libertarian
+					}
+					if = {
+						limit = {
+							is_female = yes
+							is_adult = yes
+							prisoner = no
+							NOT = { trait = incapable }
+						}
+						join_society = monastic_order_libertarian
 					}
 				}
 			}

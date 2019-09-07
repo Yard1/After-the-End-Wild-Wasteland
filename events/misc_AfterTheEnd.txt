@@ -872,7 +872,7 @@ character_event = {
 				culture = cajun
 			}
 			modifier = {
-				factor = 80
+				factor = 83
 				culture = haitian
 			}
 			modifier = {
@@ -9949,7 +9949,7 @@ character_event = {
 				culture = cajun
 			}
 			modifier = {
-				factor = 3
+				factor = 0
 				culture = haitian
 			}
 			modifier = {
@@ -10926,6 +10926,16 @@ character_event = {
 					#character_event = { id = misc.4 }
 				}
 
+				# libertarian holy head
+				if = {
+					limit = {
+						NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+						has_landed_title = d_libertarian
+						NOT = { current_heir = { is_female = yes } }
+					}
+					character_event = { id = misc.8 }
+				}
+
 				# Female priests and holy orders
 				if = {
 					limit = {
@@ -10937,16 +10947,6 @@ character_event = {
 						is_ruler = yes
 					}
 					character_event = { id = misc.6 }
-				}
-
-				# libertarian holy head
-				if = {
-					limit = {
-						NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
-						has_landed_title = d_libertarian
-						NOT = { current_heir = { is_female = yes } }
-					}
-					character_event = { id = misc.8 }
 				}
 
 				if = {
@@ -10983,12 +10983,6 @@ character_event = {
 					}
 					character_event = { id = SOAATE.100 }
 				}
-			}
-		}
-
-		b_jersey_city_NJ = {
-			owner = {
-				abdicate = yes
 			}
 		}
 	}
@@ -11269,6 +11263,7 @@ character_event = {
 			else = {
 				primary_title = { add_law = agnatic_succession log = "misc.6: set agnatic_succession in [This.GetName]" }
 			}
+			character_event = { id = miscATEWW.2 }
 		}
 		else_if = {
 			limit = { is_republic = yes }
@@ -11519,42 +11514,49 @@ character_event = {
 			10 = { create_random_soldier = {
 				random_traits = yes
 				female = yes
+				dynasty = random
 				age = 30
 				religion = libertarian
 			} }
 			10 = { create_random_soldier = {
 				random_traits = yes
 				female = yes
+				dynasty = random
 				age = 35
 				religion = libertarian
 			} }
 			10 = { create_random_soldier = {
 				random_traits = yes
 				female = yes
+				dynasty = random
 				age = 40
 				religion = libertarian
 			} }
 			20 = { create_random_soldier = {
 				random_traits = yes
 				female = yes
+				dynasty = random
 				age = 45
 				religion = libertarian
 			} }
 			20 = { create_random_soldier = {
 				random_traits = yes
 				female = yes
+				dynasty = random
 				age = 50
 				religion = libertarian
 			} }
 			20 = { create_random_soldier = {
 				random_traits = yes
 				female = yes
+				dynasty = random
 				age = 55
 				religion = libertarian
 			} }
 			10 = { create_random_soldier = {
 				random_traits = yes
 				female = yes
+				dynasty = random
 				age = 60
 				religion = libertarian
 			} }
@@ -11608,12 +11610,12 @@ character_event = {
 			remove_trait = craven
 			remove_trait = weak
 			remove_trait = clubfooted
-			#character_event = { id = misc.3 }
-			#character_event = { id = misc.4 } # Physique
+			character_event = { id = misc.3 }
+			character_event = { id = misc.4 } # Physique
 			ROOT = {
 				any_demesne_title = { gain_title = PREVPREV }
 			}
-			primary_title = { add_law = enatic_succession }
+			character_event = { id = misc.6 }
 		}
 	}
 }

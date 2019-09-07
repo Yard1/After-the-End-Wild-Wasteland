@@ -21,7 +21,7 @@ defined_text = {
 	text = {
 		localisation_key = GOD_LADY_LIBERTY
 		trigger = {
-			religion = libertanian
+			religion = libertarian
 		}
 	}
 }
@@ -38,7 +38,7 @@ defined_text = {
 	text = {
 		localisation_key = d_libertarian
 		trigger = {
-			religion = libertanian
+			religion = libertarian
 		}
 	}
 }
