@@ -189,3 +189,188 @@ narrative_event = {
 		}
 	}
 }
+
+# Chosing a Patron General
+character_event = {
+	id = ATE_WWW_RELIGION.5
+	desc = "EVTDESC_ATE_WWW_RELIGION_1"
+	picture = GFX_evt_camaraderie
+	
+	religion = jeffersonian
+	is_triggered_only = yes
+	
+	option = {
+		name = EVOTPA_ATE_WWW_RELIGION_1
+		custom_tooltip = { text = TXT_macarthur }
+		hidden_effect = {
+			add_character_modifier = { name = devote_of_macarthur duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 20
+				OR = {
+					trait = strong
+					trait = robust
+					trait = proud
+					trait = ambitious
+					trait = quick
+					trait = inspiring_leader
+				}
+			}
+		}
+	}
+	option = {
+		name = EVOTPB_ATE_WWW_RELIGION_1
+		custom_tooltip = { text = TXT_sherman }
+		hidden_effect = {
+			add_character_modifier = { name = devote_of_sherman duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 20
+				OR = {
+					trait = inspiring_leader
+					trait = organizer
+					trait = humble
+					trait = diligent
+					trait = holy_warrior
+					trait = berserker
+				}
+			}
+		}
+	}
+	option = {
+		name = EVOTPC_ATE_WWW_RELIGION_1
+		custom_tooltip = { text = TXT_patton }
+		hidden_effect = {
+			add_character_modifier = { name = devote_of_patton duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 20
+				OR = {
+				    trait = proud
+					trait = inspiring_leader
+					trait = aggressive_leader
+					trait = zealous
+					trait = brave
+					trait = wroth
+				}
+			}
+		}
+	}
+	option = {
+		name = EVOTPD_ATE_WWW_RELIGION_1
+		effect = { character_event = { id = ATE_WWW_RELIGION.6 } }
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+# Chosing a Patron General Part II
+character_event = {
+	id = ATE_WWW_RELIGION.6
+	desc = "EVTDESC_ATE_WWW_RELIGION_1"
+	picture = GFX_evt_camaraderie
+	
+	religion = jeffersonian
+	is_triggered_only = yes
+	
+	option = {
+		name = EVOTPA_ATE_WWW_RELIGION_2
+		custom_tooltip = { text = TXT_custer }
+		hidden_effect = {
+			add_character_modifier = { name = devote_of_custer duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 20
+				OR = {
+					trait = lustful
+					trait = envious
+					trait = greedy
+					trait = ambitious
+					trait = lunatic
+				}
+			}
+		}
+	}
+	option = {
+		name = EVOTPB_ATE_WWW_RELIGION_2
+		custom_tooltip = { text = TXT_lee }
+		hidden_effect = {
+			add_character_modifier = { name = devote_of_lee duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 20
+				OR = {
+					trait = scholar
+					trait = patient
+					trait = content
+					trait = diligent
+					trait = proud
+					trait = brave
+				}
+			}
+		}
+	}
+	option = {
+		name = EVOTPC_ATE_WWW_RELIGION_2
+		custom_tooltip = { text = TXT_butler }
+		hidden_effect = {
+			add_character_modifier = { name = devotee_of_butler duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 20
+				OR = {
+				    trait = inspiring_leader
+					trait = inspiring_leader
+					trait = humble
+					trait = cynical
+					trait = charitable
+					trait = kind
+				}
+			}
+		}
+	}
+	option = {
+		name = EVOTPD_ATE_WWW_RELIGION_2
+		effect = { character_event = { id = ATE_WWW_RELIGION.5 } }
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+#Removing Patron General If Character is not Militarist
+character_event = {
+	id = ATE_WWW_RELIGION.7
+	desc = "EVTDESC_ATE_WWW_RELIGION_7"
+	picture = GFX_evt_camaraderie
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { religion = jeffersonian }
+		has_patron_general_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 5
+	}
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_RELIGION_7
+		effect = {
+			remove_patron_general_trigger = yes
+		}
+	}
+}

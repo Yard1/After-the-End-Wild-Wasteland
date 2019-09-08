@@ -244,5 +244,33 @@ decisions = {
 			factor = 1
 		}
 	}
+	
+	select_patron_general = {
+		is_high_prio = yes
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			religion = jeffersonian
+			is_adult = yes
+			has_patron_general_trigger = no
+		}
+		allow = {
+			block_general_event_trigger = no
+			piety = 0
+		}
+		effect = {
+			character_event = { id = ATE_WWW_RELIGION.5 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3 # Slow it down a little
+			}
+		}
+	}
 
 }

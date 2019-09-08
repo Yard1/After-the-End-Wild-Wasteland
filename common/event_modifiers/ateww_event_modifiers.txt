@@ -1,0 +1,51 @@
+devote_of_macarthur = {
+	martial = 2
+	command_modifier = {
+		morale_offence = 0.10
+		siege = 0.10
+	}
+	icon = 1
+}
+devote_of_sherman = {
+	martial = 2
+	command_modifier = {
+		speed = 0.15
+	}
+	dixie_opinion = -10
+	southron_opinion = -10
+	icon = 1
+}
+devote_of_patton = {
+	martial = 1
+	combat_rating = 10
+	command_modifier = {
+		cavalry = 0.15
+	}
+	icon = 1
+}
+devote_of_custer = {
+	martial = 2
+	combat_rating = 5
+	command_modifier = {
+		cavalry = 0.05
+		speed = 0.05
+	}
+	american_native_opinion = -50
+	icon = 1
+}
+devote_of_lee = {
+	martial = 2
+	learning = 2
+	tech_growth_modifier_military = 0.10
+	americanist_opinion = -5
+	icon = 1
+}
+devotee_of_butler = {
+	martial = 2
+	combat_rating = 5
+	command_modifier = {
+	    light_infantry = 0.10
+		speed = 0.05
+	}
+	icon = 1
+}
