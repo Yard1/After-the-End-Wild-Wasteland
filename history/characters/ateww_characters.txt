@@ -29,9 +29,6 @@
 			add_artifact = ate_firearm
 		} 
     }
-	2700.1.1 = {
-	    death=yes
-	}
 }
 
 ### Great Lakes 
@@ -273,9 +270,93 @@
 	2637.3.3 = {
 		birth=yes
 	}
-	2637.3.3 = { 
+	2637.2.12 = { 
 	    effect = {
-			add_artifact = betsy_ross_flag
+			add_artifact = ate_firearm
 		} 
     }
+}
+
+1861125 = {
+	name = "Stephen"
+	dynasty = 2029096 # Jet
+	culture = southron
+	religion = jeffersonian
+	diplomacy = 8
+	martial = 8
+	stewardship = 6
+	intrigue = 6
+	learning = 7
+	trait = skilled_tactician
+	trait = unyielding_leader
+	trait = zealous
+	trait = proud
+	trait = wroth 
+	trait = diligent
+	trait = brave
+	trait = stubborn
+	trait = robust
+	2615.7.21 = {
+		birth=yes
+	}
+	2637.8.9 = { 
+	    add_spouse = 1861126
+	    effect = {
+			add_artifact = carta_armor
+		} 
+    }
+}
+
+1861126 = {
+	name = "Francine"
+	dynasty = 2029097 # Pearson
+	culture = southron
+	religion = jeffersonian
+	female = yes
+	diplomacy = 6
+	martial = 5
+	stewardship = 5
+	intrigue = 5
+	learning = 7
+	trait = tough_soldier
+	trait = fair
+	trait = patient
+	trait = zealous 
+	trait = humble
+	trait = diligent
+	trait = lustful
+	2615.11.21 = {
+		birth=yes
+	}
+	2637.8.9 = { 
+	    add_spouse = 1861125
+    }
+	2642.6.21 = {
+	    death = {
+			death_reason = death_childbirth
+		}
+	}
+}
+
+1861127 = {
+	name = "Clyde"
+	dynasty = 2029096 # Jet
+	culture = southron
+	religion = jeffersonian
+	father = 1861125
+	mother = 1861126
+	diplomacy = 8
+	martial = 8
+	stewardship = 6
+	intrigue = 6
+	learning = 7
+	trait = tough_soldier
+	trait = zealous
+	trait = wroth 
+	trait = imbecile
+	trait = brave
+	trait = strong
+	2639.11.2 = {
+		birth=yes
+	}
 }

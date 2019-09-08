@@ -118,7 +118,7 @@ GOD_TRUMAN;Truman;;;;;;;;;;;;;x
 GOD_JACKSON;Jackson;;;;;;;;;;;;;x
 
 become_general_of_army;Restore the Army Forces Command;;;;;;;;;;;;;x
-become_general_of_army_desc;With some of the most important holy sites of the Militarist faith now under my direct control the time has come to bring order back to America by restoring the Army Forces Command;;;;;;;;;;;;;x
+become_general_of_army_desc;With some of the most important holy sites of the Militarist faith now under my direct control the time has come to bring order back to America by restoring the Supreme Allied Command;;;;;;;;;;;;;x
 select_patron_general;Emulate A General;;;;;;;;;;;x
 select_patron_general_desc;As a practitioner of Militarist faith I am able to choose one of ancient America's many ancient Generals to emulate. My choice shall be influenced by my existing personality.;;;;;;;;;;;;;x
 
