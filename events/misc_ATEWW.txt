@@ -396,7 +396,11 @@ character_event = {
 						}
 						if = {
 							limit = {
-								NOT = { year = 2667 }
+								society_rank = {
+									rank == 2
+									society = monastic_order_libertarian
+								}
+								NOT = { year = 2668 }
 							}
 							random_list = {
 								4 = {
