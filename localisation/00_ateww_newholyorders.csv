@@ -15,6 +15,11 @@ expelled_d_libertarian;Expelled the Order of Our Lady Liberty;;;;;;;;;;;;;x
 EVTDESC_ATEWWNHO_15;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Minutemen in their struggle against the Redcoat invader, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
 EVTTOOLTIP_ATEWWNHO_15;[This.GetTitledFirstName] becomes a Minuteman.;;;;;;;;;;;;;x
 
+expel_american_legion;Expel the American Legion;;;;;;;;;;;;;x
+expel_american_legion_desc;I can drive the American Legion from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_american_legion;Donate 300¤ to the American Legion;;;;;;;;;;;;;x
+donate_money_to_american_legion_desc;I can donate money to the American Legion in exchange for [Player.Religion.GetPietyName] and lifelong respect from the High Command.;;;;;;;;;;;;;x
+
 EVTDESC_ATEWWNHO_19;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the American Legion in their quest to carry out the will of [From.Religion.GetRandomGodName], even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
 EVTTOOLTIP_ATEWWNHO_19;[This.GetTitledFirstName] becomes a member of the American Legion.;;;;;;;;;;;;;x
 EVTDESC_ATEWWNHO_24;Honorable [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to defend American and [From.Religion.GetHighGodName]! You have my friendship, as well as that of the High Command.\n\nMay [From.Religion.GetHighGodName] protect you,\n[From.GetTitledFirstName];;;;;;;;;;;;;x

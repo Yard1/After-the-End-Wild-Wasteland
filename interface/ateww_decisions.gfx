@@ -7,4 +7,12 @@ spriteTypes = {
 		name = "GFX_donate_money_to_libertanians"
 		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
 	}
+	spriteType = {
+		name = "GFX_expel_expel_american_legion"
+		texturefile = "gfx\\interface\\decision_icon_expel_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_donate_money_to_american_legion"
+		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
+	}
 }
