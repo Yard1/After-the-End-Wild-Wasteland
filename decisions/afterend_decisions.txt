@@ -7,6 +7,7 @@ decisions = {
 				religion = americanist
 				religion = hamiltonian
 				religion = libertarian
+				religion = jeffersonian
 			}
 			age = 16
 			prisoner = no

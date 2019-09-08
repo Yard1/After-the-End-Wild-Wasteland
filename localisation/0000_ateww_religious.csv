@@ -128,12 +128,12 @@ GOD_REAGAN;Reagan;;;;;;;;;;;;;x
 GOD_TRUMAN;Truman;;;;;;;;;;;;;x
 GOD_JACKSON;Jackson;;;;;;;;;;;;;x
 
-become_general_of_army;Restore the Army Forces Command;;;;;;;;;;;;;x
+become_general_of_army;Restore the Supreme Allied Command;;;;;;;;;;;;;x
 become_general_of_army_desc;With some of the most important holy sites of the Militarist faith now under my direct control the time has come to bring order back to America by restoring the Supreme Allied Command;;;;;;;;;;;;;x
 select_patron_general;Emulate A General;;;;;;;;;;;x
 select_patron_general_desc;As a practitioner of Militarist faith I am able to choose one of ancient America's many ancient Generals to emulate. My choice shall be influenced by my existing personality.;;;;;;;;;;;;;x
 
-EVTNAME_general_of_army;The General Of The Army;;;;;;;;;;;;;x
+EVTNAME_general_of_army;The Supreme Allied Commander;;;;;;;;;;;;;x
 EVTDESC_general_of_army;Since the humiliating defeat and death of President Kelleher at the hands of the Deitsch the Militarist faithful have shunned the Post-Event Presidency, which in turn, earned them the ire of the Americanist faith. However, times have changed and now it is the "true" Americanists that find themselves outnumbered and outgunned, as from humble beginnings [Root.GetFullName] has not only managed to extend the reach of the Militarist faith but has also united a vast majority of the faithful under [Root.GetHerselfHimself] banner. Sensing an opportunity, [Root.GetFullName] has proclaimed [Root.GetHerselfHimself] the "Supreme Allied Commander" and has laid claim to all of America, from sea to shining sea...;;;;;;;;;;;;x
 EVTOPTA_general_of_army;Pass the ammunition!;;;;;;;;;;;;;x
 EVTOPTB_general_of_army;Damned heathens!;;;;;;;;;;;;;x
