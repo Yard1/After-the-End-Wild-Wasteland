@@ -297,6 +297,7 @@
 	trait = brave
 	trait = stubborn
 	trait = robust
+	trait = celibate
 	2615.7.21 = {
 		birth=yes
 	}
