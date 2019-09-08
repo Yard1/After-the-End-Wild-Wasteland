@@ -296,6 +296,8 @@ character_event = {
 					trait = greedy
 					trait = ambitious
 					trait = lunatic
+					trait = dull
+					trait = slow
 				}
 			}
 		}
