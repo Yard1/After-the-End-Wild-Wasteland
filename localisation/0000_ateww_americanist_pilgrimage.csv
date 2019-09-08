@@ -1,0 +1,47 @@
+#CODE;ENGLISH;FRENCH;GERMAN;SPANISH;;;;;;;;;x
+americanist_pilgrimage;[Root.Religion.GetName] Pilgrimage;;;;;;;;;;;;;x
+americanist_pilgrimage_desc;Go on an patriotic pilgrimage to the great [Root.GetAmericanistPilgrimageCities].;;;;;;;;;;;;;x
+
+americanist_pilgrimage_cities_americanist;Americanist holy cities: Boston, New York, Philadelphia, Washington, and Richmond;;;;;;;;;;;;;x
+americanist_pilgrimage_cities_jeffersonian;Militarist holy sites: Alamo, Fort Benning, Fort Bragg, Richmond, and Washington;;;;;;;;;;;;;x
+americanist_pilgrimage_cities_libertarian;Libertarian holy cities: Nashville, Washington, New York and Philadelphia;;;;;;;;;;;;;x
+
+EVTDESC_america_pilgrim_prep;The time has come for you to undertake an epic pilgrimage to the five great [Root.GetAmericanistPilgrimageCities].\n\nBut first, you must prepare for the journey.;;;;;;;;;;;;;x
+EVTOPT_pilgrim_respondneutral_learn;There is always more to learn from [Root.Religion.GetHighGodName].;;;;;;;;;;;;;x
+EVTOPT_pilgrim_requestlearning;Request entrance in the name of [Root.Religion.GetHighGodName].;;;;;;;;;;;;;x
+
+
+EVTNAME_pilgrim_alamo;Pilgrimage to Alamo;;;;;;;;;;;;;x
+EVTDESC_pilgrim_alamo;The remarkably well-preserved chapel of Alamo was once the site of a legendary battle between the empires of Mexico and the Lone Star, before the latter joined America.\n\nEven today, Texans everywhere still invoke its memory as a rallying cry in times of war.;;;;;;;;;;;;;x
+EVTNAME_pilgrim_benning;Pilgrimage to Fort Benning;;;;;;;;;;;;;x
+EVTDESC_pilgrim_benning;If stories are to be believed, ancient soldiers of Fort Benning rode great metal beasts into battle, able to crush anything in front of them. You find yourself wondering - how would those monsters even look?;;;;;;;;;;;;;x
+EVTNAME_pilgrim_bragg;Pilgrimage to Fort Bragg;;;;;;;;;;;;;x
+EVTDESC_pilgrim_bragg;The area of Fort Bragg is said to once house flying warriors, able to strike the enemy from the skies - anywhere, anytime. Whether that is true or not, statues of soldiers wielding fantastical weapons can still be found.\n\nIf you are lucky, you may spot the elusive Saint Francis' satyr, flying near the lakes.;;;;;;;;;;;;;x
+EVTDESC_pilgrim_richmond_j;The river city is known for its history of patriotic military struggle, and today serves as a trade center for the rich agricultural lands of the south. You find yourself thinking about the great Generals Lee, Grant, Sherman and many others - what would they do today? Even years later after the Great Civil War, the war has not left America.\n\nSoldiers from the region are known to demand either liberty or death if captured.;;;;;;;;;;;;;x
+EVTDESC_pilgrim_washington_j;Named and built in honor of Founder Washington and Founder Lincoln, several of the holy monuments of the capital of Columbia still stand as a testament to America's enduring glory. The massive, ancient fortress of Pentagon, even despite the passage of time, is testament to the martial power and glory of America.\n\nDespite the patriots' best efforts, major portions of the old city have been reclaimed by swamps.;;;;;;;;;;;;;x
+EVTNAME_pilgrim_nashville;Pilgrimage to Nashville;;;;;;;;;;;;;x
+EVTDESC_pilgrim_nashville;You stop in the Parthenon of Nashville, the head temple of the Lady. Her golden statue in the center of the building has been lovingly preserved by dilligent Libertarians, almost to the point where it seems to shine on its own.\n\nNashville is the birthplace of the Order of Our Lady Liberty, and the Libertarian branch of Americanism.;;;;;;;;;;;;;x
+EVTDESC_pilgrim_washington_l;Named and built in honor of Founder Washington and Founder Lincoln, several of the holy monuments of the capital of Columbia still stand as a testament to America's enduring glory. One can easily spot the influence of the Lady in the architecture of preserved landmarks.\n\nDespite the patriots' best efforts, major portions of the old city have been reclaimed by swamps.;;;;;;;;;;;;;x
+EVTNAME_pilgrim_palisades;Pilgrimage to Liberty Island;;;;;;;;;;;;;x
+EVTDESC_pilgrim_palisades;The great Lady Liberty is a breathtaking sight to behold. The patron of all patriotic Libertarians watches over the bay, the flame in her torch ever-bright in the sun, despite all the wear and tear.\n\nThe Order of Our Lady Liberty makes it a priority to maintain at least a token presence on Liberty Island, so that the Lady may get the care she needs.;;;;;;;;;;;;;x
+EVTDESC_pilgrim_new_york_l;The sprawling ruins of old New York explain why the ancients simply referred to it as The City. Even now you can feel the enormous power and wealth of the seat of the empire as you approach Manhattan, heart of the sleepless city. With the guidance of Lady Liberty, perhaps you can do your part for American prosperity.\n\nFrom the bank of the Hudson River, you see numerous merchant ships and barges of all sizes.;;;;;;;;;;;;;x
+EVTDESC_pilgrim_philadelphia_l;As a child you learned that Philadelphia was the birthplace of America, where the founders met in brotherly love to form a great union of previously disparate states. You make sure to visit the Liberty Bell, cast by the founders in gratitude to Lady Liberty for her blessing during the war with the vile Redcoats.\n\nAlong the road, you see peddlers selling traditional pretzelled bread from their carts.;;;;;;;;;;;;;x
+
+americanist_pilgrimage_boston;Boston;;;;;;;;;;;;;x
+americanist_pilgrimage_new_york;New York;;;;;;;;;;;;;x
+americanist_pilgrimage_philadelphia;Philadelphia;;;;;;;;;;;;;x
+americanist_pilgrimage_washington;Washington;;;;;;;;;;;;;x
+americanist_pilgrimage_richmond;Richmond;;;;;;;;;;;;;x
+americanist_pilgrimage_alamo;Alamo;;;;;;;;;;;;;x
+americanist_pilgrimage_benning;Fort Benning;;;;;;;;;;;;;x
+americanist_pilgrimage_bragg;Fort Bragg;;;;;;;;;;;;;x
+americanist_pilgrimage_nashville;Nashville;;;;;;;;;;;;;x
+americanist_pilgrimage_palisades;Palisades;;;;;;;;;;;;;x
+
+EVTDESC_pilgrim_claimboston;[FromFrom.GetTitledFirstName] of [Root.GetCurrentAmericanistPilgrimageCity] has violated sacred law by refusing me entrance during my pilgrimage. By ancient rights, I may now claim the city if I choose.;;;;;;;;;;;;;x
+EVTDESC_pilgrim_claimnewyork;[FromFrom.GetTitledFirstName] of [Root.GetCurrentAmericanistPilgrimageCity] has violated sacred law by refusing me entrance during my pilgrimage. By ancient rights, I may now claim the city if I choose.;;;;;;;;;;;;;x
+EVTDESC_pilgrim_claimphiladelphia;[FromFrom.GetTitledFirstName] of [Root.GetCurrentAmericanistPilgrimageCity] has violated sacred law by refusing me entrance during my pilgrimage. By ancient rights, I may now claim the city if I choose.;;;;;;;;;;;;;x
+EVTDESC_pilgrim_claimwashington;[FromFrom.GetTitledFirstName] of [Root.GetCurrentAmericanistPilgrimageCity] has violated sacred law by refusing me entrance during my pilgrimage. By ancient rights, I may now claim the city if I choose.;;;;;;;;;;;;;x
+EVTDESC_pilgrim_claimrichmond;[FromFrom.GetTitledFirstName] of [Root.GetCurrentAmericanistPilgrimageCity] has violated sacred law by refusing me entrance during my pilgrimage. By ancient rights, I may now claim the city if I choose.;;;;;;;;;;;;;x
+
+EVTDESC_pilgrim_anycity;[FromFrom.GetTitledFirstName] of [Root.GetCurrentAmericanistPilgrimageCity] has violated sacred law by refusing me entrance during my pilgrimage. By ancient rights, I may now claim the city if I choose.;;;;;;;;;;;;;x

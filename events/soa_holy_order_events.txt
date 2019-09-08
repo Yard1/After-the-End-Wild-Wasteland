@@ -2215,10 +2215,6 @@ character_event = {
 			trait = celibate
 		}
 		modifier = {
-			factor = 0.5
-			trait = homosexual
-		}
-		modifier = {
 			factor = 0.7
 			trait = content
 		}
@@ -3574,10 +3570,6 @@ character_event = {
 			trait = celibate
 		}
 		modifier = {
-			factor = 0.5
-			trait = homosexual
-		}
-		modifier = {
 			factor = 0.7
 			trait = content
 		}
@@ -3657,6 +3649,12 @@ character_event = {
 			}
 			piety = 100
 		}
+		if = {
+			limit = {
+				society_member_of = the_assassins
+			}
+			add_society_currency_major_effect = yes
+		}
 		
 		FROM = {
 			character_event = {
@@ -3675,7 +3673,13 @@ character_event = {
 			}
 			piety = -100
 		}
-		
+		if = {
+			limit = {
+				society_member_of = the_assassins
+			}
+			detract_society_currency_major_effect = yes
+		}
+
 		FROM = {
 			character_event = {
 				id = SoA.1433

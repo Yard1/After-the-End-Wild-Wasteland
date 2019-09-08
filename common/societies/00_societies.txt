@@ -3490,8 +3490,14 @@ the_assassins = {
 		value = 10
 
 		modifier = {
-			primary_title = { title = d_men_in_black }
-			factor = 3
+			has_landed_title = d_men_in_black
+			factor = 50
+		}
+		modifier = {
+			any_heir_title = {
+				title = d_men_in_black
+			}
+			factor = 10
 		}
 		modifier = {
 			trait = zealous

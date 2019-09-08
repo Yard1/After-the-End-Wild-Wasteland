@@ -58,8 +58,22 @@ narrative_event = {
 			20 = { add_trait = humble }
 			10 = { add_trait = trusting }
 			70 = { }
-		}	
-		narrative_event = { id = america_pilgrim.11 days = 7 random = 10 }
+		}
+		if = {
+			limit = {
+				religion = jeffersonian
+			}
+			narrative_event = { id = america_pilgrim.110 days = 7 random = 10 }
+		}
+		else_if = {
+			limit = {
+				religion = libertarian
+			}
+			narrative_event = { id = america_pilgrim.210 days = 7 random = 10 }
+		}
+		else = {
+			narrative_event = { id = america_pilgrim.11 days = 7 random = 10 }
+		}
 		ai_chance = { factor = 5 }
 	}
 	
@@ -74,7 +88,21 @@ narrative_event = {
 			10 = { add_trait = shy }
 			70 = { }
 		}
-		narrative_event = { id = america_pilgrim.11 days = 12 random = 10 }
+		if = {
+			limit = {
+				religion = jeffersonian
+			}
+			narrative_event = { id = america_pilgrim.110 days = 12 random = 10 }
+		}
+		else_if = {
+			limit = {
+				religion = libertarian
+			}
+			narrative_event = { id = america_pilgrim.210 days = 12 random = 10 }
+		}
+		else = {
+			narrative_event = { id = america_pilgrim.11 days = 12 random = 10 }
+		}
 		ai_chance = { factor = 10 }
 	}
 	
@@ -85,7 +113,21 @@ narrative_event = {
 		wealth = -25
 		set_character_flag = pilgrim_bodyguards
 		random = { chance = 20 add_trait = paranoid }
-		narrative_event = { id = america_pilgrim.11 days = 15 random = 10 }
+		if = {
+			limit = {
+				religion = jeffersonian
+			}
+			narrative_event = { id = america_pilgrim.110 days = 15 random = 10 }
+		}
+		else_if = {
+			limit = {
+				religion = libertarian
+			}
+			narrative_event = { id = america_pilgrim.210 days = 15 random = 10 }
+		}
+		else = {
+			narrative_event = { id = america_pilgrim.11 days = 15 random = 10 }
+		}
 		ai_chance = { factor = 20 }
 	}
 }
@@ -443,6 +485,7 @@ character_event = {
 	option = {
 		name = EVTOPT_pilgrim_requestinspire
 		trigger = {
+			FROM = { religion = ROOT }
 			diplomacy = 8
 			learning = 8
 		}
@@ -727,7 +770,15 @@ character_event = {
 		ai_chance = {
 			factor = 20
 			modifier = { factor = 2 NOT = { religion_openly_americanist_or_heresy_trigger = yes } }
-			
+		}
+		ai_chance = {
+			factor = 20
+			modifier = { 
+				factor = 2 
+				religion_openly_americanist_or_heresy_trigger = yes 
+				has_trait = zealous
+				FROM = { NOT = { religion = ROOT } }
+			}
 		}
 	}
 	
@@ -1361,16 +1412,7 @@ character_event = {
 			30 = { }
 			20 = { add_trait = stressed }
 		}
-		if = { limit = { has_character_flag = on_pilgrimage_boston }
-			character_event = { id = america_pilgrim.61 } }	
-		if = { limit = { has_character_flag = on_pilgrimage_newyork }
-			character_event = { id = america_pilgrim.62 } }	
-		if = { limit = { has_character_flag = on_pilgrimage_philadelphia }
-			character_event = { id = america_pilgrim.63 } }	
-		if = { limit = { has_character_flag = on_pilgrimage_washington }
-			character_event = { id = america_pilgrim.64 } }	
-		if = { limit = { has_character_flag = on_pilgrimage_richmond }
-			character_event = { id = america_pilgrim.65 } }
+		character_event = { id = america_pilgrim.199 }
 		ai_chance = {
 			factor = 10
 		}
@@ -1510,16 +1552,7 @@ character_event = {
 			50 = {
 				custom_tooltip = { text = TXT_pilgrim_respondimprison_regroup }
 				hidden_tooltip = { 
-					if = { limit = { has_character_flag = on_pilgrimage_boston }
-						character_event = { id = america_pilgrim.61 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_newyork }
-						character_event = { id = america_pilgrim.62 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_philadelphia }
-						character_event = { id = america_pilgrim.63 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_washington }
-						character_event = { id = america_pilgrim.64 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_richmond }
-						character_event = { id = america_pilgrim.65 } }
+					character_event = { id = america_pilgrim.199 }
 				}
 			}
 		}
@@ -1545,16 +1578,7 @@ character_event = {
 			75 = { 
 				custom_tooltip = { text = TXT_pilgrim_respondimprison_regroup }
 				hidden_tooltip = { 
-					if = { limit = { has_character_flag = on_pilgrimage_boston }
-						character_event = { id = america_pilgrim.61 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_newyork }
-						character_event = { id = america_pilgrim.62 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_philadelphia }
-						character_event = { id = america_pilgrim.63 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_washington }
-						character_event = { id = america_pilgrim.64 } }	
-					if = { limit = { has_character_flag = on_pilgrimage_richmond }
-						character_event = { id = america_pilgrim.65 } }
+					character_event = { id = america_pilgrim.199 }	
 				}
 			}
 		}
@@ -1584,16 +1608,7 @@ character_event = {
 			30 = { add_trait = paranoid }
 		}
 		hidden_tooltip = { 
-			if = { limit = { has_character_flag = on_pilgrimage_boston }
-				character_event = { id = america_pilgrim.61 } }	
-			if = { limit = { has_character_flag = on_pilgrimage_newyork }
-				character_event = { id = america_pilgrim.62 } }	
-			if = { limit = { has_character_flag = on_pilgrimage_philadelphia }
-				character_event = { id = america_pilgrim.63 } }	
-			if = { limit = { has_character_flag = on_pilgrimage_washington }
-				character_event = { id = america_pilgrim.64 } }	
-			if = { limit = { has_character_flag = on_pilgrimage_richmond }
-				character_event = { id = america_pilgrim.65 } }
+			character_event = { id = america_pilgrim.199 }	
 		}
 		ai_chance = {
 			factor = 100
@@ -1699,223 +1714,6 @@ character_event = {
 	}
 }
 
-# ************************* Get Claims on Cities ************************
-
-character_event = {
-	id = america_pilgrim.61
-	desc = EVTDESC_pilgrim_claimboston
-	picture = GFX_evt_council
-	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-	
-	immediate = { narrative_event = { id = america_pilgrim.90 days = 1 } }
-	
-	option = {
-		name = EVTOPT_pilgrim_claimcity
-		69 = { county = { add_claim = ROOT } }
-		random_list = {
-			20 = { add_trait = greedy }
-			20 = { add_trait = envious }
-			20 = { add_trait = cynical }
-			20 = { add_trait = proud }
-			20 = { add_trait = ambitious }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = ambitious }
-			modifier = { factor = 2 trait = proud }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_claimnothing
-		random_list = {
-			40 = { change_diplomacy = 1 }
-			20 = { add_trait = humble }
-			20 = { add_trait = patient }
-			20 = { add_trait = content }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = content }
-			modifier = { factor = 2 trait = humble }
-		}
-	}
-}
-
-character_event = {
-	id = america_pilgrim.62
-	desc = EVTDESC_pilgrim_claimnewyork
-	picture = GFX_evt_council
-	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-	
-	immediate = { narrative_event = { id = america_pilgrim.90 days = 1 } }
-	
-	option = {
-		name = EVTOPT_pilgrim_claimcity
-		3 = { county = { add_claim = ROOT } }
-		random_list = {
-			20 = { add_trait = greedy }
-			20 = { add_trait = envious }
-			20 = { add_trait = cynical }
-			20 = { add_trait = proud }
-			20 = { add_trait = ambitious }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = ambitious }
-			modifier = { factor = 2 trait = proud }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_claimnothing
-		random_list = {
-			40 = { change_diplomacy = 1 }
-			20 = { add_trait = humble }
-			20 = { add_trait = patient }
-			20 = { add_trait = content }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = content }
-			modifier = { factor = 2 trait = humble }
-		}
-	}
-}
-
-character_event = {
-	id = america_pilgrim.63
-	desc = EVTDESC_pilgrim_claimphiladelphia
-	picture = GFX_evt_council
-	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-	
-	immediate = { narrative_event = { id = america_pilgrim.90 days = 1 } }
-	
-	option = {
-		name = EVTOPT_pilgrim_claimcity
-		27 = { county = { add_claim = ROOT } }
-		random_list = {
-			20 = { add_trait = greedy }
-			20 = { add_trait = envious }
-			20 = { add_trait = cynical }
-			20 = { add_trait = proud }
-			20 = { add_trait = ambitious }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = ambitious }
-			modifier = { factor = 2 trait = proud }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_claimnothing
-		random_list = {
-			40 = { change_diplomacy = 1 }
-			20 = { add_trait = humble }
-			20 = { add_trait = patient }
-			20 = { add_trait = content }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = content }
-			modifier = { factor = 2 trait = humble }
-		}
-	}
-}
-
-character_event = {
-	id = america_pilgrim.64
-	desc = EVTDESC_pilgrim_claimwashington
-	picture = GFX_evt_council
-	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-	
-	immediate = { narrative_event = { id = america_pilgrim.90 days = 1 } }
-	
-	option = {
-		name = EVTOPT_pilgrim_claimcity
-		63 = { county = { add_claim = ROOT } }
-		random_list = {
-			20 = { add_trait = greedy }
-			20 = { add_trait = envious }
-			20 = { add_trait = cynical }
-			20 = { add_trait = proud }
-			20 = { add_trait = ambitious }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = ambitious }
-			modifier = { factor = 2 trait = proud }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_claimnothing
-		random_list = {
-			40 = { change_diplomacy = 1 }
-			20 = { add_trait = humble }
-			20 = { add_trait = patient }
-			20 = { add_trait = content }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = content }
-			modifier = { factor = 2 trait = humble }
-		}
-	}
-}
-
-character_event = {
-	id = america_pilgrim.65
-	desc = EVTDESC_pilgrim_claimrichmond
-	picture = GFX_evt_council
-	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-	
-	immediate = { narrative_event = { id = america_pilgrim.90 days = 1 } }
-	
-	option = {
-		name = EVTOPT_pilgrim_claimcity
-		75 = { county = { add_claim = ROOT } }
-		random_list = {
-			20 = { add_trait = greedy }
-			20 = { add_trait = envious }
-			20 = { add_trait = cynical }
-			20 = { add_trait = proud }
-			20 = { add_trait = ambitious }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = ambitious }
-			modifier = { factor = 2 trait = proud }
-		}
-	}
-	
-	option = {
-		name = EVTOPT_pilgrim_claimnothing
-		random_list = {
-			40 = { change_diplomacy = 1 }
-			20 = { add_trait = humble }
-			20 = { add_trait = patient }
-			20 = { add_trait = content }
-		}
-		ai_chance = {
-			factor = 10
-			modifier = { factor = 2 trait = content }
-			modifier = { factor = 2 trait = humble }
-		}
-	}
-}
-
 # ************************* Notify Relationship Changes ************************
 
 character_event = {
@@ -2017,12 +1815,290 @@ character_event = {
 		clr_character_flag = on_pilgrimage_philadelphia
 		clr_character_flag = on_pilgrimage_washington
 		clr_character_flag = on_pilgrimage_richmond
+		clr_character_flag = on_pilgrimage_alamo
+		clr_character_flag = on_pilgrimage_benning
+		clr_character_flag = on_pilgrimage_bragg
+		clr_character_flag = on_pilgrimage_richmond_j
+		clr_character_flag = on_pilgrimage_washington_j
+		clr_character_flag = on_pilgrimage_nashville
+		clr_character_flag = on_pilgrimage_washington_l
 		if = {
 			limit = {
 				has_quest = quest_monastic_order_pilgrimage_americanist
 			}
 			character_event = { id = MNM_ATEWWW.11 days = 1}
 		}
+	}
+}
+
+character_event = {
+	id = america_pilgrim.199
+	desc = EVTDESC_pilgrim_anycity
+	picture = GFX_evt_council
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	immediate = { 
+		trigger_switch = {
+			on_trigger = has_character_flag
+			on_pilgrimage_boston =						{ 69 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_newyork =						{ 3 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_philadelphia =				{ 27 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_washington =					{ 63 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_richmond =					{ 75 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_alamo =						{ 1231 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_benning =						{ 1031 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_bragg =						{ 137 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_richmond_j =					{ 75 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_washington_j =				{ 63 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_nashville =					{ 1019 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_washington_l =				{ 63 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_palisades =					{ 2 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_newyork_l =					{ 3 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_philadelphia_l =				{ 27 = { county = { save_event_target_as = claim_county } } }
+		}
+		narrative_event = { id = america_pilgrim.90 days = 1 } 
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_claimcity
+		event_target:claim_county = { add_claim = ROOT }
+		random_list = {
+			20 = { add_trait = greedy }
+			20 = { add_trait = envious }
+			20 = { add_trait = cynical }
+			20 = { add_trait = proud }
+			20 = { add_trait = ambitious }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = ambitious }
+			modifier = { factor = 2 trait = proud }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_claimnothing
+		random_list = {
+			40 = { change_diplomacy = 1 }
+			20 = { add_trait = humble }
+			20 = { add_trait = patient }
+			20 = { add_trait = content }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = content }
+			modifier = { factor = 2 trait = humble }
+		}
+	}
+}
+
+narrative_event = {
+	id = america_pilgrim.110
+	title = EVTNAME_pilgrim_alamo
+	desc = EVTDESC_pilgrim_alamo
+	picture = GFX_evt_magnificent_castle
+
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		set_character_flag = on_pilgrimage_alamo
+		clr_character_flag = pilgrim_entry_retried
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_approach
+		1231 = { owner = { character_event = { id = america_pilgrim.20 } } }
+		narrative_event = { id = america_pilgrim.120 days = 25 random = 10 }
+	}
+}
+
+narrative_event = {
+	id = america_pilgrim.120
+	title = EVTNAME_pilgrim_benning
+	desc = EVTDESC_pilgrim_benning
+	picture = GFX_evt_magnificent_castle
+
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		clr_character_flag = on_pilgrimage_alamo
+		set_character_flag = on_pilgrimage_benning
+		clr_character_flag = pilgrim_entry_retried
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_approach
+		1031 = { owner = { character_event = { id = america_pilgrim.20 } } }
+		narrative_event = { id = america_pilgrim.130 days = 15 random = 10 }
+	}
+}
+
+narrative_event = {
+	id = america_pilgrim.130
+	title = EVTNAME_pilgrim_bragg
+	desc = EVTDESC_pilgrim_bragg
+	picture = GFX_evt_magnificent_castle
+
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		clr_character_flag = on_pilgrimage_benning
+		set_character_flag = on_pilgrimage_bragg
+		clr_character_flag = pilgrim_entry_retried
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_approach
+		137 = { owner = { character_event = { id = america_pilgrim.20 } } }
+		narrative_event = { id = america_pilgrim.140 days = 20 random = 10 }
+	}
+}
+
+narrative_event = {
+	id = america_pilgrim.140
+	title = EVTNAME_pilgrim_richmond
+	desc = EVTDESC_pilgrim_richmond_j
+	picture = GFX_evt_busy_trading_dock_republic
+
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		clr_character_flag = on_pilgrimage_bragg
+		set_character_flag = on_pilgrimage_richmond_j
+		clr_character_flag = pilgrim_entry_retried
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_approach
+		75 = { owner = { character_event = { id = america_pilgrim.20 } } }
+		narrative_event = { id = america_pilgrim.150 days = 20 random = 10 }
+	}
+}
+
+narrative_event = {
+	id = america_pilgrim.150
+	title = EVTNAME_pilgrim_washington
+	desc = EVTDESC_pilgrim_washington_j
+	picture = GFX_evt_busy_trading_dock_republic
+
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		clr_character_flag = on_pilgrimage_richmond_j
+		set_character_flag = on_pilgrimage_washington_j
+		clr_character_flag = pilgrim_entry_retried
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_approach
+		63 = { owner = { character_event = { id = america_pilgrim.20 } } }
+		narrative_event = { id = america_pilgrim.91 days = 5 random = 5 }
+	}
+}
+
+narrative_event = {
+	id = america_pilgrim.210
+	title = EVTNAME_pilgrim_nashville
+	desc = EVTDESC_pilgrim_nashville
+	picture = GFX_evt_hellenic_temple
+
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		set_character_flag = on_pilgrimage_nashville
+		clr_character_flag = pilgrim_entry_retried
+	}
+	
+	option = {
+		name = EVTOPT_pilgrim_approach
+		1019 = { owner = { character_event = { id = america_pilgrim.20 } } }
+		narrative_event = { id = america_pilgrim.220 days = 35 random = 10 }
+	}
+}
+
+narrative_event = {
+	id = america_pilgrim.220
+	title = EVTNAME_pilgrim_washington
+	desc = EVTDESC_pilgrim_washington_l
+	picture = GFX_evt_busy_trading_dock_republic
+
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		clr_character_flag = on_pilgrimage_nashville
+		set_character_flag = on_pilgrimage_washington_l
+		clr_character_flag = pilgrim_entry_retried
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_approach
+		63 = { owner = { character_event = { id = america_pilgrim.20 } } }
+		narrative_event = { id = america_pilgrim.230 days = 20 random = 10 }
+	}
+}
+
+narrative_event = {
+	id = america_pilgrim.230
+	title = EVTNAME_pilgrim_palisades
+	desc = EVTDESC_pilgrim_palisades
+	picture = GFX_evt_busy_trading_dock_republic
+
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		clr_character_flag = on_pilgrimage_washington_l
+		set_character_flag = on_pilgrimage_palisades
+		clr_character_flag = pilgrim_entry_retried
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_approach
+		2 = { owner = { character_event = { id = america_pilgrim.20 } } }
+		narrative_event = { id = america_pilgrim.240 days = 5 random = 10 }
+	}
+}
+
+narrative_event = {
+	id = america_pilgrim.240
+	title = EVTNAME_pilgrim_new_york
+	desc = EVTDESC_pilgrim_new_york_l
+	picture = GFX_evt_busy_trading_dock_republic
+
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		clr_character_flag = on_pilgrimage_palisades
+		set_character_flag = on_pilgrimage_new_york_l
+		clr_character_flag = pilgrim_entry_retried
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_approach
+		3 = { owner = { character_event = { id = america_pilgrim.20 } } }
+		narrative_event = { id = america_pilgrim.250 days = 20 random = 10 }
+	}
+}
+
+narrative_event = {
+	id = america_pilgrim.250
+	title = EVTNAME_pilgrim_philadelphia
+	desc = EVTDESC_pilgrim_philadelphia_l
+	picture = GFX_evt_busy_trading_dock_republic
+
+	is_triggered_only = yes
+	trigger = { trait = on_pilgrimage }
+	immediate = {
+		clr_character_flag = on_pilgrimage_new_york_l
+		set_character_flag = on_pilgrimage_philadelphia_l
+		clr_character_flag = pilgrim_entry_retried
+	}
+
+	option = {
+		name = EVTOPT_pilgrim_approach
+		27 = { owner = { character_event = { id = america_pilgrim.20 } } }
+		narrative_event = { id = america_pilgrim.91 days = 5 random = 5 }
 	}
 }
 

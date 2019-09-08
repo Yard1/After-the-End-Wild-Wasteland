@@ -97,3 +97,12 @@ remove_patron_general_trigger = {
 	remove_character_modifier = devote_of_lee
 	remove_character_modifier = devotee_of_butler
 }
+
+true_religion_americanist_or_heresy_trigger = {
+	OR = {
+		true_religion = americanist
+		true_religion = hamiltonian
+		true_religion = jeffersonian
+		true_religion = libertarian
+	}
+}

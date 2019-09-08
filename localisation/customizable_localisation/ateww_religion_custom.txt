@@ -42,3 +42,101 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+	name = GetAmericanistPilgrimageCities
+
+	text = {
+		localisation_key = americanist_pilgrimage_cities_jeffersonian
+		trigger = {
+			religion = jeffersonian
+		}
+	}
+	text = {
+		localisation_key = americanist_pilgrimage_cities_libertarian
+		trigger = {
+			religion = libertarian
+		}
+	}
+	fallback_text = {
+		localisation_key = americanist_pilgrimage_cities_americanist
+	}
+}
+
+defined_text = {
+	name = GetCurrentAmericanistPilgrimageCity
+
+	text = {
+		localisation_key = americanist_pilgrimage_boston
+		trigger = {
+			has_character_flag = on_pilgrimage_boston
+		}
+	}
+	text = {
+		localisation_key = americanist_pilgrimage_new_york
+		trigger = {
+			OR = {
+				has_character_flag = on_pilgrimage_newyork
+				has_character_flag = on_pilgrimage_newyork_l
+			}
+		}
+	}
+	text = {
+		localisation_key = americanist_pilgrimage_philadelphia
+		trigger = {
+			OR = {
+				has_character_flag = on_pilgrimage_philadelphia
+				has_character_flag = on_pilgrimage_philadelphia_l
+			}
+		}
+	}
+	text = {
+		localisation_key = americanist_pilgrimage_washington
+		trigger = {
+			OR = {
+				has_character_flag = on_pilgrimage_washington
+				has_character_flag = on_pilgrimage_washington_l
+				has_character_flag = on_pilgrimage_washington_j
+			}
+		}
+	}
+	text = {
+		localisation_key = americanist_pilgrimage_richmond
+		trigger = {
+			OR = {
+				has_character_flag = on_pilgrimage_richmond
+				has_character_flag = on_pilgrimage_richmond_j
+			}
+		}
+	}
+	text = {
+		localisation_key = americanist_pilgrimage_alamo
+		trigger = {
+			has_character_flag = on_pilgrimage_alamo
+		}
+	}
+	text = {
+		localisation_key = americanist_pilgrimage_benning
+		trigger = {
+			has_character_flag = on_pilgrimage_benning
+		}
+	}
+	text = {
+		localisation_key = americanist_pilgrimage_bragg
+		trigger = {
+			has_character_flag = on_pilgrimage_bragg
+		}
+	}
+	text = {
+		localisation_key = americanist_pilgrimage_nashville
+		trigger = {
+			has_character_flag = on_pilgrimage_nashville
+		}
+	}
+	text = {
+		localisation_key = americanist_pilgrimage_palisades
+		trigger = {
+			has_character_flag = on_pilgrimage_palisades
+		}
+	}
+}

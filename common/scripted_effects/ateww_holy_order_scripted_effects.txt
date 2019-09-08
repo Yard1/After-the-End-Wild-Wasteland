@@ -36,19 +36,24 @@ ROOT_join_PREV_holy_order_holder = {
 	end_inaccessibility_effect = yes #removes in_hiding or in_seclusion
 }
 
-give_random_female_libertarian_name = {
-	random_character = {
-		limit = { 
-			is_female = yes
-			culture = ROOT
-		}
-		preferred_limit = {
-			religion = ROOT
-		}
-		ROOT = { copy_name = PREV }
-	}
+give_ROOT_random_female_libertarian_name = {
 	random_list = {
-		25 = {}
+		25 = {
+			modifier = {
+				factor = 0.5
+				NOT = { total_years_played = 5 }
+			}
+			random_character = {
+				limit = { 
+					is_female = yes
+					culture = ROOT
+				}
+				preferred_limit = {
+					religion = ROOT
+				}
+				ROOT = { copy_name = PREV }
+			}
+		}
 		1 = { ROOT = { set_name = Justice } }
 		1 = { ROOT = { set_name = Columbia } }
 		1 = { ROOT = { set_name = Libertas } }

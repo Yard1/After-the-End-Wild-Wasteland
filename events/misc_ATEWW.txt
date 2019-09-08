@@ -124,7 +124,7 @@ character_event = {
 			}
 			if = {
 				limit = { is_female = yes }
-				give_random_female_libertarian_name = yes
+				give_ROOT_random_female_libertarian_name = yes
 			}
 		}
 		if = {

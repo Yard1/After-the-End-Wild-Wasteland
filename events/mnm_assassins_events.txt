@@ -7,6 +7,7 @@
 ###########################################
 
 namespace = MNM
+namespace = MMM_ATEWWW
 
 ###BORROWING/DONATING MONEY###
 
@@ -488,7 +489,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
-				true_religion_americanist_trigger = no
+				true_religion_americanist_or_heresy_trigger = no
 				OR = {
 					controls_religion = yes
 					capital_holding = { holding_type = TEMPLE }
@@ -519,7 +520,7 @@ character_event = {
 
 	#Disapproving of Americanism
 	option = {
-		trigger = { true_religion_americanist_trigger = no }
+		trigger = { true_religion_americanist_or_heresy_trigger = no }
 
 		name = {
 			trigger = { NOT = { religion_group = oldworld } }
@@ -624,11 +625,11 @@ character_event = {
 	border = GFX_event_normal_frame_diplomacy
 
 	desc = {
-		trigger = { FROM = { NOT = { religion = americanist } } }
+		trigger = { FROM = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } } }
 		text = EVTDESC_MNM_6022_A
 	}
 	desc = {
-		trigger = { FROM = { religion = americanist } }
+		trigger = { FROM = { religion_openly_americanist_or_heresy_trigger = yes } }
 		text = EVTDESC_MNM_6022_B
 	}
 
@@ -707,7 +708,7 @@ character_event = {
 			factor = 50
 			modifier = {
 				factor = 0.5
-				true_religion_americanist_trigger = no
+				true_religion_americanist_or_heresy_trigger = no
 			}
 			modifier = {
 				factor = 2
@@ -899,8 +900,8 @@ character_event = {
 						society = the_assassins
 					}
 					if = {
-						limit = { NOT = { religion = americanist } }
-						set_secret_religion = americanist
+						limit = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } }
+						set_secret_religion = { target_type = true target = ROOT }
 					}
 				}
 			}
@@ -996,7 +997,7 @@ character_event = {
 
 	#Praise the Founders!
 	option = {
-		trigger = { true_religion_americanist_trigger = yes }
+		trigger = { true_religion_americanist_or_heresy_trigger = yes }
 		name = EVTOPTA_6028
 		custom_tooltip = { text = EVTOPTA_6028_TOOLTIP }
 
@@ -1005,11 +1006,11 @@ character_event = {
 
 	#I will convert
 	option = {
-		trigger = { true_religion_americanist_trigger = no }
+		trigger = { true_religion_americanist_or_heresy_trigger = no }
 		name = EVTOPTB_6028
 		custom_tooltip = { text = EVTOPTB_6028_TOOLTIP }
 
-		religion = americanist
+		religion = { target_type = public target = FROM }
 
 		hidden_effect = { character_event = { id = MNM.6029 days = 1 } }
 		
@@ -1037,12 +1038,12 @@ character_event = {
 
 	#I will convert, secretly
 	option = {
-		trigger = { true_religion_americanist_trigger = no }
+		trigger = { true_religion_americanist_or_heresy_trigger = no }
 		name = EVTOPTC_6028
 		custom_tooltip = { text = EVTOPTC_6028_TOOLTIP }
 		
 		hidden_effect = { clear_secret_religion = yes } #To hide spammy tooltips...
-		set_secret_religion = americanist
+		set_secret_religion = { target_type = true target = FROM }
 
 		hidden_effect = { character_event = { id = MNM.6029 days = 1 } }
 
@@ -1194,8 +1195,8 @@ character_event = {
 							society = the_assassins
 						}
 						if = {
-							limit = { NOT = { religion = americanist } }
-							set_secret_religion = americanist
+							limit = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } }
+							set_secret_religion = { target_type = true target = ROOT }
 						}
 					}
 				}
@@ -1352,7 +1353,7 @@ character_event = {
 			limit = { 
 				NOT = { society_member_of = the_assassins }
 				trait = cynical 
-				religion = americanist
+				religion_openly_americanist_or_heresy_trigger = yes
 				is_adult = yes
 				ai = yes
 			}
@@ -1361,7 +1362,7 @@ character_event = {
 		random_courtier_or_vassal = {
 			limit = { 
 				NOT = { society_member_of = the_assassins }
-				true_religion_americanist_trigger = no 
+				true_religion_americanist_or_heresy_trigger = no 
 				is_adult = yes
 				ai = yes
 			}
@@ -1370,7 +1371,7 @@ character_event = {
 		random_courtier_or_vassal = {
 			limit = {
 				NOT = { society_member_of = the_assassins }
-				true_religion_americanist_trigger = no
+				true_religion_americanist_or_heresy_trigger = no
 				trait = zealous
 				is_adult = yes
 				ai = yes
@@ -1387,7 +1388,7 @@ character_event = {
 					is_close_relative = ROOT
 				}
 				OR = {
-					true_religion_americanist_trigger = no
+					true_religion_americanist_or_heresy_trigger = no
 					trait = cynical
 				}
 				is_adult = yes
@@ -3264,8 +3265,57 @@ character_event = {
 			}
 			20 = {
 				modifier = { factor = 0 ai = yes }
-				modifier = { factor = 0 NOT = { religion = americanist } }
+				modifier = { factor = 0 NOT = { religion_openly_americanist_or_heresy_trigger = yes } }
 				event_target:grand_master = { character_event = { id = MNM.6203 } } #Convert a specific holding
+			}
+			5 = { 
+				trigger = {
+					event_target:grand_master = { 
+						holy_order = yes 
+					}
+					is_feudal = yes
+					is_landed = yes
+					higher_tier_than = BARON
+					OR = {
+						AND = {
+							demesne_size = 3
+							any_demesne_title = {
+								holding_type = castle
+								tier = BARON
+								NOT = { location = { is_capital = yes } }
+								can_be_given_away = yes
+							}
+						}
+						any_demesne_province = {
+							has_empty_holding = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					grand_master:event_target = { 
+						NOT = { demesne_size = 1 }
+					}
+				}
+				modifier = {
+					factor = 2
+					grand_master:event_target = { 
+						NOT = { demesne_size = 2 }
+					}
+				}
+				modifier = {
+					factor = 0.5
+					grand_master:event_target = {
+						num_of_count_titles = 1
+					}
+				}
+				modifier = {
+					factor = 0.5
+					grand_master:event_target = {
+						realm_size = 5
+					}
+				}
+				event_target:grand_master = { character_event = { id = MNM_ATEWWW.100 } }
 			}
 			15 = {
 				modifier = {
@@ -3292,7 +3342,7 @@ character_event = {
 				}
 				modifier = {
 					factor = 0
-					NOT = { religion = americanist }
+					NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 				}
 				modifier = {
 					factor = 0
@@ -3310,11 +3360,11 @@ character_event = {
 								owner = {
 									top_liege = {
 										NOT = { character = ROOT }
-										NOT = { religion = americanist }
+										NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 										any_realm_province = {
-											owner = { NOT = { religion = americanist } }
+											owner = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } }
 											any_province_holding = { 
-												owner = { NOT = { religion = americanist } } 
+												owner = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } } 
 												OR = {
 													holding_type = temple
 													holding_type = castle
@@ -3407,12 +3457,12 @@ character_event = {
 					any_independent_ruler = { 
 						is_within_diplo_range = ROOT #Not using assassins_appropriate_target_trigger here to also find vassals/commanders
 						NOT = { character = ROOT }
-						NOT = { religion = americanist }
+						NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 						NOT = { society_member_of = the_assassins }
 						any_war = {
 							attacker = { character = PREV }
 							defender = { 
-								religion = americanist 
+								religion_openly_americanist_or_heresy_trigger = yes 
 								NOT = { character = ROOT }
 							}
 						}
@@ -3424,12 +3474,12 @@ character_event = {
 					limit = {
 						is_within_diplo_range = ROOT #Not using assassins_appropriate_target_trigger here to also find vassals/commanders
 						NOT = { character = ROOT }
-						NOT = { religion = americanist }
+						NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 						NOT = { society_member_of = the_assassins }
 						any_war = {
 							any_attacker = { character = PREV }
 							defender = { 
-								religion = americanist 
+								religion_openly_americanist_or_heresy_trigger = yes 
 								NOT = { character = ROOT }
 							}
 						}
@@ -3454,7 +3504,7 @@ character_event = {
 									liege = { is_feudal = yes }
 									any_war = {
 										any_attacker = { character = PREV }
-										defender = { religion = americanist }
+										defender = { religion_openly_americanist_or_heresy_trigger = yes }
 									}
 								}
 							}
@@ -3472,7 +3522,7 @@ character_event = {
 										liege = { is_feudal = yes }
 										any_war = {
 											any_attacker = { character = PREV }
-											defender = { religion = americanist }
+											defender = { religion_openly_americanist_or_heresy_trigger = yes }
 										}
 									}
 								}
@@ -3570,8 +3620,8 @@ character_event = {
 							is_evil_trigger = yes
 							trait = zealous
 						}
-						NOT = { religion = americanist }
-						any_realm_province = { religion = americanist }
+						NOT = { religion_openly_americanist_or_heresy_trigger = yes }
+						any_realm_province = { religion_openly_americanist_or_heresy_trigger = yes }
 					}
 				}
 				random_independent_ruler = {
@@ -3583,8 +3633,8 @@ character_event = {
 							is_evil_trigger = yes
 							trait = zealous
 						}
-						NOT = { religion = americanist }
-						any_realm_province = { religion = americanist }
+						NOT = { religion_openly_americanist_or_heresy_trigger = yes }
+						any_realm_province = { religion_openly_americanist_or_heresy_trigger = yes }
 					}
 					save_event_target_as = assassins_target
 					set_character_flag = assassins_target_persecutes_americanists
@@ -3598,13 +3648,13 @@ character_event = {
 				limit = {
 					assassins_appropriate_target_trigger = yes
 					NOT = { character = ROOT }
-					NOT = { religion = americanist }
+					NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 					NOT = { society_member_of = the_assassins }
 					OR = {
 						NOT = {
 							any_playable_ruler = {
 								assassins_appropriate_target_trigger = yes
-								NOT = { religion = americanist }
+								NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 								NOT = { society_member_of = the_assassins }
 								
 								OR = {
@@ -3707,11 +3757,11 @@ society_quest_event = {
 		hidden_effect = {
 			event_target:assassins_target = {
 				any_war = {
-					limit = { defender = { religion = americanist } }
+					limit = { defender = { religion_openly_americanist_or_heresy_trigger = yes } }
 					defender = { save_event_target_as = americanist_defender }
 				}
 				any_realm_province = {
-					limit = { religion = americanist }
+					limit = { religion_openly_americanist_or_heresy_trigger = yes }
 					save_event_target_as = americanist_province
 				}
 			}
@@ -3879,8 +3929,8 @@ character_event = {
 
 	trigger = { 
 		FROM = { 
-			religion = americanist 
-			any_realm_province = { NOT = { religion = americanist } }
+			religion_openly_americanist_or_heresy_trigger = yes 
+			any_realm_province = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } }
 		} 
 	}
 
@@ -3927,19 +3977,19 @@ society_quest_event = {
 	immediate = {
 		random_realm_province = {
 			limit = { 
-				NOT = { religion = americanist }
+				NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 			}
 			save_event_target_as = conversion_province
 		}
 		random_realm_province = {
 			limit = { 
-				owner = { NOT = { religion = americanist } }
-				NOT = { religion = americanist }
+				owner = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } }
+				NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 			}
 			save_event_target_as = conversion_province
 		}
 		random_demesne_province = {
-			limit = { NOT = { religion = americanist } }
+			limit = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } }
 			save_event_target_as = conversion_province
 		}
 		event_target:conversion_province = { owner = { save_event_target_as = conversion_province_owner } }
@@ -4834,13 +4884,13 @@ society_quest_event = {
 							OR = {
 								NOT = { religion_group = oldworld }
 								AND = {
-									NOT = { religion = americanist }
+									NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 									NOT = { ROOT = { any_realm_province = { any_neighbor_province = { owner = { top_liege = { NOT = { religion_group = oldworld } } } } } } }
 								}
 							}
 							any_realm_province = {
 								any_province_holding = { 
-									owner = { NOT = { religion = americanist } } 
+									owner = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4859,14 +4909,14 @@ society_quest_event = {
 							OR = {
 								NOT = { religion_group = oldworld }
 								AND = {
-									NOT = { religion = americanist }
+									NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 									NOT = { ROOT = { any_realm_province = { any_neighbor_province = { owner = { top_liege = { NOT = { religion_group = oldworld } } } } } } }
 								}
 							}
 							any_realm_province = {
-								owner = { NOT = { religion = americanist } }
+								owner = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } }
 								any_province_holding = { 
-									owner = { NOT = { religion = americanist } } 
+									owner = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4882,7 +4932,7 @@ society_quest_event = {
 						random_realm_province = {
 							limit = {
 								any_province_holding = { 
-									owner = { NOT = { religion = americanist } } 
+									owner = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4891,7 +4941,7 @@ society_quest_event = {
 							}
 							random_province_holding = {
 								limit = {
-									owner = { NOT = { religion = americanist } } 
+									owner = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4903,7 +4953,7 @@ society_quest_event = {
 						random_demesne_province = {
 							limit = {
 								any_province_holding = { 
-									owner = { NOT = { religion = americanist } } 
+									owner = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -4912,7 +4962,7 @@ society_quest_event = {
 							}
 							random_province_holding = {
 								limit = {
-									owner = { NOT = { religion = americanist } } 
+									owner = { NOT = { religion_openly_americanist_or_heresy_trigger = yes } } 
 									OR = {
 										holding_type = temple
 										holding_type = castle
@@ -7606,8 +7656,11 @@ character_event = { # clean-up after training apprentice
 	hide_window = yes
 
 	option = {
-		if = { limit = { event_target:assassin_protege = { true_religion_americanist_trigger = no } }
+		if = { limit = { event_target:assassin_protege = { true_religion_americanist_or_heresy_trigger = no } }
 			custom_tooltip = { text = 6252_CONVERT_APPRENTICE_TT }
+			true_religion_scope = {
+				save_event_target_as = assassin_true_religion
+			}
 			event_target:assassin_protege = {
 				character_event = { id = MNM.6258 } # convert
 			}
@@ -7632,7 +7685,7 @@ character_event = { # Conversion event (for apprentice) if they are not already 
 
 	trigger = {
 		event_target:assassin_protege = { is_alive = yes }
-		true_religion_americanist_trigger = no
+		true_religion_americanist_or_heresy_trigger = no
 	}
 
 	is_triggered_only = yes
@@ -7640,7 +7693,7 @@ character_event = { # Conversion event (for apprentice) if they are not already 
 	option = { #I (apprentice)  will convert
 		name = EVTOPTA_MNM_6258
 		
-		religion = americanist
+		religion = { target_type = public target = FROM }
 		
 		ai_chance = {
 			factor = 20
@@ -7666,8 +7719,8 @@ character_event = { # Conversion event (for apprentice) if they are not already 
 	option = { # I (apprentice) will convert, secretly
 		name = EVTOPTB_MNM_6258
 		
-		clear_secret_religion = yes
-		set_secret_religion = americanist
+		hidden_effect = { clear_secret_religion = yes } #To hide spammy tooltips...
+		set_secret_religion = { target_type = true target = FROM }
 
 		ai_chance = {
 			factor = 80
@@ -7704,42 +7757,42 @@ character_event = { # Final talk with apprentice
 	desc = {
 		trigger = {
 			has_character_flag = apprentice_did_great
-			event_target:assassin_protege = { true_religion_americanist_trigger = yes }
+			event_target:assassin_protege = { true_religion_americanist_or_heresy_trigger = yes }
 		}
 		text = EVTDESC_MNM_6259_A # apprentice is a fine example and already a believer
 	}
 	desc = {
 		trigger = {
 			has_character_flag = apprentice_did_ok
-			event_target:assassin_protege = { true_religion_americanist_trigger = yes }
+			event_target:assassin_protege = { true_religion_americanist_or_heresy_trigger = yes }
 		}
 		text = EVTDESC_MNM_6259_B # Apprentice has done alright, all things considered
 	}
 	desc = {
 		trigger = {
 			has_character_flag = apprentice_failed_miserably
-			event_target:assassin_protege = { true_religion_americanist_trigger = yes }
+			event_target:assassin_protege = { true_religion_americanist_or_heresy_trigger = yes }
 		}
 		text = EVTDESC_MNM_6259_C # believer apprentice is dead, I might train a new one?
 	}
 	desc = {
 		trigger = {
 			has_character_flag = apprentice_did_great
-			event_target:assassin_protege = { true_religion_americanist_trigger = no }
+			event_target:assassin_protege = { true_religion_americanist_or_heresy_trigger = no }
 		}
 		text = EVTDESC_MNM_6259_D # apprentice is a fine example and already a believer
 	}
 	desc = {
 		trigger = {
 			has_character_flag = apprentice_did_ok
-			event_target:assassin_protege = { true_religion_americanist_trigger = no }
+			event_target:assassin_protege = { true_religion_americanist_or_heresy_trigger = no }
 		}
 		text = EVTDESC_MNM_6259_E # Apprentice has done alright, all things considered AND will convert
 	}
 	desc = {
 		trigger = {
 			has_character_flag = apprentice_failed_miserably
-			event_target:assassin_protege = { true_religion_americanist_trigger = no }
+			event_target:assassin_protege = { true_religion_americanist_or_heresy_trigger = no }
 		}
 		text = EVTDESC_MNM_6259_F # to-be-converted apprentice is dead, I might train a new one?
 	}
@@ -7753,7 +7806,7 @@ character_event = { # Final talk with apprentice
 		hidden_effect = { character_event = { id = MNM.6257 } } # clean up
 		event_target:assassin_protege = { set_character_flag = show_picture_in_option }
 		
-		if = { limit = { event_target:assassin_protege = { true_religion_americanist_trigger = no } }
+		if = { limit = { event_target:assassin_protege = { true_religion_americanist_or_heresy_trigger = no } }
 			custom_tooltip = { text = 6252_CONVERT_APPRENTICE_TT_2 }
 			event_target:assassin_protege = {
 				character_event = { id = MNM.6258 } # convert
@@ -7774,7 +7827,7 @@ character_event = { # Final talk with apprentice
 		hidden_effect = { character_event = { id = MNM.6257 } } # clean up
 		event_target:assassin_protege = { set_character_flag = show_picture_in_option }
 		
-		if = { limit = { event_target:assassin_protege = { true_religion_americanist_trigger = no } }
+		if = { limit = { event_target:assassin_protege = { true_religion_americanist_or_heresy_trigger = no } }
 			custom_tooltip = { text = 6252_CONVERT_APPRENTICE_TT_2 }
 			event_target:assassin_protege = {
 				character_event = { id = MNM.6258 } # convert
@@ -8993,109 +9046,17 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = {		
-		#Changes religion
-		if = {
-			limit = { 
-				independent = yes 
-				primary_title = { title = d_men_in_black } 
-				NOR = {  
-					religion = americanist
-					religion = jeffersonian
-					religion = hamiltonian
-					religion = libertarian
-				}
-			}
-			religion = americanist
-			abandon_heresy = yes
-		}
-
-		if = {
-			limit = {
-				NAND = {
-					independent = yes 
-					primary_title = { title = d_men_in_black }
-					OR = {
-						religion = americanist
-						religion = jeffersonian
-						religion = hamiltonian
-						religion = libertarian
-					}
-				}
-				NOR = { 
-					secret_religion = americanist 
-					secret_religion = jeffersonian
-					secret_religion = hamiltonian
-					secret_religion = libertarian
-				}
-			}
-			clear_secret_religion = yes
-			set_secret_religion = americanist
-			secret_religion_scope = {
-				parent_religion = {
-					ROOT = {
-						clear_secret_religion = yes
-						set_secret_religion = PREV
-					}
-				}
-			}
-		}
-
-		#Try and force them to lvl 3 of the assassins
-		if = {
-			limit = { NOT = { society_member_of = the_assassins } }
-			join_society = the_assassins
-		}
-		if = {
-			limit = {
-				society_rank = {
-					rank == 1
-					society = the_assassins
-				}
-			}
-			society_rank_up = {
-				rank = 2
-				society = the_assassins
-			}
-		}
-		if = {
-			limit = {
-				society_rank = {
-					rank == 2
-					society = the_assassins
-				}
-			}
-			society_rank_up = {
-				rank = 1
-				society = the_assassins
-			}
-		}
-
-		#Make every apropriate courtier member of society
-		if = {
-			limit = { 
-				primary_title = { title = d_men_in_black } 
-				OR = {
-					religion = americanist
-					religion = jeffersonian
-					religion = hamiltonian
-					religion = libertarian
-				}
-				is_heretic = no
-			}
-			any_realm_character = {
-				religion = americanist
-				abandon_heresy = yes
-				if = {
-					limit = {
-						is_adult = yes
-						prisoner = no
-						NOT = { trait = incapable }
-					}
-					join_society = the_assassins
-				}
-			}
-		}
+		character_event = miscATEWW.2
 	}
 }
 
 
+#MISSION: Donate Castle
+character_event = {
+	id = MNM_ATEWWW.100
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = { FROM = { society_quest_event = { id = MNM_ATEWWW.14 days = 7 random = 7 } } }
+}

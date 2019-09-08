@@ -11649,7 +11649,7 @@ character_event = {
 			remove_trait = clubfooted
 			character_event = { id = misc.3 }
 			character_event = { id = misc.4 } # Physique
-			give_random_female_libertarian_name = yes
+			give_ROOT_random_female_libertarian_name = yes
 			ROOT = {
 				any_demesne_title = { gain_title = PREVPREV }
 			}

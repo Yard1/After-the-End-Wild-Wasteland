@@ -9,3 +9,10 @@ on_host_change = {
 		miscATEWW.1
 	}
 }
+
+# ROOT = Builder, FROM = Title
+on_settlement_construction_completed = {
+	events = {
+		MNM_ATEWWW.150
+	}
+}

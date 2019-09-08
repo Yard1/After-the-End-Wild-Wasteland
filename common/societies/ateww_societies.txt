@@ -125,11 +125,7 @@ monastic_order_libertarian = {
     	
     	per_attribute = {
     		name = learning
-    		value = 0.45
-    	}
-    	per_attribute = {
-    		name = martial
-    		value = 0.05
+    		value = 0.5
     	}
 		has_trait = {
 			trait = zealous

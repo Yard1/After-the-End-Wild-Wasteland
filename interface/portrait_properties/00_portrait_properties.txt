@@ -3276,15 +3276,18 @@
 			factor = 0
 			OR = { 
 				NOT = { has_portrait_property = { layer = 3 index = 10 } } 
-				primary_title = { #Holy Orders in peace time should wear martial clothes, but not the helmet.
-					OR = {
-						title = d_knights_of_columbus
-                        title = d_libertarian
-						title = d_knights_of_peter_claver
-						title = d_st_ursulas_chosen
-						title = k_ursuline_state
-						title = d_lebanon_brethren
-						title = e_china_west_governor
+				AND = {
+					war = no
+					primary_title = { #Holy Orders in peace time should wear martial clothes, but not the helmet.
+						OR = {
+							title = d_knights_of_columbus
+							title = d_libertarian
+							title = d_knights_of_peter_claver
+							title = d_st_ursulas_chosen
+							title = k_ursuline_state
+							title = d_lebanon_brethren
+							title = e_china_west_governor
+						}
 					}
 				}
 			}
@@ -3557,13 +3560,18 @@
 			factor = 20000
 			OR = { 
 				government = order_government 
-				primary_title = { #Holy Orders in peace time should wear martial clothes, but not the helmet.
-					OR = {
-						title = d_knights_of_columbus
-						title = d_knights_of_peter_claver
-						title = d_st_ursulas_chosen
-						title = k_ursuline_state
-						title = d_lebanon_brethren
+				AND = {
+					war = no
+					primary_title = { #Holy Orders in peace time should wear martial clothes, but not the helmet.
+						OR = {
+							title = d_knights_of_columbus
+							title = d_libertarian
+							title = d_knights_of_peter_claver
+							title = d_st_ursulas_chosen
+							title = k_ursuline_state
+							title = d_lebanon_brethren
+							title = e_china_west_governor
+						}
 					}
 				}
 			}
