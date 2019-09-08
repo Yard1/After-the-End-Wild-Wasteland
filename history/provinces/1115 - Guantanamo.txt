@@ -10,7 +10,7 @@ b_boqueron_CUB = temple
 b_caimanera_CUB = city
 
 # Misc
-culture = southorn
+culture = afrocubano
 religion = jeffersonian
 
 2600.1.1={

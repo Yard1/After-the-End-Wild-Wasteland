@@ -2258,7 +2258,6 @@ oldworld = {
 		character_modifier = {
 			same_religion_opinion = 10 
 			levy_size = 0.10
-			martial = 2
 		}
 	}
 

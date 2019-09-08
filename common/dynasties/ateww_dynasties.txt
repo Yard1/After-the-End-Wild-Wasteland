@@ -20,3 +20,23 @@
     name = "Rios" 
 	culture = arixan
 }
+2029096 = { 
+    name = "Jet" 
+	culture = southron
+	coat_of_arms = {
+        religion = americanist
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 45
+            emblem = 0
+            color = 1
+            color = 2
+            color = 2
+        }
+    }
+}
+2029097 = { 
+    name = "Pearson" 
+	culture = southron
+}
