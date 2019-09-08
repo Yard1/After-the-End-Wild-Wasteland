@@ -123,7 +123,7 @@ select_patron_general;Emulate A General;;;;;;;;;;;x
 select_patron_general_desc;As a practitioner of Militarist faith I am able to choose one of ancient America's many ancient Generals to emulate. My choice shall be influenced by my existing personality.;;;;;;;;;;;;;x
 
 EVTNAME_general_of_army;The General Of The Army;;;;;;;;;;;;;x
-EVTDESC_general_of_army;Since the humiliating defeat and death of President Kelleher at the hands of the Deitsch the Militarist faithful have shunned the Post-Event Presidency, which in turn, earned them the ire of the Americanist faith. However, times have changed and now it is the "true" Americanists that find themselves outnumbered and outgunned, as from humble beginnings [Root.GetFullName] has not only managed to extend the reach of the Militarist faith but has also united a vast majority of the faithful under [Root.GetHerselfHimself] banner. Sensing an opportunity, [Root.GetFullName] has proclaimed [Root.GetHerselfHimself] the "General Of The Army" and has laid claim to all of America, from sea to shining sea...;;;;;;;;;;;;x
+EVTDESC_general_of_army;Since the humiliating defeat and death of President Kelleher at the hands of the Deitsch the Militarist faithful have shunned the Post-Event Presidency, which in turn, earned them the ire of the Americanist faith. However, times have changed and now it is the "true" Americanists that find themselves outnumbered and outgunned, as from humble beginnings [Root.GetFullName] has not only managed to extend the reach of the Militarist faith but has also united a vast majority of the faithful under [Root.GetHerselfHimself] banner. Sensing an opportunity, [Root.GetFullName] has proclaimed [Root.GetHerselfHimself] the "Supreme Allied Commander" and has laid claim to all of America, from sea to shining sea...;;;;;;;;;;;;x
 EVTOPTA_general_of_army;Pass the ammunition!;;;;;;;;;;;;;x
 EVTOPTB_general_of_army;Damned heathens!;;;;;;;;;;;;;x
 EVTOPTC_general_of_army;Interesting...;;;;;;;;;;;;;x
@@ -157,9 +157,9 @@ temple_empire_of_jeffersonian;National Hospital of;;;;;;;;;;;;;x
 temple_emperor_jeffersonian;Master Chief Hospital Corpsman;;;;;;;;;;;;;x
 temple_emperor_female_jeffersonian;Master Chief Hospital Corpswoman;;;;;;;;;;;;;x
 
-d_forscom;Army Forces Command;;;;;;;;;;;;;x
-d_forscom_adj;Command;;;;;;;;;;;;;x
-GENERAL_OF_ARMY;General Of The Army;;;;;;;;;;;;;x
+d_forscom;Supreme Allied Command;;;;;;;;;;;;;x
+d_forscom_adj;Supreme;;;;;;;;;;;;;x
+GENERAL_OF_ARMY;Supreme Allied Commander;;;;;;;;;;;;;x
 
 devote_of_macarthur;Devotee Of MacArthur;;;;;;;;;;;;;x
 devote_of_macarthur_desc;This character has chosen to become a devotee of General Douglas MacArthur - The Generalissimo;;;;;;;;;;;;;x
