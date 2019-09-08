@@ -160,6 +160,12 @@ temple_emperor_female_jeffersonian;Master Chief Hospital Corpswoman;;;;;;;;;;;;;
 d_forscom;Supreme Allied Command;;;;;;;;;;;;;x
 d_forscom_adj;Supreme;;;;;;;;;;;;;x
 GENERAL_OF_ARMY;Supreme Allied Commander;;;;;;;;;;;;;x
+GENERAL_OF_ARMY_FOA;Sir;;;;;;;;;;;;;x
+
+d_american_legion;American Legion;;;;;;;;;;;;;x
+d_american_legion_adj;Legionary;;;;;;;;;;;;;x
+LEGATE;Legate;;;;;;;;;;;;;x
+LEGATE_FOA;Sir;;;;;;;;;;;;;x
 
 devote_of_macarthur;Devotee Of MacArthur;;;;;;;;;;;;;x
 devote_of_macarthur_desc;This character has chosen to become a devotee of General Douglas MacArthur - The Generalissimo;;;;;;;;;;;;;x

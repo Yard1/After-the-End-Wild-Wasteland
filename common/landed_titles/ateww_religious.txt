@@ -39,7 +39,7 @@ d_forscom = {
 	
 	title = "GENERAL_OF_ARMY"
 	title_female = "GENERAL_OF_ARMY"
-	foa = "JUDGE_FOA"
+	foa = "GENERAL_OF_ARMY_FOA"
 	location_ruler_title = yes
 	
 	allow = { #only via special decision

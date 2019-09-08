@@ -1,0 +1,24 @@
+d_american_legion = {
+	color={ 50 50 255 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 1063 # Indianapolis
+	
+	title = "LEGATE"
+	title_female = "LEGATE"
+	foa = "LEGATE_FOA"
+	
+	culture = rostmann
+	religion = jeffersonian
+	
+	holy_order = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 3
+
+	mercenary_type = d_sun_knights_composition
+}
