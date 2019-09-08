@@ -331,11 +331,11 @@
 	2637.8.9 = { 
 	    add_spouse = 1861125
     }
-	2642.6.21 = {
-	    death = {
-			death_reason = death_childbirth
-		}
-	}
+#	2642.6.21 = {
+#	    death = {
+#			death_reason = death_childbirth
+#		}
+#	}
 }
 
 1861127 = {
