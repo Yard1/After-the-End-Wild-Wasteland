@@ -4490,6 +4490,7 @@ spawn_good_commander_effect = {
 				martial = 8
 			}
 		}
+	}
 	else = {
 		create_random_soldier = {
 			random_traits = yes

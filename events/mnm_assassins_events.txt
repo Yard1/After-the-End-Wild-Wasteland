@@ -9045,8 +9045,8 @@ character_event = {
 
 	is_triggered_only = yes
 
-	immediate = {		
-		character_event = miscATEWW.2
+	opinion = {		
+		character_event = { id = miscATEWW.2 }
 	}
 }
 
@@ -9058,5 +9058,5 @@ character_event = {
 
 	is_triggered_only = yes
 
-	immediate = { FROM = { society_quest_event = { id = MNM_ATEWWW.14 days = 7 random = 7 } } }
+	opinion = { FROM = { society_quest_event = { id = MNM_ATEWWW.14 days = 7 random = 7 } } }
 }

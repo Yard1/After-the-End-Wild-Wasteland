@@ -41,3 +41,11 @@ devotee_of_butler = {
 	local_movement_speed = 0.05
 	icon = 1
 }
+
+expelled_d_libertarian = {
+	icon = 35
+}
+
+expelled_d_american_legion = {
+	icon = 35
+}

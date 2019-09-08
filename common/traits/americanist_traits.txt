@@ -10,7 +10,7 @@ jefferson = {
 	stewardship = 2
 	church_opinion = -5
 	same_opinion = 10
-	global_tax_modifier = .2
+	global_tax_modifier = 0.2
 	random = no
 }
 lincoln = {
