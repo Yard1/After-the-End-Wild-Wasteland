@@ -1,8 +1,9 @@
 ### Lakotah
 
 1889026 = {
-	name = "Ned"
+	name = "Richard"
 	dynasty = 1889009 # Pitchstone
+	dna="acejgkecbar"
 	culture = mountainer
 	religion = americanist
 	diplomacy = 0
