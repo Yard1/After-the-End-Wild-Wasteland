@@ -813,6 +813,58 @@ character_event = {
 		}
 		if = {
 			limit = {
+				any_courtier = {
+					count = 4
+					ai = yes
+					prisoner = no
+					NOT = { trait = incapable }
+					is_adult = yes
+					is_in_society = no
+					controls_religion = no
+					block_general_event_trigger = no
+				}
+			}
+			any_courtier = {
+				limit = {
+					ai = yes
+					prisoner = no
+					NOT = { trait = incapable }
+					is_adult = yes
+					is_in_society = no
+					controls_religion = no
+					block_general_event_trigger = no
+				}
+				character_event = { id = MNM.10031 }
+			}
+		}
+		if = {
+			limit = {
+				any_courtier = {
+					count = 8
+					ai = yes
+					prisoner = no
+					NOT = { trait = incapable }
+					is_adult = yes
+					is_in_society = no
+					controls_religion = no
+					block_general_event_trigger = no
+				}
+			}
+			any_courtier = {
+				limit = {
+					ai = yes
+					prisoner = no
+					NOT = { trait = incapable }
+					is_adult = yes
+					is_in_society = no
+					controls_religion = no
+					block_general_event_trigger = no
+				}
+				character_event = { id = MNM.10031 }
+			}
+		}
+		if = {
+			limit = {
 				ai = yes
 				prisoner = no
 				NOT = { trait = incapable }

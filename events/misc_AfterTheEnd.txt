@@ -140,6 +140,7 @@ character_event = {
 	desc = "Change graphical culture"
 	is_triggered_only = yes
 	hide_window = yes
+	min_age = 16
 	
 	trigger = {
 		NOT = { has_character_flag = diversity }
@@ -11648,6 +11649,7 @@ character_event = {
 			remove_trait = clubfooted
 			character_event = { id = misc.3 }
 			character_event = { id = misc.4 } # Physique
+			give_random_female_libertarian_name = yes
 			ROOT = {
 				any_demesne_title = { gain_title = PREVPREV }
 			}

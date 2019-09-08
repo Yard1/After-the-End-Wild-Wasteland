@@ -2095,7 +2095,7 @@ oldworld = {
 		heresy_icon = 5
 		
 		male_names = {
-			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Theodore George John Thomas James Benjamin Andrew Franklin
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Theodore George John Thomas James Benjamin Andrew Franklin Abraham
 		}
 		female_names = {
 			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
@@ -2158,7 +2158,7 @@ oldworld = {
 		color = { 0.4 0.4 0.9 }
 
 		male_names = {
-			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Theodore George John Thomas James Benjamin Andrew Franklin
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Theodore George John Thomas James Benjamin Andrew Franklin Abraham
 		}
 		female_names = {
 			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
@@ -2215,7 +2215,7 @@ oldworld = {
 		color = { 0.2 0.2 0.7 }
 		
 		male_names = {
-			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Theodore George John Thomas James Andrew Ulysses Harry Richard Ronald Dwight Franklin
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Theodore George John Thomas James Andrew Ulysses Harry Richard Ronald Dwight Franklin Abraham
 		}
 		female_names = {
 			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
@@ -2281,7 +2281,7 @@ oldworld = {
 			Silvanus Hermes
 		}
 		female_names = {
-			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
+			Justice Columbia Libertas Liberalitas
 			Acantha Althea Anthea Ariadne Artemis Astra Athena Aurora Calypso Cassandra Ceres Clio Daphne Diana Fortuna Hera Hestia Ianthe Irene Iris Cora Leto Luna Melia Minerva Nike 
 			Pallas Pax Penelope Phyllis Rhea Selene Thalassa Venus Xanthe
 		}

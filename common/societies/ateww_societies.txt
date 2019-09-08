@@ -16,13 +16,6 @@ monastic_order_libertarian = {
 	indestructible = yes
 
 	can_join_society = {
-		OR = {
-			is_female = yes
-			has_game_rule = {
-				name = gender
-				value = all
-			}
-		}
 		hidden_trigger = {
 			NAND = {
 				ai = yes
@@ -80,7 +73,7 @@ monastic_order_libertarian = {
 	
 	society_rank = {
 		level = 2
-		limit = 20
+		limit = 60
 		startup_limit = 6
 		modifier = { 
 			monthly_character_piety = 0.1
@@ -323,7 +316,11 @@ monastic_order_libertarian = {
 		}
 		modifier = {
 			trait = arbitrary
-			factor = 0.6
+			factor = 0.2
+		}
+		modifier = {
+			is_female = no
+			factor = 0.05
 		}
 		modifier = {
 			higher_tier_than = DUKE
@@ -336,8 +333,8 @@ monastic_order_libertarian = {
 	    trigger = {
 			ai = yes
 		   	religion = libertarian
-			is_female = yes
 			age = 16
+			is_female = yes
 			is_in_society = no
 			NOT = { trait = cynical }
 			NOT = { trait = excommunicated }

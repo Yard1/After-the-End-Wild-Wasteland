@@ -131,19 +131,18 @@ libertarian_elective = {
 		}
 		additive_modifier = {
 			value = 200
+			is_female = yes
 			society_rank == 4
 		}
 		additive_modifier = {
 			value = 50
+			is_female = yes
 			society_rank == 3
 		}
 		additive_modifier = {
 			value = 20
+			is_female = yes
 			society_rank == 2
-		}
-		additive_modifier = {
-			value = 6
-			society_rank == 1
 		}
 	}
 	elector_vote_strength = {
