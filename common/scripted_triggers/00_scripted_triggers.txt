@@ -9355,6 +9355,7 @@ matriarchal_religion = {
 }
 
 equal_religion = {
+	NOT = { religion = jeffersonian }
 	OR = {
 		has_religion_feature = religion_equal
 		religion = angeline
