@@ -13768,6 +13768,12 @@ character_event = {
 		}
 		text = expel_libertarian
 	}
+	title = { # American Legion
+		trigger = {
+			has_character_flag = expel_american_legion_check
+		}
+		text = expel_american_legion
+	}
 	title = { # Sons of Kaleva
 		trigger = {
 			has_character_flag = expel_sons_kaleva_check
@@ -14294,6 +14300,37 @@ character_event = {
 				inherit = yes
 			}
 			clr_character_flag = expel_libertarian_check
+		}
+	
+	}
+	option = { # American Legion
+		trigger = {
+			has_character_flag = expel_american_legion
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_american_legion = {
+				holder_scope = {
+					character_event = {
+						id = NewHolyOrders.30
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_american_legion
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_american_legion_check
 		}
 	}
 	option = { # Sons of Kaleva
