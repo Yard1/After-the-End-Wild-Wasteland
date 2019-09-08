@@ -127,6 +127,8 @@ GOD_EISENHOWER;Eisenhower;;;;;;;;;;;;;x
 GOD_REAGAN;Reagan;;;;;;;;;;;;;x
 GOD_TRUMAN;Truman;;;;;;;;;;;;;x
 GOD_JACKSON;Jackson;;;;;;;;;;;;;x
+GOD_CHAIN_OF_COMMAND;Chain Of Command;;;;;;;;;;;;;x
+GOD_HIGH_COMMAND;High Command;;;;;;;;;;;;;x
 
 become_general_of_army;Restore the Supreme Allied Command;;;;;;;;;;;;;x
 become_general_of_army_desc;With some of the most important holy sites of the Militarist faith now under my direct control the time has come to bring order back to America by restoring the Supreme Allied Command;;;;;;;;;;;;;x
