@@ -50,9 +50,6 @@ monastic_order_libertarian = {
 
 	show_society = {
 		OR = {
-			religion = americanist
-			religion = hamiltonian
-			religion = jeffersonian
 			religion = libertarian
 			society_member_of = monastic_order_libertarian
 		}
