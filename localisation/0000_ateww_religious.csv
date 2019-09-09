@@ -211,10 +211,6 @@ TXT_custer;You shall devote yourself to emulating General §YCuster§!. This Decis
 TXT_lee;You shall devote yourself to emulating General §YLee§!. This Decision cannot be reversed.;;;;;;;;;;;;;x
 TXT_butler;You shall devote yourself to emulating General §YButler§!. This Decision cannot be reversed.;;;;;;;;;;;;;x
 
-# Bloodlines 
-barron;Barron Blood;;;;;;;;;;;;;x
-barron_desc;Hannibal Barron restored the Presidency a decade after its destruction by the Deitsch, he would go on to threaten the Holy Columbian Confederacy before being assassinated.;;;;;;;;;;;;;x 
-
 baron_hamiltonian;Sergeant;;;;;;;;;;;;;x
 baron_female_hamiltonian;Sergeant;;;;;;;;;;;;;x
 barony_of_hamiltonian;Municipality of;;;;;;;;;;;;;x
@@ -265,3 +261,9 @@ kingdom_of_libertarian;Commonwealth of;;;;;;;;;;;;;x
 kingdom_libertarian;Commonwealth;;;;;;;;;;;;;x
 emperor_libertarian;Commander-in-Chief;;;;;;;;;;;;;x
 emperor_female_libertarian;Commander-in-Chief;;;;;;;;;;;;;x
+
+# Americanists
+d_enclave;Enclave;;;;;;;;;;;;;x
+d_enclave_adj;Enclave;;;;;;;;;;;;;x
+COMMANDER;Commander;;;;;;;;;;;;;x
+COMMANDER_FOA;Sir;;;;;;;;;;;;;x

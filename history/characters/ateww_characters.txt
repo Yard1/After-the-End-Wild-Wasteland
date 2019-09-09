@@ -271,6 +271,29 @@
 	}
 }
 
+1967127 = {
+	name="Augustus"
+	dynasty = 2029098 # Autumn
+	culture = bayfolk
+	religion = americanist
+	martial = 5
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 7
+	learning = 8
+	trait = skilled_tactician
+	trait = ambitious
+	trait = zealous
+	trait = trusting
+	trait = cruel
+	trait = proud
+	trait = brave
+	trait = shrewd
+	2611.4.6 = {
+	    birth = yes
+	}
+}
+
 ### Deep South 
 
 1861100 = {

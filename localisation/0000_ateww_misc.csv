@@ -1,4 +1,6 @@
 #CODE;ENGLISH;FRENCH;GERMAN;SPANISH;;;;;;;;;x
+
+#Nicknames
 nick_the_nostalgia_critic;The Critic;;;;;;;;;x
 
 RETTYPE_CUL_WEL;Marchogluoedd;;;;;;;;;;;;;x
@@ -8,5 +10,16 @@ ca_culture_welsh_3;Marchogluoedd Training Grounds;;;;;;;;;;;;;x
 ca_culture_welsh_4;Marchogluoedd Training Grounds;;;;;;;;;;;;;x
 ca_culture_welsh_1_desc;The Marchogluoedd horse archers of Patagonia are trained here alongside their dismounted Iwmyn compatriots.;;;;;;;;;;;;;x
 
+# Retinues
+RETTYPE_CUL_WEL;Ceidwadorpamp ;;;;;;;;;;;;;x
+ca_culture_welsh_1;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
+ca_culture_welsh_2;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
+ca_culture_welsh_3;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
+ca_culture_welsh_4;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
+ca_culture_welsh_1_desc;The Ceidwadorpamp of Puerto Madryn are trained here alongside their dismounted Iwmyn compatriots.;;;;;;;;;;;;;x
+
+# Bloodlines 
+barron;Barron Blood;;;;;;;;;;;;;x
+barron_desc;Hannibal Barron restored the Presidency a decade after its destruction by the Deitsch, he would go on to threaten the Holy Columbian Confederacy before being assassinated.;;;;;;;;;;;;;x 
 trump;Trump Blood;;;;;;;;;;;;;x
 trump_desc;Harking back to a prominent pre-Event business family, the Trump dynasty has always been present in New York.;;;;;;;;;;;;;x
