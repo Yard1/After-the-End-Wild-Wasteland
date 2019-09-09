@@ -1110,7 +1110,7 @@ libertarian_elective = {
 				num_of_holy_sites = 3
 			}
 			FROM = { 
-				trait = brawny
+				trait = robust
 			}
 		}
 		additive_modifier = {
@@ -1121,7 +1121,7 @@ libertarian_elective = {
 				NOT = { num_of_holy_sites = 3 }
 			}
 			FROM = { 
-				trait = brawny
+				trait = robust
 			}
 		}
 
@@ -1996,20 +1996,20 @@ libertarian_elective = {
 				trait = giant
 			}
 		}
-
+########################  Raw Opinion bonus towards Candidate   ##########################
 		additive_modifier = {
-			value = -50
-			NOR = { trait = just trait = zealous }
+			value = -150
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
-			NOT = { character = FROM } #But not if it's me.
+			NOR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
 			is_rival = FROM
 		}
 		additive_modifier = {
-			value = -30
+			value = -100
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			NOT = {
 				opinion = {
 					who = FROM
@@ -2018,11 +2018,11 @@ libertarian_elective = {
 			}
 		}
 		additive_modifier = {
-			value = -15
+			value = -50
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			NOT = {
 				opinion = {
 					who = FROM
@@ -2035,11 +2035,11 @@ libertarian_elective = {
 			}
 		}
 		additive_modifier = {
-			value = -10
+			value = -30
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			NOT = {
 				opinion = {
 					who = FROM
@@ -2052,11 +2052,11 @@ libertarian_elective = {
 			}
 		}
 		additive_modifier = {
-			value = -5
+			value = -15
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			NOT = {
 				opinion = {
 					who = FROM
@@ -2069,11 +2069,11 @@ libertarian_elective = {
 			}
 		}
 		additive_modifier = {
-			value = 5
+			value = 15
 			localisation_key = tooltip_feudal_elector_vote_opinion_positive
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			opinion = {
 				who = FROM
 				value = 0
@@ -2086,11 +2086,11 @@ libertarian_elective = {
 			}
 		}
 		additive_modifier = {
-			value = 10
+			value = 30
 			localisation_key = tooltip_feudal_elector_vote_opinion_positive
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			opinion = {
 				who = FROM
 				value = 25
@@ -2103,11 +2103,11 @@ libertarian_elective = {
 			}
 		}
 		additive_modifier = {
-			value = 15
+			value = 50
 			localisation_key = tooltip_feudal_elector_vote_opinion_positive
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			opinion = {
 				who = FROM
 				value = 50
@@ -2120,11 +2120,145 @@ libertarian_elective = {
 			}
 		}
 		additive_modifier = {
-			value = 25
+			value = 70
 			localisation_key = tooltip_feudal_elector_vote_opinion_positive
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			opinion = {
+				who = FROM
+				value = 75
+			}
+		}
+
+		additive_modifier = {
+			value = -75
+			localisation_key = tooltip_feudal_elector_vote_opinion_negative
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			is_rival = FROM
+		}
+		additive_modifier = {
+			value = -50
+			localisation_key = tooltip_feudal_elector_vote_opinion_negative
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			NOT = {
+				opinion = {
+					who = FROM
+					value = -75 
+				}
+			}
+		}
+		additive_modifier = {
+			value = -25
+			localisation_key = tooltip_feudal_elector_vote_opinion_negative
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			NOT = {
+				opinion = {
+					who = FROM
+					value = -50  
+				}
+			}
+			opinion = {
+				who = FROM
+				value = -75 
+			}
+		}
+		additive_modifier = {
+			value = -15
+			localisation_key = tooltip_feudal_elector_vote_opinion_negative
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			NOT = {
+				opinion = {
+					who = FROM
+					value = -25
+				}
+			}
+			opinion = {
+				who = FROM
+				value = -50
+			}
+		}
+		additive_modifier = {
+			value = -7.5
+			localisation_key = tooltip_feudal_elector_vote_opinion_negative
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			NOT = {
+				opinion = {
+					who = FROM
+					value = 0
+				}
+			}
+			opinion = {
+				who = FROM
+				value = -25 
+			}
+		}
+		additive_modifier = {
+			value = 7.5
+			localisation_key = tooltip_feudal_elector_vote_opinion_positive
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			opinion = {
+				who = FROM
+				value = 0
+			}
+			NOT = {
+				opinion = {
+					who = FROM
+					value = 25
+				}
+			}
+		}
+		additive_modifier = {
+			value = 15
+			localisation_key = tooltip_feudal_elector_vote_opinion_positive
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			opinion = {
+				who = FROM
+				value = 25
+			}
+			NOT = {
+				opinion = {
+					who = FROM
+					value = 50
+				}
+			}
+		}
+		additive_modifier = {
+			value = 25
+			localisation_key = tooltip_feudal_elector_vote_opinion_positive
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			opinion = {
+				who = FROM
+				value = 50
+			}
+			NOT = {
+				opinion = {
+					who = FROM
+					value = 75 
+				}
+			}
+		}
+		additive_modifier = {
+			value = 35
+			localisation_key = tooltip_feudal_elector_vote_opinion_positive
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			opinion = {
 				who = FROM
 				value = 75
@@ -3026,7 +3160,7 @@ mib_elective = {
 			localisation_key = tooltip_feudal_elector_vote_strong
 			NOT = { character = FROM } 
 			FROM = { 
-				trait = brawny
+				trait = robust
 			}
 		}
 
@@ -3545,19 +3679,20 @@ mib_elective = {
 			}
 		}
 
+########################  Raw Opinion bonus towards Candidate   ##########################
 		additive_modifier = {
-			value = -50
-			NOR = { trait = just trait = zealous }
+			value = -150
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
-			NOT = { character = FROM } #But not if it's me.
+			NOR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
 			is_rival = FROM
 		}
 		additive_modifier = {
-			value = -30
+			value = -100
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			NOT = {
 				opinion = {
 					who = FROM
@@ -3566,11 +3701,11 @@ mib_elective = {
 			}
 		}
 		additive_modifier = {
-			value = -15
+			value = -50
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			NOT = {
 				opinion = {
 					who = FROM
@@ -3583,11 +3718,11 @@ mib_elective = {
 			}
 		}
 		additive_modifier = {
-			value = -10
+			value = -30
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			NOT = {
 				opinion = {
 					who = FROM
@@ -3600,11 +3735,11 @@ mib_elective = {
 			}
 		}
 		additive_modifier = {
-			value = -5
+			value = -15
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			NOT = {
 				opinion = {
 					who = FROM
@@ -3617,11 +3752,11 @@ mib_elective = {
 			}
 		}
 		additive_modifier = {
-			value = 5
+			value = 15
 			localisation_key = tooltip_feudal_elector_vote_opinion_positive
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			opinion = {
 				who = FROM
 				value = 0
@@ -3634,11 +3769,11 @@ mib_elective = {
 			}
 		}
 		additive_modifier = {
-			value = 10
+			value = 30
 			localisation_key = tooltip_feudal_elector_vote_opinion_positive
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			opinion = {
 				who = FROM
 				value = 25
@@ -3651,11 +3786,11 @@ mib_elective = {
 			}
 		}
 		additive_modifier = {
-			value = 15
+			value = 50
 			localisation_key = tooltip_feudal_elector_vote_opinion_positive
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			opinion = {
 				who = FROM
 				value = 50
@@ -3668,11 +3803,145 @@ mib_elective = {
 			}
 		}
 		additive_modifier = {
-			value = 25
+			value = 70
 			localisation_key = tooltip_feudal_elector_vote_opinion_positive
 			NOR = { trait = just trait = zealous }
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			opinion = {
+				who = FROM
+				value = 75
+			}
+		}
+
+		additive_modifier = {
+			value = -75
+			localisation_key = tooltip_feudal_elector_vote_opinion_negative
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			is_rival = FROM
+		}
+		additive_modifier = {
+			value = -50
+			localisation_key = tooltip_feudal_elector_vote_opinion_negative
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			NOT = {
+				opinion = {
+					who = FROM
+					value = -75 
+				}
+			}
+		}
+		additive_modifier = {
+			value = -25
+			localisation_key = tooltip_feudal_elector_vote_opinion_negative
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			NOT = {
+				opinion = {
+					who = FROM
+					value = -50  
+				}
+			}
+			opinion = {
+				who = FROM
+				value = -75 
+			}
+		}
+		additive_modifier = {
+			value = -15
+			localisation_key = tooltip_feudal_elector_vote_opinion_negative
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			NOT = {
+				opinion = {
+					who = FROM
+					value = -25
+				}
+			}
+			opinion = {
+				who = FROM
+				value = -50
+			}
+		}
+		additive_modifier = {
+			value = -7.5
+			localisation_key = tooltip_feudal_elector_vote_opinion_negative
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			NOT = {
+				opinion = {
+					who = FROM
+					value = 0
+				}
+			}
+			opinion = {
+				who = FROM
+				value = -25 
+			}
+		}
+		additive_modifier = {
+			value = 7.5
+			localisation_key = tooltip_feudal_elector_vote_opinion_positive
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			opinion = {
+				who = FROM
+				value = 0
+			}
+			NOT = {
+				opinion = {
+					who = FROM
+					value = 25
+				}
+			}
+		}
+		additive_modifier = {
+			value = 15
+			localisation_key = tooltip_feudal_elector_vote_opinion_positive
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			opinion = {
+				who = FROM
+				value = 25
+			}
+			NOT = {
+				opinion = {
+					who = FROM
+					value = 50
+				}
+			}
+		}
+		additive_modifier = {
+			value = 25
+			localisation_key = tooltip_feudal_elector_vote_opinion_positive
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
+			opinion = {
+				who = FROM
+				value = 50
+			}
+			NOT = {
+				opinion = {
+					who = FROM
+					value = 75 
+				}
+			}
+		}
+		additive_modifier = {
+			value = 35
+			localisation_key = tooltip_feudal_elector_vote_opinion_positive
+			OR = { trait = just trait = zealous }
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			opinion = {
 				who = FROM
 				value = 75

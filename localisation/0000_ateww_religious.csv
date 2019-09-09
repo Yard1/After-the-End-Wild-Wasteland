@@ -51,6 +51,9 @@ EVTOPTC_MNM_4610_money;Start planning the theft of §YOld World Money§!!;;;;;;;;;
 succ_libertarian_elective;Appointment;;;;;;;;;;;;;x
 libertarian_elective;Appointment;;;;;;;;;;;;;x
 
+succ_mib_elective;Appointment;;;;;;;;;;;;;x
+mib_elective;Appointment;;;;;;;;;;;;;x
+
 # Hamiltonians/Madisonians
 
 hamiltonian;Madisonian;;;;;;;;;;;;;x

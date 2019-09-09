@@ -171,6 +171,14 @@ character_event = {
 		}
 		if = {
 			limit = { has_landed_title = d_men_in_black }
+			primary_title = {
+				if = {
+					limit = {
+						NOT = { has_law = succ_mib_elective }
+					}
+					add_law = succ_mib_elective
+				}
+			}
 			if = {
 				limit = { 
 					independent = yes 

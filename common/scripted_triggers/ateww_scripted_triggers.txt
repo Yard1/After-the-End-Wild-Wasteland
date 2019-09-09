@@ -106,3 +106,7 @@ true_religion_americanist_or_heresy_trigger = {
 		true_religion = libertarian
 	}
 }
+
+is_landless = {
+	is_landed = no
+}

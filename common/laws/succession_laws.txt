@@ -1404,6 +1404,7 @@ succession_laws = {
 			NOR = {
 				title = k_papal_state
 				title = d_libertarian
+				title = d_men_in_black
 				title = k_ursuline
 				title = d_quorum_of_the_twelve
 				title = d_celtic_pagan_reformed

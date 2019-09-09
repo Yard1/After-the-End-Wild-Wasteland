@@ -2,11 +2,27 @@ succession_laws = {
     succ_libertarian_elective = {
 		potential = {
 			title = d_libertarian
+			higher_tier_than = COUNT
 		}
 		effect = {
 			succession = {
 				base_type = feudal_elective
 				voting_rules = libertarian_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+    succ_mib_elective = {
+		potential = {
+			title = d_men_in_black
+			higher_tier_than = COUNT
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = mib_elective
 			}
 		}
 		revoke_allowed = {
