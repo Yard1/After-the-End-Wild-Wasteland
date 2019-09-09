@@ -238,3 +238,6 @@ b_avondale = {
 b_lebaron = {
     culture = arixan
 }
+b_walker = {
+    culture = gothamite
+}

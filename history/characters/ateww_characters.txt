@@ -247,6 +247,31 @@
 	}
 }
 
+1967126 = {
+	name="Doug"
+	dynasty = 2029099 # Walker
+	dna = "afdgfqicabd"
+	culture = gothamite
+	religion = rust_cultist
+	give_nickname = nick_the_nostalgia_critic 
+	martial = 7
+	diplomacy = 8
+	stewardship = 6
+	intrigue = 6
+	learning = 5
+	trait = charismatic_negotiator
+	trait = trusting
+	trait = ambitious
+	trait = scholar
+	trait = greedy
+	trait = proud
+	trait = craven
+	trait = arbitrary
+	2629.11.17 = {
+	    birth = yes
+	}
+}
+
 ### Deep South 
 
 1861100 = {

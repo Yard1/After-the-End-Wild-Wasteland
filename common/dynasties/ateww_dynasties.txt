@@ -40,3 +40,7 @@
     name = "Pearson" 
 	culture = southron
 }
+2029099 = { 
+    name = "Walker" 
+	culture = gothamite
+}
