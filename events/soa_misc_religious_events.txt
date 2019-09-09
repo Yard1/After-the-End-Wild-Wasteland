@@ -1372,6 +1372,7 @@ character_event = {
 			religion = jeffersonian
 			religion = libertarian
 		}
+		is_priest = yes
 		NOR = {
 			intrigue = 3
 			diplomacy = 3
