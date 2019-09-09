@@ -127,7 +127,7 @@ GOD_EISENHOWER;Eisenhower;;;;;;;;;;;;;x
 GOD_REAGAN;Reagan;;;;;;;;;;;;;x
 GOD_TRUMAN;Truman;;;;;;;;;;;;;x
 GOD_JACKSON;Jackson;;;;;;;;;;;;;x
-GOD_CHAIN_OF_COMMAND;Chain Of Command;;;;;;;;;;;;;x
+GOD_CHAIN_OF_COMMAND;The Chain Of Command;;;;;;;;;;;;;x
 GOD_HIGH_COMMAND;High Command;;;;;;;;;;;;;x
 
 become_general_of_army;Restore the Supreme Allied Command;;;;;;;;;;;;;x
@@ -140,7 +140,7 @@ EVTDESC_general_of_army;Since the humiliating defeat and death of President Kell
 EVTOPTA_general_of_army;Pass the ammunition!;;;;;;;;;;;;;x
 EVTOPTB_general_of_army;Damned heathens!;;;;;;;;;;;;;x
 EVTOPTC_general_of_army;Interesting...;;;;;;;;;;;;;x
-EVTOPTD_general_of_army;Here comes the General!;;;;;;;;;;;;;x
+EVTOPTD_general_of_army;Here comes the Commander!;;;;;;;;;;;;;x
 
 EVTDESC_ATE_WWW_RELIGION_1;The time has come for me to find an Ancient American General to emulate, now which one of them am I most akin to?;;;;;;;;;;;;;x
 EVOTPA_ATE_WWW_RELIGION_1;MacArthur, The Generalissimo;;;;;;;;;;;;;x
