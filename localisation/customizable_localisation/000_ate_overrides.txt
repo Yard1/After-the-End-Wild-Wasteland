@@ -5042,18 +5042,17 @@ defined_text = { #for coronation events
 	}
 	text = {
 		trigger = {
-			religion = mormon
+			religion = libertarian
 		}
-		localisation_key = PRESIDENT
+		localisation_key = FIRST_LADY
 	}
 	text = {
 		trigger = {
-			NOR = {
-				religion = catholic
-				religion = ursuline
-				religion = mormon
-			}
+			religion = hamiltonian
 		}
+		localisation_key = CHIEF_JUSTICE
+	}
+	fallback_text = {
 		localisation_key = PRESIDENT #fallback
 	}
 }

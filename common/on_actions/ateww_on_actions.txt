@@ -16,3 +16,9 @@ on_settlement_construction_completed = {
 		MNM_ATEWWW.150
 	}
 }
+
+on_death = {
+	events = {
+		miscATEWW.4
+	}
+}

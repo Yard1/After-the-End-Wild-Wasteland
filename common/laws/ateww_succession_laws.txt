@@ -2,7 +2,6 @@ succession_laws = {
     succ_libertarian_elective = {
 		potential = {
 			title = d_libertarian
-			higher_tier_than = COUNT
 		}
 		effect = {
 			succession = {
@@ -17,7 +16,6 @@ succession_laws = {
     succ_mib_elective = {
 		potential = {
 			title = d_men_in_black
-			higher_tier_than = COUNT
 		}
 		effect = {
 			succession = {
@@ -28,5 +26,62 @@ succession_laws = {
 		revoke_allowed = {
 			always = no
 		}			
+	}
+    succ_brethren_elective = {
+		oldest_child_opinion = -5
+		child_opinion = -5
+		dynasty_opinion = -5
+		vassal_opinion = 10
+		potential = {
+			higher_tier_than = BARON
+			holder_scope = {
+				religion_group = pirate
+				is_republic = no
+				is_merchant_republic = no
+				is_nomadic = no
+			}
+			OR = {
+				holder_scope = { # Viceroyalties can always have turkish succession if muslim
+					any_demesne_title = {
+						is_vice_royalty = yes
+					}
+				}
+				AND = {
+					OR = {
+						is_landless_type_title = no
+						is_tribal_type_title = yes
+						temporary = yes
+					}
+					holder_scope = {
+						OR = {
+							independent = yes
+							NOT = {
+								any_liege = {
+									holy_order = yes
+								}
+							}
+						}
+					}
+					is_primary_type_title = no
+				}
+			}
+			NAND = { 
+				has_law = succession_voting_power_1
+				OR = { 
+					has_law = succ_feudal_elective 
+					has_law = succ_hre_elective
+				}
+			}
+			NOT = { holder_scope = { government = confucian_bureaucracy } }
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = brethren_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
 	}
 }

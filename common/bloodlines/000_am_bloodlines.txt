@@ -1,0 +1,403 @@
+#Historical Bloodlines
+yudkow = { #Emperors of California
+	combat_rating = 5
+	cetic_opinion = 5
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.2
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_cetic #tbd
+	flags = { historical_bloodline bloodline_heroes }
+}
+
+soady = { #Vikings
+	combat_rating = 8
+	norse_pagan_opinion = 5
+	norse_pagan_reformed_opinion = 5
+	viking_opinion = 5
+	pirate_opinion = 5
+	ravager_opinion = 5
+	seaking_opinion = 5
+	sea_queen_opinion = 5
+	bloodline_effect_always_viking = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_norse
+	flags = { historical_bloodline bloodline_viking bloodline_historical_norse }
+}
+
+renovator = { #Renovator
+	combat_rating = 5
+	falling_star_opinion = 5
+	strategist_opinion = 5
+	monthly_character_prestige = 0.1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_horse
+	flags = { historical_bloodline }
+	active = {
+		religion = falling_star
+	}
+}
+
+iturbide = { #Mexican Emperors
+	mexicano_opinion = 5
+	monthly_character_prestige = 0.1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_placeholder_symbol_2
+	flags = { historical_bloodline pre_event_bloodline cheap_reconquista }
+}
+
+mcmahon = { #McMahon
+	combat_rating = 10
+	yankee_opinion = 5
+	occultist_opinion = 5
+	occultist_reformed_opinion = 5
+	command_modifier = {
+		morale_defence = 0.05
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_generic_pagan #come up with Occultist picture?
+	flags = { historical_bloodline }
+}
+
+castel = { #Queen of Quebec
+	combat_rating = 5
+	ursuline_opinion = 10
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_fleur_de_lis_gold
+	flags = { historical_bloodline }
+}
+
+royall = { #HCC First Emperors
+	combat_rating = 8
+	evangelical_opinion = 5
+	monthly_character_prestige = 0.2
+	bloodline_effect_great_heroes_appear = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_lion
+	flags = { historical_bloodline bloodline_heroes hcc_bloodline }
+	active = {
+		religion = evangelical
+	}
+}
+
+venable = { #Former dominant HCC family
+	combat_rating = 5
+	monthly_character_prestige = 0.2
+	southron_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_placeholder_symbol
+	flags = { historical_bloodline }
+}
+
+littlepage = { #Current HCC Emperors
+	southron_opinion = 5
+	evangelical_opinion = 5
+	monthly_character_prestige = 0.1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_lion
+	flags = { historical_bloodline }
+}
+
+bustamante = { #Caribbean Empress
+	rastafarian_opinion = 5
+	west_indian_opinion = 5
+	monthly_character_prestige = 0.1
+	bloodline_effect_cognatic = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_horse
+	flags = { historical_bloodline pre_event_bloodline }
+	active = {
+		religion_group = afro_syncretic
+	}
+}
+
+sulley = { #Miskito Kings
+	miskito_opinion = 5
+	falling_star_opinion = 5
+	monthly_character_prestige = 0.1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_placeholder_symbol_2
+	flags = { historical_bloodline pre_event_bloodline }
+}
+
+rodham = { #Rodhams
+	combat_rating = 10
+	occultist_opinion = -15
+	monthly_character_prestige = 0.25
+	sex_appeal_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_placeholder_symbol_2
+	flags = { presidential_bloodline historical_bloodline pre_event_bloodline }
+}
+
+rothschild = { #Rothschild family
+	yiddish_opinion = 5
+	jewish_group_opinion = 5
+	monthly_character_prestige = 0.1
+	stewardship = 2
+	inheritance = patrilineal
+	ai_greed = 75
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_jewish
+	flags = { historical_bloodline }
+}
+
+gutfreund = { #Levi the Liberator
+	yiddish_opinion = 5
+	jewish_group_opinion = 5
+	combat_rating = 5
+	martial = 2
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_jewish
+	flags = { historical_bloodline bloodline_heroes }
+}
+
+tlgunghung = { #Kings of BC
+	haida_opinion = 5
+	raven_tales_opinion = 5
+	raven_tales_reformed_opinion = 5
+	combat_rating = 10
+	martial = 3
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_placeholder_symbol_2
+	flags = { historical_bloodline }
+}
+
+freeland = { #Gaian lords
+	north_pacific_opinion = 5
+	gaian_opinion = 10
+	combat_rating = 5
+	martial = 2
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_cetic
+	flags = { historical_bloodline }
+	active = {
+		culture = portlander
+		religion = gaian
+	}
+}
+
+##Earned Bloodlines
+
+usa_emperor_male = {
+	monthly_character_prestige = 0.25
+	christian_opinion = 5
+	oldworld_opinion = 5
+	pagan_group_opinion = 5
+	jewish_group_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	flags = { created_bloodline }
+	picture = GFX_bloodlines_symbol_roman #placeholder
+	active = {
+		OR = {
+			religion_group = christian
+			religion_group = oldworld
+			religion_group = pagan_group
+			religion_group = jewish_group
+		}
+	}
+}
+
+usa_emperor_female = {
+	monthly_character_prestige = 0.25
+	christian_opinion = 5
+	oldworld_opinion = 5
+	pagan_group_opinion = 5
+	jewish_group_opinion = 5
+	inheritance = matrilineal
+	allow_bastards = yes
+	flags = { created_bloodline }
+	picture = GFX_bloodlines_symbol_roman #placeholder
+	active = {
+		OR = {
+			religion_group = christian
+			religion_group = oldworld
+			religion_group = pagan_group
+			religion_group = jewish_group
+		}
+	}
+}
+
+#earned by a male celtic ruler who successfully gains e_artica
+pendragon = {
+	combat_rating = 5
+	celtic_pagan_opinion = 5
+	celtic_pagan_reformed_opinion = 5
+	light_infantry_morale = 0.05
+	monthly_character_prestige = 0.1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_bull
+	flags = { created_bloodline bloodline_celtic }
+	active = {
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
+	}
+}
+
+#earned by recreator of Gran Colombia
+libertador_male = {
+	monthly_character_piety = 1
+	church_opinion = 10
+	cult_of_saints_opinion = 5
+	command_modifier = {
+		religious_enemy = 0.3
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_virgin
+	flags = { created_bloodline }
+	active = {
+		religion = gracia_divina
+	}
+}
+
+libertador_female = {
+	monthly_character_piety = 1
+	church_opinion = 10
+	cult_of_saints_opinion = 5
+	command_modifier = {
+		religious_enemy = 0.3
+	}
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_virgin
+	flags = { created_bloodline }
+	active = {
+		religion = gracia_divina
+	}
+}
+
+#Destroyer of HCC
+tecumseh = {
+	monthly_character_prestige = 0.2
+	north_atlantic_opinion = 5
+	laurentian_opinion = 5
+	amerodeutsch_opinion = 5
+	south_anglo_opinion = -5
+	bloodline_effect_castration = 1
+	bloodline_effect_blinding = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_cross_crusader_wicked
+	flags = { bloodline_blinding bloodline_castration created_bloodline }
+	active = {
+		NOT = { culture_group = south_anglo }
+	}
+}
+
+#Creator of New France
+new_france_emperor_male = {
+	monthly_character_prestige = 0.25
+	gallomerican_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	flags = { created_bloodline }
+	picture = GFX_bloodlines_symbol_fleur_de_lis
+	active = {
+		culture_group = gallomerican
+	}
+}
+
+new_france_emperor_female = {
+	monthly_character_prestige = 0.25
+	gallomerican_opinion = 5
+	inheritance = matrilineal
+	allow_bastards = yes
+	flags = { created_bloodline }
+	picture = GFX_bloodlines_symbol_fleur_de_lis
+	active = {
+		culture_group = gallomerican
+	}
+}
+
+##Vanilla Replacements##
+destroyer_of_maritimes = {
+	monthly_character_prestige = 0.2
+	gallomerican_opinion = 5
+	subarctic_opinion = 5
+	anishinaabe_opinion = 5
+	north_atlantic_opinion = -5
+	laurentian_opinion = -5
+	#bloodline_effect_castration = 1
+	#bloodline_effect_blinding = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_cross_crusader_wicked
+	flags = { bloodline_
+	blinding bloodline_castration created_bloodline crusader_bloodline }
+}
+
+lacustrine_crusade_bloodline = {
+	monthly_character_prestige = 0.2
+	command_modifier = {
+		religious_enemy = 0.1
+	}
+	bloodline_effect_teutonic_vassals = 1
+	bloodline_effect_teutonic_guards = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_fleur_de_lis_gold
+	active = {
+		religion_group = christian
+		is_heretic = no
+	}
+	flags = { northern_crusade_bloodline created_bloodline crusader_bloodline }
+}
+
+lord_of_zion = {
+	monthly_character_prestige = 0.3
+	combat_rating = 10
+	command_modifier = {
+		religious_enemy = 0.2
+	}
+	mormon = 5
+	bloodline_effect_inquisitional = 1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_cross_crusader
+	active = {
+		religion_same_as_bloodline_founder_trigger = yes
+#		custom_tooltip = {
+#			text = saintly_bloodline_same_religion_TT
+#			FROM = {
+#				founder = {
+#					religion = ROOT
+#				}
+#			}
+#		}
+	}
+	flags = { inquisitional_bloodline created_bloodline crusader_bloodline }
+}
+
+macarthur_bloodline_01 = {
+	picture = GFX_bloodlines_symbol_longship #placeholder
+	inheritance = patrilineal
+	allow_bastards = yes
+	americanist_opinion = 5
+	hamiltonian_opinion = 5
+	jeffersonian_opinion = 5
+	libertarian_opinion = 5
+	levy_reinforce_rate = 0.15
+	combat_rating = 10
+	monthly_character_prestige = 0.2
+	bloodline_effect_one_invasion = 1
+	flags = { created_bloodline bloodline_ambition bloodline_great_conquerors bloodline_alexander }
+}

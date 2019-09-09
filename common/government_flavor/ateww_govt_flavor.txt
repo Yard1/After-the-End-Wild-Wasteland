@@ -1,0 +1,8 @@
+government_flavor = {
+	name = gov_supreme_court
+	graphics = GFX_evt_capitol_building
+	priority = 4
+	trigger = {
+		has_landed_title = d_supreme_court
+	}
+}

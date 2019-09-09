@@ -910,6 +910,11 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		character_modifier = {
+			vassal_opinion = 10
+			rel_head_opinion = 10
+		}
 	}
 	
 	batenburger = {
@@ -954,6 +959,9 @@ christian = {
 		intermarry = nonconformist
 		#intermarry = batenburger
 		intermarry = moravian
+		character_modifier = {
+
+		}
 	}
 
 	evangelical = {
@@ -2073,7 +2081,7 @@ oldworld = {
 	playable = yes
 	hostile_within_group = yes
 	
-	ai_convert_same_group = 2
+	ai_convert_same_group = 1
 	ai_convert_other_group = 2
 	
 	color = { 0.1 0.7 0.1 }
@@ -2261,6 +2269,7 @@ oldworld = {
 		graphical_culture = muslimgfx
 		
 		pacifist = yes # Makes the AI less likely to start wars, plots and factions
+		aggression = 0.75
 		parent = americanist
 		
 		icon = 4
@@ -2321,9 +2330,17 @@ oldworld = {
 		
 		religious_clothing_head = 11
 		religious_clothing_priest = 11
+
+		character_modifier = {
+			vassal_opinion = 10
+			rel_head_opinion = 10
+		}
 	}
 
 	consumerist = {
+		ai_convert_same_group = 2
+		ai_convert_other_group = 2
+
 		graphical_culture = muslimgfx
 		
 		icon = 17
@@ -2381,12 +2398,14 @@ oldworld = {
 	}
 	
 	monetarist = { #...
+		ai_convert_same_group = 2
+		ai_convert_other_group = 2
 		graphical_culture = muslimgfx
 		
 		icon = 17
 		heresy_icon = 18
 		
-		color = { 0.05 0.5 0.05 }
+		color = { 0.1 0.4 0.1 }
 		
 		interface_skin = { consumerist_interface }
 		

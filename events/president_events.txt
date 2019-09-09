@@ -421,6 +421,17 @@ letter_event = {
 		}
 		ai_chance = {
 			factor = 1
+			#Presidential bloodline.
+			additive_modifier = { 
+				value = 15
+				localisation_key = tooltip_feudal_elector_vote
+				NOT = { character = event_target:c1 }
+				event_target:c1 = {
+					any_owned_bloodline = {
+						has_bloodline_flag = presidential_bloodline
+					}
+				}
+			}
 			#########################   Elector voting himself   ##########################
 			#Not much has changed, except for incorporating the Become President ambition into it.
 			additive_modifier = {
@@ -2596,6 +2607,16 @@ letter_event = {
 		}
 		ai_chance = {
             factor = 1
+			additive_modifier = { 
+				value = 15
+				localisation_key = tooltip_feudal_elector_vote
+				NOT = { character = event_target:c2 }
+				event_target:c2 = {
+					any_owned_bloodline = {
+						has_bloodline_flag = presidential_bloodline
+					}
+				}
+			}
             #########################   Elector voting himself   ##########################
             #Not much has changed, except for incorporating the Become President ambition into it.
             additive_modifier = {
@@ -4771,6 +4792,16 @@ letter_event = {
 		}
 		ai_chance = {
             factor = 1
+			additive_modifier = { 
+				value = 15
+				localisation_key = tooltip_feudal_elector_vote
+				NOT = { character = event_target:c3 }
+				event_target:c3 = {
+					any_owned_bloodline = {
+						has_bloodline_flag = presidential_bloodline
+					}
+				}
+			}
             #########################   Elector voting himself   ##########################
             #Not much has changed, except for incorporating the Become President ambition into it.
             additive_modifier = {
@@ -6945,8 +6976,17 @@ letter_event = {
 			event_target:c4 = { always = yes }
 		}
 		ai_chance = {
-			factor = 1
             factor = 1
+			additive_modifier = { 
+				value = 15
+				localisation_key = tooltip_feudal_elector_vote
+				NOT = { character = event_target:c4 }
+				event_target:c4 = {
+					any_owned_bloodline = {
+						has_bloodline_flag = presidential_bloodline
+					}
+				}
+			}
             #########################   Elector voting himself   ##########################
             #Not much has changed, except for incorporating the Become President ambition into it.
             additive_modifier = {

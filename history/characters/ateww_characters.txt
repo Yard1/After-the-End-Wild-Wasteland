@@ -264,6 +264,10 @@
 	trait = arbitrary
 	2629.11.17 = {
 	    birth = yes
+		effect = { 
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
 	}
 }
 
@@ -320,6 +324,10 @@
 	trait = celibate
 	2615.7.21 = {
 		birth=yes
+		effect = { 
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
 	}
 	2637.8.9 = { 
 	    add_spouse = 1861126
@@ -354,6 +362,10 @@
 	trait = lustful
 	2615.11.21 = {
 		birth=yes
+		effect = { 
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
 	}
 	2637.8.9 = { 
 	    add_spouse = 1861125
@@ -385,6 +397,10 @@
 	trait = strong
 	2639.11.2 = {
 		birth=yes
+		effect = { 
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
 	}
 }
 
@@ -413,6 +429,8 @@
 		birth=yes
 		effect = { 
 		    add_rival = 1861125
+			set_character_flag=diversity
+			set_character_flag=physique
 		}
 	}
 }
@@ -438,10 +456,58 @@
 	trait = pirate
 	2639.4.15 = {
 		birth=yes
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
 	}
 	2639.4.15 = { 
 	    effect = {
 			add_artifact = jungle_knife
 		} 
     }
+}
+
+### New York ###
+2000060 = {
+	name = "Frederick"
+	dynasty = 2029121 # Trump
+	dna = accjhgdbber
+	culture = gothamite
+	religion = americanist
+	diplomacy = 4
+	martial = 2
+	stewardship = 8
+	intrigue = 6
+	learning = 4
+	trait = fortune_builder
+	trait = shy
+	trait = quick
+	trait = greedy
+	2636.3.20={
+		birth=yes
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+		create_bloodline = {
+			type = trump
+			has_dlc = "Holy Fury"
+		}
+	}
+	2666.1.11 = {
+		effect={
+			create_random_diplomat = {
+				name = "Mary"
+				dynasty = actually_culture
+				female = yes
+				age = 18
+				religion = americanist
+				culture = gothamite
+			}
+			new_character = {
+				add_spouse = ROOT
+			}
+		}
+	}
 }

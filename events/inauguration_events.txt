@@ -22,7 +22,6 @@ character_event = {
 	option = {
 		name = EVTOPTZAFI1
 		trigger = { 
-			higher_tier_than = DUKE
 			NOT = { trait = excommunicated }
 			OR = {
 				religion = hamiltonian
@@ -45,6 +44,10 @@ character_event = {
 			modifier = {
 				factor = 0.7
 				tier = EMPEROR
+			}
+			modifier = {
+				factor = 0.7
+				lower_tier_than = KING
 			}
 			modifier = {
 				factor = 0.1
@@ -203,7 +206,7 @@ character_event = {
 		custom_tooltip = { text = sendforcjudge }
 		trigger = {
 			NOT = { trait = excommunicated }
-			OR = { 
+			OR = {
 				NOT = {
 					religion = hamiltonian
 					religion = libertarian
@@ -295,6 +298,7 @@ character_event = {
 				is_theocracy = yes
 				any_liege = { character = ROOT }
 				religion = ROOT
+				NOT = { block_general_event_trigger = yes }
 				NOR = {
 					higher_tier_than = BARON
 					has_minor_title = title_chief_justice

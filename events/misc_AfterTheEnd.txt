@@ -10960,6 +10960,13 @@ character_event = {
 
 				if = {
 					limit = {
+						primary_title = { is_law_potential = succ_brethren_elective }
+					}
+					primary_title = { add_law = succ_brethren_elective }
+				}
+
+				if = {
+					limit = {
 						has_dlc = "Holy Fury"
 						OR = {
 							AND = {

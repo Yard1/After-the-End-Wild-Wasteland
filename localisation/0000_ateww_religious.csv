@@ -10,6 +10,7 @@ EVTDESCHFA20207;To the Excellent [Root.GetTitledName],\nI shall be honored to of
 EVTOPTBHF20207;I will not risk my [son_holyorder_candidate.GetSonDaughter]'s life for a crown.;;;;;;;;;;;;;x
 
 EVTDESCAFI213;To the Just [Root.GetTitledName],\nI shall be honored to officiate [Root.GetHerHisCap] [Root.GetHonorific]'s inauguration, provided that [Root.GetHerHisCap] [Root.GetHonorific] show [Root.GetHerHisCap] patriotism by allowing one of [Root.GetHerHisCap] [son_holyorder_candidate.GetSonDaughter]s to do [son_holyorder_candidate.GetHerHis] part in the struggle to preserve America by joining [son_holyorder_host.PrimaryTitle.GetFullName].\n\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
+SHOW_COLLEGE_OF_CARDINALS;[Root.GetConclaveName];Le Collège des cardinaux;Kardinalskollegium;;El Colegio de Cardenales;;;;;;;;;x
 
 # Libertarians
 String_Temple;[This.GetHouseOfWorshipCap];Temple;Tempel;;Templo;;;;;;;;;x
@@ -27,6 +28,11 @@ monastic_order_libertarian_rank_2_male;Brother;;;;;;;;;;;;;x
 monastic_order_libertarian_rank_3_male;Vestalis;;;;;;;;;;;;;x
 monastic_order_libertarian_rank_4_male;Vestalis Maximus;;;;;;;;;;;;;x
 currency_name_monastic_order_libertarian;Devotion;;;;;;;;;;;;;x
+
+TT_CORONATION_RELIGIOUS_HEAD_POPE;A [Root.GetProperReligiousHead] exists;;;;;;;;;;;;;x
+TT_CORONATION_VASSAL_PRIEST;A suitable vassal [Root.GetReligiousPerson] is available to perform the ceremony;Un évêque vassal est disponible pour célébrer la cérémonie;Ein Vasallen-Bischof ist verfügbar, der die Zeremonie durchführt;;Hay un obispo vasallo disponible para realizar la ceremonia;;;;;;;;x
+
+LIEGE_IS_JAIN;Liege is Pacifist;;;;;;;;;;;;;x
 
 EVTDESC_MNM_ATEWWW_10;[Root.GetMOGreeting], [Root.GetSocietyRank] [Root.GetFirstName]\n\nThe Order and [Root.Religion.GetHighGodName] cares much for the souls of our members. As such we would like to advise you to go on a pilgrimage, since you have not yet done so.\n\n[Root.GetMOFarewell],\nSigned, [From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
 EVTDESC_MNM_ATEWWW_13;[Root.GetMOGreeting] [Root.GetSocietyRank] [Root.GetFirstName].\n\nWe are glad to hear that you have performed a pilgrimage in the name of [Root.Religion.GetHighGodName].\nSigned [From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
@@ -58,6 +64,8 @@ mib_elective;Appointment;;;;;;;;;;;;;x
 
 hamiltonian;Madisonian;;;;;;;;;;;;;x
 hamiltonian_DESC;Madisonians differ from mainstream Americanism in that they consider the judicary the supreme branch of the government. Legends of Justices of the Supreme Court fighting against tyrannical Presidents and Congressmen have filled them with a conviction that a Chief Justice of the Supreme Court is the superior authority on all matters spiritual and temporal.;;;;;;;;;;;;;x
+
+gov_supreme_court;Supreme Court;;;;;;;;;;;;;x
 
 d_supreme_court;The Supreme Court;;;;;;;;;;;;;x
 d_supreme_court_adj;Supreme Judical;;;;;;;;;;;;;x
@@ -206,3 +214,54 @@ TXT_butler;You shall devote yourself to emulating General §YButler§!. This Decis
 # Bloodlines 
 barron;Barron Blood;;;;;;;;;;;;;x
 barron_desc;Hannibal Barron restored the Presidency a decade after its destruction by the Deitsch, he would go on to threaten the Holy Columbian Confederacy before being assassinated.;;;;;;;;;;;;;x 
+
+baron_hamiltonian;Sergeant;;;;;;;;;;;;;x
+baron_female_hamiltonian;Sergeant;;;;;;;;;;;;;x
+barony_of_hamiltonian;Municipality of;;;;;;;;;;;;;x
+barony_hamiltonian;Municipality;;;;;;;;;;;;;x
+count_hamiltonian;Major;;;;;;;;;;;;;x
+count_female_hamiltonian;Major;;;;;;;;;;;;;x
+duke_hamiltonian;Colonel;;;;;;;;;;;;;x
+duke_female_hamiltonian;Colonel;;;;;;;;;;;;;x
+duchy_of_hamiltonian;District of;;;;;;;;;;;;;x
+duchy_hamiltonian;District;;;;;;;;;;;;;x
+king_hamiltonian;General;;;;;;;;;;;;;x
+king_female_hamiltonian;General;;;;;;;;;;;;;x
+kingdom_of_hamiltonian;Commonwealth of;;;;;;;;;;;;;x
+kingdom_hamiltonian;Commonwealth;;;;;;;;;;;;;x
+emperor_hamiltonian;Commander-in-Chief;;;;;;;;;;;;;x
+emperor_female_hamiltonian;Commander-in-Chief;;;;;;;;;;;;;x
+
+baron_jeffersonian;Sergeant;;;;;;;;;;;;;x
+baron_female_jeffersonian;Sergeant;;;;;;;;;;;;;x
+barony_of_jeffersonian;Municipality of;;;;;;;;;;;;;x
+barony_jeffersonian;Municipality;;;;;;;;;;;;;x
+count_jeffersonian;Major;;;;;;;;;;;;;x
+count_female_jeffersonian;Major;;;;;;;;;;;;;x
+duke_jeffersonian;Colonel;;;;;;;;;;;;;x
+duke_female_jeffersonian;Colonel;;;;;;;;;;;;;x
+duchy_of_jeffersonian;District of;;;;;;;;;;;;;x
+duchy_jeffersonian;District;;;;;;;;;;;;;x
+king_jeffersonian;General;;;;;;;;;;;;;x
+king_female_jeffersonian;General;;;;;;;;;;;;;x
+kingdom_of_jeffersonian;Commonwealth of;;;;;;;;;;;;;x
+kingdom_jeffersonian;Commonwealth;;;;;;;;;;;;;x
+emperor_jeffersonian;Commander-in-Chief;;;;;;;;;;;;;x
+emperor_female_jeffersonian;Commander-in-Chief;;;;;;;;;;;;;x
+
+baron_libertarian;Sergeant;;;;;;;;;;;;;x
+baron_female_libertarian;Sergeant;;;;;;;;;;;;;x
+barony_of_libertarian;Municipality of;;;;;;;;;;;;;x
+barony_libertarian;Municipality;;;;;;;;;;;;;x
+count_libertarian;Major;;;;;;;;;;;;;x
+count_female_libertarian;Major;;;;;;;;;;;;;x
+duke_libertarian;Colonel;;;;;;;;;;;;;x
+duke_female_libertarian;Colonel;;;;;;;;;;;;;x
+duchy_of_libertarian;District of;;;;;;;;;;;;;x
+duchy_libertarian;District;;;;;;;;;;;;;x
+king_libertarian;General;;;;;;;;;;;;;x
+king_female_libertarian;General;;;;;;;;;;;;;x
+kingdom_of_libertarian;Commonwealth of;;;;;;;;;;;;;x
+kingdom_libertarian;Commonwealth;;;;;;;;;;;;;x
+emperor_libertarian;Commander-in-Chief;;;;;;;;;;;;;x
+emperor_female_libertarian;Commander-in-Chief;;;;;;;;;;;;;x

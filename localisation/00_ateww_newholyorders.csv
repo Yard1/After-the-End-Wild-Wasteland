@@ -27,3 +27,10 @@ EVTDESC_ATEWWNHO_10;Most righteous [Root.GetTitledFirstName], the American Legio
 EVTDESC_ATEWWNHO_11;The American Legion has constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
 EVTDESC_ATEWWNHO_13;Your majesty, this antagonism is completely unwarranted! The American Legion serves with the will of the Generals - but do you?\n\nWith anger and sadness,\n\n[From.GetTitledFirstName];;;;;;;;;;;;;x
 expelled_d_libertarian;Expelled the American Legion;;;;;;;;;;;;;x
+
+MOTHER_SUPERIOR;Mother Superior;;;;;;;;;;;;;x
+
+donate_money_to_ursuline_state;Donate 300¤ to St. Ursula's Chosen;;;;;;;;;;;;;x
+donate_money_to_ursuline_state_desc;I can donate money to St. Ursula's Chosen in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Church.;;;;;;;;;;;;;x
+expel_ursuline_state;Expel St. Ursula's Chosen;;;;;;;;;;;;;x
+expel_ursuline_state_desc;I can drive St. Ursula's Chosen from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x

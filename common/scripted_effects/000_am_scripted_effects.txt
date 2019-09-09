@@ -4588,8 +4588,7 @@ spawn_good_commander_effect = {
 			}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {
@@ -4794,8 +4793,7 @@ spawn_great_commander_effect = {
 			}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {
@@ -5110,8 +5108,7 @@ spawn_fantastic_commander_effect = {
 			#}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {
@@ -5260,8 +5257,7 @@ spawn_fantastic_diplomat_effect = {
 			#}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {
@@ -5396,8 +5392,7 @@ spawn_fantastic_scholar_effect = {
 			#}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {
@@ -5551,8 +5546,7 @@ spawn_elder_effect = {
 			#}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {
@@ -5729,8 +5723,7 @@ spawn_debutante_effect = {
 			}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {
@@ -6204,8 +6197,7 @@ spawn_old_duelist_effect = {
 			#}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {
@@ -6457,8 +6449,7 @@ spawn_giant_duelist_effect = {
 			#}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {
@@ -6782,8 +6773,7 @@ spawn_creature_champion_effect = {
 			#}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {

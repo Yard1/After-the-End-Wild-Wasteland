@@ -203,10 +203,10 @@ character_event = {
 						}
 					}
 					NOR = { 
-						secret_religion = americanist 
-						secret_religion = jeffersonian
-						secret_religion = hamiltonian
-						secret_religion = libertarian
+						true_religion = americanist 
+						true_religion = jeffersonian
+						true_religion = hamiltonian
+						true_religion = libertarian
 					}
 				}
 				clear_secret_religion = yes
@@ -322,134 +322,152 @@ character_event = {
 					character_event = { id = SoA.2863 }
 				}
 				add_trait = celibate
-				if = {
-					limit = {
-						ROOT = {
-							has_landed_title = d_men_in_black
-							OR = {
-								religion = americanist
-								religion = jeffersonian
-								religion = hamiltonian
-								religion = libertarian
-							}
-						}
-					}
-					if = {
-						limit = {
-							NOR = {
-								religion = americanist
-								religion = jeffersonian
-								religion = hamiltonian
-								religion = libertarian
-							}
-						}
-						religion = americanist
-						abandon_heresy = yes
-					}
-					if = {
-						limit = {
-							is_adult = yes
-							prisoner = no
-							NOT = { trait = incapable }
-						}
-						if = {
-							limit = {
-								NOT = { society_member_of = the_assassins }
-								can_join_society = the_assassins
-							}
-							join_society = the_assassins
+			}
+			if = {
+				limit = {
+					ROOT = {
+						has_landed_title = d_men_in_black
+						OR = {
+							true_religion = americanist
+							true_religion = jeffersonian
+							true_religion = hamiltonian
+							true_religion = libertarian
 						}
 					}
 				}
-				else_if = {
+				if = {
 					limit = {
-						ROOT = {
-							has_landed_title = d_libertarian
+						NOR = {
+							true_religion = americanist
+							true_religion = jeffersonian
+							true_religion = hamiltonian
+							true_religion = libertarian
+						}
+					}
+					if = {
+						limit = {
+							liege = {
+								NOR = {
+									religion = americanist
+									religion = jeffersonian
+									religion = hamiltonian
+									religion = libertarian
+								}
+							}
+							OR = { 
+								true_religion = americanist 
+								true_religion = jeffersonian
+								true_religion = hamiltonian
+								true_religion = libertarian
+							}
+						}
+						clear_secret_religion = yes
+						set_secret_religion = americanist
+					}
+					else = {
+						religion = americanist
+						abandon_heresy = yes
+					}
+				}
+				if = {
+					limit = {
+						is_adult = yes
+						prisoner = no
+						NOT = { trait = incapable }
+						NOT = { society_member_of = the_assassins }
+						can_join_society = the_assassins
+					}
+					join_society = the_assassins
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						has_landed_title = d_libertarian
+						religion = libertarian
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
 							religion = libertarian
 						}
 					}
-					if = {
-						limit = {
-							NOT = {
-								religion = libertarian
-							}
-						}
-						religion = libertarian
+					religion = libertarian
+				}
+				if = {
+					limit = {
+						is_female = yes
+						is_adult = yes
+						prisoner = no
+						NOT = { trait = incapable }
 					}
 					if = {
 						limit = {
-							is_female = yes
-							is_adult = yes
-							prisoner = no
-							NOT = { trait = incapable }
+							NOT = { society_member_of = monastic_order_libertarian }
+							can_join_society = monastic_order_libertarian
 						}
+						join_society = monastic_order_libertarian
 						if = {
 							limit = {
-								NOT = { society_member_of = monastic_order_libertarian }
-								can_join_society = monastic_order_libertarian
+								society_rank = {
+									rank == 1
+									society = monastic_order_libertarian
+								}
 							}
-							join_society = monastic_order_libertarian
-							if = {
-								limit = {
-									society_rank = {
-										rank == 1
-										society = monastic_order_libertarian
-									}
+							society_rank_up = {
+								rank = 1
+								society = monastic_order_libertarian
+							}
+						}
+					}
+					if = {
+						limit = {
+							society_rank = {
+								rank == 2
+								society = monastic_order_libertarian
+							}
+							NOT = { year = 2668 }
+						}
+						random_list = {
+							4 = {
+							}
+							6 = {
+								trigger = {
+									society_can_rank_up = yes
+								}
+								modifier = {
+									factor = 2
+									has_minor_title = title_commander
 								}
 								society_rank_up = {
 									rank = 1
 									society = monastic_order_libertarian
 								}
 							}
-						}
-						if = {
-							limit = {
-								society_rank = {
-									rank == 2
+							1 = {
+								trigger = {
+									society_can_rank_up = yes
+								}
+								modifier = {
+									factor = 2
+									OR = {
+										has_job_title = job_chancellor
+										has_job_title = job_marshal
+										has_job_title = job_treasurer
+										has_job_title = job_spymaster
+										has_job_title = job_spiritual
+									}
+								}
+								society_rank_up = {
+									rank = 1
 									society = monastic_order_libertarian
 								}
-								NOT = { year = 2668 }
-							}
-							random_list = {
-								4 = {
-								}
-								6 = {
-									trigger = {
-										society_can_rank_up = yes
-									}
-									modifier = {
-										factor = 2
-										has_minor_title = title_commander
-									}
+								if = {
+									limit = { society_can_rank_up = yes }
 									society_rank_up = {
 										rank = 1
 										society = monastic_order_libertarian
-									}
-								}
-								1 = {
-									trigger = {
-										society_can_rank_up = yes
-									}
-									modifier = {
-										factor = 2
-										OR = {
-											has_job_title = job_chancellor
-											has_job_title = job_marshal
-											has_job_title = job_treasurer
-											has_job_title = job_spymaster
-											has_job_title = job_spiritual
-										}
-									}
-									society_rank_up = {
-										rank = 1
-										society = monastic_order_libertarian
-									}
-									if = {
-										limit = { society_can_rank_up = yes }
-										society_rank_up = {
-											rank = 1
-											society = monastic_order_libertarian
-										}
 									}
 								}
 							}
@@ -477,3 +495,4 @@ character_event = {
 	}
 	
 }
+

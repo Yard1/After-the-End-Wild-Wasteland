@@ -36,6 +36,10 @@ character_event = {
 				tier = EMPEROR
 			}
 			modifier = {
+				factor = 0.7
+				lower_tier_than = KING
+			}
+			modifier = {
 				factor = 0.1
 				religion_head = { 
 					OR = { 
@@ -307,8 +311,8 @@ character_event = {
 			any_realm_character = { 
 				is_theocracy = yes 
 				any_liege = { character = ROOT }
-				lower_tier_than = COUNT
 				religion = ROOT
+				NOT = { block_general_event_trigger = yes }
 				NOR = { 
 					has_landed_title = k_papal_state
 					has_landed_title = k_ursuline

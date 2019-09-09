@@ -90,6 +90,7 @@ succession_laws = {
 			}
 			holder_scope = {
 				NOT = { religion_group = american_native } #uses Eldership instead
+				NOT = { religion_group = pirate }
 				OR = {
 					independent = yes
 					NOT = {
@@ -192,7 +193,7 @@ succession_laws = {
 		}
 		revoke_allowed = {
 			always = no
-		}			
+		}
 	}
 	
 	succ_elective_gavelkind = {
@@ -206,6 +207,7 @@ succession_laws = {
 			}
 			holder_scope = {
 				NOT = { religion_group = american_native } #uses Eldership instead
+				NOT = { religion_group = pirate }
 				is_nomadic = no
 				OR = {
 					independent = yes
@@ -435,6 +437,7 @@ succession_laws = {
 						}
 					}
 				}
+				NOT = { religion_group = pirate }
 				OR = {
 					is_merchant_republic = no
 					primary_title = {
@@ -596,6 +599,7 @@ succession_laws = {
 			holder_scope = {
 				is_merchant_republic = no
 				is_patrician = no
+				NOT = { religion_group = pirate }
 			}
 			OR = {
 				holder_scope = { # Viceroyalties can always have primogeniture
@@ -760,6 +764,7 @@ succession_laws = {
 						}
 					}
 				}
+				NOT = { religion_group = pirate }
 				OR = {
 					NOT = {
 						religion_group = indian_group
@@ -870,6 +875,7 @@ succession_laws = {
 						}
 					}
 				}
+				NOT = { religion_group = pirate }
 				OR = {
 					NOT = { 
 						religion_group = indian_group
@@ -961,6 +967,7 @@ succession_laws = {
 						culture = british
 					}
 				}
+				NOT = { religion_group = pirate }
 				is_nomadic = no
 				is_merchant_republic = no
 				is_patrician = no
@@ -1028,6 +1035,7 @@ succession_laws = {
 						}
 					}
 				}
+				NOT = { religion_group = pirate }
 				is_merchant_republic = no
 				is_patrician = no
 				OR = {
@@ -1156,17 +1164,14 @@ succession_laws = {
 						}
 					}
 				}
-				OR = {
-					AND = {
-						NOT = { religion = norse_pagan }
-						NOT = { religion = revelationist }
-						NOT = { religion = occultist }
-						NOT = { religion = thelemic }
-						NOT = { religion = pagan }
-						NOT = { religion = celtic_pagan }
-						NOT = { religion = espiritista }
-					}
-				}
+				NOT = { religion_group = pirate }
+				NOT = { religion = norse_pagan }
+				NOT = { religion = revelationist }
+				NOT = { religion = occultist }
+				NOT = { religion = thelemic }
+				NOT = { religion = pagan }
+				NOT = { religion = celtic_pagan }
+				NOT = { religion = espiritista }
 				
 				is_merchant_republic = no
 				is_patrician = no
@@ -1304,6 +1309,7 @@ succession_laws = {
 						is_theocracy = no
 					}
 				}
+				NOT = { religion_group = pirate }
 				is_republic = no
 				is_merchant_republic = no
 				is_nomadic = no
@@ -1419,12 +1425,21 @@ succession_laws = {
 					OR = {
 						is_republic = yes
 						is_theocracy = yes
+						AND = {
+							is_feudal = yes
+							holder_scope = { religion_group = pirate }
+						}
 					}
 				}
 				holder_scope = {
 					OR = {
 						is_republic = yes
 						is_theocracy = yes
+						AND = {
+							tier = BARON
+							is_feudal = yes
+							religion_group = pirate
+						}
 					}
 				}
 			}
@@ -1466,7 +1481,6 @@ succession_laws = {
 			NOT = { holder_scope = { government = military_governorate } }
 			NOT = { holder_scope = { government = chinese_imperial_government } }
 		}
-		
 		effect = {
 			succession = open_elective
 		}
@@ -1474,6 +1488,7 @@ succession_laws = {
 			always = no
 		}
 	}
+	
 	succ_catholic_bishopric = {
 		potential = {
 			is_landless_type_title = no

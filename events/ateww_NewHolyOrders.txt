@@ -400,6 +400,14 @@ character_event = {
 			limit = {
 				has_empty_holding = yes
 			}
+			preferred_limit = {
+				any_province_holding = {
+					is_holy_site = ROOT
+				}
+			}
+			preferred_limit = {
+				religion = ROOT
+			}
 			province_event = {
 				id = NewHolyOrders.8
 			}
@@ -1031,7 +1039,7 @@ character_event = {
 	}
 }
 
-# Son or brother joins the Order of Lady Liberty
+# Son or brother joins the the American Legion
 character_event = {
 	id = NewHolyOrders.20
 	hide_window = yes
@@ -1050,7 +1058,7 @@ character_event = {
 	}
 }
 
-# Liege refuses request to join the Order of Lady Liberty
+# Liege refuses request to join the the American Legion
 character_event = {
 	id = NewHolyOrders.21
 	hide_window = yes
@@ -1065,7 +1073,7 @@ character_event = {
 	}
 }
 
-# Ping event when donating money to the Order of Lady Liberty
+# Ping event when donating money to the the American Legion
 character_event = {
 	id = NewHolyOrders.22
 	hide_window = yes
@@ -1086,7 +1094,7 @@ character_event = {
 	}
 }
 
-# Notification event when donating money to the Order of Lady Liberty
+# Notification event when donating money to the the American Legion
 letter_event = {
 	id = NewHolyOrders.24
 	desc = {
@@ -1196,6 +1204,14 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
+			}
+			preferred_limit = {
+				any_province_holding = {
+					is_holy_site = ROOT
+				}
+			}
+			preferred_limit = {
+				religion = ROOT
 			}
 			province_event = {
 				id = NewHolyOrders.26
@@ -1317,7 +1333,7 @@ province_event = {
 	}
 }
 
-# Ping event when expelling the Order of Lady Liberty
+# Ping event when expelling the American Legion
 character_event = {
 	id = NewHolyOrders.30
 	hide_window = yes
@@ -1353,7 +1369,7 @@ character_event = {
 	}
 }
 
-# Notification event when expelling the Order of Lady Liberty
+# Notification event when expelling the American Legion
 letter_event = {
 	id = NewHolyOrders.31
 	desc = {

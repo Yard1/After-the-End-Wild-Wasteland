@@ -10,6 +10,7 @@ d_knights_of_columbus = {
 	capital = 46 # Quinnipiac
 
 	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
 	foa = "GRANDMASTER_FOA"
 
 	culture = gothamite
@@ -33,6 +34,7 @@ d_knights_of_peter_claver = {
 	capital = 1124 # New Orleans
 
 	title = "SUPREME_KNIGHT"
+	title_female = "SUPREME_KNIGHT"
 	foa = "SIR_KNIGHT_FOA"
 
 	culture = creole
@@ -56,6 +58,7 @@ d_lebanon_brethren = {
 	capital = 50 # Lehigh
 
 	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
 	foa = "GRANDMASTER_FOA"
 
 	culture = deitsch
@@ -103,7 +106,7 @@ k_ursuline_state = { #used for Northern Crusade stuff I guess
 	graphical_culture = holygfx
 
 	title = "GRANDMASTER"
-	title = "SISTER_MILITANT"
+	title_female = "SISTER_MILITANT"
 	foa = "SISTER_MILITANT_FOA"
 
 	holy_order = yes
@@ -138,6 +141,7 @@ d_masked_knights = {
 	short_name = yes
 
 	title = "CAMPEON"
+	title_female = "CAMPEON"
 	foa = "CAMPEON_FOA"
 
 	culture = norteno
@@ -196,6 +200,7 @@ d_midwestern_brotherhood = {
 	capital = 170 # Chicago
 	
 	title = "SUPREME_KNIGHT"
+	title_female = "SUPREME_KNIGHT"
 	foa = "SIR_KNIGHT_FOA"
 
 	religion = rust_cultist
@@ -218,6 +223,7 @@ d_flaming_sword = {
 	capital = 1019 # Nashville
 	
 	title = "GRAND_MASTER"
+	title_female = "GRAND_MASTER"
 	foa = "GRAND_MASTER_FOA"
 
 	religion = revelationist_reformed
@@ -240,6 +246,7 @@ d_fm = {
 	capital = 69 # Boston
 	
 	title = "GRAND_MASTER"
+	title_female = "GRAND_MASTER"
 	foa = "GRAND_MASTER_FOA"
 
 	religion = occultist_reformed
@@ -262,6 +269,7 @@ d_fh = {
 	capital = 1157 # Green Bay
 	
 	title = "THANE"
+	title_female = "THANE"
 	foa = "THANE_FOA"
 	
 	religion = norse_pagan_reformed
@@ -287,6 +295,7 @@ d_oto = {
 	culture = british
 
 	title = "FRATER_SUPERIOR"
+	title_female = "MOTHER_SUPERIOR"
 	foa = "FRATER_SUPERIOR_FOA"
 
 	holy_order = yes
@@ -312,6 +321,7 @@ d_national_cathedral = {
 	culture = beltway
 	
 	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
 	foa = "GRANDMASTER_FOA"
 	
 	holy_order = yes	
@@ -333,6 +343,7 @@ d_uel = {
 	culture = ontarian
 	
 	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
 	foa = "GRANDMASTER_FOA"
 	
 	holy_order = yes
@@ -375,6 +386,7 @@ d_lightbringers = {
 	culture = mixtec
 
 	title = "CAPTAIN"
+	title_female = "CAPTAIN"
 	foa = "CAPTAIN_FOA"
 
 	holy_order = yes
@@ -396,6 +408,7 @@ d_dead_sun = {
 	culture = mixtec
 
 	title = "CAPTAIN"
+	title_female = "CAPTAIN"
 	foa = "CAPTAIN_FOA"
 
 	holy_order = yes
@@ -416,6 +429,7 @@ d_shomrim = {
 	capital = 2 # Brooklyn
 
 	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
 	foa = "GRANDMASTER_FOA"
 	
 	# Always exists
@@ -444,8 +458,9 @@ d_nauvoo_legion = {
 	
 	capital = 430 # Salt Lake
 
-	title = "GRANDMASTER"
-	foa = "GRANDMASTER_FOA"
+	title = "GENERAL"
+	title_female = "GENERAL"
+	foa = "GENERAL_FOA"
 	
 	# Always exists
 	landless = yes
@@ -474,6 +489,7 @@ d_st_pats = {
 	capital = 1271 # Toronto
 
 	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
 	foa = "GRANDMASTER_FOA"
 	
 	# Always exists
@@ -503,6 +519,7 @@ d_golden_bears = {
 	capital = 2032 # Alameda
 
 	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
 	foa = "GRANDMASTER_FOA"
 	
 	# Always exists
@@ -532,6 +549,7 @@ d_oppenheimer = {
 	capital = 423 # Los Alamos
 
 	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
 	foa = "GRANDMASTER_FOA"
 	
 	# Always exists
@@ -559,8 +577,9 @@ d_order_of_brotherhood = {
 	
 	capital = 3169 #Bluefields
 	
-	title = "GRAND_MASTER"
-	foa = "GRAND_MASTER_FOA"
+	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
 	
 	# Always exists
 	landless = yes
@@ -588,6 +607,7 @@ d_followers_arjuna = {
 	capital = 3270 # Georgetown
 	
 	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
 	foa = "GRANDMASTER_FOA"
 
 	# Always exists
@@ -616,6 +636,7 @@ d_albion_legion = {
 	capital = 3199 # Sogamoso
 	
 	title = "COLONEL"
+	title_female = "COLONEL"
 	foa = "COLONEL_FOA"
 	
 	#Always exists
@@ -647,6 +668,7 @@ d_judah_lions = {
 	capital = 1174 # Surrey
 	
 	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
 	foa = "GRANDMASTER_FOA"
 	
 	# Always exists
@@ -678,6 +700,7 @@ d_saint_expedit = {
 	capital = 1124 # New Orleans
 	
 	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
 	foa = "GRANDMASTER_FOA"
 	
 	# Always exists
@@ -709,6 +732,7 @@ d_followers_ogun = {
 	capital = 1113 # Sierra Maestra
 	
 	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
 	foa = "GRANDMASTER_FOA"
 	
 	# Always exists
@@ -740,6 +764,7 @@ d_warriors_guaicaipuro = {
 	capital = 648 # Miranda
 	
 	title = "WARCHIEF"
+	title_female = "WARCHIEF"
 	foa = "WARCHIEF_FOA"
 	
 	# Always exists
@@ -771,6 +796,7 @@ d_all_tribes = {
 	capital = 382 # Porcupine
 	
 	title = "WARCHIEF"
+	title_female = "WARCHIEF"
 	foa = "WARCHIEF_FOA"
 	
 	# Always exists
@@ -802,6 +828,7 @@ d_rebels_male = {
 	capital = 672 # Boa Vista
 	
 	title = "WARCHIEF"
+	title_female = "WARCHIEF"
 	foa = "WARCHIEF_FOA"
 	
 	# Always exists
@@ -832,8 +859,9 @@ d_code_keepers = {
 	
 	capital = 1197 # New Providence
 	
-	title = "WARCHIEF"
-	foa = "WARCHIEF_FOA"
+	title = "CAPTAIN"
+	title_female = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
 	
 	# Always exists
 	landless = yes
@@ -864,6 +892,7 @@ d_golden_archers = {
 	capital = 170 # Chicago
 
 	title = "DIRECTOR"
+	title_female = "DIRECTOR"
 	foa = "DIRECTOR_FOA"
 
 	culture = chicagoan
@@ -885,6 +914,7 @@ d_round_table = {
 	capital = 2078 #St Johns
 
 	title = "WARCHIEF"
+	title_female = "WARCHIEF"
 	foa = "WARCHIEF_FOA"
 	
 	# Always exists
@@ -921,6 +951,7 @@ d_salvation_army = {
 	culture = southron
 	
 	title = "GENERAL"
+	title_female = "GENERAL"
 	foa = "GENERAL_FOA"
 	
 	holy_order = yes	
@@ -943,6 +974,7 @@ d_three_fires = {
 	culture = ojibwe
 	
 	title = "WARCHIEF"
+	title_female = "WARCHIEF"
 	foa = "WARCHIEF_FOA"
 	
 	holy_order = yes	
@@ -965,6 +997,7 @@ d_taxet_warriors = {
 	culture = haida
 	
 	title = "WARCHIEF"
+	title_female = "WARCHIEF"
 	foa = "WARCHIEF_FOA"
 	
 	holy_order = yes	

@@ -110,3 +110,12 @@ true_religion_americanist_or_heresy_trigger = {
 is_landless = {
 	is_landed = no
 }
+
+can_have_pagan_religion_interpretation = {
+	NOT = { religion_head = { always = yes } } #check if there is no religious head
+	OR = {
+		religion = gaian
+		religion_group = pagan_group
+		has_religion_feature = religion_no_leader
+	}
+}

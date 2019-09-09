@@ -3246,6 +3246,9 @@ the_assassins = {
 			true_religion = hamiltonian
 			true_religion = libertarian
 			religion_group = oldworld
+			any_liege = {
+				has_landed_title = d_men_in_black
+			}
 			AND = {
 				ai = no
 				NOT = { trait = zealous }
@@ -3262,13 +3265,6 @@ the_assassins = {
 				}
 			}
 		}
-		#OR = {
-		#	is_female = no
-		#	has_game_rule = {
-		#		name = gender
-		#		value = all
-		#	}
-		#}
 		hidden_trigger = {
 			NOT = { has_character_flag = society_join_block }
 		}
@@ -3281,6 +3277,9 @@ the_assassins = {
 			true_religion = jeffersonian
 			true_religion = hamiltonian
 			true_religion = libertarian
+			any_liege = {
+				has_landed_title = d_men_in_black
+			}
 			AND = {
 				ai = no
 				NOT = { trait = zealous }

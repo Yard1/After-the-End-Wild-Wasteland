@@ -122,34 +122,57 @@ decisions = {
 			OR = {
 				custom_tooltip = { 
 					text = TT_CORONATION_RELIGIOUS_HEAD_POPE 
-					religion = hamiltonian
-					religion_head = { 
-						religion = ROOT 
-						has_landed_title = d_supreme_court
+					OR = {
+						religion = hamiltonian
+						religion = libertarian
+					}
+					rightful_religious_head_scope = { 
+						is_alive = yes 
 						NOT = { block_general_event_trigger = yes }
-					}
-				}
-				AND = { 
-					NOT = { tier = EMPEROR }
-					custom_tooltip = { 
-						text = TT_INAUG_VASSAL_PRIEST 
-						any_realm_character = { 
-							NOT = { block_general_event_trigger = yes }
-							is_theocracy = yes 
-							religion = ROOT
-							any_liege = { character = ROOT }
+						OR = {
+							has_landed_title = d_supreme_court
+							has_landed_title = d_libertarian
 						}
-					}
+					} 
 				}
-				AND = { 
-					tier = EMPEROR
+				AND = {
+					OR = {
+						NOT = {
+							religion = hamiltonian
+							religion = libertarian
+						}
+						lower_tier_than = EMPEROR
+						primary_title = { has_law = investiture_law_1 }
+					}
 					custom_tooltip = { 
-						text = TT_INAUG_VASSAL_PRIEST 
-						any_realm_character = { 
-							NOT = { block_general_event_trigger = yes }
-							is_theocracy = yes 
-							religion = ROOT
+						text = TT_CORONATION_VASSAL_PRIEST 
+						any_realm_character = {
+							is_theocracy = yes
 							any_liege = { character = ROOT }
+							religion = ROOT
+							NOT = { block_general_event_trigger = yes }
+							OR = {
+								AND = {
+									OR = {
+										higher_tier_than = BARON
+										has_minor_title = title_chief_justice
+										has_minor_title = title_hamiltonian_justice
+									}
+									NOT = { has_landed_title = d_americanist }
+									NOT = { has_landed_title = d_supreme_court }
+									NOT = { has_landed_title = d_libertarian }
+								}
+								AND = {
+									NOR = {
+										higher_tier_than = BARON
+										has_minor_title = title_chief_justice
+										has_minor_title = title_hamiltonian_justice
+										has_landed_title = d_americanist
+										has_landed_title = d_supreme_court
+										has_landed_title = d_libertarian
+									}
+								}
+							}
 						}
 					}
 				}
