@@ -40,6 +40,22 @@
     name = "Pearson" 
 	culture = southron
 }
+2029098 = { 
+    name = "Autumn" 
+	culture = bayfolk
+	coat_of_arms = {
+        religion = americanist
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 33
+            emblem = 0
+            color = 2
+            color = 4
+            color = 4
+        }
+    }
+}
 2029099 = { 
     name = "Walker" 
 	culture = gothamite
