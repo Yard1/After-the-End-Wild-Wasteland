@@ -25,11 +25,6 @@
 	2636.3.3 ={
 		birth=yes
 	}
-	2636.3.3 = { 
-	    effect = {
-			add_artifact = ate_firearm
-		} 
-    }
 }
 
 ### Great Lakes 
@@ -420,4 +415,33 @@
 		    add_rival = 1861125
 		}
 	}
+}
+
+### Caribbean ###
+
+2000044 = {
+	name = "Iwan"
+	dynasty = 2029100 # Evans
+	culture = gwladfeg
+	religion = brethren
+	diplomacy = 6
+	martial = 7
+	stewardship = 5
+	intrigue = 8
+	learning = 6
+	trait = skilled_tactician
+	trait = shrewd
+	trait = deceitful
+	trait = patient
+	trait = diligent
+	trait = brave
+	trait = pirate
+	2639.4.15 = {
+		birth=yes
+	}
+	2639.4.15 = { 
+	    effect = {
+			add_artifact = jungle_knife
+		} 
+    }
 }

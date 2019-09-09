@@ -1,0 +1,20 @@
+RETTYPE_CUL_WEL = {
+	first_type = 5
+	first_amount = 150
+	second_type = 6
+	second_amount = 100
+
+	special_troops = horse_archers
+	
+	potential = {
+		is_nomadic = no
+		culture = gwladfeg
+	}
+	
+	modifier = {
+		archers_offensive = 0.20
+		archers_defensive = 0.10
+		horse_archers_offensive = 0.20
+		horse_archers_morale = 0.10
+	}
+}
