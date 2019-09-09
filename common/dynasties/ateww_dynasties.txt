@@ -50,9 +50,9 @@
             texture = 0
             texture_internal = 33
             emblem = 0
+            color = 0
             color = 2
-            color = 4
-            color = 4
+            color = 2
         }
     }
 }
