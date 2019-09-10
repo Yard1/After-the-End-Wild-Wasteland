@@ -264,6 +264,12 @@ emperor_female_libertarian;Commander-in-Chief;;;;;;;;;;;;;x
 become_pirate_king;Become The [Root.GetPirateMonarch];;;;;;;;;;;;;x
 become_pirate_king_desc;From Vancouver to Guyana my name is spoken of in hushed whispers, my sails are known to all, and most importantly I have earned the respect of my fellow Brethren faitfhul. Perhaps the time has come to crown a new [Root.GetPirateMonarch]?;;;;;;;;;;;;;x
 
+EVTNAME_pirate_king;The [Root.GetPirateMonarch];;;;;;;;;;;;;x
+EVTDESC_pirate_king;Since the first Brethren took to the seas they've stories of the great Pirate Kings and Queens of old - From Blackbeard to Charles Vane and William Kidd and now [Root.GetFullName]. Through grit, bravery, and skill, [Root.GetFullName] has managed to proclaim [Root.GetHerselfHimself] the new [Root.GetPirateMonarch], ushring in a new era for the Brethren in the process.;;;;;;;;;;;;;x
+EVTOPTA_pirate_king;All hands on deck!;;;;;;;;;;;;;x
+EVTOPTB_pirate_king;Oh dear...;;;;;;;;;;;;;x
+EVTOPTC_pirate_king;The world is my oyster!;;;;;;;;;;;;;x
+
 k_pirate_kingdom;Kingdom Of The Seas;;;;;;;;;;;;;x
 k_pirate_kingdom_adj;Brethren;;;;;;;;;;;;;x
 PIRATE_KING;Pirate King;;;;;;;;;;;;;x
