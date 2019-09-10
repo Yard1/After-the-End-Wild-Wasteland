@@ -9,10 +9,10 @@ government_flavor = {
 
 government_flavor = {
 	name = gov_piracy
-	graphics = GFX_evt_capitol_building
-	priority = 6
+	graphics = GFX_evt_pirate_ship
+	priority = 5
 	trigger = {
-		religious_group = pirate
+		religion_group = pirate
 		OR = {
 			has_law = succ_brethren_elective
 			has_law = succ_open_elective
