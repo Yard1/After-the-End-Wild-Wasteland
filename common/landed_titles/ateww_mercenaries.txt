@@ -1,0 +1,32 @@
+d_border_patrol = {
+	color={ 255 174 201 }
+	color2={ 255 255 255 }
+
+	capital = 1235 # Travis/Austin
+	
+	allow = {
+		primary_title = { 
+		        OR = {
+			        region = world_west_coast
+					region = world_southwest
+					region = world_great_plains
+					region = world_gulf_coast
+				}
+		    }
+		}
+	}
+	
+	culture = texan
+	religion = jeffersonian
+
+	title = "ACT_DIRECTOR"
+	foa = "ACT_DIRECTOR_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_golden_jaguars_composition
+}

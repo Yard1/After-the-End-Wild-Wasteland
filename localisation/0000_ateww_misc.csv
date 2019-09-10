@@ -4,12 +4,18 @@
 nick_the_nostalgia_critic;The Critic;;;;;;;;;x
 
 # Retinues
-RETTYPE_CUL_WEL;Ceidwadorpamp ;;;;;;;;;;;;;x
+RETTYPE_CUL_WEL;Ceidwadorpamp;;;;;;;;;;;;;x
 ca_culture_welsh_1;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
 ca_culture_welsh_2;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
 ca_culture_welsh_3;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
 ca_culture_welsh_4;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
 ca_culture_welsh_1_desc;The Ceidwadorpamp of Puerto Madryn are trained here alongside their dismounted Iwmyn compatriots.;;;;;;;;;;;;;x
+
+# Mercenaries 
+d_border_patrol;Warriors Of Ice;;;;;;;;;;;;;x
+d_border_patrol_adj;Ice;;;;;;;;;;;;;x
+ACT_DIRECTOR;Acting Director;;;;;;;;;;;;;x
+ACT_DIRECTOR_FOA;Sir;;;;;;;;;;;;;x
 
 # Bloodlines 
 barron;Barron Blood;;;;;;;;;;;;;x

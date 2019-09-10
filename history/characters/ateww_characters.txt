@@ -61,6 +61,7 @@
 	    effect = {
 		    add_artifact = terminus_est
 		} 
+		wealth = 500
 	}
 	2653.6.21 = {
 		effect = { 
@@ -468,7 +469,7 @@
 	diplomacy = 6
 	martial = 7
 	stewardship = 5
-	intrigue = 8
+	intrigue = 7
 	learning = 6
 	trait = skilled_tactician
 	trait = shrewd
@@ -476,7 +477,7 @@
 	trait = patient
 	trait = diligent
 	trait = brave
-	trait = pirate
+	trait = cruel
 	2639.4.15 = {
 		birth=yes
 		effect={
@@ -487,6 +488,39 @@
 	2639.4.15 = { 
 	    effect = {
 			add_artifact = jungle_knife
+		} 
+    }
+}
+
+2000045 = {
+	name = "Roche"
+	dynasty = 2029101 # Braziliano
+	culture = brazilian
+	religion = brethren
+	diplomacy = 6
+	martial = 6
+	stewardship = 7
+	intrigue = 5
+	learning = 6
+	trait = skilled_tactician
+	trait = zealous
+	trait = cruel
+	trait = impaler
+	trait = diligent
+	trait = drunkard
+	trait = diligent
+	trait = wroth
+	trait = brave
+	2636.6.4 = {
+		birth=yes
+		effect={
+			set_character_flag = diversity
+			set_character_flag = physique
+		}
+	}
+	2639.4.15 = { 
+	    effect = {
+			add_artifact = ate_compass
 		} 
     }
 }
