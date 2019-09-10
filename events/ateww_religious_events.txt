@@ -381,7 +381,7 @@ narrative_event = {
 	id = ATE_WWW_RELIGION.8
 	title = EVTNAME_pirate_king
 	desc = EVTDESC_pirate_king
-	picture = GFX_evt_coronation
+	picture = GFX_evt_pirate_ship 
 	border = GFX_event_narrative_frame_religion
 
 	major = yes
