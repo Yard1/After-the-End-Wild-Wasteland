@@ -41,6 +41,7 @@ succession_laws = {
 				is_nomadic = no
 			}
 			OR = {
+				title = k_pirate_kingdom
 				holder_scope = { # Viceroyalties can always have turkish succession if muslim
 					any_demesne_title = {
 						is_vice_royalty = yes
@@ -48,8 +49,6 @@ succession_laws = {
 				}
 				AND = {
 					OR = {
-						title = k_pirate_kingdom
-						is_landless_type_title = no
 						is_tribal_type_title = yes
 						temporary = yes
 					}

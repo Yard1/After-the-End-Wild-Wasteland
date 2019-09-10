@@ -1415,6 +1415,7 @@ succession_laws = {
 				title = d_quorum_of_the_twelve
 				title = d_celtic_pagan_reformed
 				title = e_redcoat_dominion
+				title = k_pirate_kingdom
 			}
 			temporary = no
 			OR = {
