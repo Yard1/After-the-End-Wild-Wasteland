@@ -23,4 +23,20 @@ spriteTypes = {
 		name = "GFX_donate_money_to_ursuline_state"
 		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
 	}
+	spriteType = {
+		name = "GFX_expel_enclave"
+		texturefile = "gfx\\interface\\decision_icon_expel_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_donate_money_to_enclave"
+		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_create_supreme_court"
+		texturefile = "gfx/interface/restore_supreme_court.dds"
+	}
+	spriteType = {
+		name = "GFX_restore_supreme_court_in_dc"
+		texturefile = "gfx/interface/restore_supreme_court.dds"
+	}
 }

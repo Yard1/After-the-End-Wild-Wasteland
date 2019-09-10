@@ -97,6 +97,24 @@ decisions = {
 					years = 20
 				}
 			}
+			d_supreme_court = {
+				holder_scope = {
+					c_washington = {
+						grant_title = PREV
+						any_de_jure_vassal_title = {
+							limit = {
+								holder_scope = { 
+									OR = {
+										character = ROOT
+										is_liege_or_above = ROOT
+									}
+								}
+							}
+							grant_title = PREVPREV
+						}
+					}
+				}
+			}
 			hidden_effect = {
 				character_event = { id = 39703 }
 			}

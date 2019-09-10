@@ -566,7 +566,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -637,6 +637,12 @@ character_event = {
 				culture_group = caribbanglo
 				culture_group = antillais
 				culture_group = laurentian
+			}
+		}
+		modifier = {
+			factor = 2
+			d_knights_of_columbus = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -784,7 +790,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_knights_of_columbus = {
@@ -807,6 +813,12 @@ character_event = {
 				holder_scope = {
 					realm_size = 5
 				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_knights_of_columbus = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -1156,7 +1168,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -1215,6 +1227,24 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 3.0 # Prefer Knights of Columbus
+			NOR = {
+				culture = tuskegean
+				culture = motowner
+				culture = gullah
+				culture = creole
+				culture_group = caribbanglo
+				culture_group = antillais
+				culture_group = laurentian
+			}
+		}
+		modifier = {
+			factor = 2
+			d_knights_of_peter_claver = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -1421,7 +1451,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_knights_of_peter_claver = {
@@ -1452,6 +1482,12 @@ character_event = {
 				holder_scope = {
 					realm_size = 5
 				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_knights_of_peter_claver = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -2293,7 +2329,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -2348,6 +2384,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_oppenheimer = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -2492,7 +2534,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_oppenheimer = {
@@ -2515,6 +2557,12 @@ character_event = {
 				holder_scope = {
 					realm_size = 5
 				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_oppenheimer = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -2740,7 +2788,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -2799,6 +2847,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			event_target:ursuline_order = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -2961,6 +3015,49 @@ character_event = {
 		}
 	}
 	
+	has_dlc = "Sons of Abraham"
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.5
+			d_st_ursulas_chosen = {
+				holder_scope = {
+					NOT = { demesne_size = 1 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			d_st_ursulas_chosen = {
+				holder_scope = {
+					NOT = { demesne_size = 2 }
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			d_st_ursulas_chosen = {
+				holder_scope = {
+					num_of_count_titles = 1
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			d_st_ursulas_chosen = {
+				holder_scope = {
+					realm_size = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_st_ursulas_chosen = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
+			}
+		}
+	}
+
 	immediate = {
 		random_demesne_province = {
 			limit = {
@@ -3724,7 +3821,17 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
+		modifier = {
+			factor = 0.75
+			liege = {
+				society_member_of = the_assassins
+			}
+		}
+		modifier = {
+			factor = 0.25
+			society_member_of = the_assassins
+		}
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -3779,6 +3886,13 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { society_member_of = the_assassins }
+			d_men_in_black = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -3918,10 +4032,7 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
-			port = yes
 		}
-		
-		
 		
 		NOT = { has_character_modifier = expelled_d_hashshashin }
 		NOT = {
@@ -3933,7 +4044,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_men_in_black = {
@@ -3958,12 +4069,21 @@ character_event = {
 				}
 			}
 		}
+		modifier = {
+			factor = 2
+			NOT = { society_member_of = the_assassins }
+			d_men_in_black = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
+			}
+		}
 	}
 	
 	immediate = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
+			}
+			preferred_limit = {
 				port = yes
 			}
 			preferred_limit = {
@@ -4251,7 +4371,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -4310,6 +4430,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_fh = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -4493,7 +4619,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_fh = {
@@ -4524,6 +4650,12 @@ character_event = {
 				holder_scope = {
 					realm_size = 5
 				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_fh = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -5040,7 +5172,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -5099,6 +5231,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_national_cathedral = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -5290,7 +5428,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_national_cathedral = {
@@ -5321,6 +5459,12 @@ character_event = {
 				holder_scope = {
 					realm_size = 5
 				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_national_cathedral = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -5795,7 +5939,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -6045,7 +6189,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_lebanon_brethren = {
@@ -6511,7 +6655,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -6570,6 +6714,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_judah_lions = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -6754,7 +6904,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_judah_lions = {
@@ -6785,6 +6935,12 @@ character_event = {
 				holder_scope = {
 					realm_size = 5
 				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_judah_lions = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -7218,7 +7374,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -7277,6 +7433,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_shomrim = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -7468,7 +7630,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_zealots = {
@@ -7499,6 +7661,12 @@ character_event = {
 				holder_scope = {
 					realm_size = 5
 				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_shomrim = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -7799,7 +7967,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -7858,6 +8026,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_fm = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -8042,7 +8216,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_fm = {
@@ -8073,6 +8247,12 @@ character_event = {
 				holder_scope = {
 					realm_size = 5
 				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_fm = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -8529,7 +8709,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -8588,6 +8768,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_flaming_sword = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -8771,7 +8957,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_flaming_sword = {
@@ -8802,6 +8988,12 @@ character_event = {
 				holder_scope = {
 					realm_size = 5
 				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_flaming_sword = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -9257,7 +9449,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -9316,6 +9508,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_midwestern_brotherhood = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -9506,7 +9704,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_midwestern_brotherhood = {
@@ -9537,6 +9735,12 @@ character_event = {
 				holder_scope = {
 					realm_size = 5
 				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_midwestern_brotherhood = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -9991,7 +10195,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -10050,6 +10254,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_keepers_of_the_green_peace = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -10233,7 +10443,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_keepers_of_the_green_peace = {
@@ -10264,6 +10474,12 @@ character_event = {
 				holder_scope = {
 					realm_size = 5
 				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_keepers_of_the_green_peace = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -10717,7 +10933,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -10776,6 +10992,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_nauvoo_legion = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -10952,6 +11174,12 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
+			OR = {
+				region = world_rockies
+				region = world_southwest
+				region = world_northeast
+				region = world_west_coast
+			}
 		}
 		
 		
@@ -10965,7 +11193,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_nauvoo_legion = {
@@ -10998,12 +11226,24 @@ character_event = {
 				}
 			}
 		}
+		modifier = {
+			factor = 2
+			d_nauvoo_legion = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
+			}
+		}
 	}
 	
 	immediate = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
+				OR = {
+					region = world_rockies
+					region = world_southwest
+					region = world_northeast
+					region = world_west_coast
+				}
 			}
 			preferred_limit = {
 				any_province_holding = {
@@ -11295,7 +11535,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -11354,6 +11594,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_oto = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -11537,7 +11783,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_oto = {
@@ -11568,6 +11814,12 @@ character_event = {
 				holder_scope = {
 					realm_size = 5
 				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_oto = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -12035,7 +12287,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -12094,6 +12346,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_masked_knights = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 #		modifier = {
@@ -12285,7 +12543,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_masked_knights = {
@@ -12316,6 +12574,12 @@ character_event = {
 				holder_scope = {
 					realm_size = 5
 				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_masked_knights = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -12786,7 +13050,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -12845,6 +13109,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_order_of_brotherhood = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 #		modifier = {
@@ -13044,7 +13314,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_order_of_brotherhood = {
@@ -13075,6 +13345,12 @@ character_event = {
 				holder_scope = {
 					realm_size = 5
 				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_order_of_brotherhood = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -13548,7 +13824,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -13607,6 +13883,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_st_pats = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -13804,7 +14086,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_st_pats = {
@@ -13837,12 +14119,25 @@ character_event = {
 				}
 			}
 		}
+		modifier = {
+			factor = 2
+			d_st_pats = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
+			}
+		}
 	}
 	
 	immediate = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
+				OR = {
+					region = world_eastern_canada
+					region = world_central_canada
+					region = world_northeast
+					region = world_norselands
+					region = world_rustlands
+				}
 			}
 			preferred_limit = {
 				any_province_holding = {
@@ -14270,6 +14565,12 @@ character_event = {
 			has_character_flag = expel_american_legion_check
 		}
 		text = expel_american_legion
+	}
+	title = { # Enclave
+		trigger = {
+			has_character_flag = expel_enclave_check
+		}
+		text = expel_enclave
 	}
 	title = { # Sons of Kaleva
 		trigger = {
@@ -14834,7 +15135,7 @@ character_event = {
 			d_american_legion = {
 				holder_scope = {
 					character_event = {
-						id = NewHolyOrders.30
+						id = NewHolyOrders.29
 					}
 				}
 			}
@@ -14844,6 +15145,36 @@ character_event = {
 				inherit = yes
 			}
 			clr_character_flag = expel_american_legion_check
+		}
+	}
+	option = { # The Enclave
+		trigger = {
+			has_character_flag = expel_enclave
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_enclave = {
+				holder_scope = {
+					character_event = {
+						id = NewHolyOrders.42
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_enclave
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_enclave
 		}
 	}
 	option = { # Sons of Kaleva

@@ -37,6 +37,15 @@ d_enclave = {
 	
 	culture = chicagoan
 	religion = americanist
+
+	allow = {
+		primary_title = {
+			OR = {
+				region = world_rustlands
+				region = world_northeast
+			}
+		}
+	}
 	
 	holy_order = yes
 	landless = yes
@@ -44,6 +53,8 @@ d_enclave = {
 	independent = yes
 	strength_growth_per_century = 1.0
 	monthly_income = 3
+
+	hire_range = 100
 
 	mercenary_type = d_steel_brotherhood_composition
 }

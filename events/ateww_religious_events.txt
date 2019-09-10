@@ -28,7 +28,7 @@ character_event = {
 	only_playable = yes
 	
 	option = {
-		name = EVTOPTA_SOA_4200
+		name = EVTOPTA_ATE_WWW_RELIGION_1
 		trigger = {
 			religion = hamiltonian
 		}
@@ -116,7 +116,7 @@ character_event = {
 	only_playable = yes
 	
 	option = {
-		name = EVTOPTA_SOA_4200
+		name = EVTOPTA_ATE_WWW_RELIGION_1
 		trigger = {
 			religion = hamiltonian
 		}

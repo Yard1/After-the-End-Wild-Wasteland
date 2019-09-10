@@ -77,6 +77,7 @@ restore_supreme_court_in_dc;Restore the Supreme Court in Washington;;;;;;;;;;;;;
 restore_supreme_court_in_dc_desc;The Chief Justice has lost control of Washington, but it is within my power to restore the Capital to him!;;;;;;;;;;;;;x
 EVTDESC_ATE_WWW_RELIGION_1_A;Washington, for centuries the capitol of the United States, is in Madisonian hands. This has given me an opportunity to restore the Supreme Court to its rightful place, so that it may guide all patriots, as Madison wanted.;;;;;;;;;;;;;x
 EVTDESC_ATE_WWW_RELIGION_1_B;Washington, for centuries the capitol of the United States, is in Madisonian hands. [From.GetTitledFirstName] has therefore seen fit to restore the Supreme Court to its rightful place, claiming that it is Madison's will.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_RELIGION_1;Et Pluribus Unum!;;;;;;;;;;;;;
 EVTDESC_ATE_WWW_RELIGION_3_A;I have granted Washington to its rightful ruler, so that the Chief Justice may adjudicate in the building of the Supreme Court. The Chief Justice shall soon take up [d_supreme_court.GetHerHis] abode in the offices historically occupied by [d_supreme_court.GetHerHis] pre-Calamity predecessors.;;;;;;;;;;;;;x
 EVTDESC_ATE_WWW_RELIGION_3_B;[From.GetTitledFirstName] has granted Washington to its rightful ruler, so that the Chief Justice may adjudicate in the building of the Supreme Court. The Chief Justice shall soon take up [d_supreme_court.GetHerHis] abode in the offices historically occupied by [d_supreme_court.GetHerHis] pre-Calamity predecessors.;;;;;;;;;;;;;x
 title_hamiltonian_justice;Justice;;;;;;;;;;;;;x
@@ -186,23 +187,18 @@ d_forscom_adj;Supreme;;;;;;;;;;;;;x
 GENERAL_OF_ARMY;Supreme Allied Commander;;;;;;;;;;;;;x
 GENERAL_OF_ARMY_FOA;Sir;;;;;;;;;;;;;x
 
-d_american_legion;American Legion;;;;;;;;;;;;;x
-d_american_legion_adj;Legionary;;;;;;;;;;;;;x
-LEGATE;Legate;;;;;;;;;;;;;x
-LEGATE_FOA;Sir;;;;;;;;;;;;;x
-
 devote_of_macarthur;Devotee Of MacArthur;;;;;;;;;;;;;x
-devote_of_macarthur_desc;This character has chosen to become a devotee of General Douglas MacArthur - The Generalissimo;;;;;;;;;;;;;x
+devote_of_macarthur_desc;This character has chosen to become a devotee of General Douglas MacArthur - The Generalissimo.;;;;;;;;;;;;;x
 devote_of_sherman;Devotee Of Sherman;;;;;;;;;;;;;x
-devote_of_sherman_desc;This character has chosen to become a devotee of General William T. Sherman - The Scourge Of The Founders;;;;;;;;;;;;;x
+devote_of_sherman_desc;This character has chosen to become a devotee of General William T. Sherman - The Scourge Of The Founders.;;;;;;;;;;;;;x
 devote_of_patton;Devotee Of Patton;;;;;;;;;;;;;x
-devote_of_patton_desc;This character has chosen to become a devotee of General George Patton - The Bloody;;;;;;;;;;;;;x
+devote_of_patton_desc;This character has chosen to become a devotee of General George Patton - The Bloody.;;;;;;;;;;;;;x
 devote_of_custer;Devotee Of Custer;;;;;;;;;;;;;x
-devote_of_custer_desc;This character has chosen to become a devotee of General George A. Custer - The Slayer Of Redskins;;;;;;;;;;;;;x
+devote_of_custer_desc;This character has chosen to become a devotee of General George A. Custer - The Slayer Of Redskins.;;;;;;;;;;;;;x
 devote_of_lee;Devotee Of Lee;;;;;;;;;;;;;x
-devote_of_lee_desc;This character has chosen to become a devotee of General Robert E. Lee - The Redeemed;;;;;;;;;;;;;x
+devote_of_lee_desc;This character has chosen to become a devotee of General Robert E. Lee - The Redeemed.;;;;;;;;;;;;;x
 devotee_of_butler;Devotee Of Butler;;;;;;;;;;;;;x
-devotee_of_butler_desc;This character has chosen to become a devotee of General Smedley Butler - The Marine;;;;;;;;;;;;;x
+devotee_of_butler_desc;This character has chosen to become a devotee of General Smedley Butler - The Marine.;;;;;;;;;;;;;x
 
 TXT_macarthur;You shall devote yourself to emulating General §YMacArthur§!. This Decision cannot be reversed.;;;;;;;;;;;;;x
 TXT_sherman;You shall devote yourself to emulating General §YSherman§!. This Decision cannot be reversed.;;;;;;;;;;;;;x
@@ -263,7 +259,3 @@ emperor_libertarian;Commander-in-Chief;;;;;;;;;;;;;x
 emperor_female_libertarian;Commander-in-Chief;;;;;;;;;;;;;x
 
 # Americanists
-d_enclave;Enclave;;;;;;;;;;;;;x
-d_enclave_adj;Enclave;;;;;;;;;;;;;x
-COMMANDER;Commander;;;;;;;;;;;;;x
-COMMANDER_FOA;Sir;;;;;;;;;;;;;x

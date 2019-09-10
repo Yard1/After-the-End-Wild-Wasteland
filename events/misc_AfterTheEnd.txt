@@ -125,11 +125,13 @@ character_event = {
 			remove_trait = craven
 			remove_trait = weak
 			remove_trait = clubfooted
+			add_trait = shieldmaiden
 			#character_event = { id = misc.4 } # Physique
 			ROOT = {
 				any_demesne_title = { gain_title = PREVPREV }
 			}
-			primary_title = { add_law = enatic_succession }
+			character_event = { id = misc.6 }
+			character_event = { id = miscATEWW.1 }
 		}
 	}
 }
@@ -10937,6 +10939,15 @@ character_event = {
 					character_event = { id = misc.8 }
 				}
 
+				# nancy harts
+				if = {
+					limit = {
+						has_landed_title = d_nancy_harts
+						NOT = { current_heir = { is_female = yes } }
+					}
+					character_event = { id = misc.2 }
+				}
+
 				# Female priests and holy orders
 				if = {
 					limit = {
@@ -10949,6 +10960,24 @@ character_event = {
 					}
 					character_event = { id = misc.6 }
 					character_event = { id = miscATEWW.2 }
+				}
+
+				if = {
+					limit = {
+						is_ruler = yes
+						OR = {
+							mercenary = yes
+							holy_order = yes
+						}
+						primary_title = { has_law = true_cognatic_succession }
+					}
+					any_realm_character = {
+						limit = {
+							dynasty = NONE
+							is_female = no
+						}
+						character_event = { id = miscATEWW.5 }
+					}
 				}
 
 				if = {
@@ -11103,6 +11132,26 @@ character_event = {
 					}
 				}
 			}
+			AND = {
+				mercenary = yes
+				OR = {
+					AND = {
+						OR = {
+							matriarchal_religion = yes
+							primary_title = { title = d_nancy_harts }
+						}
+						NOT = { has_law = enatic_succession }
+					}
+					AND = {
+						gender_equality_trigger = yes
+						NOT = { has_law = true_cognatic_succession }
+					}
+					AND = {
+						gender_equality_trigger = no
+						NOT = { has_law = agnatic_succession }
+					}
+				}
+			}
 		}
 	}
 	option = {
@@ -11189,7 +11238,9 @@ character_event = {
 			}
 		}
 		else_if = {
-			limit = { holy_order = yes }
+			limit = { 
+				holy_order = yes 
+			}
 			log = "misc.6: [Root.GetBestName], [Root.Religion.GetName], holy order"
 			if = {
 				limit = {
@@ -11295,6 +11346,123 @@ character_event = {
 			else_if = {
 				limit = {
 					equal_religion = yes
+				}
+				primary_title = { add_law = true_cognatic_succession log = "misc.6: set true_cognatic_succession in [This.GetName]" }
+			}
+			else = {
+				primary_title = { add_law = agnatic_succession log = "misc.6: set agnatic_succession in [This.GetName]" }
+			}
+			character_event = { id = miscATEWW.2 }
+		}
+		else_if = {
+			limit = { 
+				mercenary = yes
+			}
+			log = "misc.6: [Root.GetBestName], [Root.Religion.GetName], holy order"
+			if = {
+				limit = {
+					OR = {
+						matriarchal_religion = yes
+						primary_title = { title = d_nancy_harts }
+					}
+				}
+				primary_title = { add_law = enatic_succession log = "misc.6: set enatic_succession in [This.GetName]" }
+			}
+			else_if = {
+				limit = {
+					gender_equality_trigger = yes
+				}
+				primary_title = { add_law = true_cognatic_succession log = "misc.6: set true_cognatic_succession in [This.GetName]" }
+			}
+			else = {
+				primary_title = { add_law = agnatic_succession log = "misc.6: set agnatic_succession in [This.GetName]" }
+			}
+			if = {
+				limit = {
+					OR = {
+						matriarchal_religion = yes
+						primary_title = { title = d_nancy_harts }
+					}
+					is_female = no
+				}
+				create_random_soldier = {
+					female = yes
+					religion = ROOT
+					random_traits = yes
+				}
+				new_character = {
+					#character_event = { id = misc.3 } # Diversity
+					remove_trait = craven
+					remove_trait = weak
+					remove_trait = clubfooted
+					#character_event = { id = misc.4 } # Physique
+					log = "misc.6: [Root.GetBestName], [Root.Religion.GetName], spawn new - [This.GetBestName]"
+					ROOT = {
+						any_demesne_title = { gain_title = PREVPREV }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					gender_equality_trigger = yes
+					is_female = no
+				}
+				random_list = {
+					50 = {}
+					50 = {
+						create_random_soldier = {
+							female = yes
+							religion = ROOT
+							random_traits = yes
+						}
+						new_character = {
+							#character_event = { id = misc.3 } # Diversity
+							remove_trait = craven
+							remove_trait = weak
+							remove_trait = clubfooted
+							#character_event = { id = misc.4 } # Physique
+							log = "misc.6: [Root.GetBestName], [Root.Religion.GetName], spawn new - [This.GetBestName]"
+							ROOT = {
+								any_demesne_title = { gain_title = PREVPREV }
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					gender_equality_trigger = no
+					is_female = yes
+				}
+				create_random_soldier = {
+					female = no
+					religion = ROOT
+					random_traits = yes
+				}
+				new_character = {
+					#character_event = { id = misc.3 } # Diversity
+					remove_trait = craven
+					remove_trait = weak
+					remove_trait = clubfooted
+					#character_event = { id = misc.4 } # Physique
+					log = "misc.6: [Root.GetBestName], [Root.Religion.GetName], spawn new - [This.GetBestName]"
+					ROOT = {
+						any_demesne_title = { gain_title = PREVPREV }
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						matriarchal_religion = yes
+						primary_title = { title = d_nancy_harts }
+					}
+				}
+				primary_title = { add_law = enatic_succession log = "misc.6: set enatic_succession in [This.GetName]" }
+			}
+			else_if = {
+				limit = {
+					gender_equality_trigger = yes
 				}
 				primary_title = { add_law = true_cognatic_succession log = "misc.6: set true_cognatic_succession in [This.GetName]" }
 			}

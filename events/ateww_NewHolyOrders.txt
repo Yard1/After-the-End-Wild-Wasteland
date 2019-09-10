@@ -82,7 +82,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.75
 			liege = {
@@ -151,6 +151,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_libertarian = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -355,7 +361,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_libertarian = {
@@ -392,6 +398,12 @@ character_event = {
 			factor = 1.5
 			ai = yes
 			society_member_of = monastic_order_libertarian # they get quests
+		}
+		modifier = {
+			factor = 2
+			d_libertarian = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
+			}
 		}
 	}
 	
@@ -685,7 +697,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 75
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -740,6 +752,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_minutemen = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -918,7 +936,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		years = 100
+		years = 80
 		modifier = {
 			factor = 0.25
 			trait = zealous
@@ -977,6 +995,12 @@ character_event = {
 			factor = 2
 			any_spouse = {
 				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_american_legion = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
 			}
 		}
 	}
@@ -1096,9 +1120,9 @@ character_event = {
 
 # Notification event when donating money to the the American Legion
 letter_event = {
-	id = NewHolyOrders.24
+	id = NewHolyOrders.23
 	desc = {
-        text = EVTDESC_ATEWWNHO_24
+        text = EVTDESC_ATEWWNHO_23
         trigger = {
 			NOT = {
 				has_alternate_start_parameter = {
@@ -1128,7 +1152,7 @@ letter_event = {
 
 # The Grand Master humbly requests the right to build a castle in your demesne
 character_event = {
-	id = NewHolyOrders.25
+	id = NewHolyOrders.24
 	hide_window = yes
 	
 	min_age = 16
@@ -1152,6 +1176,10 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
+			OR = {
+				region = world_rustlands
+				region = world_northeast
+			}
 		}
 		
 		
@@ -1165,7 +1193,7 @@ character_event = {
 	
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
-		months = 240
+		months = 200
 		modifier = {
 			factor = 0.5
 			d_american_legion = {
@@ -1198,12 +1226,22 @@ character_event = {
 				}
 			}
 		}
+		modifier = {
+			factor = 2
+			d_american_legion = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
+			}
+		}
 	}
 	
 	immediate = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
+				OR = {
+					region = world_rustlands
+					region = world_northeast
+				}
 			}
 			preferred_limit = {
 				any_province_holding = {
@@ -1214,14 +1252,14 @@ character_event = {
 				religion = ROOT
 			}
 			province_event = {
-				id = NewHolyOrders.26
+				id = NewHolyOrders.25
 			}
 		}
 	}
 }
 
 province_event = {
-	id = NewHolyOrders.26
+	id = NewHolyOrders.25
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -1230,7 +1268,7 @@ province_event = {
 		d_american_legion = {
 			holder_scope = {
 				character_event = {
-					id = NewHolyOrders.27
+					id = NewHolyOrders.26
 				}
 			}
 		}
@@ -1238,7 +1276,7 @@ province_event = {
 }
 
 character_event = {
-	id = NewHolyOrders.27
+	id = NewHolyOrders.26
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -1246,16 +1284,16 @@ character_event = {
 	immediate = {
 		FROMFROM = {
 			letter_event = {
-				id = NewHolyOrders.28
+				id = NewHolyOrders.27
 			}
 		}
 	}
 }
 
 letter_event = {
-	id = NewHolyOrders.28
+	id = NewHolyOrders.27
 	desc = {
-        text = EVTDESC_ATEWWNHO_28
+        text = EVTDESC_ATEWWNHO_27
         trigger = {
 			NOT = {
 				has_alternate_start_parameter = {
@@ -1290,7 +1328,7 @@ letter_event = {
 		
 		hidden_tooltip = {
 			FROMFROM = {
-				province_event = { id = NewHolyOrders.29 }
+				province_event = { id = NewHolyOrders.28 }
 			}
 			remove_character_modifier = expelled_d_american_legion
 		}
@@ -1311,8 +1349,8 @@ letter_event = {
 
 # Castle has been erected
 province_event = {
-	id = NewHolyOrders.29
-	desc = EVTDESC_ATEWWNHO_29
+	id = NewHolyOrders.28
+	desc = EVTDESC_ATEWWNHO_27
 	picture = GFX_evt_castle_construction
 	border = GFX_event_normal_frame_religion
 	
@@ -1335,7 +1373,584 @@ province_event = {
 
 # Ping event when expelling the American Legion
 character_event = {
+	id = NewHolyOrders.29
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		any_title_under = {
+			limit = {
+				tier = BARON
+				location = {
+					owner = {
+						OR = {
+							character = FROM
+							is_liege_or_above = FROM
+						}
+					}
+				}
+			}
+			usurp_title = FROM
+		}
+	
+		FROM = {
+			letter_event = {
+				id = NewHolyOrders.30
+			}
+		}
+		
+		opinion = {
+			who = FROM
+			modifier = opinion_expelled_from_realm
+		}
+	}
+}
+
+# Notification event when expelling the American Legion
+letter_event = {
 	id = NewHolyOrders.30
+	desc = {
+        text = EVTDESC_ATEWWNHO_30
+        trigger = {
+			NOT = {
+				has_alternate_start_parameter = {
+					key = religion_names
+					value = random
+				}
+			}
+        }
+    }
+	desc = {
+        text = HOLY_ORDER_EXPEL_ALT
+        trigger = {
+			has_alternate_start_parameter = {
+				key = religion_names
+				value = random
+			}
+        }
+    }
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTB_SOA_1061
+	}
+}
+
+########################################
+# The Enclave
+########################################
+
+# The son of a ruler volunteers to join the Enclave
+character_event = {
+	id = NewHolyOrders.31
+	hide_window = yes
+	
+	only_men = yes
+	min_age = 16
+	max_age = 45
+	only_capable = yes
+	prisoner = no
+	religion_group = oldworld
+	
+	trigger = {
+		is_ruler = no
+		d_enclave = {
+			holy_order_can_PREV_join = yes
+		}
+		
+		martial = 5
+				
+		OR = {
+			father_even_if_dead = {
+				primary_title = { higher_tier_than = BARON }
+			}
+			mother_even_if_dead = {
+				primary_title = { higher_tier_than = BARON }
+			}
+		}
+		
+		liege = {
+			holy_order = no
+            OR = {
+                religion = americanist
+                religion = hamiltonian
+                religion = jeffersonian
+                religion = libertarian
+            }
+			liege = {
+				holy_order = no
+			}
+		}
+		
+		
+		
+		NOT = { has_character_modifier = expelled_d_enclave }
+		NOT = {
+			any_liege = {
+				has_character_modifier = expelled_d_enclave
+			}
+		}
+
+		OR = {
+			AND = {
+				is_female = no
+				NOT = {
+					any_spouse = {
+						OR = {
+							is_landed = yes
+							AND = {
+								is_pregnant = yes
+								father_of_unborn = { character = ROOT } # Won't happen if spouse is pregnant with non-bastard child
+							}
+						}
+					}
+				}
+			}
+			AND = {
+				is_female = yes
+				NOR = {
+					is_landed = yes
+					is_pregnant = yes #Simply won't join if pregnant
+				}
+			}
+		}
+	}
+	
+	has_dlc = "Sons of Abraham"
+	mean_time_to_happen = {
+		years = 80
+		modifier = {
+			factor = 0.25
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.5
+			trait = celibate
+		}
+		modifier = {
+			factor = 0.5
+			trait = homosexual
+		}
+		modifier = {
+			factor = 0.7
+			trait = content
+		}
+		modifier = {
+			factor = 0.75
+			trait = chaste
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { age = 25 }
+		}
+		modifier = {
+			factor = 1.5
+			trait = slothful
+		}
+		modifier = {
+			factor = 2.0
+			trait = lustful
+		}
+		modifier = {
+			factor = 2.0
+			trait = cynical
+		}
+		modifier = {
+			factor = 2.0
+			trait = hedonist
+		}
+		modifier = {
+			factor = 2.0
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2.0
+			any_heir_title = {
+				always = yes
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_primary_heir = yes
+		}
+		modifier = {
+			factor = 2
+			any_spouse = {
+				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_enclave = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
+			}
+		}
+	}
+	
+	immediate = {
+		liege = {
+			character_event = {
+				id = NewHolyOrders.32
+			}
+		}
+	}
+}
+
+# Son or brother asks to join the Enclave
+character_event = {
+	id = NewHolyOrders.32
+	desc = EVTDESC_ATEWWNHO_32
+	picture = GFX_evt_crusaders
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SOA_1031 # Agree
+		ai_chance = {
+			factor = 100
+		}
+		
+		if = {
+			limit = {
+				religion = FROM
+			}
+			piety = 100
+		}
+		
+		FROM = {
+			character_event = {
+				id = NewHolyOrders.33
+				tooltip = EVTTOOLTIP_ATEWWNHO_32
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_SOA_1031 # Refuse
+		
+		if = {
+			limit = {
+				religion = FROM
+			}
+			piety = -100
+		}
+		
+		FROM = {
+			character_event = {
+				id = NewHolyOrders.21
+				tooltip = EVTTOOLTIP_SOA_1033
+			}
+		}
+	}
+}
+
+# Son or brother joins the the Enclave
+character_event = {
+	id = NewHolyOrders.33
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		d_enclave = {
+			holder_scope = {
+				save_event_target_as = order_target
+				ROOT = {
+					character_event = { id = SoA.2864 }
+				}
+			}
+		}
+	}
+}
+
+# Liege refuses request to join the the Enclave
+character_event = {
+	id = NewHolyOrders.34
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		opinion = {
+			who = FROM
+			modifier = opinion_refused_request_holy_order
+		}
+	}
+}
+
+# Ping event when donating money to the the Enclave
+character_event = {
+	id = NewHolyOrders.35
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		wealth = 300
+		FROM = {
+			letter_event = {
+				id = NewHolyOrders.36
+			}
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_generous_donation
+		}
+	}
+}
+
+# Notification event when donating money to the the Enclave
+letter_event = {
+	id = NewHolyOrders.36
+	desc = {
+        text = EVTDESC_ATEWWNHO_36
+        trigger = {
+			NOT = {
+				has_alternate_start_parameter = {
+					key = religion_names
+					value = random
+				}
+			}
+        }
+    }
+	desc = {
+        text = HOLY_ORDER_DONATE_MONEY_ALT
+        trigger = {
+			has_alternate_start_parameter = {
+				key = religion_names
+				value = random
+			}
+        }
+    }
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+	}
+}
+
+# The Grand Master humbly requests the right to build a castle in your demesne
+character_event = {
+	id = NewHolyOrders.37
+	hide_window = yes
+	
+	min_age = 16
+	only_rulers = yes
+	religion_group = oldworld
+	
+	trigger = {
+        d_enclave = {
+			holder_scope = {
+				religion = ROOT
+			}
+		}
+		d_enclave = {
+			holder_scope = {
+				wealth = 300
+				NOT = {
+					realm_size = 10
+				}
+			}
+		}
+		
+		any_demesne_province = {
+			has_empty_holding = yes
+		}
+		
+		
+		NOT = { has_character_modifier = expelled_d_enclave }
+		NOT = {
+			any_liege = {
+				has_character_modifier = expelled_d_enclave
+			}
+		}
+	}
+	
+	has_dlc = "Sons of Abraham"
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.5
+			d_enclave = {
+				holder_scope = {
+					NOT = { demesne_size = 1 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			d_enclave = {
+				holder_scope = {
+					NOT = { demesne_size = 2 }
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			d_enclave = {
+				holder_scope = {
+					num_of_count_titles = 1
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			d_enclave = {
+				holder_scope = {
+					realm_size = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_enclave = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
+			}
+		}
+	}
+	
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				has_empty_holding = yes
+			}
+			preferred_limit = {
+				any_province_holding = {
+					is_holy_site = ROOT
+				}
+			}
+			preferred_limit = {
+				religion = ROOT
+			}
+			province_event = {
+				id = NewHolyOrders.38
+			}
+		}
+	}
+}
+
+province_event = {
+	id = NewHolyOrders.38
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		d_enclave = {
+			holder_scope = {
+				character_event = {
+					id = NewHolyOrders.39
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = NewHolyOrders.39
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROM = {
+			letter_event = {
+				id = NewHolyOrders.40
+			}
+		}
+	}
+}
+
+letter_event = {
+	id = NewHolyOrders.40
+	desc = {
+        text = EVTDESC_ATEWWNHO_40
+        trigger = {
+			NOT = {
+				has_alternate_start_parameter = {
+					key = religion_names
+					value = random
+				}
+			}
+        }
+    }
+	desc = {
+        text = HOLY_ORDER_BUILD_CASTLE_FOR_MONEY_ALT
+        trigger = {
+			has_alternate_start_parameter = {
+				key = religion_names
+				value = random
+			}
+        }
+    }
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SOA_1023 # Agree
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				has_character_modifier = expelled_d_enclave
+			}
+		}
+		
+		hidden_tooltip = {
+			FROMFROM = {
+				province_event = { id = NewHolyOrders.41 }
+			}
+			remove_character_modifier = expelled_d_enclave
+		}
+		
+		piety = 200
+		wealth = 100
+	}
+	
+	option = {
+		name = EVTOPTB_SOA_1153 # Refuse
+		ai_chance = {
+			factor = 20
+		}
+		
+		piety = -100
+	}
+}
+
+# Castle has been erected
+province_event = {
+	id = NewHolyOrders.41
+	desc = EVTDESC_ATEWWNHO_41
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROM = {
+			wealth = -300
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_SOA_1024
+		build_holding = {
+		   type = castle
+		   holder = FROMFROM
+		}
+	}
+}
+
+# Ping event when expelling the Enclave
+character_event = {
+	id = NewHolyOrders.42
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -1369,11 +1984,11 @@ character_event = {
 	}
 }
 
-# Notification event when expelling the American Legion
+# Notification event when expelling the Enclave
 letter_event = {
-	id = NewHolyOrders.31
+	id = NewHolyOrders.43
 	desc = {
-        text = EVTDESC_ATEWWNHO_31
+        text = EVTDESC_ATEWWNHO_43
         trigger = {
 			NOT = {
 				has_alternate_start_parameter = {

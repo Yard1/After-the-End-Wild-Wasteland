@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_evt_pirate_ship"
+		texturefile = "gfx\\event_pictures\\pirate_ship.tga"
+	}
+}

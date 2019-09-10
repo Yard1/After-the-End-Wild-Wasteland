@@ -9,12 +9,16 @@ character_event = {
 	trigger = {
 		FROMFROM = {
 			ai = yes
-			gender_equality_trigger = yes
 			OR = {
 				holy_order = yes
 				is_theocracy = yes
 				mercenary = yes
 				primary_title = { is_landless_type_title = yes }
+			}
+			primary_title = { 
+				NOT = { 
+					has_law = agnatic_succession 
+				}
 			}
 		}
 	}
@@ -30,43 +34,36 @@ character_event = {
 					FROMFROM = { 
 						OR = {
 							holy_order = yes
-							has_landed_title = d_nancy_harts
+							mercenary = yes
 						}
 					}
 				}
+				log = "miscATEWW.1: [FromFrom.GetBestName] is holy order or mercenary"
 				#all female
 				if = {
 					limit = {
 						FROMFROM = {
-							OR = {
-								matriarchal_religion = yes
-								religion = libertarian
-								has_landed_title = d_nancy_harts
+							primary_title = { 
+								OR = {
+									has_law = enatic_succession
+									has_law = enatic_cognatic_succession
+								}
 							}
 						}
 					}
+					log = "miscATEWW.1: [Root.GetBestName] holy order/merc"
 					set_gender = female
 				}
-				else_if = {
+				else = {
 					#60/40
-					limit = {
-						FROMFROM = {
-							equal_religion = yes
-						}
-					}
-					random_list = {
-						60 = {
-
-						}
-						40 = {
-							set_gender = female
-						}
-					}
+					log = "miscATEWW.1: [Root.GetBestName] 60/40 holy order/merc"
+					character_event = { id = miscATEWW.5 }
 				}
 			}
 			else_if = {
 				limit = {
 					OR = {
+						is_priest = yes
 						trait = detached_priest
 						trait = martial_cleric
 						trait = scholarly_theologian
@@ -80,6 +77,7 @@ character_event = {
 							religion_allows_male_temple_holders = no
 						}
 					}
+					log = "miscATEWW.1: [Root.GetBestName] priest"
 					set_gender = female
 				}
 				else_if = {
@@ -89,42 +87,43 @@ character_event = {
 							religion_allows_male_temple_holders = yes
 						}
 					}
-					random_list = {
-						60 = {
-
-						}
-						40 = {
-							set_gender = female
-						}
-					}
+					log = "miscATEWW.1: [Root.GetBestName] 60/40 priest"
+					character_event = { id = miscATEWW.5 }
 				}
 			}
 			else_if = {
 				limit = {
 					FROMFROM = { matriarchal_religion = yes }
 				}
-				random_list = {
-					20 = {
-
-					}
-					80 = {
-						set_gender = female
-					}
-				}
+				log = "miscATEWW.1: [Root.GetBestName] 80/20"
+				set_character_flag = 80_20_female
+				character_event = { id = miscATEWW.5 }
 			}
 			else = {
-				random_list = {
-					60 = {
-
-					}
-					40 = {
-						set_gender = female
-					}
-				}
+				log = "miscATEWW.1: [Root.GetBestName] 60/40"
+				character_event = { id = miscATEWW.5 }
 			}
+		}
+		if = {
+			limit = { is_female = yes }
 			if = {
-				limit = { is_female = yes }
+				limit = {
+					religion = libertarian
+				}
 				give_ROOT_random_female_libertarian_name = yes
+			}
+			else = {
+				random_character = {
+					limit = { 
+						NOT = { character = PREV }
+						is_female = yes
+						culture = ROOT
+					}
+					preferred_limit = {
+						religion = ROOT
+					}
+					ROOT = { copy_name = PREV }
+				}
 			}
 		}
 		if = {
@@ -135,7 +134,31 @@ character_event = {
 		}
 		if = {
 			limit = {
-				FROMFROM = { holy_order = yes }
+				FROMFROM = { has_landed_title = d_nancy_harts }
+				NOT = { has_trait = shieldmaiden }
+				martial = 5
+			}
+			random = {
+				chance = 20
+				modifier = {
+					factor = 2
+					martial = 10
+				}
+				modifier = {
+					factor = 2
+					martial = 20
+				}
+				add_trait = shieldmaiden
+			}
+		}
+		if = {
+			limit = {
+				FROMFROM = { 
+					OR = {
+						holy_order = yes
+						mercenary = yes
+					}
+				}
 			}
 			FROMFROM = {
 				ROOT = { clear_wealth = PREV }
@@ -152,22 +175,34 @@ character_event = {
 	hide_window = yes
 	only_rulers = yes
 	trigger = {
-		holy_order = yes
+		OR = {
+			holy_order = yes
+			mercenary = yes
+		}
 	}
 	
 	option = {
 		log = "miscATEWW.2: Fire for [Root.GetTitledName] ([Root.Religion.GetName])"
 		if = {
 			limit = {
+				holy_order = yes
 				primary_title = {
 					holy_order_is_celibate = yes
 				}
+				NOT = { has_trait = celibate }
 			}
 			spouse = {
 				remove_spouse = spouse
 				character_event = { id = SoA.2863 }
 			}
 			add_trait = celibate
+		}
+		if = {
+			limit = {
+				has_landed_title = d_nancy_harts
+				NOT = { has_trait = shieldmaiden }
+			}
+			add_trait = shieldmaiden
 		}
 		if = {
 			limit = { has_landed_title = d_men_in_black }
@@ -311,11 +346,14 @@ character_event = {
 		any_realm_character = {
 			if = {
 				limit = {
+					holy_order = yes
 					ROOT = {
+						holy_order = yes
 						primary_title = {
 							holy_order_is_celibate = yes
 						}
 					}
+					NOT = { has_trait = celibate }
 				}
 				spouse = {
 					remove_spouse = spouse
@@ -325,6 +363,7 @@ character_event = {
 			}
 			if = {
 				limit = {
+					holy_order = yes
 					ROOT = {
 						has_landed_title = d_men_in_black
 						OR = {
@@ -382,6 +421,7 @@ character_event = {
 			}
 			else_if = {
 				limit = {
+					holy_order = yes
 					ROOT = {
 						has_landed_title = d_libertarian
 						religion = libertarian
@@ -496,3 +536,64 @@ character_event = {
 	
 }
 
+character_event = {
+	id = miscATEWW.4
+	desc = "Make Trump pop in lol"
+	is_triggered_only = yes
+	hide_window = yes
+	is_patrician = yes
+	trigger = {
+		NOT = { has_global_flag = miscATEWW_4_fired }
+		liege = { has_landed_title = d_new_york }
+		NOT = { current_heir = { always = yes } }
+		c_2000060 = { 
+			is_patrician = no
+			is_alive = yes
+			is_incapable = no
+			prisoner = no
+			liege = { has_landed_title = d_new_york }
+		}
+	}
+	option = {
+		c_2000060 = {
+			create_family_palace = yes
+		}		
+		set_global_flag = miscATEWW_4_fired
+	}
+	
+}
+
+character_event = {
+	id = miscATEWW.5
+	desc = "Make female - put it here for better randomness"
+	is_triggered_only = yes
+	hide_window = yes
+	only_men = yes
+	option = {
+		set_gender = female
+		random_character = {
+			limit = { 
+				NOT = { character = PREV }
+				is_female = yes
+				culture = ROOT
+			}
+			preferred_limit = {
+				religion = ROOT
+			}
+			ROOT = { copy_name = PREV }
+		}
+		clr_character_flag = 80_20_female
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 2.667
+				has_character_flag = 80_20_female
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 40
+		}
+	}
+}

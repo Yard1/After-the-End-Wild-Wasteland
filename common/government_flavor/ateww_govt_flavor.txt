@@ -6,3 +6,16 @@ government_flavor = {
 		has_landed_title = d_supreme_court
 	}
 }
+
+government_flavor = {
+	name = gov_piracy
+	graphics = GFX_evt_capitol_building
+	priority = 6
+	trigger = {
+		religious_group = pirate
+		OR = {
+			has_law = succ_brethren_elective
+			has_law = succ_open_elective
+		}
+	}
+}

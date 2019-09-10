@@ -49,3 +49,7 @@ expelled_d_libertarian = {
 expelled_d_american_legion = {
 	icon = 35
 }
+
+expelled_d_enclave = {
+	icon = 35
+}

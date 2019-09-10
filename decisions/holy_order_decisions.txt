@@ -477,7 +477,46 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.5 # Slow it down
+				factor = 0.1 # Slow it down
+			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_knights_of_columbus = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_knights_of_columbus = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
 			}
 		}
 	}
@@ -584,6 +623,45 @@ decisions = {
 			modifier = {
 				factor = 0.1 # Slow it down
 			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_knights_of_peter_claver = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_knights_of_peter_claver = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -675,6 +753,45 @@ decisions = {
 			modifier = {
 				factor = 0.1 # Slow it down
 			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_st_ursulas_chosen = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_st_ursulas_chosen = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -765,6 +882,45 @@ decisions = {
 			factor = 1
 			modifier = {
 				factor = 0.1 # Slow it down
+			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				k_ursuline_state = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				k_ursuline_state = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
 			}
 		}
 	}
@@ -858,6 +1014,45 @@ decisions = {
 			modifier = {
 				factor = 0.1 # Slow it down
 			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_fh = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_fh = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -943,6 +1138,45 @@ decisions = {
 			modifier = {
 				factor = 0.1 # Slow it down
 			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_men_in_black = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_men_in_black = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -1024,6 +1258,45 @@ decisions = {
 			factor = 1
 			modifier = {
 				factor = 0.1 # Slow it down
+			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_oppenheimer = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_oppenheimer = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1474,11 +1747,49 @@ decisions = {
 		revoke_allowed = {
 			always = no
 		}
-		
 		ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 0.1 # Slow it down
+			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_national_cathedral = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_national_cathedral = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1632,6 +1943,45 @@ decisions = {
 			modifier = {
 				factor = 0.1 # Slow it down
 			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_lebanon_brethren = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_lebanon_brethren = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -1782,6 +2132,45 @@ decisions = {
 			factor = 1
 			modifier = {
 				factor = 0.1 # Slow it down
+			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_judah_lions = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_judah_lions = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
 			}
 		}
 	}
@@ -1935,6 +2324,45 @@ decisions = {
 			modifier = {
 				factor = 0.1 # Slow it down
 			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_shomrim = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_shomrim = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -2087,6 +2515,45 @@ decisions = {
 			modifier = {
 				factor = 0.1 # Slow it down
 			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_fm = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_fm = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -2238,6 +2705,45 @@ decisions = {
 			factor = 1
 			modifier = {
 				factor = 0.1 # Slow it down
+			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_flaming_sword = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_flaming_sword = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
 			}
 		}
 	}
@@ -2393,6 +2899,45 @@ decisions = {
 			modifier = {
 				factor = 0.1 # Slow it down
 			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_midwestern_brotherhood = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_midwestern_brotherhood = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -2544,6 +3089,45 @@ decisions = {
 			factor = 1
 			modifier = {
 				factor = 0.1 # Slow it down
+			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_keepers_of_the_green_peace = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_keepers_of_the_green_peace = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
 			}
 		}
 	}
@@ -2698,6 +3282,45 @@ decisions = {
 			modifier = {
 				factor = 0.1 # Slow it down
 			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_nauvoo_legion = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_nauvoo_legion = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -2848,6 +3471,45 @@ decisions = {
 			factor = 1
 			modifier = {
 				factor = 0.1 # Slow it down
+			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_oto = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_oto = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
 			}
 		}
 	}
@@ -3001,6 +3663,45 @@ decisions = {
 			modifier = {
 				factor = 0.1 # Slow it down
 			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_masked_knights = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_masked_knights = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -3153,6 +3854,45 @@ decisions = {
 			modifier = {
 				factor = 0.1 # Slow it down
 			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_order_of_brotherhood = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_order_of_brotherhood = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -3303,6 +4043,45 @@ decisions = {
 			factor = 1
 			modifier = {
 				factor = 0.1 # Slow it down
+			}
+			modifier = {
+				factor = 2.5
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_st_pats = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_st_pats = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
 			}
 		}
 	}

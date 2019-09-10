@@ -1597,6 +1597,7 @@ succession_laws = {
 gender_laws = {
 	cognatic_succession = {
 		potential = {
+			NOT = { title = d_nancy_harts }
 			holder_scope = {
 				OR = {
 					AND = {
@@ -1605,6 +1606,7 @@ gender_laws = {
 					}
 					has_bloodline_flag = bloodline_effect_cognatic
 				}
+				NOT = { primary_title = { title = d_nancy_harts } }
 			}
 			is_landless_type_title = no
 		}
@@ -1640,6 +1642,7 @@ gender_laws = {
 		female_dynasty_opinion = -5
 	
 		potential = {
+			NOT = { title = d_nancy_harts }
 			holder_scope = {
 				OR = {
 					AND = {
@@ -1707,6 +1710,7 @@ gender_laws = {
 		male_dynasty_opinion = -5
 		
 		potential = { 
+			NOT = { title = d_nancy_harts }
 			holder_scope = {
 				OR = {
 					gender_equality_trigger = yes
@@ -1817,6 +1821,7 @@ gender_laws = {
 						holy_order = yes
 						religion = libertarian
 					}
+					has_landed_title = d_nancy_harts
 				}
 			}
 		}
@@ -1868,6 +1873,7 @@ gender_laws = {
 		female_dynasty_opinion = 5
 		
 		potential = {
+			NOT = { title = d_nancy_harts }
 			holder_scope = {
 				OR = {
 					matriarchal_religion = yes

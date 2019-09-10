@@ -45,6 +45,7 @@ give_ROOT_random_female_libertarian_name = {
 			}
 			random_character = {
 				limit = { 
+					NOT = { character = ROOT }
 					is_female = yes
 					culture = ROOT
 				}
