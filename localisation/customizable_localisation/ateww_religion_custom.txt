@@ -140,3 +140,17 @@ defined_text = {
 		}
 	}
 }
+
+defined_text = {
+    name = GetPirateMonarch
+
+    text = {
+        localisation_key = PIRATE_QUEEN
+        trigger = {
+            is_female = yes
+        }
+    }
+    fallback_text = {
+        localisation_key = PIRATE_KING
+    }
+}

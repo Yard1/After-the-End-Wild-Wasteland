@@ -207,7 +207,6 @@ decisions = {
 	}
 	
 	become_general_of_army = { #Creates FORSCOM
-		only_playable = yes
 		is_high_prio = yes
 		ai_check_interval = 24
 		
@@ -270,6 +269,35 @@ decisions = {
 			modifier = {
 				factor = 0.3 # Slow it down a little
 			}
+		}
+	}
+	
+	become_pirate_king = { #Become the Pirate King/Queen
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			religion = brethren
+			k_pirate_kingdom = { has_holder = no }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			primary_title = { higher_tier_than = COUNT } #only dukes and above can see this one
+		}
+		
+		allow = {
+			primary_title = { higher_tier_than = COUNT }
+			prestige = 3000
+			piety = 1000
+		}
+		
+		effect = {
+		    prestige = -1500
+			piety = -500
+			narrative_event = { id = ATE_WWW_RELIGION.8 }
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
