@@ -300,5 +300,4 @@ decisions = {
 			factor = 1
 		}
 	}
-
 }
