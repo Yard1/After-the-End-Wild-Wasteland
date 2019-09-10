@@ -5,15 +5,16 @@ d_border_patrol = {
 	capital = 1235 # Travis/Austin
 	
 	allow = {
-		primary_title = { 
-		        OR = {
-			        region = world_west_coast
-					region = world_southwest
-					region = world_great_plains
-					region = world_gulf_coast
-				}
-		    }
-		}
+		#primary_title = { 
+		#        OR = {
+		#	        region = world_west_coast
+		#			region = world_southwest
+		#			region = world_great_plains
+		#			region = world_gulf_coast
+		#		}
+		#    }
+		#}
+		culture = texan
 	}
 	
 	culture = texan
