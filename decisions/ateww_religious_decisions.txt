@@ -295,12 +295,11 @@ decisions = {
 		ai_check_interval = 24
 		
 		potential = {
-			religion = brethren
-			k_pirate_kingdom = { has_holder = no }
+			religion = brethren 
+			NOT = { is_title_active = k_pirate_kingdom }
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
-			primary_title = { higher_tier_than = COUNT } #only dukes and above can see this one
 		}
 		
 		allow = {
@@ -312,6 +311,17 @@ decisions = {
 		effect = {
 		    prestige = -1500
 			piety = -500
+			hidden_tooltip = {
+				primary_title = { save_event_target_as = old_primary_title }
+			}
+			activate_title = { title = k_pirate_kingdom status = yes }
+			grant_title = k_pirate_kingdom
+			k_pirate_kingdom = { 
+				hidden_tooltip = {
+					set_preferred_capital = event_target:old_primary_title
+				}
+			}
+			set_global_flag = pirate_king
 			narrative_event = { id = ATE_WWW_RELIGION.8 }
 		}
 		ai_will_do = {

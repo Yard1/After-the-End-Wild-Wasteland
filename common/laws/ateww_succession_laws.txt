@@ -48,6 +48,7 @@ succession_laws = {
 				}
 				AND = {
 					OR = {
+						title = k_pirate_kingdom
 						is_landless_type_title = no
 						is_tribal_type_title = yes
 						temporary = yes

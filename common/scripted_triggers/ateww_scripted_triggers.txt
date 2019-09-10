@@ -119,3 +119,21 @@ can_have_pagan_religion_interpretation = {
 		has_religion_feature = religion_no_leader
 	}
 }
+
+has_religion_with_temporal_head = {
+	OR = {
+		religion = americanist
+		religion = jeffersonian
+		religion = consumerist
+		religion = monetarist
+		religion = rust_cultist
+		religion_group = pirate
+	}
+}
+
+has_religion_temporal_head = {
+	OR = {
+		has_religion_with_temporal_head = yes
+		has_religion_feature = religion_temporal_head
+	}
+}
