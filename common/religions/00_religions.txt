@@ -3163,6 +3163,9 @@ pirate = {
 	playable = yes
 	hostile_within_group = yes
 	
+	ai_convert_same_group = 1 
+	ai_convert_other_group = 1	
+	
 	color = { 0.4 0.2 0.2 }
 	
 	interface_skin = { pirate_interface pagan_interface }
@@ -3186,6 +3189,10 @@ pirate = {
 		
 		scripture_name = THE_CODE
 		priest_title = PRIEST
+		
+		can_excommunicate = yes
+		can_grant_claim = yes
+		can_grant_divorce = yes
 		priests_can_marry = yes
 		allow_rivermovement = yes
 		allow_viking_invasion = yes

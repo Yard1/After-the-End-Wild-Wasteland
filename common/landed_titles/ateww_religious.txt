@@ -66,3 +66,37 @@ d_forscom = {
 	dynasty_title_names = no
 	caliphate = yes
 }
+
+k_pirate_kingdom = {
+	color={ 30 20 15 }
+	color2={ 220 220 0 }
+
+	capital = 1197  # New Providence/Nassau
+
+	
+	title = "PIRATE_KING"
+	title_female = "PIRATE_QUEEN"
+	foa = "PIRATE_KING_FOA"
+	location_ruler_title = yes
+	
+	allow = { 
+		always = no # Only by special decision
+	}
+	
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = brethren
+	
+	religion = brethren
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	short_name = yes
+	
+	assimilate = no # Nothing drifts in or out
+	
+	dynasty_title_names = no
+	caliphate = yes
+}

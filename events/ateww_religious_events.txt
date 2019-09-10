@@ -376,3 +376,47 @@ character_event = {
 		}
 	}
 }
+
+narrative_event = {
+	id = ATE_WWW_RELIGION.8
+	title = EVTNAME_pirate_king
+	desc = EVTDESC_pirate_king
+	picture = GFX_evt_coronation
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = pirate_king }
+	}
+	
+	immediate = {
+		set_global_flag = pirate_king
+		k_pirate_kingdom = { grant_title = ROOT }
+	}
+	
+	option = {
+		name = EVTOPTA_pirate_king
+		trigger = {
+			religion = brethren
+			NOT = { has_landed_title = k_pirate_kingdom }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_pirate_king
+		trigger = {
+			NOT = { religion_group = pirate }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_pirate_king
+		trigger = {
+			religion = brethren
+			has_landed_title = k_pirate_kingdom
+		}
+	}
+}
