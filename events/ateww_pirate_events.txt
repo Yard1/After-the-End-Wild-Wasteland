@@ -251,3 +251,102 @@ narrative_event = {
 		}
 	}
 }
+
+#Viking Trait Gained
+character_event = {
+	id = ATE_WWW_PIRATE.6
+	desc = { 
+		trigger = {
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_viking
+			}
+			is_female = no
+		} 
+		text = EVT_DESC_ATE_WWW_PIRATE_6_VIKING
+	}
+	desc = { 
+		trigger = {
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_pirate
+			}
+			is_female = no
+		} 
+		text = EVT_DESC_ATE_WWW_PIRATE_6
+	}
+	picture = { 
+		trigger = {
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_viking
+			}
+			is_female = no
+		} 
+		picture = GFX_evt_vikings_arriving_oldgods
+	}
+	picture = { 
+		trigger = {
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_viking
+			}
+			is_female = yes
+		} 
+		picture = GFX_evt_norse_tempest
+	}
+	picture = { 
+		trigger = {
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_pirate
+			}
+		} 
+		picture = GFX_evt_pirate_ship
+	}
+	border = GFX_event_normal_frame_war
+		
+	is_triggered_only = yes
+	
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		NOR = { 
+			has_pirate_trait = yes
+			trait = viking
+			trait = ravager
+			trait = seaking
+			trait = sea_queen
+		}
+		any_owned_bloodline = {
+			OR = {
+				has_bloodline_flag = bloodline_viking
+				has_bloodline_flag = bloodline_pirate
+			}
+		}
+	}
+	
+	option = {
+		name = EVT_OPTA_ATE_WWW_PIRATE_6
+		trigger = {
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_pirate
+			}
+		}
+		add_trait = freebooter
+		set_character_flag = acquired_pirate_trait_by_bloodline
+		hidden_tooltip = {
+			set_variable = { which = viking_raids value = 0 }
+		}
+	}
+
+	option = {
+		name = EVT_OPTB_ATE_WWW_PIRATE_6
+		trigger = {
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_viking
+			}
+		}
+		add_trait = viking
+		set_character_flag = acquired_pirate_trait_by_bloodline
+		hidden_tooltip = {
+			set_variable = { which = viking_raids value = 0 }
+		}
+	}
+}

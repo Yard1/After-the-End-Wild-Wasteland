@@ -527,7 +527,7 @@
 
 ### New York ###
 2000060 = {
-	name = Frederic_Frederick
+	name = "Frederick"
 	dynasty = 2029121 # Trump
 	dna = accjhgdbber
 	culture = gothamite
@@ -555,7 +555,7 @@
 	2666.1.11 = {
 		effect={
 			create_random_diplomat = {
-				name = Maria_Mary
+				name = "Mary"
 				dynasty = actually_culture
 				female = yes
 				age = 18

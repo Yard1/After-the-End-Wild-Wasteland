@@ -354,6 +354,13 @@ character_event = {
 			}
 		}
 		any_realm_character = {
+			limit = {
+				prisoner = no
+				OR = {
+					government = ROOT
+					host = { character = ROOT }
+				}
+			}
 			if = {
 				limit = {
 					ROOT = {

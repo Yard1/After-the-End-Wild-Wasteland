@@ -71,3 +71,11 @@ on_wonder_stage_loot_finish = {
 		MNM_ATEWWW.22
 	}
 }
+
+
+# character
+on_adulthood = {
+	events = {
+		ATE_WWW_PIRATE.6
+	}
+}

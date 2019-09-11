@@ -33,3 +33,10 @@ pirate_king_bloodline_desc;Entire cities have been decimated by the raids of [Th
 
 pirate_queen_bloodline;Blackblood;Tempête de Sang;Sturmblut;;Sangre tormentosa;;;;;;;;x
 pirate_queen_bloodline_desc;Entire cities have been decimated by the raids of [This.Founder.GetTitledFirstName], etching [This.Founder.GetHerHis] legacy as one of the most fearsome and ruthless Pirates of [This.Founder.PrimaryTitle.GetName].;Des cités entières ont été décimées par les pillages [This.Founder.Get_du_TitledFirstName], gravant son nom dans le marbre en tant que l'un[This.Founder.Get_E] des pirates les plus redoutables et impitoyables [This.Founder.PrimaryTitle.Get_du_Realm].;Ganze Städte wurden durch die Überfälle von [This.Founder.GetTitledFirstName] niedergemäht, [This.Founder.Getderdie] sein Vermächtnis als eine[This.Founder.GetrMale] der furchterregendsten und rücksichtslosesten Piraten von [This.Founder.PrimaryTitle.GetName] beansprucht.;;Ciudades enteras fueron devastadas por las incursiones de [This.Founder.GetTitledFirstName], grabando su legado como uno de los piratas de [This.Founder.PrimaryTitle.GetName] más terribles y despiadados.;;;;;;;;x
+
+EVT_DESC_ATE_WWW_PIRATE_6;The blood of famous Pirate courses through your veins. All along the coasts, villages tremble as they recall the stories of the fearsome [Root.Founder.GetBestName] - and now, it is time for you to carry on their legacy.;;;;;;;;;;;;;x
+
+EVT_DESC_ATE_WWW_PIRATE_6_VIKING;The blood of famous Viking courses through your veins. All along the coasts, villages tremble as they recall the stories of the fearsome [Root.Founder.GetBestName] - and now, it is time for you to carry on their legacy.;;;;;;;;;;;;;x
+
+EVT_OPTA_ATE_WWW_PIRATE_6;Yarr!;;;;;;;;;;;;;x
+EVT_OPTB_ATE_WWW_PIRATE_6;Loot, maim, burn!;;;;;;;;;;;;;x
