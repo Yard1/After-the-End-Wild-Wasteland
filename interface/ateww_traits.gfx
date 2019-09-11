@@ -1,7 +1,14 @@
 spriteTypes = {
 	spriteType = {
 		name = "GFX_trait_inaug_by_sjudge"
-		texturefile = "gfx/traits/inaug_by_sjudge.tga"
+		texturefile = "gfx/traits/inaug_by_sjudge.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_pirate_king_trait"
+		texturefile = "gfx/traits/pirate_king.dds"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"

@@ -49,7 +49,32 @@ EVTDESC_MNM_ATEWWW_17;Blessed [Root.GetSocietyRank] [Root.GetFirstName].\n\nWe a
 
 monastic_orders_donate_castle;Donate a Castle to [Root.Society.GrandMaster.PrimaryTitle.GetName];;;;;;;;;;;;x
 monastic_orders_donate_castle_desc;The [Root.Society.GrandMaster.GetSocietyRank] has requested that you donate a castle to [Root.Society.GrandMaster.PrimaryTitle.GetName]. This would allow the Holy Order to serve [Root.Religion.GetHighGodNameCap] better - and doing this would greatly increase your standing in [Root.Society.GetName].;;;;;;;;;;;;x
-monastic_orders_donate_castle_desc_tooltip;To complete this mission, activate the Special Title Action §Y'Donate a Castle'§! on any allowed castle holding. You may also build a new castle and donate it.;;;;;;;;;;;;x
+monastic_orders_donate_castle_tooltip;To complete this mission, activate the Special Title Action §Y'Donate a Castle'§! on any allowed castle holding. You may also build a new castle and donate it.;;;;;;;;;;;;x
+
+EVTDESC_MNM_ATEWWW_18_RESTORE;[Root.GetMOGreeting], [Root.GetSocietyRank] [Root.GetFirstName]\n\nThe grand statue of our Lady has been pillaged and desecrated by vile bandits! As the enlightening visage of Lady Liberty falls under your demesne, it is your duty to spare no expense to restore her to her previous state.\n\n[Root.GetMOFarewell],\nSigned, [From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_MNM_ATEWWW_18_UPGRADE;[Root.GetMOGreeting], [Root.GetSocietyRank] [Root.GetFirstName]\n\nOne of our sisters has came up with plans to restore parts of Lady Liberty that have been lost or damaged in the unrest following the Calamity. As the enlightening visage of Lady Liberty falls under your demesne, it is your duty to spare no expense to restore her to her former glory.\n\n[Root.GetMOFarewell],\nSigned, [From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_MNM_ATEWWW_21;Just [Root.GetSocietyRank] [Root.GetFirstName].\n\nWe are eternally grateful for your part in caring for our Lady. She will surely light your way and bless you with her wisdom in reward.\nSigned [From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+
+EVTDESC_MNM_ATEWWW_222_LIBERTARIAN;To damnable [Root.GetTitledFirstName], servant of [Root.Religion.GetRandomEvilGodName]\nBy desecrating our holy Lady Liberty, you have commited a grave sin that will forever haunt you! As of now, you are an enemy of all patriotic Libertarians. May you burn in agnoy, and your possessions turn to ash!\n\nWith anger and sadness,\n\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTDESC_MNM_ATEWWW_222;To damnable [Root.GetTitledFirstName]\nBy desecrating our holy Lady Liberty, you have made yourself an enemy of all upstanding Libertarians. May you feel her righteous wrath soon.\n\nWith anger and sadness,\n\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTOPTA_MNM_ATEWWW_222;I do as I please, [From.GetTitle].;;;;;;;;;;;;;x
+
+EVTDESC_MNM_ATEWWW_24;To [Root.GetSocietyRank] [Root.GetFirstName]\nI have recieved the news of you losing the domain surrounding our Lady with great saddness. In light of this, I must consider your task of caring for the Lady failed.\n\nSigned, [From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;;x
+
+statue_of_liberty_upgraded;Lady Liberty Upgraded;;;;;;;;;;;;;x
+statue_of_liberty_looted;Lady Liberty Looted;;;;;;;;;;;;;x
+statue_of_liberty_restored;Lady Liberty Restored;;;;;;;;;;;;;x
+
+upgraded_lady_liberty;Cared for Lady Liberty;;;;;;;;;;;;;x
+looted_lady_liberty;Looted Lady Liberty;;;;;;;;;;;;;x
+
+monastic_orders_restore_statue_of_liberty;Restore Lady Liberty;;;;;;;;;;;;x
+monastic_orders_restore_statue_of_liberty_desc;Lady Liberty has been pillaged by servants of [Root.Religion.GetRandomEvilGodName]. The [Root.Society.GrandMaster.GetSocietyRank] has asked you to restore her to her former glory, as the Lady lies in your demesne.;;;;;;;;;;;;x
+monastic_orders_restore_statue_of_liberty_tooltip;To complete this mission, §Yrestore§! the Great Work of §Y'Lady Liberty'§! in §Y[c_palisades.GetName]§!.\nLosing control over the Great Work will fail the mission.;;;;;;;;;;;;x
+
+monastic_orders_upgrade_statue_of_liberty;Build a next stage of Lady Liberty;;;;;;;;;;;;x
+monastic_orders_upgrade_statue_of_liberty_desc;Lady Liberty needs to be restored to her ancient form. The [Root.Society.GrandMaster.GetSocietyRank] has tasked you with overseeing the construction, as the Lady lies in your demesne.;;;;;;;;;;;;x
+monastic_orders_upgrade_statue_of_liberty_tooltip;To complete this mission, §Ybuild next stage§! of the Great Work of §Y'Lady Liberty'§! in §Y[c_palisades.GetName]§!.\nLosing control over the Great Work will fail the mission.;;;;;;;;;;;;x
 
 EVTOPTC_MNM_4610_bust;Start planning the theft of the §YMarble Bust§!!;;;;;;;;;;;;;x
 EVTOPTC_MNM_4610_money;Start planning the theft of §YOld World Money§!!;;;;;;;;;;;;;x
@@ -64,6 +89,7 @@ mib_elective;Appointment;;;;;;;;;;;;;x
 
 hamiltonian;Madisonian;;;;;;;;;;;;;x
 hamiltonian_DESC;Madisonians differ from mainstream Americanism in that they consider the judicary the supreme branch of the government. Legends of Justices of the Supreme Court fighting against tyrannical Presidents and Congressmen have filled them with a conviction that a Chief Justice of the Supreme Court is the superior authority on all matters spiritual and temporal.;;;;;;;;;;;;;x
+THE_CODE_OF_LAWS;The Code of Laws;;;;;;;;;;;;;x
 
 gov_supreme_court;Supreme Court;;;;;;;;;;;;;x
 
@@ -72,14 +98,14 @@ d_supreme_court_adj;Supreme Judical;;;;;;;;;;;;;x
 JUDICARY;Judicary;;;;;;;;;;;;;x
 CHIEF_JUSTICE;Chief Justice;;;;;;;;;;;;;x
 create_supreme_court;Restore the Supreme Court;;;;;;;;;;;;;x
-create_supreme_court_desc;If I am patriotic enough and control Washington, I can restore the Supreme Court to its rightful place, so that it may guide all patriots, as Madison wanted.;;;;;;;;;;;;;x
+create_supreme_court_desc;If I am patriotic enough and control Washington, I can restore the Supreme Court to its rightful place, so that it may guide all patriots, as says [Root.Religion.GetScriptureName].;;;;;;;;;;;;;x
 restore_supreme_court_in_dc;Restore the Supreme Court in Washington;;;;;;;;;;;;;x
 restore_supreme_court_in_dc_desc;The Chief Justice has lost control of Washington, but it is within my power to restore the Capital to him!;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_RELIGION_1_A;Washington, for centuries the capitol of the United States, is in Madisonian hands. This has given me an opportunity to restore the Supreme Court to its rightful place, so that it may guide all patriots, as Madison wanted.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_RELIGION_1_A;Washington, for centuries the capitol of the United States, is in Madisonian hands. This has given me an opportunity to restore the Supreme Court to its rightful place, so that it may guide all patriots, as says [Root.Religion.GetScriptureName].;;;;;;;;;;;;;x
 EVTDESC_ATE_WWW_RELIGION_1_B;Washington, for centuries the capitol of the United States, is in Madisonian hands. [From.GetTitledFirstName] has therefore seen fit to restore the Supreme Court to its rightful place, claiming that it is Madison's will.;;;;;;;;;;;;;x
 EVTOPTA_ATE_WWW_RELIGION_1;Et Pluribus Unum!;;;;;;;;;;;;;
-EVTDESC_ATE_WWW_RELIGION_3_A;I have granted Washington to its rightful ruler, so that the Chief Justice may adjudicate in the building of the Supreme Court. The Chief Justice shall soon take up [d_supreme_court.GetHerHis] abode in the offices historically occupied by [d_supreme_court.GetHerHis] pre-Calamity predecessors.;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_RELIGION_3_B;[From.GetTitledFirstName] has granted Washington to its rightful ruler, so that the Chief Justice may adjudicate in the building of the Supreme Court. The Chief Justice shall soon take up [d_supreme_court.GetHerHis] abode in the offices historically occupied by [d_supreme_court.GetHerHis] pre-Calamity predecessors.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_RELIGION_3_A;I have granted Washington to its rightful ruler, so that the Chief Justice may adjudicate in the building of the Supreme Court. The Chief Justice shall soon take up [d_supreme_court.Holder.GetHerHis] abode in the offices historically occupied by [d_supreme_court.Holder.GetHerHis] pre-Calamity predecessors.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_RELIGION_3_B;[From.GetTitledFirstName] has granted Washington to its rightful ruler, so that the Chief Justice may adjudicate in the building of the Supreme Court. The Chief Justice shall soon take up [d_supreme_court.Holder.GetHerHis] abode in the offices historically occupied by [d_supreme_court.Holder.GetHerHis] pre-Calamity predecessors.;;;;;;;;;;;;;x
 title_hamiltonian_justice;Justice;;;;;;;;;;;;;x
 expected_next_title_hamiltonian_justice;Expected Next Justice;;;;;;;;;;;;;x
 expected_next_title_hamiltonian_justice_tooltip;This judge is probably next in line for a Justiceship when one becomes available.;;;;;;;;;;;;;x
@@ -105,7 +131,7 @@ inaug_by_cjudge;Inaugurated by High Judge;;;;;;;;;;;;;x
 inaug_by_cjudge_desc;This ruler was inaugurated by [Root.GetCrownedByDesc].\nA formal inauguration is considered by many a fundamental step in the legitimization of any proper [Root.Religion.GetName] [Root.GetTitle].;;;;;;;;;;;;;x
 
 inaug_by_sjudge;Inaugurated by the [Root.RelHead.GetTitle];;;;;;;;;;;;;x
-inaug_by_sjudge_desc;This ruler was inaugurated by the [Root.RelHead.GetTitle].\nA formal inauguration is considered by many a fundamental step in 
+inaug_by_sjudge_desc;This ruler was inaugurated by the [Root.RelHead.GetTitle].\nA formal inauguration is considered by many a fundamental step in the legitimization of any proper [Root.Religion.GetName] [Root.GetTitle].;;;;;;;;;;;;;x
 
 inaug_prez;Inaugurated President;;;;;;;;;;;;;x
 inaug_prez_desc;This President was inaugurated by [Root.GetCrownedByDesc].\nA formal inauguration is considered by many a fundamental step in the legitimization of any proper President.;;;;;;;;;;;;;x
@@ -116,7 +142,6 @@ EVTDESCBAFI5;To the Illuminating [Root.GetTitledName],\nI shall be honored to of
 EVTDESCDAFI100;Now that I have the [Root.RelHead.GetTitle] to officiate my inauguration, I must decide how much I wish to spend on the ceremony leading up to it.;;;;;;;;;;;;;x
 VERY_WELL;Very well.;;;;;;;;;;;;;x
 tooltip_gain_inaug_by_sjudge;[Root.GetTitledName] gains the trait Inaugurated by the [Root.RelHead.GetTitle];;;;;;;;;;;;;x
-the legitimization of any proper [Root.Religion.GetName] [Root.GetTitle].;;;;;;;;;;;;;x
 EVTDESCAFI200;To the Illustrious [Root.GetTitledName],\nI shall be honored to officiate [Root.GetHerHisCap] [Root.GetHonorific]'s inauguration, provided that [Root.GetHerHisCap] [Root.GetHonorific] show [Root.GetHerHisCap] devotion by organizing a private feast in honor of an ardent servant of Justice such as I am.\n\nEver [Root.GetHerHis] [Root.GetHonorific]'s servant\n[From.GetTitledName];;;;;;;;;;;;;x
 EVTDESCHFA20240;To the Patriotic [Root.GetTitledName],\nI shall be honored to officiate [Root.GetHerHisCap] [Root.GetHonorific]'s inauguration, provided that [Root.GetHerHisCap] [Root.GetHonorific] show [Root.GetHerHisCap] devotion by donating the [scoped_artifact.GetName] [Root.GetSheHe] holds for the good of all patriots.;;;;;;;;;;;;;x
 EVTDESCAFI202;To [Root.GetTitledName],\nI shall be glad to conduct your inauguration, as [Root.GetHighGodName] intended - as soon as you recognize that the Judicary is no servant to any ruler, but to blind and fair Justice, equal and independent for all. \n\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
@@ -141,6 +166,8 @@ GOD_TRUMAN;Truman;;;;;;;;;;;;;x
 GOD_JACKSON;Jackson;;;;;;;;;;;;;x
 GOD_CHAIN_OF_COMMAND;The Chain Of Command;;;;;;;;;;;;;x
 GOD_HIGH_COMMAND;High Command;;;;;;;;;;;;;x
+GOD_THE_GENERALS;The Generals;;;;;;;;;;;;;x
+THE_ARTICLES_OF_WAR;Articles of War;;;;;;;;;;;;;x
 
 become_general_of_army;Restore the Supreme Allied Command;;;;;;;;;;;;;x
 become_general_of_army_desc;With some of the most important holy sites of the Militarist faith now under my direct control the time has come to bring order back to America by restoring the Supreme Allied Command;;;;;;;;;;;;;x
@@ -259,19 +286,3 @@ emperor_libertarian;Commander-in-Chief;;;;;;;;;;;;;x
 emperor_female_libertarian;Commander-in-Chief;;;;;;;;;;;;;x
 
 # Americanists
-
-# Brethren
-become_pirate_king;Become The [Root.GetPirateMonarch];;;;;;;;;;;;;x
-become_pirate_king_desc;From Vancouver to Guyana my name is spoken of in hushed whispers, my sails are known to all, and most importantly I have earned the respect of my fellow Brethren faitfhul. Perhaps the time has come to crown a new [Root.GetPirateMonarch]?;;;;;;;;;;;;;x
-
-EVTNAME_pirate_king;The [Root.GetPirateMonarch];;;;;;;;;;;;;x
-EVTDESC_pirate_king;Since the first Brethren took to the seas they've stories of the great Pirate Kings and Queens of old - From Blackbeard to Charles Vane and William Kidd and now [Root.GetFullName]. Through grit, bravery, and skill, [Root.GetFullName] has managed to proclaim [Root.GetHerselfHimself] the new [Root.GetPirateMonarch], ushring in a new era for the Brethren in the process.;;;;;;;;;;;;;x
-EVTOPTA_pirate_king;All hands on deck!;;;;;;;;;;;;;x
-EVTOPTB_pirate_king;Oh dear...;;;;;;;;;;;;;x
-EVTOPTC_pirate_king;The world is my oyster!;;;;;;;;;;;;;x
-
-k_pirate_kingdom;Kingdom Of The Seas;;;;;;;;;;;;;x
-k_pirate_kingdom_adj;Brethren;;;;;;;;;;;;;x
-PIRATE_KING;Pirate King;;;;;;;;;;;;;x
-PIRATE_QUEEN;Pirate Queen;;;;;;;;;;;;;x
-PIRATE_KING_FOA;Your Excellency;;;;;;;;;;;;;x

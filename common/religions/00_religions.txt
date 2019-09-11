@@ -2182,7 +2182,7 @@ oldworld = {
 		}
 		
 		crusade_name = LIBERATION_WAR
-		scripture_name = THE_PAPERS
+		scripture_name = THE_CODE_OF_LAWS
 		priest_title = JUDGE
 		piety_name = PATRIOTISM
 		
@@ -2223,7 +2223,7 @@ oldworld = {
 		color = { 0.2 0.2 0.7 }
 		
 		male_names = {
-			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Theodore George John Thomas James Andrew Ulysses Harry Richard Ronald Dwight Franklin Abraham
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Theodore George John Thomas James Andrew Ulysses Harry Richard Ronald Dwight Franklin Abraham Douglas Robert William Smedley
 		}
 		female_names = {
 			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
@@ -2231,16 +2231,16 @@ oldworld = {
 
 		interface_skin = { americanist_interface }
 
-		high_god_name = GOD_UNCLE_SAM
+		high_god_name = GOD_THE_GENERALS
 
 		god_names = {
-			GOD_THE_FOUNDERS GOD_WASHINGTON GOD_ROOSEVELT GOD_THE_FLAG
+			GOD_THE_PRESIDENTS GOD_WASHINGTON GOD_ROOSEVELT GOD_THE_FLAG
 			GOD_EISENHOWER GOD_REAGAN GOD_TRUMAN GOD_JACKSON GOD_UNCLE_SAM
-			GOD_CHAIN_OF_COMMAND GOD_HIGH_COMMAND
+			GOD_CHAIN_OF_COMMAND GOD_HIGH_COMMAND GOD_THE_GENERALS
 		}
 
 		crusade_name = LIBERATION_WAR
-		scripture_name = THE_PAPERS
+		scripture_name = THE_ARTICLES_OF_WAR
 		priest_title = CORPSMAN
 		piety_name = PATRIOTISM
 		

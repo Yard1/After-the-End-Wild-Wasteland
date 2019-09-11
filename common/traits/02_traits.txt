@@ -244,12 +244,20 @@ viking = {
 			any_owned_bloodline = {
 				has_bloodline_flag = bloodline_viking
 			}
+			AND = {
+				has_religion_feature = religion_adventuring
+				has_religion_feature = religion_seafaring
+			}
 		}
 	}
 	opposites =  {
 		ravager
 		seaking
 		sea_queen
+		freebooter
+		buccaneer
+		corsair
+		pirate_king
 	}
 	martial = 1
 	combat_rating = 10 #old value: 1
@@ -2054,17 +2062,19 @@ ravager = {
 		}
 	}
 	opposites =  {
-		pirate
 		viking
 		seaking
 		sea_queen
+		freebooter
+		buccaneer
+		corsair
+		pirate_king
 	}
 	martial = 2
 	combat_rating = 20 #old value: 2
 	monthly_character_prestige = 0.4
 	norse_pagan_opinion = 20
 	norse_pagan_reformed_opinion = 20
-	brethren_opinion = 20
 	
 	same_opinion = 5
 	#religious = yes
@@ -2092,10 +2102,13 @@ seaking = {
 		}
 	}
 	opposites =  {
-		pirate
 		viking
 		ravager
 		sea_queen
+		freebooter
+		buccaneer
+		corsair
+		pirate_king
 	}
 	martial = 3
 	combat_rating = 20 #old value: 2
@@ -2233,10 +2246,13 @@ sea_queen = {
 		}
 	}
 	opposites =  {
-		pirate
 		viking
 		ravager
 		seaking
+		freebooter
+		buccaneer
+		corsair
+		pirate_king
 	}
 	martial = 3
 	combat_rating = 20 #old value: 2
@@ -3742,38 +3758,6 @@ crusader_queen = {
 	
 	customizer = no
 	random = no
-}
-
-pirate = {
-	potential = {
-		OR = {
-			religion = norse_pagan
-			religion = norse_pagan_reformed
-			religion = brethren
-			has_character_flag = acquired_pirate_trait_by_bloodline
-			AND = {
-				has_religion_feature = religion_adventuring
-				has_religion_feature = religion_seafaring
-			}
-		}
-	}
-	opposites =  {
-		viking
-		ravager
-		seaking
-		sea_queen
-	}
-	martial = 1
-	combat_rating = 10 #old value: 1
-	monthly_character_prestige = 0.3
-	norse_pagan_opinion = 15
-	norse_pagan_reformed_opinion = 15
-	
-	same_opinion = 5
-	#religious = yes
-	
-	male_insult = COMPL_PIRATE
-	female_insult = COMPL_PIRATE
 }
 
 bloodthirsty_gods_1 = { #10 burned_hearts_points

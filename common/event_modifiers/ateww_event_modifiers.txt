@@ -53,3 +53,13 @@ expelled_d_american_legion = {
 expelled_d_enclave = {
 	icon = 35
 }
+
+looted_lady_liberty = {
+	icon = 64
+	libertarian_opinion = -50
+}
+
+upgraded_lady_liberty = {
+	icon = 17
+	libertarian_opinion = 10
+}

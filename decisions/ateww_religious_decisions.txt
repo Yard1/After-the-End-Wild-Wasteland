@@ -25,6 +25,9 @@ decisions = {
 		}
 		
 		allow = {
+			in_seclusion = no
+			prisoner = no
+			is_incapable = no
 			piety = 1000
 			OR = {
 				owns = 63 # DC
@@ -164,6 +167,12 @@ decisions = {
 			}
 		}
 		
+		allow = {
+			in_seclusion = no
+			prisoner = no
+			is_incapable = no
+		}
+
 		effect = {		
 			d_supreme_court = {
 				holder_scope = {
@@ -238,6 +247,9 @@ decisions = {
 		}
 		
 		allow = {
+			in_seclusion = no
+			prisoner = no
+			is_incapable = no
 			primary_title = { higher_tier_than = DUKE }
 			num_of_holy_sites = 3 #personally controls 3 holy sites
 			prestige = 250
@@ -255,6 +267,7 @@ decisions = {
 		
 		effect = {
 			piety = -250
+			d_forscom = { grant_title = ROOT }
 			narrative_event = { id = ATE_WWW_RELIGION.4 }
 		}
 		ai_will_do = {
@@ -303,14 +316,55 @@ decisions = {
 		}
 		
 		allow = {
+			in_seclusion = no
+			prisoner = no
+			is_incapable = no
 			primary_title = { higher_tier_than = COUNT }
+			wealth = 200
+			custom_tooltip = {
+				text = tooltip_vote_at_least_one_kill
+				has_character_flag = killed_a_man
+			}
+			has_pirate_trait = yes
 			prestige = 3000
 			piety = 1000
 		}
 		
 		effect = {
-		    prestige = -1500
-			piety = -500
+			wealth = -200
+			if = {
+				limit = { trait = freebooter }
+				prestige = -1750
+				piety = -625
+			}
+			else_if = {
+				limit = { trait = buccaneer }
+				prestige = -1500
+				piety = -500
+			}
+			else = {
+				prestige = -1000
+				piety = -250
+			}
+			if = {
+				limit = {
+					trait = freebooter
+				}
+				remove_trait = freebooter
+			}
+			else_if = {
+				limit = {
+					trait = buccaneer
+				}
+				remove_trait = buccaneer
+			}
+			else_if = {
+				limit = {
+					trait = corsair
+				}
+				remove_trait = corsair
+			}
+			add_trait = pirate_king_trait
 			activate_title = { title = k_pirate_kingdom status = yes }
 			primary_title = {
 				k_pirate_kingdom = {
@@ -323,7 +377,7 @@ decisions = {
 				}
 			}
 			set_global_flag = pirate_king
-			narrative_event = { id = ATE_WWW_RELIGION.8 }
+			narrative_event = { id = ATE_WWW_PIRATE.5 }
 		}
 		ai_will_do = {
 			factor = 1

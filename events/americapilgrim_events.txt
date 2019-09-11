@@ -1854,7 +1854,7 @@ character_event = {
 			on_pilgrimage_washington_j =				{ 63 = { county = { save_event_target_as = claim_county } } }
 			on_pilgrimage_nashville =					{ 1019 = { county = { save_event_target_as = claim_county } } }
 			on_pilgrimage_washington_l =				{ 63 = { county = { save_event_target_as = claim_county } } }
-			on_pilgrimage_palisades =					{ 2 = { county = { save_event_target_as = claim_county } } }
+			on_pilgrimage_palisades =					{ 4 = { county = { save_event_target_as = claim_county } } }
 			on_pilgrimage_newyork_l =					{ 3 = { county = { save_event_target_as = claim_county } } }
 			on_pilgrimage_philadelphia_l =				{ 27 = { county = { save_event_target_as = claim_county } } }
 		}
@@ -2055,7 +2055,7 @@ narrative_event = {
 
 	option = {
 		name = EVTOPT_pilgrim_approach
-		2 = { owner = { character_event = { id = america_pilgrim.20 } } }
+		4 = { owner = { character_event = { id = america_pilgrim.20 } } }
 		narrative_event = { id = america_pilgrim.240 days = 5 random = 10 }
 	}
 }

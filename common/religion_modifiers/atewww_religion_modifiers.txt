@@ -1,0 +1,14 @@
+statue_of_liberty_upgraded = {
+	authority = 3
+	years = 20
+}
+
+statue_of_liberty_restored = {
+	authority = 2
+	years = 20
+}
+
+statue_of_liberty_looted = {
+	authority = -3
+	years = 20
+}

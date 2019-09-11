@@ -24,3 +24,45 @@ trump = { #Trumps
 	picture = GFX_bloodlines_placeholder_symbol_2
 	flags = { presidential_bloodline historical_bloodline pre_event_bloodline }
 }
+
+pirate_king_bloodline = { #Spawned tribal raider troops are more numerous.
+	combat_rating = 3
+	brethren_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	bloodline_effect_more_raiders = 1
+	picture = GFX_bloodlines_symbol_midgard
+	active = {
+		religion_same_as_bloodline_founder_trigger = yes
+#		custom_tooltip = {
+#			text = saintly_bloodline_same_religion_TT
+#			FROM = {
+#				founder = {
+#					religion = ROOT
+#				}
+#			}
+#		}
+	}
+	flags = { bloodline_spawned_ships bloodline_pirate more_raiders_bloodline created_bloodline }
+}
+
+pirate_queen_bloodline = {
+	combat_rating = 3
+	brethren_opinion = 5
+	inheritance = matrilineal
+	allow_bastards = yes
+	bloodline_effect_more_raiders = 1
+	picture = GFX_bloodlines_symbol_midgard
+	active = {
+		religion_same_as_bloodline_founder_trigger = yes
+#		custom_tooltip = {
+#			text = saintly_bloodline_same_religion_TT
+#			FROM = {
+#				founder = {
+#					religion = ROOT
+#				}
+#			}
+#		}
+	}
+	flags = { bloodline_spawned_ships bloodline_pirate more_raiders_bloodline created_bloodline }
+}

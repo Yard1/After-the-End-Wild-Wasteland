@@ -298,6 +298,46 @@ character_event = {
 				modifier = { factor = 0 is_playable = no }
 				set_character_flag = monastic_orders_mission_temple
 			}
+			25 = {
+				trigger = {
+					society_member_of = monastic_order_libertarian
+					has_wonder = wonder_statue_liberty
+					is_tribal = no
+					is_nomadic = no
+					NOT = {
+						any_society_member = {
+							OR = {
+								has_quest = monastic_orders_restore_statue_of_liberty
+								has_quest = monastic_orders_upgrade_statue_of_liberty
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 10
+					4 = {
+						has_wonder = wonder_statue_liberty
+						wonder = {
+							is_damaged = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					higher_tier_than = DUKE
+				}
+				modifier = {
+					factor = 0
+					4 = {
+						has_wonder = wonder_statue_liberty
+						wonder = {
+							is_damaged = no
+							is_at_max_stage = yes
+						}
+					}
+				}
+				set_character_flag = monastic_orders_mission_lady_liberty
+			}
 			50 = { # AI bypasses missions at times
 				modifier = {
 					factor = 0
@@ -370,6 +410,7 @@ character_event = {
 				monastic_orders_mission_cetic_pilgrimage = 		{ clr_character_flag = monastic_orders_mission_cetic_pilgrimage society_quest_event = { id = MNM.40191 } }
 				monastic_orders_mission_temple = 				{ clr_character_flag = monastic_orders_mission_temple society_quest_event = { id = MNM.4023 } }
 				monastic_orders_mission_donate_castle = 				{ clr_character_flag = monastic_orders_mission_donate_castle society_quest_event = { id = MNM_ATEWWW.14 } }
+				monastic_orders_mission_lady_liberty = 				{ clr_character_flag = monastic_orders_mission_lady_liberty society_quest_event = { id = MNM_ATEWWW.18 } }
 			}
 		}
 	}
@@ -10776,5 +10817,434 @@ letter_event = {
 	}
 	after = {
 		clr_character_flag = monastic_orders_donate_castle_ongoing
+	}
+}
+
+#MISSION: Restore/upgrade Lady Liberty
+society_quest_event = {
+	id = MNM_ATEWWW.18
+	desc = {
+		trigger = { 
+			4 = {
+				has_wonder = wonder_statue_liberty
+				wonder = {
+					is_damaged = yes
+				}
+			}
+		}
+		text = EVTDESC_MNM_ATEWWW_18_RESTORE
+	}
+	desc = {
+		trigger = {
+			4 = {
+				has_wonder = wonder_statue_liberty
+				wonder = {
+					is_damaged = no
+				}
+			}
+		}
+		text = EVTDESC_MNM_ATEWWW_18_UPGRADE
+	}
+
+	immediate = {
+		hidden_tooltip = {
+			4 = {
+				wonder = {
+					save_event_target_as = statue_of_liberty_wonder
+				}
+			}
+		}
+	}
+
+	border = GFX_event_letter_frame_religion
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = ACCEPT
+		if = {
+			limit = { event_target:statue_of_liberty_wonder = { is_damaged = yes } }
+			set_quest = monastic_orders_restore_statue_of_liberty
+		}
+		else = {
+			set_quest = monastic_orders_upgrade_statue_of_liberty
+		}
+	}
+	option = {
+		name = DECLINE
+		custom_tooltip = { text = decline_quest_tooltip }
+		if = {
+			limit = { event_target:statue_of_liberty_wonder = { is_damaged = yes } }
+			detract_society_currency_tiny_effect = yes
+		}
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1000
+		}
+
+		ai_chance = { factor = 0 }
+	}
+}
+
+#send to grandmaster for Ping
+character_event = {
+	id = MNM_ATEWWW.19
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		FROMFROM = {
+			has_wonder = wonder_statue_liberty
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_quest = monastic_orders_upgrade_statue_of_liberty
+				NOT = { has_character_flag = monastic_orders_statue_of_liberty_ongoing } #flag to avoid doubling of letter events when finishing two buildings at the same time
+			}
+			set_character_flag = monastic_orders_statue_of_liberty_ongoing
+			random_society_member = {
+				limit = {
+					same_society_as = ROOT
+					is_society_grandmaster = yes
+				}
+				character_event = {
+					id = MNM_ATEWWW.20
+				}
+			}
+		}
+		add_character_modifier = {
+			name = upgraded_lady_liberty
+			years = 10
+		}
+		if = {
+			limit = { religion = libertarian }
+			religion_authority = {
+				modifier = statue_of_liberty_upgraded
+			}
+		}
+		else = {
+			random_character = {
+				limit = { religion = libertarian }
+				religion_authority = {
+					modifier = statue_of_liberty_upgraded
+				}
+			}
+		}
+	}
+}
+
+#send to grandmaster for Ping
+character_event = {
+	id = MNM_ATEWWW.190
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		FROMFROM = {
+			has_wonder = wonder_statue_liberty
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_quest = monastic_orders_restore_statue_of_liberty
+				NOT = { has_character_flag = monastic_orders_statue_of_liberty_ongoing } #flag to avoid doubling of letter events when finishing two buildings at the same time
+			}
+			set_character_flag = monastic_orders_statue_of_liberty_ongoing
+			random_society_member = {
+				limit = {
+					same_society_as = ROOT
+					is_society_grandmaster = yes
+				}
+				character_event = {
+					id = MNM_ATEWWW.20
+				}
+			}
+		}
+		add_character_modifier = {
+			name = upgraded_lady_liberty
+			years = 10
+		}
+		if = {
+			limit = { religion = libertarian }
+			religion_authority = {
+				modifier = statue_of_liberty_restored
+			}
+		}
+		else = {
+			random_character = {
+				limit = { religion = libertarian }
+				religion_authority = {
+					modifier = statue_of_liberty_restored
+				}
+			}
+		}
+	}
+}
+
+#Ping
+character_event = {
+	id = MNM_ATEWWW.20
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		FROM = {
+			character_event = {
+				id = MNM_ATEWWW.21
+			}
+		}
+	}
+}
+
+letter_event = {
+	id = MNM_ATEWWW.21
+	desc = EVTDESC_MNM_ATEWWW_21
+	border = GFX_event_letter_frame_religion
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_MNM_4026
+		if = {
+			limit = { has_quest = monastic_orders_restore_statue_of_liberty }
+			clr_quest = monastic_orders_restore_statue_of_liberty
+		}
+		else = {
+			clr_quest = monastic_orders_upgrade_statue_of_liberty
+		}
+		sound_effect = monastic_orders_build_temple_holding
+		hidden_effect = { monastic_order_purity_effect = yes }
+		add_society_currency_large_effect = yes
+	}
+	after = {
+		clr_character_flag = monastic_orders_statue_of_liberty_ongoing
+	}
+}
+
+#send to grandmaster for Ping
+character_event = {
+	id = MNM_ATEWWW.22
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		FROMFROM = {
+			has_wonder = wonder_statue_liberty
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					has_quest = monastic_orders_restore_statue_of_liberty
+					has_quest = monastic_orders_upgrade_statue_of_liberty
+				}
+				NOT = { has_character_flag = monastic_orders_statue_of_liberty_ongoing } #flag to avoid doubling of letter events when finishing two buildings at the same time
+			}
+			set_character_flag = monastic_orders_statue_of_liberty_ongoing
+		}
+
+		random_character = {
+			limit = {
+				controls_religion = yes
+				religion = libertarian
+			}
+			religion_authority = {
+				modifier = statue_of_liberty_looted
+			}
+			character_event = {
+				id = MNM_ATEWWW.221
+			}
+		}
+	}
+}
+
+#Ping
+character_event = {
+	id = MNM_ATEWWW.221
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		FROM = {
+			character_event = {
+				id = MNM_ATEWWW.222
+			}
+		}
+	}
+}
+
+#Ping
+character_event = {
+	id = MNM_ATEWWW.2210
+	hide_window = yes
+	religion = libertarian
+	only_playable = yes
+
+	mean_time_to_happen = {
+		days = 7
+	}
+
+	trigger = {
+		has_character_modifier = looted_lady_liberty
+		NOT = { trait = excommunicated }
+	}
+
+	immediate = {
+		FROM = {
+			character_event = {
+				id = MNM_ATEWWW.222
+			}
+		}
+	}
+}
+
+letter_event = {
+	id = MNM_ATEWWW.222
+	desc = {
+		trigger = { 
+			religion = libertarian
+		}
+		text = EVTDESC_MNM_ATEWWW_222_LIBERTARIAN
+	}
+	desc = {
+		trigger = {
+			NOT = { religion = libertarian }
+		}
+		text = EVTDESC_MNM_ATEWWW_222
+	}
+	border = GFX_event_letter_frame_religion
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_MNM_ATEWWW_222
+		trigger = { religion = libertarian }
+		if = {
+			limit = { has_quest = monastic_orders_restore_statue_of_liberty }
+			clr_quest = monastic_orders_restore_statue_of_liberty
+		}
+		else_if = {
+			limit = { has_quest = monastic_orders_upgrade_statue_of_liberty }
+			clr_quest = monastic_orders_upgrade_statue_of_liberty
+		}
+		add_character_modifier = {
+			name = expelled_d_libertarian
+			duration = -1
+			inherit = yes
+		}
+		add_character_modifier = {
+			name = looted_lady_liberty
+			duration = -1
+		}
+		piety = -5000
+		add_trait = excommunicated
+		if = {
+			limit = { NOT = { trait = cynical } }
+			hidden_tooltip = { remove_trait = zealous }
+			add_trait = cynical
+		}
+		if = {
+			limit = { NOT = { trait = greedy } }
+			hidden_tooltip = { remove_trait = charitable }
+			add_trait = greedy
+		}
+	}
+	option = {
+		name = EVTOPTA_MNM_ATEWWW_222
+		trigger = { NOT = { religion = libertarian } }
+		add_character_modifier = {
+			name = expelled_d_libertarian
+			duration = -1
+			inherit = yes
+		}
+		add_character_modifier = {
+			name = looted_lady_liberty
+			duration = -1
+		}
+	}
+	after = {
+		clr_character_flag = monastic_orders_statue_of_liberty_ongoing
+	}
+}
+
+#send to grandmaster for Ping
+character_event = {
+	id = MNM_ATEWWW.220
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		FROMFROMFROM = {
+			has_wonder = wonder_statue_liberty
+		}
+		FROMFROM = {
+			is_alive = yes
+			OR = {
+				has_quest = monastic_orders_restore_statue_of_liberty
+				has_quest = monastic_orders_upgrade_statue_of_liberty
+			}
+			NOT = { has_character_flag = monastic_orders_statue_of_liberty_ongoing } #flag to avoid doubling of letter events when finishing two buildings at the same time
+		}
+	}
+	
+	immediate = {
+		FROMFROM = {
+			set_character_flag = monastic_orders_statue_of_liberty_ongoing
+			random_society_member = {
+				limit = {
+					same_society_as = FROMFROM
+					is_society_grandmaster = yes
+				}
+				character_event = {
+					id = MNM_ATEWWW.23
+				}
+			}
+		}
+	}
+}
+
+#Ping
+character_event = {
+	id = MNM_ATEWWW.23
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		FROM = {
+			character_event = {
+				id = MNM_ATEWWW.24
+			}
+		}
+	}
+}
+letter_event = {
+	id = MNM_ATEWWW.24
+	desc = EVTDESC_MNM_ATEWWW_24
+	border = GFX_event_letter_frame_religion
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_MNM_4429
+		if = {
+			limit = { has_quest = monastic_orders_restore_statue_of_liberty }
+			clr_quest = monastic_orders_restore_statue_of_liberty
+		}
+		else = {
+			clr_quest = monastic_orders_upgrade_statue_of_liberty
+		}
+		detract_society_currency_tiny_effect = yes
+	}
+	after = {
+		clr_character_flag = monastic_orders_statue_of_liberty_ongoing
 	}
 }

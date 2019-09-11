@@ -1,0 +1,40 @@
+pirate_king = {
+	potential = {
+		has_landed_title = k_pirate_kingdom
+		OR = {
+			religion = brethren
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_pirate
+			}
+			#AND = {
+			#	has_religion_feature = religion_adventuring
+			#	has_religion_feature = religion_seafaring
+			#}
+		}
+	}
+	opposites =  {
+		viking
+		ravager
+		seaking
+		sea_queen
+		freebooter
+		buccaneer
+		pirate_king
+	}
+	martial = 4
+	combat_rating = 30 #old value: 3
+	monthly_character_prestige = 0.75
+	monthly_character_piety = 0.75
+	same_religion_opinion = 25
+	global_levy_size = 0.2
+	land_morale = 0.1
+
+	religious = yes
+	
+	male_insult = COMPL_PIRATE
+	female_insult = COMPL_PIRATE
+	male_compliment = PIRATE_KING
+	male_compliment_adj = COMPL_PIRATE_adj
+	female_compliment = PIRATE_QUEEN
+	female_compliment_adj = COMPL_PIRATE_adj
+}

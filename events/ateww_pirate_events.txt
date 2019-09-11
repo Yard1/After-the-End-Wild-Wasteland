@@ -89,7 +89,7 @@ character_event = {
 }
 
 
-#Poor Byzantine commander was employed. (must be delayed to avoid scoping issues)
+#Poor Pirate commander was employed. (must be delayed to avoid scoping issues)
 character_event = {
 	#id = HFP.20805
 	id = ATE_WWW_PIRATE.3
@@ -179,6 +179,75 @@ character_event = {
 				}
 				liege = { change_variable = { which = byzantine_credibility_appointed_sycophant value = -2 } }
 			}
+		}
+	}
+}
+
+# (from on_death)
+character_event = {
+	id = ATE_WWW_PIRATE.4
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			death_execution_trigger = yes
+			death_reason = death_duel
+			death_reason = death_battle
+			death_sacrificed_trigger = yes
+		}
+		killer = { always = yes }
+		killer = {
+			religion_group = pirate
+			NOT = { has_character_flag = killed_a_man }
+		}
+	}
+	
+	immediate = {
+		killer = {
+			set_character_flag = killed_a_man
+		}
+	}
+}
+
+
+narrative_event = {
+	id = ATE_WWW_PIRATE.5
+	title = EVTNAME_pirate_king
+	desc = EVTDESC_pirate_king
+	picture = GFX_evt_pirate_ship 
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+
+	is_triggered_only = yes
+	
+	#trigger = {
+	#	NOT = { has_global_flag = pirate_king }
+	#}
+	
+	option = {
+		name = EVTOPTA_pirate_king
+		trigger = {
+			religion = brethren 
+			NOT = { has_landed_title = k_pirate_kingdom }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_pirate_king
+		trigger = {
+			NOT = { religion = brethren }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_pirate_king
+		trigger = {
+			religion = brethren 
+			has_landed_title = k_pirate_kingdom
 		}
 	}
 }

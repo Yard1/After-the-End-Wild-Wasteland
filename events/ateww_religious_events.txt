@@ -155,7 +155,6 @@ narrative_event = {
 	
 	immediate = {
 		set_global_flag = general_of_army
-		d_forscom = { grant_title = ROOT }
 	}
 	
 	option = {
@@ -373,45 +372,6 @@ character_event = {
 		name = EVTOPTA_ATE_WWW_RELIGION_7
 		effect = {
 			remove_patron_general_trigger = yes
-		}
-	}
-}
-
-narrative_event = {
-	id = ATE_WWW_RELIGION.8
-	title = EVTNAME_pirate_king
-	desc = EVTDESC_pirate_king
-	picture = GFX_evt_pirate_ship 
-	border = GFX_event_narrative_frame_religion
-
-	major = yes
-
-	is_triggered_only = yes
-	
-	#trigger = {
-	#	NOT = { has_global_flag = pirate_king }
-	#}
-	
-	option = {
-		name = EVTOPTA_pirate_king
-		trigger = {
-			religion = brethren 
-			NOT = { has_landed_title = k_pirate_kingdom }
-		}
-	}
-	
-	option = {
-		name = EVTOPTB_pirate_king
-		trigger = {
-			NOT = { religion = brethren  }
-		}
-	}
-	
-	option = {
-		name = EVTOPTC_pirate_king
-		trigger = {
-			religion = brethren 
-			has_landed_title = k_pirate_kingdom
 		}
 	}
 }

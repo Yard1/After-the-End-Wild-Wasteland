@@ -204,6 +204,87 @@ decisions = {
 		}
 	}
 
+	vassalize_libertarian = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		potential = {
+			is_alternate_start = no
+			is_playable = yes
+			independent = yes
+			religion = libertarian
+			is_title_active = d_libertarian
+			d_libertarian = {
+				holder_scope = {
+					NOT = { has_truce = ROOT }
+					ROOT = { NOT = { has_truce = PREV } }
+					liege = {
+						NOT = { character = ROOT }
+					}
+					NOT = { num_of_count_titles = 3 }
+					independent = yes
+					primary_title = { title = d_libertarian }
+				}
+			}
+			NOT = { government = order_government }
+			NOT = { has_character_modifier = expelled_d_libertarian }
+		}
+		
+		allow = {
+			piety = 2500
+			OR = {
+				tier = EMPEROR
+				has_landed_title = k_new_york
+			}
+			c_palisades = {
+				holder_scope = {
+					OR = {
+						character = ROOT
+						is_liege_or_above = ROOT
+					}
+					ROOT = { religion = libertarian }
+					d_libertarian = {
+						holder_scope = {
+							NOT = { character = PREVPREV }
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			wealth = -500
+			d_libertarian = {
+				holder_scope = {
+					c_washington = {
+						grant_title = PREV
+						any_de_jure_vassal_title = {
+							limit = {
+								holder_scope = { 
+									OR = {
+										character = ROOT
+										is_liege_or_above = ROOT
+									}
+								}
+							}
+							grant_title = PREVPREV
+						}
+					}
+					ROOT = {
+						set_defacto_vassal = PREV
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 
 	expel_american_legion = {
 		only_independent = yes

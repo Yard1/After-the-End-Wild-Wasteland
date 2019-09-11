@@ -20,5 +20,54 @@ on_settlement_construction_completed = {
 on_death = {
 	events = {
 		miscATEWW.4
+		ATE_WWW_PIRATE.4
+	}
+}
+
+# Character converts religion, for whatever reason. ROOT is the character after conversion and the FROM scope has the old religion.
+on_character_convert_religion = {
+	events = {
+		MNM_ATEWWW.2210
+	}
+}
+
+# Triggers when a wonder finishes building a stage.
+# ROOT = owner
+# FROM = wonder
+# FROMFROM = province (location of wonder)
+on_wonder_stage_finish = {
+	events = {
+		MNM_ATEWWW.19
+	}
+}
+
+# Triggers when restoration of a wonder completed
+# ROOT = owner
+# FROM = wonder
+# FROMFROM = province (location of wonder)
+on_wonder_restore_finish = {
+	events = {
+		MNM_ATEWWW.190
+	}
+}
+
+# Triggers when a character becomes the owner of a wonder.
+# ROOT = new owner
+# FROM = wonder
+# FROMFROM = previous owner (this person might be dead or whatever, but still needed)
+# FROMFROMFROM = province wonder is in
+on_wonder_owner_change = {
+	events = {
+		MNM_ATEWWW.220
+	}
+}
+
+# Triggers when looting of a wonder stage is completed
+# ROOT = owner
+# FROM = wonder
+# FROMFROM = province (location of wonder)
+on_wonder_stage_loot_finish = {
+	events = {
+		MNM_ATEWWW.22
 	}
 }

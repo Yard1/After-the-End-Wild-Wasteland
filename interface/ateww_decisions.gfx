@@ -39,4 +39,16 @@ spriteTypes = {
 		name = "GFX_restore_supreme_court_in_dc"
 		texturefile = "gfx/interface/restore_supreme_court.dds"
 	}
+	spriteType = {
+		name = "GFX_become_general_of_army"
+		texturefile = "gfx/interface/become_general_of_army.dds"
+	}
+	spriteType = {
+		name = "GFX_become_pirate_king"
+		texturefile = "gfx/interface/become_pirate_king.dds"
+	}
+	spriteType = {
+		name = "GFX_vassalize_libertarian"
+		texturefile = "gfx/interface/decision_icon_vassalize_holy_order.dds"
+	}
 }

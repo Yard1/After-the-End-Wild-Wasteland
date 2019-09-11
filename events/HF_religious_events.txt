@@ -5247,6 +5247,8 @@ narrative_event = {
 		OR = { 
 			trait = seaking
 			trait = sea_queen
+			trait = corsair
+			trait = pirate_king_trait
 		}
 		NOR = { 
 			any_owned_bloodline = { # Not already has a Viking bloodline.
@@ -5304,8 +5306,16 @@ narrative_event = {
 		}
 		if = { 
 			limit = { is_female = no }
-			create_bloodline = {
-				type = seaking_bloodline
+			if = {
+				limit = { OR = { religion = norse_pagan religion  = norse_pagan_reformed } }
+				create_bloodline = {
+					type = seaking_bloodline
+				}
+			}
+			else = {
+				create_bloodline = {
+					type = pirate_king_bloodline
+				}
 			}
 			set_bloodline_founder_religion_flag_effect = yes
 			if = { 
@@ -5318,10 +5328,11 @@ narrative_event = {
 						20 = { set_name = bloodline_seaking_viking_random_c }
 						20 = { set_name = bloodline_seaking_viking_random_d } 
 					}
+					set_bloodline_flag = bloodline_viking
+					set_bloodline_flag = bloodline_spawned_ships
 				}		
 			}
-			if = { 
-				limit = { NOR = { religion = norse_pagan religion  = norse_pagan_reformed } }
+			else = { 
 				new_bloodline = {
 					set_description = "bloodline_desc_seaking_bloodline_pirate"
 					random_list = { 
@@ -5335,8 +5346,16 @@ narrative_event = {
 		}
 		if = { 
 			limit = { is_female = yes }
-			create_bloodline = {
-				type = seaqueen_bloodline
+			if = {
+				limit = { OR = { religion = norse_pagan religion  = norse_pagan_reformed } }
+				create_bloodline = {
+					type = seaqueen_bloodline
+				}
+			}
+			else = {
+				create_bloodline = {
+					type = pirate_queen_bloodline
+				}
 			}
 			set_bloodline_founder_religion_flag_effect = yes
 			if = { 
@@ -5349,10 +5368,11 @@ narrative_event = {
 						20 = { set_name = bloodline_seaqueen_viking_random_c }
 						20 = { set_name = bloodline_seaqueen_viking_random_d } 
 					}
+					set_bloodline_flag = bloodline_viking
+					set_bloodline_flag = bloodline_spawned_ships
 				}		
 			}
-			if = { 
-				limit = { NOR = { religion = norse_pagan religion  = norse_pagan_reformed } }
+			else = { 
 				new_bloodline = {
 					set_description = "bloodline_desc_seaking_bloodline_pirate"
 					random_list = { 
@@ -5361,7 +5381,7 @@ narrative_event = {
 						20 = { set_name = bloodline_seaqueen_pirate_random_c }
 						20 = { set_name = bloodline_seaqueen_pirate_random_d } 
 					}
-				}		
+				}
 			}		
 		}
 		hidden_tooltip = { 

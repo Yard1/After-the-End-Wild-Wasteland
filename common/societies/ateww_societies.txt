@@ -38,6 +38,9 @@ monastic_order_libertarian = {
 		NOT = {
 			has_character_modifier = expelled_d_libertarian
 		}
+		NOT = {
+			has_character_modifier = looted_lady_liberty
+		}
 		custom_tooltip = {
 			text = did_not_betray_society
 			NOT = { has_character_flag = betrayed_monastic_order_libertarian }

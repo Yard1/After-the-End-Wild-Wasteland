@@ -3,6 +3,8 @@ expel_libertarian;Expel the Order of Our Lady Liberty;;;;;;;;;;;;;x
 expel_libertarian_desc;I can drive the Order of Our Lady Liberty from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
 donate_money_to_libertanians;Donate 300¤ to the Order of Our Lady Liberty;;;;;;;;;;;;;x
 donate_money_to_libertanians_desc;I can donate money to the Order of Our Lady Liberty in exchange for [Player.Religion.GetPietyName] and lifelong respect from the judicary.;;;;;;;;;;;;;x
+vassalize_libertarian;Vassalize the Order of Our Lady Liberty;;;;;;;;;;;;;x
+vassalize_libertarian_desc;In exchange for dominion over the [c_palisades.GetName], the Order of Our Lady Liberty is willing to become my vassal.;;;;;;;;;;;;;x
 
 EVTDESC_ATEWWNHO_2;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Order of Our Lady Liberty in their quest to preserve and protect the Lady, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
 EVTTOOLTIP_ATEWWNHO_2;[This.GetTitledFirstName] becomes a member of the Order of Our Lady Liberty.;;;;;;;;;;;;;x
