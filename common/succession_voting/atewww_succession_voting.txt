@@ -1995,7 +1995,7 @@ libertarian_elective = {
 				trait = giant
 			}
 		}
-		########################  Raw Opinion bonus towards Candidate   ##########################
+########################  Raw Opinion bonus towards Candidate   ##########################
 		additive_modifier = {
 			value = -150
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
@@ -4046,33 +4046,37 @@ brethren_elective = {
 			NOT = { is_adult = yes }
 		}
 		additive_modifier = { #Being a good orator.
-			value = 10 
-			localisation_key = tooltip_imperial_vote_strength_commander_martial
-			FROMFROM = { 
-				holder_scope = { character = ROOT }
+			value = 5 
+			localisation_key = tooltip_vote_good_pirate
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_pirate
 			}
-			is_adult = yes
-			martial = 10
-			NOT = { martial = 15 }
 		}
 		additive_modifier = { #Being a good orator.
-			value = 15
-			localisation_key = tooltip_imperial_vote_strength_commander_martial
-			FROMFROM = { 
-				holder_scope = { character = ROOT }
+			value = 10
+			localisation_key = tooltip_vote_good_pirate
+			OR = {
+				trait = viking
+				trait = freebooter
 			}
-			is_adult = yes
-			martial = 15
-			NOT = { martial = 20 }
 		}
 		additive_modifier = { #Being a good orator.
-			value = 20 
-			localisation_key = tooltip_imperial_vote_strength_commander_martial
-			FROMFROM = { 
-				holder_scope = { character = ROOT }
+			value = 25
+			localisation_key = tooltip_vote_good_pirate
+			OR = {
+				trait = ravager
+				trait = buccaneer
 			}
-			is_adult = yes
-			martial = 20
+		}
+		additive_modifier = { #Being a good orator.
+			value = 50 
+			localisation_key = tooltip_vote_good_pirate
+			OR = {
+				trait = corsair
+				trait = pirate_king_trait
+				trait = seaking
+				trait = sea_queen
+			}
 		}
 		additive_modifier = { #Appointing bad commanders.
 			value = -20
@@ -4239,7 +4243,7 @@ brethren_elective = {
 		}
 		additive_modifier = { #Prestigious people hold more sway.
 			value = 5
-			localisation_key = tooltip_imperial_vote_strength_elector_prestige
+			localisation_key = tooltip_imperial_vote_strength_elector_piety
 			vassal_of = FROMFROM 
 			NOT = { 
 				FROMFROM = { 
@@ -4251,7 +4255,7 @@ brethren_elective = {
 		}
 		additive_modifier = {
 			value = 10
-			localisation_key = tooltip_imperial_vote_strength_elector_prestige
+			localisation_key = tooltip_imperial_vote_strength_elector_piety
 			vassal_of = FROMFROM 
 			NOT = { 
 				FROMFROM = { 
@@ -4263,7 +4267,7 @@ brethren_elective = {
 		}
 		additive_modifier = {
 			value = 15
-			localisation_key = tooltip_imperial_vote_strength_elector_prestige
+			localisation_key = tooltip_imperial_vote_strength_elector_piety
 			vassal_of = FROMFROM 
 			NOT = { 
 				FROMFROM = { 
@@ -4275,7 +4279,7 @@ brethren_elective = {
 		}
 		additive_modifier = {
 			value = 20
-			localisation_key = tooltip_imperial_vote_strength_elector_prestige
+			localisation_key = tooltip_imperial_vote_strength_elector_piety
 			vassal_of = FROMFROM 
 			NOT = { 
 				FROMFROM = { 
@@ -4287,7 +4291,7 @@ brethren_elective = {
 		}
 		additive_modifier = {
 			value = 25
-			localisation_key = tooltip_imperial_vote_strength_elector_prestige
+			localisation_key = tooltip_imperial_vote_strength_elector_piety
 			vassal_of = FROMFROM 
 			NOT = { 
 				FROMFROM = { 
@@ -4299,7 +4303,7 @@ brethren_elective = {
 		}
 		additive_modifier = {
 			value = 30
-			localisation_key = tooltip_imperial_vote_strength_elector_prestige
+			localisation_key = tooltip_imperial_vote_strength_elector_piety
 			vassal_of = FROMFROM 
 			NOT = { 
 				FROMFROM = { 
@@ -4311,7 +4315,7 @@ brethren_elective = {
 		}
 		additive_modifier = {
 			value = 40
-			localisation_key = tooltip_imperial_vote_strength_elector_prestige
+			localisation_key = tooltip_imperial_vote_strength_elector_piety
 			vassal_of = FROMFROM 
 			NOT = { 
 				FROMFROM = { 
@@ -5769,6 +5773,55 @@ brethren_elective = {
 		}
 
 
+		#Yarrr
+		additive_modifier = {
+			value = -25
+			localisation_key = tooltip_vote_no_kills
+			this_is_warrior_culture_trigger = yes
+			FROM = { 
+				NOT = { has_character_flag = killed_a_man }
+			}
+		}
+
+		additive_modifier = { #Being a good orator.
+			value = 5 
+			localisation_key = tooltip_vote_good_pirate
+			this_is_warrior_culture_trigger = yes
+			any_owned_bloodline = {
+				has_bloodline_flag = bloodline_pirate
+			}
+		}
+
+		additive_modifier = {
+			value = 30
+			localisation_key = tooltip_vote_good_pirate
+			this_is_warrior_culture_trigger = yes
+			FROM = { 
+				trait = freebooter
+			}
+		}
+
+		additive_modifier = {
+			value = 30
+			localisation_key = tooltip_vote_good_pirate
+			this_is_warrior_culture_trigger = yes
+			FROM = { 
+				trait = buccaneer
+			}
+		}
+
+		additive_modifier = {
+			value = 60
+			localisation_key = tooltip_vote_good_pirate
+			this_is_warrior_culture_trigger = yes
+			FROM = { 
+				OR = {
+					trait = corsair
+					trait = pirate_king_trait
+				}		
+			}
+		}
+
 		#All the Traits
 		additive_modifier = {
 			value = 5
@@ -5833,9 +5886,19 @@ brethren_elective = {
 			}
 		}
 		additive_modifier = {
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_drunkard
+			NOT = { character = FROM } #Do not judge yourself.
+			trait = drunkard
+			FROM = { 
+				trait = drunkard
+			}
+		}
+		additive_modifier = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_drunkard
 			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { trait = drunkard }
 			FROM = { 
 				trait = drunkard
 			}
@@ -6164,6 +6227,30 @@ brethren_elective = {
 				trait = severely_injured
 			}
 		}
+		additive_modifier = { #yarr
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_one_eyed
+			this_is_warrior_culture_trigger = yes
+			FROM = { 
+				trait = one_eyed
+			}
+		}
+		additive_modifier = {
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_one_handed
+			this_is_warrior_culture_trigger = yes
+			FROM = { 
+				trait = one_handed
+			}
+		}
+		additive_modifier = {
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_one_legged
+			this_is_warrior_culture_trigger = yes
+			FROM = { 
+				trait = one_legged
+			}
+		}
 		#additive_modifier = {
 		#	value = 25
 		#	localisation_key = tooltip_feudal_elector_vote_born_in_the_purple
@@ -6184,19 +6271,6 @@ brethren_elective = {
 		#		has_minor_title = title_despot
 		#	}
 		#}
-		additive_modifier = {
-			value = -5
-			localisation_key = tooltip_feudal_elector_vote_child_of_consort
-			NOT = { character = FROM } #Do not judge yourself.
-			is_feudal = yes
-			FROM = {
-				OR = { 
-					trait = legit_bastard
-					trait = child_of_consort_male
-					trait = child_of_consort
-				}
-			}
-		}
 		additive_modifier = { #Attraction bonus
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_attractive
@@ -7254,21 +7328,6 @@ brethren_elective = {
 			}
 		}
 		additive_modifier = { #Praised for being Seaking/Sea_queen
-			value = 60
-			localisation_key = tooltip_feudal_elector_vote_seaking_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				this_is_warrior_culture_trigger = yes
-				has_religion_feature = religion_seafaring
-			}
-			FROM = { 
-				OR = { 
-					trait = seaking
-					trait = sea_queen
-				}
-			}
-		}
-		additive_modifier = { #Praised for being Seaking/Sea_queen
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_seaking_positive
 			NOT = { character = FROM } #Do not judge yourself.
@@ -7278,8 +7337,8 @@ brethren_elective = {
 			}
 			FROM = { 
 				OR = { 
-					trait = seaking
-					trait = sea_queen
+					trait = corsair
+					trait = pirate_king_trait
 				}
 			}
 		}
