@@ -406,7 +406,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTA_pirate_king
+		name = EVTOPTA_pirate_king_2
 		trigger = {
 			religion = brethren 
 			NOT = { has_landed_title = k_pirate_kingdom }
@@ -414,14 +414,14 @@ narrative_event = {
 	}
 	
 	option = {
-		name = EVTOPTB_pirate_king
+		name = EVTOPTB_pirate_king_2
 		trigger = {
 			NOT = { religion = brethren }
 		}
 	}
 	
 	option = {
-		name = EVTOPTC_pirate_king
+		name = EVTOPTC_pirate_king_2
 		trigger = {
 			religion = brethren 
 			has_landed_title = k_pirate_kingdom
