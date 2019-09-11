@@ -1835,23 +1835,26 @@ gender_laws = {
 		female_dynasty_opinion = 10
 		
 		potential = {
-			holder_scope = {
-				OR = {
-					AND = {
-						is_theocracy = no
-						holy_order = no
-						OR = {
-							matriarchal_religion = yes
-							any_owned_bloodline = {
-								has_bloodline_flag = bloodline_enatic
+			OR = {
+				title = d_nancy_harts
+				holder_scope = {
+					OR = {
+						AND = {
+							is_theocracy = no
+							holy_order = no
+							OR = {
+								matriarchal_religion = yes
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_enatic
+								}
+								has_landed_title = d_nancy_harts
 							}
-							has_landed_title = d_nancy_harts
 						}
-					}
-					AND = {
-						OR = { is_theocracy = yes holy_order = yes }
-						religion_allows_female_temple_holders = yes
-						religion_allows_male_temple_holders = no
+						AND = {
+							OR = { is_theocracy = yes holy_order = yes }
+							religion_allows_female_temple_holders = yes
+							religion_allows_male_temple_holders = no
+						}
 					}
 				}
 			}
