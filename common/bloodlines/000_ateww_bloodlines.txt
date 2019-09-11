@@ -16,6 +16,24 @@ barron = { #Restored The Presidency
 		religion = americanist
 	}
 }
+
+creaux = { #Created the Kingdom Of Louisiana
+	combat_rating = 5
+	cajun_opinion = 5
+	creole_opinion = 5
+	fertility = 0.10
+	inheritance = all_descendants
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_fleur_de_lis_gold
+	flags = { 
+	    historical_bloodline 
+		bloodline_heroes 
+	}
+	active = {
+		religion = voodoo
+	}
+}
+
 trump = { #Trumps
 	monthly_character_prestige = 0.1
 	stewardship = 1
