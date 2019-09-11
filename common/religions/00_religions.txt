@@ -58,6 +58,8 @@ afro_syncretic = {
 		intermarry = candomble
 		intermarry = espiritista
 		intermarry = espiritista_reformed
+
+		intermarry = brethren
 	}
 	voodoo = {
 		graphical_culture = africangfx
@@ -85,6 +87,7 @@ afro_syncretic = {
 		
 		priests_can_marry = yes
 		female_temple_holders = yes
+		allows_matrilineal_marriage = yes
 		allow_looting = yes
 		allow_rivermovement = yes
 		can_demand_religious_conversion = no
@@ -721,6 +724,7 @@ christian = {
 		can_grant_claim = yes
 		can_call_crusade = yes
 		can_retire_to_monastery = yes
+		allows_matrilineal_marriage = yes
 		priests_can_inherit = yes
 		female_temple_holders = yes
 		male_temple_holders = no
@@ -821,6 +825,7 @@ christian = {
 		can_grant_invasion_cb = invasion
 		can_grant_claim = yes
 		can_call_crusade = no
+		allows_matrilineal_marriage = yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = yes
 		female_temple_holders = yes
@@ -912,8 +917,8 @@ christian = {
 		intermarry = moravian
 
 		character_modifier = {
-			vassal_opinion = 10
-			rel_head_opinion = 10
+			vassal_opinion = 15
+			rel_head_opinion = 15
 		}
 	}
 	
@@ -1035,6 +1040,7 @@ christian = {
 		can_retire_to_monastery = no
 		female_temple_holders = yes
 		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		allows_matrilineal_marriage = yes
 		allow_rivermovement = yes
 		
 		religious_clothing_head = 0
@@ -1334,6 +1340,7 @@ christian = {
 		priests_can_marry = yes
 		priests_can_inherit = yes
 		feminist = yes
+		allows_matrilineal_marriage = yes
 		allow_rivermovement = yes
 		
 		religious_clothing_head = 0
@@ -1790,6 +1797,7 @@ latter_day_saints = {
 
 		investiture = yes
 		feminist = yes
+		allows_matrilineal_marriage = yes
 		priests_can_marry = yes
 		allow_rivermovement = yes
 		max_wives = 1
@@ -1851,6 +1859,7 @@ latter_day_saints = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		allows_matrilineal_marriage = yes
 		allow_rivermovement = yes
 		max_wives = 4
 		can_demand_religious_conversion = no
@@ -2054,6 +2063,7 @@ mesoamerican_gods = {
 		allow_rivermovement = yes
 		female_temple_holders = yes
 		feminist = yes
+		allows_matrilineal_marriage = yes
 		peace_piety_gain = 1.0 #Gains 1 extra piety per month while at peace
 		
 		crusade_name = CRUSADE
@@ -2081,7 +2091,7 @@ oldworld = {
 	playable = yes
 	hostile_within_group = yes
 	
-	ai_convert_same_group = 1
+	ai_convert_same_group = 2
 	ai_convert_other_group = 2
 	
 	color = { 0.1 0.7 0.1 }
@@ -2137,6 +2147,7 @@ oldworld = {
 		allow_rivermovement = yes
 		female_temple_holders = yes
 		feminist = yes
+		allows_matrilineal_marriage = yes
 		
 		priests_can_marry = yes
 		
@@ -2197,6 +2208,7 @@ oldworld = {
 		female_temple_holders = yes
 		allow_rivermovement = yes
 		feminist = yes
+		allows_matrilineal_marriage = yes
 		
 		priests_can_marry = yes
 
@@ -2252,7 +2264,7 @@ oldworld = {
 		allow_rivermovement = yes
 		allow_looting = yes
 		seafarer = yes
-		female_temple_holders = no
+		female_temple_holders = yes
 		feminist = no
 		peace_prestige_loss = yes
 		raised_vassal_opinion_loss = no
@@ -2312,6 +2324,7 @@ oldworld = {
 		female_temple_holders = yes
 		male_temple_holders = no
 		feminist = yes
+		allows_matrilineal_marriage = yes
 		
 		priests_can_marry = no
 		priests_can_inherit = yes
@@ -2332,8 +2345,8 @@ oldworld = {
 		religious_clothing_priest = 11
 
 		character_modifier = {
-			vassal_opinion = 10
-			rel_head_opinion = 10
+			vassal_opinion = 15
+			rel_head_opinion = 15
 		}
 	}
 
@@ -2632,6 +2645,7 @@ oldworld = {
 		can_call_crusade = no
 		can_grant_claim = no
 		feminist = yes #taking it to the next level
+		allows_matrilineal_marriage = yes
 				
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -3081,6 +3095,7 @@ pagan_group = {
 		allow_rivermovement = yes
 		female_temple_holders = yes
 		feminist = yes
+		allows_matrilineal_marriage = yes
 		allow_in_ruler_designer = no
 		
 		religious_clothing_head = 3
@@ -3145,6 +3160,7 @@ pagan_group = {
 		allow_rivermovement = yes
 		female_temple_holders = yes
 		feminist = yes
+		allows_matrilineal_marriage = yes
 		raised_vassal_opinion_loss = no
 		allow_in_ruler_designer = yes
 		reformed = celtic_pagan_reformed
@@ -3188,11 +3204,11 @@ pirate = {
 		}
 		
 		scripture_name = THE_CODE
-		priest_title = PRIEST
+		priest_title = PRIEST_LOREKEEPER
 		
 		can_excommunicate = yes
 		can_grant_claim = yes
-		can_grant_divorce = yes
+		can_grant_divorce = no
 		priests_can_marry = yes
 		allow_rivermovement = yes
 		allow_viking_invasion = yes
@@ -3219,6 +3235,7 @@ pirate = {
 		religious_clothing_priest = 17
 		
 		intermarry = voodoo
+		intermarry = santeria
 	}
 }
 
@@ -3300,6 +3317,7 @@ jewish_group = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 		feminist = yes
+		allows_matrilineal_marriage = yes
 		priests_can_inherit = no
 		
 		religious_clothing_head = 7

@@ -40,32 +40,6 @@ succession_laws = {
 				is_merchant_republic = no
 				is_nomadic = no
 			}
-			OR = {
-				title = k_pirate_kingdom
-				holder_scope = { # Viceroyalties can always have turkish succession if muslim
-					any_demesne_title = {
-						is_vice_royalty = yes
-					}
-				}
-				AND = {
-					OR = {
-						is_landless_type_title = no
-						is_tribal_type_title = yes
-						temporary = yes
-					}
-					holder_scope = {
-						OR = {
-							independent = yes
-							NOT = {
-								any_liege = {
-									holy_order = yes
-								}
-							}
-						}
-					}
-					is_primary_type_title = no
-				}
-			}
 			NAND = { 
 				has_law = succession_voting_power_1
 				OR = { 
@@ -83,6 +57,15 @@ succession_laws = {
 		}
 		revoke_allowed = {
 			always = no
+		}
+		default_selection = {
+			factor = 0
+			modifier = {
+				factor = 100
+				holder_scope = {
+					religion_group = pirate
+				}
+			}
 		}
 	}
 }

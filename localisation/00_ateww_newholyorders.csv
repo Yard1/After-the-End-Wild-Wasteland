@@ -30,7 +30,7 @@ EVTDESC_ATEWWNHO_19;My [GetFromRelation], [From.GetTitledFirstName], has request
 EVTTOOLTIP_ATEWWNHO_19;[This.GetTitledFirstName] becomes a member of the American Legion.;;;;;;;;;;;;;x
 EVTDESC_ATEWWNHO_23;Honorable [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to defend America and [From.Religion.GetHighGodName]! You have my friendship, as well as that of the High Command.\n\nMay [From.Religion.GetHighGodName] protect you,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
 EVTDESC_ATEWWNHO_27;Most righteous [Root.GetTitledFirstName], the American Legion is in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [From.Religion.GetRandomGodName] guide your sword,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
-EVTDESC_ATEWWNHO_27;The American Legion has constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+EVTDESC_ATEWWNHO_28;The American Legion has constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
 EVTDESC_ATEWWNHO_30;Your majesty, this antagonism is completely unwarranted! The American Legion serves the will of the Generals - but do you?\n\nWith anger and sadness,\n\n[From.GetTitledFirstName];;;;;;;;;;;;;x
 expelled_d_american_legion;Expelled the American Legion;;;;;;;;;;;;;x
 
@@ -43,13 +43,13 @@ expel_enclave_desc;I can drive the Enclave from my realm and seize their castles
 donate_money_to_enclave;Donate 300¤ to the Enclave;;;;;;;;;;;;;x
 donate_money_to_enclave_desc;I can donate money to the Enclave in exchange for [Player.Religion.GetPietyName] and lifelong respect from the High Command.;;;;;;;;;;;;;x
 
-EVTDESC_ATEWWNHO_32;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Enclave in their struggle to preserve the creations of [From.Religion.GetRandomGodName] in the Rustlands, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
-EVTTOOLTIP_ATEWWNHO_32;[This.GetTitledFirstName] becomes a member of the Enclave.;;;;;;;;;;;;;x
-EVTDESC_ATEWWNHO_36;Honorable [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation will allow us to face the traitors with reneved might! The Enclave salutes you.\n\n[From.Religion.GetHighGodName] with you,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
-EVTDESC_ATEWWNHO_40;Most righteous [Root.GetTitledFirstName], the Enclave is in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\n[From.Religion.GetRandomGodName] guide you,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
-EVTDESC_ATEWWNHO_41;The Enclave has constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
-EVTDESC_ATEWWNHO_43;Your majesty, this antagonism is completely unwarranted! The Enclave is composed of real patriots, unlike you!\n\nWith anger and sadness,\n\n[From.GetTitledFirstName];;;;;;;;;;;;;x
-expelled_d_enclave;Expelled the Enclave;;;;;;;;;;;;;x
+EVTDESC_ATEWWNHO_32;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the United Empire Loyalists in their task to defend the Confederated church, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTTOOLTIP_ATEWWNHO_32;[This.GetTitledFirstName] becomes a member of the United Empire Loyalists.;;;;;;;;;;;;;x
+EVTDESC_ATEWWNHO_36;Blessed [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the Church! You are always welcome in our domain.\n\nGod bless you,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTDESC_ATEWWNHO_40;Most righteous [Root.GetTitledFirstName], the United Empire Loyalists are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\n[From.Religion.GetRandomGodName] guide you,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTDESC_ATEWWNHO_41;The United Empire Loyalists have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+EVTDESC_ATEWWNHO_43;Your majesty, this antagonism is completely unwarranted! The Association serves Christ, but, one has to wonder, do you?\n\nWith anger and sadness,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+expelled_d_enclave;Expelled the United Empire Loyalists;;;;;;;;;;;;;x
 
 MOTHER_SUPERIOR;Mother Superior;;;;;;;;;;;;;x
 
@@ -57,3 +57,16 @@ donate_money_to_ursuline_state;Donate 300¤ to St. Ursula's Chosen;;;;;;;;;;;;;x
 donate_money_to_ursuline_state_desc;I can donate money to St. Ursula's Chosen in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Church.;;;;;;;;;;;;;x
 expel_ursuline_state;Expel St. Ursula's Chosen;;;;;;;;;;;;;x
 expel_ursuline_state_desc;I can drive St. Ursula's Chosen from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+
+expel_uel;Expel the American Legion;;;;;;;;;;;;;x
+expel_uel_desc;I can drive the American Legion from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_uel;Donate 300¤ to the American Legion;;;;;;;;;;;;;x
+donate_money_to_uel_desc;I can donate money to the American Legion in exchange for [Player.Religion.GetPietyName] and lifelong respect from the High Command.;;;;;;;;;;;;;x
+
+EVTDESC_ATEWWNHO_45;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the American Legion in their quest to carry out the will of [From.Religion.GetRandomGodName], even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTTOOLTIP_ATEWWNHO_45;[This.GetTitledFirstName] becomes a member of the American Legion.;;;;;;;;;;;;;x
+EVTDESC_ATEWWNHO_49;Honorable [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to defend America and [From.Religion.GetHighGodName]! You have my friendship, as well as that of the High Command.\n\nMay [From.Religion.GetHighGodName] protect you,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTDESC_ATEWWNHO_53;Most righteous [Root.GetTitledFirstName], the American Legion is in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [From.Religion.GetRandomGodName] guide your sword,\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+EVTDESC_ATEWWNHO_54;The American Legion has constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+EVTDESC_ATEWWNHO_55;Your majesty, this antagonism is completely unwarranted! The American Legion serves the will of the Generals - but do you?\n\nWith anger and sadness,\n\n[From.GetTitledFirstName];;;;;;;;;;;;;x
+expelled_d_uel;Expelled the American Legion;;;;;;;;;;;;;x

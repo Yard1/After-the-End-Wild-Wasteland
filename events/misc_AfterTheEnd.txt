@@ -11037,6 +11037,19 @@ character_event = {
 					add_law = investiture_law_0
 				}
 			}
+
+			if = {
+				limit = {
+					religion = brethren
+					martial = 5
+					is_adult = yes
+				}
+				random_list = {
+					30 = {}
+					60 = { add_trait = freebooter }
+					10 = { add_trait = buccaneer }
+				}
+			}
 		}
 		d_libertarian = {
 			holder_scope = {

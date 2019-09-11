@@ -1653,12 +1653,7 @@
 		factor = 3
 		modifier = {
 			factor = 0
-			OR = {
-				religion = americanist
-				religion = hamiltonian
-				religion = jeffersonian
-				religion = libertarian
-			}
+			religion_group = oldworld
 		}
 		modifier = {
 			factor = 0
@@ -1704,12 +1699,7 @@
 		factor = 100
 		modifier = {
 			factor = 0
-			OR = {
-				religion = americanist
-				religion = hamiltonian
-				religion = jeffersonian
-				religion = libertarian
-			}
+			religion_group = oldworld
 		}
 		modifier = {
 			factor = 0
@@ -1851,10 +1841,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = americanist }
-			NOT = { religion = hamiltonian }
-			NOT = { religion = jeffersonian }
-			NOT = { religion = libertarian }
+			NOT = { religion_group = oldworld }
 		}
 	}
 	
@@ -1867,10 +1854,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = americanist }
-			NOT = { religion = hamiltonian }
-			NOT = { religion = jeffersonian }
-			NOT = { religion = libertarian }
+			NOT = { religion_group = oldworld }
 		}
 		modifier = {
 			factor = 0
@@ -1888,10 +1872,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = americanist }
-			NOT = { religion = hamiltonian }
-			NOT = { religion = jeffersonian }
-			NOT = { religion = libertarian }
+			NOT = { religion_group = oldworld }
 		}
 	}
 	
@@ -1904,7 +1885,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = americanist }
+			NOT = { religion_group = oldworld }
 		}
 	}
 	
@@ -1917,10 +1898,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = americanist }
-			NOT = { religion = hamiltonian }
-			NOT = { religion = jeffersonian }
-			NOT = { religion = libertarian }
+			NOT = { religion_group = oldworld }
 		}
 		modifier = {
 			factor = 0
@@ -1938,10 +1916,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = americanist }
-			NOT = { religion = hamiltonian }
-			NOT = { religion = jeffersonian }
-			NOT = { religion = libertarian }
+			NOT = { religion_group = oldworld }
 		}
 		modifier = {
 			factor = 100
@@ -1965,10 +1940,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = americanist }
-			NOT = { religion = hamiltonian }
-			NOT = { religion = jeffersonian }
-			NOT = { religion = libertarian }
+			NOT = { religion_group = oldworld }
 		}
 		modifier = {
 			factor = 0
@@ -3310,10 +3282,7 @@
 		factor = 10
 		modifier = {
 			factor = 0
-			NOT = { religion = americanist }
-			NOT = { religion = hamiltonian }
-			NOT = { religion = jeffersonian }
-			NOT = { religion = libertarian }
+			NOT = { religion_group = oldworld }
 		}
 	}
 	
@@ -3322,10 +3291,7 @@
 		factor = 10
 		modifier = {
 			factor = 0
-			NOT = { religion = americanist }
-			NOT = { religion = hamiltonian }
-			NOT = { religion = jeffersonian }
-			NOT = { religion = libertarian }
+			NOT = { religion_group = oldworld }
 		}
 	}
 	
@@ -3334,10 +3300,7 @@
 		factor = 10
 		modifier = {
 			factor = 0
-			NOT = { religion = americanist }
-			NOT = { religion = hamiltonian }
-			NOT = { religion = jeffersonian }
-			NOT = { religion = libertarian }
+			NOT = { religion_group = oldworld }
 		}
 	}
 	
@@ -3346,10 +3309,7 @@
 		factor = 10
 		modifier = {
 			factor = 0
-			NOT = { religion = americanist }
-			NOT = { religion = hamiltonian }
-			NOT = { religion = jeffersonian }
-			NOT = { religion = libertarian }
+			NOT = { religion_group = oldworld }
 		}
 	}
 	
@@ -3358,10 +3318,7 @@
 		factor = 10
 		modifier = {
 			factor = 0
-			NOT = { religion = americanist }
-			NOT = { religion = hamiltonian }
-			NOT = { religion = jeffersonian }
-			NOT = { religion = libertarian }
+			NOT = { religion_group = oldworld }
 		}
 	}
 	
@@ -3375,8 +3332,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				OR = {
+			NOR = {
 					religion = rust_cultist
 					religion = chrome_cultist
 				}
@@ -3405,8 +3361,11 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = rust_cultist }
-			NOT = { religion = chrome_cultist }
+			NOR = {
+					religion = rust_cultist
+					religion = chrome_cultist
+				}
+			}
 		}
 		modifier = {
 			factor = 0
@@ -3431,8 +3390,11 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = rust_cultist }
-			NOT = { religion = chrome_cultist }
+			NOR = {
+					religion = rust_cultist
+					religion = chrome_cultist
+				}
+			}
 		}
 		modifier = {
 			factor = 0
@@ -3457,8 +3419,11 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = rust_cultist }
-			NOT = { religion = chrome_cultist }
+			NOR = {
+					religion = rust_cultist
+					religion = chrome_cultist
+				}
+			}
 		}
 		modifier = {
 			factor = 0
@@ -3485,8 +3450,11 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = rust_cultist }
-			NOT = { religion = chrome_cultist }
+			NOR = {
+					religion = rust_cultist
+					religion = chrome_cultist
+				}
+			}
 		}
 		modifier = {
 			factor = 0

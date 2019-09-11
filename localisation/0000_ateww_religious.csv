@@ -1,5 +1,14 @@
 #CODE;ENGLISH;FRENCH;GERMAN;SPANISH;;;;;;;;;x
 
+ROADMEN;Roadmen;;;;;;;;;;;;;x
+PRIEST_PLURAL;[This.GetPriest]s;;;;;;;;;;;;;x
+monetarist_opinion;[monetarist.GetName] Opinion;;;;;;;;;;;;;x
+
+REL_INVESTITURE_DESC;$NAME$ priests may pay tax to the religious head rather than their secular liege;Les évêques de religion $NAME$ peuvent payer leurs impôts auprès du pape au détriment de leur souverain séculier;$NAME$e Bischöfe können beschließen, die Steuern dem Papst statt dem weltlichen Lehnsherrn zu zahlen.;;Los obispos $NAME$ pueden pagar el impuesto al Papa, en lugar de a su señor secular;;;;;;;;;x
+REL_PRIESTS_INHERIT_DESC;Priests (Temple holders) can inherit titles;Les religieux terriens peuvent hériter de titres;Priester (Eigentümer der Tempel) können Titel erben;;Los sacerdotes (titulares de templo) pueden heredar títulos;;;;;;;;;x
+REL_PRIESTS_MARRY_DESC;Priests (Temple holders) can marry;Les religieux peuvent se marier;Priester dürfen heiraten;;Los sacerdotes pueden casarse;;;;;;;;;x
+
+
 HOLY_ORDER_DEMAND_SON_ALT;Most righteous [Root.GetTitledFirstName], I have a humble request for you in light of your debt to us. There is no rest in our defense against the infidel and we have desperate need of knights to lead our men. Thus, I would like to extend this opportunity to your able and noble [FromFrom.GetSonDaughter] [FromFrom.GetFirstName] to serve in our ranks. Naturally, this would disinherit [FromFrom.GetHerHim]. May [From.Religion.GetHighGodName] bless you,\n\n[From.GetTitledFirstName];Très juste [Root.GetTitledFirstName], j'ai une humble requête à vous soumettre, qui a trait à votre dette envers l'Ordre.\n\nComme vous le savez, notre lutte contre les infidèles ne connaît aucun répit et nous avons grand besoin de chevaliers. Nous présentons donc l'opportunité à votre fils [FromFrom.GetFirstName] de servir dans nos rangs afin de rembourser votre emprunt. Notez cependant que cet engagement le déshériterait.\n\nGrand Maître [From.GetFirstName];Rechtschaffenste[Root.GetrMale] [Root.GetTitledFirstName], ich habe eine bescheidende Bitte an euch angesichts eurer Schulden an uns. Unsere Verteidigung gegen die Ungläubigen hat keine Ruhe und wir brauchen dringend Ritter, um unsere Männer anzuführen. Ich möchte diese Gelegenheit daher nutzen, um euren fähigen und edlen Sohn [FromFrom.GetFirstName] anzufordern, um in unseren Reihen zu dienen. Natürlich würde dies ihn enterben. Möge [From.Religion.GetHighGodName] euch segnen,\n\nGroßmeister [From.GetFirstName];;Just[Root.GetOA] [Root.GetTitleFirstName]. Quisiera haceros una humilde petición respecto a la deuda que tenéis que nosotros. La lucha contra el infiel no descansa y estamos muy necesitados de caballeros que dirijan a nuestros hombres. Así pues, me gustaría extender la invitación a servir en nuestras filas a vuestro a capaz y noble hijo [FromFrom.GetFirstName]. Por supuesto, esto le desheredaría. Que [From.Religion.GetHighGodName] os bendiga.\n\nGran Maestre [From.GetFirstName];;;;;;;;;x
 EVTDESCHFPA23010;To [Root.GetTitledName],\nWe have heard your passionate plea for forgiveness, and We are certain that you will be eager to prove the sincerity of your repentance by devoting the life of your [son_monk_candidate.GetSonDaughter] [son_monk_candidate.GetFirstName] to [From.Religion.GetHighGodName].\n\nSincerely,\n[From.GetTitledName];[Root.Get_Au_TitledName],\nNous avons pris note de votre plaidoyer véhément pour le pardon et Nous sommes certain que vous aurez hâte de prouver la sincérité de votre repentance en vouant la vie d'un de vos enfants [From.Get_au_HighGod].\n\nCordialement,\n[From.GetTitledName];An [Root.GetTitledName],\nWir haben eure leidenschaftliche Bitte um Vergebung zur Kenntnis genommen und sind sicher, dass ihr die Aufrichtigkeit eurer Reue beweisen werdet, indem ihr eines eurer Kinder dem Leben von [From.Religion.GetHighGodName] widmet.\n\nHochachtungsvoll,\n[From.GetTitledName];;A [Root.GetTitledName], \nHemos escuchado tu apasionada petición de perdón y Nos estamos seguros que desearás mostrar la sinceridad de tu arrepentimiento dedicando la vida de uno de tus hijos a [From.Religion.GetHighGodName].\n\nAtentamente, \n[From.GetTitledName];;;;;;;;x
 EVTDESCHFPA230100;To [Root.GetTitledName],\nWe have heard your passionate plea for forgiveness, and We are certain that you will be eager to prove the sincerity of your repentance by devoting the life of your [son_monk_candidate.GetSonDaughter] [son_monk_candidate.GetFirstName] to defence of the [From.Religion.GetHighGodName] as a member of.\n\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
@@ -30,7 +39,7 @@ monastic_order_libertarian_rank_4_male;Vestalis Maximus;;;;;;;;;;;;;x
 currency_name_monastic_order_libertarian;Devotion;;;;;;;;;;;;;x
 
 TT_CORONATION_RELIGIOUS_HEAD_POPE;A [Root.GetProperReligiousHead] exists;;;;;;;;;;;;;x
-TT_CORONATION_VASSAL_PRIEST;A suitable vassal [Root.GetReligiousPerson] is available to perform the ceremony;Un évêque vassal est disponible pour célébrer la cérémonie;Ein Vasallen-Bischof ist verfügbar, der die Zeremonie durchführt;;Hay un obispo vasallo disponible para realizar la ceremonia;;;;;;;;x
+TT_CORONATION_VASSAL_PRIEST;A suitable vassal [Root.GetPriest] is available to perform the ceremony;Un évêque vassal est disponible pour célébrer la cérémonie;Ein Vasallen-Bischof ist verfügbar, der die Zeremonie durchführt;;Hay un obispo vasallo disponible para realizar la ceremonia;;;;;;;;x
 
 LIEGE_IS_JAIN;Liege is Pacifist;;;;;;;;;;;;;x
 
@@ -124,6 +133,9 @@ failed_to_depose_impious_judge_modifier;Impious [Root.RelHead.GetTitle] won the 
 sendforsupremejudge
 scorned_the_judge;By not seeking legitimacy directly from the [Root.GetConclaveName], your inauguration will §ROffend§! the §Y[Root.RelHead.GetTitle]§!.;;;;;;;;;;;;;x
 
+string_crowned_by_bishop_alive_desc;the [coronation_priest_per.GetTitle] of [coronation_priest_per.Capital.GetName];[coronation_priest_per.Get_only_le_Title][coronation_priest_per.GetTitle] de [coronation_priest_per.Capital.GetName];[coronation_priest_per.Getdemder] [coronation_priest_per.GetTitle] von [coronation_priest_per.Capital.GetName];;el [coronation_priest_per.GetTitle] de [coronation_priest_per.Capital.GetName];;;;;;;;x
+string_crowned_by_bishop_dead_desc;a notable [Root.GetPriest];un prélat de l'Église;einem angesehenen Prälaten der Kirche;;un prelado notable de la Iglesia;;;;;;;;x
+
 inaug_by_judge;Inaugurated by Judge;;;;;;;;;;;;;x
 inaug_by_judge_desc;This ruler was inaugurated by a minor judge.\nA formal inauguration is considered by many a fundamental step in the legitimization of any proper [Root.Religion.GetName] [Root.GetTitle].;;;;;;;;;;;;;x
 
@@ -192,6 +204,7 @@ EVOTPC_ATE_WWW_RELIGION_2;Butler, The Marine;;;;;;;;;;;;;x
 EVOTPD_ATE_WWW_RELIGION_2;This will not do! Show me my other options;;;;;;;;;;;;;x
 
 CORPSMAN;Hospitalman;;;;;;;;;;;;;x
+CORPSMEN;Hospitalmen;;;;;;;;;;;;;x
 temple_barony_of_jeffersonian;Infirmary of;;;;;;;;;;;;;x
 temple_baron_jeffersonian;Hospitalman;;;;;;;;;;;;;x
 temple_baron_female_jeffersonian;Hospitalwoman;;;;;;;;;;;;;x

@@ -84,6 +84,7 @@ succession_laws = {
 		vassal_opinion = 5
 	
 		potential = {
+			is_landless_type_title = no
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				title = e_usa
@@ -112,7 +113,6 @@ succession_laws = {
 				}
 			}
 			OR = {
-				is_landless_type_title = no
 				is_tribal_type_title = yes
 				temporary = yes
 			}
@@ -1672,7 +1672,6 @@ gender_laws = {
 		}
 		effect = {
 			gender_succ = agnatic
-			set_allows_matrilineal_marriage = no
 		}
 		revoke_allowed = {
 			always = no

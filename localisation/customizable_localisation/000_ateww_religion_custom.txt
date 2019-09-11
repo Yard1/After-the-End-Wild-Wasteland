@@ -154,3 +154,167 @@ defined_text = {
         localisation_key = PIRATE_KING
     }
 }
+
+defined_text = {
+	name = GetPriest
+	text = {
+		trigger = { 
+			OR = {
+				religion = falling_star
+				religion = apostolic
+				religion = sacred_heart
+				religion = gracia_divina
+			}
+		}
+		text = PADRE
+	}
+	text = {
+		trigger = { 
+			OR = {
+				religion = midewiwin_reformed
+				religion = midewiwin
+				religion = raven_tales_reformed
+				religion = raven_tales
+			}
+		}
+		text = SHAMAN
+	}
+	text = {
+		trigger = { 
+			OR = {
+				religion = norse_pagan_reformed
+				religion = norse_pagan
+			}
+		}
+		text = GODI
+	}
+	text = {
+		trigger = { 
+			OR = {
+				religion = occultist_reformed
+				religion = occultist
+				religion = brethren
+			}
+		}
+		text = PRIEST_LOREKEEPER
+	}
+	text = {
+		trigger = { 
+			OR = {
+				religion = revelationist
+				religion = revelationist_reformed
+			}
+		}
+		text = THAUMATURGE
+	}
+	text = {
+		trigger = { 
+			OR = {
+				religion = rust_cultist
+				religion = chrome_cultist
+			}
+		}
+		text = TECHPRIEST
+	}
+	text = {
+		trigger = { 
+			OR = {
+				religion = consumerist
+				religion = monetarist
+			}
+		}
+		text = ENTREPENUER
+	}
+	text = {
+		trigger = { 
+			OR = {
+				religion = jeffersonian
+			}
+		}
+		text = CORPSMAN
+	}
+	text = {
+		trigger = { 
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = libertarian
+			}
+		}
+		text = JUDGE
+	}
+	text = {
+		trigger = { 
+			religion = nousthreskeia
+		}
+		text = PREACHER
+	}
+	text = {
+		trigger = { 
+			OR = {
+				religion = jewish
+				religion = reform
+				religion = meshichist
+			}
+		}
+		text = RABBI
+	}
+	text = {
+		trigger = { 
+			OR = {
+				religion = gaian
+				religion = celtic_pagan_reformed
+				religion = celtic_pagan
+			}
+		}
+		text = DRUID
+	}
+	text = {
+		trigger = { 
+			OR = {
+				religion = cetic
+				religion = hindu
+			}
+		}
+		text = GURU
+	}
+	text = {
+		trigger = { 
+			religion = peyotist
+		}
+		text = ROADMAN
+	}
+	text = {
+		trigger = { 
+			OR = {
+				religion = espiritista
+				religion = espiritista_reformed 
+			}
+		}
+		text = PRIEST_MEDIUM
+	}
+	fallback_text = {
+		text = PRIEST
+	}
+}
+
+defined_text = {
+	name = GetPriestPlural
+	text = {
+		trigger = { 
+			OR = {
+				religion = jeffersonian
+			}
+		}
+		text = CORPSMEN
+	}
+	text = {
+		trigger = { 
+			religion = peyotist
+		}
+		text = ROADMEN
+	}
+	fallback_text = {
+		text = PRIEST_PLURAL
+	}
+}

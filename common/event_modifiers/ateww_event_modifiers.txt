@@ -54,6 +54,10 @@ expelled_d_enclave = {
 	icon = 35
 }
 
+expelled_d_uel = {
+	icon = 35
+}
+
 looted_lady_liberty = {
 	icon = 64
 	libertarian_opinion = -50
