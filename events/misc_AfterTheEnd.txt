@@ -10959,6 +10959,7 @@ character_event = {
 						is_ruler = yes
 					}
 					character_event = { id = misc.6 }
+					character_event = { id = misc.6 days = 2 }
 					character_event = { id = miscATEWW.2 }
 				}
 
@@ -11063,10 +11064,10 @@ character_event = {
 	only_rulers = yes
 	trigger = {
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
-		controls_religion = no # Abbess-General has separate events
 		OR = {
 			is_theocracy = yes
 			holy_order = yes
+			mercenary = yes
 			AND = {
 				is_republic = yes
 				has_law = succ_open_elective
@@ -11077,20 +11078,18 @@ character_event = {
 				holy_order = yes
 				OR = {
 					AND = {
-						OR = {
-							matriarchal_religion = yes
-							religion = libertarian
-						}
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = no
 						NOT = { has_law = enatic_succession }
 					}
 					AND = {
-						equal_religion = yes
-						NOT = { religion = libertarian }
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = yes
 						NOT = { has_law = true_cognatic_succession }
 					}
 					AND = {
-						matriarchal_religion = no
-						equal_religion = no
+						religion_allows_female_temple_holders = no
+						religion_allows_male_temple_holders = yes
 						NOT = { has_law = agnatic_succession }
 					}
 				}
@@ -11144,10 +11143,12 @@ character_event = {
 					}
 					AND = {
 						gender_equality_trigger = yes
+						NOT = { primary_title = { title = d_nancy_harts } }
 						NOT = { has_law = true_cognatic_succession }
 					}
 					AND = {
 						gender_equality_trigger = no
+						NOT = { primary_title = { title = d_nancy_harts } }
 						NOT = { has_law = agnatic_succession }
 					}
 				}
@@ -11192,10 +11193,10 @@ character_event = {
 				new_character = {
 					#character_event = { id = misc.3 } # Diversity
 					#character_event = { id = misc.4 } # Physique
-					log = "misc.6: [Root.GetBestName], [Root.Religion.GetName], spawn new - [This.GetBestName]"
 					ROOT = {
 						any_demesne_title = { gain_title = PREVPREV }
 					}
+					character_event = { id = misc.6 days = 1 }
 				}
 			}
 			else_if = {
@@ -11217,6 +11218,7 @@ character_event = {
 					ROOT = {
 						any_demesne_title = { gain_title = PREVPREV }
 					}
+					character_event = { id = misc.6 days = 1 }
 				}
 			}
 			if = {
@@ -11244,16 +11246,15 @@ character_event = {
 			log = "misc.6: [Root.GetBestName], [Root.Religion.GetName], holy order"
 			if = {
 				limit = {
-					OR = {
-						matriarchal_religion = yes
-						religion = libertarian
-					}
+					religion_allows_female_temple_holders = yes
+					religion_allows_male_temple_holders = no
 				}
 				primary_title = { add_law = enatic_succession log = "misc.6: set enatic_succession in [This.GetName]" }
 			}
 			else_if = {
 				limit = {
-					equal_religion = yes
+					religion_allows_female_temple_holders = yes
+					religion_allows_male_temple_holders = yes
 				}
 				primary_title = { add_law = true_cognatic_succession log = "misc.6: set true_cognatic_succession in [This.GetName]" }
 			}
@@ -11262,10 +11263,8 @@ character_event = {
 			}
 			if = {
 				limit = {
-					OR = {
-						matriarchal_religion = yes
-						religion = libertarian
-					}
+					religion_allows_female_temple_holders = yes
+					religion_allows_male_temple_holders = no
 					is_female = no
 				}
 				create_random_soldier = {
@@ -11283,11 +11282,13 @@ character_event = {
 					ROOT = {
 						any_demesne_title = { gain_title = PREVPREV }
 					}
+					character_event = { id = misc.6 days = 1 }
 				}
 			}
 			else_if = {
 				limit = {
-					equal_religion = yes
+					religion_allows_female_temple_holders = yes
+					religion_allows_male_temple_holders = yes
 					is_female = no
 				}
 				random_list = {
@@ -11308,13 +11309,15 @@ character_event = {
 							ROOT = {
 								any_demesne_title = { gain_title = PREVPREV }
 							}
+							character_event = { id = misc.6 days = 1 }
 						}
 					}
 				}
 			}
 			else_if = {
 				limit = {
-					equal_religion = no
+					religion_allows_female_temple_holders = no
+					religion_allows_male_temple_holders = yes
 					is_female = yes
 				}
 				create_random_soldier = {
@@ -11336,16 +11339,15 @@ character_event = {
 			}
 			if = {
 				limit = {
-					OR = {
-						matriarchal_religion = yes
-						religion = libertarian
-					}
+					religion_allows_female_temple_holders = yes
+					religion_allows_male_temple_holders = no
 				}
 				primary_title = { add_law = enatic_succession log = "misc.6: set enatic_succession in [This.GetName]" }
 			}
 			else_if = {
 				limit = {
-					equal_religion = yes
+					religion_allows_female_temple_holders = yes
+					religion_allows_male_temple_holders = yes
 				}
 				primary_title = { add_law = true_cognatic_succession log = "misc.6: set true_cognatic_succession in [This.GetName]" }
 			}
@@ -11400,6 +11402,7 @@ character_event = {
 					ROOT = {
 						any_demesne_title = { gain_title = PREVPREV }
 					}
+					character_event = { id = misc.6 days = 1 }
 				}
 			}
 			else_if = {
@@ -11425,6 +11428,7 @@ character_event = {
 							ROOT = {
 								any_demesne_title = { gain_title = PREVPREV }
 							}
+							character_event = { id = misc.6 days = 1 }
 						}
 					}
 				}
@@ -11506,6 +11510,7 @@ character_event = {
 					ROOT = {
 						any_demesne_title = { gain_title = PREVPREV }
 					}
+					character_event = { id = misc.6 days = 1 }
 				}
 			}
 			else_if = {
@@ -11528,6 +11533,7 @@ character_event = {
 							ROOT = {
 								any_demesne_title = { gain_title = PREVPREV }
 							}
+							character_event = { id = misc.6 days = 1 }
 						}
 					}
 				}
@@ -11549,6 +11555,7 @@ character_event = {
 					ROOT = {
 						any_demesne_title = { gain_title = PREVPREV }
 					}
+					character_event = { id = misc.6 days = 1 }
 				}
 			}
 			if = {
@@ -11648,7 +11655,7 @@ character_event = {
 				else = {
 					primary_title = { add_law = agnatic_succession log = "misc.70: set agnatic_succession in [This.GetName]" }
 				}
-				#character_event = { id = misc.6 }
+				#character_event = { id = misc.6 days = 1 }
 			}
 		}
 		else_if = {

@@ -1598,8 +1598,9 @@ succession_laws = {
 gender_laws = {
 	cognatic_succession = {
 		potential = {
-			NOT = { title = d_nancy_harts }
+			is_landless_type_title = no
 			holder_scope = {
+				is_theocracy = no
 				OR = {
 					AND = {
 						equal_religion = no
@@ -1607,9 +1608,7 @@ gender_laws = {
 					}
 					has_bloodline_flag = bloodline_effect_cognatic
 				}
-				NOT = { primary_title = { title = d_nancy_harts } }
 			}
-			is_landless_type_title = no
 		}
 		
 		effect = {
@@ -1647,22 +1646,33 @@ gender_laws = {
 			holder_scope = {
 				OR = {
 					AND = {
-						is_theocracy = yes
-						religion_allows_female_temple_holders = no
-						religion_allows_male_temple_holders = yes
-					}
-					AND = {
+						is_theocracy = no
+						holy_order = no
 						equal_religion = no
 						NOT = { has_religion_feature = religion_feature_midewiwin }
+					}
+					AND = {
+						OR = { is_theocracy = yes holy_order = yes }
+						religion_allows_female_temple_holders = no
+						religion_allows_male_temple_holders = yes
 					}
 				}
 			}
 		}
 		allow = {
-			gender_equality_trigger = no
+			holder_scope = {
+				conditional_tooltip = {
+					trigger = {
+						is_theocracy = no
+						holy_order = no
+					}
+					gender_equality_trigger = no
+				}
+			}
 		}
 		effect = {
 			gender_succ = agnatic
+			set_allows_matrilineal_marriage = no
 		}
 		revoke_allowed = {
 			always = no
@@ -1670,16 +1680,11 @@ gender_laws = {
 		default = yes
 		default_selection = {
 			factor = 1
-			
-			modifier = {
-				factor = 0
-				gender_equality_trigger = yes
-			}
-			
+
 			modifier = {
 				factor = 50
 				holder_scope = {
-					is_theocracy = yes
+					OR = { is_theocracy = yes holy_order = yes }
 					religion_allows_female_temple_holders = no
 					religion_allows_male_temple_holders = yes
 				}
@@ -1688,6 +1693,8 @@ gender_laws = {
 			modifier = {
 				factor = 100
 				holder_scope = {
+					is_theocracy = no
+					holy_order = no
 					NOR = {
 						religion_group = christian
 						religion_group = afro_syncretic
@@ -1701,6 +1708,8 @@ gender_laws = {
 			modifier = {
 				factor = 0
 				holder_scope = {
+					is_theocracy = no
+					holy_order = no
 					gender_equality_trigger = yes
 				}
 			}
@@ -1714,32 +1723,39 @@ gender_laws = {
 			NOT = { title = d_nancy_harts }
 			holder_scope = {
 				OR = {
-					gender_equality_trigger = yes
-					has_feminist_culture_trigger = yes
 					AND = {
-						is_theocracy = yes
+						OR = { is_theocracy = yes holy_order = yes }
 						religion_allows_female_temple_holders = yes
 						religion_allows_male_temple_holders = yes
 					}
-					any_owned_bloodline = {
-						has_bloodline_flag = bloodline_effect_cognatic
+					AND = {
+						is_theocracy = no
+						holy_order = no
+						OR = {
+							gender_equality_trigger = yes
+							has_feminist_culture_trigger = yes
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_effect_cognatic
+							}
+						}
 					}
 				}
 			}
 		}
 		allow = {
-			matriarchal_religion = no
-			NOT = { has_religion_feature = religion_patriarchal }
-			OR = {
-				gender_equality_trigger = yes
-				has_feminist_culture_trigger = yes
-				AND = {
-					is_theocracy = yes
-					religion_allows_female_temple_holders = yes
-					religion_allows_male_temple_holders = yes
+			conditional_tooltip = {
+				trigger = {
+					is_theocracy = no
+					holy_order = no
 				}
-				any_owned_bloodline = {
-					has_bloodline_flag = bloodline_effect_cognatic
+				matriarchal_religion = no
+				NOT = { has_religion_feature = religion_patriarchal }
+				OR = {
+					gender_equality_trigger = yes
+					has_feminist_culture_trigger = yes
+					any_owned_bloodline = {
+						has_bloodline_flag = bloodline_effect_cognatic
+					}
 				}
 			}
 		}
@@ -1773,10 +1789,16 @@ gender_laws = {
 				NOT = {
 					holder_scope = {
 						OR = {
-							equal_religion = yes
-							has_religion_feature = religion_feature_midewiwin
 							AND = {
-								is_theocracy = yes
+								is_theocracy = no
+								holy_order = no
+								OR = {
+									equal_religion = yes
+									has_religion_feature = religion_feature_midewiwin
+								}
+							}
+							AND = {
+								OR = { is_theocracy = yes holy_order = yes }
 								religion_allows_female_temple_holders = yes
 								religion_allows_male_temple_holders = yes
 							}
@@ -1789,10 +1811,16 @@ gender_laws = {
 				factor = 50
 				holder_scope = {
 					OR = {
-						equal_religion = yes
-						has_religion_feature = religion_feature_midewiwin
 						AND = {
-							is_theocracy = yes
+							is_theocracy = no
+							holy_order = no
+							OR = {
+								equal_religion = yes
+								has_religion_feature = religion_feature_midewiwin
+							}
+						}
+						AND = {
+							OR = { is_theocracy = yes holy_order = yes }
 							religion_allows_female_temple_holders = yes
 							religion_allows_male_temple_holders = yes
 						}
@@ -1809,20 +1837,22 @@ gender_laws = {
 		potential = {
 			holder_scope = {
 				OR = {
-					matriarchal_religion = yes
-					any_owned_bloodline = {
-						has_bloodline_flag = bloodline_enatic
+					AND = {
+						is_theocracy = no
+						holy_order = no
+						OR = {
+							matriarchal_religion = yes
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_enatic
+							}
+							has_landed_title = d_nancy_harts
+						}
 					}
 					AND = {
-						is_theocracy = yes
+						OR = { is_theocracy = yes holy_order = yes }
 						religion_allows_female_temple_holders = yes
 						religion_allows_male_temple_holders = no
 					}
-					AND = {
-						holy_order = yes
-						religion = libertarian
-					}
-					has_landed_title = d_nancy_harts
 				}
 			}
 		}
@@ -1831,7 +1861,7 @@ gender_laws = {
 		}
 		effect = {
 			gender_succ = enatic
-			
+			set_allows_matrilineal_marriage = yes
 			hidden_tooltip = { #Patrician family workaround
 				holder_scope = {
 					if = {
@@ -1854,17 +1884,9 @@ gender_laws = {
 			factor = 1
 			modifier = {
 				factor = 100
-				is_theocracy = yes
+				OR = { is_theocracy = yes holy_order = yes }
 				religion_allows_female_temple_holders = yes
 				religion_allows_male_temple_holders = no
-			}
-			modifier = {
-				factor = 100
-				OR = {
-					matriarchal_religion = yes
-					religion = libertarian
-				}
-				holy_order = yes
 			}
 		}
 	}
@@ -1874,32 +1896,22 @@ gender_laws = {
 		female_dynasty_opinion = 5
 		
 		potential = {
-			NOT = { title = d_nancy_harts }
+			is_landless_type_title = no
 			holder_scope = {
 				OR = {
 					matriarchal_religion = yes
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_enatic_cognatic 
 					}
-					AND = {
-						is_theocracy = yes
-						religion_allows_female_temple_holders = yes
-						religion_allows_male_temple_holders = no
-					}
-					AND = {
-						holy_order = yes
-						religion = libertarian
-					}
 				}
 			}
-			is_landless_type_title = no
 		}
 		allow = {
 			
 		}
 		effect = {
 			gender_succ = enatic_cognatic
-			
+			set_allows_matrilineal_marriage = yes
 			hidden_tooltip = { #Patrician family workaround
 				holder_scope = {
 					if = {

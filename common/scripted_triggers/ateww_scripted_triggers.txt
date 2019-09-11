@@ -2,13 +2,14 @@ matriarchal_religion = {
 	OR = {
 		has_religion_feature = religion_matriarchal
 		religion = gaian
-		religion = ursuline
 	}
 }
 
 equal_religion = {
+	NOT = { religion = jeffersonian }
 	OR = {
 		has_religion_feature = religion_equal
+		religion = ursuline
 		religion = angeline
 		religion = sol_invicta
 		religion = reform

@@ -1377,7 +1377,7 @@ libertarian_elective = {
 			}
 		}
 		additive_modifier = { #Praised for being Kind. (Americanists care less about kindness and more about being an effective leader.)
-			value = 15
+			value = 5
 			localisation_key = tooltip_feudal_elector_vote_kind_positive
 			NOT = { character = FROM } 
 			is_benevolent_trigger = yes

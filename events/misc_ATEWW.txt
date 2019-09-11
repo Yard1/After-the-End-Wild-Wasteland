@@ -16,8 +16,13 @@ character_event = {
 				primary_title = { is_landless_type_title = yes }
 			}
 			primary_title = { 
-				NOT = { 
+				NOR = { 
 					has_law = agnatic_succession 
+					AND = {
+						OR = { is_theocracy = yes holy_order = yes }
+						religion_allows_female_temple_holders = no
+						religion_allows_male_temple_holders = yes
+					}
 				}
 			}
 		}
@@ -43,10 +48,15 @@ character_event = {
 				if = {
 					limit = {
 						FROMFROM = {
-							primary_title = { 
+							primary_title = {
 								OR = {
 									has_law = enatic_succession
 									has_law = enatic_cognatic_succession
+									AND = {
+										holy_order = yes
+										religion_allows_female_temple_holders = yes
+										religion_allows_male_temple_holders = no
+									}
 								}
 							}
 						}
@@ -600,4 +610,72 @@ character_event = {
 			factor = 40
 		}
 	}
+}
+
+character_event = {
+	id = miscATEWW.6
+	desc = "Rename libertarian female - put it here for better randomness"
+	is_triggered_only = yes
+	hide_window = yes
+	religion = libertarian
+	only_women = yes
+	option = {
+		random_character = {
+			limit = { 
+				NOT = { character = ROOT }
+				is_female = yes
+				culture = ROOT
+			}
+			preferred_limit = {
+				religion = ROOT
+			}
+			ROOT = { copy_name = PREV }
+		}
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0.5
+				NOT = { total_years_played = 5 }
+			}
+		}
+	}
+	option = { set_name = Justice ai_chance = { factor = 1 } }
+	option = { set_name = Columbia ai_chance = { factor = 1 } }
+	option = { set_name = Libertas ai_chance = { factor = 1 } }
+	option = { set_name = Liberalitas ai_chance = { factor = 1 } }
+	option = { set_name = Acantha ai_chance = { factor = 1 } }
+	option = { set_name = Althea ai_chance = { factor = 1 } }
+	option = { set_name = Anthea ai_chance = { factor = 1 } }
+	option = { set_name = Ariadne ai_chance = { factor = 1 } }
+	option = { set_name = Artemis ai_chance = { factor = 1 } }
+	option = { set_name = Astra ai_chance = { factor = 1 } }
+	option = { set_name = Athena ai_chance = { factor = 1 } }
+	option = { set_name = Aurora ai_chance = { factor = 1 } }
+	option = { set_name = Calypso ai_chance = { factor = 1 } }
+	option = { set_name = Cassandra ai_chance = { factor = 1 } }
+	option = { set_name = Ceres ai_chance = { factor = 1 } }
+	option = { set_name = Clio ai_chance = { factor = 1 } }
+	option = { set_name = Daphne ai_chance = { factor = 1 } }
+	option = { set_name = Diana ai_chance = { factor = 1 } }
+	option = { set_name = Fortuna ai_chance = { factor = 1 } }
+	option = { set_name = Hera ai_chance = { factor = 1 } }
+	option = { set_name = Hestia ai_chance = { factor = 1 } }
+	option = { set_name = Ianthe ai_chance = { factor = 1 } }
+	option = { set_name = Irene ai_chance = { factor = 1 } }
+	option = { set_name = Iris ai_chance = { factor = 1 } }
+	option = { set_name = Cora ai_chance = { factor = 1 } }
+	option = { set_name = Leto ai_chance = { factor = 1 } }
+	option = { set_name = Luna ai_chance = { factor = 1 } }
+	option = { set_name = Melia ai_chance = { factor = 1 } }
+	option = { set_name = Minerva ai_chance = { factor = 1 } }
+	option = { set_name = Nike ai_chance = { factor = 1 } }
+	option = { set_name = Pallas ai_chance = { factor = 1 } }
+	option = { set_name = Pax ai_chance = { factor = 1 } }
+	option = { set_name = Penelope ai_chance = { factor = 1 } }
+	option = { set_name = Phyllis ai_chance = { factor = 1 } }
+	option = { set_name = Rhea ai_chance = { factor = 1 } }
+	option = { set_name = Selene ai_chance = { factor = 1 } }
+	option = { set_name = Thalassa ai_chance = { factor = 1 } }
+	option = { set_name = Venus ai_chance = { factor = 1 } }
+	option = { set_name = Xanthe ai_chance = { factor = 1 } }
 }
