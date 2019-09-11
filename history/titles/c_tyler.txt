@@ -1,0 +1,5 @@
+2660.1.1 = {
+	holder = 1803062
+	law = succ_primogeniture
+	law = true_cognatic_succession
+}
