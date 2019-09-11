@@ -194,6 +194,9 @@ succession_laws = {
 		revoke_allowed = {
 			always = no
 		}
+		ai_will_do = {
+			factor = 0.1
+		}
 	}
 	
 	succ_elective_gavelkind = {
@@ -296,7 +299,10 @@ succession_laws = {
 		}
 		revoke_allowed = {
 			always = no
-		}			
+		}	
+		ai_will_do = {
+			factor = 0.01
+		}
 	}
 	succ_eldership = {
 		dynasty_opinion = 5
@@ -742,7 +748,10 @@ succession_laws = {
 		}
 		revoke_allowed = {
 			always = no
-		}			
+		}	
+		ai_will_do = {
+			factor = 5
+		}
 	}
 	
 	succ_feudal_elective = {

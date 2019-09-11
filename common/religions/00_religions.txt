@@ -3219,6 +3219,7 @@ pirate = {
 		raised_vassal_opinion_loss = no
 		peace_prestige_loss = yes
 		defensive_attrition = yes
+		hard_to_convert = yes
 		uses_jizya_tax = yes
 		aggression = 2.5 # AI aggression factor
 		
