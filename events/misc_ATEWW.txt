@@ -346,7 +346,6 @@ character_event = {
 		any_realm_character = {
 			if = {
 				limit = {
-					holy_order = yes
 					ROOT = {
 						holy_order = yes
 						primary_title = {
@@ -363,7 +362,6 @@ character_event = {
 			}
 			if = {
 				limit = {
-					holy_order = yes
 					ROOT = {
 						has_landed_title = d_men_in_black
 						OR = {
@@ -421,7 +419,6 @@ character_event = {
 			}
 			else_if = {
 				limit = {
-					holy_order = yes
 					ROOT = {
 						has_landed_title = d_libertarian
 						religion = libertarian
@@ -514,6 +511,13 @@ character_event = {
 						}
 					}
 				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { holy_order = yes }
+					NOT = { religion = ROOT }
+				}
+				religion = ROOT
 			}
 		}
 	}
