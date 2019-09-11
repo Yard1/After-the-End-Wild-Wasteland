@@ -11046,8 +11046,8 @@ character_event = {
 				}
 				random_list = {
 					30 = {}
-					60 = { add_trait = freebooter }
-					10 = { add_trait = buccaneer }
+					60 = { add_trait = freebooter set_variable = { which = viking_raids value = 0 } }
+					10 = { add_trait = buccaneer set_variable = { which = viking_raids value = 0 } }
 				}
 			}
 		}

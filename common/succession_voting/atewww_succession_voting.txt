@@ -5833,7 +5833,7 @@ brethren_elective = {
 			}
 		}
 		additive_modifier = {
-			value = -5
+			value = 5
 			localisation_key = tooltip_feudal_elector_vote_drunkard
 			NOT = { character = FROM } #Do not judge yourself.
 			FROM = { 
