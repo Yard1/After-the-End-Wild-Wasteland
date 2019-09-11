@@ -235,6 +235,7 @@ decisions = {
 	
 	become_general_of_army = { #Creates FORSCOM
 		is_high_prio = yes
+		only_independent = yes
 		ai_check_interval = 24
 		
 		potential = {
@@ -277,15 +278,18 @@ decisions = {
 	
 	select_patron_general = {
 		is_high_prio = yes
+		only_playable = yes
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 			religion = jeffersonian
+			is_playable = yes
 			is_adult = yes
 			has_patron_general_trigger = no
 		}
 		allow = {
+			war = no
 			block_general_event_trigger = no
 			piety = 0
 		}
@@ -305,20 +309,20 @@ decisions = {
 	
 	become_pirate_king = { #Become the Pirate King/Queen
 		is_high_prio = yes
+		only_independent = yes
 		ai_check_interval = 24
 		
 		potential = {
 			religion = brethren 
 			NOT = { is_title_active = k_pirate_kingdom }
+			NOT = { has_global_flag = pirate_king_hereditary }
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
 		
 		allow = {
-			in_seclusion = no
-			prisoner = no
-			is_incapable = no
+			block_general_event_trigger = no
 			primary_title = { higher_tier_than = COUNT }
 			wealth = 200
 			custom_tooltip = {
@@ -377,6 +381,139 @@ decisions = {
 				}
 			}
 			set_global_flag = pirate_king
+			narrative_event = { id = ATE_WWW_PIRATE.5 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	pirate_king_hereditary = { #Become the Pirate King/Queen
+		is_high_prio = yes
+		ai_check_interval = 12
+		only_independent = yes
+		
+		potential = {
+			religion = brethren 
+			NOT = { has_global_flag = pirate_king_hereditary }
+			has_landed_title = k_pirate_kingdom
+			k_pirate_kingdom = {
+				has_law = succ_brethren_elective
+			}
+		}
+		
+		allow = {
+			block_general_event_trigger = no
+			war = no
+			has_pirate_trait = yes
+			OR = {
+				AND = {
+					prestige = 8000
+					piety = 2000
+				}
+				AND = {
+					any_owned_bloodline = {
+						has_bloodline_flag = bloodline_pirate
+					}
+					prestige = 6000
+					piety = 1500
+				}
+			}
+		}
+		
+		effect = {
+			prestige = -4000
+			piety = -1500
+			set_global_flag = pirate_king_hereditary
+			activate_title = { title = k_pirate_kingdom status = yes }
+			k_pirate_kingdom = {
+				add_law = succ_primogeniture
+			}
+			hidden_tooltip = { 
+				if = { 
+					limit = { this_has_super_cool_nickname_trigger = no }
+					random_list = { 
+						20 = { 
+							trigger = { age = 50 }
+							give_nickname = nick_the_white_raven 
+						} 
+						20 = { 
+							trigger = { is_female = no }
+							give_nickname = nick_the_salt_snake 
+						} 
+						20 = { 
+							trigger = { is_female = yes }
+							give_nickname = nick_the_salt_viper 
+						} 
+						20 = { 
+							trigger = { is_female = yes is_attractive_trigger = yes }
+							give_nickname = nick_the_siren 
+						} 
+						20 = { 
+							trigger = { is_female = no }
+							give_nickname = nick_the_wyrm 
+						} 
+						20 = { 
+							trigger = { is_female = yes is_unattractive_trigger = yes }
+							give_nickname = nick_the_fury 
+						} 
+						20 = { 
+							trigger = { is_female = no }
+							give_nickname = nick_the_sea_devil 
+						} 
+						10 = { 
+							give_nickname = nick_the_stormforged 
+						} 
+						10 = { 
+							give_nickname = nick_the_tempest_of_capital 
+						} 
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { 
+						any_owned_bloodline = { # Not already has a Viking bloodline.
+							OR = {
+								has_bloodline_flag = bloodline_historical_norse
+								has_bloodline_flag = more_raiders_bloodline
+								has_bloodline_flag = bloodline_pirate
+							}
+						}
+					}
+				}
+				if = { 
+					limit = { is_female = no }
+					create_bloodline = {
+						type = pirate_king_bloodline
+					}
+					set_bloodline_founder_religion_flag_effect = yes
+					new_bloodline = {
+						set_description = "bloodline_desc_seaking_bloodline_pirate"
+						random_list = { 
+							20 = { set_name = bloodline_seaking_pirate_random_a } #Randomize names to avoid too much repetition.
+							20 = { set_name = bloodline_seaking_pirate_random_b }
+							20 = { set_name = bloodline_seaking_pirate_random_c }
+							20 = { set_name = bloodline_seaking_pirate_random_d } 
+						}
+					}
+				}
+				else = { 
+					create_bloodline = {
+						type = pirate_queen_bloodline
+					}
+					set_bloodline_founder_religion_flag_effect = yes
+					new_bloodline = {
+						set_description = "bloodline_desc_seaking_bloodline_pirate"
+						random_list = { 
+							20 = { set_name = bloodline_seaqueen_pirate_random_a } #Randomize names to avoid too much repetition.
+							20 = { set_name = bloodline_seaqueen_pirate_random_b }
+							20 = { set_name = bloodline_seaqueen_pirate_random_c }
+							20 = { set_name = bloodline_seaqueen_pirate_random_d } 
+						}
+					}
+				}
+			}
 			narrative_event = { id = ATE_WWW_PIRATE.5 }
 		}
 		ai_will_do = {

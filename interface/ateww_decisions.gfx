@@ -59,4 +59,8 @@ spriteTypes = {
 		name = "GFX_donate_money_to_uel"
 		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
 	}
+	spriteType = {
+		name = "GFX_pirate_king_hereditary"
+		texturefile = "gfx/interface/become_pirate_king.dds"
+	}
 }

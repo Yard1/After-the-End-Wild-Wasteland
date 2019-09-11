@@ -434,6 +434,13 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				title = e_usa
 			}
+			OR = {
+				AND = {
+					title = k_pirate_kingdom
+					has_global_flag = pirate_kingdom_hereditary
+				}
+				holder_scope = { NOT = { religion_group = pirate } }
+			}
 			holder_scope = {
 				OR = {
 					independent = yes
@@ -443,7 +450,6 @@ succession_laws = {
 						}
 					}
 				}
-				NOT = { religion_group = pirate }
 				OR = {
 					is_merchant_republic = no
 					primary_title = {
@@ -511,6 +517,11 @@ succession_laws = {
 					NOT = { has_law = succ_hre_elective }
 				}
 				OR = {
+					conditional_tooltip = {
+						trigger = { religion = brethren }
+						title = k_pirate_kingdom
+						has_global_flag = pirate_kingdom_hereditary
+					}
 					hidden_tooltip = {
 						has_crown_law_title = no
 					}
@@ -602,10 +613,16 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				title = e_usa
 			}
+			OR = {
+				AND = {
+					title = k_pirate_kingdom
+					has_global_flag = pirate_kingdom_hereditary
+				}
+				holder_scope = { NOT = { religion_group = pirate } }
+			}
 			holder_scope = {
 				is_merchant_republic = no
 				is_patrician = no
-				NOT = { religion_group = pirate }
 			}
 			OR = {
 				holder_scope = { # Viceroyalties can always have primogeniture
@@ -655,6 +672,11 @@ succession_laws = {
 					has_dlc = "Conclave"
 				}
 				OR = {
+					conditional_tooltip = {
+						trigger = { religion = brethren }
+						title = k_pirate_kingdom
+						has_global_flag = pirate_kingdom_hereditary
+					}
 					holder_scope = { # Viceroyalties can always have primogeniture if not muslim
 						show_scope_change = no
 						any_demesne_title = {
@@ -681,6 +703,11 @@ succession_laws = {
 					NOT = { has_law = succ_hre_elective }
 				}
 				OR = {
+					conditional_tooltip = {
+						trigger = { religion = brethren }
+						title = k_pirate_kingdom
+						has_global_flag = pirate_kingdom_hereditary
+					}
 					holder_scope = { # Viceroyalties can always have primogeniture if not muslim
 						show_scope_change = no
 						any_demesne_title = {
@@ -764,6 +791,13 @@ succession_laws = {
 				has_law = succ_byzantine_elective
 				title = e_usa
 			}
+			OR = {
+				AND = {
+					title = k_pirate_kingdom
+					has_global_flag = pirate_kingdom_hereditary
+				}
+				holder_scope = { NOT = { religion_group = pirate } }
+			}
 			holder_scope = {
 				OR = {
 					independent = yes
@@ -773,7 +807,6 @@ succession_laws = {
 						}
 					}
 				}
-				NOT = { religion_group = pirate }
 				OR = {
 					NOT = {
 						religion_group = indian_group
@@ -814,6 +847,7 @@ succession_laws = {
 				}
 			}
 			OR = {
+				title = k_pirate_kingdom
 				is_landless_type_title = no
 				is_tribal_type_title = yes
 				temporary = yes
@@ -1307,6 +1341,13 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				title = e_usa
 			}
+			OR = {
+				AND = {
+					title = k_pirate_kingdom
+					has_global_flag = pirate_kingdom_hereditary
+				}
+				holder_scope = { NOT = { religion_group = pirate } }
+			}
 			holder_scope = {
 				OR = {
 					AND = {
@@ -1318,7 +1359,6 @@ succession_laws = {
 						is_theocracy = no
 					}
 				}
-				NOT = { religion_group = pirate }
 				is_republic = no
 				is_merchant_republic = no
 				is_nomadic = no
@@ -1331,6 +1371,7 @@ succession_laws = {
 				}
 				AND = {
 					OR = {
+						title = k_pirate_kingdom
 						is_landless_type_title = no
 						is_tribal_type_title = yes
 						temporary = yes

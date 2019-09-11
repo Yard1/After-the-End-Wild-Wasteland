@@ -21,6 +21,7 @@ on_death = {
 	events = {
 		miscATEWW.4
 		ATE_WWW_PIRATE.4
+		ATE_WWW_PIRATE.7
 	}
 }
 

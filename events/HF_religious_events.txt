@@ -5250,12 +5250,13 @@ narrative_event = {
 			trait = corsair
 			trait = pirate_king_trait
 		}
-		NOR = { 
+		NOT = { 
 			any_owned_bloodline = { # Not already has a Viking bloodline.
-				has_bloodline_flag = bloodline_historical_norse
-			}
-			any_owned_bloodline = { # Not already has a this bloodline.
-				has_bloodline_flag = more_raiders_bloodline
+				OR = {
+					has_bloodline_flag = bloodline_historical_norse
+					has_bloodline_flag = more_raiders_bloodline
+					has_bloodline_flag = bloodline_pirate
+				}
 			}
 		}
 	}
@@ -5387,6 +5388,10 @@ narrative_event = {
 		hidden_tooltip = { 
 			if = { 
 				limit = { 
+					OR = {
+						religion = norse_pagan
+						religion = norse_pagan_reformed
+					}
 					NOR = { 
 						trait = african_tattoo_1
 						trait = african_tattoo_2
