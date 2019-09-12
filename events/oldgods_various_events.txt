@@ -1647,7 +1647,7 @@ character_event = {
 			has_religion_feature = religion_feature_norse
 		}
 		NOR = { 
-			has_pirate_trait = yes
+			#has_pirate_trait = yes
 			trait = viking
 			trait = ravager
 			trait = seaking
@@ -1865,7 +1865,7 @@ character_event = {
 	
 	trigger = {
 		OR = {
-			has_pirate_trait = yes
+			#has_pirate_trait = yes
 			trait = viking
 			trait = ravager
 			trait = seaking #Top trait, but there's still chance of gaining a Bloodline if variable goes high enough.

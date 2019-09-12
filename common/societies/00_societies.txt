@@ -7683,7 +7683,7 @@ warrior_lodge_norse = {
 			factor = 1.1
 		}
 		modifier = {
-			has_pirate_trait = yes
+			#has_pirate_trait = yes
 			factor = 1.1
 		}
 		modifier = {
@@ -8261,7 +8261,7 @@ warrior_lodge_peyotist = { # Also generally for Nomads? (will keep for now)
 			factor = 1.1
 		}
 		modifier = {
-			has_pirate_trait = yes
+			#has_pirate_trait = yes
 			factor = 1.1
 		}
 		modifier = {
@@ -8844,7 +8844,7 @@ warrior_lodge_atomicist = {
 			factor = 1.1
 		}
 		modifier = {
-			has_pirate_trait = yes
+			#has_pirate_trait = yes
 			factor = 1.1
 		}
 		modifier = {
@@ -9417,7 +9417,7 @@ warrior_lodge_occultist = {
 			factor = 1.1
 		}
 		modifier = {
-			has_pirate_trait = yes
+			#has_pirate_trait = yes
 			factor = 1.1
 		}
 		modifier = {
@@ -9993,7 +9993,7 @@ warrior_lodge_raven_tales = {
 			factor = 1.1
 		}
 		modifier = {
-			has_pirate_trait = yes
+			#has_pirate_trait = yes
 			factor = 1.1
 		}
 		modifier = {
@@ -10573,7 +10573,7 @@ warrior_lodge_celtic = {
 			factor = 1.1
 		}
 		modifier = {
-			has_pirate_trait = yes
+			#has_pirate_trait = yes
 			factor = 1.1
 		}
 		modifier = {
@@ -11149,7 +11149,7 @@ warrior_lodge_revelationist = {
 			factor = 1.1
 		}
 		modifier = {
-			has_pirate_trait = yes
+			#has_pirate_trait = yes
 			factor = 1.1
 		}
 		modifier = {
@@ -11725,7 +11725,7 @@ warrior_lodge_rust_cultist = {
 			factor = 1.1
 		}
 		modifier = {
-			has_pirate_trait = yes
+			#has_pirate_trait = yes
 			factor = 1.1
 		}
 		modifier = {
@@ -12309,7 +12309,7 @@ warrior_lodge_americanist = {
 			factor = 1.1
 		}
 		modifier = {
-			has_pirate_trait = yes
+			#has_pirate_trait = yes
 			factor = 1.1
 		}
 		modifier = {
