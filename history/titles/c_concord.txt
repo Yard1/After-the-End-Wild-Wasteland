@@ -1,0 +1,4 @@
+2660.5.12 = {
+	holder = 1620205
+	law = succ_tanistry
+}
