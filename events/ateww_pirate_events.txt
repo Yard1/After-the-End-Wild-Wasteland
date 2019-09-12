@@ -402,7 +402,6 @@ narrative_event = {
 	border = GFX_event_narrative_frame_religion
 
 	major = yes
-
 	is_triggered_only = yes
 	
 	option = {
