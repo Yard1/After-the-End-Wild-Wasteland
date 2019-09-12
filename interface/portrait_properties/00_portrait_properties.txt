@@ -3375,10 +3375,8 @@
 		}
 		modifier = {
 			factor = 0
-			NOR = {
-				religion = rust_cultist
-				religion = chrome_cultist
-			}
+			NOT = { religion = rust_cultist }
+			NOT = { religion = chrome_cultist }
 		}
 		modifier = {
 			factor = 0
@@ -3403,10 +3401,8 @@
 		}
 		modifier = {
 			factor = 0
-			NOR = {
-				religion = rust_cultist
-				religion = chrome_cultist
-			}
+			NOT = { religion = rust_cultist }
+			NOT = { religion = chrome_cultist }
 		}
 		modifier = {
 			factor = 0
@@ -3431,10 +3427,8 @@
 		}
 		modifier = {
 			factor = 0
-			NOR = {
-				religion = rust_cultist
-				religion = chrome_cultist
-			}
+			NOT = { religion = rust_cultist }
+			NOT = { religion = chrome_cultist }
 		}
 		modifier = {
 			factor = 0
@@ -3459,10 +3453,8 @@
 		}
 		modifier = {
 			factor = 0
-			NOR = {
-				religion = rust_cultist
-				religion = chrome_cultist
-			}
+			NOT = { religion = rust_cultist }
+			NOT = { religion = chrome_cultist }
 		}
 		modifier = {
 			factor = 0
@@ -3489,10 +3481,8 @@
 		}
 		modifier = {
 			factor = 0
-			NOR = {
-				religion = rust_cultist
-				religion = chrome_cultist
-			}
+			NOT = { religion = rust_cultist }
+			NOT = { religion = chrome_cultist }
 		}
 		modifier = {
 			factor = 0
