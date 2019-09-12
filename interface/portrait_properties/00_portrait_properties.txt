@@ -1653,7 +1653,12 @@
 		factor = 3
 		modifier = {
 			factor = 0
-			religion_group = oldworld
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+				religion = libertarian
+			}
 		}
 		modifier = {
 			factor = 0
@@ -1699,7 +1704,12 @@
 		factor = 100
 		modifier = {
 			factor = 0
-			religion_group = oldworld
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+				religion = libertarian
+			}
 		}
 		modifier = {
 			factor = 0
@@ -1841,7 +1851,10 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion_group = oldworld }
+			NOT = { religion_group = americanist }
+			NOT = { religion_group = hamiltonian }
+			NOT = { religion_group = jeffersonian }
+			NOT = { religion_group = libertarian }
 		}
 	}
 	
