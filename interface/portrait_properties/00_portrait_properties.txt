@@ -1851,10 +1851,10 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion_group = americanist }
-			NOT = { religion_group = hamiltonian }
-			NOT = { religion_group = jeffersonian }
-			NOT = { religion_group = libertarian }
+			NOT = { religion = americanist }
+			NOT = { religion = hamiltonian }
+			NOT = { religion = jeffersonian }
+			NOT = { religion = libertarian }
 		}
 	}
 	
@@ -1867,7 +1867,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion_group = americanist }
+			NOT = { religion = americanist }
 		}
 		modifier = {
 			factor = 0
@@ -1885,10 +1885,10 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion_group = americanist }
-			NOT = { religion_group = hamiltonian }
-			NOT = { religion_group = jeffersonian }
-			NOT = { religion_group = libertarian }
+			NOT = { religion = americanist }
+			NOT = { religion = hamiltonian }
+			NOT = { religion = jeffersonian }
+			NOT = { religion = libertarian }
 		}
 	}
 	
@@ -1901,10 +1901,10 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion_group = americanist }
-			NOT = { religion_group = hamiltonian }
-			NOT = { religion_group = jeffersonian }
-			NOT = { religion_group = libertarian }
+			NOT = { religion = americanist }
+			NOT = { religion = hamiltonian }
+			NOT = { religion = jeffersonian }
+			NOT = { religion = libertarian }
 		}
 	}
 	
@@ -1917,10 +1917,10 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion_group = americanist }
-			NOT = { religion_group = hamiltonian }
-			NOT = { religion_group = jeffersonian }
-			NOT = { religion_group = libertarian }
+			NOT = { religion = americanist }
+			NOT = { religion = hamiltonian }
+			NOT = { religion = jeffersonian }
+			NOT = { religion = libertarian }
 		}
 		modifier = {
 			factor = 0
@@ -1938,10 +1938,10 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion_group = americanist }
-			NOT = { religion_group = hamiltonian }
-			NOT = { religion_group = jeffersonian }
-			NOT = { religion_group = libertarian }
+			NOT = { religion = americanist }
+			NOT = { religion = hamiltonian }
+			NOT = { religion = jeffersonian }
+			NOT = { religion = libertarian }
 		}
 		modifier = {
 			factor = 100
@@ -1965,10 +1965,10 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion_group = americanist }
-			NOT = { religion_group = hamiltonian }
-			NOT = { religion_group = jeffersonian }
-			NOT = { religion_group = libertarian }
+			NOT = { religion = americanist }
+			NOT = { religion = hamiltonian }
+			NOT = { religion = jeffersonian }
+			NOT = { religion = libertarian }
 		}
 		modifier = {
 			factor = 0
@@ -3310,10 +3310,10 @@
 		factor = 10
 		modifier = {
 			factor = 0
-			NOT = { religion_group = americanist }
-			NOT = { religion_group = hamiltonian }
-			NOT = { religion_group = jeffersonian }
-			NOT = { religion_group = libertarian }
+			NOT = { religion = americanist }
+			NOT = { religion = hamiltonian }
+			NOT = { religion = jeffersonian }
+			NOT = { religion = libertarian }
 		}
 	}
 	
@@ -3322,10 +3322,10 @@
 		factor = 10
 		modifier = {
 			factor = 0
-			NOT = { religion_group = americanist }
-			NOT = { religion_group = hamiltonian }
-			NOT = { religion_group = jeffersonian }
-			NOT = { religion_group = libertarian }
+			NOT = { religion = americanist }
+			NOT = { religion = hamiltonian }
+			NOT = { religion = jeffersonian }
+			NOT = { religion = libertarian }
 		}
 	}
 	
@@ -3334,10 +3334,10 @@
 		factor = 10
 		modifier = {
 			factor = 0
-			NOT = { religion_group = americanist }
-			NOT = { religion_group = hamiltonian }
-			NOT = { religion_group = jeffersonian }
-			NOT = { religion_group = libertarian }
+			NOT = { religion = americanist }
+			NOT = { religion = hamiltonian }
+			NOT = { religion = jeffersonian }
+			NOT = { religion = libertarian }
 		}
 	}
 	
@@ -3346,10 +3346,10 @@
 		factor = 10
 		modifier = {
 			factor = 0
-			NOT = { religion_group = americanist }
-			NOT = { religion_group = hamiltonian }
-			NOT = { religion_group = jeffersonian }
-			NOT = { religion_group = libertarian }
+			NOT = { religion = americanist }
+			NOT = { religion = hamiltonian }
+			NOT = { religion = jeffersonian }
+			NOT = { religion = libertarian }
 		}
 	}
 	
@@ -3358,10 +3358,10 @@
 		factor = 10
 		modifier = {
 			factor = 0
-			NOT = { religion_group = americanist }
-			NOT = { religion_group = hamiltonian }
-			NOT = { religion_group = jeffersonian }
-			NOT = { religion_group = libertarian }
+			NOT = { religion = americanist }
+			NOT = { religion = hamiltonian }
+			NOT = { religion = jeffersonian }
+			NOT = { religion = libertarian }
 		}
 	}
 	
