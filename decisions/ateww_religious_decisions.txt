@@ -325,10 +325,10 @@ decisions = {
 			block_general_event_trigger = no
 			primary_title = { higher_tier_than = COUNT }
 			wealth = 200
-			custom_tooltip = {
-				text = tooltip_vote_at_least_one_kill
-				has_character_flag = killed_a_man
-			}
+			#custom_tooltip = {
+			#	text = tooltip_vote_at_least_one_kill
+			#	has_character_flag = killed_a_man
+			#}
 			has_pirate_trait = yes
 			prestige = 3000
 			piety = 1000
@@ -368,10 +368,12 @@ decisions = {
 				}
 				remove_trait = corsair
 			}
-			add_trait = pirate_king_trait
+			add_trait = pirate_king
 			activate_title = { title = k_pirate_kingdom status = yes }
 			primary_title = {
+				show_scope_change = no
 				k_pirate_kingdom = {
+					show_scope_change = no
 					grant_title = ROOT
 					copy_title_laws = PREV
 					hidden_tooltip = {
@@ -425,9 +427,12 @@ decisions = {
 			prestige = -4000
 			piety = -1500
 			set_global_flag = pirate_king_hereditary
-			activate_title = { title = k_pirate_kingdom status = yes }
 			k_pirate_kingdom = {
 				add_law = succ_primogeniture
+				save_persistent_event_target = {
+					name = first_pirate_king
+					scope = owner
+				}
 			}
 			hidden_tooltip = { 
 				if = { 

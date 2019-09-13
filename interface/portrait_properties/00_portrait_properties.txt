@@ -1871,6 +1871,8 @@
 			NOT = { religion = hamiltonian }
 			NOT = { religion = jeffersonian }
 			NOT = { religion = libertarian }
+			NOT = { religion = consumerist }
+			NOT = { religion = monetarist }
 		}
 		modifier = {
 			factor = 0
@@ -1924,6 +1926,8 @@
 			NOT = { religion = hamiltonian }
 			NOT = { religion = jeffersonian }
 			NOT = { religion = libertarian }
+			NOT = { religion = consumerist }
+			NOT = { religion = monetarist }
 		}
 		modifier = {
 			factor = 0
@@ -1945,6 +1949,8 @@
 			NOT = { religion = hamiltonian }
 			NOT = { religion = jeffersonian }
 			NOT = { religion = libertarian }
+			NOT = { religion = consumerist }
+			NOT = { religion = monetarist }
 		}
 		modifier = {
 			factor = 100
@@ -1972,6 +1978,8 @@
 			NOT = { religion = hamiltonian }
 			NOT = { religion = jeffersonian }
 			NOT = { religion = libertarian }
+			NOT = { religion = consumerist }
+			NOT = { religion = monetarist }
 		}
 		modifier = {
 			factor = 0
@@ -2302,12 +2310,10 @@
 		modifier = {
 			factor = 0
 			is_republic = yes
-			is_alive = no
 		}
 		modifier = {
 			factor = 0 
 			spouse = { is_republic = yes } #Dead wives of Patricians are nogovernment, thus they would wear crowns for being married to a King-tier.
-			is_alive = no
 			is_ruler = no
 		}
 		modifier = {
@@ -2450,12 +2456,10 @@
 		modifier = {
 			factor = 0
 			is_republic = yes
-			is_alive = no
 		}
 		modifier = {
 			factor = 0 
 			spouse = { is_republic = yes } #Dead wives of Patricians are nogovernment, thus they would wear crowns for being married to a King-tier.
-			is_alive = no
 			is_ruler = no
 		}
 		modifier = {
@@ -2589,12 +2593,10 @@
 		modifier = {
 			factor = 0
 			is_republic = yes
-			is_alive = no
 		}
 		modifier = {
 			factor = 0 
 			spouse = { is_republic = yes } #Dead wives of Patricians are nogovernment, thus they would wear crowns for being married to a King-tier.
-			is_alive = no
 			is_ruler = no
 		}
 		modifier = {
@@ -2658,12 +2660,10 @@
 		modifier = {
 			factor = 0
 			is_republic = yes
-			is_alive = no
 		}
 		modifier = {
 			factor = 0 
 			spouse = { is_republic = yes } #Dead wives of Patricians are nogovernment, thus they would wear crowns for being married to a King-tier.
-			is_alive = no
 			is_ruler = no
 		}
 		modifier = { #If you are Emperor and died without being crowned, you don't wear a crown.
@@ -2847,7 +2847,6 @@
 		modifier = {
 			factor = 0 #Dead Doges should not wear crowns.
 			is_republic = yes
-			is_alive = no
 		}
 		modifier = {
 			factor = 0

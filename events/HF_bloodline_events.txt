@@ -1169,7 +1169,7 @@ character_event = {
 						}
 						modifier = {
 							factor = 2
-							trait = pirate_king_trait
+							trait = pirate_king
 						}
 						character_event = { id = HF.24014 days = 25 random = 40 }	
 					} 
@@ -1261,7 +1261,7 @@ character_event = {
 						}
 						modifier = {
 							factor = 2
-							trait = pirate_king_trait
+							trait = pirate_king
 						}
 						character_event = { id = HF.24014 days = 25 random = 40 }	
 					} 

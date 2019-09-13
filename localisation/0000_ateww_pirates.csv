@@ -14,7 +14,7 @@ tooltip_vote_at_least_one_kill;[Root.GetFirstName] has killed at least one man;;
 become_pirate_king;Become The [Root.GetPirateMonarch];;;;;;;;;;;;;x
 become_pirate_king_desc;From Vancouver to Guyana my name is spoken of in hushed whispers, my sails are known to all, and most importantly I have earned the respect of my fellow Brethren faitfhul. Perhaps the time has come to crown a new [Root.GetPirateMonarch]?;;;;;;;;;;;;;x
 pirate_king_hereditary;Solidify Your Rule;;;;;;;;;;;;;x
-pirate_king_hereditary_desc;I have plundered the seas of the Americans for years, there is not a soul in the world that could possibly contest my right to rule as [Root.GetPirateMonarch], and yet it is not enough. When I at long last meet Davy Jones in his watery halls my Kingdom shall turn to ash, perhaps the time has come to change that?;;;;;;;;;;;;;x
+pirate_king_hereditary_desc;I have plundered the seas of the Americas for years - there is not a soul in the world that could possibly contest my right to rule as [Root.GetPirateMonarch], and yet it is not enough. When I at long last meet Davy Jones in his watery halls my Kingdom shall turn to ash... but perhaps the time has come to change that?;;;;;;;;;;;;;x
 
 EVTNAME_pirate_king;The [Root.GetPirateMonarch];;;;;;;;;;;;;x
 EVTDESC_pirate_king;Since the first Brethren took to the seas they've told stories of the great Pirate Kings and Queens of old - From Blackbeard to Charles Vane and William Kidd and now [Root.GetFullName]. Through grit, bravery, and skill, [Root.GetFullName] has managed to proclaim [Root.GetHerselfHimself] the new [Root.GetPirateMonarch], ushring in a new era for the Brethren in the process.;;;;;;;;;;;;;x
@@ -28,7 +28,7 @@ PIRATE_KING;Pirate King;;;;;;;;;;;;;x
 PIRATE_QUEEN;Pirate Queen;;;;;;;;;;;;;x
 PIRATE_KING_FOA;Boss;;;;;;;;;;;;;x
 
-trait = pirate_king_trait;[Root.GetPirateMonarch];;;;;;;;;;;;;x
+pirate_king;[Root.GetPirateMonarch];;;;;;;;;;;;;x
 
 pirate_king_bloodline;Blackblood;Tempête de Sang;Sturmblut;;Sangre tormentosa;;;;;;;;x
 pirate_king_bloodline_desc;Entire cities have been decimated by the raids of [This.Founder.GetTitledFirstName], etching [This.Founder.GetHerHis] legacy as one of the most fearsome and ruthless Pirates of [This.Founder.PrimaryTitle.GetName].;Des cités entières ont été décimées par les pillages [This.Founder.Get_du_TitledFirstName], gravant son nom dans le marbre en tant que l'un[This.Founder.Get_E] des pirates les plus redoutables et impitoyables [This.Founder.PrimaryTitle.Get_du_Realm].;Ganze Städte wurden durch die Überfälle von [This.Founder.GetTitledFirstName] niedergemäht, [This.Founder.Getderdie] sein Vermächtnis als eine[This.Founder.GetrMale] der furchterregendsten und rücksichtslosesten Piraten von [This.Founder.PrimaryTitle.GetName] beansprucht.;;Ciudades enteras fueron devastadas por las incursiones de [This.Founder.GetTitledFirstName], grabando su legado como uno de los piratas de [This.Founder.PrimaryTitle.GetName] más terribles y despiadados.;;;;;;;;x
@@ -43,12 +43,12 @@ EVT_DESC_ATE_WWW_PIRATE_6_VIKING;The blood of famous Viking courses through your
 EVT_OPTA_ATE_WWW_PIRATE_6;Yarr!;;;;;;;;;;;;;x
 EVT_OPTB_ATE_WWW_PIRATE_6;Loot, maim, burn!;;;;;;;;;;;;;x
 
-EVT_NAME_ATE_WWW_PIRATE_8;The Death Of The [Root.GetPirateMonarch];;;;;;;;;;;;;x
-EVT_DESC_ATE_WWW_PIRATE_8;Ashes to ashes, dust to dust it seems the [Root.GetPirateMonarch] [Root.GetFullName] has breathed his last and with that [Root.GetHerselfHimself] Kingdom has collapsed. But fear not, for in the chaos lays opportunity, opportunity for a new [Root.GetPirateMonarch] to rise;;;;;;;;;;;;;x
+EVT_NAME_ATE_WWW_PIRATE_8;The Death Of The [dead_pirate_king.GetPirateMonarch];;;;;;;;;;;;;x
+EVT_DESC_ATE_WWW_PIRATE_8;Ashes to ashes, dust to dust. It seems the [dead_pirate_king.GetPirateMonarch] [dead_pirate_king.GetFullName] has breathed [dead_pirate_king.GetHerHis] last and with that [dead_pirate_king.GetHerselfHimself] Kingdom has collapsed. But fear not, for in the chaos lays opportunity - opportunity for a new [Root.GetPirateMonarch] to rise.;;;;;;;;;;;;;x
 EVT_OPTA_ATE_WWW_PIRATE_8;Perhaps I shall be the one?;;;;;;;;;;;;;x 
 
 EVT_NAME_ATE_WWW_PIRATE_9;The Pirate King's Proclamation;;;;;;;;;;;;;x
-EVT_DESC_ATE_WWW_PIRATE_9;[Root.GetFullName] has had a long and bountiful career as a Pirate, even managing to get [Root.GetHerselfHimself] proclaimed [Root.GetPirateMonarch], but it seems that was simply not enough for the infamous [Root.GetPirateMonarch]. [Root.GetFullName] in a grand ceremony attended by all their subordinate Captains has proclaimed that the title of [Root.GetPirateMonarch] shall henceforth become hereditary and that their dynasty shall have the sole claim to the title of [Root.GetPirateMonarch]. While many have scoffed at this outright ridiculous proclimation it's not as if they can do anything to stop [Root.GetFullName].;;;;;;;;;;;;;x
-EVTOPTA_pirate_king_2;This doesn't seem very Piratey;;;;;;;;;;;;;x
+EVT_DESC_ATE_WWW_PIRATE_9;[From.GetFullName] has had a long and bountiful career as a Pirate, even managing to get [From.GetHerselfHimself] proclaimed [From.GetPirateMonarch], but that was simply not enough for the infamous [From.GetPirateMonarch]. [From.GetFullName], in a grand ceremony attended by all their subordinate Captains, has proclaimed that the title of [From.GetPirateMonarch] shall henceforth become hereditary and that their dynasty shall have the sole claim to the title of [From.GetPirateMonarch]. While many have scoffed at this outright ridiculous proclimation it's not as if they can do anything to stop [From.GetFullName].;;;;;;;;;;;;;x
+EVTOPTA_pirate_king_2;This doesn't seem very Piratey.;;;;;;;;;;;;;x
 EVTOPTB_pirate_king_2;Oh, bugger me...;;;;;;;;;;;;;x
 EVTOPTC_pirate_king_2;I am the greatest Pirate that ever lived!;;;;;;;;;;;;;x

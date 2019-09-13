@@ -4069,7 +4069,7 @@ brethren_elective = {
 			localisation_key = tooltip_vote_good_pirate
 			OR = {
 				trait = corsair
-				trait = pirate_king_trait
+				trait = pirate_king
 				trait = seaking
 				trait = sea_queen
 			}
@@ -5813,7 +5813,7 @@ brethren_elective = {
 			FROM = { 
 				OR = {
 					trait = corsair
-					trait = pirate_king_trait
+					trait = pirate_king
 				}		
 			}
 		}
@@ -7334,7 +7334,7 @@ brethren_elective = {
 			FROM = { 
 				OR = { 
 					trait = corsair
-					trait = pirate_king_trait
+					trait = pirate_king
 				}
 			}
 		}

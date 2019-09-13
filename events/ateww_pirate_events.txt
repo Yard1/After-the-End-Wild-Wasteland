@@ -329,7 +329,15 @@ character_event = {
 				has_bloodline_flag = bloodline_pirate
 			}
 		}
-		add_trait = freebooter
+		if = {
+			limit = {
+				has_landed_title = k_pirate_kingdom
+			}
+			add_trait = pirate_king
+		}
+		else = {
+			add_trait = freebooter
+		}
 		set_character_flag = acquired_pirate_trait_by_bloodline
 		hidden_tooltip = {
 			set_variable = { which = viking_raids value = 0 }
@@ -355,24 +363,57 @@ character_event = {
 character_event = {
 	id = ATE_WWW_PIRATE.7
 	hide_window = yes
-	only_rulers = yes
-	religion = brethren
 	is_triggered_only = yes
 	
 	trigger = {
-		has_landed_title = k_pirate_kingdom
-		k_pirate_kingdom = {
-			has_law = succ_brethren_elective
-		}
-		NOT = { has_global_flag = pirate_kingdom_hereditary }
+		FROM = { title = k_pirate_kingdom }
 	}
 
 	immediate = {
-		#current_heir = {
-		#	save_event_target_as = pirate_king_heir
-		#}
+		log = "ATE_WWW_PIRATE.7: [Root.GetBestName]"
+		if = {
+			limit = {
+				NOT = { has_global_flag = pirate_king_hereditary }
+			}
+			log = " ATE_WWW_PIRATE.7: [Root.GetBestName] fire 70"
+			FROMFROM = { save_event_target = dead_pirate_king }
+			character_event = { id = ATE_WWW_PIRATE.70 days = 1 }
+		}
+		else_if = {
+			limit = {
+				religion = brethren
+				any_owned_bloodline = {
+					has_bloodline_flag = bloodline_pirate
+					k_pirate_kingdom = {
+						persistent_event_target:first_pirate_king = { shares_any_bloodline_with = ROOT }
+						persistent_event_target:first_pirate_king = { is_bloodline_founder_of = PREVPREV }
+					}
+				}
+			}
+			log = " ATE_WWW_PIRATE.7: [Root.GetBestName] fire 10"
+			character_event = { id = ATE_WWW_PIRATE.10 days = 1 }
+		}
+		else = {
+			log = " ATE_WWW_PIRATE.7: [Root.GetBestName] fire 11"
+			FROMFROM = { save_event_target = dead_pirate_king }
+			character_event = { id = ATE_WWW_PIRATE.11 days = 1 }
+		}
+	}
+}
+
+# (from on_death)
+character_event = {
+	id = ATE_WWW_PIRATE.70
+	hide_window = yes
+	only_rulers = yes
+	religion = brethren
+	is_triggered_only = yes
+
+	immediate = {
+		log = " ATE_WWW_PIRATE.70: [Root.GetBestName]"
 		destroy_landed_title = k_pirate_kingdom
 		activate_title = { title = k_pirate_kingdom status = no }
+		character_event = { id = ATE_WWW_PIRATE.8 }
 		any_playable_ruler = {
 			limit = { religion = brethren }
 			character_event = { id = ATE_WWW_PIRATE.8 }
@@ -383,11 +424,19 @@ character_event = {
 character_event = {
 	id = ATE_WWW_PIRATE.8
 	title = EVT_NAME_ATE_WWW_PIRATE_8
-	desc = EVT_DESC_ATE_WWW_PIRATE_8
+	desc = {
+		trigger = {}
+		text = EVT_DESC_ATE_WWW_PIRATE_8
+	}
 	picture = GFX_evt_pirate_ship
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
+
+	immediate = {
+		destroy_landed_title = k_pirate_kingdom
+		activate_title = { title = k_pirate_kingdom status = no }
+	}
 
 	option = {
 		name = EVT_OPTA_ATE_WWW_PIRATE_8
@@ -424,6 +473,108 @@ narrative_event = {
 		trigger = {
 			religion = brethren 
 			has_landed_title = k_pirate_kingdom
+		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_PIRATE.10
+	title = EVT_NAME_ATE_WWW_PIRATE_10
+	desc = EVT_DESC_ATE_WWW_PIRATE_10
+	picture = GFX_evt_pirate_ship
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	immediate = {
+		log = " ATE_WWW_PIRATE.10: [Root.GetBestName]"
+		k_pirate_kingdom = {
+			persistent_event_target:first_pirate_king = { log = "[This.GetBestName]" }
+		}
+	}
+	option = {
+		log = " ATE_WWW_PIRATE.10: [Root.GetBestName] option A"
+		name = EVT_OPTA_ATE_WWW_PIRATE_10
+		if = {
+			limit = { is_adult = yes }
+			if = {
+				limit = { trait = freebooter }
+				hidden_effect = {
+					remove_trait = freebooter
+				}
+			}
+			if = {
+				limit = { trait = buccaneer }
+				hidden_effect = {
+					remove_trait = buccaneer
+				}
+			}
+			if = {
+				limit = { trait = corsair }
+				hidden_effect = {
+					remove_trait = corsair
+				}
+			}
+			add_trait = pirate_king
+		}
+	}
+
+	option = {
+		trigger = {
+			NOR = {
+				religion = brethren
+				any_owned_bloodline = {
+					has_bloodline_flag = bloodline_pirate
+					k_pirate_kingdom = {
+						persistent_event_target:first_pirate_king = { shares_any_bloodline_with = ROOT }
+						persistent_event_target:first_pirate_king = { is_bloodline_founder_of = PREVPREV }
+					}
+				}
+			}
+		}
+		log = " ATE_WWW_PIRATE.10: [Root.GetBestName] option B"
+		name = EVT_OPTB_ATE_WWW_PIRATE_10
+		clr_global_flag = pirate_king_hereditary
+		k_pirate_kingdom = { clear_persistent_event_target = first_pirate_king }
+		destroy_landed_title = k_pirate_kingdom
+		activate_title = { title = k_pirate_kingdom status = no }
+		primary_title = { add_law = succ_brethren_elective }
+		any_vassal = {
+			limit = {
+				is_landed = yes
+				higher_tier_than = COUNT
+				religion = brethren
+			}
+			set_defacto_liege = THIS
+		}
+		any_playable_ruler = {
+			limit = { religion = brethren }
+			character_event = { id = ATE_WWW_PIRATE.8 }
+		}
+	}
+}
+character_event = {
+	id = ATE_WWW_PIRATE.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		log = " ATE_WWW_PIRATE.11: [Root.GetBestName]"
+		clr_global_flag = pirate_king_hereditary
+		k_pirate_kingdom = { clear_persistent_event_target = first_pirate_king }
+		destroy_landed_title = k_pirate_kingdom
+		activate_title = { title = k_pirate_kingdom status = no }
+		primary_title = { add_law = succ_brethren_elective }
+		any_vassal = {
+			limit = {
+				is_landed = yes
+				higher_tier_than = COUNT
+				religion = brethren
+			}
+			set_defacto_liege = THIS
+		}
+		character_event = { id = ATE_WWW_PIRATE.8 }
+		any_playable_ruler = {
+			limit = { religion = brethren }
+			character_event = { id = ATE_WWW_PIRATE.8 }
 		}
 	}
 }

@@ -1761,7 +1761,7 @@ character_event = {
 		NOR = { 
 			trait = buccaneer
 			trait = corsair
-			trait = pirate_king_trait
+			trait = pirate_king
 			trait = ravager
 			trait = seaking
 			trait = sea_queen
@@ -1818,7 +1818,7 @@ character_event = {
 		}
 		NOR = { 
 			trait = corsair
-			trait = pirate_king_trait
+			trait = pirate_king
 			trait = seaking
 			trait = sea_queen
 		}

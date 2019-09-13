@@ -19,15 +19,14 @@ pirate_king = {
 		sea_queen
 		freebooter
 		buccaneer
-		pirate_king
 	}
 	martial = 4
 	combat_rating = 30 #old value: 3
 	monthly_character_prestige = 0.75
 	monthly_character_piety = 0.75
 	same_religion_opinion = 25
-	global_levy_size = 0.2
-	land_morale = 0.1
+	global_levy_size = 0.25
+	land_morale = 0.15
 
 	religious = yes
 	

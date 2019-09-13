@@ -10914,23 +10914,6 @@ character_event = {
 
 		any_independent_ruler = {
 			any_realm_character = {
-				# Diversity
-				if = {
-					limit = {
-						# This should figure out which characters have been randomly generated and haven't been around for long
-						#is_ruler = no # uncomment this once we have the map filled out
-						ai = yes
-						NOT = { father_even_if_dead = { always = yes } }
-						NOT = { mother_even_if_dead = { always = yes } }
-						NOT = { spouse_even_if_dead = { always = yes } }
-						NOT = { any_child = { always = yes } }
-					}
-					character_event = { id = misc.40 }
-				}
-				else = {
-					character_event = { id = misc.41 }
-				}
-
 				# libertarian holy head
 				if = {
 					limit = {
@@ -10954,11 +10937,20 @@ character_event = {
 				if = {
 					limit = {
 						NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+						is_ruler = yes
+						OR = {
+							has_law = succ_open_elective
+							has_law = succ_libertarian_elective
+							has_law = succ_mib_elective
+							has_law = succ_catholic_bishopric
+							has_law = succ_papal_succession
+						}
 						OR = {
 							is_theocracy = yes
 							holy_order = yes
+							mercenary = yes
+							is_republic = yes
 						}
-						is_ruler = yes
 					}
 					character_event = { id = misc.6 }
 					character_event = { id = misc.6 days = 2 }
@@ -11023,6 +11015,29 @@ character_event = {
 						is_adult = yes
 					}
 					character_event = { id = SOAATE.100 }
+				}
+
+				# Diversity
+				if = {
+					limit = {
+						# This should figure out which characters have been randomly generated and haven't been around for long
+						#is_ruler = no # uncomment this once we have the map filled out
+						ai = yes
+						NOT = { father_even_if_dead = { always = yes } }
+						NOT = { mother_even_if_dead = { always = yes } }
+						NOT = { spouse_even_if_dead = { always = yes } }
+						NOT = { any_child = { always = yes } }
+					}
+					character_event = { id = misc.40 }
+				}
+				else = {
+					set_character_flag = physique
+					set_character_flag = diversity
+				}
+
+				if = {
+					limit = { tier = BARON NOT = { primary_title = { has_law = agnatic_succession } } }
+					character_event = { id = miscATEWW.5 }
 				}
 
 				set_character_flag = historical_character
@@ -11117,13 +11132,7 @@ character_event = {
 						religion_allows_female_temple_holders = yes
 						religion_allows_male_temple_holders = no
 						OR = {
-							AND = {
-								is_female = no
-								NOR = { 
-									has_character_flag = historical_character 
-									has_character_flag = keep_male 
-								}
-							}
+							is_female = no
 							NOT = { has_law = enatic_succession }
 						}
 					}
@@ -11132,13 +11141,7 @@ character_event = {
 						religion_allows_female_temple_holders = yes
 						religion_allows_male_temple_holders = yes
 						OR = {
-							AND = {
-								is_female = no
-								NOR = { 
-									has_character_flag = historical_character 
-									has_character_flag = keep_male 
-								}
-							}
+							is_female = no
 							NOT = { has_law = true_cognatic_succession }
 						}
 					}
@@ -11159,13 +11162,7 @@ character_event = {
 						religion_allows_female_temple_holders = yes
 						religion_allows_male_temple_holders = no
 						OR = {
-							AND = {
-								is_female = no
-								NOR = { 
-									has_character_flag = historical_character 
-									has_character_flag = keep_male 
-								}
-							}
+							is_female = no
 							NOT = { has_law = enatic_succession }
 						}
 					}
@@ -11173,13 +11170,7 @@ character_event = {
 						religion_allows_female_temple_holders = yes
 						religion_allows_male_temple_holders = yes
 						OR = {
-							AND = {
-								is_female = no
-								NOR = { 
-									has_character_flag = historical_character 
-									has_character_flag = keep_male 
-								}
-							}
+							is_female = no
 							NOT = { has_law = true_cognatic_succession }
 						}
 					}
@@ -11196,26 +11187,14 @@ character_event = {
 					AND = {
 						matriarchal_religion = yes
 						OR = {
-							AND = {
-								is_female = no
-								NOR = { 
-									has_character_flag = historical_character 
-									has_character_flag = keep_male 
-								}
-							}
+							is_female = no
 							NOT = { has_law = enatic_succession }
 						}
 					}
 					AND = {
 						gender_equality_trigger = yes
 						OR = {
-							AND = {
-								is_female = no
-								NOR = { 
-									has_character_flag = historical_character 
-									has_character_flag = keep_male 
-								}
-							}
+							is_female = no
 							NOT = { has_law = true_cognatic_succession }
 						}
 					}
@@ -11234,13 +11213,7 @@ character_event = {
 							primary_title = { title = d_nancy_harts }
 						}
 						OR = {
-							AND = {
-								is_female = no
-								NOR = { 
-									has_character_flag = historical_character 
-									has_character_flag = keep_male 
-								}
-							}
+							is_female = no
 							NOT = { has_law = enatic_succession }
 						}
 					}
@@ -11248,13 +11221,7 @@ character_event = {
 						gender_equality_trigger = yes
 						NOT = { primary_title = { title = d_nancy_harts } }
 						OR = {
-							AND = {
-								is_female = no
-								NOR = { 
-									has_character_flag = historical_character 
-									has_character_flag = keep_male 
-								}
-							}
+							is_female = no
 							NOT = { has_law = true_cognatic_succession }
 						}
 					}
@@ -11293,40 +11260,44 @@ character_event = {
 			}
 			if = {
 				limit = {
-					religion_allows_female_temple_holders = yes
-					religion_allows_male_temple_holders = no
-					is_female = no
-					NOT = { has_character_flag = keep_male }
-					NOT = { current_heir = { is_female = yes } } # Preserve investiture if valid
+					is_alive = yes
+					NOR = { 
+						has_character_flag = historical_character 
+						has_character_flag = keep_male 
+					}
 				}
-				log = "misc.6: [Root.GetBestName] make female"
-				set_gender = female
-				give_ROOT_random_name = yes
-				character_event = { id = misc.6 days = 1 }
-			}
-			else_if = {
-				limit = {
-					religion_allows_female_temple_holders = yes
-					religion_allows_male_temple_holders = yes
-					is_female = no
-					NOT = { has_character_flag = keep_male }
-					NOT = { current_heir = { always = yes } } # Preserve investiture if valid
+				if = {
+					limit = {
+						primary_title = { has_law = enatic_succession }
+						is_female = no
+						NOT = { current_heir = { is_female = yes } } # Preserve investiture if valid
+					}
+					log = "misc.6: [Root.GetBestName] make female"
+					set_gender = female
+					give_ROOT_random_name = yes
+					character_event = { id = misc.6 days = 1 }
 				}
-				log = "misc.6: [Root.GetBestName] make female 50/50"
-				character_event = { id = miscATEWW.5 }
-				character_event = { id = misc.6 days = 1 }
-			}
-			else_if = {
-				limit = {
-					religion_allows_female_temple_holders = no
-					religion_allows_male_temple_holders = yes
-					is_female = yes
-					NOT = { current_heir = { is_female = no } } # Preserve investiture if valid
+				else_if = {
+					limit = {
+						primary_title = { has_law = true_cognatic_succession }
+						is_female = no
+						NOT = { current_heir = { always = yes } } # Preserve investiture if valid
+					}
+					log = "misc.6: [Root.GetBestName] make female 50/50"
+					character_event = { id = miscATEWW.5 }
+					character_event = { id = misc.6 days = 1 }
 				}
-				log = "misc.6: [Root.GetBestName] make male"
-				set_gender = male
-				give_ROOT_random_name = yes
-				character_event = { id = misc.6 days = 1 }
+				else_if = {
+					limit = {
+						primary_title = { has_law = agnatic_succession }
+						is_female = yes
+						NOT = { current_heir = { is_female = no } } # Preserve investiture if valid
+					}
+					log = "misc.6: [Root.GetBestName] make male"
+					set_gender = male
+					give_ROOT_random_name = yes
+					character_event = { id = misc.6 days = 1 }
+				}
 			}
 			if = {
 				limit = {
@@ -11371,36 +11342,41 @@ character_event = {
 			}
 			if = {
 				limit = {
-					religion_allows_female_temple_holders = yes
-					religion_allows_male_temple_holders = no
-					is_female = no
-					NOT = { has_character_flag = keep_male }
+					is_alive = yes
+					NOR = { 
+						has_character_flag = historical_character 
+						has_character_flag = keep_male 
+					}
 				}
-				log = "misc.6: [Root.GetBestName] make female"
-				set_gender = female
-				give_ROOT_random_name = yes
-				character_event = { id = misc.6 days = 1 }
-			}
-			else_if = {
-				limit = {
-					females_can_hold_minor_commander_title_trigger = yes
-					religion_allows_female_temple_holders = yes
-					religion_allows_male_temple_holders = yes
-					is_female = no
-					NOT = { has_character_flag = keep_male }
+				if = {
+					limit = {
+						primary_title = { has_law = enatic_succession }
+						is_female = no
+					}
+					log = "misc.6: [Root.GetBestName] make female"
+					set_gender = female
+					give_ROOT_random_name = yes
+					character_event = { id = misc.6 days = 1 }
 				}
-				log = "misc.6: [Root.GetBestName] make female 50/50"
-				character_event = { id = miscATEWW.5 }
-				character_event = { id = misc.6 days = 1 }
-			}
-			else_if = {
-				limit = {
-					is_female = yes
+				else_if = {
+					limit = {
+						primary_title = { has_law = true_cognatic_succession }
+						is_female = no
+					}
+					log = "misc.6: [Root.GetBestName] make female 50/50"
+					character_event = { id = miscATEWW.5 }
+					character_event = { id = misc.6 days = 1 }
 				}
-				log = "misc.6: [Root.GetBestName] make male"
-				set_gender = male
-				give_ROOT_random_name = yes
-				character_event = { id = misc.6 days = 1 }
+				else_if = {
+					limit = {
+						primary_title = { has_law = agnatic_succession }
+						is_female = yes
+					}
+					log = "misc.6: [Root.GetBestName] make male"
+					set_gender = male
+					give_ROOT_random_name = yes
+					character_event = { id = misc.6 days = 1 }
+				}
 			}
 			if = {
 				limit = {
@@ -11448,37 +11424,41 @@ character_event = {
 			}
 			if = {
 				limit = {
-					OR = {
-						matriarchal_religion = yes
-						primary_title = { title = d_nancy_harts }
+					is_alive = yes
+					NOR = { 
+						has_character_flag = historical_character 
+						has_character_flag = keep_male 
 					}
-					is_female = no
-					NOT = { has_character_flag = keep_male }
 				}
-				log = "misc.6: [Root.GetBestName] make female"
-				set_gender = female
-				give_ROOT_random_name = yes
-				character_event = { id = misc.6 days = 1 }
-			}
-			else_if = {
-				limit = {
-					females_can_hold_minor_commander_title_trigger = yes
-					gender_equality_trigger = yes
-					is_female = no
-					NOT = { has_character_flag = keep_male }
+				if = {
+					limit = {
+						primary_title = { has_law = enatic_succession }
+						is_female = no
+					}
+					log = "misc.6: [Root.GetBestName] make female"
+					set_gender = female
+					give_ROOT_random_name = yes
+					character_event = { id = misc.6 days = 1 }
 				}
-				log = "misc.6: [Root.GetBestName] make female 50/50"
-				character_event = { id = miscATEWW.5 }
-				character_event = { id = misc.6 days = 1 }
-			}
-			else_if = {
-				limit = {
-					is_female = yes
+				else_if = {
+					limit = {
+						primary_title = { has_law = true_cognatic_succession }
+						is_female = no
+					}
+					log = "misc.6: [Root.GetBestName] make female 50/50"
+					character_event = { id = miscATEWW.5 }
+					character_event = { id = misc.6 days = 1 }
 				}
-				log = "misc.6: [Root.GetBestName] make male"
-				set_gender = male
-				give_ROOT_random_name = yes
-				character_event = { id = misc.6 days = 1 }
+				else_if = {
+					limit = {
+						primary_title = { has_law = agnatic_succession }
+						is_female = yes
+					}
+					log = "misc.6: [Root.GetBestName] make male"
+					set_gender = male
+					give_ROOT_random_name = yes
+					character_event = { id = misc.6 days = 1 }
+				}
 			}
 			if = {
 				limit = {
@@ -11508,7 +11488,7 @@ character_event = {
 				limit = {
 					matriarchal_religion = yes
 				}
-				primary_title = { add_law = enatic_cognatic_succession log = "misc.6: set enatic_cognatic_succession in [This.GetName]" }
+				primary_title = { add_law = enatic_succession log = "misc.6: set enatic_succession in [This.GetName]" }
 			}
 			else_if = {
 				limit = {
@@ -11521,39 +11501,47 @@ character_event = {
 			}
 			if = {
 				limit = {
-					matriarchal_religion = yes
-					is_female = no
-					NOT = { has_character_flag = keep_male }
+					is_alive = yes
+					NOR = { 
+						has_character_flag = historical_character 
+						has_character_flag = keep_male 
+					}
 				}
-				log = "misc.6: [Root.GetBestName] make female"
-				set_gender = female
-				give_ROOT_random_name = yes
-				character_event = { id = misc.6 days = 1 }
-			}
-			else_if = {
-				limit = {
-					gender_equality_trigger = yes
-					is_female = no
-					NOT = { has_character_flag = keep_male }
+				if = {
+					limit = {
+						primary_title = { has_law = enatic_succession }
+						is_female = no
+					}
+					log = "misc.6: [Root.GetBestName] make female"
+					set_gender = female
+					give_ROOT_random_name = yes
+					character_event = { id = misc.6 days = 1 }
 				}
-				log = "misc.6: [Root.GetBestName] make female 50/50"
-				character_event = { id = miscATEWW.5 }
-				character_event = { id = misc.6 days = 1 }
-			}
-			else_if = {
-				limit = {
-					is_female = yes
+				else_if = {
+					limit = {
+						primary_title = { has_law = true_cognatic_succession }
+						is_female = no
+					}
+					log = "misc.6: [Root.GetBestName] make female 50/50"
+					character_event = { id = miscATEWW.5 }
+					character_event = { id = misc.6 days = 1 }
 				}
-				log = "misc.6: [Root.GetBestName] make male"
-				set_gender = male
-				give_ROOT_random_name = yes
-				character_event = { id = misc.6 days = 1 }
+				else_if = {
+					limit = {
+						primary_title = { has_law = agnatic_succession }
+						is_female = yes
+					}
+					log = "misc.6: [Root.GetBestName] make male"
+					set_gender = male
+					give_ROOT_random_name = yes
+					character_event = { id = misc.6 days = 1 }
+				}
 			}
 			if = {
 				limit = {
 					matriarchal_religion = yes
 				}
-				primary_title = { add_law = enatic_cognatic_succession log = "misc.6: set enatic_cognatic_succession in [This.GetName]" }
+				primary_title = { add_law = enatic_succession log = "misc.6: set enatic_succession in [This.GetName]" }
 			}
 			else_if = {
 				limit = {
@@ -11576,9 +11564,12 @@ character_event = {
 	only_rulers = yes
 	option = {
 		log = "misc.7: [Root.GetBestName], [Root.Religion.GetName]"
-		character_event = { id = misc.6 }
+		primary_title = {
+			holder_scope = { character_event = { id = misc.6 } }
+		}
 	}
 }
+
 character_event = {
 	id = misc.8
 	desc = "Replace First Lady"

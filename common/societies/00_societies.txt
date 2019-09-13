@@ -7465,7 +7465,7 @@ warrior_lodge_norse = {
 			value = 3
 		}
 		trait = {
-			trait = pirate_king_trait
+			trait = pirate_king
 			value = 4
 		}
 		trait = {
@@ -7477,7 +7477,7 @@ warrior_lodge_norse = {
 			value = 3
 		}
 		trait = {
-			trait = pirate_king_trait
+			trait = pirate_king
 			value = 4
 		}
 		trait = {
@@ -8055,7 +8055,7 @@ warrior_lodge_peyotist = { # Also generally for Nomads? (will keep for now)
 			value = 3
 		}
 		trait = {
-			trait = pirate_king_trait
+			trait = pirate_king
 			value = 4
 		}
 		trait = {
@@ -8638,7 +8638,7 @@ warrior_lodge_atomicist = {
 			value = 3
 		}
 		trait = {
-			trait = pirate_king_trait
+			trait = pirate_king
 			value = 4
 		}
 		trait = {
@@ -9215,7 +9215,7 @@ warrior_lodge_occultist = {
 			value = 3
 		}
 		trait = {
-			trait = pirate_king_trait
+			trait = pirate_king
 			value = 4
 		}
 		trait = {
@@ -9787,7 +9787,7 @@ warrior_lodge_raven_tales = {
 			value = 3
 		}
 		trait = {
-			trait = pirate_king_trait
+			trait = pirate_king
 			value = 4
 		}
 		trait = {
@@ -10367,7 +10367,7 @@ warrior_lodge_celtic = {
 			value = 3
 		}
 		trait = {
-			trait = pirate_king_trait
+			trait = pirate_king
 			value = 4
 		}
 		trait = {
@@ -10943,7 +10943,7 @@ warrior_lodge_revelationist = {
 			value = 3
 		}
 		trait = {
-			trait = pirate_king_trait
+			trait = pirate_king
 			value = 4
 		}
 		trait = {
@@ -11519,7 +11519,7 @@ warrior_lodge_rust_cultist = {
 			value = 3
 		}
 		trait = {
-			trait = pirate_king_trait
+			trait = pirate_king
 			value = 4
 		}
 		trait = {
@@ -12103,7 +12103,7 @@ warrior_lodge_americanist = {
 			value = 3
 		}
 		trait = {
-			trait = pirate_king_trait
+			trait = pirate_king
 			value = 4
 		}
 		trait = {

@@ -21,7 +21,6 @@ on_death = {
 	events = {
 		miscATEWW.4
 		ATE_WWW_PIRATE.4
-		ATE_WWW_PIRATE.7
 	}
 }
 
@@ -85,5 +84,19 @@ on_adulthood = {
 on_birth = {
 	events = {
 		misc.41
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder = {
+	events = {
+		ATE_WWW_PIRATE.7
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder_inheritance = {
+	events = {
+		ATE_WWW_PIRATE.7
 	}
 }

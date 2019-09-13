@@ -5248,7 +5248,7 @@ narrative_event = {
 			trait = seaking
 			trait = sea_queen
 			trait = corsair
-			trait = pirate_king_trait
+			trait = pirate_king
 		}
 		NOT = { 
 			any_owned_bloodline = { # Not already has a Viking bloodline.

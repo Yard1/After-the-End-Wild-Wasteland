@@ -84,7 +84,6 @@ succession_laws = {
 		vassal_opinion = 5
 	
 		potential = {
-			is_landless_type_title = no
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				title = e_usa
@@ -113,6 +112,7 @@ succession_laws = {
 				}
 			}
 			OR = {
+				is_landless_type_title = no
 				is_tribal_type_title = yes
 				temporary = yes
 			}
@@ -437,7 +437,7 @@ succession_laws = {
 			OR = {
 				AND = {
 					title = k_pirate_kingdom
-					has_global_flag = pirate_kingdom_hereditary
+					has_global_flag = pirate_king_hereditary
 				}
 				holder_scope = { NOT = { religion_group = pirate } }
 			}
@@ -520,7 +520,7 @@ succession_laws = {
 					conditional_tooltip = {
 						trigger = { religion = brethren }
 						title = k_pirate_kingdom
-						has_global_flag = pirate_kingdom_hereditary
+						has_global_flag = pirate_king_hereditary
 					}
 					hidden_tooltip = {
 						has_crown_law_title = no
@@ -616,7 +616,7 @@ succession_laws = {
 			OR = {
 				AND = {
 					title = k_pirate_kingdom
-					has_global_flag = pirate_kingdom_hereditary
+					has_global_flag = pirate_king_hereditary
 				}
 				holder_scope = { NOT = { religion_group = pirate } }
 			}
@@ -675,7 +675,7 @@ succession_laws = {
 					conditional_tooltip = {
 						trigger = { religion = brethren }
 						title = k_pirate_kingdom
-						has_global_flag = pirate_kingdom_hereditary
+						has_global_flag = pirate_king_hereditary
 					}
 					holder_scope = { # Viceroyalties can always have primogeniture if not muslim
 						show_scope_change = no
@@ -706,7 +706,7 @@ succession_laws = {
 					conditional_tooltip = {
 						trigger = { religion = brethren }
 						title = k_pirate_kingdom
-						has_global_flag = pirate_kingdom_hereditary
+						has_global_flag = pirate_king_hereditary
 					}
 					holder_scope = { # Viceroyalties can always have primogeniture if not muslim
 						show_scope_change = no
@@ -794,7 +794,7 @@ succession_laws = {
 			OR = {
 				AND = {
 					title = k_pirate_kingdom
-					has_global_flag = pirate_kingdom_hereditary
+					has_global_flag = pirate_king_hereditary
 				}
 				holder_scope = { NOT = { religion_group = pirate } }
 			}
@@ -1344,7 +1344,7 @@ succession_laws = {
 			OR = {
 				AND = {
 					title = k_pirate_kingdom
-					has_global_flag = pirate_kingdom_hereditary
+					has_global_flag = pirate_king_hereditary
 				}
 				holder_scope = { NOT = { religion_group = pirate } }
 			}

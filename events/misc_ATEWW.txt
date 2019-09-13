@@ -59,7 +59,6 @@ character_event = {
 							primary_title = {
 								OR = {
 									has_law = enatic_succession
-									has_law = enatic_cognatic_succession
 									AND = {
 										holy_order = yes
 										religion_allows_female_temple_holders = yes
@@ -590,7 +589,7 @@ character_event = {
 	only_men = yes
 	ai = yes
 	trigger = {
-		NOT = { has_character_flag = historical_character }
+		is_alive = yes
 		OR = {
 			NOT = { has_global_flag = scenario_initialization }
 			is_landed = no
@@ -600,7 +599,10 @@ character_event = {
 		NOT = { mother_even_if_dead = { always = yes } }
 		NOT = { spouse_even_if_dead = { always = yes } }
 		NOT = { any_child = { always = yes } }
-		NOT = { has_character_flag = keep_male }
+		NOR = { 
+			has_character_flag = historical_character 
+			has_character_flag = keep_male 
+		}
 	}
 	option = {
 		log = "miscATEWW.5: [Root.GetBestName] make female"
@@ -623,6 +625,7 @@ character_event = {
 			modifier = {
 				factor = 0
 				is_ruler = yes
+				primary_title = { has_law = enatic_succession }
 			}
 		}
 	}
