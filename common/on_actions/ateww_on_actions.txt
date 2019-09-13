@@ -80,3 +80,10 @@ on_adulthood = {
 		ATE_WWW_PIRATE.6
 	}
 }
+
+# character
+on_birth = {
+	events = {
+		misc.41
+	}
+}

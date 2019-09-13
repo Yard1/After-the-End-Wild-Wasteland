@@ -7443,7 +7443,7 @@ this_is_spiritual_culture_trigger = { #Not really about culture - Used in AI vot
 }
 this_is_sea_raider_trigger = {
 	OR = { 
-		#has_pirate_trait = yes
+		has_pirate_trait = yes
 		trait = viking
 		trait = ravager
 		trait = seaking

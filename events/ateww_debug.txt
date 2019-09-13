@@ -134,3 +134,33 @@ character_event = {
 	}
 
 }
+
+character_event = {
+	id = ATE_WWW_DEBUG.4
+	desc = "DEBUG"
+	picture = GFX_evt_capitol_building
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	option = {
+		log = "ATE_WWW_DEBUG.4: [Root.GetBestName]"
+		log = "ATE_WWW_DEBUG.4: [Root.GetBestName] try father:"
+		father_even_if_dead = { log = "ATE_WWW_DEBUG.4: [Root.GetBestName] father: [This.GetBestName]" }
+		log = "ATE_WWW_DEBUG.4: [Root.GetBestName] try mother:"
+		mother_even_if_dead = { log = "ATE_WWW_DEBUG.4: [Root.GetBestName] mother: [This.GetBestName]" }
+		if = {
+			limit = { father_even_if_dead = { always = yes } }
+			father_even_if_dead = { log = "ATE_WWW_DEBUG.4: [Root.GetBestName] father: always = yes" }
+		}
+		if = {
+			limit = { mother_even_if_dead = { always = yes } }
+			mother_even_if_dead = { log = "ATE_WWW_DEBUG.4: [Root.GetBestName] mother: always = yes" }
+		}
+		if = {
+			limit = { mother_even_if_dead = { is_parent_of = ROOT } }
+			mother_even_if_dead = { log = "ATE_WWW_DEBUG.4: [Root.GetBestName] mother: is_parent_of = ROOT" }
+		}
+	}
+
+}

@@ -1702,8 +1702,16 @@ gender_laws = {
 						NOT = { has_religion_feature = religion_feature_midewiwin }
 					}
 					AND = {
-						OR = { is_theocracy = yes holy_order = yes }
+						is_theocracy = yes
 						religion_allows_female_temple_holders = no
+						religion_allows_male_temple_holders = yes
+					}
+					AND = {
+						holy_order = yes
+						OR = {
+							females_can_hold_minor_commander_title_trigger = no
+							religion_allows_female_temple_holders = no
+						}
 						religion_allows_male_temple_holders = yes
 					}
 				}
@@ -1733,8 +1741,20 @@ gender_laws = {
 			modifier = {
 				factor = 50
 				holder_scope = {
-					OR = { is_theocracy = yes holy_order = yes }
+					is_theocracy = yes
 					religion_allows_female_temple_holders = no
+					religion_allows_male_temple_holders = yes
+				}
+			}
+
+			modifier = {
+				factor = 50
+				holder_scope = {
+					holy_order = yes
+					OR = {
+						females_can_hold_minor_commander_title_trigger = no
+						religion_allows_female_temple_holders = no
+					}
 					religion_allows_male_temple_holders = yes
 				}
 			}
@@ -1773,13 +1793,28 @@ gender_laws = {
 			holder_scope = {
 				OR = {
 					AND = {
-						OR = { is_theocracy = yes holy_order = yes }
+						is_theocracy = yes
 						religion_allows_female_temple_holders = yes
 						religion_allows_male_temple_holders = yes
 					}
 					AND = {
+						holy_order = yes
+						females_can_hold_minor_commander_title_trigger = yes
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = yes
+					}
+					AND = {
+						mercenary = yes
+						females_can_hold_minor_commander_title_trigger = yes
+						OR = {
+							gender_equality_trigger = yes
+							has_feminist_culture_trigger = yes
+						}
+					}
+					AND = {
 						is_theocracy = no
 						holy_order = no
+						mercenary = no
 						OR = {
 							gender_equality_trigger = yes
 							has_feminist_culture_trigger = yes
@@ -1796,6 +1831,7 @@ gender_laws = {
 				trigger = {
 					is_theocracy = no
 					holy_order = no
+					mercenary = no
 				}
 				matriarchal_religion = no
 				NOT = { has_religion_feature = religion_patriarchal }
@@ -1841,15 +1877,30 @@ gender_laws = {
 							AND = {
 								is_theocracy = no
 								holy_order = no
+								mercenary = no
 								OR = {
 									equal_religion = yes
 									has_religion_feature = religion_feature_midewiwin
 								}
 							}
 							AND = {
-								OR = { is_theocracy = yes holy_order = yes }
+								is_theocracy = yes
 								religion_allows_female_temple_holders = yes
 								religion_allows_male_temple_holders = yes
+							}
+							AND = {
+								holy_order = yes
+								females_can_hold_minor_commander_title_trigger = yes
+								religion_allows_female_temple_holders = yes
+								religion_allows_male_temple_holders = yes
+							}
+							AND = {
+								mercenary = yes
+								females_can_hold_minor_commander_title_trigger = yes
+								OR = {
+									gender_equality_trigger = yes
+									has_feminist_culture_trigger = yes
+								}
 							}
 						}
 					}
@@ -1869,7 +1920,13 @@ gender_laws = {
 							}
 						}
 						AND = {
-							OR = { is_theocracy = yes holy_order = yes }
+							is_theocracy = yes
+							religion_allows_female_temple_holders = yes
+							religion_allows_male_temple_holders = yes
+						}
+						AND = {
+							holy_order = yes
+							females_can_hold_minor_commander_title_trigger = yes
 							religion_allows_female_temple_holders = yes
 							religion_allows_male_temple_holders = yes
 						}
@@ -1900,7 +1957,12 @@ gender_laws = {
 							}
 						}
 						AND = {
-							OR = { is_theocracy = yes holy_order = yes }
+							is_theocracy = yes
+							religion_allows_female_temple_holders = yes
+							religion_allows_male_temple_holders = no
+						}
+						AND = {
+							holy_order = yes
 							religion_allows_female_temple_holders = yes
 							religion_allows_male_temple_holders = no
 						}
@@ -1936,7 +1998,13 @@ gender_laws = {
 			factor = 1
 			modifier = {
 				factor = 100
-				OR = { is_theocracy = yes holy_order = yes }
+				is_theocracy = yes
+				religion_allows_female_temple_holders = yes
+				religion_allows_male_temple_holders = no
+			}
+			modifier = {
+				factor = 100
+				holy_order = yes
 				religion_allows_female_temple_holders = yes
 				religion_allows_male_temple_holders = no
 			}

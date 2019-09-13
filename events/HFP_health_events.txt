@@ -703,14 +703,14 @@ character_event = {
 		}
 		if = { 
 			limit = { 
-				#has_pirate_trait = yes
+				has_pirate_trait = yes
 				NOT = { check_variable = { which = physique_variable value = -1 } }
 			}
 			change_variable = { which = physique_variable value = 1 }
 		}
 		if = { 
 			limit = { 
-				#has_pirate_trait = yes
+				has_pirate_trait = yes
 				check_variable = { which = physique_variable value = 1 }
 			}
 			change_variable = { which = physique_variable value = -1 }

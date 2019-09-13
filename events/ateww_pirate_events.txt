@@ -308,7 +308,7 @@ character_event = {
 	
 	trigger = {
 		NOR = { 
-			#has_pirate_trait = yes
+			has_pirate_trait = yes
 			trait = viking
 			trait = ravager
 			trait = seaking

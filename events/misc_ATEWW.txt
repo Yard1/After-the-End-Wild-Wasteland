@@ -19,8 +19,16 @@ character_event = {
 				NOR = { 
 					has_law = agnatic_succession 
 					AND = {
-						OR = { is_theocracy = yes holy_order = yes }
+						is_theocracy = yes
 						religion_allows_female_temple_holders = no
+						religion_allows_male_temple_holders = yes
+					}
+					AND = {
+						holy_order = yes
+						OR = {
+							religion_allows_female_temple_holders = no
+							females_can_hold_minor_commander_title_trigger = no
+						}
 						religion_allows_male_temple_holders = yes
 					}
 				}
@@ -65,8 +73,8 @@ character_event = {
 					set_gender = female
 				}
 				else = {
-					#60/40
-					log = "miscATEWW.1: [Root.GetBestName] 60/40 holy order/merc"
+					#50/50
+					log = "miscATEWW.1: [Root.GetBestName] 50/50 holy order/merc"
 					character_event = { id = miscATEWW.5 }
 				}
 			}
@@ -97,7 +105,7 @@ character_event = {
 							religion_allows_male_temple_holders = yes
 						}
 					}
-					log = "miscATEWW.1: [Root.GetBestName] 60/40 priest"
+					log = "miscATEWW.1: [Root.GetBestName] 50/50 priest"
 					character_event = { id = miscATEWW.5 }
 				}
 			}
@@ -110,7 +118,7 @@ character_event = {
 				character_event = { id = miscATEWW.5 }
 			}
 			else = {
-				log = "miscATEWW.1: [Root.GetBestName] 60/40"
+				log = "miscATEWW.1: [Root.GetBestName] 50/50"
 				character_event = { id = miscATEWW.5 }
 			}
 		}
@@ -123,17 +131,7 @@ character_event = {
 				give_ROOT_random_female_libertarian_name = yes
 			}
 			else = {
-				random_character = {
-					limit = { 
-						NOT = { character = PREV }
-						is_female = yes
-						culture = ROOT
-					}
-					preferred_limit = {
-						religion = ROOT
-					}
-					ROOT = { copy_name = PREV }
-				}
+				give_ROOT_random_name = yes
 			}
 		}
 		if = {
@@ -590,22 +588,21 @@ character_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	only_men = yes
+	trigger = {
+		ai = yes
+		NOT = { father_even_if_dead = { always = yes } }
+		NOT = { mother_even_if_dead = { always = yes } }
+		NOT = { spouse_even_if_dead = { always = yes } }
+		NOT = { any_child = { always = yes } }
+		NOT = { has_character_flag = keep_male }
+	}
 	option = {
+		log = "miscATEWW.5: [Root.GetBestName] make female"
 		set_gender = female
-		random_character = {
-			limit = { 
-				NOT = { character = PREV }
-				is_female = yes
-				culture = ROOT
-			}
-			preferred_limit = {
-				religion = ROOT
-			}
-			ROOT = { copy_name = PREV }
-		}
+		give_ROOT_random_name = yes
 		clr_character_flag = 80_20_female
 		ai_chance = {
-			factor = 60
+			factor = 50
 			modifier = {
 				factor = 2.667
 				has_character_flag = 80_20_female
@@ -613,8 +610,10 @@ character_event = {
 		}
 	}
 	option = {
+		log = "miscATEWW.5: [Root.GetBestName] keep_male"
+		set_character_flag = keep_male
 		ai_chance = {
-			factor = 40
+			factor = 50
 		}
 	}
 }
@@ -627,17 +626,7 @@ character_event = {
 	religion = libertarian
 	only_women = yes
 	option = {
-		random_character = {
-			limit = { 
-				NOT = { character = ROOT }
-				is_female = yes
-				culture = ROOT
-			}
-			preferred_limit = {
-				religion = ROOT
-			}
-			ROOT = { copy_name = PREV }
-		}
+		give_ROOT_random_name = yes
 		ai_chance = {
 			factor = 25
 			modifier = {
