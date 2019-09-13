@@ -29,6 +29,7 @@ PIRATE_QUEEN;Pirate Queen;;;;;;;;;;;;;x
 PIRATE_KING_FOA;Boss;;;;;;;;;;;;;x
 
 pirate_king;[Root.GetPirateMonarch];;;;;;;;;;;;;x
+pirate_king_desc;This character has earned a name for themselves as a fierce [Root.GetPirateMonarch].;;;;;;;;;;;;;x
 
 pirate_king_bloodline;Blackblood;Tempête de Sang;Sturmblut;;Sangre tormentosa;;;;;;;;x
 pirate_king_bloodline_desc;Entire cities have been decimated by the raids of [This.Founder.GetTitledFirstName], etching [This.Founder.GetHerHis] legacy as one of the most fearsome and ruthless Pirates of [This.Founder.PrimaryTitle.GetName].;Des cités entières ont été décimées par les pillages [This.Founder.Get_du_TitledFirstName], gravant son nom dans le marbre en tant que l'un[This.Founder.Get_E] des pirates les plus redoutables et impitoyables [This.Founder.PrimaryTitle.Get_du_Realm].;Ganze Städte wurden durch die Überfälle von [This.Founder.GetTitledFirstName] niedergemäht, [This.Founder.Getderdie] sein Vermächtnis als eine[This.Founder.GetrMale] der furchterregendsten und rücksichtslosesten Piraten von [This.Founder.PrimaryTitle.GetName] beansprucht.;;Ciudades enteras fueron devastadas por las incursiones de [This.Founder.GetTitledFirstName], grabando su legado como uno de los piratas de [This.Founder.PrimaryTitle.GetName] más terribles y despiadados.;;;;;;;;x
@@ -52,3 +53,5 @@ EVT_DESC_ATE_WWW_PIRATE_9;[From.GetFullName] has had a long and bountiful career
 EVTOPTA_pirate_king_2;This doesn't seem very Piratey.;;;;;;;;;;;;;x
 EVTOPTB_pirate_king_2;Oh, bugger me...;;;;;;;;;;;;;x
 EVTOPTC_pirate_king_2;I am the greatest Pirate that ever lived!;;;;;;;;;;;;;x
+
+brethren_FEATURES;§Y*§! Brethren rulers must commit to following the lifestyle of a pirate, and may select from one of three ways of doing so.\n§Y*§! Brethren rulers are more likely to capture prisoners when leading armies and successfully sieging holdings;;;;;;;;;;;;;x

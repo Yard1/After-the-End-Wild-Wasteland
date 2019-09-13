@@ -1,0 +1,6 @@
+2648.3.27 = {
+	liege = k_louisiana
+	holder = 1803060
+	law = succ_primogeniture
+	law = true_cognatic_succession
+}
