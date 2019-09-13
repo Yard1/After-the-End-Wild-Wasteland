@@ -63,4 +63,8 @@ spriteTypes = {
 		name = "GFX_pirate_king_hereditary"
 		texturefile = "gfx/interface/become_pirate_king.dds"
 	}
+	spriteType = {
+		name = "GFX_vassalize_code_keepers"
+		texturefile = "gfx/interface/decision_icon_vassalize_holy_order.dds"
+	}
 }

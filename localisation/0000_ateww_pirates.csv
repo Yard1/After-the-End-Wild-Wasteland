@@ -15,6 +15,9 @@ become_pirate_king;Become The [Root.GetPirateMonarch];;;;;;;;;;;;;x
 become_pirate_king_desc;From Vancouver to Guyana my name is spoken of in hushed whispers, my sails are known to all, and most importantly I have earned the respect of my fellow Brethren faitfhul. Perhaps the time has come to crown a new [Root.GetPirateMonarch]?;;;;;;;;;;;;;x
 pirate_king_hereditary;Solidify Your Rule;;;;;;;;;;;;;x
 pirate_king_hereditary_desc;I have plundered the seas of the Americas for years - there is not a soul in the world that could possibly contest my right to rule as [Root.GetPirateMonarch], and yet it is not enough. When I at long last meet Davy Jones in his watery halls my Kingdom shall turn to ash... but perhaps the time has come to change that?;;;;;;;;;;;;;x
+vassalize_code_keepers;Vassalize the Keepers of the Code;;;;;;;;;;;;;x
+vassalize_code_keepers_desc;The Keepers of the Code will surely serve a powerful [Root.GetPirateMonarch] - all they need is some gold for their trouble.;;;;;;;;;;;;;x
+
 
 EVTNAME_pirate_king;The [Root.GetPirateMonarch];;;;;;;;;;;;;x
 EVTDESC_pirate_king;Since the first Brethren took to the seas they've told stories of the great Pirate Kings and Queens of old - From Blackbeard to Charles Vane and William Kidd and now [Root.GetFullName]. Through grit, bravery, and skill, [Root.GetFullName] has managed to proclaim [Root.GetHerselfHimself] the new [Root.GetPirateMonarch], ushring in a new era for the Brethren in the process.;;;;;;;;;;;;;x
@@ -54,4 +57,4 @@ EVTOPTA_pirate_king_2;This doesn't seem very Piratey.;;;;;;;;;;;;;x
 EVTOPTB_pirate_king_2;Oh, bugger me...;;;;;;;;;;;;;x
 EVTOPTC_pirate_king_2;I am the greatest Pirate that ever lived!;;;;;;;;;;;;;x
 
-brethren_FEATURES;§Y*§! Brethren rulers must commit to following the lifestyle of a pirate, and may select from one of three ways of doing so.\n§Y*§! Brethren rulers are more likely to capture prisoners when leading armies and successfully sieging holdings;;;;;;;;;;;;;x
+brethren_FEATURES;§Y*§! The Pirate King can use the Force Vassalization CB on other Brethren rulers\n§Y*§! Brethren rulers must commit to following the lifestyle of a pirate, and may select from one of three ways of doing so\n§Y*§! Brethren rulers have a greater chance of capturing enemies and looting artifacts from the holder when leading armies and successfully sieging holdings;;;;;;;;;;;;;x

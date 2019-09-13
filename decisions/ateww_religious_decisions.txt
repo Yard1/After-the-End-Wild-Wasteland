@@ -390,6 +390,57 @@ decisions = {
 		}
 	}
 
+	vassalize_code_keepers = {
+		is_high_prio = yes
+		only_independent = yes
+		ai_check_interval = 24
+		potential = {
+			is_alternate_start = no
+			has_landed_title = k_pirate_kingdom
+			religion = brethren
+			is_title_active = d_code_keepers
+			d_code_keepers = {
+				holder_scope = {
+					NOT = { has_truce = ROOT }
+					ROOT = { NOT = { has_truce = PREV } }
+					liege = {
+						NOT = { character = ROOT }
+					}
+					NOT = { num_of_count_titles = 3 }
+					independent = yes
+					primary_title = { title = d_code_keepers }
+				}
+			}
+			#NOT = { has_character_modifier = expelled_d_code_keepers }
+		}
+		
+		allow = {
+			wealth = 350
+			piety = 2000
+			controls_religion = yes
+		}
+		
+		effect = {
+			wealth = -350
+			d_code_keepers = {
+				holder_scope = {
+					wealth = 350
+					ROOT = {
+						set_defacto_vassal = PREV
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	pirate_king_hereditary = { #Become the Hereditary Pirate King/Queen
 		is_high_prio = yes
 		ai_check_interval = 12

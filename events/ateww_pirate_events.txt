@@ -413,6 +413,14 @@ character_event = {
 		log = " ATE_WWW_PIRATE.70: [Root.GetBestName]"
 		destroy_landed_title = k_pirate_kingdom
 		activate_title = { title = k_pirate_kingdom status = no }
+		any_vassal = {
+			limit = {
+				is_landed = yes
+				higher_tier_than = COUNT
+				religion = brethren
+			}
+			set_defacto_liege = THIS
+		}
 		character_event = { id = ATE_WWW_PIRATE.8 }
 		any_playable_ruler = {
 			limit = { religion = brethren }
