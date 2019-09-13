@@ -10910,6 +10910,7 @@ character_event = {
 	
 	option = {
 		set_global_flag = scenario_initialized
+		set_global_flag = scenario_initialization
 
 		any_independent_ruler = {
 			any_realm_character = {
@@ -11023,6 +11024,8 @@ character_event = {
 					}
 					character_event = { id = SOAATE.100 }
 				}
+
+				set_character_flag = historical_character
 			}
 
 			dejure_liege_title = {
@@ -11068,6 +11071,21 @@ character_event = {
 			}
 		}
 	}
+
+	after = {
+		character_event = { id = misc.50 days = 2 }
+	}
+}
+
+character_event = {
+	id = misc.50
+	desc = "Game initialization"
+	is_triggered_only = yes
+	hide_window = yes
+	
+	option = {
+		clr_global_flag = scenario_initialization
+	}
 }
 
 character_event = {
@@ -11079,13 +11097,17 @@ character_event = {
 	trigger = {
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		OR = {
+			has_law = succ_open_elective
+			has_law = succ_libertarian_elective
+			has_law = succ_mib_elective
+			has_law = succ_catholic_bishopric
+			has_law = succ_papal_succession
+		}
+		OR = {
 			is_theocracy = yes
 			holy_order = yes
 			mercenary = yes
-			AND = {
-				is_republic = yes
-				has_law = succ_open_elective
-			}
+			is_republic = yes
 		}
 		OR = {
 			AND = {
@@ -11095,7 +11117,13 @@ character_event = {
 						religion_allows_female_temple_holders = yes
 						religion_allows_male_temple_holders = no
 						OR = {
-							is_female = no
+							AND = {
+								is_female = no
+								NOR = { 
+									has_character_flag = historical_character 
+									has_character_flag = keep_male 
+								}
+							}
 							NOT = { has_law = enatic_succession }
 						}
 					}
@@ -11106,7 +11134,10 @@ character_event = {
 						OR = {
 							AND = {
 								is_female = no
-								NOT = { has_character_flag = keep_male }
+								NOR = { 
+									has_character_flag = historical_character 
+									has_character_flag = keep_male 
+								}
 							}
 							NOT = { has_law = true_cognatic_succession }
 						}
@@ -11128,7 +11159,13 @@ character_event = {
 						religion_allows_female_temple_holders = yes
 						religion_allows_male_temple_holders = no
 						OR = {
-							is_female = no
+							AND = {
+								is_female = no
+								NOR = { 
+									has_character_flag = historical_character 
+									has_character_flag = keep_male 
+								}
+							}
 							NOT = { has_law = enatic_succession }
 						}
 					}
@@ -11138,7 +11175,10 @@ character_event = {
 						OR = {
 							AND = {
 								is_female = no
-								NOT = { has_character_flag = keep_male }
+								NOR = { 
+									has_character_flag = historical_character 
+									has_character_flag = keep_male 
+								}
 							}
 							NOT = { has_law = true_cognatic_succession }
 						}
@@ -11156,7 +11196,13 @@ character_event = {
 					AND = {
 						matriarchal_religion = yes
 						OR = {
-							is_female = no
+							AND = {
+								is_female = no
+								NOR = { 
+									has_character_flag = historical_character 
+									has_character_flag = keep_male 
+								}
+							}
 							NOT = { has_law = enatic_succession }
 						}
 					}
@@ -11165,7 +11211,10 @@ character_event = {
 						OR = {
 							AND = {
 								is_female = no
-								NOT = { has_character_flag = keep_male }
+								NOR = { 
+									has_character_flag = historical_character 
+									has_character_flag = keep_male 
+								}
 							}
 							NOT = { has_law = true_cognatic_succession }
 						}
@@ -11185,7 +11234,13 @@ character_event = {
 							primary_title = { title = d_nancy_harts }
 						}
 						OR = {
-							is_female = no
+							AND = {
+								is_female = no
+								NOR = { 
+									has_character_flag = historical_character 
+									has_character_flag = keep_male 
+								}
+							}
 							NOT = { has_law = enatic_succession }
 						}
 					}
@@ -11195,7 +11250,10 @@ character_event = {
 						OR = {
 							AND = {
 								is_female = no
-								NOT = { has_character_flag = keep_male }
+								NOR = { 
+									has_character_flag = historical_character 
+									has_character_flag = keep_male 
+								}
 							}
 							NOT = { has_law = true_cognatic_succession }
 						}

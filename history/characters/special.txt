@@ -56,6 +56,7 @@
 	trait=zealous
 	2071.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2167.1.1={
 		death=yes
@@ -68,6 +69,7 @@
 	religion=catholic
 	2101.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2167.1.1={
 		name="Redeemed"
@@ -83,6 +85,7 @@
 	religion=catholic
 	2121.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2174.1.1={
 		name="Hallelujah"
@@ -98,6 +101,7 @@
 	religion="pagan"
 	2139.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2155.1.1={
 		religion=catholic
@@ -117,6 +121,7 @@
 	religion=catholic
 	2157.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2202.1.1={
 		name="Righteous"
@@ -132,6 +137,7 @@
 	religion=catholic
 	2155.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2222.2.2={
 		name="Redeemed"
@@ -147,6 +153,7 @@
 	religion=catholic
 	2182.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2225.1.1={
 		name="Blessed-Be"
@@ -162,6 +169,7 @@
 	religion=catholic
 	2197.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2263.1.1={
 		name="Hallelujah"
@@ -177,6 +185,7 @@
 	religion=catholic
 	2210.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2269.1.1={
 		name="Redeemed"
@@ -192,6 +201,7 @@
 	religion=catholic
 	2233.4.4={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2280.1.1={
 		name="Barnabas"
@@ -209,6 +219,7 @@
 	religion=catholic
 	2258.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2301.9.1={
 		give_nickname=nick_the_maid
@@ -227,6 +238,7 @@
 	religion=catholic
 	2262.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2303.1.1={
 		name="Barnabas"
@@ -242,6 +254,7 @@
 	religion="occultist"
 	2278.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2294.1.1={
 		religion=catholic
@@ -260,6 +273,7 @@
 	religion=catholic
 	2288.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2347.1.1={
 		name="Orsen"
@@ -275,6 +289,7 @@
 	religion=catholic
 	2307.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2366.1.1={
 		name="David"
@@ -293,6 +308,7 @@
 	religion=catholic
 	2323.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2377.1.1={
 		name="Barnabas"
@@ -308,6 +324,7 @@
 	religion=evangelical
 	2350.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2395.12.27 = { # 795 Pope Leo III elected
 		religion=catholic
@@ -326,6 +343,7 @@
 	religion=catholic
 	2361.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2416.6.12 = {
 		name="Manasses"
@@ -341,6 +359,7 @@
 	religion=catholic
 	2376.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2427.8.27 = {
 		name="Fear-Not"
@@ -356,6 +375,7 @@
 	religion=catholic
 	2380.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2444.1.11 = {
 		name="Praise-God"
@@ -371,6 +391,7 @@
 	religion=catholic
 	2390.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2447.1.24 = {
 		name="Humble"
@@ -387,6 +408,7 @@
 	trait=humble
 	2408.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2458.4.17 = {
 		name="David"
@@ -402,6 +424,7 @@
 	religion=catholic
 	2421.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2472.12.14 = {
 		name="Advent"
@@ -417,6 +440,7 @@
 	religion=catholic
 	2431.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2485.9.1 = {
 		name="What-God-Will"
@@ -433,6 +457,7 @@
 	trait=proud
 	2444.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2497.12.1 = {
 		name="Humble"
@@ -448,6 +473,7 @@
 	religion=catholic
 	2458.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2511.4.14 = {
 		name="Redeemed"
@@ -464,6 +490,7 @@
 	trait=zealous
 	2482.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 		culture=riverlander
 	}
 	2528.5.1 = {
@@ -480,6 +507,7 @@
 	religion=catholic
 	2489.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2546.5.1 = {
 		name="Hallelujah"
@@ -495,6 +523,7 @@
 	religion=catholic
 	2501.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2555.12.16 = {
 		name="What-God-Will"
@@ -510,6 +539,7 @@
 	religion=catholic
 	2500.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2564.4.14 = {
 		name="Deliverance"
@@ -525,6 +555,7 @@
 	religion=catholic
 	2504.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2565.3.1 = {
 		name="Deliverance"
@@ -540,6 +571,7 @@
 	religion=catholic
 	2518.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2572.9.6 = {
 		name="God-Is-Salvation"
@@ -555,6 +587,7 @@
 	religion=catholic
 	2529.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2583.7.10 = {
 		name="God-Is-Gracious"
@@ -570,6 +603,7 @@
 	religion=catholic
 	2540.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2596.5.3 = {
 		name="Solomon"
@@ -585,6 +619,7 @@
 	religion=catholic
 	2561.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2609.7.1 = {
 		name="Humble"
@@ -600,6 +635,7 @@
 	religion=catholic
 	2569.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2624.8.9 = {
 		name="Zealot"
@@ -615,6 +651,7 @@
 	religion=catholic
 	2579.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2632.10.1 = {
 		name="Pilate"
@@ -633,6 +670,7 @@
 	mother = 1967097
 	2587.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2645.5.1 = {
 		name="David"
@@ -648,6 +686,7 @@
 	religion=catholic
 	2601.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2654.4.19 = {
 		name="Pilate"
@@ -663,6 +702,7 @@
 	religion=catholic
 	2604.1.1 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2659.1.24 = {
 		name="Redeemed"
@@ -678,7 +718,8 @@
 	dynasty=1777012 # Heerestraat
 	culture=gothamite
 	religion=americanist
-	2583.10.9={birth=yes}
+	2583.10.9={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2628.6.21 = {
 		add_trait=president
 		give_nickname=nick_lastname
@@ -703,7 +744,8 @@
 	trait=proud
 	trait=brave
 	trait=homosexual
-	2311.7.7={birth=yes}
+	2311.7.7={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2344.10.12 = {
 		add_trait=president
 		give_nickname=nick_lastname
@@ -721,7 +763,8 @@
 	dynasty=1889009 # Pitchstone
 	culture=mountainer
 	religion=americanist
-	2321.1.9={birth=yes}
+	2321.1.9={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2378.7.7 = {
 		add_trait=president
 		give_nickname=nick_lastname
@@ -733,7 +776,8 @@
 	dynasty=1789000 # Avondale
 	culture=chicagoan
 	religion=americanist
-	2352.4.19={birth=yes}
+	2352.4.19={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2389.10.2 = {
 		add_trait=president
 		give_nickname=nick_lastname
@@ -747,7 +791,8 @@
 	culture=mountainer
 	religion=americanist
 	father=666102
-	2365.8.25={birth=yes}
+	2365.8.25={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2420.4.5 = {
 		add_trait=president
 		give_nickname=nick_lastname
@@ -759,7 +804,8 @@
 	dynasty=1814032 # Kelleher
 	culture=texan
 	religion=americanist
-	2411.12.5={birth=yes}
+	2411.12.5={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2453.8.8 = {
 		add_trait=president
 		give_nickname=nick_lastname
@@ -779,6 +825,7 @@
 	religion=americanist
 	2443.11.14 = {
 	    birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2485.7.4 = {
 		add_trait = president
@@ -800,7 +847,8 @@
 	dynasty=1782005 # Dandridge
 	culture=southron
 	religion=americanist
-	2462.2.1={birth=yes}
+	2462.2.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2501.8.13 = {
 		add_trait=president
 		give_nickname=nick_lastname
@@ -813,7 +861,8 @@
 	culture=chicagoan
 	religion=americanist
 	mother=1967090
-	2477.5.10={birth=yes}
+	2477.5.10={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2513.5.16 = {
 		add_trait=president
 		give_nickname=nick_lastname
@@ -826,7 +875,8 @@
 	dynasty=1792003 # Tensaw
 	culture=gulfard
 	religion=americanist
-	2501.11.11={birth=yes}
+	2501.11.11={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2537.7.19 = {
 		add_trait=president
 		give_nickname=nick_lastname
@@ -839,7 +889,8 @@
 	dynasty=1776015 # Stratton
 	culture=hudsonian
 	religion=americanist
-	2522.1.21={birth=yes}
+	2522.1.21={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2561.11.11 = {
 		add_trait=president
 		give_nickname=nick_lastname
@@ -853,7 +904,8 @@
 	dynasty=1778000 # Calvert
 	culture=delawarean
 	religion=americanist
-	2544.9.9={birth=yes}
+	2544.9.9={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2580.6.3 = {
 		add_trait=president
 		give_nickname=nick_lastname
@@ -867,7 +919,8 @@
 	culture=chicagoan
 	religion=americanist
 	father=1967092
-	2581.1.17={birth=yes}
+	2581.1.17={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2619.4.12 = {
 		add_trait=president
 		give_nickname=nick_lastname
@@ -893,7 +946,8 @@
 	trait=ambitious
 	trait=zealous
 	trait=proud
-	1893.8.30={birth=yes}
+	1893.8.30={birth=yes
+		effect = { set_character_flag = historical_character }}
 	1928.5.21={give_nickname=nick_the_kingfish}
 	1935.8.10={
 		death={
@@ -909,6 +963,7 @@
 	religion=ursuline
 	2259.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2304.1.1={
 		name="Josephine"
@@ -925,6 +980,7 @@
 	religion=ursuline
 	2266.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2315.8.11={
 		name="Ursule"
@@ -941,6 +997,7 @@
 	religion=ursuline
 	2286.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2330.1.22={
 		name="Madeleine"
@@ -957,6 +1014,7 @@
 	religion=ursuline
 	2303.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2354.1.1={
 		name="Honoria"
@@ -973,6 +1031,7 @@
 	religion=ursuline
 	2323.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2369.1.2={
 		name="Constantia"
@@ -989,6 +1048,7 @@
 	religion=ursuline
 	2320.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2380.2.7={
 		name="Jeanne"
@@ -1005,6 +1065,7 @@
 	religion=ursuline
 	2339.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2384.12.25={
 		name="Jeanne"
@@ -1021,6 +1082,7 @@
 	religion=ursuline
 	2347.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2406.2.18={
 		name="Maria"
@@ -1037,6 +1099,7 @@
 	religion=ursuline
 	2362.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2415.4.1={
 		name="Regina"
@@ -1053,6 +1116,7 @@
 	religion=ursuline
 	2371.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2421.1.1={
 		name="Sofia"
@@ -1069,6 +1133,7 @@
 	religion=ursuline
 	2382.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2437.1.21={
 		name="Sofia"
@@ -1085,6 +1150,7 @@
 	religion=ursuline
 	2395.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2443.3.4={
 		name="Severina"
@@ -1101,6 +1167,7 @@
 	religion=ursuline
 	2404.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2458.12.25={
 		name="Louise"
@@ -1117,6 +1184,7 @@
 	religion=ursuline
 	2418.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2466.11.23={
 		name="Honoria"
@@ -1133,6 +1201,7 @@
 	religion=ursuline
 	2422.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2477.10.23={
 		name="Marguerite"
@@ -1149,6 +1218,7 @@
 	religion=ursuline
 	2428.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2486.12.1={
 		name="Jeanne"
@@ -1165,6 +1235,7 @@
 	religion=ursuline
 	2438.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2493.5.18={
 		name="Francisca"
@@ -1181,6 +1252,7 @@
 	religion=ursuline
 	2443.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2501.2.12={
 		name="Louise"
@@ -1197,6 +1269,7 @@
 	religion=ursuline
 	2458.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2512.5.15={
 		name="Constantia"
@@ -1213,6 +1286,7 @@
 	religion=ursuline
 	2467.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2525.1.1={
 		name="Sofia"
@@ -1229,6 +1303,7 @@
 	religion=ursuline
 	2486.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2533.2.2={
 		name="Sofia"
@@ -1245,6 +1320,7 @@
 	religion=ursuline
 	2502.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2556.2.27={
 		name="Alexandra"
@@ -1261,6 +1337,7 @@
 	religion=ursuline
 	2516.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2570.2.5={
 		name="Justina"
@@ -1277,6 +1354,7 @@
 	religion=ursuline
 	2531.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2579.1.1={
 		name="Justina"
@@ -1293,6 +1371,7 @@
 	religion=ursuline
 	2536.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2596.1.1={
 		name="Laurentine"
@@ -1309,6 +1388,7 @@
 	religion=ursuline
 	2555.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2600.1.1={
 		name="Josephine"
@@ -1325,6 +1405,7 @@
 	religion=ursuline
 	2562.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2619.7.1={
 		name="Justina"
@@ -1341,6 +1422,7 @@
 	religion=ursuline
 	2575.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2625.1.1={
 		name="Helene"
@@ -1357,6 +1439,7 @@
 	religion=ursuline
 	2595.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2643.1.1={
 		name="Bella"
@@ -1373,6 +1456,7 @@
 	religion=ursuline
 	2599.1.1={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2658.11.2={
 		name="Angèle"
@@ -1389,7 +1473,8 @@
 	religion = americanist
 	father = 666106
 	2485.7.4 = {
-	    birth = yes
+	    birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2551.8.15 = {
 		death=yes
@@ -1403,7 +1488,8 @@
 	religion = americanist
 	father = 666145
 	2531.7.4 = {
-	    birth = yes
+	    birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2601.11.15 = {
 		death=yes
@@ -1417,7 +1503,8 @@
 	religion = americanist
 	father = 666146
 	2581.7.4 = {
-	    birth = yes
+	    birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2645.6.21 = {
 		death=yes

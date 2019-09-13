@@ -11,7 +11,8 @@
 	learning=6
 	trait=envious
 	trait=detached_priest
-	2621.1.1={birth=yes}
+	2621.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2681.1.1={death=yes}
 }
 
@@ -33,6 +34,7 @@
 	trait = charismatic_negotiator
 	2625.2.4 = {
 	    birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 }
 
@@ -51,6 +53,7 @@
 	trait=temperate
 	trait=indulgent_wastrel
 	2629.1.1={birth=yes
+		effect = { set_character_flag = historical_character }
 		culture=creole}
 	2700.1.1={death=yes}
 }
@@ -67,7 +70,8 @@
 	religion=voodoo
 	trait=deceitful
 	trait=misguided_warrior
-	2633.3.3={birth=yes}
+	2633.3.3={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2700.1.1={death=yes}
 }
 
@@ -91,6 +95,7 @@
 	give_nickname = nick_the_navigator
 	2630.1.1 = {
 	    birth=yes
+		effect = { set_character_flag = historical_character }
 		wealth = 250
 	}
 	2648.4.2 = {
@@ -108,6 +113,7 @@
 	trait=craven
 	trait="scholarly_theologian"
 	2630.1.1={birth=yes
+		effect = { set_character_flag = historical_character }
 		culture=creole}
 	2700.1.1={death=yes}
 }
@@ -126,7 +132,8 @@
 	trait=grey_eminence
 	trait=craven
 	trait=ambitious
-	2617.1.1={birth=yes}
+	2617.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2636.3.29={add_spouse=1803011}
 	2673.9.13={death=yes}
 }
@@ -149,7 +156,8 @@
 	trait=ambitious
 	trait=just
 	trait=brave
-	2620.1.2={birth=yes}
+	2620.1.2={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2636.3.29={add_spouse=1803010}
 	2703.4.30={death=yes}
 }
@@ -171,7 +179,8 @@
 	trait=content
 	father=1803010
 	mother=1803011
-	2638.5.13={birth=yes}
+	2638.5.13={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2688.7.2={death=yes}
 }
 
@@ -194,7 +203,8 @@
 	trait=ill
 	father=1803010
 	mother=1803011
-	2639.11.9={birth=yes}
+	2639.11.9={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2686.12.1={death=yes}
 }
 
@@ -215,7 +225,8 @@
 	trait=ambitious
 	father=1803010
 	mother=1803011
-	2641.8.21={birth=yes}
+	2641.8.21={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2686.2.14={death=yes}
 }
 
@@ -234,7 +245,8 @@
 	trait=lustful
 	father=1803010
 	mother=1803011
-	2647.10.19={birth=yes}
+	2647.10.19={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2665.1.1={add_spouse=3000038}
 	2685.5.8={death=yes}
 }
@@ -256,7 +268,8 @@
 	trait=gregarious
 	father=1803010
 	mother=1803011
-	2652.3.7={birth=yes}
+	2652.3.7={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2696.4.4={death=yes}
 }
 
@@ -279,7 +292,8 @@
 	trait=stressed
 	father=1803010
 	mother=1803011
-	2658.1.5={birth=yes}
+	2658.1.5={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2718.5.10={death=yes}
 }
 
@@ -297,7 +311,8 @@
 	trait=charismatic_negotiator
 	trait=humble
 	trait=cruel
-	2610.1.1={birth=yes}
+	2610.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2634.11.19={add_spouse=1803021}
 	2655.11.21={death=yes}
 }
@@ -320,7 +335,8 @@
 	trait=humble
 	trait=paranoid
 	trait=shy
-	2614.9.19={birth=yes}
+	2614.9.19={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2634.11.19={add_spouse=1803020}
 	2656.5.6={death=yes}
 }
@@ -344,7 +360,8 @@
 	trait=arbitrary
 	father=1803020
 	mother=1803021
-	2640.7.19={birth=yes}
+	2640.7.19={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2662.5.18={
 		effect = {
 			set_character_flag = recieved_royal_marriage_aid_duty
@@ -374,7 +391,8 @@
 	trait=arbitrary
 	trait=envious
 	trait=zealous
-	2645.3.29={birth=yes}
+	2645.3.29={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2662.5.18={add_spouse=1803022}
 	2717.6.26={death=yes}
 }
@@ -396,7 +414,8 @@
 	trait=shy
 	father=1803020
 	mother=1803021
-	2646.2.4={birth=yes}
+	2646.2.4={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2710.6.7={death=yes}
 }
 
@@ -418,7 +437,8 @@
 	trait=honest
 	father=1803020
 	mother=1803021
-	2648.6.10={birth=yes}
+	2648.6.10={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2710.9.6={death=yes}
 }
 
@@ -441,7 +461,8 @@
 	trait=gregarious
 	father=1803020
 	mother=1803021
-	2649.5.3={birth=yes}
+	2649.5.3={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2672.6.13={add_spouse=1803027}
 	2692.12.25={death=yes}
 }
@@ -461,7 +482,8 @@
 	trait=celibate
 	trait=cruel
 	trait=gregarious
-	2652.2.28={birth=yes}
+	2652.2.28={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2672.6.13={add_spouse=1803026}
 	2721.12.20={death=yes}
 }
@@ -484,7 +506,8 @@
 	trait=patient
 	father=1803027
 	mother=1803026
-	2676.1.20={birth=yes}
+	2676.1.20={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2755.5.4={death=yes}
 }
 
@@ -507,7 +530,8 @@
 	trait=diligent
 	father=1803020
 	mother=1803021
-	2650.4.18={birth=yes}
+	2650.4.18={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2707.1.2={death=yes}
 }
 
@@ -528,7 +552,8 @@
 	trait=diligent
 	trait=temperate
 	trait=zealous
-	2559.3.3={birth=yes}
+	2559.3.3={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2578.8.15={add_spouse=1803031}
 	2598.4.15 = { 
 	    give_nickname=nick_the_conqueror 
@@ -554,7 +579,8 @@
 	learning=7
 	trait=midas_touched
 	trait=shy
-	2561.9.21={birth=yes}
+	2561.9.21={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2578.8.15={add_spouse=1803030}
 	2609.1.30={death=yes}
 }
@@ -577,7 +603,8 @@
 	trait=brave
 	father=1803030
 	mother=1803031
-	2580.2.12={birth=yes}
+	2580.2.12={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2600.1.10={add_spouse=1803038}
 	2620.1.1={ give_nickname=nick_the_great }
 	2627.4.17={death=yes}
@@ -601,7 +628,8 @@
 	trait=ill
 	father=1803030
 	mother=1803031
-	2584.11.24={birth=yes}
+	2584.11.24={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2608.9.18={add_spouse=1803039}
 	2660.6.10={death=yes}
 }
@@ -622,7 +650,8 @@
 	trait=duelist
 	father=1803030
 	mother=1803031
-	2585.12.26={birth=yes}
+	2585.12.26={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2607.2.19={add_spouse=1803040}
 	2650.2.7={death=yes}
 }
@@ -645,7 +674,8 @@
 	trait=zealous
 	father=1803030
 	mother=1803031
-	2589.10.23={birth=yes}
+	2589.10.23={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2607.4.21={add_spouse=1803041}
 	2654.5.12={death=yes}
 }
@@ -667,7 +697,8 @@
 	trait=cruel
 	father=1803030
 	mother=1803031
-	2591.7.23={birth=yes}
+	2591.7.23={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2610.12.11={add_spouse=1803042}
 	2639.7.12={death=yes}
 }
@@ -688,7 +719,8 @@
 	trait=gluttonous
 	father=1803030
 	mother=1803031
-	2594.11.15={birth=yes}
+	2594.11.15={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2615.5.13={add_spouse=1803043}
 	2633.7.22={death=yes}
 }
@@ -708,7 +740,8 @@
 	trait=fortune_builder
 	trait=temperate
 	trait=honest
-	2582.4.24={birth=yes}
+	2582.4.24={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2600.1.10={add_spouse=1803032}
 	2656.1.30={death=yes}
 }
@@ -728,7 +761,8 @@
 	trait=intricate_webweaver
 	trait=gardener
 	trait=deceitful
-	2588.7.20={birth=yes}
+	2588.7.20={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2608.9.18={add_spouse=1803033}
 	2644.12.14={death=yes}
 }
@@ -749,7 +783,8 @@
 	trait=arbitrary
 	trait=patient
 	trait=charitable
-	2587.11.19={birth=yes}
+	2587.11.19={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2607.2.19={add_spouse=1803034}
 	2638.9.21={death=yes}
 }
@@ -769,6 +804,7 @@
 	trait=proud
 	2589.12.10={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 		culture=cajun
 	}
 	2607.4.21={add_spouse=1803035}
@@ -792,7 +828,8 @@
 	trait=charitable
 	trait=trusting
 	trait=chaste
-	2592.5.19={birth=yes}
+	2592.5.19={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2610.12.11={add_spouse=1803036}
 	2643.5.25={death=yes}
 }
@@ -812,7 +849,8 @@
 	trait=slothful
 	trait=cynical
 	trait=paranoid
-	2596.7.27={birth=yes}
+	2596.7.27={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2615.5.13={add_spouse=1803037}
 	2671.10.14={death=yes}
 }
@@ -834,7 +872,8 @@
 	trait=shy
 	father=1803043
 	mother=1803037
-	2621.2.19={birth=yes}
+	2621.2.19={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2658.2.9={death=yes}
 }
 
@@ -854,7 +893,8 @@
 	trait=cruel
 	father=1803043
 	mother=1803037
-	2624.2.12={birth=yes}
+	2624.2.12={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2678.4.21={death=yes}
 }
 
@@ -877,7 +917,8 @@
 	trait=diligent
 	father=1803043
 	mother=1803037
-	2627.3.16={birth=yes}
+	2627.3.16={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2677.7.7={death=yes}
 }
 
@@ -897,7 +938,8 @@
 	trait=greedy
 	father=1803036
 	mother=1803042
-	2615.1.19={birth=yes}
+	2615.1.19={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2653.5.27={death=yes}
 }
 
@@ -921,7 +963,8 @@
 	trait=just
 	father=1803036
 	mother=1803042
-	2619.2.27={birth=yes}
+	2619.2.27={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2664.1.15={death=yes}
 }
 
@@ -943,7 +986,8 @@
 	trait=slothful
 	father=1803036
 	mother=1803042
-	2621.2.4={birth=yes}
+	2621.2.4={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2679.7.2={death=yes}
 }
 
@@ -967,6 +1011,7 @@
 	father=1803041
 	mother=1803035
 	2611.5.9={birth=yes
+		effect = { set_character_flag = historical_character }
 		culture=cajun
 		add_claim=k_louisiana
 	}
@@ -1003,6 +1048,7 @@
 	father=1803041
 	mother=1803035
 	2609.7.15={birth=yes
+		effect = { set_character_flag = historical_character }
 		culture=cajun
 	}
 	2666.3.3={death=yes}
@@ -1029,6 +1075,7 @@
 	mother=1803035
 	2611.7.11={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 		culture=cajun
 	}
 	2661.9.19={death=yes}
@@ -1050,7 +1097,8 @@
 	trait=cynical
 	father=1803040
 	mother=1803034
-	2609.4.26={birth=yes}
+	2609.4.26={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2632.6.23={add_spouse=1803070}
 	2648.4.2={
 		death={
@@ -1079,7 +1127,8 @@
 	trait=temperate
 	father=1803040
 	mother=1803034
-	2615.2.5={birth=yes}
+	2615.2.5={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2677.5.15={death=yes}
 }
 
@@ -1099,7 +1148,8 @@
 	trait=impaler
 	father=1803033
 	mother=1803039
-	2610.7.13={birth=yes}
+	2610.7.13={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2657.1.22={death=yes}
 }
 
@@ -1121,7 +1171,8 @@
 	trait=envious
 	father=1803033
 	mother=1803039
-	2615.2.24={birth=yes}
+	2615.2.24={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2669.3.15={death=yes}
 }
 
@@ -1139,7 +1190,8 @@
 	trait=underhanded_rogue
 	father=1803032
 	mother=1803038
-	2602.12.8={birth=yes}
+	2602.12.8={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2623.5.7={add_spouse=1803059}
 	2650.1.1={ give_nickname=nick_the_terrible }
 	2652.5.1={death=yes}
@@ -1163,7 +1215,8 @@
 	trait=arbitrary
 	father=1803032
 	mother=1803038
-	2606.10.7={birth=yes}
+	2606.10.7={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2683.2.8={death=yes}
 }
 
@@ -1184,7 +1237,8 @@
 	trait=shy
 	trait=cruel
 	trait=depressed
-	2603.5.2={birth=yes}
+	2603.5.2={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2623.5.7={add_spouse=1803057}
 	2664.2.10={death=yes}
 }
@@ -1208,7 +1262,8 @@
 	trait=brave
 	father=1803057
 	mother=1803059
-	2624.11.29={birth=yes}
+	2624.11.29={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2646.10.31={add_spouse=1803063}
 	2650.1.1={
 		give_nickname=nick_the_good
@@ -1236,7 +1291,8 @@
 	trait=deceitful
 	father=1803057
 	mother=1803059
-	2626.5.30={birth=yes}
+	2626.5.30={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2648.7.17={
 		effect = {
 			set_character_flag = recieved_royal_marriage_aid_duty
@@ -1276,6 +1332,7 @@
 	mother = 1803059
 	2638.8.24 = {
 	    birth=yes
+		effect = { set_character_flag = historical_character }
 		give_nickname = nick_the_magnificent
 	}
 }
@@ -1295,7 +1352,8 @@
 	trait=flamboyant_schemer
 	trait=craven
 	trait=chaste
-	2629.9.13={birth=yes}
+	2629.9.13={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2646.10.31={add_spouse=1803060}
 	2670.2.15={death=yes}
 }
@@ -1315,7 +1373,8 @@
 	trait=cruel
 	father=1803060
 	mother=1803063
-	2648.3.27={birth=yes}
+	2648.3.27={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2721.2.22={death=yes}
 }
 
@@ -1337,7 +1396,8 @@
 	trait=greedy
 	father=1803060
 	mother=1803063
-	2652.3.26={birth=yes}
+	2652.3.26={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2712.10.22={death=yes}
 }
 
@@ -1357,7 +1417,8 @@
 	trait=lustful
 	father=1803060
 	mother=1803063
-	2655.12.6={birth=yes}
+	2655.12.6={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2711.4.23={death=yes}
 }
 
@@ -1376,7 +1437,8 @@
 	trait=ambitious
 	trait=brave
 	trait=zealous
-	2612.4.8={birth=yes}
+	2612.4.8={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2629.7.31={add_spouse=1803050}
 	2662.11.8={death=yes}
 }
@@ -1397,6 +1459,7 @@
 	father=1803067
 	mother=1803050
 	2631.4.24={birth=yes
+		effect = { set_character_flag = historical_character }
 		culture=cajun
 	}
 	2655.4.4={ add_spouse=1803071 }
@@ -1419,6 +1482,7 @@
 	father=1803067
 	mother=1803050
 	2634.11.7={birth=yes
+		effect = { set_character_flag = historical_character }
 		culture=creole
 	}
 	2682.3.11={death=yes}
@@ -1439,7 +1503,8 @@
 	trait=misguided_warrior
 	trait=content
 	trait=patient
-	2614.6.8={birth=yes}
+	2614.6.8={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2632.6.23={add_spouse=1803053}
 	2671.11.28={death=yes}
 }
@@ -1460,7 +1525,8 @@
 	trait=scholar
 	father=1803053
 	mother=1803070
-	2634.5.28={birth=yes}
+	2634.5.28={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2655.4.4={ add_spouse=1803068 }
 	2670.2.14={death=yes}
 }
@@ -1485,6 +1551,7 @@
 	mother = 1803070
 	2639.4.12 = {
 	    birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2648.4.2 = {
 	    effect = {
@@ -1508,7 +1575,8 @@
 	trait=cruel
 	trait=chaste
 	trait=cynical
-	2628.10.7={birth=yes}
+	2628.10.7={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2648.7.17={add_spouse=1803061}
 	2686.10.25={death=yes}
 }
@@ -1530,7 +1598,8 @@
 	trait=lustful
 	father=1803073
 	mother=1803061
-	2652.6.19={birth=yes}
+	2652.6.19={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2721.10.6={death=yes}
 }
 
@@ -1549,7 +1618,8 @@
 	trait=deceitful
 	trait=cynical
 	trait=slothful
-	2648.11.29={birth=yes}
+	2648.11.29={birth=yes
+		effect = { set_character_flag = historical_character }}
 }
 
 1803076 = { #Count of Cypress
@@ -1566,7 +1636,8 @@
 	trait=charitable
 	trait=brave
 	trait=slothful
-	2638.1.6={birth=yes}
+	2638.1.6={birth=yes
+		effect = { set_character_flag = historical_character }}
 }
 
 1803077 = { #Count of Ruston
@@ -1583,5 +1654,6 @@
 	trait=deceitful
 	trait=zealous
 	trait=envious
-	2629.10.10={birth=yes}
+	2629.10.10={birth=yes
+		effect = { set_character_flag = historical_character }}
 }

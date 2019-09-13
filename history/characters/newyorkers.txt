@@ -15,7 +15,8 @@
 	trait=ambitious
 	trait=cynical
 	trait=thrifty_clerk
-	2631.2.8={birth=yes}
+	2631.2.8={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2649.7.19={add_spouse=1763062}
 	2695.1.1={death=yes}
 }
@@ -34,7 +35,8 @@
 	trait=gregarious
 	trait=cynical
 	trait=grey_eminence
-	2628.1.1={birth=yes}
+	2628.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2695.1.1={death=yes}
 }
 
@@ -45,7 +47,8 @@
 	father=1788005
 	culture=hudsonian
 	religion=anabaptist
-	2602.1.1={birth=yes}
+	2602.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2660.7.4={death=yes}
 }
 
@@ -56,7 +59,8 @@
 	female=yes
 	culture=hudsonian
 	religion=sedevacantist
-	2581.1.1={birth=yes}
+	2581.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2657.1.1={death=yes}
 }
 
@@ -65,7 +69,8 @@
 	dynasty=1776000 # Groot
 	culture=hudsonian
 	religion=anabaptist
-	2575.1.1={birth=yes}
+	2575.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2597.1.1={add_spouse=1788004}
 	2624.1.1={death=yes}
 }
@@ -76,7 +81,8 @@
 	father=1788007
 	culture=hudsonian
 	religion=sedevacantist
-	2555.1.1={birth=yes}
+	2555.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2609.1.1={death=yes}
 }
 
@@ -86,7 +92,8 @@
 	father=1788008
 	culture=hudsonian
 	religion=sedevacantist
-	2528.1.1={birth=yes}
+	2528.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2569.1.1={death=yes}
 }
 
@@ -96,7 +103,8 @@
 	culture=hudsonian
 	religion=sedevacantist
 	father=1788109
-	2490.1.1={birth=yes}
+	2490.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2552.1.1={death=yes}
 }
 
@@ -113,7 +121,8 @@
 	trait=honest
 	trait=craven
 	trait=naive_appeaser
-	2619.1.1={birth=yes}
+	2619.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2700.1.1={death=yes}
 }
 
@@ -130,7 +139,8 @@
 	trait=craven
 	trait=envious
 	trait=flamboyant_schemer
-	2624.1.1={birth=yes}
+	2624.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2647.10.2={add_spouse=1899013}
 	2695.1.1={death=yes}
 }
@@ -147,7 +157,8 @@
 	trait=wroth
 	trait=kind
 	trait=tough_soldier
-	2615.1.1={birth=yes}
+	2615.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2700.1.1={death=yes}
 }
 
@@ -165,6 +176,7 @@
 	trait=kind
 	trait=tough_soldier
 	2622.1.1={birth=yes
+		effect = { set_character_flag = historical_character }
 		culture=gothamite}
 	2700.1.1={death=yes}
 }
@@ -188,6 +200,7 @@
 	trait=kind
 	2642.3.15={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 		effect={set_character_flag=no_historical_family}
 	}
 }
@@ -209,7 +222,8 @@
 	trait=brave
 	trait=kind
 	trait=humble
-	2644.11.5={birth=yes}
+	2644.11.5={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2664.4.4={
 		give_nickname = nick_the_liberator
 		prestige = 250
@@ -244,7 +258,8 @@
 	learning=3
 	culture=gothamite
 	religion=americanist
-	2629.11.23={birth=yes}
+	2629.11.23={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2700.1.1={death=yes}
 }
 
@@ -258,7 +273,8 @@
 	learning=1
 	culture=hudsonian
 	religion=anabaptist
-	2633.12.4={birth=yes}
+	2633.12.4={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2700.1.1={death=yes}
 }
 
@@ -275,6 +291,7 @@
 	religion=anabaptist
 	2642.3.8={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 		effect = { set_character_flag = no_historical_family }
 	}
 	2700.1.1={death=yes}
@@ -290,7 +307,8 @@
 	learning=3
 	culture=hudsonian
 	religion=anabaptist
-	2639.7.29={birth=yes}
+	2639.7.29={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2700.1.1={death=yes}
 }
 
@@ -306,6 +324,7 @@
 	religion=postadventist
 	2640.3.30={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 		effect = { set_character_flag = no_historical_family }
 	}
 	2700.1.1={death=yes}
@@ -321,7 +340,8 @@
 	learning=7
 	culture=hudsonian
 	religion=anabaptist
-	2633.10.24={birth=yes}
+	2633.10.24={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2700.1.1={death=yes}
 }
 
@@ -335,7 +355,8 @@
 	learning=4
 	culture=hudsonian
 	religion=ursuline
-	2625.4.7={birth=yes}
+	2625.4.7={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2646.5.5={add_spouse=1899012 }
 	2700.1.1={death=yes}
 }
@@ -354,6 +375,7 @@
 	trait=charitable
 	trait="martial_cleric"
 	2625.1.1={birth=yes
+		effect = { set_character_flag = historical_character }
 		culture=gothamite}
 	2647.1.1={
 		add_spouse=1788023
@@ -377,6 +399,7 @@
 	trait=gregarious
 	trait=underhanded_rogue
 	2626.1.1={birth=yes
+		effect = { set_character_flag = historical_character }
 		culture=gothamite}
 	2695.1.1={death=yes}
 }
@@ -394,7 +417,8 @@
 	religion=hamiltonian
 	father=1788022
 	mother=1788023
-	2653.1.1={birth=yes}
+	2653.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2655.1.1={
 		effect = {
 			set_character_flag = is_person_of_interest_son
@@ -416,7 +440,8 @@
 	trait=deceitful
 	trait=diligent
 	trait=intricate_webweaver
-	2622.1.1={birth=yes}
+	2622.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2695.1.1={death=yes}
 }
 
@@ -436,7 +461,8 @@
 	trait=deceitful
 	trait=paranoid
 	trait=grey_eminence
-	2624.1.1={birth=yes}
+	2624.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2654.5.5={add_spouse=1788026}
 	2654.5.6={
 		create_bloodline = {
@@ -464,7 +490,8 @@
 	trait=arbitrary
 	trait=stubborn
 	trait=intricate_webweaver
-	2638.1.1={birth=yes}
+	2638.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2654.5.5={add_spouse=1788025}
 	2695.1.1={death=yes}
 }
@@ -485,7 +512,8 @@
 	trait=gluttonous
 	trait=ambitious
 	trait=proud
-	2603.1.1={birth=yes}
+	2603.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2623.5.5={add_spouse=1788028}
 	2662.8.20={death=yes}
 }
@@ -507,7 +535,8 @@
 	trait=envious
 	trait=content
 	trait=chaste
-	2605.1.17={birth=yes}
+	2605.1.17={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2623.5.5={add_spouse=1788027}
 	2656.8.31={death=yes}
 }
@@ -532,7 +561,8 @@
 	trait=kind
 	father=1788028
 	mother=1788027
-	2628.7.4={birth=yes}
+	2628.7.4={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2646.7.2={add_spouse=1788030}
 	2692.4.20={death=yes}
 }
@@ -553,7 +583,8 @@
 	trait=zealous
 	trait=just
 	trait=gregarious
-	2630.1.9={birth=yes}
+	2630.1.9={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2646.7.2={add_spouse=1788029}
 	2666.11.16={death=yes}
 }
@@ -578,7 +609,8 @@
 	trait=trusting
 	father=1788030
 	mother=1788029
-	2651.12.11={birth=yes}
+	2651.12.11={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2715.12.6={death=yes}
 }
 
@@ -600,7 +632,8 @@
 	trait=wounded
 	father=1788028
 	mother=1788027
-	2634.6.18={birth=yes}
+	2634.6.18={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2691.9.5={death=yes}
 }
 
@@ -622,7 +655,8 @@
 	trait=gregarious
 	father=1788028
 	mother=1788027
-	2635.11.6={birth=yes}
+	2635.11.6={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2692.3.11={death=yes}
 }
 
@@ -643,6 +677,7 @@
 	trait=trusting
 	trait=grey_eminence
 	2624.1.1={birth=yes
+		effect = { set_character_flag = historical_character }
 		culture=gothamite}
 	2695.1.1={death=yes}
 }
@@ -668,7 +703,8 @@
 	trait=just
 	trait=kind
 	father=1788038
-	2644.1.17={birth=yes}
+	2644.1.17={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2663.3.11={effect = {add_lover=1788201}}
 	2663.12.25={add_spouse=1788201}
 	2719.1.1={death=yes}
@@ -691,7 +727,8 @@
 	trait=midas_touched
 	trait=patient
 	trait=just
-	2650.4.19={birth=yes}
+	2650.4.19={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2700.1.1={death=yes}
 }
 
@@ -713,7 +750,8 @@
 	trait=brave
 	trait=proud
 	trait=cruel
-	2585.3.1={birth=yes}
+	2585.3.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2639.12.31={
 		prestige=1000
 		give_nickname=nick_the_bastard
@@ -742,7 +780,8 @@
 	trait=just
 	trait=kind
 	mother=1788206
-	2616.1.17={birth=yes}
+	2616.1.17={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2652.6.11={death=yes}
 }
 
@@ -766,7 +805,8 @@
 	trait=inspiring_leader
 	culture=hudsonian
 	religion=sedevacantist
-	2360.5.12={birth=yes}
+	2360.5.12={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2430.12.25={
 		create_bloodline = {
 			type = rodham
@@ -797,7 +837,8 @@
 	culture=hudsonian
 	religion=sedevacantist
 	father=1788104
-	2385.7.4={birth=yes}
+	2385.7.4={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2444.11.30 = { add_trait=pneumonic }
 	2444.12.26= {
 		death = { death_reason = death_trait }
@@ -825,7 +866,8 @@
 	trait=kind
 	trait=diligent
 	father=1788105
-	2402.2.14={birth=yes}
+	2402.2.14={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2451.1.19={add_trait=ill}
 	2451.5.30= {
 		death = { death_reason = death_trait }
@@ -846,7 +888,8 @@
 	trait=patient
 	trait=brave
 	father=1788106
-	2432.1.22={birth=yes}
+	2432.1.22={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2451.5.30={death=yes}
 }
 
@@ -865,7 +908,8 @@
 	trait=proud
 	trait=diligent
 	father=1788106
-	2441.9.25={birth=yes}
+	2441.9.25={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2479.8.12={death=yes}
 }
 
@@ -883,7 +927,8 @@
 	trait=proud
 	trait=envious
 	mother=1788108
-	2469.11.25={birth=yes}
+	2469.11.25={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2519.8.20={death=yes}
 }
 
@@ -909,7 +954,8 @@
 	trait=charitable
 	trait=organizer
 	trait=unyielding_leader
-	2439.1.31={birth=yes}
+	2439.1.31={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2505.10.26={death=yes}
 }
 
@@ -927,7 +973,8 @@
 	trait=trusting
 	trait=kind
 	trait=just
-	2646.9.19={birth=yes}
+	2646.9.19={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2663.3.11={effect = {add_lover=1788035}}
 	2663.12.25={add_spouse=1788035}
 	2721.8.31={death=yes}
@@ -947,7 +994,8 @@
 	trait=duelist
 	trait=patient
 	father=1788200
-	2473.6.4={birth=yes}
+	2473.6.4={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2536.2.8={death=yes}
 }
 
@@ -964,7 +1012,8 @@
 	trait=skilled_tactician
 	trait=proud
 	father=1788202
-	2501.2.24={birth=yes}
+	2501.2.24={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2555.9.28={death=yes}
 }
 
@@ -982,7 +1031,8 @@
 	trait=fortune_builder
 	trait=envious
 	father=1788203
-	2538.12.5={birth=yes}
+	2538.12.5={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2577.5.18={death=yes}
 }
 
@@ -1000,7 +1050,8 @@
 	trait=fortune_builder
 	trait=diligent
 	mother=1788204
-	2567.3.25={birth=yes}
+	2567.3.25={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2609.1.16={death=yes}
 }
 
@@ -1019,7 +1070,8 @@
 	trait=diligent
 	trait=shy
 	mother=1788205
-	2592.8.12={birth=yes}
+	2592.8.12={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2647.11.19={death=yes}
 }
 
@@ -1038,6 +1090,7 @@
 	trait=charitable
 	trait=tough_soldier
 	2634.5.1={birth=yes
+		effect = { set_character_flag = historical_character }
 		culture=hudsonian}
 	2692.5.1={death=yes}
 }
@@ -1058,7 +1111,8 @@
 	trait=zealous
 	trait=proud
 	trait=kind
-	2630.10.28={birth=yes}
+	2630.10.28={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2648.1.1={add_spouse=1788211}
 }
 
@@ -1068,7 +1122,8 @@
 	culture=yiddish
 	religion=jewish
 	trait=zealous
-	2637.1.13={birth=yes}
+	2637.1.13={birth=yes
+		effect = { set_character_flag = historical_character }}
 }
 
 1788210={
@@ -1093,6 +1148,7 @@
 	trait=erudite
 	trait=humble
 	2648.1.1={birth=yes
+		effect = { set_character_flag = historical_character }
 		effect={
 			set_character_flag=diversity
 			set_character_flag=physique
@@ -1111,7 +1167,8 @@
 	trait=diligent
 	trait=trusting
 	trait=stubborn
-	2631.9.12={birth=yes}
+	2631.9.12={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2648.1.1={add_spouse=1788208}
 }
 
@@ -1127,7 +1184,8 @@
 	trait=stubborn
 	trait=kind
 	trait=content
-	2649.10.21={birth=yes}
+	2649.10.21={birth=yes
+		effect = { set_character_flag = historical_character }}
 }
 
 1788213={
@@ -1142,7 +1200,8 @@
 	trait=stubborn
 	trait=trusting
 	trait=cynical
-	2650.9.15={birth=yes}
+	2650.9.15={birth=yes
+		effect = { set_character_flag = historical_character }}
 }
 
 1788214={
@@ -1155,7 +1214,8 @@
 	religion=jewish
 	trait=sympathy_christendom
 	trait=stubborn
-	2651.8.12={birth=yes}
+	2651.8.12={birth=yes
+		effect = { set_character_flag = historical_character }}
 }
 
 1788215={ #Florell's father
@@ -1172,7 +1232,8 @@
 	trait=greedy
 	trait=diligent
 	trait=ambitious
-	2599.1.1={birth=yes}
+	2599.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2648.1.1={death=yes}
 }
 
@@ -1193,6 +1254,7 @@
 	trait=deceitful
 	trait=gluttonous
 	trait=gregarious
-	2621.1.1={birth=yes}
+	2621.1.1={birth=yes
+		effect = { set_character_flag = historical_character }}
 	2640.2.14={add_spouse=1788037}
 }

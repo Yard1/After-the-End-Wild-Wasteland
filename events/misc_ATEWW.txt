@@ -590,6 +590,12 @@ character_event = {
 	only_men = yes
 	ai = yes
 	trigger = {
+		NOT = { has_character_flag = historical_character }
+		OR = {
+			NOT = { has_global_flag = scenario_initialization }
+			is_landed = no
+			lower_tier_than = DUKE
+		}
 		NOT = { father_even_if_dead = { always = yes } }
 		NOT = { mother_even_if_dead = { always = yes } }
 		NOT = { spouse_even_if_dead = { always = yes } }

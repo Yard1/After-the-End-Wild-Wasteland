@@ -24,6 +24,7 @@
 	give_nickname = nick_stonewall 
 	2636.3.3 ={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 }
 
@@ -52,7 +53,8 @@
 	father = 666112
 	give_nickname = nick_the_accursed
 	2626.4.7 = {
-	    birth = yes
+	    birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2647.7.21 = {
 	    add_spouse = 1967119 
@@ -91,7 +93,8 @@
 	trait = honest
 	trait = sympathy_oldworld
 	2629.5.8 = {
-	    birth = yes
+	    birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2647.7.21 = {
 	    add_spouse = 1967118
@@ -121,7 +124,8 @@
 	father = 1967118
 	mother = 1967119
 	2653.6.21 = {
-	    birth = yes
+	    birth=yes
+		effect = { set_character_flag = historical_character }
 		effect = { 
 		    add_rival = 1967118 
 		}
@@ -146,7 +150,8 @@
 	father = 1967118
 	mother = 1967119
 	2653.6.21 = {
-	    birth = yes
+	    birth=yes
+		effect = { set_character_flag = historical_character }
 		effect = { 
 		    add_rival = 1967118 
 		}
@@ -173,7 +178,8 @@
 	trait = hedonist
 	trait = greedy
 	2631.2.22 = {
-	    birth = yes
+	    birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2662.3.7 = {
 	    add_spouse = 1967124
@@ -198,7 +204,8 @@
 	intrigue = 6
 	learning = 5
 	2644.10.3 = {
-	    birth = yes
+	    birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2664.4.5 = {
 	    add_spouse = 1967122
@@ -217,7 +224,8 @@
 	intrigue = 5
 	learning = 6
 	2642.6.5 = {
-	    birth = yes
+	    birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2664.4.5 = {
 	    add_spouse = 1967122
@@ -236,7 +244,8 @@
 	intrigue = 4
 	learning = 5
 	2648.6.5 = {
-	    birth = yes
+	    birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2664.11.9 = {
 	    add_spouse = 1967122
@@ -264,7 +273,8 @@
 	trait = craven
 	trait = arbitrary
 	2629.11.17 = {
-	    birth = yes
+	    birth=yes
+		effect = { set_character_flag = historical_character }
 		effect = { 
 			set_character_flag=diversity
 			set_character_flag=physique
@@ -291,7 +301,8 @@
 	trait = brave
 	trait = shrewd
 	2611.4.6 = {
-	    birth = yes
+	    birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 }
 
@@ -318,6 +329,7 @@
 	trait = envious
 	2637.3.3 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 	}
 	2637.2.12 = { 
 	    effect = {
@@ -348,6 +360,7 @@
 	trait = celibate
 	2615.7.21 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 		effect = { 
 			set_character_flag=diversity
 			set_character_flag=physique
@@ -386,6 +399,7 @@
 	trait = lustful
 	2615.11.21 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 		effect = { 
 			set_character_flag=diversity
 			set_character_flag=physique
@@ -421,6 +435,7 @@
 	trait = strong
 	2639.11.2 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 		effect = { 
 			set_character_flag=diversity
 			set_character_flag=physique
@@ -451,6 +466,7 @@
 	trait = temperate
 	2642.6.21 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 		effect = { 
 		    add_rival = 1861125
 			set_character_flag=diversity
@@ -480,6 +496,7 @@
 	trait = cruel
 	2639.4.15 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 		effect={
 			set_character_flag=diversity
 			set_character_flag=physique
@@ -513,6 +530,7 @@
 	trait = brave
 	2636.6.4 = {
 		birth=yes
+		effect = { set_character_flag = historical_character }
 		effect={
 			set_character_flag = diversity
 			set_character_flag = physique
@@ -543,6 +561,7 @@
 	trait = greedy
 	2636.3.20={
 		birth=yes
+		effect = { set_character_flag = historical_character }
 		effect={
 			set_character_flag=diversity
 			set_character_flag=physique
