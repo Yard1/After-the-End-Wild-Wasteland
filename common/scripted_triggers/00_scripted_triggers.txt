@@ -1925,7 +1925,6 @@ death_execution_trigger = {
 		death_reason = death_execution_keelhauling
 		death_reason = death_execution_marooning
 		death_reason = death_execution_sharks
-		death_reason = death_execution_macabre_banquet
 	}	
 }
 
@@ -2549,7 +2548,9 @@ ROOTs_religion_is_playable_trigger = { #For targeted decision where FROM is the 
 			}
 		}
 	}
-}ROOTs_secret_religion_is_playable_trigger = { 
+}
+
+ROOTs_secret_religion_is_playable_trigger = { 
 # To block players from getting a game over if they don't own all DLCs
 	hidden_tooltip = {
 		OR = {

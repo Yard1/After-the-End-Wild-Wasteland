@@ -1134,10 +1134,10 @@ character_event = {
 		
 		
 		
-		NOT = { has_character_modifier = expelled_d_knights_of_peter_claver }
+		NOT = { has_character_modifier = expelled_d_knights_hospitaler }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_knights_of_peter_claver
+				has_character_modifier = expelled_d_knights_hospitaler
 			}
 		}
 
@@ -1315,7 +1315,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		d_knights_hospitaler = {
+		d_knights_of_peter_claver = {
 			holder_scope = {
 				save_event_target_as = order_target
 				ROOT = {
@@ -1594,7 +1594,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_knights_of_peter_claver
+				has_character_modifier = expelled_d_knights_hospitaler
 			}
 		}
 		
@@ -1602,7 +1602,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.1154 }
 			}
-			remove_character_modifier = expelled_d_knights_of_peter_claver
+			remove_character_modifier = expelled_d_knights_hospitaler
 		}
 		
 		piety = 200
