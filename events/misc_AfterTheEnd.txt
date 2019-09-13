@@ -11238,6 +11238,7 @@ character_event = {
 					religion_allows_female_temple_holders = yes
 					religion_allows_male_temple_holders = no
 					is_female = no
+					NOT = { has_character_flag = keep_male }
 					NOT = { current_heir = { is_female = yes } } # Preserve investiture if valid
 				}
 				log = "misc.6: [Root.GetBestName] make female"
@@ -11262,7 +11263,7 @@ character_event = {
 					religion_allows_female_temple_holders = no
 					religion_allows_male_temple_holders = yes
 					is_female = yes
-					NOT = { current_heir = { is_male = yes } } # Preserve investiture if valid
+					NOT = { current_heir = { is_female = no } } # Preserve investiture if valid
 				}
 				log = "misc.6: [Root.GetBestName] make male"
 				set_gender = male
@@ -11315,6 +11316,7 @@ character_event = {
 					religion_allows_female_temple_holders = yes
 					religion_allows_male_temple_holders = no
 					is_female = no
+					NOT = { has_character_flag = keep_male }
 				}
 				log = "misc.6: [Root.GetBestName] make female"
 				set_gender = female
@@ -11393,6 +11395,7 @@ character_event = {
 						primary_title = { title = d_nancy_harts }
 					}
 					is_female = no
+					NOT = { has_character_flag = keep_male }
 				}
 				log = "misc.6: [Root.GetBestName] make female"
 				set_gender = female
@@ -11462,6 +11465,7 @@ character_event = {
 				limit = {
 					matriarchal_religion = yes
 					is_female = no
+					NOT = { has_character_flag = keep_male }
 				}
 				log = "misc.6: [Root.GetBestName] make female"
 				set_gender = female

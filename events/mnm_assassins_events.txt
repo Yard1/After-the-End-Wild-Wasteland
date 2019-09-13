@@ -9045,7 +9045,7 @@ character_event = {
 
 	is_triggered_only = yes
 
-	opinion = {		
+	option = {		
 		character_event = { id = miscATEWW.2 }
 	}
 }
@@ -9058,5 +9058,5 @@ character_event = {
 
 	is_triggered_only = yes
 
-	opinion = { FROM = { society_quest_event = { id = MNM_ATEWWW.14 days = 7 random = 7 } } }
+	option = { FROM = { society_quest_event = { id = MNM_ATEWWW.14 days = 7 random = 7 } } }
 }

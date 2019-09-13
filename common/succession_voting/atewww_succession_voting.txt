@@ -1995,7 +1995,7 @@ libertarian_elective = {
 				trait = giant
 			}
 		}
-########################  Raw Opinion bonus towards Candidate   ##########################
+		########################  Raw Opinion bonus towards Candidate   ##########################
 		additive_modifier = {
 			value = -150
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
@@ -2306,10 +2306,6 @@ libertarian_elective = {
 					character = ROOT
 				}
 				is_landless = yes
-				AND = {
-					is_priest = yes
-					NOT = { has_law = investiture_law_1 }
-				}
 			}
 			NOR = {
 				trait = cat
@@ -3679,7 +3675,7 @@ mib_elective = {
 			}
 		}
 
-########################  Raw Opinion bonus towards Candidate   ##########################
+		########################  Raw Opinion bonus towards Candidate   ##########################
 		additive_modifier = {
 			value = -150
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative

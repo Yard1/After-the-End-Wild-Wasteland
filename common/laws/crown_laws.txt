@@ -477,7 +477,7 @@ de_jure_laws = {
 				holder_scope = {
 					NOR = {
 						society_member_of = monastic_order_libertarian
-						has_trait = zealous
+						trait = zealous
 					}
 				}
 			}

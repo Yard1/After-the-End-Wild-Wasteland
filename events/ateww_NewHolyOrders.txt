@@ -2535,7 +2535,7 @@ province_event = {
 
 # Ping event when expelling the United Empire Loyalists
 character_event = {
-	id = NewHolyOrders.29
+	id = NewHolyOrders.55
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -2558,7 +2558,7 @@ character_event = {
 	
 		FROM = {
 			letter_event = {
-				id = NewHolyOrders.55
+				id = NewHolyOrders.56
 			}
 		}
 		
@@ -2571,9 +2571,9 @@ character_event = {
 
 # Notification event when expelling the United Empire Loyalists
 letter_event = {
-	id = NewHolyOrders.55
+	id = NewHolyOrders.56
 	desc = {
-        text = EVTDESC_ATEWWNHO_55
+        text = EVTDESC_ATEWWNHO_56
         trigger = {
 			NOT = {
 				has_alternate_start_parameter = {

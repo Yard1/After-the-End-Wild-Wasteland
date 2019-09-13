@@ -141,67 +141,67 @@ monastic_order_benedictine = {
     		name = stewardship
     		value = 0.5
     	}
-    	has_trait = {
+    	trait = {
 			trait = monk
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = nun
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = celibate
 			value = 3
 		}
-    	has_trait = {
+    	trait = {
 			trait = chaste
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = temperate
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = charitable
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = kind
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = zealous
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = honest
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = erudite
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = pilgrim
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = theologian
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = gardener
 			value = 1
 		}
@@ -431,67 +431,67 @@ monastic_order_dominican = { #actually the Jesuits
     		name = learning
     		value = 0.5
     	}
-    	has_trait = {
+    	trait = {
 			trait = monk
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = nun
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = zealous
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = scholar
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = theologian
 			value = 3
 		}	
-		has_trait = {
+		trait = {
 			trait = celibate
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-    	has_trait = {
+    	trait = {
 			trait = chaste
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = temperate
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = charitable
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = kind
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = honest
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = erudite
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = pilgrim
 			value = 1
 		}
@@ -750,67 +750,67 @@ monastic_order_leibowitz = { #actually St. Leibowitz
     		name = learning
     		value = 0.5
     	}
-    	has_trait = {
+    	trait = {
 			trait = monk
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = nun
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = celibate
 			value = 3
 		}
-    	has_trait = {
+    	trait = {
 			trait = chaste
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = temperate
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = charitable
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = kind
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scholar
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = honest
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = erudite
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = pilgrim
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = theologian
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = gardener
 			value = 1
 		}
@@ -1070,67 +1070,67 @@ monastic_order_evangelical = {
     		name = learning
     		value = 0.5
     	}
-    	has_trait = {
+    	trait = {
 			trait = monk
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = nun
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = scholar
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = theologian
 			value = 3
 		}	
-		has_trait = {
+		trait = {
 			trait = celibate
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-    	has_trait = {
+    	trait = {
 			trait = chaste
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = temperate
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = charitable
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = kind
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = honest
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = erudite
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = pilgrim
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = zealous
 			value = 1
 		}
@@ -1393,67 +1393,67 @@ monastic_order_ursuline = {
     		name = learning
     		value = 0.5
     	}
-    	has_trait = {
+    	trait = {
 			trait = monk
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = nun
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = scholar
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = theologian
 			value = 3
 		}		
-		has_trait = {
+		trait = {
 			trait = celibate
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-    	has_trait = {
+    	trait = {
 			trait = chaste
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = temperate
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = charitable
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = kind
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = honest
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = erudite
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = pilgrim
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = zealous
 			value = 1
 		}
@@ -1720,67 +1720,67 @@ monastic_order_mormon = { #NOTE: treated as a Christian holy order in the code d
     		name = learning
     		value = 0.5
     	}
-    	has_trait = {
+    	trait = {
 			trait = monk
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = nun
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = scholar
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = theologian
 			value = 3
 		}	
-		has_trait = {
+		trait = {
 			trait = celibate
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-    	has_trait = {
+    	trait = {
 			trait = chaste
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = temperate
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = charitable
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = kind
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = honest
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = erudite
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = pilgrim
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = zealous
 			value = 1
 		}
@@ -1932,47 +1932,47 @@ monastic_order_hindu = {
     		name = learning
     		value = 0.5
     	}
-		has_trait = {
+		trait = {
 			trait = content
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = erudite
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = scholar
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = theologian
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = temperate
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = charitable
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = kind
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = honest
 			value = 1
 		}
@@ -2189,67 +2189,67 @@ monastic_order_jewish = {
     		name = learning
     		value = 0.5
     	}
-    	# has_trait = {
+    	# trait = {
 			# trait = monk
 			# value = 5
 		# }
-		# has_trait = {
+		# trait = {
 			# trait = nun
 			# value = 5
 		# }
-		has_trait = {
+		trait = {
 			trait = scholar
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = theologian
 			value = 3
 		}	
-		has_trait = {
+		trait = {
 			trait = shaddai
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-    	has_trait = {
+    	trait = {
 			trait = just
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = temperate
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = charitable
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = kind
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = honest
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = erudite
 			value = 1
 		}
-		# has_trait = {
+		# trait = {
 			# trait = pilgrim
 			# value = 1
 		# }
-		has_trait = {
+		trait = {
 			trait = zealous
 			value = 1
 		}
@@ -2484,51 +2484,51 @@ monastic_order_cetic = {
     		name = learning
     		value = 0.5
     	}
-    	# has_trait = {
+    	# trait = {
 			# trait = brahmin
 			# value = 5
 		# }
-		has_trait = {
+		trait = {
 			trait = content
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = kind
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = temperate
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = charitable
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = chaste
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = celibate
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = honest
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = theologian
 			value = 1
 		}
@@ -2775,43 +2775,43 @@ hermetics = {
     		name = learning
     		value = 0.5
     	}
-		has_trait = {
+		trait = {
 			value = 2
 			trait = diligent
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = scholar
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = mystic
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = erudite
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = stubborn
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = patient
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = genius
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = quick
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = shrewd
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = just
 		}
@@ -3098,43 +3098,43 @@ banking_society = {
     		name = stewardship
     		value = 0.5
     	}
-		has_trait = {
+		trait = {
 			value = 2
 			trait = diligent
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = temperate
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = greedy
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = ambitious
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = stubborn
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = patient
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = genius
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = quick
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = shrewd
 		}
-		has_trait = {
+		trait = {
 			value = 1
 			trait = just
 		}
@@ -3225,11 +3225,15 @@ the_assassins = {
 	
 	active = {
 		has_dlc = "Mystics"
+		is_title_active = d_men_in_black
+		d_men_in_black = {
+			holder_scope = { always = yes }
+		}
 	}
 	indestructible = yes
 
 	can_join_society = {
-		NOT = { has_trait = legendary }
+		NOT = { trait = legendary }
 		hidden_trigger = {
 			NAND = {
 				ai = yes
@@ -3420,59 +3424,59 @@ the_assassins = {
 			name = intrigue 
 			value = 0.5
 		}
-		has_trait = {
+		trait = {
 			trait = zealous
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = erudite
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = scholar
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = theologian
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = schemer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = strong
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = robust
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = temperate
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = charitable
 			value = 1
 		}
@@ -3766,63 +3770,63 @@ the_satanists = {
 			name = intrigue
 			value = 0.5
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = hedonist
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = mystic
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seducer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seductress
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = schemer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = lustful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = greedy
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = deceitful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = arbitrary
 			value = 1
 		}
@@ -4104,67 +4108,67 @@ the_trollcrafters = {
 			name = intrigue
 			value = 0.5
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = hedonist
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = mystic
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seducer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seductress
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = schemer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = one_eyed
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = lustful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = greedy
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = deceitful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = arbitrary
 			value = 1
 		}
@@ -4444,63 +4448,63 @@ the_cult_of_kali = {
 			name = intrigue
 			value = 0.5
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = hedonist
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = mystic
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seducer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seductress
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = schemer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = lustful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = greedy
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = deceitful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = arbitrary
 			value = 1
 		}
@@ -4770,63 +4774,63 @@ the_plaguebringers = {
 			name = intrigue
 			value = 0.5
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = hedonist
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = mystic
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seducer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seductress
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = schemer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = lustful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = greedy
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = deceitful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = arbitrary
 			value = 1
 		}
@@ -5101,63 +5105,63 @@ the_illuminati = {
 			name = intrigue
 			value = 0.5
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = hedonist
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = mystic
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seducer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seductress
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = schemer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = lustful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = greedy
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = deceitful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = arbitrary
 			value = 1
 		}
@@ -5432,63 +5436,63 @@ cult_of_cortez = {
 			name = intrigue
 			value = 0.5
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = hedonist
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = mystic
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seducer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seductress
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = schemer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = lustful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = greedy
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = deceitful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = arbitrary
 			value = 1
 		}
@@ -5758,63 +5762,63 @@ bohemian_grove = {
 			name = intrigue
 			value = 0.5
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = hedonist
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = mystic
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seducer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seductress
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = schemer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = lustful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = greedy
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = deceitful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = arbitrary
 			value = 1
 		}
@@ -6086,63 +6090,63 @@ davy_jones_mates = {
 			name = intrigue
 			value = 0.5
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = hedonist
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = mystic
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seducer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seductress
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = schemer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = lustful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = greedy
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = deceitful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = arbitrary
 			value = 1
 		}
@@ -6418,63 +6422,63 @@ starry_wisdom = {
 			name = intrigue
 			value = 0.5
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = hedonist
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = mystic
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seducer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seductress
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = schemer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = lustful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = greedy
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = deceitful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = arbitrary
 			value = 1
 		}
@@ -6751,63 +6755,63 @@ unseelie_petitioners = {
 			name = intrigue
 			value = 0.5
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 5
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = hedonist
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = mystic
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seducer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = seductress
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = schemer
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = lustful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = greedy
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = deceitful
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = arbitrary
 			value = 1
 		}
@@ -7039,59 +7043,59 @@ secret_religious_society_template = {
     		name = diplomacy
     		value = 0.5
     	}
-		has_trait = {
+		trait = {
 			trait = zealous
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = scholar
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = theologian
 			value = 3
 		}	
-		has_trait = {
+		trait = {
 			trait = celibate
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-    	has_trait = {
+    	trait = {
 			trait = chaste
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = temperate
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = charitable
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = kind
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = honest
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = erudite
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = pilgrim
 			value = 1
 		}
@@ -7348,216 +7352,216 @@ warrior_lodge_norse = {
     		name = martial
     		value = 0.25
     	}
-    	has_trait = {
+    	trait = {
 			trait = hunter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strategist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = duelist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_mid
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_high
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strong
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = robust
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = giant
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = falconer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = wroth
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = brave
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = cruel
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = stubborn
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = adventurer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = viking
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = freebooter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = buccaneer
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = corsair
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = pirate_king_trait
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = buccaneer
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = corsair
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = pirate_king_trait
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = ravager
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = seaking
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = sea_queen
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shieldmaiden
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = berserker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = varangian
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = valhalla_bound
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = eagle_warrior
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = fords_striker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = sword_of_the_lamb
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = knight_templar
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = order_of_the_garter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = lughs_own
 			value = 1
 		}
 		#NEGATIVE modifiers
-		has_trait = {
+		trait = {
 			trait = craven
 			value = -3
 		}
-		has_trait = {
+		trait = {
 			trait = weak
 			value = -2
 		}
-		has_trait = {
+		trait = {
 			trait = feeble
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = slothful
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = content
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = dwarf
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = clubfooted
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = hunchback
 			value = -1
 		}
@@ -7938,204 +7942,204 @@ warrior_lodge_peyotist = { # Also generally for Nomads? (will keep for now)
     		name = martial
     		value = 0.25
     	}
-    	has_trait = {
+    	trait = {
 			trait = hunter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strategist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = duelist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_mid
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_high
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strong
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = robust
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = giant
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = falconer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = wroth
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = brave
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = cruel
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = stubborn
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = adventurer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = viking
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = freebooter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = buccaneer
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = corsair
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = pirate_king_trait
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = ravager
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = seaking
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = sea_queen
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shieldmaiden
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = berserker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = varangian
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = valhalla_bound
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = eagle_warrior
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = fords_striker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = sword_of_the_lamb
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = knight_templar
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = order_of_the_garter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = lughs_own
 			value = 1
 		}
 		#NEGATIVE modifiers
-		has_trait = {
+		trait = {
 			trait = craven
 			value = -3
 		}
-		has_trait = {
+		trait = {
 			trait = weak
 			value = -2
 		}
-		has_trait = {
+		trait = {
 			trait = feeble
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = slothful
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = content
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = dwarf
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = clubfooted
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = hunchback
 			value = -1
 		}
@@ -8521,204 +8525,204 @@ warrior_lodge_atomicist = {
     		name = martial
     		value = 0.25
     	}
-    	has_trait = {
+    	trait = {
 			trait = hunter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strategist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = duelist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_mid
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_high
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strong
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = robust
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = giant
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = falconer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = wroth
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = brave
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = cruel
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = stubborn
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = adventurer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = viking
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = freebooter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = buccaneer
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = corsair
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = pirate_king_trait
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = ravager
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = seaking
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = sea_queen
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shieldmaiden
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = berserker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = varangian
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = valhalla_bound
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = eagle_warrior
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = fords_striker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = sword_of_the_lamb
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = knight_templar
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = order_of_the_garter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = lughs_own
 			value = 1
 		}
 		#NEGATIVE modifiers
-		has_trait = {
+		trait = {
 			trait = craven
 			value = -3
 		}
-		has_trait = {
+		trait = {
 			trait = weak
 			value = -2
 		}
-		has_trait = {
+		trait = {
 			trait = feeble
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = slothful
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = content
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = dwarf
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = clubfooted
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = hunchback
 			value = -1
 		}
@@ -9098,200 +9102,200 @@ warrior_lodge_occultist = {
     		name = martial
     		value = 0.25
     	}
-    	has_trait = {
+    	trait = {
 			trait = hunter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strategist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = duelist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_mid
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_high
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strong
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = robust
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = giant
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = falconer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = wroth
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = brave
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = cruel
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = stubborn
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = adventurer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = viking
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = freebooter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = buccaneer
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = corsair
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = pirate_king_trait
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = ravager
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = seaking
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = sea_queen
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shieldmaiden
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = berserker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = varangian
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = valhalla_bound
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = fords_striker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = sword_of_the_lamb
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = knight_templar
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = order_of_the_garter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = lughs_own
 			value = 1
 		}
 		#NEGATIVE modifiers
-		has_trait = {
+		trait = {
 			trait = craven
 			value = -3
 		}
-		has_trait = {
+		trait = {
 			trait = weak
 			value = -2
 		}
-		has_trait = {
+		trait = {
 			trait = feeble
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = slothful
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = content
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = dwarf
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = clubfooted
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = hunchback
 			value = -1
 		}
@@ -9670,204 +9674,204 @@ warrior_lodge_raven_tales = {
     		name = martial
     		value = 0.25
     	}
-    	has_trait = {
+    	trait = {
 			trait = hunter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strategist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = duelist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_mid
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_high
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strong
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = robust
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = giant
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = falconer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = wroth
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = brave
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = cruel
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = stubborn
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = adventurer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = viking
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = freebooter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = buccaneer
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = corsair
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = pirate_king_trait
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = ravager
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = seaking
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = sea_queen
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shieldmaiden
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = berserker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = varangian
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = valhalla_bound
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = eagle_warrior
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = fords_striker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = sword_of_the_lamb
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = knight_templar
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = order_of_the_garter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = lughs_own
 			value = 1
 		}
 		#NEGATIVE modifiers
-		has_trait = {
+		trait = {
 			trait = craven
 			value = -3
 		}
-		has_trait = {
+		trait = {
 			trait = weak
 			value = -2
 		}
-		has_trait = {
+		trait = {
 			trait = feeble
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = slothful
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = content
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = dwarf
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = clubfooted
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = hunchback
 			value = -1
 		}
@@ -10246,208 +10250,208 @@ warrior_lodge_celtic = {
     		name = martial
     		value = 0.25
     	}
-    	has_trait = {
+    	trait = {
 			trait = twin
 			value = 4
 		}
-    	has_trait = {
+    	trait = {
 			trait = hunter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strategist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = duelist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_mid
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_high
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strong
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = robust
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = giant
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = falconer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = wroth
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = brave
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = cruel
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = stubborn
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = adventurer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = viking
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = freebooter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = buccaneer
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = corsair
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = pirate_king_trait
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = ravager
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = seaking
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = sea_queen
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shieldmaiden
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = berserker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = varangian
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = valhalla_bound
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = eagle_warrior
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = fords_striker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = sword_of_the_lamb
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = knight_templar
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = order_of_the_garter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = lughs_own
 			value = 1
 		}
 		#NEGATIVE modifiers
-		has_trait = {
+		trait = {
 			trait = craven
 			value = -3
 		}
-		has_trait = {
+		trait = {
 			trait = weak
 			value = -2
 		}
-		has_trait = {
+		trait = {
 			trait = feeble
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = slothful
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = content
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = dwarf
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = clubfooted
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = hunchback
 			value = -1
 		}
@@ -10826,204 +10830,204 @@ warrior_lodge_revelationist = {
     		name = martial
     		value = 0.25
     	}
-    	has_trait = {
+    	trait = {
 			trait = hunter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strategist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = duelist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_mid
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_high
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strong
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = robust
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = giant
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = falconer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = wroth
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = brave
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = cruel
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = stubborn
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = adventurer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = viking
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = freebooter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = buccaneer
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = corsair
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = pirate_king_trait
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = ravager
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = seaking
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = sea_queen
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shieldmaiden
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = berserker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = varangian
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = valhalla_bound
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = eagle_warrior
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = fords_striker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = sword_of_the_lamb
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = knight_templar
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = order_of_the_garter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = lughs_own
 			value = 1
 		}
 		#NEGATIVE modifiers
-		has_trait = {
+		trait = {
 			trait = craven
 			value = -3
 		}
-		has_trait = {
+		trait = {
 			trait = weak
 			value = -2
 		}
-		has_trait = {
+		trait = {
 			trait = feeble
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = slothful
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = content
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = dwarf
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = clubfooted
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = hunchback
 			value = -1
 		}
@@ -11402,204 +11406,204 @@ warrior_lodge_rust_cultist = {
     		name = martial
     		value = 0.25
     	}
-    	has_trait = {
+    	trait = {
 			trait = hunter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strategist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = duelist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_mid
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_high
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strong
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = robust
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = giant
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = falconer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = wroth
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = brave
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = cruel
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = stubborn
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = adventurer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = viking
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = freebooter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = buccaneer
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = corsair
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = pirate_king_trait
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = ravager
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = seaking
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = sea_queen
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shieldmaiden
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = berserker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = varangian
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = valhalla_bound
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = eagle_warrior
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = fords_striker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = sword_of_the_lamb
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = knight_templar
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = order_of_the_garter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = lughs_own
 			value = 1
 		}
 		#NEGATIVE modifiers
-		has_trait = {
+		trait = {
 			trait = craven
 			value = -3
 		}
-		has_trait = {
+		trait = {
 			trait = weak
 			value = -2
 		}
-		has_trait = {
+		trait = {
 			trait = feeble
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = slothful
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = content
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = dwarf
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = clubfooted
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = hunchback
 			value = -1
 		}
@@ -11986,204 +11990,204 @@ warrior_lodge_americanist = {
     		name = martial
     		value = 0.25
     	}
-    	has_trait = {
+    	trait = {
 			trait = hunter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strategist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = duelist
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_mid
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = scarred_high
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = genius
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = quick
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = shrewd
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = strong
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = robust
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = giant
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = impaler
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = falconer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = wroth
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = proud
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = patient
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = diligent
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = humble
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = brave
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = ambitious
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = cruel
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = stubborn
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = adventurer
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = viking
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = freebooter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = buccaneer
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = corsair
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = pirate_king_trait
 			value = 4
 		}
-		has_trait = {
+		trait = {
 			trait = ravager
 			value = 2
 		}
-		has_trait = {
+		trait = {
 			trait = seaking
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = sea_queen
 			value = 3
 		}
-		has_trait = {
+		trait = {
 			trait = shieldmaiden
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = berserker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = varangian
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = valhalla_bound
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = eagle_warrior
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = fords_striker
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = sword_of_the_lamb
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = knight_templar
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = order_of_the_garter
 			value = 1
 		}
-		has_trait = {
+		trait = {
 			trait = lughs_own
 			value = 1
 		}
 		#NEGATIVE modifiers
-		has_trait = {
+		trait = {
 			trait = craven
 			value = -3
 		}
-		has_trait = {
+		trait = {
 			trait = weak
 			value = -2
 		}
-		has_trait = {
+		trait = {
 			trait = feeble
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = slothful
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = content
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = dwarf
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = clubfooted
 			value = -1
 		}
-		has_trait = {
+		trait = {
 			trait = hunchback
 			value = -1
 		}

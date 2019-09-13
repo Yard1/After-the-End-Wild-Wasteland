@@ -89,6 +89,7 @@ narrative_event = {
 			trait = temperate
 		}
 		new_character = {
+			set_character_flag = keep_male
 			character_event = { id = misc.3 } # Diversity
 			character_event = { id = misc.4 } # Physique
 			if = {

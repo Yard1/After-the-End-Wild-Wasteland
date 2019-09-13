@@ -143,7 +143,7 @@ character_event = {
 		if = {
 			limit = {
 				FROMFROM = { has_landed_title = d_nancy_harts }
-				NOT = { has_trait = shieldmaiden }
+				NOT = { trait = shieldmaiden }
 				martial = 5
 			}
 			random = {
@@ -197,7 +197,7 @@ character_event = {
 				primary_title = {
 					holy_order_is_celibate = yes
 				}
-				NOT = { has_trait = celibate }
+				NOT = { trait = celibate }
 			}
 			spouse = {
 				remove_spouse = spouse
@@ -208,7 +208,7 @@ character_event = {
 		if = {
 			limit = {
 				has_landed_title = d_nancy_harts
-				NOT = { has_trait = shieldmaiden }
+				NOT = { trait = shieldmaiden }
 			}
 			add_trait = shieldmaiden
 		}
@@ -367,7 +367,7 @@ character_event = {
 							holy_order_is_celibate = yes
 						}
 					}
-					NOT = { has_trait = celibate }
+					NOT = { trait = celibate }
 				}
 				spouse = {
 					remove_spouse = spouse
@@ -588,8 +588,8 @@ character_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	only_men = yes
+	ai = yes
 	trigger = {
-		ai = yes
 		NOT = { father_even_if_dead = { always = yes } }
 		NOT = { mother_even_if_dead = { always = yes } }
 		NOT = { spouse_even_if_dead = { always = yes } }
@@ -604,7 +604,7 @@ character_event = {
 		ai_chance = {
 			factor = 50
 			modifier = {
-				factor = 2.667
+				factor = 4
 				has_character_flag = 80_20_female
 			}
 		}
@@ -614,6 +614,10 @@ character_event = {
 		set_character_flag = keep_male
 		ai_chance = {
 			factor = 50
+			modifier = {
+				factor = 0
+				is_ruler = yes
+			}
 		}
 	}
 }

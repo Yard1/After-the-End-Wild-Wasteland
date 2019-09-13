@@ -481,7 +481,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -499,7 +499,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -625,7 +625,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -643,7 +643,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -755,7 +755,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -773,7 +773,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -885,7 +885,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -903,7 +903,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -1016,7 +1016,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -1034,7 +1034,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -1140,7 +1140,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -1158,7 +1158,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -1261,7 +1261,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -1279,7 +1279,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -1754,7 +1754,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -1772,7 +1772,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -1945,7 +1945,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -1963,7 +1963,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -2135,7 +2135,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -2153,7 +2153,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -2326,7 +2326,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -2344,7 +2344,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -2517,7 +2517,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -2535,7 +2535,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -2708,7 +2708,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -2726,7 +2726,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -2901,7 +2901,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -2919,7 +2919,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -3092,7 +3092,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -3110,7 +3110,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -3284,7 +3284,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -3302,7 +3302,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -3474,7 +3474,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -3492,7 +3492,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -3665,7 +3665,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -3683,7 +3683,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -3856,7 +3856,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -3874,7 +3874,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0
@@ -4046,7 +4046,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 2.5
-				has_trait = zealous
+				trait = zealous
 			}
 			modifier = {
 				factor = 2
@@ -4064,7 +4064,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				has_trait = greedy
+				trait = greedy
 			}
 			modifier = {
 				factor = 0

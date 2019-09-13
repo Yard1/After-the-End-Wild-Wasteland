@@ -2018,10 +2018,12 @@ gender_laws = {
 		potential = {
 			is_landless_type_title = no
 			holder_scope = {
+				is_theocracy = no
+				holy_order = no
 				OR = {
 					matriarchal_religion = yes
 					any_owned_bloodline = {
-						has_bloodline_flag = bloodline_enatic_cognatic 
+						has_bloodline_flag = bloodline_enatic
 					}
 				}
 			}
@@ -2052,20 +2054,6 @@ gender_laws = {
 		}	
 		default_selection = {
 			factor = 1
-			
-			modifier = {
-				factor = 0
-				NOT = {
-					holder_scope = {
-						OR = {
-							matriarchal_religion = yes
-							any_owned_bloodline = {
-								has_bloodline_flag = bloodline_enatic_cognatic 
-							}
-						}
-					}
-				}
-			}
 			
 			modifier = {
 				factor = 100

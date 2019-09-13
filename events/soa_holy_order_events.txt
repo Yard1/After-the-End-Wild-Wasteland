@@ -2977,7 +2977,6 @@ character_event = {
 	
 	min_age = 16
 	only_rulers = yes
-	is_triggered_only = yes
 	religion_group = christian
 	
 	trigger = {
@@ -15175,6 +15174,36 @@ character_event = {
 				inherit = yes
 			}
 			clr_character_flag = expel_enclave
+		}
+	}
+	option = { # UEL
+		trigger = {
+			has_character_flag = expel_uel_check
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_uel = {
+				holder_scope = {
+					character_event = {
+						id = NewHolyOrders.55
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_uel
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_uel_check_check
 		}
 	}
 	option = { # Sons of Kaleva

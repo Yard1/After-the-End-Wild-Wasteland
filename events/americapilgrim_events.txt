@@ -776,7 +776,7 @@ character_event = {
 			modifier = { 
 				factor = 2 
 				religion_openly_americanist_or_heresy_trigger = yes 
-				has_trait = zealous
+				trait = zealous
 				FROM = { NOT = { religion = ROOT } }
 			}
 		}
