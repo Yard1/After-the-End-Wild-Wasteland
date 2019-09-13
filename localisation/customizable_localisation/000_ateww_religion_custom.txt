@@ -166,7 +166,7 @@ defined_text = {
 				religion = gracia_divina
 			}
 		}
-		text = PADRE
+		localisation_key = PADRE
 	}
 	text = {
 		trigger = { 
@@ -177,7 +177,7 @@ defined_text = {
 				religion = raven_tales
 			}
 		}
-		text = SHAMAN
+		localisation_key = SHAMAN
 	}
 	text = {
 		trigger = { 
@@ -186,7 +186,7 @@ defined_text = {
 				religion = norse_pagan
 			}
 		}
-		text = GODI
+		localisation_key = GODI
 	}
 	text = {
 		trigger = { 
@@ -196,7 +196,7 @@ defined_text = {
 				religion = brethren
 			}
 		}
-		text = PRIEST_LOREKEEPER
+		localisation_key = PRIEST_LOREKEEPER
 	}
 	text = {
 		trigger = { 
@@ -205,7 +205,7 @@ defined_text = {
 				religion = revelationist_reformed
 			}
 		}
-		text = THAUMATURGE
+		localisation_key = THAUMATURGE
 	}
 	text = {
 		trigger = { 
@@ -214,7 +214,7 @@ defined_text = {
 				religion = chrome_cultist
 			}
 		}
-		text = TECHPRIEST
+		localisation_key = TECHPRIEST
 	}
 	text = {
 		trigger = { 
@@ -223,7 +223,7 @@ defined_text = {
 				religion = monetarist
 			}
 		}
-		text = ENTREPENUER
+		localisation_key = ENTREPENUER
 	}
 	text = {
 		trigger = { 
@@ -231,7 +231,7 @@ defined_text = {
 				religion = jeffersonian
 			}
 		}
-		text = CORPSMAN
+		localisation_key = CORPSMAN
 	}
 	text = {
 		trigger = { 
@@ -241,13 +241,13 @@ defined_text = {
 				religion = libertarian
 			}
 		}
-		text = JUDGE
+		localisation_key = JUDGE
 	}
 	text = {
 		trigger = { 
 			religion = nousthreskeia
 		}
-		text = PREACHER
+		localisation_key = PREACHER
 	}
 	text = {
 		trigger = { 
@@ -257,7 +257,7 @@ defined_text = {
 				religion = meshichist
 			}
 		}
-		text = RABBI
+		localisation_key = RABBI
 	}
 	text = {
 		trigger = { 
@@ -267,7 +267,7 @@ defined_text = {
 				religion = celtic_pagan
 			}
 		}
-		text = DRUID
+		localisation_key = DRUID
 	}
 	text = {
 		trigger = { 
@@ -276,13 +276,13 @@ defined_text = {
 				religion = hindu
 			}
 		}
-		text = GURU
+		localisation_key = GURU
 	}
 	text = {
 		trigger = { 
 			religion = peyotist
 		}
-		text = ROADMAN
+		localisation_key = ROADMAN
 	}
 	text = {
 		trigger = { 
@@ -291,10 +291,10 @@ defined_text = {
 				religion = espiritista_reformed 
 			}
 		}
-		text = PRIEST_MEDIUM
+		localisation_key = PRIEST_MEDIUM
 	}
 	fallback_text = {
-		text = PRIEST
+		localisation_key = PRIEST
 	}
 }
 
@@ -306,15 +306,15 @@ defined_text = {
 				religion = jeffersonian
 			}
 		}
-		text = CORPSMEN
+		localisation_key = CORPSMEN
 	}
 	text = {
 		trigger = { 
 			religion = peyotist
 		}
-		text = ROADMEN
+		localisation_key = ROADMEN
 	}
 	fallback_text = {
-		text = PRIEST_PLURAL
+		localisation_key = PRIEST_PLURAL
 	}
 }
