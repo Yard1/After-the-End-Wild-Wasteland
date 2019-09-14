@@ -590,3 +590,34 @@
 		}
 	}
 }
+
+### Deitsch ###
+
+1997021 = {
+	name = "Abram"
+	dynasty = 1779006 # Lengacher
+	give_nickname = nick_the_white_knight
+	martial = 8
+	diplomacy = 9
+	intrigue = 6
+	stewardship = 7
+	learning = 6
+	father = 1997018
+	mother = 1763061
+	culture = "deitsch"
+	religion = "anabaptist"
+	trait = brilliant_strategist
+	trait = holy_warrior
+	trait = brave
+	trait = zealous
+	trait = content
+	trait = kind
+	trait = honest
+	trait = charitable
+	trait = chaste
+	trait = scarred_high
+	trait = one_eyed 
+	2635.4.5 = {
+	    birth=yes
+	}
+}
