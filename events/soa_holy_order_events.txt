@@ -14571,6 +14571,24 @@ character_event = {
 		}
 		text = expel_enclave
 	}
+	title = { # UEL
+		trigger = {
+			has_character_flag = expel_uel_check
+		}
+		text = expel_uel
+	}
+	title = { # Golden Bears
+		trigger = {
+			has_character_flag = expel_golden_bears_check
+		}
+		text = expel_golden_bears
+	}
+	title = { # Golden Archers
+		trigger = {
+			has_character_flag = expel_golden_archers_check
+		}
+		text = expel_golden_archers
+	}
 	title = { # Sons of Kaleva
 		trigger = {
 			has_character_flag = expel_sons_kaleva_check
@@ -15148,7 +15166,7 @@ character_event = {
 	}
 	option = { # The Enclave
 		trigger = {
-			has_character_flag = expel_enclave
+			has_character_flag = expel_enclave_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -15173,7 +15191,7 @@ character_event = {
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_enclave
+			clr_character_flag = expel_enclave_check
 		}
 	}
 	option = { # UEL
@@ -15203,7 +15221,67 @@ character_event = {
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_uel_check_check
+			clr_character_flag = expel_uel_check
+		}
+	}
+	option = { # Golden Bears
+		trigger = {
+			has_character_flag = expel_golden_bears_check
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_golden_bears = {
+				holder_scope = {
+					character_event = {
+						id = NewHolyOrders.69
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_golden_bears
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_golden_bears_check
+		}
+	}
+	option = { # Golden Archers
+		trigger = {
+			has_character_flag = expel_golden_archers_check
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_golden_archers = {
+				holder_scope = {
+					character_event = {
+						id = NewHolyOrders.81
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_golden_archers
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_golden_archers_check
 		}
 	}
 	option = { # Sons of Kaleva
