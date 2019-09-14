@@ -9,5 +9,6 @@
 	holder = 1803057
 }
 2652.5.1 = {
+    liege = k_louisiana
 	holder = 1803064
 }
