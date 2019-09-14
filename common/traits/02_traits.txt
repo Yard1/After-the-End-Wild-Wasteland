@@ -1748,6 +1748,7 @@ one_eyed = {
 	
 	sex_appeal_opinion = -5
 	pagan_group_opinion = 10
+	brethren_opinion = 10
 	same_opinion = 5
 	
 	combat_rating = -10 #old value: -1
@@ -1769,6 +1770,7 @@ one_handed = {
 	
 	sex_appeal_opinion = -5
 	same_opinion = 5
+	brethren_opinion = 10
 	
 	combat_rating = -20 #old value: -2
 	
@@ -1789,6 +1791,7 @@ one_legged = {
 	
 	sex_appeal_opinion = -10
 	same_opinion = 5
+	brethren_opinion = 10
 	
 	combat_rating = -30 #old value: -3
 

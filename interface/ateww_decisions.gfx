@@ -8,6 +8,10 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
 	}
 	spriteType = {
+		name = "GFX_vassalize_libertarian"
+		texturefile = "gfx/interface/decision_icon_vassalize_holy_order.dds"
+	}
+	spriteType = {
 		name = "GFX_expel_american_legion"
 		texturefile = "gfx\\interface\\decision_icon_expel_holy_order.dds"
 	}
@@ -48,10 +52,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/become_pirate_king.dds"
 	}
 	spriteType = {
-		name = "GFX_vassalize_libertarian"
-		texturefile = "gfx/interface/decision_icon_vassalize_holy_order.dds"
-	}
-	spriteType = {
 		name = "GFX_expel_uel"
 		texturefile = "gfx\\interface\\decision_icon_expel_holy_order.dds"
 	}
@@ -65,6 +65,18 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_vassalize_code_keepers"
+		texturefile = "gfx/interface/decision_icon_vassalize_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_expel_golden_bears"
+		texturefile = "gfx\\interface\\decision_icon_expel_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_donate_money_to_golden_bears"
+		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_vassalize_golden_bears"
 		texturefile = "gfx/interface/decision_icon_vassalize_holy_order.dds"
 	}
 }
