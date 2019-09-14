@@ -482,7 +482,7 @@ d_libertarian = {
 	# Controls a religion
 	controls_religion = libertarian
 	holy_order = yes
-	monthly_income = 2
+	monthly_income = 4
 	strength_growth_per_century = 1.0
 
 	mercenary_type = d_libertarian_composition

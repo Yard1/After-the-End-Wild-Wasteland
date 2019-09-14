@@ -18,7 +18,7 @@ d_american_legion = {
 	primary = yes
 	independent = yes
 	strength_growth_per_century = 1.0
-	monthly_income = 3
+	monthly_income = 4
 
 	mercenary_type = d_sun_knights_composition
 }
@@ -37,24 +37,13 @@ d_enclave = {
 	
 	culture = chicagoan
 	religion = americanist
-
-	allow = {
-		primary_title = {
-			OR = {
-				region = world_rustlands
-				region = world_northeast
-			}
-		}
-	}
 	
 	holy_order = yes
 	landless = yes
 	primary = yes
 	independent = yes
 	strength_growth_per_century = 1.0
-	monthly_income = 3
-
-	hire_range = 100
+	monthly_income = 4
 
 	mercenary_type = d_steel_brotherhood_composition
 }

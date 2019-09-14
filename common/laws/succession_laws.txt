@@ -1953,7 +1953,6 @@ gender_laws = {
 								any_owned_bloodline = {
 									has_bloodline_flag = bloodline_enatic
 								}
-								has_landed_title = d_nancy_harts
 							}
 						}
 						AND = {
@@ -2051,13 +2050,16 @@ gender_laws = {
 		}
 		revoke_allowed = {
 			always = no
-		}	
+		}
 		default_selection = {
 			factor = 1
 			
 			modifier = {
 				factor = 100
+				is_landless_type_title = no
 				holder_scope = {
+					is_theocracy = no
+					holy_order = no
 					OR = {
 						matriarchal_religion = yes
 						any_owned_bloodline = {

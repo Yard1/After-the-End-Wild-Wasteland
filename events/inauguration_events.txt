@@ -3938,11 +3938,13 @@ character_event = {
 
 	only_rulers = yes
 	min_age = 16
+	has_dlc = "Holy Fury"
+	religion_group = oldworld
 
 	is_triggered_only = yes
 
 	trigger = { 
-		has_dlc = "Holy Fury"
+		mercenary = no
 		OR = {
 			is_feudal = yes
 			is_merchant_republic = yes
@@ -3986,10 +3988,11 @@ character_event = {
 	is_triggered_only = yes
 
 	only_rulers = yes
+	has_dlc = "Holy Fury"
+	religion_group = oldworld
 
 	trigger = {
-		has_dlc = "Holy Fury"
-		religion_group = oldworld
+		mercenary = no
 		OR = {
 			is_feudal = yes
 			is_merchant_republic = yes
@@ -4040,6 +4043,7 @@ character_event = {
 	trigger = { 
 		independent = no
 		age = 12
+		mercenary = no
 		OR = {
 			is_feudal = yes
 			is_merchant_republic = yes

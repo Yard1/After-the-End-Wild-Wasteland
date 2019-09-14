@@ -7,6 +7,7 @@ decisions = {
 			has_dlc = "Holy Fury"
 			age = 11
 			prisoner = no
+			mercenary = no
 			OR = {
 				is_feudal = yes
 				is_merchant_republic = yes
