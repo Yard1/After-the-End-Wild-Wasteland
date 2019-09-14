@@ -100,3 +100,13 @@ on_new_holder_inheritance = {
 		ATE_WWW_PIRATE.7
 	}
 }
+
+# Triggers when someone is excommunicated via the hardcoded diplomatic interaction
+# Root = Excommunicated person
+# From = Asker
+# FromFrom = Pope
+on_excommunicate_interaction = {
+	events = {
+		prez.108
+	}
+}
