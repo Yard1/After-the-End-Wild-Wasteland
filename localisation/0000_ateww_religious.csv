@@ -299,3 +299,11 @@ emperor_libertarian;Commander-in-Chief;;;;;;;;;;;;;x
 emperor_female_libertarian;Commander-in-Chief;;;;;;;;;;;;;x
 
 # Americanists
+
+POPE_AIREASON_MODIFIER_RULER_JUST;[Root.GetTitledFirstName] is §YJust§!;[Root.Get_Le_TitledFirstName] a du §Yzèle§!;[Root.GetTitledFirstName] ist ein §YReligiöser Eiferer§!;;[Root.GetTitledFirstName] es §Yceloso§!;;;;;;;;x
+POPE_AIREASON_MODIFIER_RULER_JUST_NEGATIVE;[Root.GetTitledFirstName] is §YJust§!;[Root.Get_Le_TitledFirstName] a du §Yzèle§!;[Root.GetTitledFirstName] ist ein §YReligiöser Eiferer§!;;[Root.GetTitledFirstName] es §Ycelos[Root.GetOA]§!;;;;;;;;x
+POPE_AIREASON_MODIFIER_RULER_JUST_TARGET;[FromFrom.GetTitledFirstName] is §YJust§!;[FromFrom.Get_Le_TitledFirstName] a du §Yzèle§!;[FromFrom.GetTitledFirstName] ist ein §YReligiöser Eiferer§!;;[FromFrom.GetTitledFirstName] es §Ycelos[FromFrom.GetOA]§!;;;;;;;;x
+POPE_AIREASON_MODIFIER_RULER_JUST_NEGATIVE_TARGET;[FromFrom.GetTitledFirstName] is §YJust§!;[FromFrom.Get_Le_TitledFirstName] a du §Yzèle§!;[FromFrom.GetTitledFirstName] ist ein §YReligiöser Eiferer§!;;[FromFrom.GetTitledFirstName] es §Yfanátic[FromFrom.GetOA]§!;;;;;;;;x
+
+POPE_AIREASON_MODIFIER_RULER_ARBITRARY;[Root.GetTitledFirstName] is §YArbitrary§!;[Root.Get_Le_TitledFirstName] est §Ycynique§!;[Root.GetTitledFirstName] ist §Yzynisch§!;;[Root.GetTitledFirstName] es §Ycínic[Root.GetOA]§!;;;;;;;;x
+POPE_AIREASON_MODIFIER_RULER_ARBITRARY_TARGET;[FromFrom.GetTitledFirstName] is §YArbitrary§!;[FromFrom.Get_Le_TitledFirstName] est §Ycynique§!;[FromFrom.GetTitledFirstName] ist §Yzynisch§!;;[FromFrom.GetTitledFirstName] es §Ycínic[FromFrom.GetOA]§!;;;;;;;;x
