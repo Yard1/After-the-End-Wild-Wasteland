@@ -687,9 +687,9 @@
 	    birth=yes
 	}
     2643.2.14 = {
-        add_spouse = 1910148
+        add_spouse = 1910207
         effect = {
-            add_lover = 1910148
+            add_lover = 1910207
         }
     }
 }
