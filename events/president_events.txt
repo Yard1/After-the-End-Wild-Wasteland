@@ -9422,7 +9422,7 @@ character_event = {
 	desc = EVTDESC_prez_excomm
 	picture = GFX_evt_rival_rulers
 	is_triggered_only = yes
-	religion_group = old_world
+	religion_group = oldworld
 	
 	immediate = {
 		set_variable = { which = "indolence" value = 0 }
@@ -9594,7 +9594,7 @@ character_event = {
 	desc = DEBUG
 	hide_window = yes
 	
-	religion_group = old_world
+	religion_group = oldworld
 	
 	trigger = {
 		OR = {
@@ -19164,9 +19164,10 @@ narrative_event = {
 	border = GFX_event_narrative_frame_religion
 	picture = GFX_evt_coronation
 	is_triggered_only = yes
+	only_rulers = yes
+	religion_group = oldworld
 	
 	trigger = {
-		is_ruler = yes
 		religion = americanist
 	}
 	
