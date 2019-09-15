@@ -2859,7 +2859,22 @@
 1787000 = { name="Clanton" culture=dixie }1787001 = { name="Kinstry" culture=dixie }
 1787002 = { name="Jemison" culture=dixie }
 1787003 = { name="Crayclaw" culture=dixie }
-1787004 = { name="Barron" culture=dixie }1787005 = { name="Dowdell" culture=dixie }1787006 = { name="Coopwood" culture=dixie }1787007 = { name="Crump" culture=dixie }1787008 = { name="Frymore" culture=dixie }1787009 = { name="Garrott" culture=dixie }1787010 = { name="Toulmin" culture=dixie }1787011 = { name="Sasnett" culture=dixie }1787012 = { name="Pyron" culture=dixie }1787013 = { name="Dunwoody" culture=dixie }1787014 = { name="Angier" culture=dixie }1787015 = { name="Arp" culture=dixie }1787016 = { name="Calhoun" culture=dixie }1787017 = { name="Candler" culture=dixie }1787018 = { name="Rootes" culture=dixie }1787019 = { name="Du Bose" culture=dixie }1787020 = { name="Doles" culture=dixie }1787021 = { name="Ezzard" culture=dixie }1787023 = { name="Clanmoore" culture=dixie }1787024 = { name="Garlington" culture=dixie }1787025 = { name="Hannon" culture=dixie }1787026 = { name="Hicks" culture=dixie }1787027 = { name="Hillyer" culture=dixie }1787028 = { name="Longstreet" culture=dixie }1787029 = { name="Lowe" culture=dixie }1787030 = { name="MacIntyre" culture=dixie }1787031 = { name="McCorkle" culture=dixie }1787032 = { name="McLaws" culture=dixie }1787033 = { name="Rawls" culture=dixie }1787034 = { name="Stovall" culture=dixie }1787035 = { name="Twiggs" culture=dixie }1787036 = { name="Toombs" culture=dixie }1787037 = { name="Tattnall" culture=dixie }1787038 = { name="Tift" culture=dixie }1787039 = { name="Thrasher" culture=dixie }1787040 = { name="Oconny" culture=dixie }1787041 = { name="Jackson" culture=dixie }1787042 = { name="Nolichuck" culture=dixie }1787043 = { name="Hampton" culture=dixie }1787044 = { name="Ninety-Six" culture=dixie }1787045 = { name="McGinnis" culture=dixie }1787046 = { name="Bethabara" culture=dixie }1787047 = { name="of a Loaf" culture=dixie }1787048 = { name="Miskaton" culture=dixie
+1787004 = { 
+    name = "Barron" 
+	culture = dixie
+    coat_of_arms = {
+        religion = americanist
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 44
+            emblem = 0
+            color = 0
+            color = 3
+            color = 3
+        }
+    }	
+}1787005 = { name="Dowdell" culture=dixie }1787006 = { name="Coopwood" culture=dixie }1787007 = { name="Crump" culture=dixie }1787008 = { name="Frymore" culture=dixie }1787009 = { name="Garrott" culture=dixie }1787010 = { name="Toulmin" culture=dixie }1787011 = { name="Sasnett" culture=dixie }1787012 = { name="Pyron" culture=dixie }1787013 = { name="Dunwoody" culture=dixie }1787014 = { name="Angier" culture=dixie }1787015 = { name="Arp" culture=dixie }1787016 = { name="Calhoun" culture=dixie }1787017 = { name="Candler" culture=dixie }1787018 = { name="Rootes" culture=dixie }1787019 = { name="Du Bose" culture=dixie }1787020 = { name="Doles" culture=dixie }1787021 = { name="Ezzard" culture=dixie }1787023 = { name="Clanmoore" culture=dixie }1787024 = { name="Garlington" culture=dixie }1787025 = { name="Hannon" culture=dixie }1787026 = { name="Hicks" culture=dixie }1787027 = { name="Hillyer" culture=dixie }1787028 = { name="Longstreet" culture=dixie }1787029 = { name="Lowe" culture=dixie }1787030 = { name="MacIntyre" culture=dixie }1787031 = { name="McCorkle" culture=dixie }1787032 = { name="McLaws" culture=dixie }1787033 = { name="Rawls" culture=dixie }1787034 = { name="Stovall" culture=dixie }1787035 = { name="Twiggs" culture=dixie }1787036 = { name="Toombs" culture=dixie }1787037 = { name="Tattnall" culture=dixie }1787038 = { name="Tift" culture=dixie }1787039 = { name="Thrasher" culture=dixie }1787040 = { name="Oconny" culture=dixie }1787041 = { name="Jackson" culture=dixie }1787042 = { name="Nolichuck" culture=dixie }1787043 = { name="Hampton" culture=dixie }1787044 = { name="Ninety-Six" culture=dixie }1787045 = { name="McGinnis" culture=dixie }1787046 = { name="Bethabara" culture=dixie }1787047 = { name="of a Loaf" culture=dixie }1787048 = { name="Miskaton" culture=dixie
 	coat_of_arms = {
 		religion = norse_pagan
 		template = 0
