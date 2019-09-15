@@ -624,7 +624,7 @@
 
 ### California ###
 
-1910148 = {
+1910207 = {
     name = "Long"
     dynasty = 2029102
     culture = singaporean
@@ -645,9 +645,9 @@
 	    birth=yes
 	}
     2643.2.14={
-        add_spouse = 1910149
+        add_spouse = 1910208
         effect={
-            add_lover = 1910149
+            add_lover = 1910208
         }
     }
     2666.6.1={
@@ -669,7 +669,7 @@
     }
 }
 
-1910149 = {
+1910208 = {
     name = "Shi"
     female = yes
     culture = hong_konger
@@ -693,7 +693,7 @@
     }
 }
 
-1910150 = {
+1910209 = {
     name = "Long"
     female = no
     dynasty = 2029102
@@ -703,14 +703,14 @@
     trait = skilled_tactician
     trait = brave
     trait = greedy
-    father = 1910148
-    mother = 1910149
+    father = 1910207
+    mother = 1910208
     2644.2.14 = { 
 	    birth=yes
 	}
 }
 
-1910151 = {
+1910210 = {
     name = "Damien"
     female = no
     dynasty = 2029102
@@ -720,74 +720,74 @@
     trait = fortune_builder
     trait = just
     trait = cruel
-    father = 1910148
-    mother = 1910149
+    father = 1910207
+    mother = 1910208
     2647.4.6 = {
 	    birth=yes
 	}
 }
 
-1910152 = {
+1910211 = {
     name="Shi"
     female = yes
     dynasty = 2029102
     culture = singaporean
     religion = brethren
     intrigue = 5
-    father = 1910148
-    mother = 1910149
+    father = 1910207
+    mother = 1910208
     2649.9.12 = {
 	    birth=yes
 	}
 }
 
-1910153 = {
+1910212 = {
     name = "Cheng"
     female = no
     dynasty = 2029102
     culture = singaporean
     religion = brethren
-    father = 1910148
-    mother = 1910149
+    father = 1910207
+    mother = 1910208
     2652.12.4 = {
 	    birth=yes
 	}
 }
 
-1910154 = {
+1910213 = {
     name = "Eve"
     female = yes
     dynasty = 2029102
     culture = singaporean
     religion = brethren
-    father = 1910148
-    mother = 1910149
+    father = 1910207
+    mother = 1910208
     2655.3.10 = {
 	    birth=yes
 	}
 }
 
-1910155 = {
+1910214 = {
     name = "Fatima"
     female = yes
     dynasty = 2029102
     culture = singaporean
     religion = brethren
-    father = 1910148
-    mother = 1910149
+    father = 1910207
+    mother = 1910208
     2659.10.2 = {
 	    birth=yes
 	}
 }
 
-1910156 = {
+1910215 = {
     name = "Fang"
     female = yes
     dynasty = 2029102
     culture = singaporean
     religion = brethren
-    father = 1910148
-    mother = 1910149
+    father = 1910207
+    mother = 1910208
     2660.4.20 = {
 	    birth=yes
 	}
