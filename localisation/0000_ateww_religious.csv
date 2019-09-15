@@ -40,6 +40,7 @@ currency_name_monastic_order_libertarian;Devotion;;;;;;;;;;;;;x
 
 TT_CORONATION_RELIGIOUS_HEAD_POPE;A [Root.GetProperReligiousHead] exists;;;;;;;;;;;;;x
 TT_CORONATION_VASSAL_PRIEST;A suitable vassal [Root.GetPriest] is available to perform the ceremony;Un évêque vassal est disponible pour célébrer la cérémonie;Ein Vasallen-Bischof ist verfügbar, der die Zeremonie durchführt;;Hay un obispo vasallo disponible para realizar la ceremonia;;;;;;;;x
+EVTDESCBAFI5;To the Liberal [Root.GetTitledName],\nI shall be honored to officiate [Root.GetHerHisCap] [Root.GetHonorific]'s inauguration, provided that [Root.GetHerHisCap] [Root.GetHonorific] donates a sizable sum of money to the Order of Our Lady Liberty as a show of [Root.GetHerHisCap] devotion.\n\nEver [Root.GetHerHis] [Root.GetHonorific]'s servant\n[From.GetTitledName];;;;;;;;;;;;;x
 
 LIEGE_IS_JAIN;Liege is Pacifist;;;;;;;;;;;;;x
 
@@ -48,7 +49,6 @@ EVTDESC_MNM_ATEWWW_13;[Root.GetMOGreeting] [Root.GetSocietyRank] [Root.GetFirstN
 quest_monastic_order_pilgrimage_americanist;Go on an Americanist Pilgrimage;;;;;;;;;;;;;x
 quest_monastic_order_pilgrimage_americanist_desc;You must perform a patriotic pilgrimage to reflect upon the greatness of [Root.Religion.GetHighGodNameCap]. This spiritual journey will help you reflect upon yourself and increase your standing with the order.;;;;;;;;;;;;;x
 quest_monastic_order_pilgrimage_americanist_tooltip;To complete this mission, activate the decision §Y'[Root.Religion.GetName] Pilgrimage'§! in the Intrigue menu and successfully complete the pilgrimage.;;;;;;;;;;;;;x
-
 
 donate_castle_to_society_holy_order;Donate Castle to [From.Society.GrandMaster.PrimaryTitle.GetName];;;;;;;;;;;;;x
 donate_castle_to_society_holy_order_tt;Donate [Root.GetName] to [From.Society.GrandMaster.PrimaryTitle.GetName].;;;;;;;;;;;;;x

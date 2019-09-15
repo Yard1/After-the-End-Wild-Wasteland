@@ -1432,7 +1432,7 @@ letter_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
-			religion = jeffersonian
+			
 			religion = libertarian
 		}
 	}
@@ -1476,7 +1476,7 @@ letter_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
-			religion = jeffersonian
+			
 			religion = libertarian
 		}
 	}
@@ -1515,7 +1515,6 @@ letter_event = {
 #Donation to Judge of Washington
 letter_event = {
 	id = AFI.5
-	desc = EVTDESCAFI5
 	border = GFX_event_letter_frame_religion
 
 	desc = { 
@@ -1524,7 +1523,6 @@ letter_event = {
 			OR = {
 				religion = americanist
 				religion = hamiltonian
-				religion = jeffersonian
 			}
 		}
 	}
@@ -1539,7 +1537,6 @@ letter_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
-			religion = jeffersonian
 			religion = libertarian
 		}
 	}
@@ -1552,7 +1549,7 @@ letter_event = {
 		}
 		set_character_flag = flag_crowned_by_bishop
 		FROM = { 
-				show_scope_change = no	
+			show_scope_change = no	
 			save_event_target_as = coronation_priest
 			opinion = {
 				modifier = opinion_supposed_to_crown
@@ -1577,7 +1574,7 @@ letter_event = {
 		}
 		set_character_flag = flag_crowned_by_bishop
 		FROM = { 
-				show_scope_change = no	
+			show_scope_change = no	
 			save_event_target_as = coronation_priest
 			opinion = {
 				modifier = opinion_supposed_to_crown
@@ -1591,7 +1588,7 @@ letter_event = {
 			}
 		}
 		wealth = -100
-		hidden_tooltip = { b_washington = { holder_scope = { wealth = 100 } } }
+		hidden_tooltip = { d_libertarian = { holder_scope = { wealth = 100 } } }
 		hidden_tooltip = { character_event = { id = AFI.100 } } #Go to budget event
 		ai_chance = { factor = 100 }
 	}
@@ -1614,7 +1611,7 @@ letter_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
-			religion = jeffersonian
+			
 			religion = libertarian
 		}
 	}
@@ -1819,7 +1816,7 @@ character_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
-			religion = jeffersonian
+			
 			religion = libertarian
 		}
 	}
@@ -2226,7 +2223,7 @@ letter_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
-			religion = jeffersonian
+			
 			religion = libertarian
 		}
 		OR = {
@@ -2253,7 +2250,7 @@ letter_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
-			religion = jeffersonian
+			
 			religion = libertarian
 		}
 		OR = {
@@ -2310,7 +2307,7 @@ character_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
-			religion = jeffersonian
+			
 			religion = libertarian
 		}
 		OR = {
@@ -2413,7 +2410,7 @@ character_event = {
 			OR = {
 				religion = americanist
 				religion = hamiltonian
-				religion = jeffersonian
+				
 				religion = libertarian
 			}
 			OR = {
@@ -2524,7 +2521,7 @@ long_character_event = {
 			OR = {
 				religion = americanist
 				religion = hamiltonian
-				religion = jeffersonian
+				
 				religion = libertarian
 			}
 			OR = {
@@ -3049,7 +3046,7 @@ character_event = {
 			OR = {
 				religion = americanist
 				religion = hamiltonian
-				religion = jeffersonian
+				
 				religion = libertarian
 			}
 			higher_real_tier_than = COUNT
@@ -3241,7 +3238,7 @@ character_event = {
 			OR = {
 				religion = americanist
 				religion = hamiltonian
-				religion = jeffersonian
+				
 				religion = libertarian
 			}
 			higher_real_tier_than = COUNT
@@ -3339,7 +3336,7 @@ character_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
-			religion = jeffersonian
+			
 			religion = libertarian
 		}
 		NOR =  { 
@@ -3540,7 +3537,7 @@ character_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
-			religion = jeffersonian
+			
 			religion = libertarian
 		}
 		capital_scope = { religion = ROOT }
@@ -3585,7 +3582,7 @@ character_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
-			religion = jeffersonian
+			
 			religion = libertarian
 		}
 		higher_real_tier_than = COUNT
@@ -3663,7 +3660,7 @@ character_event = {
 			OR = {
 				religion = americanist
 				religion = hamiltonian
-				religion = jeffersonian
+				
 				religion = libertarian
 			}
 			higher_real_tier_than = COUNT
@@ -3956,7 +3953,7 @@ character_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
-			religion = jeffersonian
+			
 			religion = libertarian
 		}
 		NOT = { check_variable = { which = uninaug_count value = 30 } } #Stop at minus thirty.
@@ -4011,7 +4008,7 @@ character_event = {
 			OR = {
 				religion = americanist
 				religion = hamiltonian
-				religion = jeffersonian
+				
 				religion = libertarian
 			}
 			higher_real_tier_than = COUNT
@@ -4054,7 +4051,7 @@ character_event = {
 			OR = {
 				religion = americanist
 				religion = hamiltonian
-				religion = jeffersonian
+				
 				religion = libertarian
 			}
 			higher_real_tier_than = COUNT
@@ -4420,7 +4417,7 @@ letter_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
-			religion = jeffersonian
+			
 			religion = libertarian
 		}
 	}
@@ -4500,7 +4497,7 @@ letter_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
-			religion = jeffersonian
+			
 			religion = libertarian
 		}
 	}

@@ -119,7 +119,7 @@ has_religion_with_temporal_head = {
 		religion = consumerist
 		religion = monetarist
 		religion = rust_cultist
-		religion_group = pirate
+		religion = brethren
 	}
 }
 

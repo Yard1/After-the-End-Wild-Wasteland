@@ -19,7 +19,6 @@ decisions = {
 			OR = {
 				religion = americanist
 				religion = hamiltonian
-				religion = jeffersonian
 				religion = libertarian
 			}	
 			NOT = { trait = inaug_by_judge }
@@ -477,50 +476,6 @@ decisions = {
 				}
 			}
 			conditional_tooltip = {
-				trigger = { is_adult = no }
-				OR = { #Either is an adult, or the child is liked by the regent and has assertive traits.
-					is_adult = yes
-					conditional_tooltip = {
-						trigger = { NOT = { age = 16 } }
-						AND = { 
-							age = 11
-							custom_tooltip = {
-								text = TT_CHILD_IS_ASSERTIVE
-								hidden_tooltip = {  
-									OR = {
-									trait = ambitious
-									trait = quick
-									trait = genius
-									trait = willful
-									}
-								}
-							}
-							conditional_tooltip = {
-								trigger = { has_regent = yes }
-								custom_tooltip = {
-									text = TT_REGENT_LIKES_CHILD
-									hidden_tooltip = {  
-										AND = { 
-											OR = {
-												has_regent = no
-												any_vassal = { 
-													has_minor_title = title_regent
-													opinion = { who = liege value = 0 } 
-												} 
-												any_courtier = { 
-													has_minor_title = title_regent
-													opinion = { who = liege value = 0 } 
-												} 
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			conditional_tooltip = {
 				trigger = { has_character_flag = do_not_disturb }
 				custom_tooltip = {
 					text = TT_NOT_OTHERWISE_OCCUPIED
@@ -744,10 +699,6 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				trait = cynical
-			}
-			modifier = {
-				factor = 1.5
-				dynasty = 25061 #The Karlings will be more likely to request it
 			}
 			modifier = {
 				factor = 1.5
