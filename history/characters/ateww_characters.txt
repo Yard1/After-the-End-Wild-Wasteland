@@ -671,8 +671,9 @@
 
 1910208 = {
     name = "Shi"
+	dynasty = 2029103
     female = yes
-    culture = hong_konger
+    culture = singaporean
     religion = brethren
     stewardship = 8
     intrigue = 8
