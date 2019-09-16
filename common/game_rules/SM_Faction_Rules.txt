@@ -1,0 +1,94 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+# rule_token = {
+#	name = "TEXT_KEY_FOR_NAME"
+#	desc = "TEXT_KEY_FOR_LONG_DESC"
+#	group = "TEXT_KEY_FOR_GROUP"					# Used for filtering. A single rule can be in multiple groups 
+#	option = {										# please note that the first option is always the default option
+#		name = option_token
+#		text = "TEXT_KEY_FOR_OPTION_NAME"
+#		achievements = no							# by default achievements = yes, allows or disallows achievements
+#	}
+# }
+
+
+council_power = {
+	name = "SM_COUNCIL_POWER_RULE"
+	#desc = "SM_COUNCIL_POWER_DESC"
+	dlc = "Conclave"
+	group = "RULE_GROUP_FACTIONAL_BALANCE"
+	option = {
+		name = council_on
+		text = SM_COUNCIL_POWER_ON
+		desc = SM_COUNCIL_POWER_ON_DESC
+	}
+	option = {
+		name = council_nowar
+		text = SM_COUNCIL_POWER_NO_WAR
+		desc = SM_COUNCIL_POWER_NO_WAR_DESC
+	}
+	option = {
+		name = council_off
+		text = SM_COUNCIL_POWER_OFF
+		desc = SM_COUNCIL_POWER_OFF_DESC
+		achievements = no
+	}
+}
+
+dejure_independence = {
+	name = "SM_DEJURE_INDEPENDENCE_RULE"
+	group = "RULE_GROUP_FACTIONAL_BALANCE"
+	option = {
+		name = off
+		text = SM_DEJURE_INDEPENDENCE_OFF
+		desc = SM_DEJURE_INDEPENDENCE_OFF_DESC
+	}
+	option = {
+		name = on
+		text = SM_DEJURE_INDEPENDENCE_ON
+		desc = SM_DEJURE_INDEPENDENCE_ON_DESC
+	}
+}
+
+council_form_faction = {
+	name = "SM_COUNCIL_FORM_FACTION"
+	group = "RULE_GROUP_FACTIONAL_BALANCE"
+	dlc = "Conclave"
+	option = {
+		name = on
+		text = SM_COUNCIL_FORM_FACTION_ON
+		desc = SM_COUNCIL_FORM_FACTION_ON_DESC
+	}
+	option = {
+		name = off
+		text = SM_COUNCIL_FORM_FACTION_OFF
+		desc = SM_COUNCIL_FORM_FACTION_OFF_DESC
+	}
+}
+
+realm_split = {
+	name = "SM_FACTION_REALM_SPLIT"
+	group = "RULE_GROUP_FACTIONAL_BALANCE"
+	option = {
+		name = off
+		text = SM_FACTION_REALM_SPLIT_OFF
+		desc = SM_FACTION_REALM_SPLIT_OFF_DESC
+	}
+	#option = {
+	#	name = faction_only
+	#	text = SM_FACTION_REALM_SPLIT_FACTION
+	#	desc = SM_FACTION_REALM_SPLIT_FACTION_DESC
+	#}
+	option = {
+		name = war_faction_only
+		text = SM_FACTION_REALM_SPLIT_FACTION_WAR
+		desc = SM_FACTION_REALM_SPLIT_FACTION_WAR_DESC
+	}
+	option = {
+		name = any_war
+		text = SM_FACTION_REALM_SPLIT_ANY_WAR
+		desc = SM_FACTION_REALM_SPLIT_ANY_WAR_DESC
+	}
+}

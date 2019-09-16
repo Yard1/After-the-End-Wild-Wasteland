@@ -1,0 +1,36 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+SM_COUNCIL_POWER_RULE;Council Power Faction Mode;;;;;;;;;;;;;x
+SM_COUNCIL_POWER_DESC;Configure the council power faction;;;;;;;;;;;;;x
+SM_COUNCIL_POWER_ON;On;;;;;;;;;;;;;x
+SM_COUNCIL_POWER_ON_DESC;Default behaviour, the council power faction is enabled;;;;;;;;;;;;;x
+SM_COUNCIL_POWER_NO_WAR;No Revolt War;;;;;;;;;;;;;x
+SM_COUNCIL_POWER_NO_WAR_DESC;The council power faction will never declare war if you refuse demands and will apply an opinion penalty;;;;;;;;;;;;;x
+SM_COUNCIL_POWER_OFF;Off;;;;;;;;;;;;;x
+SM_COUNCIL_POWER_OFF_DESC;The council power faction is completly disabled;;;;;;;;;;;;;x
+SMFaction.8216.desc;[From.GetTitledName] has unfortunately declined to give the [Root.GetCouncilName] more powers in deciding the policies of the realm. But your valuable support in this matter will not be forgotten.\n\nSincerely,\n[FromFrom.GetTitledName];;;;;;;;;;;;;x
+SMFaction.8216.opt;That is dissapointing.;;;;;;;;;;;;x
+SM_DEJURE_INDEPENDENCE_RULE;Dejure Independence;;;;;;;;;;;;;x
+SM_DEJURE_INDEPENDENCE_OFF;Off;;;;;;;;;;;;;x
+SM_DEJURE_INDEPENDENCE_OFF_DESC;Vanilla behaviour, independence factions will not occur for dejure same culture and religion vassals;;;;;;;;;;;;;x
+SM_DEJURE_INDEPENDENCE_ON;On;;;;;;;;;;;;;x
+SM_DEJURE_INDEPENDENCE_ON_DESC;Independence factions now have a chance to form from dejure vassals;;;;;;;;;;;;;x
+SM_COUNCIL_FORM_FACTION;Council Content Behaviour;;;;;;;;;;;;;x
+SM_COUNCIL_FORM_FACTION_OFF;Cannot Join Factions;;;;;;;;;;;;;x
+SM_COUNCIL_FORM_FACTION_OFF_DESC;Vanilla behaviour, council members cannot join factions when council is content;;;;;;;;;;;;;x
+SM_COUNCIL_FORM_FACTION_ON;Can Join;;;;;;;;;;;;;x
+SM_COUNCIL_FORM_FACTION_ON_DESC;Council members can join factions even when council is content but at a reduced chance;;;;;;;;;;;;;x
+RULE_GROUP_FACTIONAL_BALANCE;Factional Rebalance;;;;;;;;;;;;;x
+SMFaction.8.desc;With the weakened state of your liege, you and the rest of your friends in the independence faction have forced your independence;;;;;;;;;;;;;x
+SMFaction.8.opt;Excellent;;;;;;;;;;;;;x
+SM_FACTION_REALM_SPLIT;Realm Destruction;;;;;;;;;;;;;x
+SM_FACTION_REALM_SPLIT_OFF;Off;;;;;;;;;;;;;x
+SM_FACTION_REALM_SPLIT_OFF_DESC;Vanilla behaviour no extra loss of vassals can occur;;;;;;;;;;;;;x
+SM_FACTION_REALM_SPLIT_FACTION;Faction Wars Only;;;;;;;;;;;;;x
+SM_FACTION_REALM_SPLIT_FACTION_DESC;Any lost faction/revolt war will cause current members of the independence faction to turn independent;;;;;;;;;;;;;x
+SM_FACTION_REALM_SPLIT_FACTION_WAR;Independence Faction Only;;;;;;;;;;;;;x
+SM_FACTION_REALM_SPLIT_FACTION_WAR_DESC;Any lost war will cause current members of the independence faction to turn independent;;;;;;;;;;;;;x
+SM_FACTION_REALM_SPLIT_ANY_WAR;Any Vassal;;;;;;;;;;;;;x
+SM_FACTION_REALM_SPLIT_ANY_WAR_DESC;Any lost war will let any vassal decide whether to stay or break away from the liege;;;;;;;;;;;;;x
+SMFaction.9.desc;With the weakend state of your liege now could be the time to break away from your liege;;;;;;;;;;;;;x
+SMFaction.9.opt1;But I like my liege;;;;;;;;;;;;;x
+SMFaction.9.opt2;Do it! My liege has no mastery of me;;;;;;;;;;;;;x

@@ -1,0 +1,16 @@
+# From = Defender, Root = Attacker
+#on_war_ended_defeat = {
+#	events = {
+#		#SMFaction.1
+#		SMFaction.2
+#		SMFaction.3
+#	}
+#}
+
+on_war_ended_victory = {
+	events = {
+		#SMFaction.1
+		SMFaction.2
+		SMFaction.3
+	}
+}

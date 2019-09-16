@@ -1,0 +1,333 @@
+namespace = SMFaction
+
+# Inform faction backer rejected - increase council power
+letter_event = {
+	id = SMFaction.8216
+	desc = "SMFaction.8216.desc"
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "SMFaction.8216.opt"
+		
+		# Reduce opinion of liege
+		opinion = {
+			modifier = opinion_tyrant
+			who = FROM
+			years = 5
+		}
+		
+		# Faction leader happy
+		reverse_opinion = {
+			modifier = opinion_grateful
+			who = FROMFROM
+			years = 5
+		}
+		
+		add_character_modifier = {
+			name = faction_council_power_ultimatum_timer
+			hidden = yes
+			duration = 730
+		}
+	}
+}
+
+# On war loss make members of independence faction independent
+# Disabled as cannot determine which war we were in
+# ROOT = character who lost war
+# FROM = attacker in war
+character_event = {
+	id = SMFaction.1
+	hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+	
+	trigger = {
+		any_war = {
+			NOT = { using_cb = cb_faction_independence }
+			OR = {
+				using_cb = cb_faction_independence
+				using_cb = lower_tribal_organization_law
+				using_cb = powerful_vassal_takeover_war
+				using_cb = increase_council_power_war
+				using_cb = change_seniority_succession_law
+				using_cb = change_primogeniture_succession_law
+				using_cb = change_feudal_elective_succession_law
+				using_cb = lower_crown_authority_law
+				using_cb = peasant_revolt
+				using_cb = heretic_revolt
+				using_cb = religious_revolt
+				using_cb = liberation_revolt
+				using_cb = cb_minor_clan_revolt
+				using_cb = overthrow_ruler
+			}
+		}
+		has_game_rule = { name = realm_split value = faction_only }
+	}
+	
+	immediate = {
+		any_vassal = {
+			limit = {
+				in_faction = faction_independence
+			}
+			# Make independent
+			character_event = {id = SMFaction.8}
+		}
+	}
+}
+
+# On war loss make members of independence faction independent
+# ROOT = character who lost war
+# FROM = attacker in war
+character_event = {
+	id = SMFaction.2
+	hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+	
+	trigger = {
+		#any_war = {
+		#	NOT = { using_cb = cb_faction_independence } 
+		#}
+		has_game_rule = { name = realm_split value = war_faction_only}
+	}
+	
+	immediate = {
+		log = "SMFaction independence vassals becoming independent [Root.GetTitledName]"
+		any_vassal = {
+			limit = {
+				in_faction = faction_independence
+			}
+			# Make independent
+			character_event = {id = SMFaction.8}
+		}
+	}
+}
+
+# On any war loss make any vassal choose whether to stay or break away
+# ROOT = character who lost war
+# FROM = attacker in war
+character_event = {
+	id = SMFaction.3
+	hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+	
+	trigger = {
+		has_game_rule = { name = realm_split value = any_war}
+	}
+	
+	immediate = {
+		log = "SMFaction Optionally making vassals independent [Root.GetTitledName]"
+		any_vassal = {
+			# Make independent
+			if = {
+				limit = {
+					in_faction = faction_independence
+				}
+				character_event = {id = SMFaction.8}
+				break = yes
+			}
+			character_event = {id = SMFaction.9 days = 1}
+		}
+	}
+}
+
+# On war started event NOT USED
+# FROM = attacker
+character_event = {
+	id = SMFaction.4
+	hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+	
+	trigger = {
+		any_war = {
+			NOT = { using_cb = cb_faction_independence } 
+		}
+		has_game_rule = { name = realm_split value = war_faction_only}
+	}
+	
+	immediate = {
+		set_character_flag = cansplit
+	}
+}
+
+# Make characters independent
+# FROM = liege
+character_event = {
+	id = SMFaction.8
+	desc = SMFaction.8.desc
+	is_triggered_only = yes
+	
+	# Uses options to get around randomness seed not changing
+		
+	option = {
+		name = SMFaction.8.opt
+		if = {
+			limit = {
+				FROM = {
+					independent = yes
+				}
+			}
+			set_defacto_liege = ROOT 
+		}
+		# break free from current liege, but now only report to the higher up liege
+		if = {
+			limit = {
+				FROM = {
+					independent = no
+				}
+			}
+			FROM = {
+				liege = {
+					ROOT = {
+						set_defacto_liege = PREV 
+					}
+				}
+			}
+		}		
+		FROM = {
+			opinion = { modifier = opinion_angry who = ROOT years = 5 }
+		}
+	}
+}
+
+# Characters get to decide when to go independent based on opinions and traits
+# FROM = liege
+character_event = {
+	id = SMFaction.9
+	desc = SMFaction.9.desc
+	is_triggered_only = yes
+	
+	# Uses options to get around randomness seed not changing
+	
+	option = {
+		name = SMFaction.9.opt1
+		# Do nothing
+		ai_chance = {
+			factor = 1
+		}
+		prestige = 10
+	}
+	
+	option = {
+		name = SMFaction.9.opt2
+		prestige = -10
+		if = {
+			limit = {
+				FROM = {
+					independent = yes
+				}
+			}
+			set_defacto_liege = ROOT 
+		}
+		# break free from current liege, but now only report to the higher up liege
+		if = {
+			limit = {
+				FROM = {
+					independent = no
+				}
+			}
+			FROM = {
+				liege = {
+					ROOT = {
+						set_defacto_liege = PREV 
+					}
+				}
+			}
+		}		
+		FROM = {
+			opinion = { modifier = opinion_angry who = ROOT years = 5 }
+		}
+		opinion = { modifier = opinion_dislike who = FROM years = 5 }
+		ai_chance = {
+			factor = 1
+			# Increased chance for kings to break away
+			modifier = {
+				factor = 4
+				tier = king 
+			}
+			# Very much like leige
+			modifier = {
+				factor = 0
+				opinion = { who = FROM value = 70 } 
+				FROM = {
+					NOT = { character = ROOT }
+					is_liege_of = ROOT
+				}
+			}
+			# Dislike the leige
+			modifier = {
+				factor = 2
+				NOT = { opinion = { who = FROM value = 0 } } 
+				FROM = {
+					NOT = { character = ROOT }
+					is_liege_of = ROOT
+				}
+			}
+			modifier = {
+				factor = 0.5
+				de_jure_liege = FROM
+			}
+			modifier = {
+				factor = 1.25
+				tier = duke
+			}
+			modifier = {
+				factor = 0.25
+				tier = count
+			}
+			modifier = {
+				factor = 0
+				tier = baron
+			}
+			modifier = {
+				factor = 4
+				trait = ambitious
+			}
+			modifier = {
+				factor = 1.5
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 3
+				trait = deceitful
+			}
+			modifier = {
+				factor = 0.1
+				trait = craven
+			}
+			modifier = {
+				factor = 4
+				trait = lunatic
+			}
+			modifier = {
+				factor = 0.1
+				trait = imbecile
+			}
+			modifier = {
+				factor = 0.01
+				trait = content
+			}
+			# Council members not as likely to go independent
+			modifier = {
+				factor = 0.1
+				is_voter = yes
+			}
+			# If council discontent more likely to break away
+			modifier = {
+				factor = 3
+				is_voter = yes
+				FROM = {
+					OR = {
+						is_council_content = no
+						NOT = { primary_title = { has_law = war_voting_power_1 } }
+					}
+				}
+			}
+		}
+	}
+}
