@@ -753,6 +753,10 @@ character_event = {
 			holder_scope = {
 				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		
@@ -791,6 +795,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_knights_of_columbus = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_knights_of_columbus = {
@@ -1419,6 +1431,10 @@ character_event = {
 			holder_scope = {
 				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		
@@ -1452,6 +1468,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_knights_of_peter_claver = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_knights_of_peter_claver = {
@@ -2984,6 +3008,10 @@ character_event = {
 			holder_scope = {
 				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		
@@ -3017,6 +3045,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_st_ursulas_chosen = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_st_ursulas_chosen = {
@@ -5399,6 +5435,10 @@ character_event = {
 			holder_scope = {
 				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		
@@ -5428,6 +5468,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_national_cathedral = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_national_cathedral = {
@@ -6160,6 +6208,10 @@ character_event = {
 			holder_scope = {
 				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		
@@ -6189,6 +6241,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_lebanon_brethren = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_lebanon_brethren = {
@@ -6880,6 +6940,17 @@ character_event = {
 	trigger = {
 		d_judah_lions = {
 			holder_scope = {
+				character = yes
+				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
+			}
+		}
+
+		d_judah_lions = {
+			holder_scope = {
 				wealth = 300
 				NOT = {
 					realm_size = 10
@@ -6904,6 +6975,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_judah_lions = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_judah_lions = {
@@ -7601,6 +7680,10 @@ character_event = {
 			holder_scope = {
 				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		
@@ -7630,6 +7713,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_zealots = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_zealots = {
@@ -8192,6 +8283,17 @@ character_event = {
 	trigger = {
 		d_fm = {
 			holder_scope = {
+				character = yes
+				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
+			}
+		}
+
+		d_fm = {
+			holder_scope = {
 				wealth = 300
 				NOT = {
 					realm_size = 10
@@ -8216,6 +8318,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_fm = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_fm = {
@@ -8933,6 +9043,17 @@ character_event = {
 	trigger = {
 		d_flaming_sword = {
 			holder_scope = {
+				character = yes
+				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
+			}
+		}
+	
+		d_flaming_sword = {
+			holder_scope = {
 				wealth = 300
 				NOT = {
 					realm_size = 10
@@ -8957,6 +9078,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_flaming_sword = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_flaming_sword = {
@@ -9676,6 +9805,10 @@ character_event = {
 			holder_scope = {
 				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		d_midwestern_brotherhood = {
@@ -9704,6 +9837,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_midwestern_brotherhood = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_midwestern_brotherhood = {
@@ -10420,6 +10561,16 @@ character_event = {
 	trigger = {
 		d_keepers_of_the_green_peace = {
 			holder_scope = {
+				character = yes
+				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
+			}
+		}
+		d_keepers_of_the_green_peace = {
+			holder_scope = {
 				wealth = 300
 				NOT = {
 					realm_size = 10
@@ -10443,6 +10594,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_keepers_of_the_green_peace = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_keepers_of_the_green_peace = {
@@ -11160,6 +11319,10 @@ character_event = {
 			holder_scope = {
 				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		d_nauvoo_legion = {
@@ -11193,6 +11356,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_nauvoo_legion = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_nauvoo_legion = {
@@ -11760,6 +11931,16 @@ character_event = {
 	trigger = {
 		d_oto = {
 			holder_scope = {
+				character = yes
+				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
+			}
+		}
+		d_oto = {
+			holder_scope = {
 				wealth = 300
 				NOT = {
 					realm_size = 10
@@ -11783,6 +11964,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_oto = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_oto = {
@@ -12517,6 +12706,16 @@ character_event = {
 	religion = sacred_heart
 	
 	trigger = {	
+		d_oto = {
+			holder_scope = {
+				character = yes
+				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
+			}
+		}
 		d_masked_knights = {
 			holder_scope = {
 				wealth = 300
@@ -12543,6 +12742,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_masked_knights = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_masked_knights = {
@@ -13285,6 +13492,10 @@ character_event = {
 			holder_scope = {
 				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		
@@ -13314,6 +13525,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_order_of_brotherhood = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_order_of_brotherhood = {
@@ -14051,6 +14270,10 @@ character_event = {
 			holder_scope = {
 				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		
@@ -14086,6 +14309,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_st_pats = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_st_pats = {

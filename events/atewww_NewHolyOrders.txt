@@ -334,7 +334,12 @@ character_event = {
 		}
         d_libertarian = {
 			holder_scope = {
+				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		d_libertarian = {
@@ -362,6 +367,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_libertarian = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_libertarian = {
@@ -1162,7 +1175,12 @@ character_event = {
 	trigger = {
         d_american_legion = {
 			holder_scope = {
+				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		d_american_legion = {
@@ -1191,6 +1209,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_american_legion = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_american_legion = {
@@ -1741,7 +1767,12 @@ character_event = {
 	trigger = {
         d_enclave = {
 			holder_scope = {
+				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		d_enclave = {
@@ -1773,6 +1804,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_enclave = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_enclave = {
@@ -2325,7 +2364,12 @@ character_event = {
 	trigger = {
         d_uel = {
 			holder_scope = {
+				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		d_uel = {
@@ -2358,6 +2402,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_uel = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_uel = {
@@ -2902,7 +2954,12 @@ character_event = {
 	trigger = {
         d_golden_bears = {
 			holder_scope = {
+				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		d_golden_bears = {
@@ -2934,6 +2991,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_golden_bears = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_golden_bears = {
@@ -3480,7 +3545,12 @@ character_event = {
 	trigger = {
         d_golden_archers = {
 			holder_scope = {
+				character = yes
 				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
 			}
 		}
 		d_golden_archers = {
@@ -3508,6 +3578,14 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	mean_time_to_happen = {
 		months = 200
+		modifier = {
+			factor = 0.5
+			d_golden_archers = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
 		modifier = {
 			factor = 0.5
 			d_golden_archers = {

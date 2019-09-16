@@ -231,7 +231,7 @@ defined_text = {
 				religion = jeffersonian
 			}
 		}
-		localisation_key = CORPSMAN
+		localisation_key = JUDGE_ADVOCATE
 	}
 	text = {
 		trigger = { 
@@ -300,14 +300,6 @@ defined_text = {
 
 defined_text = {
 	name = GetPriestPlural
-	text = {
-		trigger = { 
-			OR = {
-				religion = jeffersonian
-			}
-		}
-		localisation_key = CORPSMEN
-	}
 	text = {
 		trigger = { 
 			religion = peyotist

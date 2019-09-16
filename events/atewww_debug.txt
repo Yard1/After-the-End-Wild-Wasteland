@@ -121,16 +121,28 @@ character_event = {
 	id = ATE_WWW_DEBUG.3
 	desc = "DEBUG"
 	picture = GFX_evt_capitol_building
+	hide_window = yes
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "I should be visible if you are libertanian!"
-		trigger = { is_monastic_member_trigger = yes }
+		log = "AI CHANCE 2 OPTION A"
+		ai_chance = {
+			factor = 1
+			additive_modifier = {
+				value = 1
+			}
+		}
 	}
 
 	option = {
-		name = "always visible!"
+		log = "AI CHANCE 2 OPTION B"
+		ai_chance = {
+			factor = 1
+			additive_modifier = {
+				value = 1
+			}
+		}
 	}
 
 }

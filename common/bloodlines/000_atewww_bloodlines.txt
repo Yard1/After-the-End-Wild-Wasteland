@@ -41,7 +41,7 @@ trump = { #Trumps
 	inheritance = patrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_trump
-	flags = { presidential_bloodline historical_bloodline pre_event_bloodline }
+	flags = { prez_bloodline historical_bloodline pre_event_bloodline }
 }
 
 pirate_king_bloodline = { #Spawned tribal raider troops are more numerous.

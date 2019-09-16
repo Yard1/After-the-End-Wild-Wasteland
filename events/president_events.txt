@@ -423,12 +423,12 @@ letter_event = {
 			factor = 1
 			#Presidential bloodline.
 			additive_modifier = { 
-				value = 15
+				value = 5
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c1 }
 				event_target:c1 = {
 					any_owned_bloodline = {
-						has_bloodline_flag = presidential_bloodline
+						has_bloodline_flag = prez_bloodline
 					}
 				}
 			}
@@ -2608,12 +2608,12 @@ letter_event = {
 		ai_chance = {
             factor = 1
 			additive_modifier = { 
-				value = 15
+				value = 5
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c2 }
 				event_target:c2 = {
 					any_owned_bloodline = {
-						has_bloodline_flag = presidential_bloodline
+						has_bloodline_flag = prez_bloodline
 					}
 				}
 			}
@@ -4793,12 +4793,12 @@ letter_event = {
 		ai_chance = {
             factor = 1
 			additive_modifier = { 
-				value = 15
+				value = 5
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c3 }
 				event_target:c3 = {
 					any_owned_bloodline = {
-						has_bloodline_flag = presidential_bloodline
+						has_bloodline_flag = prez_bloodline
 					}
 				}
 			}
@@ -6978,12 +6978,12 @@ letter_event = {
 		ai_chance = {
             factor = 1
 			additive_modifier = { 
-				value = 15
+				value = 5
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c4 }
 				event_target:c4 = {
 					any_owned_bloodline = {
-						has_bloodline_flag = presidential_bloodline
+						has_bloodline_flag = prez_bloodline
 					}
 				}
 			}
@@ -9797,12 +9797,12 @@ character_event = {
 			factor = 1
 			#Presidential bloodline.
 			additive_modifier = { 
-				value = 15
+				value = 5
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c1 }
 				event_target:c1 = {
 					any_owned_bloodline = {
-						has_bloodline_flag = presidential_bloodline
+						has_bloodline_flag = prez_bloodline
 					}
 				}
 			}
@@ -11981,12 +11981,12 @@ character_event = {
 		ai_chance = {
             factor = 1
 			additive_modifier = { 
-				value = 15
+				value = 5
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c2 }
 				event_target:c2 = {
 					any_owned_bloodline = {
-						has_bloodline_flag = presidential_bloodline
+						has_bloodline_flag = prez_bloodline
 					}
 				}
 			}
@@ -14165,12 +14165,12 @@ character_event = {
 		ai_chance = {
             factor = 1
 			additive_modifier = { 
-				value = 15
+				value = 5
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c3 }
 				event_target:c3 = {
 					any_owned_bloodline = {
-						has_bloodline_flag = presidential_bloodline
+						has_bloodline_flag = prez_bloodline
 					}
 				}
 			}
@@ -16349,12 +16349,12 @@ character_event = {
 		ai_chance = {
             factor = 1
 			additive_modifier = { 
-				value = 15
+				value = 5
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c4 }
 				event_target:c4 = {
 					any_owned_bloodline = {
-						has_bloodline_flag = presidential_bloodline
+						has_bloodline_flag = prez_bloodline
 					}
 				}
 			}

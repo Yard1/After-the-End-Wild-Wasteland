@@ -1154,7 +1154,7 @@ character_event = {
 	}
  
 	mean_time_to_happen = {
-		years = 80
+		years = 75
 		modifier = {
 			factor = 0.75
 			any_demesne_province = {
@@ -1210,8 +1210,6 @@ character_event = {
 	}
 }
 
-
- 
 ### Redcoats sack American cities ###
  
 # Redcoats sack DC

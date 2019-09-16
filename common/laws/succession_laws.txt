@@ -1733,7 +1733,7 @@ gender_laws = {
 		}
 		revoke_allowed = {
 			always = no
-		}			
+		}
 		default = yes
 		default_selection = {
 			factor = 1
@@ -1865,7 +1865,14 @@ gender_laws = {
 		}
 		revoke_allowed = {
 			always = no
-		}	
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				matriarchal_religion = yes
+			}
+		}
 		default_selection = {
 			factor = 1
 			
@@ -2007,6 +2014,11 @@ gender_laws = {
 				religion_allows_female_temple_holders = yes
 				religion_allows_male_temple_holders = no
 			}
+			modifier = {
+				factor = 0
+				is_theocracy = no
+				holy_order = no
+			}
 		}
 	}
 	
@@ -2051,6 +2063,19 @@ gender_laws = {
 		revoke_allowed = {
 			always = no
 		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				OR = {
+					is_landless_type_title = yes
+					is_theocracy = yes
+					holy_order = yes
+					matriarchal_religion = no
+
+				}
+			}
+		}
 		default_selection = {
 			factor = 1
 			
@@ -2060,12 +2085,7 @@ gender_laws = {
 				holder_scope = {
 					is_theocracy = no
 					holy_order = no
-					OR = {
-						matriarchal_religion = yes
-						any_owned_bloodline = {
-							has_bloodline_flag = bloodline_enatic_cognatic 
-						}
-					}
+					matriarchal_religion = yes
 				}
 			}
 		}		

@@ -2,6 +2,7 @@ decisions = {
 
 	restore_presidency_af = {
 			is_high_prio = yes
+			only_rulers = yes
 			potential = {
 				NOT = {
 					has_alternate_start_parameter = { key = religion_names value = random }
@@ -17,6 +18,8 @@ decisions = {
 				in_seclusion = no
 				prisoner = no
 				is_incapable = no
+				holy_order = no
+				mercenary = no
 				primary_title = { higher_real_tier_than = COUNT }
 				completely_controls = c_washington
 			}

@@ -3240,6 +3240,7 @@ the_assassins = {
 			}
 		}
 		age = 16
+		hidden_trigger = { mercenary = no }
 		OR = {
 			true_religion = americanist
 			true_religion = jeffersonian

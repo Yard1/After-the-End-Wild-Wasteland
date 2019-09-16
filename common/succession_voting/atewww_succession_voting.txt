@@ -2687,7 +2687,7 @@ mib_elective = {
 		}
 
 		additive_modifier = { # Sneaky Byzantines
-			value = 10
+			value = 15
 			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
 			FROM = { 
 				intrigue = 10
@@ -2697,7 +2697,7 @@ mib_elective = {
 			}
 		}
 		additive_modifier = { # Sneaky Byzantines
-			value = 20
+			value = 30
 			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
 			FROM = { 
 				intrigue = 12
@@ -2707,7 +2707,7 @@ mib_elective = {
 			}
 		}
 		additive_modifier = { # Sneaky Byzantines
-			value = 30
+			value = 45
 			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
 			FROM = { 
 				intrigue = 16
@@ -2717,7 +2717,7 @@ mib_elective = {
 			}
 		}
 		additive_modifier = { # Sneaky Byzantines
-			value = 50
+			value = 75
 			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
 			FROM = { 
 				intrigue = 18
@@ -2727,7 +2727,7 @@ mib_elective = {
 			}
 		}
 		additive_modifier = { # Sneaky Byzantines
-			value = 60
+			value = 90
 			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
 			FROM = { 
 				intrigue = 20
@@ -2737,7 +2737,7 @@ mib_elective = {
 			}
 		}
 		additive_modifier = { # Sneaky Byzantines
-			value = 70
+			value = 105
 			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
 			FROM = { 
 				intrigue = 30
@@ -2746,7 +2746,7 @@ mib_elective = {
 
 		#Educational preferences
 		additive_modifier = { # Warrior culture prefers warriors
-			value = 15
+			value = 30
 			localisation_key = tooltip_feudal_elector_vote_martial_education
 			FROM = { 
 				martial = 10
@@ -2759,7 +2759,7 @@ mib_elective = {
 
 		#Educational preferences
 		additive_modifier = { # Warrior culture prefers warriors
-			value = 20
+			value = 60
 			localisation_key = tooltip_feudal_elector_vote_intrigue_education
 			FROM = { 
 				intrigue = 10
