@@ -1,0 +1,264 @@
+namespace = AFMC
+
+character_event = {
+	id = AFMC.1
+	desc = DEBUG
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		has_landed_title = k_papal_state
+		NOT = {
+			has_global_flag = year_set
+		}
+	}
+	
+	immediate = {
+		set_global_flag = year_set
+		k_papal_state = {
+			holder_scope = {
+				if = {
+					limit = {
+						year = 2380
+					}
+					set_variable = { which = am_year value = 604 }
+				}
+				if = {
+					limit = {
+						year = 2666
+					}
+					set_variable = { which = am_year value = 890 }
+				}
+				character_event = { id = AFMC.2 days = 365 }
+			}
+		}
+	}
+	
+	option = {
+		name = DEBUG
+	}
+}
+
+character_event = {
+	id = AFMC.2
+	desc = DEBUG
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		has_landed_title = k_papal_state
+		has_global_flag = year_set
+	}
+	
+	immediate = {
+		k_papal_state = {
+			holder_scope = {
+				FROM = { change_variable = { which = "am_year" value = 1 } }
+				character_event = { id = AFMC.2 days = 365 }
+			}
+		}
+	}
+	
+	option = {
+		name = DEBUG
+	}
+}
+
+character_event = {
+	id = AFMC.3
+	desc = DEBUG
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		has_landed_title = k_papal_state
+		NOT = {
+			has_global_flag = day_set
+		}
+	}
+	
+	immediate = {
+		set_global_flag = day_set
+		set_global_flag = day_timer
+		k_papal_state = {
+			holder_scope = {
+				character_event = { id = AFMC.4 days = 28 }
+			}
+		}
+	}
+	
+	option = {
+		name = DEBUG
+	}
+}
+
+character_event = {
+	id = AFMC.4
+	desc = DEBUG
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		has_landed_title = k_papal_state
+		has_global_flag = day_set
+	}
+	clr_global_flag = day_timer
+		
+			set_global_flag = day_timer
+	immediate = {
+		if = {
+			limit = {
+				month = 0
+			}
+			k_papal_state = {
+				holder_scope = {
+					character_event = { id = AFMC.4 days = 31 }
+					character_event = { id = AFMC.5 }
+				}
+			}
+			
+		}
+		if = {
+			limit = {
+				month = 1
+			}
+			k_papal_state = {
+				holder_scope = {
+					character_event = { id = AFMC.4 days = 28 }
+					character_event = { id = AFMC.5 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				month = 2
+			}
+			k_papal_state = {
+				holder_scope = {
+					character_event = { id = AFMC.4 days = 31 }
+					character_event = { id = AFMC.5 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				month = 3
+			}
+			k_papal_state = {
+				holder_scope = {
+					character_event = { id = AFMC.4 days = 30 }
+					character_event = { id = AFMC.5 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				month = 4
+			}
+			k_papal_state = {
+				holder_scope = {
+					character_event = { id = AFMC.4 days = 31 }
+					character_event = { id = AFMC.5 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				month = 5
+			}
+			k_papal_state = {
+				holder_scope = {
+					character_event = { id = AFMC.4 days = 30 }
+					character_event = { id = AFMC.5 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				month = 6
+			}
+			k_papal_state = {
+				holder_scope = {
+					character_event = { id = AFMC.4 days = 31 }
+					character_event = { id = AFMC.5 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				month = 7
+			}
+			k_papal_state = {
+				holder_scope = {
+					character_event = { id = AFMC.4 days = 31 }
+					character_event = { id = AFMC.5 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				month = 8
+			}
+			k_papal_state = {
+				holder_scope = {
+					character_event = { id = AFMC.4 days = 30 }
+					character_event = { id = AFMC.5 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				month = 9
+			}
+			k_papal_state = {
+				holder_scope = {
+					character_event = { id = AFMC.4 days = 31 }
+					character_event = { id = AFMC.5 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				month = 10
+			}
+			k_papal_state = {
+				holder_scope = {
+					character_event = { id = AFMC.4 days = 30 }
+					character_event = { id = AFMC.5 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				month = 11
+			}
+			k_papal_state = {
+				holder_scope = {
+					character_event = { id = AFMC.4 days = 31 }
+					character_event = { id = AFMC.5 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = DEBUG
+	}
+}
+
+character_event = {
+	id = AFMC.5
+	desc = DEBUG
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		clr_global_flag = day_timer
+		
+		set_global_flag = day_timer
+	}
+	
+	option = {
+		name = DEBUG
+	}
+}

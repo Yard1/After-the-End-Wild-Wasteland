@@ -1,0 +1,126 @@
+prez_dip = {
+	monthly_character_piety = 1	
+	general_opinion = 5
+	diplomacy = 1
+	inheritance = all_descendants
+	allow_bastards = no
+	flags = { prez_bloodline patriot }
+	picture = GFX_bloodlines_temp_symbol
+	active = {
+		custom_tooltip = {
+			text = prez_bloodline_TT
+			FROM = {
+				founder = {
+					religion = ROOT
+				}
+			}
+		}
+	}
+}
+
+prez_mar = {
+	monthly_character_piety = 0.3
+	command_modifier = {
+		religious_enemy = 0.2
+	}	
+	martial = 1
+	inheritance = all_descendants
+	allow_bastards = no
+	flags = { prez_bloodline patriot }
+	picture = GFX_bloodlines_symbol_tengri_eagle
+	active = {
+		custom_tooltip = {
+			text = prez_bloodline_TT
+			FROM = {
+				founder = {
+					religion = ROOT
+				}
+			}
+		}
+	}
+}
+
+prez_ste = {
+	monthly_character_piety = 1	
+	town_opinion = 5
+	stewardship = 1
+	inheritance = all_descendants
+	allow_bastards = no
+	flags = { prez_bloodline patriot }
+	picture = GFX_bloodlines_symbol_builder
+	active = {
+		custom_tooltip = {
+			text = prez_bloodline_TT
+			FROM = {
+				founder = {
+					religion = ROOT
+				}
+			}
+		}
+	}
+}
+
+prez_int = {
+	monthly_character_piety = 1	
+	general_opinion = -5
+	intrigue = 1
+	inheritance = all_descendants
+	allow_bastards = no
+	flags = { prez_bloodline patriot }
+	picture = GFX_bloodlines_symbol_murder
+	active = {
+		custom_tooltip = {
+			text = prez_bloodline_TT
+			FROM = {
+				founder = {
+					religion = ROOT
+				}
+			}
+		}
+	}
+}
+
+prez_lea = {
+	monthly_character_piety = 2
+	church_opinion = 5
+	learning = 1
+	inheritance = all_descendants
+	allow_bastards = no
+	flags = { prez_bloodline patriot }
+	picture = GFX_bloodlines_symbol_stoics
+	active = {
+		custom_tooltip = {
+			text = prez_bloodline_TT
+			FROM = {
+				founder = {
+					religion = ROOT
+				}
+			}
+		}
+	}
+}
+
+prez_fam = {
+	monthly_character_piety = 2
+	general_opinion = 5
+	prestige = 0.5
+	diplomacy = 1
+	stewardship = 1
+	martial = 1
+	intrigue = 1
+	learning = 1
+	inheritance = all_descendants
+	allow_bastards = no
+	flags = { patriot bloodline_prez_fam }
+	picture = GFX_bloodlines_symbol_roman
+	active = {
+		custom_tooltip = {
+			text = prez_bloodline_TT
+			FROM = {
+				founder = {
+					religion = ROOT
+				}
+			}
+		}
+	}
+}

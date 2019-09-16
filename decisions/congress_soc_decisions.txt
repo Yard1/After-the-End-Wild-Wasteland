@@ -1,0 +1,778 @@
+decisions = {
+
+	create_congress = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 120 #check only once every 120 months.
+		
+		potential = {
+			custom_tooltip = {
+				text = congress_inac_TT
+				hidden_tooltip = {
+					NOT = {
+						has_global_flag = flag_restored_congress
+					}
+				}
+			}
+			OR = {
+				government = constitutional_rep
+				government = mconstitutional_rep
+			}
+			has_landed_title = e_usa
+			has_dlc = "Mystics"
+			age = 16
+			NOT = { trait = excommunicated }
+			NOT = { 
+				soc_congress = {
+					society_has_members = yes
+				}
+			}
+		}
+		
+		allow = {
+			NOT = { 
+				trait = incapable
+			}
+			higher_tier_than = KING
+			is_inaccessible_trigger = no
+			scaled_wealth = 0.25
+		}
+		
+		effect = {
+			scaled_wealth = -0.25
+			custom_tooltip = { text = create_congress_tooltip }
+			hidden_tooltip = {
+				set_global_flag = flag_restored_congress
+				set_character_flag = call_to_congress
+				set_global_flag = first_leg
+			}
+			character_event = { id = SC.3 }
+			character_event = { id = SC.5 days = 30 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	call_to_congress = {
+		only_playable = yes
+		is_high_prio = yes
+		
+		potential = {
+			NOT = {
+				trait = incapable
+			}
+			has_landed_title = e_usa
+			age = 16
+			soc_congress = {
+				society_has_members = yes
+			}
+			NOT = {
+				is_society_rank_full = {
+					society = soc_congress
+					rank = 1
+				}
+			}
+			any_realm_character = {
+				primary_title = { higher_tier_than = BARON }
+				NOT = {
+					has_landed_title = d_americanist
+				}
+				NOT = {
+					has_character_flag = congress_invited
+				}
+			}
+		}
+		
+		allow = {
+			prisoner = no
+			is_inaccessible_trigger = no
+			wealth = 100
+			custom_tooltip = {
+				text = no_recentcall_TT
+				hidden_tooltip = {
+					OR = {
+						had_character_flag = { flag = call_to_congress days = 365 }
+						NOT = { has_character_flag = call_to_congress }
+					}
+				}
+			}
+		}
+		
+		effect = {
+			wealth = -100
+			custom_tooltip = {
+				name = call_to_congress_TT
+				hidden_tooltip = {
+					clr_character_flag = call_to_congress
+					set_character_flag = call_to_congress
+				}
+			}
+			character_event = { id = SC.3 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	form_party = {
+		only_playable = yes
+		is_high_prio = yes
+		is_in_society = yes
+		
+		potential = {
+			NOR = {
+				trait = demrep
+				trait = am_loyalist
+			}
+			custom_tooltip = {
+				text = noparty_TT
+				hidden_tooltip = {
+					NAND = {
+						has_global_flag = demrep_founded
+						has_global_flag = am_loyalist_f
+					}
+				}
+			}
+			society_member_of = soc_congress
+			custom_tooltip = {
+				text = formedparty_TT
+				hidden_tooltip = {
+					NOT = {
+						has_character_flag = partyleader
+					}
+				}
+			}
+		}
+		
+		allow = {
+			NOT = {
+				trait = incapable
+			}
+			scaled_wealth = 0.10
+		}
+		
+		effect = {
+			scaled_wealth = -0.10
+			character_event = { id = SC.1 }
+			set_character_flag = partyleader
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	join_party = {
+		only_playable = yes
+		is_high_prio = yes
+		is_in_society = yes
+		
+		potential = {
+			NOR = {
+				trait = demrep
+				trait = am_loyalist
+			}
+			OR = {
+				has_global_flag = demrep_founded
+				has_global_flag = am_loyalist_f
+			}
+			society_member_of = soc_congress
+			custom_tooltip = {
+				text = notjoining_TT
+				hidden_tooltip = {
+					NOT = {
+						has_character_flag = joining_party
+					}
+				}
+			}
+		}
+		
+		allow = {
+			NOT = {
+				trait = incapable
+			}
+		}
+		
+		effect = {
+			character_event = { id = SC.2 }
+			set_character_flag = joining_party
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	run_for_speaker = {
+		is_high_prio = yes
+		is_in_society = yes
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			custom_tooltip = {
+				text = speakerelection_TT
+				hidden_tooltip = {
+					has_global_flag = speaker_election
+					has_global_flag = speaker_candidacy
+				}
+			}
+			NOT = { trait = on_campaign_speaker }
+			NOT = { has_character_flag = dropped_out }
+			society_member_of = soc_congress
+			society_rank = 2
+		}
+		allow = {
+			age = 16
+			NOT = { trait = in_hiding }
+			NOT = { trait = incapable }
+			is_landed = yes
+			# Reduce the number of candidates somewhat
+			hidden_tooltip = { 
+				OR = {
+					ai = no
+					diplomacy = 10
+					learning = 10
+					intrigue = 10
+					trait = ambitious
+				} 
+			}
+		}
+		effect = {
+			add_trait = on_campaign_speaker
+			set_character_flag = speaker_candidate
+			hidden_tooltip = {
+				any_playable_ruler = { # Inform players
+					limit = {
+						society_member_of = soc_congress
+					}
+					character_event = { id = SC.7 }
+				}
+				k_papal_state = { holder_scope = { change_variable = { which = s_num_candidates value = 1 } } }
+				any_character = {
+					limit = {
+						trait = on_campaign_speaker
+						has_character_flag = speaker_candidate
+					}
+					opinion = { modifier = opposing_candidate who = ROOT }
+					reverse_opinion = { modifier = opposing_candidate who = ROOT }
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 8
+				num_of_count_titles = 1
+			}
+			modifier = {
+				factor = 0
+				k_papal_state = { holder_scope = { check_variable = { which = s_num_candidates value = 15 } } }
+			}
+			modifier = {
+				factor = 0.15
+				k_papal_state = { holder_scope = { check_variable = { which = s_num_candidates value = 8 } } }
+			}
+			modifier = {
+				factor = 0.4
+				k_papal_state = { holder_scope = { check_variable = { which = s_num_candidates value = 4 } } }
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 1.5
+				trait = diligent
+			}
+			modifier = {
+				factor = 0.5
+				trait = slothful
+			}
+			modifier = {
+				factor = 1.5
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.5
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			
+			modifier = {
+				factor = 1.25
+				diplomacy = 15
+			}
+			modifier = {
+				factor = 1.25
+				intrigue = 15
+			}
+			modifier = {
+				factor = 1.5
+				learning = 15
+			}
+			modifier = {
+				factor = 1.25
+				diplomacy = 20
+			}
+			modifier = {
+				factor = 1.25
+				intrigue = 20
+			}
+			modifier = {
+				factor = 1.5
+				learning = 20
+			}
+		}
+	}
+	
+	
+	drop_out_of_campaign_spkr = {
+		is_high_prio = yes
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			trait = on_campaign_speaker
+			has_global_flag = speaker_election
+			NOT = { has_global_flag = speaker_voting }
+			k_papal_state = { holder_scope = { check_variable = { which = s_num_candidates value = 1.9 } } } # last candidate can't drop out
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			hidden_tooltip = { character_event = { id = SC.11 } }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			modifier = {
+				factor = 5
+				NOT = { wealth = 0 }
+			}
+		}
+	}
+	
+	show_candidates_spkr = {
+		is_high_prio = yes
+		potential = {
+			ai = no
+			society_member_of = soc_congress
+			has_global_flag = speaker_election
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			character_event = { id = SC.9 }
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = { factor = 0 }
+	}
+	
+	hold_opinion_poll_spkr = {
+		is_high_prio = yes
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			trait = on_campaign_speaker
+		}
+		allow = {
+			wealth = 5
+		}
+		effect = {
+			wealth = -5
+			hidden_tooltip = {
+				save_event_target_as = candidate
+				k_papal_state = { holder_scope = { character_event = { id = SC.26 } } }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	propose_tax_legislation = {
+		is_high_prio = yes
+		is_in_society = yes
+		potential = {
+			society_member_of = soc_congress
+			trait = demrep
+			NOT = {
+				has_global_flag = speaker_election
+				has_character_flag = legislation
+			}
+		}
+		allow = {
+			society_currency = 50
+			custom_tooltip = {
+				text = not_content_TT
+				hidden_tooltip = {
+					NAND = {
+						has_global_flag = c_neg_tax
+						trait = demrep
+					}
+				}
+			}
+			custom_tooltip = {
+				text = speaker_available
+				hidden_tooltip = {
+					speaker = {
+						is_inaccessible_trigger = no
+					}
+				}
+			}
+			custom_tooltip = {
+				text = can_vote_TT
+				hidden_tooltip = {
+					OR = {
+						had_global_flag = { flag = bill_pass days = 365 }
+						NOT = {
+							has_global_flag = bill_pass
+						}
+					}
+					NOT = {
+						has_global_flag = bill_sent
+					}
+				}
+			}
+		}
+		effect = {
+			character_event = { id = SC.33 }
+			change_society_currency = -50
+			hidden_tooltip = {
+				clr_global_flag = bill_pass
+				set_global_flag = bill_sent
+								
+				set_character_flag = legislation
+			}
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = { 
+			factor = 0.7
+		}
+	}
+	
+	propose_legislation_b = {
+		is_high_prio = yes
+		is_in_society = yes
+		potential = {
+			society_member_of = soc_congress
+			NOT = {
+				has_global_flag = speaker_election
+				has_character_flag = legislation
+			}
+		}
+		allow = {
+			society_currency = 50
+			custom_tooltip = {
+				text = speaker_available
+				hidden_tooltip = {
+					speaker = {
+						is_inaccessible_trigger = no
+					}
+				}
+			}
+			custom_tooltip = {
+				text = can_vote_TT
+				hidden_tooltip = {
+					OR = {
+						had_global_flag = { flag = bill_pass days = 365 }
+						NOT = {
+							has_global_flag = bill_pass
+						}
+					}
+					NOT = {
+						has_global_flag = bill_sent
+					}
+				}
+			}
+		}
+		effect = {
+			change_society_currency = -50
+			character_event = { id = SC.63 }
+			hidden_tooltip = {
+				clr_global_flag = bill_pass
+				set_global_flag = bill_sent
+								
+				set_character_flag = legislation
+			}
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = { 
+			factor = 0.8 
+		}
+	}
+	
+	propose_legislation = {
+		is_high_prio = yes
+		is_in_society = yes
+		potential = {
+			society_member_of = soc_congress
+			NOT = {
+				has_global_flag = speaker_election
+				has_character_flag = legislation
+			}
+		}
+		allow = {
+			society_currency = 50
+			NOR = {
+				AND = {
+					trait = demrep
+					has_global_flag = c_neg_pt
+					has_global_flag = c_neg_vp
+					has_global_flag = c_neg_war
+					has_global_flag = c_neg_te
+				}
+				AND = {
+					trait = am_loyalist
+					has_global_flag = c_pos_pt
+					has_global_flag = c_pos_vp
+					has_global_flag = c_pos_war
+					has_global_flag = c_pos_te
+				}
+			}
+			custom_tooltip = {
+				text = speaker_available
+				hidden_tooltip = {
+					speaker = {
+						is_inaccessible_trigger = no
+					}
+				}
+			}
+			custom_tooltip = {
+				text = can_vote_TT
+				hidden_tooltip = {
+					OR = {
+						had_global_flag = { flag = bill_pass days = 365 }
+						NOT = {
+							has_global_flag = bill_pass
+						}
+					}
+					NOT = {
+						has_global_flag = bill_sent
+					}
+				}
+			}
+		}
+		effect = {
+			change_society_currency = -50
+			character_event = { id = SC.37 }
+			hidden_tooltip = {
+				clr_global_flag = bill_pass
+				set_global_flag = bill_sent
+								
+				set_character_flag = legislation
+			}
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = { 
+			factor = 0.9 
+		}
+	}
+	
+	executive_order_us = {
+		is_high_prio = yes
+		potential = {
+			has_landed_title = e_usa
+			OR = {
+				government = constitutional_rep
+				government = mconstitutional_rep
+			}
+			NOT = {
+				has_global_flag = exec_order_sent
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				text = con_support_TT
+				hidden_tooltip = {
+				has_global_flag = c_pos_pt
+				has_global_flag = c_pos_vp
+				has_global_flag = c_pos_war
+				has_global_flag = c_pos_te
+				}
+			}
+			custom_tooltip = {
+				text = speaker_loyal
+				hidden_tooltip = {
+					speaker = {
+						trait = am_loyalist
+					}
+				}
+			}
+			age = 16
+			is_inaccessible_trigger = no
+		}
+		effect = {
+			set_global_flag = exec_order_sent
+			narrative_event = { id = SC.51 }
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+	
+	hereditary_prez = {
+		is_high_prio = yes
+		potential = {
+			has_landed_title = e_usa
+			has_landed_title = d_americanist
+			NOT = {
+				has_global_flag = hered_prez
+			}
+			has_global_flag = exec_order_sent
+		}
+		allow = {
+			religion_authority = 0.8
+			prestige = 2000
+			piety = 1000
+			scaled_wealth = 2
+		}
+		effect = {
+			set_global_flag = hered_prez
+			set_global_flag = pres_election
+			narrative_event = { id = SC.59 }
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+	
+	party_census = {
+		is_high_prio = yes
+		potential = {
+			ai = no
+			OR = {
+				society_member_of = soc_congress
+				AND = {
+					has_landed_title = e_usa
+					has_global_flag = flag_restored_congress
+					soc_congress = {
+						society_has_members = yes
+					}
+				}
+			}
+		}
+		allow = {
+			OR = {
+				trait = demrep
+				trait = am_loyalist
+				has_landed_title = e_usa
+			}
+			wealth = 5
+		}
+		effect = {
+			wealth = -5
+			hidden_tooltip = {
+				save_event_target_as = p_taker
+				k_papal_state = { holder_scope = { character_event = { id = SC.56 } } }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+targetted_decisions = {
+
+	whip_up_support = { #This event chain is extremely kinky
+		is_high_prio = yes
+		is_in_society = yes
+		ai_check_interval = 12
+		filter = society
+		from_potential = {
+			society_member_of = soc_congress
+		}
+		potential = {
+			society_member_of = soc_congress
+			OR = {
+				NOT = {
+					has_character_flag = attempted_whip
+				}
+				had_character_flag = {
+					flag = attempted_whip
+					days = 365
+				}
+			}
+		}
+		allow = {
+			prisoner = no
+			in_command = no
+			is_inaccessible_trigger = no
+			FROM = {
+				is_inaccessible_trigger = no
+				prisoner = no
+				in_command = no
+				society_currency = 250
+			}
+			OR = {
+				AND = {
+					ROOT = {
+						trait = demrep
+					}
+					FROM = {
+						trait = am_loyalist
+					}
+				}
+				AND = {
+					ROOT = {
+						trait = am_loyalist
+					}
+					FROM = {
+						trait = demrep
+					}
+				}
+			}
+		}
+		effect = {
+			FROM = { 
+				change_society_currency = -250 
+				save_event_target_as  = sender_whip
+			}
+			ROOT = { 
+				character_event = { id = SC.53 } 
+				save_event_target_as = receiver_whip
+				set_character_flag = attempted_whip
+			}
+		}
+		revoke_allowed = { always = no }
+		ai_will_do = { 
+			factor = 0.6 
+		}
+	}
+}
