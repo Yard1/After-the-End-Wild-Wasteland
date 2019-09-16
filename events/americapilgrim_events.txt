@@ -2248,6 +2248,7 @@ character_event = {
 			opinion = {
 				modifier = opinion_enjoyed_feast
 				who = ROOT
+				years = 2
 			}
 		}
 		hidden_tooltip = {

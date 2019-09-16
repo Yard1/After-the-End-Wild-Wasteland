@@ -3225,10 +3225,6 @@ the_assassins = {
 	
 	active = {
 		has_dlc = "Mystics"
-		is_title_active = d_men_in_black
-		d_men_in_black = {
-			holder_scope = { always = yes }
-		}
 	}
 	indestructible = yes
 

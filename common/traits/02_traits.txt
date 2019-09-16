@@ -2035,6 +2035,7 @@ valhalla_bound  = {
 		jaguar_warrior
 		thunderbird_warrior
 		raven_warrior
+		dragon_soldier
 	}
 	
 	martial = 2
@@ -2288,6 +2289,7 @@ shaddai = {
 		jaguar_warrior
 		thunderbird_warrior
 		raven_warrior
+		dragon_soldier
 	}
 	
 	martial = 2
@@ -3715,6 +3717,8 @@ crusader_king = {
 		order_of_the_garter
 		shaddai
 		lughs_own
+		jaguar_warrior
+		dragon_soldier
 	}
 	
 	ai_zeal = 20
@@ -3745,6 +3749,8 @@ crusader_queen = {
 		order_of_the_garter
 		shaddai
 		lughs_own
+		jaguar_warrior
+		dragon_soldier
 	}
 
 	ai_zeal = 20
