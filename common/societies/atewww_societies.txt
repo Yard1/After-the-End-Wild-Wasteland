@@ -127,75 +127,75 @@ monastic_order_libertarian = {
     		name = learning
     		value = 0.5
     	}
-		trait = {
+		has_trait = {
 			trait = zealous
 			value = 3
 		}
-		trait = {
+		has_trait = {
 			trait = scholar
 			value = 3
 		}
-		trait = {
+		has_trait = {
 			trait = theologian
 			value = 3
 		}	
-		trait = {
+		has_trait = {
 			trait = just
 			value = 2
 		}
-		trait = {
+		has_trait = {
 			trait = diligent
 			value = 1
 		}
-    	trait = {
+    	has_trait = {
 			trait = chaste
 			value = 1
 		}
-		trait = {
+		has_trait = {
 			trait = temperate
 			value = 1
 		}
-		trait = {
+		has_trait = {
 			trait = charitable
 			value = 1
 		}
-		trait = {
+		has_trait = {
 			trait = kind
 			value = 1
 		}
-		trait = {
+		has_trait = {
 			trait = patient
 			value = 1
 		}
-		trait = {
+		has_trait = {
 			trait = humble
 			value = 1
 		}
-		trait = {
+		has_trait = {
 			trait = honest
 			value = 1
 		}
-		trait = {
+		has_trait = {
 			trait = erudite
 			value = 1
 		}
-		trait = {
+		has_trait = {
 			trait = pilgrim
 			value = 1
 		}
-		trait = {
+		has_trait = {
 			trait = brave
 			value = 2
 		}
-		trait = {
+		has_trait = {
 			trait = arbitrary
 			value = -4
 		}
-		trait = {
+		has_trait = {
 			trait = craven
 			value = -3
 		}
-		trait = {
+		has_trait = {
 			trait = slothful
 			value = -1
 		}
