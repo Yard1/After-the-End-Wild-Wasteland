@@ -1,0 +1,49 @@
+d_american_legion = {
+	color={ 50 50 255 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 1063 # Indianapolis
+	
+	title = "LEGATE"
+	title_female = "LEGATE"
+	foa = "LEGATE_FOA"
+	
+	culture = rostmann
+	religion = jeffersonian
+	
+	holy_order = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 4
+
+	mercenary_type = d_sun_knights_composition
+}
+
+d_enclave = {
+	color={ 60 155 255 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 176 # Saint Joseph
+	
+	title = "COMMANDER"
+	title_female = "COMMANDER"
+	foa = "COMMANDER_FOA"
+	
+	culture = chicagoan
+	religion = americanist
+	
+	holy_order = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 4
+
+	mercenary_type = d_steel_brotherhood_composition
+}

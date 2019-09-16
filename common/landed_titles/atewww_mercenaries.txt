@@ -1,0 +1,61 @@
+d_border_patrol = {
+	color={ 255 174 201 }
+	color2={ 255 255 255 }
+
+	capital = 1235 # Travis/Austin
+	
+	allow = {
+		primary_title = {
+			OR = {
+				region = world_great_plains
+				region = world_central_america_pacific
+				region = world_southwest
+				region = world_gulf_coast
+				region = world_rockies
+			}
+		}
+		OR = {
+			culture_group = west_anglo
+			culture_group = californian
+			culture_group = rockland
+			culture_group = gallomerican
+			culture_group = south_anglo
+			culture_group = amerodeutsch
+			culture_group = north_atlantic
+			culture_group = north_pacific
+		}
+		any_current_enemy = {
+			OR = {
+				culture_group = mexicano
+				culture_group = mesoamerican
+				culture_group = mayan
+				culture_group = caribbanglo
+				culture_group = centrolatino
+				culture_group = colombiano
+				culture_group = venezolano
+				culture_group = portunhol
+				culture_group = arawak
+				culture_group = antilliaanse
+				culture_group = antillais
+				culture_group = portuguese
+				culture_group = caribeno
+				culture_group = andean
+			}
+		}
+	}
+	
+	culture = texan
+	religion = jeffersonian
+
+	title = "ACT_DIRECTOR"
+	title_female = "ACT_DIRECTOR"
+	foa = "ACT_DIRECTOR_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+
+	mercenary_type = d_tonkawa_scouts_composition
+}

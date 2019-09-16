@@ -1,2 +1,0 @@
-nick_the_nostalgia_critic = {
-}

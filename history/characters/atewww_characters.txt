@@ -1,0 +1,795 @@
+### Lakotah
+
+1889026 = {
+	name = "Richard"
+	dynasty = 1889009 # Pitchstone
+	dna = "acejgkecbar"
+	culture = mountainer
+	religion = americanist
+	diplomacy = 0
+	martial = 8
+	stewardship = 3
+	intrigue = 5
+	learning = 5
+	trait = brilliant_strategist
+	trait = strong
+	trait = impaler
+	trait = wroth
+	trait = diligent
+	trait = proud
+	trait = brave
+	trait = zealous
+	trait = cruel
+	trait = unyielding_leader
+	give_nickname = nick_stonewall 
+	2636.3.3 ={
+		birth=yes
+		effect = { set_character_flag = historical_character }
+	}
+}
+
+### Great Lakes 
+
+1967118 = {
+	name = "Morgan"
+	dynasty = 1789000 # Avondale
+	culture = chicagoan
+	religion = americanist
+	martial = 6
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 7
+	learning = 7
+	trait = intricate_webweaver
+	trait = shrewd
+	trait = cynical
+	trait = depressed
+	trait = ambitious
+	trait = patient
+	trait = scarred
+	trait = paranoid
+	trait = shy
+	trait = celibate
+	father = 666112
+	give_nickname = nick_the_accursed
+	2626.4.7 = {
+	    birth=yes
+		effect = { set_character_flag = historical_character }
+	}
+	2647.7.21 = {
+	    add_spouse = 1967119 
+	}
+	2652.6.21 = {
+	    effect = {
+		    add_artifact = terminus_est
+		} 
+		wealth = 500
+	}
+	2653.6.21 = {
+		effect = { 
+		    add_rival = 1967120
+			add_rival = 1967121
+		}
+	}
+}
+
+1967119 = {
+	name = "Mary"
+	dynasty = 2029091 # Goldfield
+	female = yes
+	culture = grangelander
+	religion = catholic
+	martial = 6
+	diplomacy = 3
+	stewardship = 5
+	intrigue = 5
+	learning = 3
+	trait = charismatic_negotiator
+	trait = fair
+	trait = kind
+	trait = charitable
+	trait = patient
+	trait = uncouth
+	trait = honest
+	trait = sympathy_oldworld
+	2629.5.8 = {
+	    birth=yes
+		effect = { set_character_flag = historical_character }
+	}
+	2647.7.21 = {
+	    add_spouse = 1967118
+	}
+	2653.6.21 = {
+	    death = {
+			death_reason = death_childbirth
+		}
+	}
+}
+
+1967120 = {
+	name="Stanislaus"
+	dynasty = 1789000 # Avondale
+	culture = chicagoan
+	religion = americanist
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 5
+	learning = 5
+	trait = rowdy
+	trait = willful
+	trait = robust
+	trait = kind
+	trait = twin
+	father = 1967118
+	mother = 1967119
+	2653.6.21 = {
+	    birth=yes
+		effect = { set_character_flag = historical_character }
+		effect = { 
+		    add_rival = 1967118 
+		}
+	}
+}
+
+1967121 = {
+	name="Eleanor"
+	dynasty = 1789000 # Avondale
+	female = yes
+	culture = chicagoan
+	religion = americanist
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 5
+	learning = 5
+	trait = affectionate
+	trait = playful
+	trait = fair
+	trait = twin
+	father = 1967118
+	mother = 1967119
+	2653.6.21 = {
+	    birth=yes
+		effect = { set_character_flag = historical_character }
+		effect = { 
+		    add_rival = 1967118 
+		}
+	}
+}
+
+1967122 = {
+	name="Ervil"
+	dynasty = 2029092 # LeBaron
+	culture = arixan
+	religion = woolleyite
+	martial = 5
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 5
+	learning = 5
+	trait = flamboyant_schemer
+	trait = shrewd
+	trait = zealous
+	trait = ambitious
+	trait = patient
+	trait = lustful
+	trait = cruel
+	trait = hedonist
+	trait = greedy
+	2631.2.22 = {
+	    birth=yes
+		effect = { set_character_flag = historical_character }
+	}
+	2662.3.7 = {
+	    add_spouse = 1967124
+	}
+	2664.4.5 = {
+	    add_spouse = 1967123
+	}
+	2664.11.9 = {
+	    add_spouse = 1967125
+	}
+}
+
+1967123 = {
+	name = "Marilu"
+	dynasty = 2029093 # Vega
+	female = yes
+	culture = arixan
+	religion = woolleyite
+	martial = 5
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 6
+	learning = 5
+	2644.10.3 = {
+	    birth=yes
+		effect = { set_character_flag = historical_character }
+	}
+	2664.4.5 = {
+	    add_spouse = 1967122
+	}
+}
+
+1967124 = {
+	name = "Linda"
+	dynasty = 2029094 # Johnson
+	female = yes
+	culture = arixan
+	religion = woolleyite
+	martial = 5
+	diplomacy = 4
+	stewardship = 5
+	intrigue = 5
+	learning = 6
+	2642.6.5 = {
+	    birth=yes
+		effect = { set_character_flag = historical_character }
+	}
+	2664.4.5 = {
+	    add_spouse = 1967122
+	}
+}
+
+1967125 = {
+	name = "Theresa"
+	dynasty = 2029095 # Rios
+	female = yes
+	culture = arixan
+	religion = woolleyite
+	martial = 5
+	diplomacy = 4
+	stewardship = 4
+	intrigue = 4
+	learning = 5
+	2648.6.5 = {
+	    birth=yes
+		effect = { set_character_flag = historical_character }
+	}
+	2664.11.9 = {
+	    add_spouse = 1967122
+	}
+}
+
+1967126 = {
+	name="Doug"
+	dynasty = 2029099 # Walker
+	dna = "afdgfqicabd"
+	culture = gothamite
+	religion = rust_cultist
+	give_nickname = nick_the_nostalgia_critic 
+	martial = 7
+	diplomacy = 8
+	stewardship = 6
+	intrigue = 6
+	learning = 5
+	trait = charismatic_negotiator
+	trait = trusting
+	trait = ambitious
+	trait = scholar
+	trait = greedy
+	trait = proud
+	trait = craven
+	trait = arbitrary
+	2629.11.17 = {
+	    birth=yes
+		effect = { set_character_flag = historical_character }
+		effect = { 
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+}
+
+1967127 = {
+	name="Augustus"
+	dynasty = 2029098 # Autumn
+	culture = bayfolk
+	religion = americanist
+	martial = 6
+	diplomacy = 6
+	stewardship = 5
+	intrigue = 7
+	learning = 8
+	trait = skilled_tactician
+	trait = ambitious
+	trait = zealous
+	trait = trusting
+	trait = cruel
+	trait = proud
+	trait = brave
+	trait = shrewd
+	2611.4.6 = {
+	    birth=yes
+		effect = {
+			add_artifact = ate_firearm
+			set_character_flag = historical_character
+		}
+	}
+}
+
+### Deep South 
+
+1861100 = {
+	name = "Ulysses"
+	dynasty = 1787004 # Barron
+	culture = dixie
+	religion = americanist
+	father = 666147
+	diplomacy = 6
+	martial = 8
+	stewardship = 5
+	intrigue = 5
+	learning = 7
+	trait = brilliant_strategist
+	trait = unyielding_leader
+	trait = holy_warrior
+	trait = zealous 
+	trait = patient
+	trait = brave
+	trait = strategist
+	trait = envious
+	2637.3.3 = {
+		birth=yes
+		effect = { set_character_flag = historical_character }
+	}
+	2637.2.12 = { 
+	    effect = {
+			add_artifact = ate_firearm
+		} 
+    }
+}
+
+1861125 = {
+	name = "Stephen"
+	dynasty = 2029096 # Jet
+	culture = southron
+	religion = jeffersonian
+	diplomacy = 8
+	martial = 8
+	stewardship = 6
+	intrigue = 6
+	learning = 7
+	trait = skilled_tactician
+	trait = unyielding_leader
+	trait = zealous
+	trait = proud
+	trait = wroth 
+	trait = diligent
+	trait = brave
+	trait = stubborn
+	trait = robust
+	trait = celibate
+	2615.7.21 = {
+		birth=yes
+		effect = { set_character_flag = historical_character }
+		effect = { 
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2637.8.9 = { 
+	    add_spouse = 1861126
+	    effect = {
+			add_artifact = carta_armor
+		} 
+    }
+	2642.6.21 = {
+		effect = { 
+		    add_rival = 1861128
+		}
+	}
+}
+
+1861126 = {
+	name = "Francine"
+	dynasty = 2029097 # Pearson
+	culture = southron
+	religion = jeffersonian
+	female = yes
+	diplomacy = 6
+	martial = 5
+	stewardship = 5
+	intrigue = 5
+	learning = 7
+	trait = tough_soldier
+	trait = fair
+	trait = patient
+	trait = zealous 
+	trait = humble
+	trait = diligent
+	trait = lustful
+	2615.11.21 = {
+		birth=yes
+		effect = { set_character_flag = historical_character }
+		effect = { 
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2637.8.9 = { 
+	    add_spouse = 1861125
+    }
+	2642.6.21 = {
+	    death = {
+			death_reason = death_childbirth
+		}
+	}
+}
+
+1861127 = {
+	name = "Clyde"
+	dynasty = 2029096 # Jet
+	culture = southron
+	religion = jeffersonian
+	father = 1861125
+	mother = 1861126
+	diplomacy = 6
+	martial = 10
+	stewardship = 6
+	intrigue = 6
+	learning = 6
+	trait = tough_soldier
+	trait = zealous
+	trait = wroth 
+	trait = imbecile
+	trait = brave
+	trait = strong
+	2639.11.2 = {
+		birth=yes
+		effect = { set_character_flag = historical_character }
+		effect = { 
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+}
+
+1861128 = {
+	name = "Caroline"
+	dynasty = 2029096 # Jet
+	dna = "chhditjfgce"
+	culture = southron
+	religion = americanist
+	female = yes
+	father = 1861125
+	mother = 1861126
+	diplomacy = 6
+	martial = 7
+	stewardship = 6
+	intrigue = 7
+	learning = 6
+	trait = tough_soldier
+	trait = homosexual
+	trait = wroth 
+	trait = proud
+	trait = strategist
+	trait = robust
+	trait = temperate
+	2642.6.21 = {
+		birth=yes
+		effect = { set_character_flag = historical_character }
+		effect = { 
+		    add_rival = 1861125
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+}
+
+### Caribbean ###
+
+2000044 = {
+	name = "Iwan"
+	dynasty = 2029100 # Evans
+	culture = gwladfeg
+	religion = brethren
+	diplomacy = 6
+	martial = 7
+	stewardship = 5
+	intrigue = 7
+	learning = 6
+	trait = skilled_tactician
+	trait = shrewd
+	trait = deceitful
+	trait = patient
+	trait = diligent
+	trait = brave
+	trait = cruel
+	2639.4.15 = {
+		birth=yes
+		effect = { set_character_flag = historical_character }
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2639.4.15 = { 
+	    effect = {
+			add_artifact = jungle_knife
+		} 
+    }
+}
+
+2000045 = {
+	name = "Roche"
+	dynasty = 2029101 # Braziliano
+	culture = brazilian
+	religion = brethren
+	diplomacy = 6
+	martial = 6
+	stewardship = 7
+	intrigue = 5
+	learning = 6
+	trait = skilled_tactician
+	trait = zealous
+	trait = cruel
+	trait = impaler
+	trait = diligent
+	trait = drunkard
+	trait = diligent
+	trait = wroth
+	trait = brave
+	2636.6.4 = {
+		birth=yes
+		effect = { set_character_flag = historical_character }
+		effect={
+			set_character_flag = diversity
+			set_character_flag = physique
+		}
+	}
+	2639.4.15 = { 
+	    effect = {
+			add_artifact = ate_compass
+		} 
+    }
+}
+
+### New York ###
+2000060 = {
+	name = "Frederick"
+	dynasty = 2029121 # Trump
+	dna = accjhgdbber
+	culture = gothamite
+	religion = americanist
+	diplomacy = 4
+	martial = 2
+	stewardship = 8
+	intrigue = 6
+	learning = 4
+	trait = fortune_builder
+	trait = shy
+	trait = quick
+	trait = greedy
+	2636.3.20={
+		birth=yes
+		effect = { set_character_flag = historical_character }
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+		create_bloodline = {
+			type = trump
+			has_dlc = "Holy Fury"
+		}
+	}
+	2666.1.11 = {
+		effect={
+			create_random_diplomat = {
+				name = "Mary"
+				dynasty = actually_culture
+				female = yes
+				age = 18
+				religion = americanist
+				culture = gothamite
+			}
+			new_character = {
+				add_spouse = ROOT
+			}
+		}
+	}
+}
+
+### Deitsch ###
+
+1997021 = {
+	name = "Abram"
+	dynasty = 1779006 # Lengacher
+	give_nickname = nick_the_white_knight
+	martial = 8
+	diplomacy = 9
+	intrigue = 6
+	stewardship = 7
+	learning = 6
+	father = 1997018
+	mother = 1763061
+	culture = "deitsch"
+	religion = "anabaptist"
+	trait = brilliant_strategist
+	trait = holy_warrior
+	trait = brave
+	trait = zealous
+	trait = content
+	trait = kind
+	trait = honest
+	trait = charitable
+	trait = chaste
+	trait = scarred_high
+	trait = one_eyed 
+	2635.4.5 = {
+	    birth=yes
+	}
+}
+
+### California ###
+
+1910207 = {
+    name = "Long"
+    dynasty = 2029102
+    culture = singaporean
+    religion = brethren
+    martial = 8
+    intrigue = 8
+    trait = brilliant_strategist
+    trait = bastard
+    trait = adventurer
+    trait = hedonist
+    trait = ambitious
+    trait = wroth
+    trait = proud
+    trait = brave
+    trait = cruel
+    give_nickname = nick_the_stranger
+    2619.12.16 = {
+	    birth=yes
+	}
+    2643.2.14={
+        add_spouse = 1910208
+        effect={
+            add_lover = 1910208
+        }
+    }
+    2666.6.1={
+        wealth = 500
+        prestige = 500
+        effect = {
+            spawn_unit = {
+                province = 2023 # Channel Islands
+                owner = ROOT
+                troops = {
+                    light_infantry = { 
+					   1000 
+					   1000 
+					}
+                }
+                attrition = 1.0
+            }
+        }
+    }
+}
+
+1910208 = {
+    name = "Shi"
+	dynasty = 2029103
+    female = yes
+    culture = singaporean
+    religion = brethren
+    stewardship = 8
+    intrigue = 8
+    trait = elusive_shadow
+    trait = administrator
+    trait = diligent
+    trait = just
+    trait = greedy
+    trait = deceitful
+    2624.11.16 = {
+	    birth=yes
+	}
+    2643.2.14 = {
+        add_spouse = 1910207
+        effect = {
+            add_lover = 1910207
+        }
+    }
+}
+
+1910209 = {
+    name = "Long"
+    female = no
+    dynasty = 2029102
+    culture = singaporean
+    religion = brethren
+    martial = 6
+    trait = skilled_tactician
+    trait = brave
+    trait = greedy
+    father = 1910207
+    mother = 1910208
+    2644.2.14 = { 
+	    birth=yes
+	}
+}
+
+1910210 = {
+    name = "Damien"
+    female = no
+    dynasty = 2029102
+    culture = singaporean
+    religion = brethren
+    stewardship = 6
+    trait = fortune_builder
+    trait = just
+    trait = cruel
+    father = 1910207
+    mother = 1910208
+    2647.4.6 = {
+	    birth=yes
+	}
+}
+
+1910211 = {
+    name="Shi"
+    female = yes
+    dynasty = 2029102
+    culture = singaporean
+    religion = brethren
+    intrigue = 5
+    father = 1910207
+    mother = 1910208
+    2649.9.12 = {
+	    birth=yes
+	}
+}
+
+1910212 = {
+    name = "Cheng"
+    female = no
+    dynasty = 2029102
+    culture = singaporean
+    religion = brethren
+    father = 1910207
+    mother = 1910208
+    2652.12.4 = {
+	    birth=yes
+	}
+}
+
+1910213 = {
+    name = "Eve"
+    female = yes
+    dynasty = 2029102
+    culture = singaporean
+    religion = brethren
+    father = 1910207
+    mother = 1910208
+    2655.3.10 = {
+	    birth=yes
+	}
+}
+
+1910214 = {
+    name = "Fatima"
+    female = yes
+    dynasty = 2029102
+    culture = singaporean
+    religion = brethren
+    father = 1910207
+    mother = 1910208
+    2659.10.2 = {
+	    birth=yes
+	}
+}
+
+1910215 = {
+    name = "Fang"
+    female = yes
+    dynasty = 2029102
+    culture = singaporean
+    religion = brethren
+    father = 1910207
+    mother = 1910208
+    2660.4.20 = {
+	    birth=yes
+	}
+}

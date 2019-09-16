@@ -1,0 +1,143 @@
+###Wild Wasteland
+
+2029091 = { 
+    name = "Goldfield" 
+	culture = grangelander 
+}
+
+2029092 = { 
+    name = "LeBaron" 
+	culture = arixan
+}
+
+2029093 = { 
+    name = "Vega" 
+	culture = arixan
+}
+
+2029094 = { 
+    name = "Johnson" 
+	culture = arixan
+}
+
+2029095 = { 
+    name = "Rios" 
+	culture = arixan
+}
+
+2029096 = { 
+    name = "Jet" 
+	culture = southron
+	coat_of_arms = {
+        religion = americanist
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 45
+            emblem = 0
+            color = 1
+            color = 2
+            color = 2
+        }
+    }
+}
+
+2029097 = { 
+    name = "Pearson" 
+	culture = southron
+}
+
+2029098 = { 
+    name = "Autumn" 
+	culture = bayfolk
+	coat_of_arms = {
+        religion = americanist
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 33
+            emblem = 0
+            color = 0
+            color = 2
+            color = 2
+        }
+    }
+}
+
+2029099 = { 
+    name = "Walker" 
+	culture = gothamite
+}
+
+2029100 = { 
+    name = "Evans" 
+	culture = gwladfeg
+	coat_of_arms = {
+        religion = brethren
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 33
+            emblem = 0
+            color = 0
+            color = 5
+            color = 5
+        }
+    }
+}
+
+2029101 = { 
+    name = "Braziliano" 
+	culture = brazilian
+	coat_of_arms = {
+        religion = brethren
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 34
+            emblem = 0
+            color = 5
+            color = 6
+            color = 1
+        }
+    }
+}
+
+2029102 = { 
+    name = "Wang" 
+	culture = singaporean
+	coat_of_arms = {
+        religion = brethren
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 19
+            emblem = 0
+            color = 0
+            color = 5
+            color = 5
+        }
+    }
+}
+
+2029103 = { 
+    name = "Dong" 
+	culture = singaporean
+}
+
+2029121 = { 
+    name = "Trump" 
+	culture = gothamite 
+	coat_of_arms = {
+		template = 0
+		religion = americanist
+		layer = {
+			texture = 1
+			texture_internal = 1
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	} 
+}
