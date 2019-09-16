@@ -1,0 +1,43 @@
+EVTNAMEAPS3;Presidential Patriotization;;;;;;;;;;;;;x
+EVTDESCAPS3;Now that my predecessor has passed to the great White House among the heavens, it is my duty to judge his deeds as President and grant him the title of Patriot.;;;;;;;;;;;;;x
+EVTOPTAASP3;President [prez_pat.GetFirstNameWithNick] has lived a rightful path.;;;;;;;;;;;;;x
+make_patriot;Proclaim President [prez_pat.GetFirstNameWithNick] a Patriot;;;;;;;;;;;;;x
+EVTOPTABSP3;President [prez_pat.GetFirstNameWithNick] has scorned the presidency with sinfulness and was surely in league with the Reds!;;;;;;;;;;;;;x
+refuse_patriot;Proclaim President [prez_pat.GetFirstNameWithNick] an Agent of Agenda 21;;;;;;;;;;;;;x
+
+EVTNAMEAPS4;President Made a Patriot!;;;;;;;;;;;;;x
+EVTDESCAPS4;[From.GetBestName] has issued an executive order officially making President [prez_pat.GetFirstNameWithNick] a Patriot who sits among our Founding Fathers. The executive order states that due to President [prez_pat.GetOnlyDynastyName]'s righteousness in the face of [Root.Religion.GetRandomEvilGodName] and other threats foreign and domestic, [prez_pat.GetSheHe] has proven [prez_pat.GetHerselfHimself] to be Washington-sent.;;;;;;;;;;;;;x
+EVTOPTAAPS4;May [Root.Religion.GetRandomGodName] guide [prez_pat.GetHerHis] hand!;;;;;;;;;;;;;x
+
+EVTNAMEAPS5;Unpatriotic President made Patriot;;;;;;;;;;;;;x
+EVTDESCAPS5;The [GetFromRootInsult] [From.GetBestName] has proclaimed that the unpatriotic [prez_pat.GetFirstNameWithNick] is among our Founders. Although [prez_pat.GetFirstNameWithNick] has exhibited [prez_pat.GetHerselfHimself] to be unsuitable for the Presidency, let alone Patriot status, [From.GetBestName] has made him a Patriot anyway.;;;;;;;;;;;;;x
+EVTOPTAAPS5;May Washington strike down [From.GetBestName] where he stands!;;;;;;;;;;;;;x
+
+EVTNAMEAPS6;President [prez_pat.GetFirstNameWithNick] Denied Patriot Status!;;;;;;;;;;;;;x
+EVTDESCAPS6;President [From.GetBestName] has issued an executive order stating that [prez_pat.GetFirstNameWithNick] is unsuitable for Patriot status, and must not be proclaimed as such. He cites multiple instances of heresy and evidence that [prez_pat.GetSheHe] has been in communion with agents of Agenda 21.;;;;;;;;;;;;;x
+EVTOPTAAPS6; May such an unpatriotic president never be sworn in again!;;;;;;;;;;;;;x
+
+EVTNAMEAPS7;A Presidential Family;;;;;;;;;;;;;x
+EVTDESCAPS7;Two of your ancestors have been deemed patriots by a President. With that honor, you now are part of a distinguished and exclusive group of Americanists.;;;;;;;;;;;;;x
+EVTOPTAAPS7;Maybe I could be a patriot one day...;;;;;;;;;;;;;x
+prez_family_TT;As a member of a great Presidential Family, there is no need to praise only one of your ancestors.;;;;;;;;;;;;;x
+
+prez_dip;Presidential Family;;;;;;;;;;;;;x
+prez_dip_desc;This character is part of the family of the distinguished President [Root.GetOnlyDynastyName], who protected Americanism using a silver tongue.;;;;;;;;;;;;;x 
+prez_mar;Presidential Family;;;;;;;;;;;;;x
+prez_mar_desc;This character is part of the family of the distinguished President [Root.GetOnlyDynastyName], who protected Americanism using a holy sword.;;;;;;;;;;;;;x 
+prez_ste;Presidential Family;;;;;;;;;;;;;x
+prez_ste_desc;This character is part of the family of the distinguished President [Root.GetOnlyDynastyName], who protected Americanism through the roads of trade.;;;;;;;;;;;;;x 
+prez_int;Presidential Family;;;;;;;;;;;;;x
+prez_int_desc;This character is part of the family of the distinguished President [Root.GetOnlyDynastyName], who protected Americanism through intrigue.;;;;;;;;;;;;;x 
+prez_lea;Presidential Family;;;;;;;;;;;;;x
+prez_lea_desc;This character is part of the family of the distinguished President [Root.GetOnlyDynastyName], who protected Americanism using the Words of Founders.;;;;;;;;;;;;;x
+prez_fam;Presidential Family;;;;;;;;;;;;;x
+prez_fam_desc;This character is part of the distinguished [Root.GetOnlyDynastyName] Presidential Family, who dutifuly protected Americanism from enemies foreign and domestic.;;;;;;;;;;;;;x
+
+prez_bloodline_TT;Is an Americanist;;;;;;;;;;;;;x
+
+patriot;Patriot;;;;;;;;;;;;;x 
+patriot_desc;This character has proven themselves to be a great patriot, and is now seated among the Founding Fathers;;;;;;;;;;;;;x
+PATRIOT_TITLE;Patriot;;;;;;;;;;;;;x 
+PATRIOT_TITLE_FEMALE;Patriot;;;;;;;;;;;;;x 

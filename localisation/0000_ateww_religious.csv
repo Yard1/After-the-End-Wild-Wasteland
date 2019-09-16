@@ -14,6 +14,29 @@ EVTDESCHFPA23010;To [Root.GetTitledName],\nWe have heard your passionate plea fo
 EVTDESCHFPA230100;To [Root.GetTitledName],\nWe have heard your passionate plea for forgiveness, and We are certain that you will be eager to prove the sincerity of your repentance by devoting the life of your [son_monk_candidate.GetSonDaughter] [son_monk_candidate.GetFirstName] to defence of the [From.Religion.GetHighGodName] as a member of.\n\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
 EVTDESCAHFP23011;The [FromFrom.GetTitle] has determined that the price for my wickedness is the life of my [son_monk_candidate.GetSonDaughter] [son_monk_candidate.GetFirstName]. [son_monk_candidate.GetSheHeCap] will take [son_monk_candidate.GetHerHis] leave [Root.Capital.GetName] to become a [son_monk_candidate.GetManWoman] of the faith.;;;;;;;;;;;;;x
 EVTDESCAHFP230110;The [FromFrom.GetTitle] has determined that the price for my wickedness is the life of my [son_monk_candidate.GetSonDaughter] [son_monk_candidate.GetFirstName]. [son_monk_candidate.GetSheHeCap] will become a member of the [son_holyorder_host.PrimaryTitle.GetFullName], taking up arms in defence of [Root.GetHighGodName].;;;;;;;;;;;;;x
+EVTDESC_SOA_2031;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Freemasons in their tireless pursuit of heathenry, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_2531;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Ordo Templi Occidentis in their ongoing efforts to drive out every unbeliever, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_2631;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Orden de la Máscara in their struggle against the infidel, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_2731;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Order of Brotherhood in their struggle against the infidel, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_1031;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Knights of Columbus in their struggle against the infidel, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_1031;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Knights of Columbus in their struggle against the infidel, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_1131;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Knights of Peter Claver in their struggle against the infidel, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_1203;It's a good day for learning, [Root.GetTitledFirstName]. As you may know, our order is in need of leaders, and, considering your debt to us, I would like to request that your able and noble son [FromFrom.GetFirstName] serve in our ranks. Naturally, this would disinherit [From.GetHerHim]. For Science!\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOA_1231;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Sons of Oppenheimer to fight the infidel! This will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_1331;My [GetFromRelation], [From.GetTitledFirstName], has requested to join St. Ursula's Chosen in their struggle against the heathens, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_1431;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the dreaded Men in Black in their shady struggles. This will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_1531;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the fearsome Fylkir's Hundreds in their adventures, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_1631;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the National Cathedral Association in their struggle against the infidel, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_1731;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Lebanon Brethren in their struggle against the infidel, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_1831;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Lions of Judah in their struggle against the infidel, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_1931;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Shomrim in their struggle against the infidel, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_2131;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Order of the Flaming Sword in their brave defense of our faith, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_2161;Your majesty, this antagonism is completely unwarranted! The Flaming Swords walk with the Serpent and are prepared to give their lives to defend [From.GetHerHim], but, one has to wonder, are you?\n\nWith anger and sadness,\n\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOA_2231;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Midwestern Brotherhood in their heroic deeds to smite the enemies of the Omnissah, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_2331;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Keepers of the Green Peace in their war against unbelievers, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_2431;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the heroes in the Nauvoo Legion in struggle against heathens, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC_SOA_2831;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Knights of St. Patrick in their struggle against the infidel, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
+
 
 EVTDESCHFA20207;To the Excellent [Root.GetTitledName],\nI shall be honored to officiate [Root.GetHerHisCap] [Root.GetHonorific]'s coronation, provided that [Root.GetHerHisCap] [Root.GetHonorific] show [Root.GetHerHisCap] devotion by allowing one of [Root.GetHerHisCap] [son_holyorder_candidate.GetSonDaughter]s to do [son_holyorder_candidate.GetHerHis] part in the sacred war against the infidels by joining the [son_holyorder_host.PrimaryTitle.GetFullName].\n\nEver [Root.GetHerHis] [Root.GetHonorific]'s servant\n[From.GetTitledName];;;;;;;;;;;;;x
 EVTOPTBHF20207;I will not risk my [son_holyorder_candidate.GetSonDaughter]'s life for a crown.;;;;;;;;;;;;;x
@@ -22,6 +45,7 @@ EVTDESCAFI213;To the Just [Root.GetTitledName],\nI shall be honored to officiate
 SHOW_COLLEGE_OF_CARDINALS;[Root.GetConclaveName];Le Collège des cardinaux;Kardinalskollegium;;El Colegio de Cardenales;;;;;;;;;x
 
 # Libertarians
+d_libertarian;Order of Our Lady Liberty;;;;;;;;;;;;;x
 String_Temple;[This.GetHouseOfWorshipCap];Temple;Tempel;;Templo;;;;;;;;;x
 String_temple;[This.GetHouseOfWorship];e temple;Tempel;;templo;;;;;;;;;x
 monastic_order_libertarian;The Order of Our Lady Liberty;;;;;;;;;;;;;x

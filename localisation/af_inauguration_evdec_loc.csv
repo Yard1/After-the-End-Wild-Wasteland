@@ -1,0 +1,174 @@
+##Trait
+inaug_by_judge;Inaugurated by Judge;;;;;;;;;;;;;x
+inaug_by_judge_desc;This ruler was inaugurated by a minor judge.\nA formal inauguration is considered by many a fundamental step in the legitimization of any proper [Root.Religion.GetName] [Root.GetTitle].;;;;;;;;;;;;;x
+
+inaug_by_cjudge;Inaugurated by High Judge;;;;;;;;;;;;;x
+inaug_by_cjudge_desc;This ruler was inaugurated by [Root.GetCrownedByDesc].\nA formal inauguration is considered by many a fundamental step in the legitimization of any proper [Root.Religion.GetName] [Root.GetTitle].;;;;;;;;;;;;;x
+
+inaug_prez;Inaugurated President;;;;;;;;;;;;;x
+inaug_prez_desc;This President was inaugurated by [Root.GetCrownedByDesc].\nA formal inauguration is considered by many a fundamental step in the legitimization of any proper President.;;;;;;;;;;;;;x
+
+##Decisions
+prepare_inaug_ceremony;Prepare an Inauguration Ceremony;;;;;;;;;;;;;x
+prepare_inaug_ceremony_desc;Begin preparation for my Inauguration Ceremony. As a [Root.Religion.GetName] [Root.GetTitle], it is imperative for me to be inaugurated by a distinguished member of the Court in order to legitimize my divine right to rule.;;;;;;;;;;;;;x
+
+prepare_inaug_ceremony_prez;Prepare Presidential Inauguration;;;;;;;;;;;;;x
+prepare_inaug_ceremony_prez_desc;Begin preparation for my Presidential Inauguration Ceremony. As President of the Unites States, it is imperative for me to be inaugurated by a distinguished member of the Court in order to cement my favor among [Root.Religion.GetHighGodName].;;;;;;;;;;;;;x
+
+tooltip_maxed_uninaug;Was not inaugurated after 30 years of rule;;;;;;;;;;;;;x
+
+TT_INAUG_VASSAL_PRIEST;A vassal judge is available to perform the ceremony;;;;;;;;;;;;;x
+TT_NOT_PREPARING_INAUGURATION;Is NOT already preparing for an inauguration;;;;;;;;;;;;;x
+TT_NOT_RECENTLY_ASKED_INAUGURATION;Has NOT recently attempted to organize an inauguration [From.GetCoronationTimer];;;;;;;;;;;;;x
+
+begin_inaug_tooltip;Start preparing for your inauguration ceremony;;;;;;;;;;;;;x
+
+##Events
+EVTNAMEAFI1;The Inauguration Ceremony;;;;;;;;;;;;;x
+EVTDESCAAFI1;The time has finally come for me to be officially recognized as [Root.GetTitle] of [Root.PrimaryTitle.GetName]. In order do this, I will need the support of the [Root.Religion.GetName] Court, but convincing authoritative members will neither be easy nor cheap. To begin the preparations, I should find a judge willing to swear me in.;;;;;;;;;;;;;x
+EVTDESCBAFI1;The time has finally come for me to be officially recognized as President of the United States of America. In order do this, I will need the support of the [Root.Religion.GetName] Court, but convincing authoritative members will neither be easy nor cheap. To begin the preparations, I should find a judge willing to swear me in.;;;;;;;;;;;;;x
+EVTOPTAAFI1;Send for the most powerful Judge in the realm!;;;;;;;;;;;;;x
+sendforcjudge;Write a letter to the most influential and powerful [Root.Religion.GetName] Judge in your realm, asking them to inaugurate you as [Root.GetTitle].;;;;;;;;;;;;;x
+EVTOPTBAFI1;Any judge will do.;;;;;;;;;;;;;x
+sendforjudge;Write a letter to a minor Judge in your realm, asking them to inaugurate you as [Root.GetTitle].;;;;;;;;;;;;;x
+EVTOPTCAFI1;Maybe this is not the right time...;;;;;;;;;;;;;x
+inauguration_cancelled;Cancel the inauguration ceremony.;;;;;;;;;;;;;x
+
+EVTDESCAFI2;[From.GetFullName] wishes me to inaugurate [From.GetHerHim]. What do I wish to ask [From.GetHerHim] in return?;;;;;;;;;;;;;x
+EVTOPTAAFI2;Little to nothing.;;;;;;;;;;;;;x
+EVTOPTBAFI2;A reasonable request.;;;;;;;;;;;;;x
+
+EVTDESCAFI3;To the Patriotic [Root.GetTitledName],\nI shall be honored to officiate [Root.GetHerHisCap] [Root.GetHonorific]'s inauguration. I eagerly await [Root.GetHerHisCap] [Root.GetHonorific]'s instructions regarding date and manner of the ceremony in order to better prepare myself for this sacred duty.\n\nEver [Root.GetHerHisCap] [Root.GetHonorific]'s servant\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTOPTAAFI3;Marvelous;;;;;;;;;;;;;x
+
+EVTDESCAFI4;To the most Patriotic [Root.GetTitle],\nI shall be honored to officiate [Root.GetHerHisCap] [Root.GetHonorific]'s inauguration, provided that [Root.GetHerHisCap] [Root.GetHonorific] donates a small sum of money to the Court as a show of [Root.GetHerHisCap] devotion.\n\nEver [Root.GetHerHis] [Root.GetHonorific]'s servant\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTOPTAAFI4;Understandable.;;;;;;;;;;;;;x
+EVTOPTBAFI4;I have no money to spare!;;;;;;;;;;;;;x
+
+EVTDESCAFI5;To the Washingtonian [Root.GetTitledName],\nI shall be honored to officiate [Root.GetHerHisCap] [Root.GetHonorific]'s inauguration, provided that [Root.GetHerHisCap] [Root.GetHonorific] donates a sizable sum of money to Washington's preservation efforts as a show of [Root.GetHerHisCap] devotion.\n\nEver [Root.GetHerHis] [Root.GetHonorific]'s servant\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTOPTAAFI5;Very well.;;;;;;;;;;;;;x
+EVTOPTBAFI5;I have no such money to spare.;;;;;;;;;;;;;x
+
+EVTDESCAFI6;To the most Washingtonian [Root.GetTitledName],\nI shall be honored to officiate [Root.GetHerHisCap] [Root.GetHonorific]'s inauguration, provided that [Root.GetHerHisCap] [Root.GetHonorific] show [Root.GetHerHisCap] devotion by expanding the borders of the Court of [From.Capital.GetName].\n\nEver [Root.GetHerHis] [Root.GetHonorific]'s servant\n[From.GetTitledName].;;;;;;;;;;;;;x
+EVTOPTAAFI6;Very well.;;;;;;;;;;;;;x
+EVTOPTBAFI6;[From.GetSheHeCap] has enough land as it is.;;;;;;;;;;;;;x
+
+#AFI7 missing, AFI8 AI only
+
+EVTDESCAFI9;[From.GetTitledFirstName] has died: with [From.GetHerHim] gone I must find another judge to anoint me [Root.GetTitle].;;;;;;;;;;;;;x
+EVTOPTAAFI9;How unfortunate.;;;;;;;;;;;;;x
+
+EVTDESCAFI10;With the unexpected death of the judge meant to officiate the ceremony, it looks like [From.GetTitledFirstName] has been forced to postpone [From.GetHerHis] Inauguration indefinitely.;;;;;;;;;;;;;x
+EVTOPTAAFI10;How unfortunate for [From.GetHerHim].;;;;;;;;;;;;;x
+
+EVTDESCAAFI100;Now that I have a distinguished member of the [Root.Religion.GetName] panel to officiate my coronation, I must decide how much I wish to spend on the ceremony leading up to it.;;;;;;;;;;;;;x
+EVTDESCBAFI100;Now that I have found a [Root.Religion.GetName] judge willing to inaugurate me, I must decide how much I wish to spend on the ceremony leading up to it.;;;;;;;;;;;;;x
+EVTDESCCAFI100;Now that I have found a distinguished member of the [Root.Religion.GetName] panel to officiate the rites, it is time to organize the ceremony itself. Unfortunately, the necessities imposed by the war I am waging will force me to have only a small gathering of my closest allies to witness this momentous occasion.;;;;;;;;;;;;;x
+EVTOPTAAFI100;It shall be an extravagant ceremony.;;;;;;;;;;;;;x
+send_extrainaug_invitations;Send invitations to all your vassals as well as any neighboring [Root.Religion.GetName] rulers to join you for the greatest feast of the century.;;;;;;;;;;;;;x
+EVTOPTBAFI100;A dignified ceremony will do.;;;;;;;;;;;;;x
+send_inaug_invitations;Send invitations to all your vassals to join you for a celebration fit for a [Root.GetTitle].;;;;;;;;;;;;;x
+EVTOPTCAFI100;I will have a private ceremony.;;;;;;;;;;;;;x
+send_seclinaug_invitations;Send invitations only to your Cabinet, asking them to join you for a private party leading up to your inauguration;;;;;;;;;;;;;x
+EVTOPTCAFI100_B;It is what it is...;;;;;;;;;;;;;x
+
+EVTDESCAFI101;My dear [Root.GetTitledFirstName],\nI wish to formally invite you to my court for a period of festivities leading up to my inauguration.\n\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTOPTAAFI101;I will be sure to attend.;;;;;;;;;;;;;x
+EVTOPTBAFI101;I must decline this honor.;;;;;;;;;;;;;x
+
+EVTDESCAFI102;Distinguished [Root.GetTitledFirstName],\nI wish to formally invite you to my court for a period of festivities leading up to my inauguration.\n\nSincerely,\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTOPTAAFI102;I will be sure to attend.;;;;;;;;;;;;;x
+EVTOPTBAFI102;I must decline.;;;;;;;;;;;;;x
+
+EVTDESCAFI103;[Root.GetTitledFirstName],\nI will be glad to attend your inauguration!;;;;;;;;;;;;;x
+EVTOPTAAFI103;Very good.;;;;;;;;;;;;;x
+
+EVTDESCAFI104;[Root.GetTitledFirstName],\nI am afraid I have to decline your invitation.;;;;;;;;;;;;;x
+EVTOPTAAFI104;What a pity.;;;;;;;;;;;;;x
+
+EVTDESCAAFI105;Only a few more days remain before I am inaugurated [Root.GetTitle] before [Root.Religion.GetHighGodName] and all my subjects. My court is filling with distinguished guests, both vassals and foreign dignitaries come to bear witness to this fundamental moment of my reign. Such a lavish ceremony is a rare spectacle to behold even amongst royalty.;;;;;;;;;;;;;x
+EVTDESCBAFI105;The time of my inauguration draws near: only a few more days before I am inaugurated [Root.GetTitle] before [Root.Religion.GetHighGodName] and all my subjects. My court has been already filled with all the vassals of my realm who have come to bear witness to this fundamental moment of my reign.;;;;;;;;;;;;;x
+EVTDESCCAFI105;The time of my inauguration draws near: only a few more days before I am inaugurated [Root.GetTitle] before [Root.Religion.GetHighGodName] and all my subjects. It will be a long wait with very little to do, but I hope at least that this period of seclusion will give me time to ponder upon my future responsibilities as [Root.GetTitle].;;;;;;;;;;;;;x
+EVTDESCDAFI105;The time of my inauguration draws near: only a few more days before I am inaugurated [Root.GetTitle] before [Root.Religion.GetHighGodName] and all my subjects. It will be a long wait and I can only hope that the day will not fall in the middle of a major battle...;;;;;;;;;;;;;x
+EVTOPTAAFI105;It will never be soon enough.;;;;;;;;;;;;;x
+
+EVTDESCAFI106;I can almost feel the weight of the office over my head already, but it is far from burdensome: I feel reinvigorated by the prospect of finally becoming [Root.GetTitle]. Thinking about my new responsibilities as an anointed ruler fills me with trepidation.;;;;;;;;;;;;;x
+EVTOPTAAFI106;I shall be the greatest [Root.GetTitle] ever!;;;;;;;;;;;;;x
+EVTOPTABFI106;This is a sign to stop slouching and take my work seriously.;;;;;;;;;;;;;x
+
+#AFI107 invisible on_action
+
+EVTTITLEAFI108;Inauguration of [coronation_ruler.GetTitledFirstName];;;;;;;;;;;;;x
+EVTDESCAAFI108;I stand before [coronation_priest.GetTitledFirstName] as a host of vassals surround us in complete silence. I place my hand on a copy of The Papers, and [coronation_priest.GetTitledFirstName] recites the Oath. "Do you, [coronation_ruler.GetFullName], solemnly swear that you will faithfully execute the Office of [coronation_ruler.GetTitle] of [coronation_ruler.PrimaryTitle.GetName], and will to the best of your ability, preserve, protect and defend the Constitution?";;;;;;;;;;;;;;x
+EVTDESCBAFI108;I stand before [coronation_priest.GetTitledFirstName] with all my reverently silent vassals surrounding us. The [coronation_priest.GetTitle] gives me an encouraging smile as I place my hand on the Papers and [coronation_priest.GetSheHe] read the Oath, "Do you, [coronation_ruler.GetFullName], solemnly swear that you will faithfully execute the Office of [coronation_ruler.GetTitle] of [coronation_ruler.PrimaryTitle.GetName], and will to the best of your ability, preserve, protect and defend the Constitution?" I feel my face turning red.;;;;;;;;;;;;;x
+EVTDESCCAFI108;I stand before [coronation_priest.GetTitledFirstName] in the empty hall of my palace. I place my hand on a copy of The Papers, and [coronation_priest.GetTitledFirstName] quickly recites the Oath. "Do you, [coronation_ruler.GetFullName], solemnly swear that you will faithfully execute the Office of [coronation_ruler.GetTitle] of [coronation_ruler.PrimaryTitle.GetName], and will to the best of your ability, preserve, protect and defend the Constitution?";;;;;;;;;;;;;x
+EVTDESCDAFI108;As the yells of the commanders drilling troops echo in the tent, I place my hand on a copy of The Papers, and [coronation_priest.GetTitledFirstName] quickly recites the Oath. "Do you, [coronation_ruler.GetFullName], solemnly swear that you will faithfully execute the Office of [coronation_ruler.GetTitle] of [coronation_ruler.PrimaryTitle.GetName], and will to the best of your ability, preserve, protect and defend the Constitution?";;;;;;;;;;;;;x
+EVTDESCEAFI108;I stand before [coronation_priest.GetTitledFirstName] as a host of vassals surround us in complete silence. I place my hand on a copy of The Papers, and [coronation_priest.GetTitledFirstName] recites the Oath. "Do you, [coronation_ruler.GetFullName], solemnly swear that you will faithfully execute the Office of President of the United States, and will to the best of your ability, preserve, protect and defend the Constitution?";;;;;;;;;;;;;x
+EVTOPTAAFI108;I do.;;;;;;;;;;;;;x
+tooltip_gain_inaug_by_cjudge;[Root.GetTitledName] gains the trait Inaugurated by High Judge;;;;;;;;;;;;;x
+tooltip_gain_inaug_by_judge;[Root.GetTitledName] gains the trait Inaugurated by Judge;;;;;;;;;;;;;x
+prez_inaug_TT;[Root.GetTitledName] gains the trait Inaugurated President;;;;;;;;;;;;;x
+
+EVTTITLEAFI109;Inauguration of [coronation_ruler.GetTitledFirstName];;;;;;;;;;;;;x
+EVTDESCAAFI109;[coronation_ruler.GetTitledFirstName] stands before [coronation_priest.GetTitledFirstName] as [coronation_ruler.GetHerHis] host of vassals surround them in complete silence. [coronation_ruler.GetTitledFirstName] places [coronation_ruler.GetHerHis] hand on a copy of The Papers, and [coronation_priest.GetTitledFirstName] recites the Oath. "Do you, [coronation_ruler.GetFullName], solemnly swear that you will faithfully execute the Office of [coronation_ruler.GetTitle] of [coronation_ruler.PrimaryTitle.GetName], and will to the best of your ability, preserve, protect and defend the Constitution?";;;;;;;;;;;;;;x
+EVTDESCBAFI109;[coronation_ruler.GetTitledFirstName] stands before [coronation_priest.GetTitledFirstName] with all [coronation_ruler.GetHerHis] reverently silent vassals surrounding them. The [coronation_priest.GetTitle] gives the child an encouraging smile as [coronation_ruler.GetSheHe] places [coronation_ruler.GetHerHis] hand on the Papers and [coronation_priest.GetSheHe] reads the Oath, "Do you, [coronation_ruler.GetFullName], solemnly swear that you will faithfully execute the Office of [coronation_ruler.GetTitle] of [coronation_ruler.PrimaryTitle.GetName], and will to the best of your ability, preserve, protect and defend the Constitution?";;;;;;;;;;;;;x
+EVTDESCCAFI109;[coronation_ruler.GetTitledFirstName] stands before [coronation_priest.GetTitledFirstName] in the empty hall of [coronation_ruler.GetHerHis] palace. [coronation_ruler.GetTitledFirstName] places [coronation_ruler.GetHerHis] hand on a copy of The Papers, and [coronation_priest.GetTitledFirstName] quickly recites the Oath. "Do you, [coronation_ruler.GetFullName], solemnly swear that you will faithfully execute the Office of [coronation_ruler.GetTitle] of [coronation_ruler.PrimaryTitle.GetName], and will to the best of your ability, preserve, protect and defend the Constitution?";;;;;;;;;;;;;x
+EVTDESCDAFI109;As the yells of the commanders drilling troops echo in the tent, [coronation_ruler.GetTitledFirstName] places [coronation_ruler.GetHerHis] hand on a copy of The Papers, and [coronation_priest.GetTitledFirstName] quickly recites the Oath. "Do you, [coronation_ruler.GetFullName], solemnly swear that you will faithfully execute the Office of [coronation_ruler.GetTitle] of [coronation_ruler.PrimaryTitle.GetName], and will to the best of your ability, preserve, protect and defend the Constitution?";;;;;;;;;;;;;x
+EVTDESCEAFI109;[coronation_ruler.GetTitledFirstName] stands before [coronation_priest.GetTitledFirstName] as [coronation_ruler.GetHerHis] host of vassals surround them in complete silence. [coronation_ruler.GetTitledFirstName] places [coronation_ruler.GetHerHis] hand on a copy of The Papers, and [coronation_priest.GetTitledFirstName] recites the Oath. "Do you, [coronation_ruler.GetFullName], solemnly swear that you will faithfully execute the Office of President of the United States, and will to the best of your ability, preserve, protect and defend the Constitution?";;;;;;;;;;;;;x
+EVTOPTAAFI109;Hail to the [coronation_ruler.GetTitle]!;;;;;;;;;;;;;x
+
+EVTTITLEAFI110;Inauguration of [coronation_ruler.GetTitledFirstName];;;;;;;;;;;;;x
+EVTDESCAFI110;[coronation_ruler.GetFullName] has been inaugurated [coronation_ruler.GetTitle] by [coronation_priest.GetTitledFirstName], thus legitimizing [coronation_ruler.GetHerHis] divine right to rule.;;;;;;;;;;;;;x
+EVTOPTAAFI110;Hail to the [coronation_ruler.GetTitle]!;;;;;;;;;;;;;x
+
+#AF111 hidden, most of AF112 used HF loc
+
+EVTDESCBAFI112;With the ceremony finally concluded, [From.GetTitledFirstName] bid me farewell and dismissed me from [From.GetHerHis] encampment, alongside all [From.GetHerHis] other guests. I still cannot believe that the inauguration was not abruptly interrupted by an enemy raid... [From.Religion.GetHighGodNameCap] must really be protecting [From.GetTitledFirstName].;;;;;;;;;;;;;x
+
+EVTDESCAFI113;I cannot believe my [GetFromRelation] [From.GetFirstName] has still not managed to be officially inaugurated [From.GetTitle]. Not only is [From.GetHerHis] display of weakness a threat to realm peace: tales of [From.GetHerHis] incompetence will surely drag my name in the mud alongside [From.GetHerHis].;;;;;;;;;;;;;x
+
+EVTDESCAFI114;My [GetFromRelation] [From.GetFirstName] stormed my private study this evening, berating me for not having managed to legitimize my rule over [Root.PrimaryTitle.GetName] with a proper Inauguration Ceremony yet.;;;;;;;;;;;;;x
+
+EVTDESCAFI115;The nerve of [From.GetFirstName]! [From.GetSheHeCap] dared to deflect my just criticisms of [From.GetHerHis] misconduct by pointing out that I have also yet to prove my legitimacy as [Root.GetTitle] before the Founders. Sometimes I truly cannot stand [From.GetHerHim]!;;;;;;;;;;;;;x
+
+EVTDESCAFI116;My liege's rule has yet to be properly legitimized by the holy right of inauguration. I must inform [From.GetHerHim] that [From.GetHerHis] current condition is becoming a hindrance to my work as Secretary of State of [From.PrimaryTitle.GetName].;;;;;;;;;;;;;x
+
+EVTDESCAFI117;Some time has passed, but I still cannot come to terms with how modest and secluded my inauguration has been. Is it worthy of an [Root.GetTitle] to have [Root.GetHerHis] divine right to rule be recognized in the most meager of fashions.;;;;;;;;;;;;;x
+EVTOPTAAFI117;[Root.Religion.GetHighGodName] do not care for riches;;;;;;;;;;;;;x
+EVTOPTBAFI117;[Root.Religion.GetHighGodName] do not care for riches;;;;;;;;;;;;;x
+EVTOPTCAFI117;I deserved way more;;;;;;;;;;;;;x
+
+EVTDESCAFI119;The people of [Root.Capital.GetName] are growing more and more restless every year. A [Root.GetTitle] who has not been inaugurated by the Court will never be seen as legitimate in the eye of any good [Root.Religion.GetName].;;;;;;;;;;;;;x
+
+EVTDESCAFI120;Month after month, I receive news about another one of the Judges of [Root.PrimaryTitle.GetName] accusing me of wickedness during one of his sermons. For as long as I have not been officially inaugurated [Root.GetTitle], the panel will take every opportunity to further undermine my rule.;;;;;;;;;;;;;x
+EVTOPTCAFI120;A generous donation to the Court will shut them up.;;;;;;;;;;;;;x
+
+EVTDESCAFI121;I can no longer suffer to serve under a wicked [From.GetTitle] who has yet to have [From.GetHerHis] rule be legitimized by the blessing of the Court. It is time that I make my disapproval known beyond doubt.;;;;;;;;;;;;;x
+
+EVTDESCAFI127;In a brazen display of disrespect, [From.GetTitledFirstName] proclaimed that [From.GetSheHe] would no longer serve as the Attorney General of a wicked [Root.GetTitle] whose rule is still yet to be legitimized by the blessing of the Court.;;;;;;;;;;;;;x
+EVTOPTAAFI127;I must find somebody to inaugurate me soon...;;;;;;;;;;;;;x
+
+EVTDESCAFI122;Though some time has now passed since my inauguration, the good people of [Root.Capital.GetName] are still in a festive mood, glad to finally see their [Root.GetTitle]'s status be recognized by the Court. It would be nice to see my subjects continue to celebrate my rise to the throne, if it were not for the fact that they are also using this as an excuse to work less.;;;;;;;;;;;;;x
+EVTOPTAAFI122;We could use the festivity to attract more traders.;;;;;;;;;;;;;x
+EVTOPTBAFI122;Meh, let the rabble have their fun...;;;;;;;;;;;;;x
+EVTOPTCAFI122;Get back to work!;;;;;;;;;;;;;x
+
+EVTDESCAFI123;Word of the lavish period of celebration that surrounded my inauguration has spread across the realm and beyond. My name will be forever associated with prestige and wealth.;;;;;;;;;;;;;x
+
+EVTDESCAFI124;The great celebrations that surrounded my inauguration concluded a while ago, but the trade and wealth they have brought to [Root.Capital.GetName] are still lingering, an unexpected consequence of my generosity.;;;;;;;;;;;;;x
+
+EVTDESCAAFI125;I am still thinking about [FromFrom.GetTitledFirstName]'s inauguration. While I was forced by Fate to be crowned alone and in misery, [FromFrom.GetSheHe] flaunted [FromFrom.GetHerHis] munificence with all [FromFrom.GetHerHis] guests and put up a spectacle that will be remembered for years to come...;;;;;;;;;;;;;x
+EVTDESCBAFI125;I am still thinking about [FromFrom.GetTitledFirstName]'s inauguration. While I am yet to be anointed [Root.GetTitle], [FromFrom.GetFirstName] is already flaunting [FromFrom.GetHerHis] crown with all of [FromFrom.PrimaryTitle.GetName]'s neighboring royalty after putting up a spectacle that will be remembered for years to come...;;;;;;;;;;;;;x
+
+#Modifiers
+uninaug_modifier;Uninaugurated;;;;;;;;;;;;;x
+uninaug_modifier_desc;A [Root.Religion.GetName] ruler who has not been inaugurated by a judge of the faith will never be fully accepted by his vassals as legitimate.\nThe more years he wastes before being inaugurated, the more likely his vassals will be to doubt the validity of his divine right to rule.;;;;;;;;;;;;;x
+
+inaug_in_barn;Inaugurated in Seclusion;;;;;;;;;;;;;x
+inaug_in_barn_desc;This ruler was inaugurated in seclusion, without much celebration. While this is a clear sign of lack of wealth and influence, some members of the faith may also consider it a show of humility.;;;;;;;;;;;;;x
+
+inaug_in_war;Battlefield Inauguration;;;;;;;;;;;;;x
+inaug_in_war_desc;After endless procrastination, this ruler was eventually forced to be inaugurated in a hurry at the worst of times, in the middle of a war.;;;;;;;;;;;;;x
+
+extravagant_inaug;Extravagant Inauguration;;;;;;;;;;;;;x
+extravagant_inaug_desc;This ruler was inaugurated at the culmination of an entire month of glorious festivities in [Root.GetHerHis] honor, a clear show of power and wealth that few will forget.;;;;;;;;;;;;;x
