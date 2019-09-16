@@ -1,0 +1,23 @@
+on_startup = {
+	events = {
+		AFMC.1
+		#AFMC.3
+	}
+}
+
+on_death = {
+	events = {
+		APS.1 #American Patriots
+		SC.11 #Speakership candidate death
+		SC.30 #Speakership Election
+		AFI.128 #Vassal Homage
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		SC.31 #Speakership vacant
+		SC.32 #Remove Party Traits on leaving Congress
+		AFI.126
+	}
+}

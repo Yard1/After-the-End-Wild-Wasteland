@@ -1,0 +1,532 @@
+namespace = APS
+
+character_event = {
+    id = APS.1
+	hide_window = yes
+	is_triggered_only = yes
+	has_dlc = "Holy Fury"
+    
+    picture = GFX_evt_us_seal
+	
+	trigger = {
+		trait = president
+	}
+	immediate = {
+		save_event_target_as = prez_pat
+		k_papal_state = {
+			holder_scope = {
+				character_event = { id = APS.2 days = 200 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = APS.2
+	hide_window = yes
+	is_triggered_only = yes
+	has_dlc = "Holy Fury" 
+		
+	trigger = {
+		has_landed_title = k_papal_state
+	}
+	immediate = {
+		any_character = {
+			limit = {
+				trait = president
+			}
+			character_event = { id = APS.3 }
+		}
+	}
+}
+
+character_event = {
+    id = APS.3
+    title = EVTNAMEAPS3
+    desc = EVTDESCAPS3
+	is_triggered_only = yes
+	has_dlc = "Holy Fury"
+    hide_from = yes
+	portrait = event_target:prez_pat
+    picture = GFX_evt_us_seal
+    
+	trigger = {
+		has_landed_title = d_americanist
+	}
+    option = {
+        name = EVTOPTAASP3
+		
+		if = {
+			limit = {
+				event_target:prez_pat = {
+					OR = {
+						trait = excommunicated
+						trait = drunkard
+						trait = hedonist
+						trait = cannibal_trait
+						trait = bad_priest_americanist
+						trait = possessed
+					}
+				}
+			}
+			any_character = {
+				limit = {
+					religion = americanist
+				}
+				narrative_event = { id = APS.6 days = 10 }
+			}
+			religion_authority = {
+				modifier = bad_patriot
+				years = 10
+			}
+		}
+		else = {
+			any_character = {
+				limit = {
+					religion = americanist
+				}
+				narrative_event = { id = APS.4 days = 10 }
+			}
+		}
+		custom_tooltip = {
+			text = make_patriot
+			hidden_tooltip = {
+				event_target:prez_pat = {
+					if = {
+						limit = {
+						is_female = yes
+						}
+						set_special_character_title = PATRIOT_TITLE_FEMALE
+					}
+					else = {
+						set_special_character_title = PATRIOT_TITLE
+					}
+					add_trait = patriot
+					if = { #this is an artifact of dreams long gone :( 
+						limit = {
+							event_target:prez_pat = {
+								religion = americanist
+								NOR = {
+									any_owned_bloodline = { has_bloodline_flag = bloodline_prez_fam }
+									any_owned_bloodline = { has_bloodline_flag = prez_bloodline }
+								}
+							}
+						}
+						random_list = {
+							25 = {
+								trigger = {
+									OR = {
+										diplomacy = 8
+										trait = charismatic_negotiator
+										trait = just
+										trait = gregarious
+									}
+								}
+								modifier = {
+									factor = 2
+									trait = charismatic_negotiator
+								}
+								modifier = {
+									factor = 2
+									trait = just
+								}
+								modifier = {
+									factor = 2
+									trait = gregarious
+								}
+								modifier = {
+									factor = 3
+									diplomacy = 20
+								}
+								create_bloodline = { 
+									type = prez_dip 
+									religion = americanist
+								}
+							}
+							25 = {
+								trigger = {
+									OR = {
+										martial = 8
+										trait = brave
+										trait = skilled_tactician
+										trait = strategist
+									}
+								}
+								modifier = {
+									factor = 0
+									OR = {
+										trait = craven
+										trait = weak
+									}
+								}
+								modifier = {
+									factor = 2
+									trait = skilled_tactician
+								}
+								modifier = {
+									factor = 2
+									trait = americanist_leader
+								}
+								modifier = {
+									factor = 2
+									trait = strategist
+								}
+								modifier = {
+									factor = 2
+									trait = brave
+								}
+								modifier = {
+									factor = 2
+									trait = brawny
+								}
+								modifier = {
+									factor = 3
+									martial = 20
+								}
+								create_bloodline = { 
+									type = prez_mar 
+									religion = americanist
+								}
+							}
+							20 = {
+								trigger = {
+									OR = {
+										stewardship = 8
+										trait = midas_touched
+										is_merchant_republic = yes
+										trait = banker
+									}
+								}
+								modifier = {
+									factor = 2
+									trait = midas_touched
+								}
+								modifier = {
+									factor = 2
+									is_merchant_republic = yes
+								}
+								modifier = {
+									factor = 2
+									trait = banker
+								}
+								modifier = {
+									factor = 3
+									stewardship = 20
+								}
+								create_bloodline = { 
+									type = prez_ste 
+									religion = americanist
+								}
+							}
+							5 = {
+								trigger = {
+									OR = {
+										intrigue = 8
+										trait = elusive_shadow
+										trait = schemer
+									}
+								}
+								modifier = {
+									factor = 2
+									trait = elusive_shadow
+								}
+								modifier = {
+									factor = 2
+									trait = schemer
+								}
+								modifier = {
+									factor = 3
+									intrigue = 20
+								}
+								create_bloodline = { 
+									type = prez_int 
+									religion = americanist
+								}
+							}
+							25 = {
+								trigger = {
+									OR = {
+										learning = 8
+										trait = zealous
+										trait = mastermind_theologian
+										trait = theologian
+										is_priest = yes
+										trait = scholar
+									}
+								}
+								modifier = {
+									factor = 2
+									is_priest = yes
+								}
+								modifier = {
+									factor = 2
+									trait = zealous
+								}
+								modifier = {
+									factor = 2
+									trait = mastermind_theologian
+								}
+								modifier = {
+									factor = 2
+									trait = theologian
+								}
+								modifier = {
+									factor = 2
+									trait = scholar
+								}
+								modifier = {
+									factor = 3
+									learning = 20
+								}
+								create_bloodline = { 
+									type = prez_lea
+									religion = americanist
+								}
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							event_target:prez_pat = {
+								any_owned_bloodline = { has_bloodline_flag = prez_bloodline }
+							}
+						}
+						create_bloodline = { 
+							type = prez_fam 
+							religion = americanist
+						}
+						any_owned_bloodline = { 
+							limit = {
+								has_bloodline_flag = prez_bloodline
+							}
+							remove_bloodline_member = event_target:prez_pat
+						}
+					}
+					else_if = {
+						limit = {
+							event_target:prez_pat = {
+								any_owned_bloodline = { has_bloodline_flag = bloodline_prez_fam }
+							}
+						}
+						#Nothing, no bloodline for you
+					}
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				AND = {
+					ROOT = {
+						NOR = {
+							trait = excommunicated
+							trait = drunkard
+							trait = hedonist
+							trait = cannibal_trait
+							trait = bad_priest_americanist
+							trait = possessed
+						}
+					}
+					event_target:prez_pat = {
+						OR = {
+							trait = excommunicated
+							trait = drunkard
+							trait = hedonist
+							trait = cannibal_trait
+							trait = bad_priest_americanist
+							trait = possessed
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.7
+				AND = {
+					ROOT = {
+						OR = {
+							trait = excommunicated
+							trait = drunkard
+							trait = hedonist
+							trait = cannibal_trait
+							trait = bad_priest_americanist
+							trait = possessed
+						}
+					}
+					event_target:prez_pat = {
+						OR = {
+							trait = excommunicated
+							trait = drunkard
+							trait = hedonist
+							trait = cannibal_trait
+							trait = bad_priest_americanist
+							trait = possessed
+						}
+					}
+				}
+			}
+		}
+    }
+	option = {
+		name = EVTOPTBASP3
+		trigger = {
+			event_target:prez_pat = {
+				OR = {
+					trait = excommunicated
+					trait = drunkard
+					trait = hedonist
+					trait = cannibal_trait
+					trait = bad_priest_americanist
+					trait = possessed
+				}
+			}
+		}
+		custom_tooltip = {
+			text = refuse_patriot
+			hidden_tooltip = {
+				any_character = {
+					limit = {
+						religion = americanist
+					}
+					narrative_event = { id = APS.5 days = 10 }
+				}
+			}
+		}
+		religion_modifier = {
+			modifier = bad_president
+			years = 5
+		}
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0.3
+				AND = {
+					ROOT = {
+						OR = {
+							trait = excommunicated
+							trait = drunkard
+							trait = hedonist
+							trait = cannibal_trait
+							trait = bad_priest_americanist
+							trait = possessed
+						}
+					}
+					event_target:prez_pat = {
+						OR = {
+							trait = excommunicated
+							trait = drunkard
+							trait = hedonist
+							trait = cannibal_trait
+							trait = bad_priest_americanist
+							trait = possessed
+						}
+					}
+				}
+			}
+		}
+    }
+}
+
+narrative_event = {
+	id = APS.4
+	title = EVTNAMEAPS4
+	desc = EVTDESCAPS4
+	picture = GFX_evt_patriot
+	is_triggered_only = yes
+	has_dlc = "Holy Fury"
+	portrait = event_target:prez_pat
+	
+	option = {
+		name = EVTOPTAAPS4
+		
+		if = {
+            limit = {
+                event_target:prez_pat = {
+                    family = ROOT
+                }
+            }
+            piety = 50
+        }
+	}
+}
+
+narrative_event = {
+	id = APS.5
+	title = EVTNAMEAPS5
+	desc = EVTDESCAPS5
+	is_triggered_only = yes
+	has_dlc = "Holy Fury"
+	portrait = event_target:prez_pat
+	picture = GFX_evt_unpatriot
+	
+	option = {
+		name = EVTOPTAAPS5
+		
+		if = {
+            limit = {
+                event_target:prez_pat = {
+                    family = ROOT
+                }
+            }
+            piety = -100
+        }
+	}
+}
+
+narrative_event = {
+	id = APS.6
+	title = EVTNAMEAPS6
+	desc = EVTDESCAPS6
+	is_triggered_only = yes
+	has_dlc = "Holy Fury"
+	portrait = event_target:prez_pat
+	picture = GFX_evt_notpatriot
+	
+	option = {
+		name = EVTOPTAAPS6
+		
+		if = {
+            limit = {
+                event_target:prez_pat = {
+                    family = ROOT
+                }
+            }
+            piety = -50
+        }
+	}
+}
+
+character_event = {
+	id = APS.7
+	title = EVTNAMEAPS7
+	desc = EVTDESCAPS7
+	
+	picture = GFX_evt_patriot
+	
+	religion = americanist
+	
+	trigger = {
+		any_owned_bloodline = { has_bloodline_flag = prez_bloodline }
+		any_owned_bloodline = { has_bloodline_flag = bloodline_prez_fam }	
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTAAPS7
+		
+		custom_tooltip = {
+			text = prez_family_TT
+			hidden_tooltip = {
+				any_owned_bloodline = {
+					limit = {
+						has_bloodline_flag = prez_bloodline
+					}
+					remove_bloodline_member = ROOT	
+				}
+			}
+		}
+	}
+}
