@@ -1,0 +1,16 @@
+### Salvage Artifacts ###
+
+atewww_pills = {
+	learning = 1
+	active = {
+		is_adult = yes
+		OR = {
+			trait = scholar
+			trait = physician
+		}
+	}
+	quality = 2
+	flags = { oldworld salvage }
+	stacking = yes
+	picture = "GFX_atewww_pills"
+}

@@ -32,3 +32,21 @@ d_lake_charles_adj;Charleston;;;;;;;;;;;;;x
 # Religious Features 
 
 DONA;Dona;;;;;;;;;;;;;x
+atewww_pills;Old World Medicine;;;;;;;;;;;;;x
+atewww_pills_desc;A small container of unidentified pre-Calamity medicine.;;;;;;;;;;;;;x
+ATEWWW_PILL_ANTIBIOTICS;Old World Medicine (Antibiotics);;;;;;;;;;;;;x
+ATEWWW_PILL_ANTIVIRALS;Old World Medicine (Antivirals);;;;;;;;;;;;;x
+ATEWWW_PILL_VITAMINS;Old World Medicine (Supplements);;;;;;;;;;;;;x
+ATEWWW_PILL_VIAGRA;Old World Medicine (Sexual);;;;;;;;;;;;;x
+ATEWWW_PILL_ANTIDEPRESSANTS;Old World Medicine (Psychoactive);;;;;;;;;;;;;x
+ATEWWW_PILL_PAINKILLERS;Old World Medicine (Painkillers);;;;;;;;;;;;;x
+ATEWWW_PILL_UNKNOWN;Old World Medicine (Unknown);;;;;;;;;;;;;x
+ATEWWW_PILL_UNIDENTIFIED;Old World Medicine;;;;;;;;;;;;;x
+
+ATEWWW_PILL_ANTIBIOTICS_desc;Old World Medicine (Antibiotics);;;;;;;;;;;;;x
+ATEWWW_PILL_ANTIVIRALS_desc;Old World Medicine (Antivirals);;;;;;;;;;;;;x
+ATEWWW_PILL_VITAMINS_desc;Old World Medicine (Supplements);;;;;;;;;;;;;x
+ATEWWW_PILL_VIAGRA_desc;Old World Medicine (Sexual);;;;;;;;;;;;;x
+ATEWWW_PILL_ANTIDEPRESSANTS_desc;Old World Medicine (Psychoactive);;;;;;;;;;;;;x
+ATEWWW_PILL_PAINKILLERS_desc;Old World Medicine (Painkillers);;;;;;;;;;;;;x
+ATEWWW_PILL_UNKNOWN_desc;Old World Medicine (Unknown);;;;;;;;;;;;;x

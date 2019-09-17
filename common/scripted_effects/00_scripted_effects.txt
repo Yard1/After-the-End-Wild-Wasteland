@@ -2532,6 +2532,7 @@ remove_treatment_modifiers_effect = {
 	remove_character_modifier = symptom_treatment_2
 	remove_character_modifier = symptom_treatment_3
 	remove_character_modifier = symptom_treatment_4
+	remove_character_modifier = taken_painkillers
 }
 
 remove_disease_flags_effect = {

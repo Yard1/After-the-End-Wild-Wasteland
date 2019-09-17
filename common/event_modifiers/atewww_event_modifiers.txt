@@ -41,7 +41,30 @@ devotee_of_butler = {
 	local_movement_speed = 0.05
 	icon = 1
 }
-
+taken_vitamins = {
+	health_penalty = 1.5
+	icon = 50
+}
+taken_painkillers = {
+	health_penalty = 2.5
+	icon = 50
+}
+pill_side_effects = {
+	health_penalty = -1.5
+	icon = 55
+}
+taken_viagra = {
+	icon = 75
+	health_penalty = -0.1
+	fertility = 0.75
+	sex_appeal_opinion = 10
+}
+taken_viagra_female = {
+	icon = 75
+	health_penalty = -0.1
+	fertility = 0.15
+	sex_appeal_opinion = 10
+}
 expelled_d_libertarian = {
 	icon = 35
 }

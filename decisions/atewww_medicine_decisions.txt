@@ -1,0 +1,336 @@
+decisions = {
+	identify_medicine = {
+		only_playable = yes
+		ai_check_interval = 5
+		potential = {
+			is_playable = yes
+			any_artifact = {
+				artifact_type = atewww_pills
+				NOR = {
+					has_artifact_flag = atewww_pills_identified_as_antibiotics
+					has_artifact_flag = atewww_pills_identified_as_antivirals
+					has_artifact_flag = atewww_pills_identified_as_vitamins
+					has_artifact_flag = atewww_pills_identified_as_viagra
+					has_artifact_flag = atewww_pills_identified_as_antidepressants
+					has_artifact_flag = atewww_pills_identified_as_painkillers
+					has_artifact_flag = atewww_pills_identified_as_sugar
+					has_artifact_flag = atewww_pills_cannot_be_identified
+				}
+			}
+		}
+		
+		allow = {
+			prisoner = no
+			is_incapable = no
+			OR = {
+				is_learned_trigger = yes
+				learning = 12
+				trait = paranoid
+				any_courtier_or_vassal = {
+					has_minor_title = title_court_physician
+				}
+			}
+		}
+		
+		effect = {
+			character_event = { id = ATE_WWW_MEDICINE.1 }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	take_medicine = {
+		only_playable = yes
+		is_high_prio = yes
+	
+		potential = {
+			is_playable = yes
+			character_disease_trigger = yes
+			NOT = { has_character_flag = taken_medicine_recently }
+			any_artifact = {
+				artifact_type = atewww_pills
+				OR = {
+					has_artifact_flag = atewww_pills_cannot_be_identified
+					has_artifact_flag = atewww_pills_identified_as_painkillers
+					AND = {
+						has_artifact_flag = atewww_pills_identified_as_antibiotics
+						ROOT = {
+							OR = {
+								trait = has_tuberculosis
+								trait = has_typhoid_fever
+								trait = has_typhus
+								trait = has_bubonic_plague
+								trait = syphilitic
+								trait = dysentery
+								trait = food_poisoning
+								trait = pneumonic
+								trait = ill
+							}
+						}
+					}
+					AND = {
+						has_artifact_flag = atewww_pills_identified_as_antivirals
+						ROOT = {
+							OR = {
+								trait = has_measles
+								trait = has_small_pox
+								trait = has_aztec_disease
+								trait = flu
+								trait = rabies
+								trait = lovers_pox
+								trait = ill
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		allow = {
+			prisoner = no
+			is_incapable = no
+		}
+		
+		effect = {
+			character_event = { id = ATE_WWW_MEDICINE.2 }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+			additive_modifier = {
+				value = 5
+				NOT = { health = 1.5 }
+			}
+			additive_modifier = {
+				value = 1
+				NOT = { health = 3.5 }
+			}
+			additive_modifier = {
+				value = 2
+				well_treated_for_disease_trigger = yes
+				NOT = { health = 3.5 }
+			}
+			additive_modifier = {
+				value = 2
+				poorly_treated_for_disease_trigger = yes
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+				any_artifact = {
+					artifact_type = atewww_pills
+					has_artifact_flag = atewww_pills_cannot_be_identified
+				}
+				has_identified_medicine_to_take = no
+			}
+			modifier = {
+				factor = 0.25
+				trait = craven
+				any_artifact = {
+					artifact_type = atewww_pills
+					has_artifact_flag = atewww_pills_cannot_be_identified
+				}
+				has_identified_medicine_to_take = no
+			}
+			modifier = {
+				factor = 0
+				trait = paranoid
+				any_artifact = {
+					artifact_type = atewww_pills
+					has_artifact_flag = atewww_pills_cannot_be_identified
+				}
+				has_identified_medicine_to_take = no
+			}
+			modifier = {
+				factor = 0
+				has_character_modifier = pill_side_effects
+			}
+			modifier = {
+				factor = 0
+				any_artifact = {
+					artifact_type = atewww_pills
+					NOR = {
+						has_artifact_flag = atewww_pills_identified_as_antibiotics
+						has_artifact_flag = atewww_pills_identified_as_antivirals
+						has_artifact_flag = atewww_pills_identified_as_vitamins
+						has_artifact_flag = atewww_pills_identified_as_viagra
+						has_artifact_flag = atewww_pills_identified_as_antidepressants
+						has_artifact_flag = atewww_pills_identified_as_painkillers
+						has_artifact_flag = atewww_pills_identified_as_sugar
+						has_artifact_flag = atewww_pills_cannot_be_identified
+					}
+				}
+			}
+		}
+	}
+	take_vitamins = {
+		only_playable = yes
+		ai_check_interval = 5
+		potential = {
+			is_playable = yes
+			any_artifact = {
+				artifact_type = atewww_pills
+				has_artifact_flag = atewww_pills_identified_as_vitamins
+			}
+		}
+		
+		allow = {
+			prisoner = no
+			is_incapable = no
+		}
+		
+		effect = {
+			random_artifact = {
+				limit = {
+					artifact_type = atewww_pills
+					has_artifact_flag = atewww_pills_identified_as_vitamins
+				}
+				save_event_target_as = taken_pill
+			}
+			character_event = { id = ATE_WWW_MEDICINE.5 days = 3 random = 5 }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+			additive_modifier = {
+				value = 5
+				NOT = { health = 1.5 }
+			}
+			additive_modifier = {
+				value = 2
+				NOT = { health = 2.5 }
+			}
+			additive_modifier = {
+				value = 2
+				NOT = { health = 3.5 }
+			}
+			additive_modifier = {
+				value = 1
+				NOT = { health = 4.5 }
+			}
+			additive_modifier = {
+				value = 2
+				trait = scurvy
+				NOT = { health = 3.5 }
+			}
+		}
+	}
+	take_antidepressants = {
+		only_playable = yes
+		ai_check_interval = 5
+		potential = {
+			is_playable = yes
+			any_artifact = {
+				artifact_type = atewww_pills
+				has_artifact_flag = atewww_pills_identified_as_antidepressants
+			}
+		}
+		
+		allow = {
+			prisoner = no
+			is_incapable = no
+			OR = {
+				trait = depressed
+				trait = lunatic
+				trait = possessed
+			}
+		}
+		
+		effect = {
+			random_artifact = {
+				limit = {
+					artifact_type = atewww_pills
+					has_artifact_flag = atewww_pills_identified_as_antidepressants
+				}
+				save_event_target_as = taken_pill
+			}
+			character_event = { id = ATE_WWW_MEDICINE.5 days = 3 random = 5 }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+			additive_modifier = {
+				value = 2
+				trait = depressed
+			}
+			#other traits wouldn't really want to get cured...
+		}
+	}
+	take_viagra = {
+		only_playable = yes
+		ai_check_interval = 5
+		potential = {
+			is_playable = yes
+			any_artifact = {
+				artifact_type = atewww_pills
+				has_artifact_flag = atewww_pills_identified_as_viagra
+			}
+		}
+		
+		allow = {
+			prisoner = no
+			is_incapable = no
+			is_infertile_trigger = no
+		}
+		
+		effect = {
+			random_artifact = {
+				limit = {
+					artifact_type = atewww_pills
+					has_artifact_flag = atewww_pills_identified_as_viagra
+				}
+				save_event_target_as = taken_pill
+			}
+			character_event = { id = ATE_WWW_MEDICINE.5 days = 1 }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+			additive_modifier = {
+				value = 5
+				NOT = { fertility = 0.15 }
+			}
+			additive_modifier = {
+				value = 2
+				NOT = { fertility = 0.25 }
+			}
+			additive_modifier = {
+				value = 1
+				NOT = { fertility = 0.35 }
+			}
+			additive_modifier = {
+				value = 2
+				trait = seducer
+			}
+			additive_modifier = {
+				value = 5
+				trait = lustful
+			}
+			modifier = {
+				factor = 0.5
+				is_female = yes
+			}
+		}
+	}
+}
