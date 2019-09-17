@@ -1709,6 +1709,16 @@ gender_laws = {
 					}
 				}
 			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					has_feminist_culture_trigger = yes 
+					OR = {
+						has_law = cognatic_succession
+						has_law = true_cognatic_succession
+					}
+				}
+			}
 		}
 		default = yes
 		default_selection = {
@@ -1834,6 +1844,13 @@ gender_laws = {
 						is_theocracy = yes
 						mercenary = yes
 					}
+				}
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					has_feminist_culture_trigger = yes 
+					has_law = true_cognatic_succession
 				}
 			}
 		}
