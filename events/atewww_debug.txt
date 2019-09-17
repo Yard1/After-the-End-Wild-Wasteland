@@ -124,9 +124,24 @@ character_event = {
 	hide_window = yes
 	
 	is_triggered_only = yes
+	trigger = {
+		is_ruler = yes
+		is_landed = yes
+		mercenary = no
+		temporary = no
+		religion = gaian
+		any_demesne_title = {
+			is_law_potential = enatic_cognatic_succession
+			has_law = enatic_succession
+		}
+	}
 	
 	option = {
-		log = "AI CHANCE 2 OPTION A"
+		any_demesne_title = {
+			limit = { is_law_potential = enatic_cognatic_succession has_law = enatic_succession }
+			log = "change succession law to enatic_cognatic in [This.GetName]"
+			add_law = { law = enatic_cognatic_succession cooldown = no opinion_effect = no }
+		}
 		ai_chance = {
 			factor = 1
 			additive_modifier = {

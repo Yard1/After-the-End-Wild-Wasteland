@@ -4615,10 +4615,6 @@ narrative_event = {
 			limit = { #Switch to matriarchy.
 				ROOT = { 
 					matriarchal_religion = yes 
-					NOR = {  
-						is_merchant_republic = yes
-						is_republic = yes
-					}
 				}
 			}
 			ROOT = { 
@@ -4650,14 +4646,7 @@ narrative_event = {
 		if = {
 			limit = { #Switch to equality.
 				ROOT = { 
-					OR = {
-						equal_religion = yes 
-						has_religion_feature = religion_feature_midewiwin
-					}
-					NOR = {  
-						is_merchant_republic = yes
-						is_republic = yes
-					}
+					equal_religion = yes 
 				}
 			}
 			ROOT = { 

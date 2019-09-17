@@ -369,6 +369,7 @@ decisions = {
 				remove_trait = corsair
 			}
 			add_trait = pirate_king
+			set_character_flag = pirate_king_flag
 			activate_title = { title = k_pirate_kingdom status = yes }
 			primary_title = {
 				show_scope_change = no

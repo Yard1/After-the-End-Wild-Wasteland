@@ -1,0 +1,3736 @@
+namespace = SC
+
+#Found Party
+character_event = {
+	id = SC.1
+	desc = EVTDESCSC1
+	is_triggered_only = yes
+	picture = GFX_evt_capitol_building
+	
+	option = {
+		name = EVTOPTASC1
+		trigger = {
+			NOT = {
+				has_global_flag = demrep_founded
+			}
+		}
+		custom_tooltip = {
+			text = demrep_TT
+			hidden_tooltip = {
+				add_trait = demrep
+				society_rank_up = 3
+				clr_character_flag = partyleader
+				set_global_flag = demrep_founded
+				change_society_currency = 500 #Run for Speaker
+			}
+		}
+		ai_chance = {
+			factor = 75
+		}
+	}
+	option = {
+		name = EVTOPTBSC1
+		trigger = {
+			NOT = {
+				has_global_flag = am_loyalist_f
+			}
+		}
+		
+		custom_tooltip = {
+			text = am_loyalist_TT
+			hidden_tooltip = {
+				add_trait = am_loyalist
+				society_rank_up = 3
+				clr_character_flag = partyleader
+				set_global_flag = am_loyalist_f
+				change_society_currency = 500 #Run for Speaker
+			}
+		}
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+#Join Party
+character_event = {
+	id = SC.2
+	desc = EVTDESCSC2
+	is_triggered_only = yes
+	picture = GFX_evt_capitol_building
+	
+	trigger = {
+		NOR = {
+			trait = am_loyalist
+			trait = demrep
+		}
+	}
+	
+	option = {
+		name = EVTOPTASC2
+		trigger = {
+			has_global_flag = demrep_founded
+		}
+		add_trait = demrep
+		
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+	option = {
+		name = EVTOPTBSC2
+		trigger = {
+			has_global_flag = am_loyalist_f
+		}
+		add_trait = am_loyalist
+		
+		ai_chance = {
+			factor = 0.5
+		}
+	}
+}
+
+#Congressional Call Sent
+character_event = {
+	id = SC.3
+	title = EVTNAMESC3
+	desc = EVTDESCSC3
+	is_triggered_only = yes
+	picture = GFX_evt_us_seal
+	
+	option = {
+		name = EVTOPTASC3
+		
+		any_realm_character = {
+			limit = {
+				primary_title = { higher_tier_than = BARON }
+				NOT = {
+					has_landed_title = d_americanist
+				}
+				NOT = {
+					society_member_of = soc_congress
+				}
+				prisoner = no
+				age = 16
+			}
+			narrative_event = { id = SC.4 }
+		}
+		custom_tooltip = { text = congress_send_invites_TT }
+	}
+}
+
+#Congressional Call Received
+narrative_event = {
+	id = SC.4
+	title = EVTNAMESC4
+	desc = EVTDESCSC4
+	is_triggered_only = yes
+	picture = GFX_evt_capitol_building
+	
+	option = {
+		name = EVTOPTASC4
+		
+		set_character_flag = congress_invited
+		leave_society = yes
+		join_society = soc_congress
+	}
+}
+
+#VOTING
+
+##VOTING FOR SPEAKER
+
+#Speaker is dead
+character_event = {
+	id = SC.30
+	desc = DEBUG
+	is_triggered_only = yes # Triggered by on_death, on_yearly_pulse
+	hide_window = yes
+	
+	trigger = {
+		trait = speaker
+		NOT = { has_global_flag = speaker_election }
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = speaker_election
+		set_global_flag = speaker_candidacy
+		k_papal_state = {
+			holder_scope = {
+				set_variable = { which = s_num_candidates value = 0 }
+				character_event = { id = SC.10 days = 30 }
+			}
+		}
+		any_character = {
+			limit = {
+				society_member_of = soc_congress
+			}
+			character_event = { id = SC.6 }
+		}
+		any_character = {
+			limit = {
+				has_landed_title = e_usa
+			}
+			character_event = { id = SC.6 }
+		}
+	}
+	
+	option = {
+		name = DEBUG
+	}
+}
+
+#Speaker leaves Congress
+character_event = {
+	id = SC.31
+	desc = DEBUG
+	is_triggered_only = yes # called from on_yearly_pulse
+	hide_window = yes
+	
+	trigger = {
+		has_landed_title = k_papal_state
+		speaker = {
+			NOT = {
+				society_member_of = soc_congress
+			}	
+		}
+	}
+	
+	immediate = {
+		set_global_flag = bbysfstspkre
+		speaker = {
+			limit = {
+				NOT = {
+					society_member_of = soc_congress
+				}	
+			}
+			remove_trait = speaker
+		}
+	}
+	
+	option = {
+		name = DEBUG
+		character_event = { id = SC.30 days = 1 }
+	}
+}
+
+character_event = { #Used for first time Speaker Election
+	id = SC.5
+	desc = EVTDESCSC5
+	is_triggered_only = yes
+	picture = GFX_evt_us_seal
+	
+	
+	immediate = {
+		set_global_flag = speaker_election
+		set_global_flag = speaker_candidacy
+		hidden_tooltip = {
+			k_papal_state = {
+				holder_scope = {
+					set_variable = { which = s_num_candidates value = 0 }
+					character_event = { id = SC.10 days = 30 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTASC5
+		
+		any_character = {
+			limit = {
+				society_member_of = soc_congress
+			}
+			character_event = { id = SC.6 }
+		}
+		any_character = {
+			limit = {
+				has_landed_title = e_usa
+			}
+			character_event = { id = SC.6 }
+		}
+	}
+}
+
+character_event = { #Speakership is vacant, tell all the Congresspeople
+	id = SC.6
+	desc = {
+		text = first_speaker_election
+		trigger = { 
+			NOT = {
+				has_global_flag = bbysfstspkre
+			}
+		}
+	}
+	desc = {
+		text = speaker_dead
+		trigger = { 
+			has_global_flag = bbysfstspkre #Baby's First Speaker Election
+		}
+	}
+	is_triggered_only = yes
+	picture = GFX_evt_house_room
+	
+	option = {
+		name = EVTOPTASC6
+		
+		custom_tooltip = {
+			text = evtsc6_TT
+		}
+	}
+}
+
+character_event = { #New candidate has entered the race
+	id = SC.7
+	desc = EVTDESCSC7
+	is_triggered_only = yes
+
+	notification = yes
+	
+	option = {
+		name = EVTOPTASC7
+	}
+}
+
+character_event = { #Candidate has dropped out (chicken)
+	id = SC.8
+	desc = {
+		text = EVTDESCASC8
+		trigger = { FROM = { is_alive = yes } }
+	}
+	desc = {
+		text = EVTDESCBSC8
+		trigger = { FROM = { is_alive = no } } #Still a chicken
+	}
+	is_triggered_only = yes
+
+	notification = yes
+	
+	option = {
+		name = EVTOPTASC8
+	}
+}
+
+character_event = { #Show candidates
+	id = SC.9
+	desc = EVTDESCSC9
+	is_triggered_only = yes
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTASC9
+		any_playable_ruler = {
+			limit = {
+				trait = on_campaign_speaker
+				has_character_flag = speaker_candidate
+			}
+			custom_tooltip = { text = speaker_candidate_TT }
+		}
+	}
+}
+
+character_event = {
+	id = SC.10
+	desc = DEBUG
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		clr_global_flag = speaker_candidacy
+	}
+	
+	option = {
+		name = DEBUG
+		trigger = {
+			check_variable = { which = s_num_candidates value = 0.1 }
+			has_global_flag = pres_election
+		}
+		clr_global_flag = speaker_candidacy
+		any_character = {
+			limit = {
+				society_member_of = soc_congress
+			}
+			character_event = { id = SC.9 }
+		}
+		any_character = {
+			limit = {
+				has_landed_title = e_usa
+			}
+			character_event = { id = SC.9 }
+		}
+		character_event = { id = SC.12 days = 30 } # Thin out the field
+	}
+	
+	option = {
+		name = DEBUG
+		trigger = {
+			OR = {
+				NOT = { check_variable = { which = s_num_candidates value = 0.1 } }
+				NOT = { has_global_flag = speaker_election }
+			}
+		}
+		character_event = { id = SC.10 }
+		
+		set_global_flag = speaker_candidacy
+	}
+}
+
+character_event = {
+	id = SC.11
+	desc = DEBUG
+	is_triggered_only = yes # Triggered from on_death, decision to drop out, other events
+	hide_window = yes
+	
+	trigger = {
+		trait = on_campaign_speaker
+	}
+	
+	immediate = {
+		remove_trait = on_campaign_speaker
+		k_papal_state = { holder_scope = { change_variable = { which = s_num_candidates value = -1 } } }
+		any_character = {
+			limit = {
+				society_member_of = soc_congress
+			}
+			character_event = { id = SC.8 days = 1 }
+		}
+		any_character = {
+			limit = {
+				has_landed_title = e_usa
+			}
+			character_event = { id = SC.8 days = 1 }
+		}
+		set_character_flag = dropped_out
+		clr_character_flag = speaker_candidate
+		any_character = {
+			limit = {
+				trait = on_campaign_speaker
+				has_character_flag = speaker_candidate
+			}
+			remove_opinion = { modifier = opposing_candidate who = ROOT }
+			reverse_remove_opinion = { modifier = opposing_candidate who = ROOT }
+		}
+	}
+	
+	option = {
+		name = DEBUG
+	}
+}
+
+character_event = {
+	id = SC.12
+	desc = DEBUG
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		character_event = { id = SC.15 days = 90 } # Schedule voting
+		character_event = { id = SC.13 } # Thin out the field
+	}
+	
+	option = {
+		name = DEBUG
+	}
+}
+
+character_event = {
+	id = SC.13
+	desc = DEBUG
+	is_triggered_only = yes
+	hide_window = yes
+	
+	option = { # More than 4 candidates
+		name = DEBUG
+		trigger = {
+			check_variable = { which = s_num_candidates value = 4.1 }
+			has_global_flag = speaker_election
+		}
+		character_event = { id = SC.13 days = 3 } # Continue loop
+		on_campaign = {
+			limit = {
+				ai = yes
+				has_character_flag = speaker_candidate
+			}
+			character_event = { id = SC.26 } # Hold opinion poll
+			character_event = { id = SC.14 days = 2 } # After getting poll, decide whether to drop out
+		}
+	}
+	
+	option = { # 4 or less candidates
+		name = DEBUG
+		trigger = {
+			OR = {
+				NOT = { check_variable = { which = s_num_candidates value = 4.1 } }
+				NOT = { has_global_flag = speaker_election }
+			}
+		}
+		set_global_flag = speaker_voting #once 4 or less candidates have been selected, you can no longer drop out of the race via decision.
+	}
+}
+
+character_event = {
+	id = SC.14
+	desc = DEBUG
+	is_triggered_only = yes
+	hide_window = yes
+	
+	option = { # Drop out
+		name = DEBUG
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				has_character_flag = 4th_place
+			}
+			modifier = {
+				factor = 2
+				has_character_flag = 3rd_place
+			}
+			modifier = {
+				factor = 2
+				k_papal_state = { holder_scope = { check_variable = { which = s_num_candidates value = 8 } } }
+			}
+		}
+		character_event = { id = SC.11 }
+	}
+	option = { # Stay
+		name = DEBUG
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5
+				has_character_flag = 1st_place
+			}
+			modifier = {
+				factor = 2
+				has_character_flag = 2nd_place
+			}
+		}
+	}
+}
+
+character_event = {
+	id = SC.15
+	desc = DEBUG
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		character_event = { id = SC.17 days = 30 }
+		clr_global_flag = speaker_candidacy
+	}
+	
+	option = {
+		name = DEBUG
+		any_character = {
+			limit = {
+				society_member_of = soc_congress
+			}
+			character_event = { id = SC.16 }
+		}
+		any_character = {
+			limit = {
+				has_landed_title = e_usa
+			}
+			character_event = { id = SC.16 }
+		}
+	}
+}
+
+#"May the best man win"
+character_event = {
+	id = SC.16
+	desc = EVTDESCSC16
+	picture = GFX_evt_rival_rulers
+	is_triggered_only = yes
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTASC16
+	}
+}
+
+character_event = {
+	id = SC.17
+	desc = DEBUG
+	is_triggered_only = yes
+	
+	option = {
+		name = DEBUG
+		on_campaign_speaker = {
+			limit = {
+				has_character_flag = speaker_candidate
+			}
+			save_event_target_as = sc1
+		}
+		on_campaign_speaker = {
+			limit = {
+				has_character_flag = speaker_candidate
+				NOT = { event_target:sc1 = { character = PREV } }
+			}
+			save_event_target_as = sc2
+		}
+		on_campaign_speaker = {
+			limit = {
+				has_character_flag = speaker_candidate
+				NOT = { event_target:sc1 = { character = PREV } }
+				NOT = { event_target:sc2 = { character = PREV } }
+			}
+			save_event_target_as = sc3
+		}
+		on_campaign_speaker = {
+			limit = {
+				has_character_flag = speaker_candidate
+				NOT = { event_target:sc1 = { character = PREV } }
+				NOT = { event_target:sc2 = { character = PREV } }
+				NOT = { event_target:sc3 = { character = PREV } }
+			}
+			save_event_target_as = sc4
+		}
+		set_variable = { which = "sc1_votes" value = 0 }
+		set_variable = { which = "sc2_votes" value = 0 }
+		set_variable = { which = "sc3_votes" value = 0 }
+		set_variable = { which = "sc4_votes" value = 0 }
+		
+		any_character = {
+			limit = {
+				society_member_of = soc_congress
+			}
+			letter_event = { id = SC.18 }
+		}
+		
+		character_event = { id = SC.19 days = 1 } # Count votes
+		character_event = { id = SC.24 days = 2 } # Cleanup
+	}
+}
+
+letter_event = {
+	id = SC.18
+	desc = EVTDESCSC18
+	is_triggered_only = yes
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTASC18
+		trigger = {
+			event_target:sc1 = { always = yes }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				event_target:sc1 = { is_friend = ROOT }
+			}
+			modifier = {
+				factor = 0.01
+				event_target:sc1 = { is_rival = ROOT }
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc1 = { 
+						trait = demrep_pl
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc1 = { 
+						trait = am_loyalist_pl
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc1 = { 
+						trait = demrep
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc1 = { 
+						trait = am_loyalist
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				NOT = { event_target:sc1 = { reverse_opinion = { who = ROOT value = -80 } } }
+			}
+			modifier = {
+				factor = 0.4
+				NOT = { event_target:sc1 = { reverse_opinion = { who = ROOT value = -60 } } }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { event_target:sc1 = { reverse_opinion = { who = ROOT value = -40 } } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { event_target:sc1 = { reverse_opinion = { who = ROOT value = -20 } } }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc1 = { reverse_opinion = { who = ROOT value = 20 } }
+			}
+			modifier = {
+				factor = 1.4
+				event_target:sc1 = { reverse_opinion = { who = ROOT value = 40 } }
+			}
+			modifier = {
+				factor = 1.6
+				event_target:sc1 = { reverse_opinion = { who = ROOT value = 60 } }
+			}
+			modifier = {
+				factor = 1.8
+				event_target:sc1 = { reverse_opinion = { who = ROOT value = 80 } }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc1 = { NOT = { diplomacy = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc1 = { diplomacy = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc1 = { diplomacy = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc1 = { diplomacy = 25 }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc1 = { NOT = { learning = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc1 = { learning = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc1 = { learning = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc1 = { learning = 25 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc1 = { realm_size = 15 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc1 = { realm_size = 50 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc1 = { piety = 250 }
+			}
+		}
+		event_target:sc1 = { custom_tooltip = { text = SC18_TT } }
+		hidden_tooltip = { FROM = { change_variable = { which = "sc1_votes" value = 1 } } }
+	}
+	
+	option = {
+		name = EVTOPTBSC18
+		trigger = {
+			event_target:sc2 = { always = yes }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				event_target:sc2 = { is_friend = ROOT }
+			}
+			modifier = {
+				factor = 0.01
+				event_target:sc2 = { is_rival = ROOT }
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc2 = { 
+						trait = demrep_pl
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc2 = { 
+						trait = am_loyalist_pl
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc2 = { 
+						trait = demrep
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc2 = { 
+						trait = am_loyalist
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				NOT = { event_target:sc2 = { reverse_opinion = { who = ROOT value = -80 } } }
+			}
+			modifier = {
+				factor = 0.4
+				NOT = { event_target:sc2 = { reverse_opinion = { who = ROOT value = -60 } } }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { event_target:sc2 = { reverse_opinion = { who = ROOT value = -40 } } }
+			}
+			modifier = {
+				factor = 0.9
+				NOT = { event_target:sc2 = { reverse_opinion = { who = ROOT value = -20 } } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc2 = { reverse_opinion = { who = ROOT value = 20 } }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc2 = { reverse_opinion = { who = ROOT value = 40 } }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc2 = { reverse_opinion = { who = ROOT value = 60 } }
+			}
+			modifier = {
+				factor = 1.4
+				event_target:sc2 = { reverse_opinion = { who = ROOT value = 80 } }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc2 = { NOT = { diplomacy = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc2 = { diplomacy = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc2 = { diplomacy = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc2 = { diplomacy = 25 }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc2 = { NOT = { learning = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc2 = { learning = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc2 = { learning = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc2 = { learning = 25 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc2 = { realm_size = 15 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc2 = { realm_size = 50 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc2 = { piety = 250 }
+			}
+		}
+		event_target:sc2 = { custom_tooltip = { text = SC18_TT } }
+		hidden_tooltip = { FROM = { change_variable = { which = "sc2_votes" value = 1 } } }
+	}
+	
+	option = {
+		name = EVTOPTCSC18
+		trigger = {
+			event_target:sc3 = { always = yes }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				event_target:sc3 = { is_friend = ROOT }
+			}
+			modifier = {
+				factor = 0.01
+				event_target:sc3 = { is_rival = ROOT }
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc3 = { 
+						trait = demrep_pl
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc3 = { 
+						trait = am_loyalist_pl
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc3 = { 
+						trait = demrep
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc3 = { 
+						trait = am_loyalist
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				NOT = { event_target:sc3 = { reverse_opinion = { who = ROOT value = -80 } } }
+			}
+			modifier = {
+				factor = 0.4
+				NOT = { event_target:sc3 = { reverse_opinion = { who = ROOT value = -60 } } }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { event_target:sc3 = { reverse_opinion = { who = ROOT value = -40 } } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { event_target:sc3 = { reverse_opinion = { who = ROOT value = -20 } } }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc3 = { reverse_opinion = { who = ROOT value = 20 } }
+			}
+			modifier = {
+				factor = 1.4
+				event_target:sc3 = { reverse_opinion = { who = ROOT value = 40 } }
+			}
+			modifier = {
+				factor = 1.6
+				event_target:sc3 = { reverse_opinion = { who = ROOT value = 60 } }
+			}
+			modifier = {
+				factor = 1.8
+				event_target:sc3 = { reverse_opinion = { who = ROOT value = 80 } }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc3 = { NOT = { diplomacy = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc3 = { diplomacy = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc3 = { diplomacy = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc3 = { diplomacy = 25 }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc3 = { NOT = { learning = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc3 = { learning = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc3 = { learning = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc3 = { learning = 25 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc3 = { realm_size = 15 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc3 = { realm_size = 50 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc3 = { piety = 250 }
+			}
+		}
+		event_target:sc3 = { custom_tooltip = { text = SC18_TT } }
+		hidden_tooltip = { FROM = { change_variable = { which = "sc3_votes" value = 1 } } }
+	}
+	
+	option = {
+		name = EVTOPTDSC18
+		trigger = {
+			event_target:sc4 = { always = yes }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				event_target:sc4 = { is_friend = ROOT }
+			}
+			modifier = {
+				factor = 0.01
+				event_target:sc4 = { is_rival = ROOT }
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc4 = { 
+						trait = demrep_pl
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc4 = { 
+						trait = am_loyalist_pl
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc4 = { 
+						trait = demrep
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc4 = { 
+						trait = am_loyalist
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				NOT = { event_target:sc4 = { reverse_opinion = { who = ROOT value = -80 } } }
+			}
+			modifier = {
+				factor = 0.4
+				NOT = { event_target:sc4 = { reverse_opinion = { who = ROOT value = -60 } } }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { event_target:sc4 = { reverse_opinion = { who = ROOT value = -40 } } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { event_target:sc4 = { reverse_opinion = { who = ROOT value = -20 } } }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc4 = { reverse_opinion = { who = ROOT value = 20 } }
+			}
+			modifier = {
+				factor = 1.4
+				event_target:sc4 = { reverse_opinion = { who = ROOT value = 40 } }
+			}
+			modifier = {
+				factor = 1.6
+				event_target:sc4 = { reverse_opinion = { who = ROOT value = 60 } }
+			}
+			modifier = {
+				factor = 1.8
+				event_target:sc4 = { reverse_opinion = { who = ROOT value = 80 } }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc4 = { NOT = { diplomacy = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc4 = { diplomacy = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc4 = { diplomacy = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc4 = { diplomacy = 25 }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc4 = { NOT = { learning = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc4 = { learning = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc4 = { learning = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc4 = { learning = 25 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc4 = { realm_size = 15 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc4 = { realm_size = 50 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc4 = { piety = 250 }
+			}
+		}
+		event_target:sc4 = { custom_tooltip = { text = SC18_TT } }
+		hidden_tooltip = { FROM = { change_variable = { which = "sc4_votes" value = 1 } } }
+	}
+}
+
+character_event = {
+	id = SC.19
+	desc = DEBUG
+	hide_window = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = DEBUG
+		trigger = {
+			check_variable = { which = "sc1_votes" which = "sc2_votes" }
+			check_variable = { which = "sc1_votes" which = "sc3_votes" }
+			check_variable = { which = "sc1_votes" which = "sc4_votes" }
+		}
+		event_target:sc1 = {
+			save_event_target_as = sp_winner
+			narrative_event = { id = SC.20 }
+		}
+	}
+	
+	option = {
+		name = DEBUG
+		trigger = {
+			check_variable = { which = "sc2_votes" which = "sc1_votes" }
+			check_variable = { which = "sc2_votes" which = "sc3_votes" }
+			check_variable = { which = "sc2_votes" which = "sc4_votes" }
+		}
+		event_target:sc2 = {
+			save_event_target_as = sp_winner
+			narrative_event = { id = SC.20 }
+		}
+	}
+	
+	option = {
+		name = DEBUG
+		trigger = {
+			check_variable = { which = "sc3_votes" which = "sc1_votes" }
+			check_variable = { which = "sc3_votes" which = "sc2_votes" }
+			check_variable = { which = "sc3_votes" which = "sc4_votes" }
+		}
+		event_target:sc3 = {
+			save_event_target_as = sp_winner
+			narrative_event = { id = SC.20 }
+		}
+	}
+	
+	option = {
+		name = DEBUG
+		trigger = {
+			check_variable = { which = "sc4_votes" which = "sc1_votes" }
+			check_variable = { which = "sc4_votes" which = "sc2_votes" }
+			check_variable = { which = "sc4_votes" which = "sc3_votes" }
+		}
+		event_target:sc4 = {
+			save_event_target_as = sp_winner
+			narrative_event = { id = SC.20 }
+		}
+	}
+}
+
+narrative_event = {
+	id = SC.20
+	title = EVTNAMESC20
+	desc = {
+		text = EVTDESCASC20
+		trigger = {
+			NOT = { event_target:sc2 = { always = yes } }
+			NOT = { event_target:sc3 = { always = yes } }
+			NOT = { event_target:sc4 = { always = yes } }
+		}
+	}
+	desc = {
+		text = EVTDESCBSC20
+		trigger = {
+			event_target:c2 = { always = yes }
+			NOT = { event_target:sc3 = { always = yes } }
+			NOT = { event_target:sc4 = { always = yes } }
+		}
+	}
+	desc = {
+		text = EVTDESCCSC20
+		trigger = {
+			event_target:sc2 = { always = yes }
+			event_target:sc3 = { always = yes }
+			NOT = { event_target:sc4 = { always = yes } }
+		}
+	}
+	desc = {
+		text = EVTDESCDSC20
+		trigger = {
+			event_target:sc2 = { always = yes }
+			event_target:sc3 = { always = yes }
+			event_target:sc4 = { always = yes }
+		}
+	}
+	picture = GFX_evt_house_rostrum
+	is_triggered_only = yes
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTASC20
+		prestige = 500
+		remove_trait = on_campaign_speaker
+		add_trait = speaker
+		society_rank_up = 3
+		set_society_grandmaster = yes
+		set_character_flag = current_speaker
+		clr_character_flag = speaker_candidate
+		if = {
+			limit = { NOT = { dynasty = none } }
+			give_nickname = nick_lastname
+		}
+		if = {
+			limit = {
+				is_female = yes
+			}
+			set_special_character_title = SPEAKER_TITLE_FEMALE
+		}
+		else = {
+				set_special_character_title = SPEAKER_TITLE
+		}
+		hidden_tooltip = {
+			any_character = {
+				limit = {
+					society_member_of = soc_congress
+				}
+				character_event = { id = SC.21 }
+			}
+			any_character = {
+				limit = {
+					has_landed_title = e_usa
+				}
+				character_event = { id = SC.21 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = SC.21
+	hide_from = yes
+	desc = {
+		text = EVTDESCASC21
+		trigger = {
+			NOT = { event_target:sc2 = { always = yes } }
+			NOT = { event_target:sc3 = { always = yes } }
+			NOT = { event_target:sc4 = { always = yes } }
+		}
+	}
+	desc = {
+		text = EVTDESCBSC21
+		trigger = {
+			event_target:sc2 = { always = yes }
+			NOT = { event_target:sc3 = { always = yes } }
+			NOT = { event_target:sc4 = { always = yes } }
+		}
+	}
+	desc = {
+		text = EVTDESCCSC21
+		trigger = {
+			event_target:sc2 = { always = yes }
+			event_target:sc3 = { always = yes }
+			NOT = { event_target:sc4 = { always = yes } }
+		}
+	}
+	desc = {
+		text = EVTDESCDSC21
+		trigger = {
+			event_target:sc2 = { always = yes }
+			event_target:sc3 = { always = yes }
+			event_target:sc4 = { always = yes }
+		}
+	}
+	picture = GFX_evt_house_rostrum
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTADESC21
+	}
+}
+
+character_event = {
+	id = SC.24
+	desc = DEBUG
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		clr_global_flag = speaker_election
+		clr_global_flag = speaker_candidacy
+		clr_global_flag = speaker_voting
+		k_papal_state = { 
+			holder_scope = {
+			set_variable = { which = s_num_candidates value = 0 }
+			} 
+		}
+		any_character = {
+			limit = {
+				society_member_of = soc_congress
+			}
+			character_event = { id = SC.25 }
+		}
+	}
+	
+	option = {
+		name = DEBUG
+	}
+}
+
+character_event = {
+	id = SC.25
+	desc = DEBUG
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		remove_trait = on_campaign_speaker
+		clr_character_flag = speaker_candidate
+		clr_character_flag = dropped_out
+	}
+	
+	option = {
+		name = DEBUG
+	}
+}
+
+character_event = {
+	id = SC.26
+	desc = DEBUG
+	is_triggered_only = yes # Triggered by decision hold_opinion_poll_spkr
+	
+	option = {
+		name = DEBUG
+		event_target:candidate = { save_event_target_as = sc1 }
+		on_campaign = {
+			limit = {
+				has_character_flag = speaker_candidate
+				NOT = { event_target:sc1 = { character = PREV } }
+			}
+			save_event_target_as = sc2
+		}
+		on_campaign = {
+			limit = {
+				has_character_flag = speaker_candidate
+				NOT = { event_target:sc1 = { character = PREV } }
+				NOT = { event_target:sc2 = { character = PREV } }
+			}
+			save_event_target_as = sc3
+		}
+		on_campaign = {
+			limit = {
+				has_character_flag = speaker_candidate
+				NOT = { event_target:sc1 = { character = PREV } }
+				NOT = { event_target:sc2 = { character = PREV } }
+				NOT = { event_target:sc3 = { character = PREV } }
+			}
+			save_event_target_as = sc4
+		}
+		event_target:candidate = {
+			set_variable = { which = "sc1_votes" value = 0 }
+			set_variable = { which = "sc2_votes" value = 0 }
+			set_variable = { which = "sc3_votes" value = 0 }
+			set_variable = { which = "sc4_votes" value = 0 }
+			clr_character_flag = 1st_place
+			clr_character_flag = 2nd_place
+			clr_character_flag = 3rd_place
+			clr_character_flag = 4th_place
+			character_event = { id = SC.29 days = 2 }
+		}
+		
+		any_character = {
+			limit = {
+				society_member_of = soc_congress
+				ai = yes
+			}
+			character_event = { id = SC.28 }
+		}
+	}
+}
+
+character_event = {
+	id = SC.28
+	desc = DEBUG
+	is_triggered_only = yes
+	
+	option = {
+		name = DEBUG
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				event_target:sc1 = { is_friend = ROOT }
+			}
+			modifier = {
+				factor = 0.01
+				event_target:sc1 = { is_rival = ROOT }
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc1 = { 
+						trait = demrep_pl
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc1 = { 
+						trait = am_loyalist_pl
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc1 = { 
+						trait = demrep
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc1 = { 
+						trait = am_loyalist
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				NOT = { event_target:sc1 = { reverse_opinion = { who = ROOT value = -80 } } }
+			}
+			modifier = {
+				factor = 0.4
+				NOT = { event_target:sc1 = { reverse_opinion = { who = ROOT value = -60 } } }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { event_target:sc1 = { reverse_opinion = { who = ROOT value = -40 } } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { event_target:sc1 = { reverse_opinion = { who = ROOT value = -20 } } }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc1 = { reverse_opinion = { who = ROOT value = 20 } }
+			}
+			modifier = {
+				factor = 1.4
+				event_target:sc1 = { reverse_opinion = { who = ROOT value = 40 } }
+			}
+			modifier = {
+				factor = 1.6
+				event_target:sc1 = { reverse_opinion = { who = ROOT value = 60 } }
+			}
+			modifier = {
+				factor = 1.8
+				event_target:sc1 = { reverse_opinion = { who = ROOT value = 80 } }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc1 = { NOT = { diplomacy = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc1 = { diplomacy = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc1 = { diplomacy = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc1 = { diplomacy = 25 }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc1 = { NOT = { learning = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc1 = { learning = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc1 = { learning = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc1 = { learning = 25 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc1 = { realm_size = 15 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc1 = { realm_size = 50 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc1 = { piety = 250 }
+			}
+		}
+		event_target:candidate = { change_variable = { which = "sc1_votes" value = 1 } }
+	}
+	
+	option = {
+		name = DEBUG
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				event_target:sc2 = { is_friend = ROOT }
+			}
+			modifier = {
+				factor = 0.01
+				event_target:sc2 = { is_rival = ROOT }
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc2 = { 
+						trait = demrep_pl
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc2 = { 
+						trait = am_loyalist_pl
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc2 = { 
+						trait = demrep
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc2 = { 
+						trait = am_loyalist
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				NOT = { event_target:sc2 = { reverse_opinion = { who = ROOT value = -80 } } }
+			}
+			modifier = {
+				factor = 0.4
+				NOT = { event_target:sc2 = { reverse_opinion = { who = ROOT value = -60 } } }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { event_target:sc2 = { reverse_opinion = { who = ROOT value = -40 } } }
+			}
+			modifier = {
+				factor = 0.9
+				NOT = { event_target:sc2 = { reverse_opinion = { who = ROOT value = -20 } } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc2 = { reverse_opinion = { who = ROOT value = 20 } }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc2 = { reverse_opinion = { who = ROOT value = 40 } }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc2 = { reverse_opinion = { who = ROOT value = 60 } }
+			}
+			modifier = {
+				factor = 1.4
+				event_target:sc2 = { reverse_opinion = { who = ROOT value = 80 } }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc2 = { NOT = { diplomacy = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc2 = { diplomacy = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc2 = { diplomacy = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc2 = { diplomacy = 25 }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc2 = { NOT = { learning = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc2 = { learning = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc2 = { learning = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc2 = { learning = 25 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc2 = { realm_size = 15 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc2 = { realm_size = 50 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc2 = { piety = 250 }
+			}
+		}
+		event_target:candidate = { change_variable = { which = "sc2_votes" value = 1 } }
+	}
+	
+	option = {
+		name = DEBUG
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				event_target:sc3 = { is_friend = ROOT }
+			}
+			modifier = {
+				factor = 0.01
+				event_target:sc3 = { is_rival = ROOT }
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc3 = { 
+						trait = demrep_pl
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc3 = { 
+						trait = am_loyalist_pl
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc3 = { 
+						trait = demrep
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc3 = { 
+						trait = am_loyalist
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				NOT = { event_target:sc3 = { reverse_opinion = { who = ROOT value = -80 } } }
+			}
+			modifier = {
+				factor = 0.4
+				NOT = { event_target:sc3 = { reverse_opinion = { who = ROOT value = -60 } } }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { event_target:sc3 = { reverse_opinion = { who = ROOT value = -40 } } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { event_target:sc3 = { reverse_opinion = { who = ROOT value = -20 } } }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc3 = { reverse_opinion = { who = ROOT value = 20 } }
+			}
+			modifier = {
+				factor = 1.4
+				event_target:sc3 = { reverse_opinion = { who = ROOT value = 40 } }
+			}
+			modifier = {
+				factor = 1.6
+				event_target:sc3 = { reverse_opinion = { who = ROOT value = 60 } }
+			}
+			modifier = {
+				factor = 1.8
+				event_target:sc3 = { reverse_opinion = { who = ROOT value = 80 } }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc3 = { NOT = { diplomacy = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc3 = { diplomacy = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc3 = { diplomacy = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc3 = { diplomacy = 25 }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc3 = { NOT = { learning = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc3 = { learning = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc3 = { learning = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc3 = { learning = 25 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc3 = { realm_size = 15 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc3 = { realm_size = 50 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc3 = { piety = 250 }
+			}
+		}
+		event_target:candidate = { change_variable = { which = "sc3_votes" value = 1 } }
+	}
+	
+	option = {
+		name = DEBUG
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				event_target:sc4 = { is_friend = ROOT }
+			}
+			modifier = {
+				factor = 0.01
+				event_target:sc4 = { is_rival = ROOT }
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc4 = { 
+						trait = demrep_pl
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				AND = {
+					event_target:sc4 = { 
+						trait = am_loyalist_pl
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc4 = { 
+						trait = demrep
+					}
+					ROOT = {
+						trait = am_loyalist
+					}
+				}
+			}
+			modifier = {
+				factor = 0.01
+				AND = {
+					event_target:sc4 = { 
+						trait = am_loyalist
+					}
+					ROOT = {
+						trait = demrep
+					}
+				}
+			}
+			modifier = {
+				factor = 0.2
+				NOT = { event_target:sc4 = { reverse_opinion = { who = ROOT value = -80 } } }
+			}
+			modifier = {
+				factor = 0.4
+				NOT = { event_target:sc4 = { reverse_opinion = { who = ROOT value = -60 } } }
+			}
+			modifier = {
+				factor = 0.6
+				NOT = { event_target:sc4 = { reverse_opinion = { who = ROOT value = -40 } } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { event_target:sc4 = { reverse_opinion = { who = ROOT value = -20 } } }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc4 = { reverse_opinion = { who = ROOT value = 20 } }
+			}
+			modifier = {
+				factor = 1.4
+				event_target:sc4 = { reverse_opinion = { who = ROOT value = 40 } }
+			}
+			modifier = {
+				factor = 1.6
+				event_target:sc4 = { reverse_opinion = { who = ROOT value = 60 } }
+			}
+			modifier = {
+				factor = 1.8
+				event_target:sc4 = { reverse_opinion = { who = ROOT value = 80 } }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc4 = { NOT = { diplomacy = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc4 = { diplomacy = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc4 = { diplomacy = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc4 = { diplomacy = 25 }
+			}
+			modifier = {
+				factor = 0.9
+				event_target:sc4 = { NOT = { learning = 10 } }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc4 = { learning = 15 }
+			}
+			modifier = {
+				factor = 1.2
+				event_target:sc4 = { learning = 20 }
+			}
+			modifier = {
+				factor = 1.3
+				event_target:sc4 = { learning = 25 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc4 = { realm_size = 15 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc4 = { realm_size = 50 }
+			}
+			modifier = {
+				factor = 1.1
+				event_target:sc4 = { piety = 250 }
+			}
+		}
+		event_target:candidate = { change_variable = { which = "sc4_votes" value = 1 } }
+	}
+}
+
+character_event = {
+	id = SC.29
+	desc = EVTDESCSC29
+	picture = GFX_evt_recieve_letter
+	is_triggered_only = yes
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTASC29
+		trigger = { ai = no }
+		event_target:sc1 = { custom_tooltip = { text = sc1votes } }
+		event_target:sc2 = { custom_tooltip = { text = sc2votes } }
+		event_target:sc3 = { custom_tooltip = { text = sc3votes } }
+		event_target:sc4 = { custom_tooltip = { text = sc4votes } }
+	}
+	
+	option = {
+		name = DEBUG
+		trigger = {
+			ai = yes
+			check_variable = { which = "sc1_votes" which = "sc2_votes" }
+			check_variable = { which = "sc1_votes" which = "sc3_votes" }
+			check_variable = { which = "sc1_votes" which = "sc4_votes" }
+		}
+		set_character_flag = 1st_place
+	}
+	
+	option = {
+		name = DEBUG
+		trigger = {
+			ai = yes
+			OR = {
+				AND = {
+					check_variable = { which = "sc1_votes" which = "sc2_votes" }
+					check_variable = { which = "sc1_votes" which = "sc3_votes" }
+					NOT = { check_variable = { which = "sc1_votes" which = "sc4_votes" } }
+				}
+				AND = {
+					NOT = { check_variable = { which = "sc1_votes" which = "sc2_votes" } }
+					check_variable = { which = "sc1_votes" which = "sc3_votes" }
+					check_variable = { which = "sc1_votes" which = "sc4_votes" }
+				}
+				AND = {
+					check_variable = { which = "sc1_votes" which = "sc2_votes" }
+					NOT = { check_variable = { which = "sc1_votes" which = "sc3_votes" } }
+					check_variable = { which = "sc1_votes" which = "sc4_votes" }
+				}
+			}
+		}
+		set_character_flag = 2nd_place
+	}
+	
+	option = {
+		name = DEBUG
+		trigger = {
+			ai = yes
+			OR = {
+				AND = {
+					check_variable = { which = "sc1_votes" which = "sc2_votes" }
+					NOT = { check_variable = { which = "sc1_votes" which = "sc3_votes" } }
+					NOT = { check_variable = { which = "sc1_votes" which = "sc4_votes" } }
+				}
+				AND = {
+					NOT = { check_variable = { which = "sc1_votes" which = "sc2_votes" } }
+					check_variable = { which = "sc1_votes" which = "sc3_votes" }
+					NOT = { check_variable = { which = "sc1_votes" which = "sc4_votes" } }
+				}
+				AND = {
+					NOT = { check_variable = { which = "sc1_votes" which = "sc2_votes" } }
+					NOT = { check_variable = { which = "sc1_votes" which = "sc3_votes" } }
+					check_variable = { which = "sc1_votes" which = "sc4_votes" }
+				}
+			}
+		}
+		set_character_flag = 3rd_place
+	}
+	
+	option = {
+		name = DEBUG
+		trigger = {
+			ai = yes
+			NOT = { check_variable = { which = "sc1_votes" which = "sc2_votes" } }
+			NOT = { check_variable = { which = "sc1_votes" which = "sc3_votes" } } 
+			NOT = { check_variable = { which = "sc1_votes" which = "sc4_votes" } }
+		}
+		set_character_flag = 4th_place
+	}
+}
+
+character_event = {
+	id = SC.32
+	desc = DEBUG
+	is_triggered_only = yes # Triggered by on_yearly_pulse
+	hide_window = yes
+	
+	trigger = {
+		OR = {
+			trait = demrep
+			trait = am_loyalist
+		}
+		NOT = { 
+			society_member_of = soc_congress
+		}
+	}
+	
+	immediate = {
+		remove_trait = demrep
+		remove_trait = am_loyalist
+	}
+	
+	option = {
+		name = DEBUG
+	}
+}
+
+#Tax Legislation
+character_event = {
+	id = SC.33
+	desc = EVTDESCSC33
+	picture = GFX_evt_capitol_building
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTASC33
+		trigger = {
+			trait = demrep
+		}
+		set_global_flag = leg_neg
+		save_event_target_as = leg_pp
+		character_event = { id = SC.34 days = 10 }
+	}
+}
+
+#You can only pick tax legislation
+character_event = {
+	id = SC.34
+	desc = EVTDESCSC34
+	picture = GFX_evt_capitol_building
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTASC34
+		speaker = {
+			limit = {
+				is_inaccessible_trigger = no
+			}
+			character_event = { id = SC.35 }
+		}
+		set_global_flag = leg_tax
+	}
+}
+
+#Message to the Speaker
+character_event = {
+	id = SC.35
+	desc = EVTDESCSC35
+	picture = GFX_evt_capitol_building
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTASC35
+		trigger = {
+			OR = {
+				AND = {
+					FROM = {
+						trait = demrep
+					}
+					trait = demrep
+				}
+				AND = {
+					FROM = {
+						trait = am_loyalist
+					}
+					trait = am_loyalist
+				}
+			}
+		}
+		custom_tooltip = {
+			text = speaker_assent_TT
+			hidden_tooltip = {
+				k_papal_state = {
+					holder_scope = {
+						character_event = { id = SC.40 days = 30 }
+					}
+				}
+			}
+		}
+		any_character = {
+			limit = {
+				society_member_of = soc_congress
+			}
+			character_event = { id = SC.39 } #Yes
+		}
+		any_character = {
+			limit = {
+				has_landed_title = e_usa
+			}
+			character_event = { id = SC.39 } #Yes
+		}
+	}
+	option = {
+		name = EVTOPTBSC35
+		trigger = {
+			OR = {
+				AND = {
+					FROM = {
+						trait = demrep
+					}
+					trait = am_loyalist
+				}
+				AND = {
+					FROM = {
+						trait = am_loyalist
+					}
+					trait = demrep
+				}
+			}
+		}
+		custom_tooltip = {
+			text = speaker_no
+			hidden_tooltip = {
+				FROM = {
+					character_event = { id = SC.36 } #No
+				}
+			}
+		}	
+	}
+}
+
+#Speaker said no
+character_event = {
+	id = SC.36
+	desc = EVTDESCSC36
+	picture = GFX_evt_capitol_building
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTASC36
+		clr_global_flag = leg_neg
+		clr_global_flag = leg_pos
+		clr_global_flag = leg_tax
+		clr_global_flag = leg_pt
+		clr_global_flag = leg_vp
+		clr_global_flag = leg_war
+		clr_global_flag = leg_te
+		clr_global_flag = leg_mil
+		clr_global_flag = leg_inf
+		clr_global_flag = leg_cul
+		clr_global_flag = leg_esp
+		clr_global_flag = bill_sent
+		clr_character_flag = legislation
+	}
+}
+
+#Other Legislation
+character_event = {
+	id = SC.37
+	desc = {
+		text = demrep_leg_TT
+		trigger = { 
+			trait = demrep
+		}
+	}
+	desc = {
+		text = aml_leg_TT
+		trigger = { 
+			trait = am_loyalist
+		}
+	}
+	picture = GFX_evt_capitol_building
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTASC37
+		trigger = {
+			trait = demrep
+		}
+		set_global_flag = leg_neg
+		save_event_target_as = leg_pp
+		character_event = { id = SC.38 }
+	}
+	option = {
+		name = EVTOPTBSC37
+		trigger = {
+			trait = am_loyalist
+		}
+		set_global_flag = leg_pos
+		save_event_target_as = leg_pp
+		character_event = { id = SC.38 }
+	}
+}
+
+#Choosing a bill
+character_event = {
+	id = SC.38
+	desc = EVTDESCSC38
+	picture = GFX_evt_capitol_building
+	is_triggered_only = yes
+	
+	option = { #War
+		name = EVTOPTASC38
+		trigger = {
+			OR = {
+				AND = {
+					has_global_flag = c_pos_war
+					has_global_flag = leg_neg
+				}
+				AND = {
+					has_global_flag = c_neg_war
+					has_global_flag = leg_pos
+				}
+			}
+		}
+		speaker = {
+			limit = {
+				is_inaccessible_trigger = no
+			}
+			character_event = { id = SC.35 days = 10}
+		}
+		set_global_flag = leg_war
+		ai_chance = {
+			factor = 0.25
+		}
+	}
+	option = { #Council Voting
+		name = EVTOPTBSC38
+		trigger = {
+			OR = {
+				AND = {
+					has_global_flag = c_pos_vp
+					has_global_flag = leg_neg
+				}
+				AND = {
+					has_global_flag = c_neg_vp
+					has_global_flag = leg_pos
+				}
+			}
+		}
+		speaker = {
+			limit = {
+				is_inaccessible_trigger = no
+			}
+			character_event = { id = SC.35 days = 10}
+		}
+		set_global_flag = leg_vp
+		ai_chance = {
+			factor = 0.25
+		}
+	}
+	option = { #Punishment
+		name = EVTOPTCSC38
+		trigger = {
+			OR = {
+				AND = {
+					has_global_flag = c_pos_pt
+					has_global_flag = leg_neg
+				}
+				AND = {
+					has_global_flag = c_neg_pt
+					has_global_flag = leg_pos
+				}
+			}
+		}
+		speaker = {
+			limit = {
+				is_inaccessible_trigger = no
+			}
+			character_event = { id = SC.35 days = 10}
+		}
+		set_global_flag = leg_pt
+		ai_chance = {
+			factor = 0.25
+		}
+	}
+	option = { #Titles
+		name = EVTOPTDSC38
+		trigger = {
+			OR = {
+				AND = {
+					has_global_flag = c_pos_te
+					has_global_flag = leg_neg
+				}
+				AND = {
+					has_global_flag = c_neg_te
+					has_global_flag = leg_pos
+				}
+			}
+		}
+		speaker = {
+			limit = {
+				is_inaccessible_trigger = no
+			}
+			character_event = { id = SC.35 days = 10}
+		}
+		set_global_flag = leg_te
+		ai_chance = {
+			factor = 0.25
+		}
+	}
+}
+
+#Announcement of new bill
+character_event = {
+	id = SC.39
+	desc = {
+		text = neg_tax_TT
+		trigger = {
+			has_global_flag = leg_neg
+			has_global_flag = leg_tax
+		}
+	}
+	desc = {
+		text = neg_war_TT
+		trigger = {
+			has_global_flag = leg_neg
+			has_global_flag = leg_war
+		}
+	}
+	desc = {
+		text = pos_war_TT
+		trigger = {
+			has_global_flag = leg_pos
+			has_global_flag = leg_war
+		}
+	}
+	desc = {
+		text = neg_vp_TT
+		trigger = {
+			has_global_flag = leg_neg
+			has_global_flag = leg_vp
+		}
+	}
+	desc = {
+		text = pos_vp_TT
+		trigger = {
+			has_global_flag = leg_pos
+			has_global_flag = leg_vp
+		}
+	}
+	desc = {
+		text = neg_pt_TT
+		trigger = {
+			has_global_flag = leg_neg
+			has_global_flag = leg_pt
+		}
+	}
+	desc = {
+		text = pos_pt_TT
+		trigger = {
+			has_global_flag = leg_pos
+			has_global_flag = leg_pt
+		}
+	}
+	desc = {
+		text = neg_te_TT
+		trigger = {
+			has_global_flag = leg_neg
+			has_global_flag = leg_te
+		}
+	}
+	desc = {
+		text = leg_mil_TT
+		trigger = {
+			has_global_flag = leg_mil
+		}
+	}
+	desc = {
+		text = leg_inf_TT
+		trigger = {
+			has_global_flag = leg_inf
+		}
+	}
+	desc = {
+		text = leg_cul_TT
+		trigger = {
+			has_global_flag = leg_cul
+		}
+	}
+	desc = {
+		text = leg_esp_TT
+		trigger = {
+			has_global_flag = leg_esp
+		}
+	}
+	picture = GFX_evt_house_room
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTASC39
+		custom_tooltip = {
+			text = legislation_TT
+		}
+	}
+}
+
+#Bridge Message between speaker and Papacy
+character_event = {
+	id = SC.40
+	desc = DEBUG
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		character_event = { id = SC.41 }
+	}
+	
+	option = {
+		name = DEBUG
+	}
+}
+
+#Preparing ballots
+character_event = {
+	id = SC.41
+	desc = DEBUG
+	is_triggered_only = yes
+	
+	option = {
+		name = DEBUG
+		set_variable = { which = "leg_aye" value = 0 }
+		set_variable = { which = "leg_no" value = 0 }
+		
+		any_character = {
+			limit = {
+				society_member_of = soc_congress
+			}
+			letter_event = { id = SC.42 } #Ballots
+		}
+		
+		character_event = { id = SC.43 days = 1 } # Count votes
+		character_event = { id = SC.48 days = 5 } # Cleanup
+	}
+}
+
+#Ballots
+letter_event = {
+	id = SC.42
+	desc = {
+		text = neg_tax_TT_v
+		trigger = {
+			has_global_flag = leg_neg
+			has_global_flag = leg_tax
+		}
+	}
+	desc = {
+		text = neg_war_TT_v
+		trigger = {
+			has_global_flag = leg_neg
+			has_global_flag = leg_war
+		}
+	}
+	desc = {
+		text = pos_war_TT_v
+		trigger = {
+			has_global_flag = leg_pos
+			has_global_flag = leg_war
+		}
+	}
+	desc = {
+		text = neg_vp_TT_v
+		trigger = {
+			has_global_flag = leg_neg
+			has_global_flag = leg_vp
+		}
+	}
+	desc = {
+		text = pos_vp_TT_v
+		trigger = {
+			has_global_flag = leg_pos
+			has_global_flag = leg_vp
+		}
+	}
+	desc = {
+		text = neg_pt_TT_v
+		trigger = {
+			has_global_flag = leg_neg
+			has_global_flag = leg_pt
+		}
+	}
+	desc = {
+		text = pos_pt_TT_v
+		trigger = {
+			has_global_flag = leg_pos
+			has_global_flag = leg_pt
+		}
+	}
+	desc = {
+		text = neg_te_TT_v
+		trigger = {
+			has_global_flag = leg_neg
+			has_global_flag = leg_te
+		}
+	}
+	desc = {
+		text = pos_te_TT_v
+		trigger = {
+			has_global_flag = leg_pos
+			has_global_flag = leg_te
+		}
+	}
+	desc = {
+		text = leg_mil_TT_v
+		trigger = {
+			has_global_flag = leg_mil
+		}
+	}
+	desc = {
+		text = leg_inf_TT_v
+		trigger = {
+			has_global_flag = leg_inf
+		}
+	}
+	desc = {
+		text = leg_cul_TT_v
+		trigger = {
+			has_global_flag = leg_cul
+		}
+	}
+	desc = {
+		text = leg_esp_TT_v
+		trigger = {
+			has_global_flag = leg_esp
+		}
+	}
+	is_triggered_only = yes
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTASC42
+		custom_tooltip = {
+			text = cast_yes_TT
+		}
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				AND = {
+					has_global_flag = leg_pos
+					trait = demrep
+				}
+			}
+			modifier = {
+				factor = 1.5
+				AND = {
+					has_global_flag = leg_mil
+					martial = 10
+				}
+			}
+			modifier = {
+				factor = 1.2
+				AND = {
+					has_global_flag = leg_mil
+					is_feudal = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					has_global_flag = leg_mil
+					martial < 8
+				}
+			}
+			modifier = {
+				factor = 1.5
+				AND = {
+					has_global_flag = leg_inf
+					stewardship = 10
+				}
+			}
+			modifier = {
+				factor = 1.2
+				AND = {
+					has_global_flag = leg_inf
+					is_merchant_republic = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					has_global_flag = leg_inf
+					stewardship < 8
+				}
+			}
+			modifier = {
+				factor = 1.5
+				AND = {
+					has_global_flag = leg_cul
+					trait = poet
+				}
+			}
+			modifier = {
+				factor = 1.2
+				AND = {
+					has_global_flag = leg_cul
+					is_theocracy = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					has_global_flag = leg_cul
+					trait = dull
+				}
+			}
+			modifier = {
+				factor = 1.5
+				AND = {
+					has_global_flag = leg_esp
+					intrigue = 10
+				}
+			}
+			modifier = {
+				factor = 1.2
+				AND = {
+					has_global_flag = leg_esp
+					trait = schemer
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					has_global_flag = leg_esp
+					intrigue < 8
+				}
+			}
+			modifier = {
+				factor = 0.75
+				has_global_flag = leg_esp
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					has_global_flag = leg_esp
+					trait = trusting
+				}
+			}
+		}
+		hidden_tooltip = { FROM = { change_variable = { which = "leg_aye" value = 1 } } }
+	}
+	
+	option = {
+		name = EVTOPTBSC42
+		custom_tooltip = {
+			text = cast_no_TT
+		}
+		ai_chance = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				AND = {
+					has_global_flag = leg_neg
+					trait = am_loyalist
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					has_global_flag = leg_mil
+					martial = 10
+				}
+			}
+			modifier = {
+				factor = 0.8
+				AND = {
+					has_global_flag = leg_mil
+					is_feudal = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					has_global_flag = leg_inf
+					stewardship = 10
+				}
+			}
+			modifier = {
+				factor = 0.8
+				AND = {
+					has_global_flag = leg_inf
+					is_merchant_republic = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					has_global_flag = leg_cul
+					trait = poet
+				}
+			}
+			modifier = {
+				factor = 0.8
+				AND = {
+					has_global_flag = leg_cul
+					is_theocracy = yes
+				}
+			}
+			modifier = {
+				factor = 1.2
+				AND = {
+					has_global_flag = leg_cul
+					trait = dull
+				}
+			}
+			modifier = {
+				factor = 0.5
+				AND = {
+					has_global_flag = leg_esp
+					intrigue = 10
+				}
+			}
+			modifier = {
+				factor = 0.8
+				AND = {
+					has_global_flag = leg_esp
+					trait = schemer
+				}
+			}
+		}
+		hidden_tooltip = { FROM = { change_variable = { which = "leg_no" value = 1 } } }
+	}
+}
+
+#Counting votes
+character_event = {
+	id = SC.43
+	desc = DEBUG
+	hide_window = yes
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = DEBUG
+		trigger = {
+			check_variable = { which = "leg_aye" which = "leg_no" }
+		}
+		event_target:leg_pp = {
+			narrative_event = { id = SC.44 } #Motion passed
+		}
+	}
+	
+	option = {
+		name = DEBUG
+		trigger = {
+			check_variable = { which = "leg_no" which = "leg_aye" }
+		}
+		event_target:leg_pp = {
+			narrative_event = { id = SC.45 } #Motion failed
+		}
+	}
+}
+
+#Motion passed
+narrative_event = {
+	id = SC.44
+	title = EVTNAMESC44
+	desc = EVTDESCSC44
+	picture = GFX_evt_house_rostrum
+	is_triggered_only = yes
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTASC44
+		prestige = 25
+		change_society_currency = 125
+		clr_global_flag = bill_sent
+		hidden_tooltip = {
+			any_character = {
+				limit = {
+					society_member_of = soc_congress
+				}
+				character_event = { id = SC.46 }
+			}
+			top_liege = {
+				limit = {
+					has_landed_title = e_usa
+				}
+				character_event = { id = SC.48 }
+			}
+			clr_character_flag = legislation
+			set_global_flag = bill_pass
+		}
+	}
+}
+
+#Motion failed
+narrative_event = {
+	id = SC.45
+	title = EVTNAMESC45
+	desc = EVTDESCSC45
+	picture = GFX_evt_house_rostrum
+	is_triggered_only = yes
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTASC45
+		prestige = -25
+		change_society_currency = -25
+		clr_global_flag = bill_sent
+		hidden_tooltip = {
+			any_character = {
+				limit = {
+					society_member_of = soc_congress
+				}
+				character_event = { id = SC.47 }
+			}
+			any_character = {
+				limit = {
+					has_landed_title = e_usa
+				}
+				character_event = { id = SC.47 }
+			}
+			clr_character_flag = legislation
+		}
+	}
+}
+
+#Motion passed Congresspeople
+character_event = {
+	id = SC.46
+	hide_from = yes
+	desc = EVTDESCSC46
+	picture = GFX_evt_house_rostrum
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTASC46
+	}
+}
+
+#Motion failed Congresspeople
+character_event = {
+	id = SC.47
+	hide_from = yes
+	desc = EVTDESCSC47
+	picture = GFX_evt_house_rostrum
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTASC47
+	}
+}
+
+#Change US laws
+character_event = {
+	id = SC.48
+	hide_from = yes
+	desc = EVTDESCSC48
+	picture = GFX_evt_house_rostrum
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTASC48
+		
+		if = {
+			limit = {
+				has_global_flag = leg_neg
+				has_global_flag = leg_tax
+			}
+			primary_title = {
+				e_usa = {
+					add_law = { law = tax_levy_law_feudal_4 cooldown = no opinion_effect = no }
+					add_law = { law = tax_levy_law_theocracy_4 cooldown = no opinion_effect = no }
+					add_law = { law = tax_levy_law_republic_4 cooldown = no opinion_effect = no }
+				}
+			}
+			set_global_flag = c_neg_tax
+		}
+		else_if = {
+			limit = {
+				has_global_flag = leg_neg
+				has_global_flag = leg_pt
+			}
+			primary_title = {
+				e_usa = {
+					add_law = { law = imprison_voting_power_1 cooldown = no opinion_effect = no }
+					add_law = { law = banish_voting_power_1 cooldown = no opinion_effect = no }
+					add_law = { law = execution_voting_power_1 cooldown = no opinion_effect = no }
+				}
+			}
+			set_global_flag = c_neg_pt
+			clr_global_flag = c_pos_pt
+		}
+		else_if = {
+			limit = {
+				has_global_flag = leg_pos
+				has_global_flag = leg_pt
+			}
+			primary_title = {
+				e_usa = {
+					add_law = { law = imprison_voting_power_0 cooldown = no opinion_effect = no }
+					add_law = { law = banish_voting_power_0 cooldown = no opinion_effect = no }
+					add_law = { law = execution_voting_power_0 cooldown = no opinion_effect = no }
+				}
+			}
+			set_global_flag = c_pos_pt
+			clr_global_flag = c_neg_pt
+		}
+		else_if = {
+			limit = {
+				has_global_flag = leg_neg
+				has_global_flag = leg_vp
+			}
+			primary_title = {
+				e_usa = {
+					add_law = { law = law_voting_power_1 cooldown = no opinion_effect = no }
+				}
+			}
+			set_global_flag = c_neg_vp
+			clr_global_flag = c_pos_vp
+		}
+		else_if = {
+			limit = {
+				has_global_flag = leg_pos
+				has_global_flag = leg_vp
+			}
+			primary_title = {
+				e_usa = {
+					add_law = { law = law_voting_power_0 cooldown = no opinion_effect = no }
+				}
+			}
+			set_global_flag = c_pos_vp
+			clr_global_flag = c_neg_vp
+		}
+		else_if = {
+			limit = {
+				has_global_flag = leg_neg
+				has_global_flag = leg_war
+			}
+			primary_title = {
+				e_usa = {
+					add_law = { law = war_voting_power_1 cooldown = no opinion_effect = no }
+				}
+			}
+			set_global_flag = c_neg_war
+			clr_global_flag = c_pos_war
+		}
+		else_if = {
+			limit = {
+				has_global_flag = leg_pos
+				has_global_flag = leg_war
+			}
+			primary_title = {
+				e_usa = {
+					add_law = { law = war_voting_power_0 cooldown = no opinion_effect = no }
+				}
+			}
+			set_global_flag = c_pos_war
+			clr_global_flag = c_neg_war
+		}
+		else_if = {
+			limit = {
+				has_global_flag = leg_neg
+				has_global_flag = leg_te
+			}
+			primary_title = {
+				e_usa = {
+					add_law = { law = grant_title_voting_power_1 cooldown = no opinion_effect = no }
+					add_law = { law = revoke_title_voting_power_1 cooldown = no opinion_effect = no }
+				}
+			}
+			set_global_flag = c_neg_te
+			clr_global_flag = c_pos_te
+		}
+		else_if = {
+			limit = {
+				has_global_flag = leg_pos
+				has_global_flag = leg_te
+			}
+			primary_title = {
+				e_usa = {
+					add_law = { law = grant_title_voting_power_0 cooldown = no opinion_effect = no }
+					add_law = { law = revoke_title_voting_power_0 cooldown = no opinion_effect = no }
+				}
+			}
+			set_global_flag = c_pos_te
+			clr_global_flag = c_neg_te
+		}
+		else_if = {
+			limit = {
+				has_global_flag = leg_mil
+			}
+			any_realm_lord = {
+				add_character_modifier = {
+					name = mod_leg_mil
+					duration = 365
+				}
+			}
+			add_character_modifier = {
+				name = mod_leg_mil
+				duration = 365
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = leg_inf
+			}
+			any_realm_lord = {
+				add_character_modifier = {
+					name = mod_leg_inf
+					duration = 365
+				}
+			}
+			add_character_modifier = {
+				name = mod_leg_inf
+				duration = 365
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = leg_cul	
+			}
+			any_realm_lord = {
+				add_character_modifier = {
+					name = mod_leg_cul
+					duration = 365
+				}
+			}
+			add_character_modifier = {
+				name = mod_leg_cul
+				duration = 365
+			}
+		}
+		else_if = {
+			limit = {
+				has_global_flag = leg_esp
+			}
+			any_realm_lord = {
+				add_character_modifier = {
+					name = mod_leg_esp
+					duration = 365
+				}
+			}
+			add_character_modifier = {
+				name = mod_leg_esp
+				duration = 365
+			}
+		}
+	}
+}
+
+#Cleanup
+character_event = {
+	id = SC.49
+	desc = DEBUG
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		clr_global_flag = leg_neg
+		clr_global_flag = leg_pos
+		clr_global_flag = leg_tax
+		clr_global_flag = leg_pt
+		clr_global_flag = leg_vp
+		clr_global_flag = leg_war
+		clr_global_flag = leg_te
+		clr_global_flag = leg_mil
+		clr_global_flag = leg_inf
+		clr_global_flag = leg_cul
+		clr_global_flag = leg_esp
+	}
+	
+	option = {
+		name = DEBUG
+	}
+}
+
+#Edict of Washington
+narrative_event = {
+	id = SC.50
+	title = EVTNAMESC50
+	desc = EVTDESCSC50
+	
+	picture = GFX_evt_capitol_building
+		
+	trigger = {
+		has_landed_title = e_usa
+		NOT = { has_global_flag = edict_sent }
+	}	
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTASC50
+		set_global_flag = edict_sent
+		set_global_flag = edict_w
+		
+		set_global_flag = c_neg_pt
+		set_global_flag = c_neg_vp
+		set_global_flag = c_neg_war
+		set_global_flag = c_neg_te
+		set_global_flag = c_neg_tax
+		prestige = -200
+		custom_tooltip = {
+			text = edict_TT
+			hidden_tooltip = {
+				if = {
+					limit = {
+						is_feudal = yes
+					}
+					set_government_type = constitutional_rep
+					primary_title = {
+						e_usa = {
+							add_law = succ_constitutional_elective
+						}
+					}
+				}
+				if = {
+					limit = {
+						is_merchant_republic = yes
+					}
+					set_government_type = mconstitutional_rep
+				}
+				primary_title = {
+					e_usa = {
+						add_law = { law = war_voting_power_1 opinion_effect = no }
+						add_law = { law = execution_voting_power_1 opinion_effect = no }
+						add_law = { law = banish_voting_power_1 opinion_effect = no }
+						add_law = { law = imprison_voting_power_1 opinion_effect = no }
+						add_law = { law = law_voting_power_1 opinion_effect = no }
+						add_law = { law = grant_title_voting_power_1 opinion_effect = no }
+						add_law = { law = revoke_title_voting_power_1 opinion_effect = no }
+						add_law = { law = tax_levy_law_feudal_4 opinion_effect = no }
+						add_law = { law =  tax_levy_law_republic_4 opinion_effect = no }
+						add_law = { law = tax_levy_law_theocracy_4 opinion_effect = no }
+						add_law = { law = status_of_women_4 opinion_effect = no }
+						add_law = { law = vassal_wars_law_2 opinion_effect = no }
+						add_law = { law = out_of_realm_inheritance_law_1 opinion_effect = no }
+						add_law = { law = true_cognatic_succession opinion_effect = no }
+					}
+				}
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = SC.51
+	title = EVTNAMESC51
+	desc = EVTDESCSC51
+	is_triggered_only = yes
+	picture = GFX_evt_us_seal
+	
+	option = {
+		name = EVTOPTASC51
+		clr_global_flag = edict_w
+		set_global_flag = dissolved_congress
+		add_trait = tyrant
+		prestige = 500
+		custom_tooltip = {
+			text = exec_order_TT
+			hidden_tooltip = {
+				if = {
+					limit = {
+						is_feudal = yes
+					}
+					set_government_type = feudal_government
+					primary_title = {
+						e_usa = {
+							succession = primogeniture
+						}
+					}
+				}
+				if = {
+					limit = {
+						is_merchant_republic = yes
+					}
+					set_government_type = merchant_republic_government
+				}
+			}
+		}
+		any_realm_character = {
+			limit = {
+				primary_title = { higher_tier_than = BARON }
+			}
+			character_event = { id = SC.52 }
+		}
+	}
+}
+
+character_event = {
+	id = SC.52
+	desc = EVTDESCSC52
+	is_triggered_only = yes
+	picture = GFX_evt_us_seal
+	
+	option = {
+		name = EVTOPTASC52
+	}
+}
+
+#Whip
+character_event = {
+	id = SC.53
+	desc = EVTDESCSC53
+	is_triggered_only = yes
+	picture = GFX_evt_recieve_letter
+	
+	option = {
+		name = EVTOPTASC53
+		if = {
+			limit = {
+				trait = demrep
+			}
+			remove_trait = demrep
+			add_trait = am_loyalist
+		}
+		else_if = {
+			limit = {
+				trait = am_loyalist
+			}
+			remove_trait = am_loyalist
+			add_trait = demrep
+		}
+		event_target:sender_whip = {
+			character_event = { id = SC.54 }
+		}
+		ai_chance = {
+			factor = 0.4
+			modifier = {
+				factor = 3
+				event_target:sender_whip = { reverse_opinion = { who = event_target:receiver_whip value > 40 } }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTBSC53
+		event_target:sender_whip = {
+			character_event = { id = SC.55 }
+		}
+		ai_chance = {
+			factor = 0.6
+		}
+	}
+}
+
+character_event = {
+	id = SC.54
+	desc = EVTDESCSC54
+	is_triggered_only = yes
+	picture = GFX_evt_recieve_letter
+	
+	option = {
+		name = EVTOPTASC54
+	}
+}
+
+character_event = {
+	id = SC.55
+	desc = EVTDESCSC55
+	is_triggered_only = yes
+	picture = GFX_evt_recieve_letter
+	
+	option = {
+		name = EVTOPTASC55
+	}
+}
+
+##Party Census
+character_event = {
+	id = SC.56
+	desc = DEBUG
+	is_triggered_only = yes # Triggered by decision
+	
+	option = {
+		name = DEBUG
+		event_target:p_taker = {
+			set_variable = { which = "demrep_v" value = 0 }
+			set_variable = { which = "aml_v" value = 0 }
+			character_event = { id = SC.58 days = 2 }
+		}
+		
+		any_character = {
+			limit = {
+				society_member_of = soc_congress
+			}
+			character_event = { id = SC.57 }
+		}
+	}
+}
+
+character_event = {
+	id = SC.57
+	desc = EVTDESCSC57
+	hide_from = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTASC57
+		trigger = {
+			trait = demrep
+		}
+		hidden_tooltip = { event_target:p_taker = { change_variable = { which = "demrep_v" value = 1 } } }
+	}
+	
+	option = {
+		name = EVTOPTBSC57
+		trigger = {
+			trait = am_loyalist
+		}
+		hidden_tooltip = { event_target:p_taker = { change_variable = { which = "aml_v" value = 1 } } }
+	}
+}
+
+character_event = {
+	id = SC.58
+	desc = EVTDESCSC58
+	picture = GFX_evt_recieve_letter
+	is_triggered_only = yes
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTASC58
+		trigger = { ai = no }
+	}
+}
+
+#Hereditary Presidency
+narrative_event = {
+	id = SC.59
+	title = EVTNAMESC59
+	desc = EVTDESCSC59
+	is_triggered_only = yes
+	picture = GFX_evt_us_seal
+	
+	option = {
+		name = EVTOPTASC59
+		if = {
+			limit = {
+				NOT = {
+					trait = tyrant
+				}
+			}
+			add_trait = tyrant
+		}
+		prestige = -500
+		piety = -1000
+		custom_tooltip = {
+			text = prez_adopt_TT
+			hidden_tooltip = {
+				if = {
+					limit = {
+						is_merchant_republic = yes
+					}
+					any_title = {
+						d_americanist = {
+							succession = primogeniture
+						}
+					}
+				}
+				if = {
+					limit = {
+						is_feudal = yes
+					}
+					any_title = {
+						d_americanist = {
+							copy_title_laws = e_usa
+						}
+					}
+				}
+			}
+		}
+		religion_authority = {
+			modifier = primo_prez
+		}
+		any_character = {
+			limit = {
+				religion = americanist
+				NOT = {
+					has_landed_title = e_usa
+				}
+			}
+			character_event = { id = SC.60 }
+		}
+	}
+}
+
+character_event = {
+	id = SC.60
+	desc = EVTDESCSC60
+	is_triggered_only = yes
+	picture = GFX_evt_us_seal
+	
+	option = {
+		name = EVTOPTASC60
+		opinion = {
+			modifier = opinion_evil_tyrant
+			who = FROM
+		}
+	}
+}
+
+character_event = {
+	id = SC.61
+	desc = EVTDESC61
+	picture = GFX_evt_us_seal
+	
+	trigger = {
+		has_landed_title = d_americanist
+		has_landed_title = e_usa
+		NOT = {
+			trait = president
+		}
+		has_global_flag = hered_prez
+		age = 16
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTASC61
+		add_trait = president
+		give_nickname = nick_lastname
+		set_character_flag = current_president
+	}
+}
+
+#Clears Global Flag for taxes
+character_event = {
+	id = SC.62
+	desc = EVTDESC62
+	picture = GFX_evt_us_seal
+	
+	trigger = {
+		has_landed_title = e_usa
+		primary_title = {
+			e_usa = {
+				NAND = {
+					has_law = tax_levy_law_feudal_4
+					has_law = tax_levy_law_republic_4
+					has_law = tax_levy_law_theocracy_4
+				}
+			}
+		}	
+		has_global_flag = c_neg_tax
+		age = 16
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTASC62
+		clr_global_flag = c_neg_tax
+	}
+}
+
+character_event = {
+	id = SC.63
+	desc = EVTDESCSC63
+	picture = GFX_evt_capitol_building
+	is_triggered_only = yes
+	
+	immediate = {
+		save_event_target_as = leg_pp
+	}
+	
+	option = { #Military Spending
+		name = EVTOPTASC63
+		speaker = {
+			limit = {
+				is_inaccessible_trigger = no
+			}
+			character_event = { id = SC.35 days = 10}
+		}
+		set_global_flag = leg_mil
+		ai_chance = {
+			factor = 0.30
+			modifier = {
+				factor = 1.5
+				martial = 10
+			}
+			modifier = {
+				factor = 1.2
+				is_feudal = yes
+			}
+			modifier = {
+				factor = 1.5
+				trait = duelist
+			}
+			modifier = {
+				factor = 1.5
+				trait = strategist
+			}
+			modifier = {
+				factor = 0.5
+				martial < 8
+			}
+			modifier = {
+				factor = 0.5
+				trait = patient
+			}
+			modifier = {
+				factor = 0.5
+				trait = kind
+			}
+			modifier = {
+				factor = 0.5
+				is_theocracy = yes
+			}
+		}
+	}
+	option = { #Infrastructure Spending
+		name = EVTOPTBSC63
+		speaker = {
+			limit = {
+				is_inaccessible_trigger = no
+			}
+			character_event = { id = SC.35 days = 10}
+		}
+		set_global_flag = leg_inf
+		ai_chance = {
+			factor = 0.30
+			modifier = {
+				factor = 1.5
+				stewardship = 10
+			}
+			modifier = {
+				factor = 1.2
+				is_merchant_republic = yes
+			}
+			modifier = {
+				factor = 1.5
+				trait = architect
+			}
+			modifier = {
+				factor = 1.2
+				trait = administrator
+			}
+			modifier = {
+				factor = 0.5
+				stewardship < 8
+			}
+			modifier = {
+				factor = 0.5
+				trait = greedy
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+		}
+	}
+	option = { #Cultural Spending
+		name = EVTOPTCSC63
+		speaker = {
+			limit = {
+				is_inaccessible_trigger = no
+			}
+			character_event = { id = SC.35 days = 10}
+		}
+		set_global_flag = leg_cul
+		ai_chance = {
+			factor = 0.30
+			modifier = {
+				factor = 1.2
+				is_theocracy = yes
+			}
+			modifier = {
+				factor = 1.5
+				trait = poet
+			}
+			modifier = {
+				factor = 1.5
+				trait = scholar
+			}
+			modifier = {
+				factor = 1.5
+				trait = gamer
+			}
+			modifier = {
+				factor = 0.5
+				trait = uncouth
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 0.5
+				trait = dull
+			}
+		}
+	}
+	option = { #Espionage Act
+		name = EVTOPTDSC63
+		speaker = {
+			limit = {
+				is_inaccessible_trigger = no
+			}
+			character_event = { id = SC.35 days = 10}
+		}
+		set_global_flag = leg_esp
+		ai_chance = {
+			factor = 0.10
+			modifier = {
+				factor = 1.5
+				intrigue = 10
+			}
+			modifier = {
+				factor = 1.2
+				is_feudal = yes
+			}
+			modifier = {
+				factor = 1.5
+				trait = schemer
+			}
+			modifier = {
+				factor = 1.5
+				trait = am_loyalist
+			}
+			modifier = {
+				factor = 0.5
+				stewardship < 8
+			}
+			modifier = {
+				factor = 0.5
+				trait = kind
+			}
+			modifier = {
+				factor = 0.5
+				is_theocracy = yes
+			}
+		}
+	}
+}

@@ -10986,7 +10986,7 @@ character_event = {
 					limit = {
 						primary_title = { is_law_potential = succ_brethren_elective }
 					}
-					primary_title = { add_law = succ_brethren_elective }
+					primary_title = { add_law = { law = succ_brethren_elective cooldown = no opinion_effect = no } }
 				}
 
 				if = {
@@ -11053,7 +11053,7 @@ character_event = {
 						}
 						is_law_potential = investiture_law_0
 					}
-					add_law = investiture_law_0
+					add_law = { law = investiture_law_0 cooldown = no opinion_effect = no }
 				}
 			}
 
@@ -11246,17 +11246,17 @@ character_event = {
 					religion_allows_female_temple_holders = yes
 					religion_allows_male_temple_holders = no
 				}
-				primary_title = { add_law = enatic_succession log = "misc.6: set enatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.6: set enatic_succession in [This.GetName]" }
 			}
 			else_if = {
 				limit = {
 					religion_allows_female_temple_holders = yes
 					religion_allows_male_temple_holders = yes
 				}
-				primary_title = { add_law = true_cognatic_succession log = "misc.6: set true_cognatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } log = "misc.6: set true_cognatic_succession in [This.GetName]" }
 			}
 			else = {
-				primary_title = { add_law = agnatic_succession log = "misc.6: set agnatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = agnatic_succession cooldown = no opinion_effect = no } log = "misc.6: set agnatic_succession in [This.GetName]" }
 			}
 			if = {
 				limit = {
@@ -11304,17 +11304,17 @@ character_event = {
 					religion_allows_female_temple_holders = yes
 					religion_allows_male_temple_holders = no
 				}
-				primary_title = { add_law = enatic_succession log = "misc.6: set enatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.6: set enatic_succession in [This.GetName]" }
 			}
 			else_if = {
 				limit = {
 					religion_allows_female_temple_holders = yes
 					religion_allows_male_temple_holders = yes
 				}
-				primary_title = { add_law = true_cognatic_succession log = "misc.6: set true_cognatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } log = "misc.6: set true_cognatic_succession in [This.GetName]" }
 			}
 			else = {
-				primary_title = { add_law = agnatic_succession log = "misc.6: set agnatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = agnatic_succession cooldown = no opinion_effect = no } log = "misc.6: set agnatic_succession in [This.GetName]" }
 			}
 		}
 		else_if = {
@@ -11327,7 +11327,7 @@ character_event = {
 					religion_allows_female_temple_holders = yes
 					religion_allows_male_temple_holders = no
 				}
-				primary_title = { add_law = enatic_succession log = "misc.6: set enatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.6: set enatic_succession in [This.GetName]" }
 			}
 			else_if = {
 				limit = {
@@ -11335,10 +11335,10 @@ character_event = {
 					religion_allows_female_temple_holders = yes
 					religion_allows_male_temple_holders = yes
 				}
-				primary_title = { add_law = true_cognatic_succession log = "misc.6: set true_cognatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } log = "misc.6: set true_cognatic_succession in [This.GetName]" }
 			}
 			else = {
-				primary_title = { add_law = agnatic_succession log = "misc.6: set agnatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = agnatic_succession cooldown = no opinion_effect = no } log = "misc.6: set agnatic_succession in [This.GetName]" }
 			}
 			if = {
 				limit = {
@@ -11383,7 +11383,7 @@ character_event = {
 					religion_allows_female_temple_holders = yes
 					religion_allows_male_temple_holders = no
 				}
-				primary_title = { add_law = enatic_succession log = "misc.6: set enatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.6: set enatic_succession in [This.GetName]" }
 			}
 			else_if = {
 				limit = {
@@ -11391,10 +11391,10 @@ character_event = {
 					religion_allows_female_temple_holders = yes
 					religion_allows_male_temple_holders = yes
 				}
-				primary_title = { add_law = true_cognatic_succession log = "misc.6: set true_cognatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } log = "misc.6: set true_cognatic_succession in [This.GetName]" }
 			}
 			else = {
-				primary_title = { add_law = agnatic_succession log = "misc.6: set agnatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = agnatic_succession cooldown = no opinion_effect = no } log = "misc.6: set agnatic_succession in [This.GetName]" }
 			}
 			character_event = { id = miscATEWW.2 }
 		}
@@ -11410,17 +11410,17 @@ character_event = {
 						primary_title = { title = d_nancy_harts }
 					}
 				}
-				primary_title = { add_law = enatic_succession log = "misc.6: set enatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.6: set enatic_succession in [This.GetName]" }
 			}
 			else_if = {
 				limit = {
 					females_can_hold_minor_commander_title_trigger = yes
 					gender_equality_trigger = yes
 				}
-				primary_title = { add_law = true_cognatic_succession log = "misc.6: set true_cognatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } log = "misc.6: set true_cognatic_succession in [This.GetName]" }
 			}
 			else = {
-				primary_title = { add_law = agnatic_succession log = "misc.6: set agnatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = agnatic_succession cooldown = no opinion_effect = no } log = "misc.6: set agnatic_succession in [This.GetName]" }
 			}
 			if = {
 				limit = {
@@ -11467,17 +11467,17 @@ character_event = {
 						primary_title = { title = d_nancy_harts }
 					}
 				}
-				primary_title = { add_law = enatic_succession log = "misc.6: set enatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.6: set enatic_succession in [This.GetName]" }
 			}
 			else_if = {
 				limit = {
 					females_can_hold_minor_commander_title_trigger = yes
 					gender_equality_trigger = yes
 				}
-				primary_title = { add_law = true_cognatic_succession log = "misc.6: set true_cognatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } log = "misc.6: set true_cognatic_succession in [This.GetName]" }
 			}
 			else = {
-				primary_title = { add_law = agnatic_succession log = "misc.6: set agnatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = agnatic_succession cooldown = no opinion_effect = no } log = "misc.6: set agnatic_succession in [This.GetName]" }
 			}
 			character_event = { id = miscATEWW.2 }
 		}
@@ -11488,16 +11488,16 @@ character_event = {
 				limit = {
 					matriarchal_religion = yes
 				}
-				primary_title = { add_law = enatic_succession log = "misc.6: set enatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.6: set enatic_succession in [This.GetName]" }
 			}
 			else_if = {
 				limit = {
 					gender_equality_trigger = yes
 				}
-				primary_title = { add_law = true_cognatic_succession log = "misc.6: set true_cognatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } log = "misc.6: set true_cognatic_succession in [This.GetName]" }
 			}
 			else = {
-				primary_title = { add_law = agnatic_succession log = "misc.6: set agnatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = agnatic_succession cooldown = no opinion_effect = no } log = "misc.6: set agnatic_succession in [This.GetName]" }
 			}
 			if = {
 				limit = {
@@ -11541,16 +11541,16 @@ character_event = {
 				limit = {
 					matriarchal_religion = yes
 				}
-				primary_title = { add_law = enatic_succession log = "misc.6: set enatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.6: set enatic_succession in [This.GetName]" }
 			}
 			else_if = {
 				limit = {
 					gender_equality_trigger = yes
 				}
-				primary_title = { add_law = true_cognatic_succession log = "misc.6: set true_cognatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } log = "misc.6: set true_cognatic_succession in [This.GetName]" }
 			}
 			else = {
-				primary_title = { add_law = agnatic_succession log = "misc.6: set agnatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = agnatic_succession cooldown = no opinion_effect = no } log = "misc.6: set agnatic_succession in [This.GetName]" }
 			}
 		}
 	}
@@ -11602,7 +11602,7 @@ character_event = {
 						gain_title = PREVPREV 
 					}
 				}
-				primary_title = { add_law = agnatic_succession log = "misc.70: set agnatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = agnatic_succession cooldown = no opinion_effect = no } log = "misc.70: set agnatic_succession in [This.GetName]" }
 			}
 		}
 		else_if = {
@@ -11629,7 +11629,7 @@ character_event = {
 						gain_title = PREVPREV 
 					}
 				}
-				primary_title = { add_law = enatic_succession log = "misc.70: set enatic_succession in [This.GetName]" }
+				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.70: set enatic_succession in [This.GetName]" }
 			}
 		}
 		character_event = { id = misc.6 }
@@ -11788,7 +11788,7 @@ character_event = {
 	}
 	
 	option = {
-		primary_title = { add_law = true_cognatic_succession }
+		primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } }
 	}
 }
 

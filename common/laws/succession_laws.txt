@@ -1349,15 +1349,10 @@ succession_laws = {
 				holder_scope = { NOT = { religion_group = pirate } }
 			}
 			holder_scope = {
+				is_theocracy = no
 				OR = {
-					AND = {
-						has_religion_feature = religion_patriarchal
-						is_theocracy = no
-					}
-					AND = {
-						matriarchal_religion = yes
-						is_theocracy = no
-					}
+					has_religion_feature = religion_patriarchal
+					matriarchal_religion = yes
 				}
 				is_republic = no
 				is_merchant_republic = no
@@ -1646,48 +1641,6 @@ succession_laws = {
 }
 
 gender_laws = {
-	cognatic_succession = {
-		potential = {
-			is_landless_type_title = no
-			holder_scope = {
-				is_theocracy = no
-				OR = {
-					AND = {
-						equal_religion = no
-						NOT = { has_religion_feature = religion_feature_midewiwin }
-					}
-					has_bloodline_flag = bloodline_effect_cognatic
-				}
-			}
-		}
-		
-		effect = {
-			gender_succ = cognatic
-			set_allows_matrilineal_marriage = yes
-			
-			hidden_tooltip = { #Patrician family workaround
-				holder_scope = {
-					if = {
-						limit = {
-							is_patrician = yes
-							primary_title = {
-								title = PREVPREV
-							}
-						}
-						family_palace = { gender_succ = cognatic }
-						recalc_succession = yes
-					}
-				}
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}			
-		default = yes
-		default_selection = {
-			factor = 10
-		}
-	}
 	agnatic_succession = {
 		female_dynasty_opinion = -5
 	
@@ -1698,8 +1651,15 @@ gender_laws = {
 					AND = {
 						is_theocracy = no
 						holy_order = no
-						equal_religion = no
-						NOT = { has_religion_feature = religion_feature_midewiwin }
+						OR = {
+							AND = {
+								gender_equality_trigger = no
+								has_feminist_culture_trigger = no
+							}
+							any_owned_bloodline = {
+								has_bloodline_flag = bloodline_effect_cognatic
+							}
+						}
 					}
 					AND = {
 						is_theocracy = yes
@@ -1717,26 +1677,47 @@ gender_laws = {
 				}
 			}
 		}
-		allow = {
-			holder_scope = {
-				conditional_tooltip = {
-					trigger = {
-						is_theocracy = no
-						holy_order = no
-					}
-					gender_equality_trigger = no
-				}
-			}
-		}
 		effect = {
 			gender_succ = agnatic
 		}
 		revoke_allowed = {
 			always = no
 		}
+		ai_will_do = {
+			factor = 2.5
+			modifier = {
+				factor = 0
+				holder_scope = {
+					OR = {
+						gender_equality_trigger = yes
+						NOT = { has_religion_feature = religion_patriarchal }
+						is_female = yes
+						AND = {
+							is_female = no
+							NOT = { trait = zealous }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				holder_scope = {
+					OR = {
+						holy_order = yes
+						is_theocracy = yes
+						mercenary = yes
+					}
+				}
+			}
+		}
 		default = yes
 		default_selection = {
 			factor = 1
+
+			modifier = {
+				factor = 0
+				holder_scope = { matriarchal_religion = yes }
+			}
 
 			modifier = {
 				factor = 50
@@ -1777,10 +1758,91 @@ gender_laws = {
 			modifier = {
 				factor = 0
 				holder_scope = {
-					is_theocracy = no
-					holy_order = no
+					OR = {
+						is_theocracy = no
+						holy_order = no
+						gender_equality_trigger = yes
+					}
+				}
+			}
+		}
+	}
+	cognatic_succession = {
+		potential = {
+			is_landless_type_title = no
+			holder_scope = {
+				is_theocracy = no
+				holy_order = no
+				matriarchal_religion = no
+				OR = {
+					equal_religion = no
+					any_owned_bloodline = {
+						has_bloodline_flag = bloodline_effect_cognatic
+					}
+				}
+			}
+		}
+		
+		effect = {
+			gender_succ = cognatic
+			set_allows_matrilineal_marriage = yes
+			
+			hidden_tooltip = { #Patrician family workaround
+				holder_scope = {
+					if = {
+						limit = {
+							is_patrician = yes
+							primary_title = {
+								title = PREVPREV
+							}
+						}
+						family_palace = { gender_succ = cognatic }
+						recalc_succession = yes
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				holder_scope = {
+					has_law = agnatic_succession
+					OR = {
+						NOT = { has_religion_feature = religion_patriarchal }
+						AND = {
+							is_female = no
+							trait = zealous
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				holder_scope = {
 					gender_equality_trigger = yes
 				}
+			}
+			modifier = {
+				factor = 0
+				holder_scope = {
+					OR = {
+						holy_order = yes
+						is_theocracy = yes
+						mercenary = yes
+					}
+				}
+			}
+		}
+		default = yes
+		default_selection = {
+			factor = 10
+			modifier = {
+				factor = 0
+				holder_scope = { matriarchal_religion = yes }
 			}
 		}
 	}
@@ -1826,24 +1888,7 @@ gender_laws = {
 				}
 			}
 		}
-		allow = {
-			conditional_tooltip = {
-				trigger = {
-					is_theocracy = no
-					holy_order = no
-					mercenary = no
-				}
-				matriarchal_religion = no
-				NOT = { has_religion_feature = religion_patriarchal }
-				OR = {
-					gender_equality_trigger = yes
-					has_feminist_culture_trigger = yes
-					any_owned_bloodline = {
-						has_bloodline_flag = bloodline_effect_cognatic
-					}
-				}
-			}
-		}
+
 		effect = {
 			gender_succ = true_cognatic
 			set_allows_matrilineal_marriage = yes
@@ -1867,15 +1912,41 @@ gender_laws = {
 			always = no
 		}
 		ai_will_do = {
-			factor = 2
+			factor = 2.5
 			modifier = {
 				factor = 0
-				matriarchal_religion = yes
+				holder_scope = { 
+					matriarchal_religion = yes 
+					is_female = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				holder_scope = { 
+					has_religion_feature = religion_patriarchal
+					is_female = no
+				}
+			}
+			modifier = {
+				factor = 0
+				holder_scope = {
+					OR = {
+						holy_order = yes
+						is_theocracy = yes
+						mercenary = yes
+					}
+				}
 			}
 		}
+		default = yes
 		default_selection = {
 			factor = 1
 			
+			modifier = {
+				factor = 0
+				holder_scope = { matriarchal_religion = yes }
+			}
+
 			modifier = {
 				factor = 0.1
 				NOT = {
@@ -1887,7 +1958,9 @@ gender_laws = {
 								mercenary = no
 								OR = {
 									equal_religion = yes
-									has_religion_feature = religion_feature_midewiwin
+									any_owned_bloodline = {
+										has_bloodline_flag = bloodline_enatic
+									}
 								}
 							}
 							AND = {
@@ -1921,9 +1994,12 @@ gender_laws = {
 						AND = {
 							is_theocracy = no
 							holy_order = no
+							equal_religion = yes
 							OR = {
 								equal_religion = yes
-								has_religion_feature = religion_feature_midewiwin
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_enatic
+								}
 							}
 						}
 						AND = {
@@ -1944,7 +2020,7 @@ gender_laws = {
 	}
 	
 	enatic_succession = {
-		male_dynasty_opinion = -10
+		male_dynasty_opinion = -15
 		female_dynasty_opinion = 10
 		
 		potential = {
@@ -1955,6 +2031,7 @@ gender_laws = {
 						AND = {
 							is_theocracy = no
 							holy_order = no
+							NOT = { has_religion_feature = religion_patriarchal }
 							OR = {
 								matriarchal_religion = yes
 								any_owned_bloodline = {
@@ -2000,24 +2077,29 @@ gender_laws = {
 		revoke_allowed = {
 			always = no
 		}
-		default_selection = {
-			factor = 1
+		ai_will_do = {
+			factor = 2
 			modifier = {
-				factor = 100
-				is_theocracy = yes
-				religion_allows_female_temple_holders = yes
-				religion_allows_male_temple_holders = no
-			}
-			modifier = {
-				factor = 100
-				holy_order = yes
-				religion_allows_female_temple_holders = yes
-				religion_allows_male_temple_holders = no
+				factor = 0
+				holder_scope = {
+					OR = {
+						matriarchal_religion = no
+						AND = {
+							is_female = yes
+							trait = zealous
+						}
+					}
+				}
 			}
 			modifier = {
 				factor = 0
-				is_theocracy = no
-				holy_order = no
+				holder_scope = {
+					OR = {
+						holy_order = yes
+						is_theocracy = yes
+						mercenary = yes
+					}
+				}
 			}
 		}
 	}
@@ -2031,6 +2113,7 @@ gender_laws = {
 			holder_scope = {
 				is_theocracy = no
 				holy_order = no
+				NOT = { has_religion_feature = religion_patriarchal }
 				OR = {
 					matriarchal_religion = yes
 					any_owned_bloodline = {
@@ -2064,24 +2147,37 @@ gender_laws = {
 			always = no
 		}
 		ai_will_do = {
-			factor = 2
+			factor = 2.5
 			modifier = {
 				factor = 0
-				OR = {
-					is_landless_type_title = yes
-					is_theocracy = yes
-					holy_order = yes
-					matriarchal_religion = no
-
+				holder_scope = {
+					OR = {
+						matriarchal_religion = no
+						is_female = no
+						AND = {
+							is_female = yes
+							NOT = { trait = zealous }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				holder_scope = {
+					OR = {
+						holy_order = yes
+						is_theocracy = yes
+						mercenary = yes
+					}
 				}
 			}
 		}
+		default = yes
 		default_selection = {
-			factor = 1
+			factor = 2
 			
 			modifier = {
 				factor = 100
-				is_landless_type_title = no
 				holder_scope = {
 					is_theocracy = no
 					holy_order = no

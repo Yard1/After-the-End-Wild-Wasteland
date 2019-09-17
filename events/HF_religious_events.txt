@@ -3381,7 +3381,6 @@ character_event = {
 			OR = { 
 				has_religion_feature = religion_patriarchal
 				equal_religion = yes
-				has_religion_feature = religion_feature_midewiwin
 				matriarchal_religion = yes
 			}
 		}
@@ -3393,10 +3392,6 @@ character_event = {
 			limit = { 
 				ROOT = { 
 					matriarchal_religion = yes 
-					NOR = {  
-						#is_merchant_republic = yes
-						is_republic = yes
-					}
 				}
 			}
 			ROOT = { 
@@ -3472,14 +3467,7 @@ character_event = {
 		if = {
 			limit = { 
 				ROOT = {
-					OR = { 
-						equal_religion = yes 
-						has_religion_feature = religion_feature_midewiwin
-					}
-					NOR = {  
-						#is_merchant_republic = yes
-						is_republic = yes
-					}
+					equal_religion = yes 
 				}
 			}
 			ROOT = { 

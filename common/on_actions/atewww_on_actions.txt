@@ -91,6 +91,7 @@ on_birth = {
 on_new_holder = {
 	events = {
 		ATE_WWW_PIRATE.7
+		miscATEWW.7
 	}
 }
 
@@ -98,6 +99,14 @@ on_new_holder = {
 on_new_holder_inheritance = {
 	events = {
 		ATE_WWW_PIRATE.7
+		miscATEWW.7
+	}
+}
+
+# ROOT is the character, FROM is the title, FROMFROM is the old holder
+on_new_holder_usurpation = {
+	events = {
+		miscATEWW.7
 	}
 }
 

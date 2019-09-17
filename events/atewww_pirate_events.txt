@@ -367,6 +367,7 @@ character_event = {
 	
 	trigger = {
 		FROM = { title = k_pirate_kingdom }
+		NOT = { has_character_flag = pirate_king_flag }
 	}
 
 	immediate = {

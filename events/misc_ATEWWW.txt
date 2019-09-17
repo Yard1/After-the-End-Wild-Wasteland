@@ -218,7 +218,7 @@ character_event = {
 					limit = {
 						NOT = { has_law = succ_mib_elective }
 					}
-					add_law = succ_mib_elective
+					add_law = { law = succ_mib_elective cooldown = no opinion_effect = no }
 				}
 			}
 			if = {
@@ -293,7 +293,7 @@ character_event = {
 					limit = {
 						NOT = { has_law = succ_libertarian_elective }
 					}
-					add_law = succ_libertarian_elective
+					add_law = { law = succ_libertarian_elective cooldown = no opinion_effect = no }
 				}
 			}
 			#Changes religion
@@ -687,4 +687,19 @@ character_event = {
 	option = { set_name = Thalassa ai_chance = { factor = 1 } }
 	option = { set_name = Venus ai_chance = { factor = 1 } }
 	option = { set_name = Xanthe ai_chance = { factor = 1 } }
+}
+
+character_event = {
+	id = miscATEWW.7
+	desc = "Make sure S-mart is always republican"
+	is_triggered_only = yes
+	hide_window = yes
+	only_rulers = yes
+	trigger = {
+		FROM = { title = k_s_mart }
+		is_republic = no
+	}
+	immediate = {
+		k_s_mart = { destroy_landed_title = THIS }
+	}
 }
