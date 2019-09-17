@@ -33,7 +33,7 @@ d_lake_charles_adj;Charleston;;;;;;;;;;;;;x
 
 DONA;Dona;;;;;;;;;;;;;x
 atewww_pills;Old World Medicine;;;;;;;;;;;;;x
-atewww_pills_desc;A small container of unidentified pre-Calamity medicine.;;;;;;;;;;;;;x
+atewww_pills_desc;A small container of unidentified pre-Calamity medicine. A competent scholar should examine it first.;;;;;;;;;;;;;x
 ATEWWW_PILL_ANTIBIOTICS;Old World Medicine (Antibiotics);;;;;;;;;;;;;x
 ATEWWW_PILL_ANTIVIRALS;Old World Medicine (Antivirals);;;;;;;;;;;;;x
 ATEWWW_PILL_VITAMINS;Old World Medicine (Supplements);;;;;;;;;;;;;x
@@ -43,10 +43,10 @@ ATEWWW_PILL_PAINKILLERS;Old World Medicine (Painkillers);;;;;;;;;;;;;x
 ATEWWW_PILL_UNKNOWN;Old World Medicine (Unknown);;;;;;;;;;;;;x
 ATEWWW_PILL_UNIDENTIFIED;Old World Medicine;;;;;;;;;;;;;x
 
-ATEWWW_PILL_ANTIBIOTICS_desc;Old World Medicine (Antibiotics);;;;;;;;;;;;;x
-ATEWWW_PILL_ANTIVIRALS_desc;Old World Medicine (Antivirals);;;;;;;;;;;;;x
-ATEWWW_PILL_VITAMINS_desc;Old World Medicine (Supplements);;;;;;;;;;;;;x
-ATEWWW_PILL_VIAGRA_desc;Old World Medicine (Sexual);;;;;;;;;;;;;x
-ATEWWW_PILL_ANTIDEPRESSANTS_desc;Old World Medicine (Psychoactive);;;;;;;;;;;;;x
-ATEWWW_PILL_PAINKILLERS_desc;Old World Medicine (Painkillers);;;;;;;;;;;;;x
-ATEWWW_PILL_UNKNOWN_desc;Old World Medicine (Unknown);;;;;;;;;;;;;x
+ATEWWW_PILL_ANTIBIOTICS_desc;A small container of pre-Calamity medicine. Those small pills can supposedly heal consumption, the Plague, camp fever, slow fever, dysentery, food poisoning and pneumonia.;;;;;;;;;;;;;x
+ATEWWW_PILL_ANTIVIRALS_desc;A small container of pre-Calamity medicine. This kind can miraculously cure measels, smallpox, flu and even rabies.;;;;;;;;;;;;;x
+ATEWWW_PILL_VITAMINS_desc;A small container of pre-Calamity medicine. It is supposed to strengthen the body.;;;;;;;;;;;;;x
+ATEWWW_PILL_VIAGRA_desc;A small container of pre-Calamity medicine. Those pills are said to be a powerful aphrodisiac.;;;;;;;;;;;;;x
+ATEWWW_PILL_ANTIDEPRESSANTS_desc;A small container of pre-Calamity medicine. Apparently the contents heal the mind, instead of the body.;;;;;;;;;;;;;x
+ATEWWW_PILL_PAINKILLERS_desc;A small container of pre-Calamity medicine. This kind was said to ease any kind of pain.;;;;;;;;;;;;;x
+ATEWWW_PILL_UNKNOWN_desc;A small container of unknown pre-Calamity medicine. It may do anything, or not work at all.;;;;;;;;;;;;;x

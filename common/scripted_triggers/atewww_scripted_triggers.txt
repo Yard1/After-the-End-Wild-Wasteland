@@ -168,7 +168,6 @@ has_identified_medicine_to_take = {
 						trait = has_aztec_disease
 						trait = flu
 						trait = rabies
-						trait = lovers_pox
 						trait = ill
 					}
 				}

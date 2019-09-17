@@ -157,8 +157,8 @@ character_event = {
 }
 
 
-# atewww_pills_antibiotics - cures has_tuberculosis, has_typhoid_fever, has_typhus, has_bubonic_plague, syphilitic, dysentery, food_poisoning, pneumonic, leper, 75% chance to treat ill
-# atewww_pills_antivirals - cures has_measles, has_small_pox, has_aztec_disease, flu, lovers_pox, rabies, 25% chance to treat ill
+# atewww_pills_antibiotics - cures has_tuberculosis, has_typhoid_fever, has_typhus, has_bubonic_plague, syphilitic, dysentery, food_poisoning, pneumonic, 75% chance to treat ill
+# atewww_pills_antivirals - cures has_measles, has_small_pox, has_aztec_disease, flu, rabies, 25% chance to treat ill
 # atewww_pills_vitamins - health boost, cures scurvy
 # atewww_pills_viagra - large fertility boost for a short time ( ?° ?? ?°)
 # atewww_pills_antidepressants - can cure depressed, lunatic, possessed
@@ -1098,7 +1098,6 @@ character_event = {
 									trait = has_aztec_disease
 									trait = flu
 									trait = rabies
-									trait = lovers_pox
 									trait = ill
 								}
 							}
