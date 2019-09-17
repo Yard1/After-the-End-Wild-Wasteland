@@ -1196,7 +1196,7 @@ ask_for_excommunication_chance = {
 		value = num_vassals_with_minor_title
 		who = FROMFROM
 		key = title_cardinal
-		FROM = { NOT = { religion = evangelical } } #Cardinals doesn't matter if you're orthodox
+		FROM = { has_autocephaly = no } #Cardinals doesn't matter if you're orthodox
 	}
 	additive_exported_value_modifier = {
 		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS_TARGET
@@ -1205,7 +1205,7 @@ ask_for_excommunication_chance = {
 		value = num_vassals_with_minor_title
 		who = FROMFROM
 		key = title_hamiltonian_justice
-		FROM = { NOT = { religion = evangelical } } #Cardinals doesn't matter if you're orthodox
+		FROM = { has_autocephaly = no } #Cardinals doesn't matter if you're orthodox
 	}
 	additive_exported_value_modifier = {
 		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS_TARGET
@@ -1214,7 +1214,7 @@ ask_for_excommunication_chance = {
 		value = num_vassals_with_minor_title
 		who = FROMFROM
 		key = title_ursuline_cardinal
-		FROM = { NOT = { religion = evangelical } } #Cardinals doesn't matter if you're orthodox
+		FROM = { has_autocephaly = no } #Cardinals doesn't matter if you're orthodox
 	}
 	additive_exported_value_modifier = {
 		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS_TARGET
@@ -1223,7 +1223,7 @@ ask_for_excommunication_chance = {
 		value = num_vassals_with_minor_title
 		who = FROMFROM
 		key = title_mormon_cardinal
-		FROM = { NOT = { religion = evangelical } } #Cardinals doesn't matter if you're orthodox
+		FROM = { has_autocephaly = no } #Cardinals doesn't matter if you're orthodox
 	}
 	#Asker's Piety.
 	additive_modifier = { 

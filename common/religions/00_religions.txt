@@ -562,6 +562,11 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 	neognostic = {
 		graphical_culture = westerngfx
@@ -610,6 +615,12 @@ christian = {
 		intermarry = cetic
 		intermarry = gaian
 		intermarry = shinto
+
+		character_modifier = {
+			cetic_opinion = 5
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 	sedevacantist = {
 		graphical_culture = westerngfx
@@ -648,6 +659,11 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 	nestorian = {
 		graphical_culture = westerngfx
@@ -691,6 +707,11 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 	ursuline = {
 		graphical_culture = westerngfx
@@ -754,6 +775,11 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 	
 	angeline = {
@@ -796,6 +822,11 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 	
 	confederated = {
@@ -854,6 +885,11 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 
 	anabaptist = {
@@ -919,6 +955,8 @@ christian = {
 		character_modifier = {
 			vassal_opinion = 15
 			rel_head_opinion = 15
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
 		}
 	}
 	
@@ -966,7 +1004,8 @@ christian = {
 		#intermarry = batenburger
 		intermarry = moravian
 		character_modifier = {
-
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
 		}
 	}
 
@@ -1026,6 +1065,11 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 
 	antinomian = {
@@ -1066,6 +1110,11 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 
 	charismatic = {
@@ -1117,6 +1166,11 @@ christian = {
 		
 		intermarry = revelationist
 		intermarry = revelationist_reformed
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 	
 	postadventist = {
@@ -1157,6 +1211,11 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 	
 	falling_star = {
@@ -1211,6 +1270,11 @@ christian = {
 		
 		intermarry = sacred_heart
 		intermarry = gracia_divina
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 	
 	moravian = { #traditional moravianism
@@ -1263,6 +1327,11 @@ christian = {
 		
 		intermarry = sacred_heart
 		intermarry = gracia_divina
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 	
 	high_church = {
@@ -1320,6 +1389,11 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 	
 	#someone pointed out that Anglo-Catholicsm doesn't make much sense as a heresy, because this would logically be the defining characteristic that separates Anglicanism from normal Protestantism.
@@ -1366,6 +1440,11 @@ christian = {
 		#intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 	
 	apostolic = { #Brazilian Christianity
@@ -1428,6 +1507,11 @@ christian = {
 		intermarry = espiritista
 		intermarry = espiritista_reformed
 		intermarry = candomble
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 }
 
@@ -1491,6 +1575,11 @@ cult_of_saints= {
 		intermarry = apostolic
 		intermarry = falling_star
 		intermarry = moravian
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 	
 	gracia_divina = {
@@ -1531,6 +1620,11 @@ cult_of_saints= {
 		intermarry = apostolic
 		intermarry = falling_star
 		intermarry = moravian
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+		}
 	}
 }
 
@@ -1587,6 +1681,10 @@ pacific = {
 		intermarry = shinto
 		intermarry = nousthreskeia
 		intermarry = neognostic
+
+		character_modifier = {
+			neognostic_opinion = 5
+		}
 	}
 	
 	gaian = {
@@ -2168,6 +2266,12 @@ oldworld = {
 		intermarry = monetarist
 		intermarry = rust_cultist
 		intermarry = chrome_cultist
+
+		character_modifier = {
+			hamiltonian_opinion = 10
+			jeffersonian_opinion = 5
+			libertarian_opinion = 10
+		}
 	}
 
 	hamiltonian = {
@@ -2226,6 +2330,12 @@ oldworld = {
 		intermarry = monetarist
 		intermarry = rust_cultist
 		intermarry = chrome_cultist
+
+		character_modifier = {
+			americanist_opinion = 10
+			jeffersonian_opinion = 5
+			libertarian_opinion = 10
+		}
 	}
 
 	jeffersonian = {
@@ -2279,6 +2389,12 @@ oldworld = {
 		intermarry = americanist
 		intermarry = hamiltonian
 		intermarry = libertarian
+
+		character_modifier = {
+			americanist_opinion = 5
+			hamiltonian_opinion = 5
+			libertarian_opinion = 5
+		}
 	}
 
 	libertarian = {
@@ -2351,6 +2467,9 @@ oldworld = {
 		character_modifier = {
 			vassal_opinion = 15
 			rel_head_opinion = 15
+			americanist_opinion = 10
+			hamiltonian_opinion = 10
+			jeffersonian_opinion = 5
 		}
 	}
 
@@ -2910,6 +3029,10 @@ pagan_group = {
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
 		intermarry = thelemic
+
+		character_modifier = {
+			christian_opinion = -10
+		}
 	}	
 	
 	thelemic = { # Crowley
@@ -2950,6 +3073,10 @@ pagan_group = {
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
 		intermarry = thelemic_reformed
+
+		character_modifier = {
+			christian_opinion = -15
+		}
 	}
 
 	norse_pagan_reformed = {
