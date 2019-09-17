@@ -232,11 +232,11 @@ character_event = {
 						is_smart_trigger = yes
 					}
 					modifier = {
-						factor = 1.6
+						factor = 1.4
 						trait = physician
 					}
 					modifier = {
-						factor = 1.6
+						factor = 1.4
 						trait = scholar
 					}
 					modifier = {
@@ -309,11 +309,11 @@ character_event = {
 								is_smart_trigger = yes
 							}
 							modifier = {
-								factor = 1.6
+								factor = 1.4
 								trait = physician
 							}
 							modifier = {
-								factor = 1.6
+								factor = 1.4
 								trait = scholar
 							}
 							modifier = {
@@ -467,11 +467,11 @@ character_event = {
 						is_smart_trigger = yes
 					}
 					modifier = {
-						factor = 1.6
+						factor = 1.4
 						trait = physician
 					}
 					modifier = {
-						factor = 1.6
+						factor = 1.4
 						trait = scholar
 					}
 					modifier = {
@@ -544,11 +544,11 @@ character_event = {
 								is_smart_trigger = yes
 							}
 							modifier = {
-								factor = 1.6
+								factor = 1.4
 								trait = physician
 							}
 							modifier = {
-								factor = 1.6
+								factor = 1.4
 								trait = scholar
 							}
 							modifier = {
@@ -1201,62 +1201,62 @@ character_event = {
 		if = {
 			limit = { 
 				has_character_flag = medicine_identification_success 
-				random_artifact = {
-					limit = {
-						artifact_type = atewww_pills
-						NOR = {
-							has_artifact_flag = atewww_pills_identified_as_antibiotics
-							has_artifact_flag = atewww_pills_identified_as_antivirals
-							has_artifact_flag = atewww_pills_identified_as_vitamins
-							has_artifact_flag = atewww_pills_identified_as_viagra
-							has_artifact_flag = atewww_pills_identified_as_antidepressants
-							has_artifact_flag = atewww_pills_identified_as_painkillers
-							has_artifact_flag = atewww_pills_identified_as_sugar
-							has_artifact_flag = atewww_pills_cannot_be_identified
-						}
+			}
+			random_artifact = {
+				limit = {
+					artifact_type = atewww_pills
+					NOR = {
+						has_artifact_flag = atewww_pills_identified_as_antibiotics
+						has_artifact_flag = atewww_pills_identified_as_antivirals
+						has_artifact_flag = atewww_pills_identified_as_vitamins
+						has_artifact_flag = atewww_pills_identified_as_viagra
+						has_artifact_flag = atewww_pills_identified_as_antidepressants
+						has_artifact_flag = atewww_pills_identified_as_painkillers
+						has_artifact_flag = atewww_pills_identified_as_sugar
+						has_artifact_flag = atewww_pills_cannot_be_identified
 					}
-					if = {
-						limit = { has_artifact_flag = atewww_pills_antibiotics }
-						set_artifact_flag = atewww_pills_identified_as_antibiotics
-						set_name = ATEWWW_PILL_ANTIBIOTICS
-						set_description = ATEWWW_PILL_ANTIBIOTICS_desc
-					}
-					else_if = {
-						limit = { has_artifact_flag = atewww_pills_antivirals }
-						set_artifact_flag = atewww_pills_identified_as_antivirals
-						set_name = ATEWWW_PILL_ANTIVIRALS
-						set_description = ATEWWW_PILL_ANTIVIRALS_desc
-					}
-					else_if = {
-						limit = { has_artifact_flag = atewww_pills_vitamins }
-						set_artifact_flag = atewww_pills_identified_as_vitamins
-						set_name = ATEWWW_PILL_VITAMINS
-						set_description = ATEWWW_PILL_VITAMINS_desc
-					}
-					else_if = {
-						limit = { has_artifact_flag = atewww_pills_viagra }
-						set_artifact_flag = atewww_pills_identified_as_viagra
-						set_name = ATEWWW_PILL_VIAGRA
-						set_description = ATEWWW_PILL_VIAGRA_desc
-					}
-					else_if = {
-						limit = { has_artifact_flag = atewww_pills_antidepressants }
-						set_artifact_flag = atewww_pills_identified_as_antidepressants
-						set_name = ATEWWW_PILL_ANTIDEPRESSANTS
-						set_description = ATEWWW_PILL_ANTIDEPRESSANTS_desc
-					}
-					else_if = {
-						limit = { has_artifact_flag = atewww_pills_painkillers }
-						set_artifact_flag = atewww_pills_identified_as_painkillers
-						set_name = ATEWWW_PILL_PAINKILLERS
-						set_description = ATEWWW_PILL_PAINKILLERS_desc
-					}
-					else_if = {
-						limit = { has_artifact_flag = atewww_pills_sugar }
-						set_artifact_flag = atewww_pills_identified_as_sugar
-					}
-					save_event_target_as = identified_pills
 				}
+				if = {
+					limit = { has_artifact_flag = atewww_pills_antibiotics }
+					set_artifact_flag = atewww_pills_identified_as_antibiotics
+					set_name = ATEWWW_PILL_ANTIBIOTICS
+					set_description = ATEWWW_PILL_ANTIBIOTICS_desc
+				}
+				else_if = {
+					limit = { has_artifact_flag = atewww_pills_antivirals }
+					set_artifact_flag = atewww_pills_identified_as_antivirals
+					set_name = ATEWWW_PILL_ANTIVIRALS
+					set_description = ATEWWW_PILL_ANTIVIRALS_desc
+				}
+				else_if = {
+					limit = { has_artifact_flag = atewww_pills_vitamins }
+					set_artifact_flag = atewww_pills_identified_as_vitamins
+					set_name = ATEWWW_PILL_VITAMINS
+					set_description = ATEWWW_PILL_VITAMINS_desc
+				}
+				else_if = {
+					limit = { has_artifact_flag = atewww_pills_viagra }
+					set_artifact_flag = atewww_pills_identified_as_viagra
+					set_name = ATEWWW_PILL_VIAGRA
+					set_description = ATEWWW_PILL_VIAGRA_desc
+				}
+				else_if = {
+					limit = { has_artifact_flag = atewww_pills_antidepressants }
+					set_artifact_flag = atewww_pills_identified_as_antidepressants
+					set_name = ATEWWW_PILL_ANTIDEPRESSANTS
+					set_description = ATEWWW_PILL_ANTIDEPRESSANTS_desc
+				}
+				else_if = {
+					limit = { has_artifact_flag = atewww_pills_painkillers }
+					set_artifact_flag = atewww_pills_identified_as_painkillers
+					set_name = ATEWWW_PILL_PAINKILLERS
+					set_description = ATEWWW_PILL_PAINKILLERS_desc
+				}
+				else_if = {
+					limit = { has_artifact_flag = atewww_pills_sugar }
+					set_artifact_flag = atewww_pills_identified_as_sugar
+				}
+				save_event_target_as = identified_pills
 			}
 		}
 		else_if = {
@@ -1381,6 +1381,7 @@ character_event = {
 				event_target:identified_pills = { has_artifact_flag = atewww_pills_identified_as_sugar }
 			}
 			event_target:identified_pills = {
+				show_scope_change = no
 				clear_persistent_event_target = identified_by
 				destroy_artifact = yes
 			}
@@ -1396,6 +1397,7 @@ character_event = {
 				event_target:identified_pills = { has_artifact_flag = atewww_pills_identified_as_sugar }
 			}
 			event_target:identified_pills = {
+				show_scope_change = no
 				clear_persistent_event_target = identified_by
 				destroy_artifact = yes
 			}
@@ -1428,6 +1430,7 @@ character_event = {
 				event_target:identified_pills = { has_artifact_flag = atewww_pills_identified_as_sugar }
 			}
 			event_target:identified_pills = {
+				show_scope_change = no
 				clear_persistent_event_target = identified_by
 				destroy_artifact = yes
 			}
@@ -1446,6 +1449,7 @@ character_event = {
 				event_target:identified_pills = { has_artifact_flag = atewww_pills_identified_as_sugar }
 			}
 			event_target:identified_pills = {
+				show_scope_change = no
 				clear_persistent_event_target = identified_by
 				destroy_artifact = yes
 			}
