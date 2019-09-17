@@ -1225,7 +1225,7 @@ character_event = {
 					else_if = {
 						limit = { has_artifact_flag = atewww_pills_antivirals }
 						set_artifact_flag = atewww_pills_identified_as_antivirals
-						set_name = ATEWWW_PILL_ANTIBIOTICS
+						set_name = ATEWWW_PILL_ANTIVIRALS
 						set_description = ATEWWW_PILL_ANTIVIRALS_desc
 					}
 					else_if = {
@@ -1284,7 +1284,7 @@ character_event = {
 					}
 					8 = {	
 						set_artifact_flag = atewww_pills_identified_as_antivirals 
-						set_name = ATEWWW_PILL_ANTIBIOTICS
+						set_name = ATEWWW_PILL_ANTIVIRALS
 						set_description = ATEWWW_PILL_ANTIVIRALS_desc
 					}
 					10 = {	
