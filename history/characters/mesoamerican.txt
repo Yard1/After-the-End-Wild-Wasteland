@@ -4,7 +4,7 @@
 1325000={
 	name="Kuruchi"
 	dynasty=1350000
-	culture=purepecha
+	culture=zapotec
 	religion=mictlantec
 	martial=8
 	diplomacy=6
@@ -25,7 +25,7 @@
 1325001={
 	name="Jorhéndani"
 	dynasty=1350000
-	culture=purepecha
+	culture=zapotec
 	religion=mictlantec
 	martial=4
 	diplomacy=3
@@ -47,7 +47,7 @@
 1325002={
 	name="Zuangua"
 	dynasty=1350000
-	culture=purepecha
+	culture=zapotec
 	religion=mictlantec
 	martial=8
 	diplomacy=3
@@ -73,7 +73,7 @@
 1325003={
 	name="Itukua"
 	dynasty=1350000
-	culture=purepecha
+	culture=zapotec
 	religion=mictlantec
 	martial=2
 	diplomacy=9
@@ -99,7 +99,7 @@
 	name="Mítani"
 	female=yes
 	dynasty=1350000
-	culture=purepecha
+	culture=zapotec
 	religion=mictlantec
 	martial=5
 	diplomacy=5
@@ -122,22 +122,29 @@
 	2713.6.3={death=yes}
 }
 
-1325010={
-	name="Tayauh"
-	dynasty=1428006
-	culture=nahua
-	religion=mictlantec
-	martial=8
-	diplomacy=4
-	stewardship=4
-	intrigue=3
-	learning=8
-	trait=midas_touched
-	trait=ugly
-	trait=content
-	2626.4.28={birth=yes}
-	2660.1.1={add_claim=d_mexico}
-	2701.6.3={death=yes}
+1325010 = {
+	name = "Tayauh"
+	dynasty = 1428006
+	culture = nahua
+	religion = mictlantec
+	martial = 8
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 4
+	learning = 9
+	trait = midas_touched
+	trait = ugly
+	trait = content
+	trait = kind
+	trait = just
+	trait = patient
+	trait = scholar
+	2626.4.28 = {
+	    birth=yes
+	}
+	2660.1.1 = {
+	    add_claim = d_mexico
+	}
 }
 
 1325011={
@@ -432,7 +439,7 @@
 	name="Geronima Kwalana"
 	female=yes
 	dna="plnbhiaemgf"
-	culture=zapotec
+	culture=purepecha
 	religion=sol_invicta
 	martial=3
 	diplomacy=2
@@ -451,7 +458,7 @@
 	name="Tigr"
 	dynasty=1386001
 	dna="nejejjmccpc"
-	culture=zapotec
+	culture=purepecha
 	religion=sol_invicta
 	martial=2
 	diplomacy=0
@@ -471,7 +478,7 @@
 	female=yes
 	dynasty=1386001
 	dna="nenbjjmchkc"
-	culture=zapotec
+	culture=purepecha
 	religion=sol_invicta
 	martial=4
 	diplomacy=2
@@ -492,7 +499,7 @@
 	female=yes
 	dynasty=1386001
 	dna="nenbjjacepf"
-	culture=zapotec
+	culture=purepecha
 	religion=sol_invicta
 	martial=4
 	diplomacy=4
@@ -513,7 +520,7 @@
 	name="Santiago"
 	dynasty=1386001
 	dna="nenjjjacmgc"
-	culture=zapotec
+	culture=purepecha
 	religion=sol_invicta
 	martial=7
 	diplomacy=4
@@ -532,7 +539,7 @@
 	name="Goncalu Binela"
 	dynasty=1386001
 	dna="penbjjmfcgf"
-	culture=zapotec
+	culture=purepecha
 	religion=sol_invicta
 	martial=6
 	diplomacy=3
@@ -552,7 +559,7 @@
 	dynasty=1386002
 	dna="fjngjcifhbj"
 	culture=zapotec
-	religion=sol_invicta
+	religion=mictlantec
 	martial=6
 	diplomacy=2
 	stewardship=4
@@ -573,7 +580,7 @@
 	female=yes
 	dna="pifjlckgnih"
 	culture=zapotec
-	religion=sol_invicta
+	religion=mictlantec
 	martial=0
 	diplomacy=7
 	stewardship=0
@@ -591,7 +598,7 @@
 	dynasty=1386002
 	dna="pjfgjckfnih"
 	culture=zapotec
-	religion=sol_invicta
+	religion=mictlantec
 	martial=5
 	diplomacy=1
 	stewardship=0
@@ -612,7 +619,7 @@
 	dynasty=1386002
 	dna="pifjlcifhab"
 	culture=zapotec
-	religion=sol_invicta
+	religion=mictlantec
 	martial=4
 	diplomacy=3
 	stewardship=1
@@ -634,7 +641,7 @@
 	dynasty=1386002
 	dna="gjnglcighbh"
 	culture=zapotec
-	religion=sol_invicta
+	religion=mictlantec
 	martial=5
 	diplomacy=1
 	stewardship=5
@@ -656,7 +663,7 @@
 	dynasty=1386002
 	dna="pinjjcifnih"
 	culture=zapotec
-	religion=sol_invicta
+	religion=mictlantec
 	martial=7
 	diplomacy=5
 	stewardship=4

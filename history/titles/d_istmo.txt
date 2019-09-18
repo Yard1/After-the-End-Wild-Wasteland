@@ -1,0 +1,8 @@
+2631.12.3 = {
+	holder = 1325056
+	law = succ_primogeniture
+}
+2660.6.24 = {
+	holder = 1325056
+	liege = k_zapoteca
+}

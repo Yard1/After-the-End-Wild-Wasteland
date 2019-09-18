@@ -435,7 +435,22 @@
 1428003 = { name="Cipactli" culture=nahua }
 1428004 = { name="Coatl" culture=nahua }
 1428005 = { name="Coyotl" culture=nahua }
-1428006 = { name="Cozcaquauhtli" culture=nahua }
+1428006 = { 
+    name = "Cozcaquauhtli" 
+    culture = nahua 
+	coat_of_arms = {
+        religion = mictlantec
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 42
+            emblem = 0
+            color = 0
+            color = 1
+            color = 8
+        }
+    }
+}
 1428007 = { name="Cuetzpalin" culture=nahua }
 1428008 = { name="Ehecatl" culture=nahua }
 1428009 = { name="Icpalli" culture=nahua }
