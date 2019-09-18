@@ -48,7 +48,6 @@ feudal_governments = {
 		
 		dukes_called_kings = yes
 		barons_need_dynasty = yes
-		free_retract_vassalage = yes
 
 		uses_prestige_for_law_change = yes
 		can_grant_kingdoms_and_empires_to_other_government = yes
