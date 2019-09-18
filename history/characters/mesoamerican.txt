@@ -189,13 +189,26 @@
 	2701.6.3={death=yes}
 }
 
-1325014={
-	name="Chimalli"
-	dynasty=1350001
-	culture=nahua
-	religion=mictlantec
-	2642.4.28={birth=yes}
-	2701.6.3={death=yes}
+1325014 = {
+	name = "Chimalli"
+	dynasty = 1350001
+	culture = nahua
+	religion = mictlantec
+	martial=6
+	diplomacy=5
+	stewardship=6
+	intrigue=5
+	learning=7
+	trait = mastermind_theologian
+	trait = mystic
+	trait = quick
+	trait = erudite
+	trait = diligent
+	trait = patient
+	trait = gregarious
+	2642.4.28 = { 
+	    birth = yes 
+	}
 }
 
 1325015={
