@@ -192,7 +192,7 @@
 1325014={
 	name="Chimalli"
 	dynasty=1350001
-	culture=purepecha
+	culture=nahua
 	religion=mictlantec
 	2642.4.28={birth=yes}
 	2701.6.3={death=yes}
@@ -210,7 +210,7 @@
 1325016={
 	name="Tobi Rusiguunda"
 	dynasty=1350002
-	culture=purepecha
+	culture=nahua
 	religion=mictlantec
 	2637.4.28={birth=yes}
 	2701.6.3={death=yes}
@@ -455,22 +455,29 @@
 }
 
 1325051={
-	name="Tigr"
-	dynasty=1386001
-	dna="nejejjmccpc"
-	culture=purepecha
-	religion=sol_invicta
-	martial=2
-	diplomacy=0
-	stewardship=3
-	intrigue=5
-	learning=6
-	trait="indulgent_wastrel"
-	trait=kind
-	trait=drunkard
-	2637.6.24={birth=yes}
-	2655.9.9={add_spouse=1325050}
-	2690.11.26={death=yes}
+	name = "Tigr"
+	dynasty = 1386001
+	dna = "nejejjmccpc"
+	culture = purepecha
+	religion = sol_invicta
+	martial = 6
+	diplomacy = 5
+	stewardship = 5
+	intrigue = 5
+	learning = 6
+	trait = skilled_tactician
+	trait = cruel
+	trait = impaler
+	trait = ambitious
+	trait = zealous
+	trait = patient
+	trait = honest
+	2637.6.24 = {
+	    birth = yes
+	}
+	2655.9.9 = {
+	    add_spouse = 1325050
+	}
 }
 
 1325052={

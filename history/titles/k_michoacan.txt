@@ -1,3 +1,4 @@
 2598.11.28 = {
-	active = no
+	holder = 1325051
+	law = succ_primogeniture
 }
