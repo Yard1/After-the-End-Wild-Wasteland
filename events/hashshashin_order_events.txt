@@ -108,6 +108,14 @@ narrative_event = {
 			set_character_flag = hassan_the_assassin
 			wealth = 500
 			add_artifact = old_world_shades
+			add_artifact = ate_firearm
+			add_artifact = atewww_pills
+			new_artifact = {
+				set_artifact_flag = atewww_pills_antibiotics
+				set_artifact_flag = atewww_pills_identified_as_antibiotics
+				set_name = ATEWWW_PILL_ANTIBIOTICS
+				set_description = ATEWWW_PILL_ANTIBIOTICS_desc
+			}
 			d_men_in_black = {
 				grant_title = PREV
 			}
