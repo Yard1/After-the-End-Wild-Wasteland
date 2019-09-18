@@ -1,0 +1,72 @@
+feudal_governments = {
+
+	militarist_government = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = { 
+			CASTLE 
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			constitutional_rep
+			feudal_government
+			bureaucratic_government
+			theocratic_feudal_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			feudal_government
+			bureaucratic_government
+			theocratic_feudal_government
+			tribal_government
+		}
+		vassal_call_to_arms = {
+			militarist_government
+		}
+		no_vassal_tax = {
+			militarist_government
+		}
+		potential = {
+			religion = jeffersonian
+			NOT = { is_government_potential = roman_imperial_government }
+			NOT = { is_government_potential = order_government }
+			NOT = { is_government_potential = military_governorate }
+			is_patrician = no
+		}
+		
+		color = { 71 92 193 }
+		
+		barons_need_dynasty = yes
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		free_retract_vassalage = yes
+
+		uses_prestige_for_law_change = yes
+		can_grant_kingdoms_and_empires_to_other_government = yes
+		can_grant_kingdoms_and_empires_to_other_government_group = yes
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		can_be_granted_kingdoms_and_empires_by_other_government_group = no
+
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		
+		capital_move_delay = 600
+		
+		court_size_modifier = 10
+
+		unit_modifier = {
+			levy_size = -0.15
+			retinuesize_perc = 0.25
+			key = "OFF_RELIGION"
+		}
+	}
+}
