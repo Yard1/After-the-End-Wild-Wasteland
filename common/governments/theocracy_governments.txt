@@ -21,6 +21,8 @@ theocracy_governments = {
 			merchant_republic_government
 			theocratic_feudal_government
 			colonial_government
+			constitutional_rep
+			mconstitutional_rep
 			#chinese_imperial_government
 		}
 		frame_suffix = "_theocracy"

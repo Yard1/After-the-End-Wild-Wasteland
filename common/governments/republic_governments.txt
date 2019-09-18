@@ -16,6 +16,8 @@ republic_governments = {
 		accepts_liege_governments = { # Accepts other republics
 			republic_government
 			colonial_government
+			constitutional_rep
+			mconstitutional_rep
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
@@ -113,6 +115,8 @@ republic_governments = {
 		accepts_liege_governments = { # Accepts other republics
 			merchant_republic_government
 			colonial_government
+			constitutional_rep
+			mconstitutional_rep
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
@@ -214,6 +218,7 @@ republic_governments = {
 		accepts_liege_governments = { # Accepts other republics
 			merchant_republic_government
 			republic_government
+			mconstitutional_rep
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government

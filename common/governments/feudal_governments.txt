@@ -11,6 +11,7 @@ feudal_governments = {
 			TRIBAL
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			constitutional_rep
 			bureaucratic_government
 			theocratic_feudal_government
 			#chinese_imperial_government
@@ -68,6 +69,7 @@ feudal_governments = {
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			feudal_government
+			constitutional_rep
 			theocratic_feudal_government
 			#chinese_imperial_government
 		}
@@ -134,6 +136,7 @@ feudal_governments = {
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			bureaucratic_government
+			constitutional_rep
 			theocracy_government
 			feudal_government
 			#chinese_imperial_government
@@ -193,6 +196,7 @@ feudal_governments = {
 		accepts_liege_governments = {
 			feudal_government
 			bureaucratic_government
+			constitutional_rep
 			theocracy_government
 			theocratic_feudal_government
 			#chinese_imperial_government

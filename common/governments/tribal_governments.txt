@@ -14,6 +14,8 @@ tribal_governments = {
 			theocracy_government
 			bureaucratic_government
 			theocratic_feudal_government
+			constitutional_rep
+			mconstitutional_rep
 			#chinese_imperial_government
 		}
 		accepts_liege_governments_culture_and_religion = { 	# Tribals have no opinion penalty towards their liege if of the same culture and religion
