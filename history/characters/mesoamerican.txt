@@ -869,7 +869,7 @@
 	trait=honest
 	2645.4.16 = {
 		birth = yes
-		culture = zapotec
+		culture = purepecha
 		effect={set_character_flag=diversity}
 	}
 	2661.4.16 = { add_spouse = 1325114 }
@@ -893,7 +893,7 @@
 	trait=wroth
 	2644.11.5 = {
 		birth = yes
-		culture = zapotec
+		culture = purepecha
 		effect={set_character_flag=diversity}
 	}
 	2661.4.16 = { add_spouse = 1325113 }
@@ -908,6 +908,6 @@
 	trait = strong
 	2662.5.18={
 		birth = yes
-		culture = zapotec
+		culture = purepecha
 	}
 }
