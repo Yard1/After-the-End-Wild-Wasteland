@@ -1,0 +1,5 @@
+2664.6.3 = {
+	holder = 1325022
+	law = cognatic_succession
+	law = succ_primogeniture
+}

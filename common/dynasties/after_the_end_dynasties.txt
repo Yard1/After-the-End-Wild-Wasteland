@@ -372,11 +372,11 @@
         template = 0
         layer = {
             texture = 0
-            texture_internal = 42
+            texture_internal = 16
             emblem = 0
             color = 0
-            color = 1
-            color = 8
+            color = 9
+            color = 9
         }
     }
 }
