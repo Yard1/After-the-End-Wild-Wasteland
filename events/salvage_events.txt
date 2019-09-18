@@ -679,6 +679,10 @@ narrative_event = {
 					narrative_event = { id = salvage.65 days = 15 random = 8 }
 					narrative_event = { id = salvage.94 days = 25 }
 				}
+				10 = {
+					narrative_event = { id = salvage.650 days = 15 random = 8 }
+					narrative_event = { id = salvage.94 days = 25 }
+				}
 			}
 		}
 		ai_chance = { factor = 50 }
@@ -1019,6 +1023,22 @@ narrative_event = {
 			80 = { narrative_event = { id = salvage.75 days = 15 random = 30 } }
 			20 = { narrative_event = { id = salvage.79 days = 15 random = 30 } }
 		} }
+	}
+}
+
+narrative_event = {
+	id = salvage.650
+	is_triggered_only = yes
+	title = EVTNAME_salvage_safe_medicine
+	desc = EVTDESC_salvage_safe_medicine
+	picture = GFX_evt_carriage
+	option = { 
+		name = OK
+		prestige = 50
+		add_artifact = atewww_pills
+		hidden_tooltip = { character_event = { id = ATE_WWW_MEDICINE.100 } }
+		add_artifact = atewww_pills
+		hidden_tooltip = { character_event = { id = ATE_WWW_MEDICINE.100 } }
 	}
 }
 

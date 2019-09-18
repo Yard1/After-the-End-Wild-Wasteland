@@ -272,6 +272,7 @@ character_event = {
 				liege = { has_artifact = ate_firearm }
 				liege = { has_artifact = ate_typewriter }
 				liege = { has_artifact = ate_calculator }
+				liege = { has_artifact = atewww_pills }
 				liege = { has_artifact = ate_watch }
 				liege = { has_artifact = ate_telescope }
 				liege = { has_artifact = ate_textbooks }
@@ -300,6 +301,7 @@ character_event = {
 				liege = { has_artifact = ate_firearm }
 				liege = { has_artifact = ate_typewriter }
 				liege = { has_artifact = ate_calculator }
+				liege = { has_artifact = atewww_pills }
 				liege = { has_artifact = ate_watch }
 				liege = { has_artifact = ate_telescope }
 				liege = { has_artifact = ate_textbooks }
@@ -318,6 +320,7 @@ character_event = {
 				liege = { NOT = { has_artifact = ate_firearm } }
 				liege = { NOT = { has_artifact = ate_typewriter } }
 				liege = { NOT = { has_artifact = ate_calculator } }
+				liege = { NOT = { has_artifact = atewww_pills } }
 				liege = { NOT = { has_artifact = ate_watch } }
 				liege = { NOT = { has_artifact = ate_telescope } }
 				liege = { NOT = { has_artifact = ate_textbooks } }
@@ -423,6 +426,14 @@ character_event = {
 		FROM = { wealth = 50 }
 	}
 	
+	option = {
+		name = EVTOPT_broker_repay_pills
+		trigger = { has_artifact = atewww_pills }
+		destroy_artifact = atewww_pills
+		remove_character_modifier = consumerist_loan
+		FROM = { wealth = 50 }
+	}
+
 	option = {
 		name = EVTOPT_broker_repay_watch
 		trigger = { has_artifact = ate_watch }
@@ -686,6 +697,11 @@ character_event = {
 		trigger = { liege = { has_artifact = ate_calculator } }
 		liege = { character_event = { id = merchant.32 } }
 	}
+
+		option = {
+		trigger = { liege = { has_artifact = atewww_pills } }
+		liege = { character_event = { id = merchant.320 } }
+	}
 	
 	option = {
 		trigger = { liege = { has_artifact = ate_watch } }
@@ -715,6 +731,7 @@ character_event = {
 			10 = { liege = { character_event = { id = merchant.40 } } }
 			10 = { liege = { character_event = { id = merchant.41 } } }
 			10 = { liege = { character_event = { id = merchant.42 } } }
+			10 = { liege = { character_event = { id = merchant.420 } } }
 			10 = { liege = { character_event = { id = merchant.43 } } }
 			10 = { liege = { character_event = { id = merchant.44 } } }
 			10 = { liege = { character_event = { id = merchant.45 } } }
@@ -841,6 +858,46 @@ narrative_event = {
 			factor = 20
 			modifier = { factor = 50 has_nickname = nick_the_shrewd }
 			modifier = { factor = 50 has_nickname = nick_the_calculator }
+		}
+	}
+}
+
+narrative_event = {
+	id = merchant.320
+	title = EVTNAME_broker_buy
+	desc = EVTDESC_broker_buy_pills
+	picture = GFX_evt_throne_room
+	is_triggered_only = yes
+	
+	trigger = { has_artifact = atewww_pills }
+	
+	option = {
+		name = EVTOPT_broker_buy_gold
+		trigger = {	NOT = { stewardship = 10 } }
+		destroy_artifact = atewww_pills
+		wealth = 100
+		FROM = { character_event = { id = merchant.1 } }
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = EVTOPT_broker_buy_stewardship
+		trigger = {	stewardship = 10 }
+		tooltip_info = stewardship
+		destroy_artifact = atewww_pills
+		wealth = 150
+		FROM = { character_event = { id = merchant.1 } }
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = EVTOPT_broker_buy_refuse
+		prestige = 5
+		add_character_modifier = { name = precious_heirloom duration = 1500 }
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 50 has_nickname = nick_the_healer }
+			modifier = { factor = 0.5 has_nickname = nick_the_doctor }
 		}
 	}
 }
@@ -1147,6 +1204,197 @@ narrative_event = {
 		FROM = { wealth = -50 }
 		wealth = -50
 		random = { chance = 80 add_artifact = ate_calculator }
+		random_list = {
+			20 = { add_trait = arbitrary }
+			20 = { add_trait = greedy }
+			20 = { add_trait = deceitful }
+		}
+		FROM = { character_event = { id = merchant.1 } }
+		set_character_flag = consumerist_enemy
+		custom_tooltip = { text = TXT_consumerist_become_enemy }
+		hidden_tooltip = { narrative_event = { id = merchant.60 days = 180 random = 360 } }
+	}
+}
+
+narrative_event = {
+	id = merchant.420
+	title = EVTNAME_broker_sell
+	desc = EVTDESC_broker_sell_pills
+	picture = GFX_evt_throne_room
+	is_triggered_only = yes
+		
+	option = {
+		name = EVTOPT_broker_sell_gold
+		trigger = {
+			NOT = { stewardship = 10 }
+			wealth = 350
+		}
+		wealth = -350
+		add_artifact = atewww_pills
+		hidden_tooltip = {	
+			new_artifact = {
+				random_list = {
+					20 = {	
+						set_artifact_flag = atewww_pills_antibiotics
+						set_artifact_flag = atewww_pills_identified_as_antibiotics 
+						set_name = ATEWWW_PILL_ANTIBIOTICS
+						set_description = ATEWWW_PILL_ANTIBIOTICS_desc
+					}
+					8 = {	
+						set_artifact_flag = atewww_pills_antivirals
+						set_artifact_flag = atewww_pills_identified_as_antivirals 
+						set_name = ATEWWW_PILL_ANTIVIRALS
+						set_description = ATEWWW_PILL_ANTIVIRALS_desc
+					}
+					10 = {	
+						set_artifact_flag = atewww_pills_antidepressants 
+						set_artifact_flag = atewww_pills_identified_as_antidepressants 
+						set_name = ATEWWW_PILL_ANTIDEPRESSANTS
+						set_description = ATEWWW_PILL_ANTIDEPRESSANTS_desc
+					}
+					20 = {	
+						set_artifact_flag = atewww_pills_vitamins 
+						set_artifact_flag = atewww_pills_identified_as_vitamins 
+						set_name = ATEWWW_PILL_VITAMINS
+						set_description = ATEWWW_PILL_VITAMINS_desc
+					}
+					20 = {
+						set_artifact_flag = atewww_pills_painkillers 	
+						set_artifact_flag = atewww_pills_identified_as_painkillers 
+						set_name = ATEWWW_PILL_PAINKILLERS
+						set_description = ATEWWW_PILL_PAINKILLERS_desc
+					}
+					2 = {	
+						set_artifact_flag = atewww_pills_viagra
+						set_artifact_flag = atewww_pills_identified_as_viagra
+						set_name = ATEWWW_PILL_VIAGRA
+						set_description = ATEWWW_PILL_VIAGRA_desc
+					}
+				}
+			}
+		}
+		FROM = { character_event = { id = merchant.1 } }
+		FROM = { character_event = { id = merchant.20 days = 5 } }
+	}
+	
+	option = {
+		name = EVTOPT_broker_sell_stewardship
+		trigger = {
+			stewardship = 10
+			wealth = 250
+		}
+		tooltip_info = stewardship
+		wealth = -250
+		add_artifact = atewww_pills
+		hidden_tooltip = {	
+			new_artifact = {
+				random_list = {
+					20 = {	
+						set_artifact_flag = atewww_pills_antibiotics
+						set_artifact_flag = atewww_pills_identified_as_antibiotics 
+						set_name = ATEWWW_PILL_ANTIBIOTICS
+						set_description = ATEWWW_PILL_ANTIBIOTICS_desc
+					}
+					8 = {	
+						set_artifact_flag = atewww_pills_antivirals
+						set_artifact_flag = atewww_pills_identified_as_antivirals 
+						set_name = ATEWWW_PILL_ANTIVIRALS
+						set_description = ATEWWW_PILL_ANTIVIRALS_desc
+					}
+					10 = {	
+						set_artifact_flag = atewww_pills_antidepressants 
+						set_artifact_flag = atewww_pills_identified_as_antidepressants 
+						set_name = ATEWWW_PILL_ANTIDEPRESSANTS
+						set_description = ATEWWW_PILL_ANTIDEPRESSANTS_desc
+					}
+					20 = {	
+						set_artifact_flag = atewww_pills_vitamins 
+						set_artifact_flag = atewww_pills_identified_as_vitamins 
+						set_name = ATEWWW_PILL_VITAMINS
+						set_description = ATEWWW_PILL_VITAMINS_desc
+					}
+					20 = {
+						set_artifact_flag = atewww_pills_painkillers 	
+						set_artifact_flag = atewww_pills_identified_as_painkillers 
+						set_name = ATEWWW_PILL_PAINKILLERS
+						set_description = ATEWWW_PILL_PAINKILLERS_desc
+					}
+					2 = {	
+						set_artifact_flag = atewww_pills_viagra
+						set_artifact_flag = atewww_pills_identified_as_viagra
+						set_name = ATEWWW_PILL_VIAGRA
+						set_description = ATEWWW_PILL_VIAGRA_desc
+					}
+				}
+			}
+		}
+		FROM = { character_event = { id = merchant.1 } }
+		FROM = { character_event = { id = merchant.20 days = 5 } }
+	}
+	
+	option = {
+		name = EVTOPT_broker_sell_refuse
+	}
+	
+	option = {
+		name = EVTOPT_broker_sell_intrigue
+		trigger = {
+			wealth = 50
+			attribute_diff = {
+				character = FROM
+				attribute = intrigue
+				value = 0
+			}
+		}
+		tooltip_info = intrigue
+		FROM = { wealth = -25 }
+		wealth = -25
+		random = { 
+			chance = 80 
+			add_artifact = atewww_pills
+			hidden_tooltip = {	
+				new_artifact = {
+					random_list = {
+						20 = {	
+							set_artifact_flag = atewww_pills_antibiotics
+							set_artifact_flag = atewww_pills_identified_as_antibiotics 
+							set_name = ATEWWW_PILL_ANTIBIOTICS
+							set_description = ATEWWW_PILL_ANTIBIOTICS_desc
+						}
+						8 = {	
+							set_artifact_flag = atewww_pills_antivirals
+							set_artifact_flag = atewww_pills_identified_as_antivirals 
+							set_name = ATEWWW_PILL_ANTIVIRALS
+							set_description = ATEWWW_PILL_ANTIVIRALS_desc
+						}
+						10 = {	
+							set_artifact_flag = atewww_pills_antidepressants 
+							set_artifact_flag = atewww_pills_identified_as_antidepressants 
+							set_name = ATEWWW_PILL_ANTIDEPRESSANTS
+							set_description = ATEWWW_PILL_ANTIDEPRESSANTS_desc
+						}
+						20 = {	
+							set_artifact_flag = atewww_pills_vitamins 
+							set_artifact_flag = atewww_pills_identified_as_vitamins 
+							set_name = ATEWWW_PILL_VITAMINS
+							set_description = ATEWWW_PILL_VITAMINS_desc
+						}
+						20 = {
+							set_artifact_flag = atewww_pills_painkillers 	
+							set_artifact_flag = atewww_pills_identified_as_painkillers 
+							set_name = ATEWWW_PILL_PAINKILLERS
+							set_description = ATEWWW_PILL_PAINKILLERS_desc
+						}
+						2 = {	
+							set_artifact_flag = atewww_pills_viagra
+							set_artifact_flag = atewww_pills_identified_as_viagra
+							set_name = ATEWWW_PILL_VIAGRA
+							set_description = ATEWWW_PILL_VIAGRA_desc
+						}
+					}
+				}
+			}
+		}
 		random_list = {
 			20 = { add_trait = arbitrary }
 			20 = { add_trait = greedy }

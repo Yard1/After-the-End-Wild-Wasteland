@@ -161,7 +161,7 @@ character_event = {
 # atewww_pills_antivirals - cures has_measles, has_small_pox, has_aztec_disease, flu, rabies, 25% chance to treat ill
 # atewww_pills_vitamins - health boost, cures scurvy
 # atewww_pills_viagra - large fertility boost for a short time ( ?° ?? ?°)
-# atewww_pills_antidepressants - can cure depressed, lunatic, possessed
+# atewww_pills_antidepressants - cures stressed, depressed, lunatic, possessed
 # atewww_pills_painkillers - large health boost for duration of disease
 # atewww_pills_sugar - does nothing, medicine has expired/it's something useless, artifact gets destroyed
 
@@ -1155,6 +1155,14 @@ character_event = {
 			character_event = { id = ATE_WWW_MEDICINE.5 days = 1 random = 5 }
 		}
 	}
+
+	#Maybe it's not the best idea... Exit.
+	option = {
+		name = EVTOPTD_ATE_WWW_MEDICINE_2
+		ai_chance = {
+			factor = 0
+		}
+	}
 }
 
 # identify pills
@@ -1515,6 +1523,7 @@ character_event = {
 				has_character_modifier = taken_viagra
 				has_character_modifier = taken_viagra_female
 				has_character_modifier = taken_vitamins
+				has_character_flag = removed_stressed
 				has_character_flag = removed_depressed
 				has_character_flag = removed_lunatic
 				has_character_flag = removed_possessed
@@ -1534,7 +1543,29 @@ character_event = {
 	}
 
 	option = {
-		name = EVTOPT_ATE_WWW_MEDICINE_5
+		name = EVTOPTA_ATE_WWW_MEDICINE_5
+		trigger = {
+			NOT = { has_character_flag = side_effects }
+			OR = {
+				AND = {
+					has_character_flag = was_sick
+					character_disease_trigger = no
+					NOT = { has_trait = ill }
+				}
+				has_character_modifier = taken_painkillers
+				has_character_modifier = taken_viagra
+				has_character_modifier = taken_viagra_female
+				has_character_modifier = taken_vitamins
+				has_character_flag = removed_stressed
+				has_character_flag = removed_depressed
+				has_character_flag = removed_lunatic
+				has_character_flag = removed_possessed
+			}
+		}
+		if = {
+			limit = { has_character_flag = removed_stressed }
+			remove_trait = stressed
+		}
 		if = {
 			limit = { has_character_flag = removed_depressed }
 			remove_trait = depressed
@@ -1549,10 +1580,120 @@ character_event = {
 		}
 	}
 
+	option = {
+		name = EVTOPTC_ATE_WWW_MEDICINE_5
+		trigger = {
+			OR = {
+				AND = {
+					has_character_flag = was_sick
+					character_disease_trigger = no
+					NOT = { has_trait = ill }
+				}
+				has_character_modifier = taken_painkillers
+				has_character_modifier = taken_viagra
+				has_character_modifier = taken_viagra_female
+				has_character_modifier = taken_vitamins
+				has_character_flag = removed_stressed
+				has_character_flag = removed_depressed
+				has_character_flag = removed_lunatic
+				has_character_flag = removed_possessed
+			}
+			has_character_flag = side_effects
+		}
+		if = {
+			limit = { has_character_flag = removed_stressed }
+			remove_trait = stressed
+		}
+		if = {
+			limit = { has_character_flag = removed_depressed }
+			remove_trait = depressed
+		}
+		if = {
+			limit = { has_character_flag = removed_lunatic }
+			remove_trait = lunatic
+		}
+		if = {
+			limit = { has_character_flag = removed_possessed }
+			remove_trait = possessed
+		}
+		add_character_modifier = {
+			name = pill_side_effects
+			duration = 60
+			stacking = yes
+		}
+	}
+
+	option = {
+		name = EVTOPTB_ATE_WWW_MEDICINE_5
+		trigger = {
+			NOR = {
+				AND = {
+					has_character_flag = was_sick
+					character_disease_trigger = no
+					NOT = { has_trait = ill }
+				}
+				has_character_modifier = taken_painkillers
+				has_character_modifier = taken_viagra
+				has_character_modifier = taken_viagra_female
+				has_character_modifier = taken_vitamins
+				has_character_flag = removed_stressed
+				has_character_flag = removed_depressed
+				has_character_flag = removed_lunatic
+				has_character_flag = removed_possessed
+			}
+			has_character_flag = side_effects
+		}
+		if = {
+			limit = { has_character_flag = removed_stressed }
+			remove_trait = stressed
+		}
+		if = {
+			limit = { has_character_flag = removed_depressed }
+			remove_trait = depressed
+		}
+		if = {
+			limit = { has_character_flag = removed_lunatic }
+			remove_trait = lunatic
+		}
+		if = {
+			limit = { has_character_flag = removed_possessed }
+			remove_trait = possessed
+		}
+		add_character_modifier = {
+			name = pill_side_effects
+			duration = 60
+			stacking = yes
+		}
+	}
+
+	option = {
+		name = EVTOPTD_ATE_WWW_MEDICINE_5
+		trigger = {
+			NOT = { has_character_flag = side_effects }
+			NOR = {
+				AND = {
+					has_character_flag = was_sick
+					character_disease_trigger = no
+					NOT = { has_trait = ill }
+				}
+				has_character_modifier = taken_painkillers
+				has_character_modifier = taken_viagra
+				has_character_modifier = taken_viagra_female
+				has_character_modifier = taken_vitamins
+				has_character_flag = removed_stressed
+				has_character_flag = removed_depressed
+				has_character_flag = removed_lunatic
+				has_character_flag = removed_possessed
+			}
+		}
+	}
+
 	after = {
+		clr_character_flag = removed_stressed
 		clr_character_flag = removed_depressed
 		clr_character_flag = removed_lunatic
 		clr_character_flag = removed_possessed
 		clr_character_flag = was_sick
+		clr_character_flag = side_effects
 	}
 }

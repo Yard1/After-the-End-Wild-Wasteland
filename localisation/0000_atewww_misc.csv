@@ -37,7 +37,7 @@ atewww_pills_desc;A small container of unidentified pre-Calamity medicine. A com
 ATEWWW_PILL_ANTIBIOTICS;Old World Medicine (Antibiotics);;;;;;;;;;;;;x
 ATEWWW_PILL_ANTIVIRALS;Old World Medicine (Antivirals);;;;;;;;;;;;;x
 ATEWWW_PILL_VITAMINS;Old World Medicine (Supplements);;;;;;;;;;;;;x
-ATEWWW_PILL_VIAGRA;Old World Medicine (Sexual);;;;;;;;;;;;;x
+ATEWWW_PILL_VIAGRA;Old World Medicine (Aphrodisiac);;;;;;;;;;;;;x
 ATEWWW_PILL_ANTIDEPRESSANTS;Old World Medicine (Psychoactive);;;;;;;;;;;;;x
 ATEWWW_PILL_PAINKILLERS;Old World Medicine (Painkillers);;;;;;;;;;;;;x
 ATEWWW_PILL_UNKNOWN;Old World Medicine (Unknown);;;;;;;;;;;;;x
@@ -50,3 +50,66 @@ ATEWWW_PILL_VIAGRA_desc;A small container of pre-Calamity medicine. Those pills 
 ATEWWW_PILL_ANTIDEPRESSANTS_desc;A small container of pre-Calamity medicine. Apparently the contents heal the mind, instead of the body.;;;;;;;;;;;;;x
 ATEWWW_PILL_PAINKILLERS_desc;A small container of pre-Calamity medicine. This kind was said to ease any kind of pain.;;;;;;;;;;;;;x
 ATEWWW_PILL_UNKNOWN_desc;A small container of unknown pre-Calamity medicine. It may do anything, or not work at all.;;;;;;;;;;;;;x
+
+EVTOPT_broker_repay_pills;I'll repay him with my Old World Medicine.;;;;;;;;;;;;x
+EVTDESC_broker_buy_pills;[From.GetTitledFirstName] comes to you as you hold court.\n\n"My liege, I see that you are in possession of a bottle of Old World medicine. I will arrange for you to be paid a significant sum of gold for it, with which you could fund an army. Once the sale is complete, I will leave your court.";;;;;;;;;;;;x
+EVTDESC_broker_sell_pills;[From.GetTitledFirstName] comes to you as you hold court.\n\n"My liege, I have recently become aware of a small amount of wondrous, ancient medicine. It is said to cure even the worst diseases and strengthen the body like nothing that modern apothecaries can produce. Once the sale is complete, I will leave your court.";;;;;;;;;;;;x
+
+EVTNAME_salvage_safe_medicine;Pills?;;;;;;;;;;;;x
+EVTDESC_salvage_safe_medicine;The safe door finally opens, and you can see the contents: a few translucent bottles of small, oval and elongated pills. The material the containers are made of is unlike anything modern craftsmen can produce - light, yet resistant. The labels have been worn away by time, but you realize that those are the medicaments of old. "A physician should examine them", you think, as you pocket the bottles.;;;;;;;;;;;;x
+
+identify_medicine;Identify Old World Medicine;;;;;;;;;;;;;x
+identify_medicine_desc;I am in possession of at least one container of unidentified ancient medicaments. It would be prudent to try and determine how they work - if at all.;;;;;;;;;;;;;x
+take_medicine;Take Old World Medicine;;;;;;;;;;;;;x
+take_medicine_desc;I am in possession of at least one container of ancient medicaments. They should aid in recovering from my sickness.;;;;;;;;;;;;;x
+take_vitamins;Take Old World Supplements;;;;;;;;;;;;;x
+take_vitamins_desc;I am in possession of at least one container of ancient "supplements". They are said to help strengthen the body, even if its already healthy. I could see if the stories are true on myself.;;;;;;;;;;;;;x
+take_antidepressants;Take Old World Psychoactive Medicine;;;;;;;;;;;;;x
+take_antidepressants_desc;I am in possession of at least one container of ancient mind-medicine. The scholars agree that those are supposed to heal the mind and soul from lunacy and depression. I could see if the stories are true on myself.;;;;;;;;;;;;;x
+take_viagra;Take Old World Aphrodisiacs;;;;;;;;;;;;;x
+take_viagra_desc;I am in possession of at least one container of ancient aphrodisiac. Apparently it allowed the [Root.GetMenWomen] of old to reach the heights of their virility. I could see if the stories are true on myself.;;;;;;;;;;;;;x
+
+EVTDESC_ATE_WWW_MEDICINE_1;Identify medicine menu desc;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_MEDICINE_1;I can try my hand at it myself.;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_MEDICINE_1;I can only trust myself!;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_MEDICINE_1;My court physician can help.;;;;;;;;;;;;;x
+EVTOPTD_ATE_WWW_MEDICINE_1;I do not have time for this now.;;;;;;;;;;;;;x
+
+EVTDESC_ATE_WWW_MEDICINE_2;Take medicine menu desc;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_MEDICINE_2;Those are supposed to help with my current illness.;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_MEDICINE_2;Those are said to alleviate the pain.;;;;;;;;;;;;;x
+EVTOPTC_ATE_WWW_MEDICINE_2;Any of those could work!;;;;;;;;;;;;;x
+EVTOPTD_ATE_WWW_MEDICINE_2;Maybe that is not such a good idea...;;;;;;;;;;;;;x
+
+# [Root.GetYouOrPhysician] - "you" or "your court physician"
+# [Root.GetYouOrPhysicianS] - "" or "s", to be used with verbs - determine[Root.GetYouOrPhysicianS]
+# [Root.GetYouOrPhysicianHaveHas] - "have" or "has"
+EVTDESC_ATE_WWW_MEDICINE_3_CANT_IDENTIFY;Can't identify;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_ANTIBIOTICS;Identified as antibiotics;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_ANTIVIRALS;Identified as antivirals;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_VITAMINS;Identified as supplements;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_VIAGRA;Identified as a virility pill;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_ANTIDEPRESSANTS;Identified as psychoactive drugs;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_PAINKILLERS;Identified as painkillers;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_SUGAR;Identified as not working/expired/whatever;;;;;;;;;;;;;x
+
+EVTOPTA_ATE_WWW_MEDICINE_3;There are still more to study.;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_MEDICINE_3;That is enough.;;;;;;;;;;;;;x
+
+EVTDESC_ATE_WWW_MEDICINE_5_SUCCESS;Success, you are cured from your disease;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_PAINKILLERS;Painkillers kill pain and you feel better;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_VIAGRA;viagra works;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_VITAMINS;You took supplements and you feel better;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_ANTIDEPRESSANT;You took psychoactives and you feel your mind clearing;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_FUMBLE;You do not feel any different;;;;;;;;;;;;;x
+
+EVTOPTA_ATE_WWW_MEDICINE_5;And to think such miracles were once commonplace.;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_MEDICINE_5;I feel better, but my stomach hurts...;;;;;;;;;;;;;x
+EVTOPTC_ATE_WWW_MEDICINE_5;Ouch, my stomach hurts...;;;;;;;;;;;;;x
+EVTOPTD_ATE_WWW_MEDICINE_5;What a waste of time.;;;;;;;;;;;;;x
+
+taken_vitamins;Taken Old World Supplements;;;;;;;;;;;;;x
+taken_painkillers;Taken Old World Painkillers;;;;;;;;;;;;;x
+pill_side_effects;Side Effects from Old World Medicine;;;;;;;;;;;;;x
+taken_viagra;Taken Old World Aphrodisiacs;;;;;;;;;;;;;x
+taken_viagra_female;Taken Old World Aphrodisiacs;;;;;;;;;;;;;x

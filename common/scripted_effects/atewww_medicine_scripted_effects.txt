@@ -29,12 +29,12 @@ take_medicine_effect = {
 						}
 					}
 				}
+				modifier = {
+					factor = 3
+					has_artifact_flag = atewww_pills_sugar
+				}
 				ROOT = {
-					add_character_modifier = {
-						name = pill_side_effects
-						duration = 90
-						stacking = yes
-					}
+					set_character_flag = side_effects
 				}
 			}
 			85 = {}
@@ -134,10 +134,19 @@ take_medicine_effect = {
 		}
 	}
 	else_if = {
-		limit = { has_artifact_flag = atewww_pills_antidepressants }
+		limit = {
+			has_artifact_flag = atewww_pills_antidepressants
+			NOT = { has_character_flag = side_effects }
+		}
 		#this is the world drug companies want you to believe in
 		ROOT = {
 			show_scope_change = no
+			if = {
+				limit = {
+					trait = stressed
+				}
+				set_character_flag = removed_stressed
+			}
 			if = {
 				limit = {
 					trait = depressed
@@ -155,6 +164,19 @@ take_medicine_effect = {
 					trait = possessed
 				}
 				set_character_flag = removed_possessed
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_artifact_flag = atewww_pills_antidepressants
+			has_character_flag = side_effects
+		}
+		#whoops, zat was not medicine!
+		hidden_tooltip = {
+			ROOT = {
+				clr_character_flag = side_effects
+				character_event = { id = MNM.6801 days = 1 }
 			}
 		}
 	}

@@ -91,4 +91,24 @@ spriteTypes = {
 		name = "GFX_vassalize_golden_archers"
 		texturefile = "gfx/interface/decision_icon_vassalize_holy_order.dds"
 	}
+	spriteType = {
+		name = "GFX_identify_medicine"
+		texturefile = "gfx\\interface\\decision_icon_seek_treatment.dds"
+	}
+	spriteType = {
+		name = "GFX_take_medicine"
+		texturefile = "gfx\\interface\\decision_icon_seek_treatment.dds"
+	}
+	spriteType = {
+		name = "GFX_take_vitamins"
+		texturefile = "gfx\\interface\\decision_icon_seek_treatment.dds"
+	}
+	spriteType = {
+		name = "GFX_take_antidepressants"
+		texturefile = "gfx\\interface\\decision_icon_seek_treatment.dds"
+	}
+	spriteType = {
+		name = "GFX_take_viagra"
+		texturefile = "gfx\\interface\\decision_icon_seek_treatment.dds"
+	}
 }

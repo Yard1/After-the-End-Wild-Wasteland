@@ -42,6 +42,15 @@ decisions = {
 		
 		ai_will_do = {
 			factor = 2
+			modifier = {
+				factor = 0
+				religion = gaian
+				NOT = { trait = cynical }
+			}
+			modifier = {
+				factor = 0
+				trait = mystic
+			}
 		}
 	}
 	take_medicine = {
@@ -123,6 +132,10 @@ decisions = {
 				poorly_treated_for_disease_trigger = yes
 			}
 			modifier = {
+				factor = 0.25
+				trait = food_poisoning
+			}
+			modifier = {
 				factor = 2
 				trait = brave
 				any_artifact = {
@@ -168,6 +181,15 @@ decisions = {
 						has_artifact_flag = atewww_pills_cannot_be_identified
 					}
 				}
+			}
+			modifier = {
+				factor = 0
+				religion = gaian
+				NOT = { trait = cynical }
+			}
+			modifier = {
+				factor = 0
+				trait = mystic
 			}
 		}
 	}
@@ -225,6 +247,15 @@ decisions = {
 				trait = scurvy
 				NOT = { health = 3.5 }
 			}
+			modifier = {
+				factor = 0
+				religion = gaian
+				NOT = { trait = cynical }
+			}
+			modifier = {
+				factor = 0
+				trait = mystic
+			}
 		}
 	}
 	take_antidepressants = {
@@ -266,8 +297,22 @@ decisions = {
 		ai_will_do = {
 			factor = 0
 			additive_modifier = {
+				value = 0.5
+				trait = stressed
+				NOT = { health = 3.5 }
+			}
+			additive_modifier = {
 				value = 2
 				trait = depressed
+			}
+			modifier = {
+				factor = 0
+				religion = gaian
+				NOT = { trait = cynical }
+			}
+			modifier = {
+				factor = 0
+				trait = mystic
 			}
 			#other traits wouldn't really want to get cured...
 		}
@@ -329,6 +374,15 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				is_female = yes
+			}
+			modifier = {
+				factor = 0
+				religion = gaian
+				NOT = { trait = cynical }
+			}
+			modifier = {
+				factor = 0
+				trait = mystic
 			}
 		}
 	}
