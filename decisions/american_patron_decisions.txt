@@ -6,10 +6,12 @@ decisions = {
 		ai = no
 		potential = {
 			is_playable = yes
-			NOT = { has_trait = washington }
-			NOT = { has_trait = jefferson }
-			NOT = { has_trait = lincoln }
-			NOT = { has_trait = roosevelt }
+			NOR = { 
+				trait = washington
+				trait = jefferson
+				trait = lincoln
+				trait = roosevelt
+			}
 			OR = {
 				religion = americanist
 				religion = hamiltonian

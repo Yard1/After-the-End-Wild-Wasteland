@@ -10990,7 +10990,7 @@ character_event = {
 							religion = jeffersonian
 						}
 					}
-					character_event = { id = ATE_WWW_RELIGION.16 }
+					character_event = { id = ATE_WWW_RELIGION.16 days = 1 }
 				}
 
 				if = {

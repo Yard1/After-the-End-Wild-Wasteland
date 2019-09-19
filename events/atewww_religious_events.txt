@@ -731,10 +731,10 @@ character_event = {
 	id = ATE_WWW_RELIGION.16
 	desc = "Patrons for AI"
 	hide_window = yes
-	religion_group = oldwolrd
+	is_triggered_only = yes
+	religion_group = oldworld
 	ai = yes
 	min_age = 16
-	is_triggered_only = yes
 
 	trigger = {
 		OR = {
@@ -742,11 +742,13 @@ character_event = {
 			religion = hamiltonian
 			religion = jeffersonian
 		}
-		NOT = { has_trait = washington }
-		NOT = { has_trait = jefferson }
-		NOT = { has_trait = lincoln }
-		NOT = { has_trait = roosevelt }
-		has_patron_general_trigger = no
+		NOR = { 
+			trait = washington
+			trait = jefferson
+			trait = lincoln
+			trait = roosevelt
+			has_patron_general_trigger = yes
+		}
 	}
 
 	immediate = {
