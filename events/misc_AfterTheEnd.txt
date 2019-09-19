@@ -10988,9 +10988,10 @@ character_event = {
 							religion = americanist
 							religion = hamiltonian
 							religion = jeffersonian
+							religion = libertarian
 						}
 					}
-					character_event = { id = ATE_WWW_RELIGION.16 days = 1 }
+					character_event = { id = ATE_WWW_RELIGION.16 }
 				}
 
 				if = {

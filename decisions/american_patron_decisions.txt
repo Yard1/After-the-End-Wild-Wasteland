@@ -15,6 +15,7 @@ decisions = {
 			OR = {
 				religion = americanist
 				religion = hamiltonian
+				religion = libertarian
 			}
 			is_adult = yes
 		}

@@ -740,6 +740,7 @@ character_event = {
 		OR = {
 			religion = americanist
 			religion = hamiltonian
+			religion = libertarian
 			religion = jeffersonian
 		}
 		NOR = { 
