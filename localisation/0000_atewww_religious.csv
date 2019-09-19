@@ -216,7 +216,8 @@ militarist_succession_call_in_favor_targeted_tooltip;§Y[Root.GetTitledFirstName]
 become_general_of_army;Restore the Supreme Allied Command;;;;;;;;;;;;;x
 become_general_of_army_desc;With some of the most important holy sites of the Militarist faith now under my direct control the time has come to bring order back to America by restoring the Supreme Allied Command;;;;;;;;;;;;;x
 select_patron_general;Emulate A General;;;;;;;;;;;x
-select_patron_general_desc;As a practitioner of Militarist faith I am able to choose one of ancient America's many ancient Generals to emulate. My choice shall be influenced by my existing personality.;;;;;;;;;;;;;x
+select_patron_general_desc;As an adult practitioner of the Militarist faithn I am able to choose one of ancient America's many ancient Generals to emulate.;;;;;;;;;;;;;x
+tooltip_choose_patron_general;Choose your patron General;;;;;;;;;;;;;x
 
 EVTNAME_general_of_army;The Supreme Allied Commander;;;;;;;;;;;;;x
 EVTDESC_general_of_army;Since the humiliating defeat and death of President Kelleher at the hands of the Deitsch the Militarist faithful have shunned the Post-Event Presidency, which in turn, earned them the ire of the Americanist faith. However, times have changed and now it is the "true" Americanists that find themselves outnumbered and outgunned, as from humble beginnings [Root.GetFullName] has not only managed to extend the reach of the Militarist faith but has also united a vast majority of the faithful under [Root.GetHerselfHimself] banner. Sensing an opportunity, [Root.GetFullName] has proclaimed [Root.GetHerselfHimself] the "Supreme Allied Commander" and has laid claim to all of America, from sea to shining sea...;;;;;;;;;;;;x
@@ -225,7 +226,7 @@ EVTOPTB_general_of_army;Damned heathens!;;;;;;;;;;;;;x
 EVTOPTC_general_of_army;Interesting...;;;;;;;;;;;;;x
 EVTOPTD_general_of_army;Here comes the Commander!;;;;;;;;;;;;;x
 
-EVTDESC_ATE_WWW_RELIGION_1;The time has come for me to find an Ancient American General to emulate, now which one of them am I most akin to?;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_RELIGION_1;The time has come for me to find an Ancient American General to emulate - now, which one of them am I most akin to?;;;;;;;;;;;;;x
 EVOTPA_ATE_WWW_RELIGION_1;MacArthur, The Generalissimo;;;;;;;;;;;;;x
 EVOTPB_ATE_WWW_RELIGION_1;Sherman, The Scourge Of The Founders;;;;;;;;;;;;;x
 EVOTPC_ATE_WWW_RELIGION_1;Patton, The Bloody;;;;;;;;;;;;;x
@@ -270,25 +271,25 @@ GENERAL_OF_ARMY_FOA;Sir;;;;;;;;;;;;;x
 service_cross;Service Cross;;;;;;;;;;;;;x
 service_cross_desc;This character has fought to retake holy American land.;;;;;;;;;;;;;
 
-devote_of_macarthur;Devotee Of MacArthur;;;;;;;;;;;;;x
-devote_of_macarthur_desc;This character has chosen to become a devotee of General Douglas MacArthur - The Generalissimo.;;;;;;;;;;;;;x
-devote_of_sherman;Devotee Of Sherman;;;;;;;;;;;;;x
-devote_of_sherman_desc;This character has chosen to become a devotee of General William T. Sherman - The Scourge Of The Founders.;;;;;;;;;;;;;x
-devote_of_patton;Devotee Of Patton;;;;;;;;;;;;;x
-devote_of_patton_desc;This character has chosen to become a devotee of General George Patton - The Bloody.;;;;;;;;;;;;;x
-devote_of_custer;Devotee Of Custer;;;;;;;;;;;;;x
-devote_of_custer_desc;This character has chosen to become a devotee of General George A. Custer - The Slayer Of Redskins.;;;;;;;;;;;;;x
-devote_of_lee;Devotee Of Lee;;;;;;;;;;;;;x
-devote_of_lee_desc;This character has chosen to become a devotee of General Robert E. Lee - The Redeemed.;;;;;;;;;;;;;x
-devotee_of_butler;Devotee Of Butler;;;;;;;;;;;;;x
-devotee_of_butler_desc;This character has chosen to become a devotee of General Smedley Butler - The Marine.;;;;;;;;;;;;;x
+militarist_macarthur;Devotee Of MacArthur;;;;;;;;;;;;;x
+militarist_macarthur_desc;This character has chosen to become a devotee of General Douglas MacArthur - The Generalissimo.;;;;;;;;;;;;;x
+militarist_sherman;Devotee Of Sherman;;;;;;;;;;;;;x
+militarist_sherman_desc;This character has chosen to become a devotee of General William T. Sherman - The Scourge Of The Founders.;;;;;;;;;;;;;x
+militarist_patton;Devotee Of Patton;;;;;;;;;;;;;x
+militarist_patton_desc;This character has chosen to become a devotee of General George Patton - The Bloody.;;;;;;;;;;;;;x
+militarist_custer;Devotee Of Custer;;;;;;;;;;;;;x
+militarist_custer_desc;This character has chosen to become a devotee of General George A. Custer - The Slayer Of Redskins.;;;;;;;;;;;;;x
+militarist_lee;Devotee Of Lee;;;;;;;;;;;;;x
+militarist_lee_desc;This character has chosen to become a devotee of General Robert E. Lee - The Redeemed.;;;;;;;;;;;;;x
+militarist_butler;Devotee Of Butler;;;;;;;;;;;;;x
+militarist_butler_desc;This character has chosen to become a devotee of General Smedley Butler - The Marine.;;;;;;;;;;;;;x
 
-TXT_macarthur;You shall devote yourself to emulating General §YMacArthur§!. This Decision cannot be reversed.;;;;;;;;;;;;;x
-TXT_sherman;You shall devote yourself to emulating General §YSherman§!. This Decision cannot be reversed.;;;;;;;;;;;;;x
-TXT_patton;You shall devote yourself to emulating General §YPatton§!. This Decision cannot be reversed.;;;;;;;;;;;;;x
-TXT_custer;You shall devote yourself to emulating General §YCuster§!. This Decision cannot be reversed.;;;;;;;;;;;;;x
-TXT_lee;You shall devote yourself to emulating General §YLee§!. This Decision cannot be reversed.;;;;;;;;;;;;;x
-TXT_butler;You shall devote yourself to emulating General §YButler§!. This Decision cannot be reversed.;;;;;;;;;;;;;x
+TXT_macarthur;You choose General §YMacArthur§!, the Generalissimo;;;;;;;;;;;;;x
+TXT_sherman;You choose General §YSherman§!, the Scourge Of The Founders;;;;;;;;;;;;;x
+TXT_patton;You choose General §YPatton§!, the Bloody;;;;;;;;;;;;;x
+TXT_custer;You choose General §YCuster§!, the Slayer Of Redskins;;;;;;;;;;;;;x
+TXT_lee;You choose General §YLee§!, the Redeemed;;;;;;;;;;;;;x
+TXT_butler;You choose General §YButler§!, the Marine;;;;;;;;;;;;;x
 
 baron_hamiltonian;Sergeant;;;;;;;;;;;;;x
 baron_female_hamiltonian;Sergeant;;;;;;;;;;;;;x

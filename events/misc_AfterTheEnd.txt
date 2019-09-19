@@ -11093,6 +11093,9 @@ character_event = {
 			set_flag = flag_dedicated_to_washington
 			add_building = tp_shrine_washington
 		}
+
+		c_2000060 = { add_rival=2400053 }
+		c_2400053 = { add_rival=2000060 }
 	}
 
 	after = {

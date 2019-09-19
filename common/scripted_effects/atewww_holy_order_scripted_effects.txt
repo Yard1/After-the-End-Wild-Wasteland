@@ -41,12 +41,12 @@ give_ROOT_random_female_libertarian_name = {
 }
 
 remove_patron_general_trigger = {
-	remove_character_modifier = devote_of_macarthur
-	remove_character_modifier = devote_of_sherman
-	remove_character_modifier = devote_of_patton
-	remove_character_modifier = devote_of_custer
-	remove_character_modifier = devote_of_lee
-	remove_character_modifier = devotee_of_butler
+	remove_trait = militarist_macarthur
+	remove_trait = militarist_sherman
+	remove_trait = militarist_patton
+	remove_trait = militarist_custer
+	remove_trait = militarist_lee
+	remove_trait = militarist_butler
 }
 
 give_ROOT_random_name = {

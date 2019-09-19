@@ -73,3 +73,72 @@ service_cross = {
 	male_compliment_adj = COMPL_DECORATED
 	female_compliment_adj = COMPL_DECORATED
 }
+
+militarist_macarthur = {
+	martial = 2
+	land_morale = 0.1
+	siege_speed = 0.05
+	vassal_opinion = 10
+	monthly_character_prestige = 0.5
+	religious = yes
+	same_opinion = 10
+	random = no
+}
+militarist_sherman = {
+	martial = 2
+	siege_speed = 0.15
+	local_movement_speed = 0.05
+	dixie_opinion = -10
+	southron_opinion = -10
+	monthly_character_prestige = 0.5
+	religious = yes
+	same_opinion = 10
+	random = no
+}
+militarist_patton = {
+	martial = 2
+	combat_rating = 5
+	knights_offensive = 0.15
+	monthly_character_prestige = 0.5
+	religious = yes
+	same_opinion = 10
+	random = no
+}
+militarist_custer = {
+	martial = 2
+	combat_rating = 10
+	light_cavalry_offensive = 0.15
+	local_movement_speed = 0.05
+	american_native_opinion = -10
+	religious = yes
+	same_opinion = 10
+	random = no
+}
+militarist_lee = {
+	martial = 2
+	learning = 2
+	tech_growth_modifier_military = 0.10
+	beltway_opinion = -10
+	delawarean_opinion = -10
+	monthly_character_prestige = 0.5
+	religious = yes
+	same_opinion = 10
+	random = no
+}
+militarist_butler = {
+	martial = 2
+	combat_rating = 5
+	light_infantry_offensive = 0.10
+	archers_offensive = 0.10
+	local_movement_speed = 0.05
+	monthly_character_prestige = 0.5
+	religious = yes
+	same_opinion = 10
+	church_opinion = -5
+	random = no
+}
+
+bokor = {
+	random = no
+	#for cyrus
+}

@@ -201,71 +201,109 @@ character_event = {
 	option = {
 		name = EVOTPA_ATE_WWW_RELIGION_1
 		custom_tooltip = { text = TXT_macarthur }
-		hidden_effect = {
-			add_character_modifier = { name = devote_of_macarthur duration = -1 }
-		}
+		add_trait = militarist_macarthur
 		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 20
-				OR = {
-					trait = strong
-					trait = robust
-					trait = proud
-					trait = ambitious
-					trait = quick
-					trait = inspiring_leader
-				}
-			}
+			factor = 25
+			modifier = { factor = 2 higher_tier_than = DUKE }
+			modifier = { factor = 2 trait = heavy_infantry_leader }
+			modifier = { factor = 2 trait = strong }
+			modifier = { factor = 2 trait = robust }
+			modifier = { factor = 2 trait = proud }
+			modifier = { factor = 2 trait = ambitious }
+			modifier = { factor = 2 OR = { trait = quick trait = genius trait = shrewd } }
+			modifier = { factor = 2 trait = inspiring_leader }
 		}
 	}
 	option = {
 		name = EVOTPB_ATE_WWW_RELIGION_1
 		custom_tooltip = { text = TXT_sherman }
-		hidden_effect = {
-			add_character_modifier = { name = devote_of_sherman duration = -1 }
-		}
+		add_trait = militarist_sherman
 		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 20
-				OR = {
-					trait = inspiring_leader
-					trait = organizer
-					trait = humble
-					trait = diligent
-					trait = holy_warrior
-					trait = berserker
-				}
-			}
+			factor = 25
+			modifier = { factor = 2 trait = siege_leader }
+			modifier = { factor = 2 trait = organizer }
+			modifier = { factor = 2 trait = humble }
+			modifier = { factor = 2 trait = diligent }
+			modifier = { factor = 2 trait = holy_warrior }
+			modifier = { factor = 2 trait = berserker }
+			modifier = { factor = 2 trait = inspiring_leader }
+			modifier = { factor = 0.25 likes_southern = yes }
+			modifier = { factor = 2 likes_yank = yes }
 		}
 	}
 	option = {
 		name = EVOTPC_ATE_WWW_RELIGION_1
 		custom_tooltip = { text = TXT_patton }
-		hidden_effect = {
-			add_character_modifier = { name = devote_of_patton duration = -1 }
-		}
+		add_trait = militarist_patton
 		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 20
-				OR = {
-				    trait = proud
-					trait = inspiring_leader
-					trait = aggressive_leader
-					trait = zealous
-					trait = brave
-					trait = wroth
-				}
-			}
+			factor = 25
+			modifier = { factor = 2 trait = flanker }
+			modifier = { factor = 2 trait = proud }
+			modifier = { factor = 2 trait = cruel }
+			modifier = { factor = 2 trait = aggressive_leader }
+			modifier = { factor = 2 trait = zealous }
+			modifier = { factor = 2 trait = brave }
+			modifier = { factor = 2 trait = wroth }
 		}
 	}
 	option = {
 		name = EVOTPD_ATE_WWW_RELIGION_1
 		effect = { character_event = { id = ATE_WWW_RELIGION.6 } }
+		trigger = { ai = no }
 		ai_chance = {
 			factor = 10
+		}
+	}
+	option = {
+		name = EVOTPA_ATE_WWW_RELIGION_2
+		custom_tooltip = { text = TXT_custer }
+		add_trait = militarist_custer
+		trigger = { ai = yes }
+		ai_chance = {
+			factor = 25
+			modifier = { factor = 2 trait = cavalry_leader }
+			modifier = { factor = 2 trait = lustful }
+			modifier = { factor = 2 trait = envious }
+			modifier = { factor = 2 trait = greedy }
+			modifier = { factor = 2 trait = cruel }
+			modifier = { factor = 2 trait = lunatic }
+			modifier = { factor = 2 trait = wroth }
+			modifier = { factor = 2 OR = { trait = dull trait = slow } }
+			modifier = { factor = 0 likes_native_americans = yes }
+		}
+	}
+	option = {
+		name = EVOTPB_ATE_WWW_RELIGION_2
+		custom_tooltip = { text = TXT_lee }
+		add_trait = militarist_lee
+		trigger = { ai = yes }
+		ai_chance = {
+			factor = 25
+			modifier = { factor = 2 trait = defensive_leader }
+			modifier = { factor = 2 trait = scholar }
+			modifier = { factor = 2 trait = patient }
+			modifier = { factor = 2 trait = content }
+			modifier = { factor = 2 trait = diligent }
+			modifier = { factor = 2 trait = proud }
+			modifier = { factor = 2 trait = brave }
+			modifier = { factor = 2 likes_southern = yes }
+			modifier = { factor = 0.25 likes_yank = yes }
+		}
+	}
+	option = {
+		name = EVOTPC_ATE_WWW_RELIGION_2
+		custom_tooltip = { text = TXT_butler }
+		add_trait = militarist_butler
+		trigger = { ai = yes }
+		ai_chance = {
+			factor = 25
+			modifier = { factor = 2 trait = inspiring_leader }
+			modifier = { factor = 2 trait = light_foot_leader }
+			modifier = { factor = 2 trait = humble }
+			modifier = { factor = 2 trait = cynical }
+			modifier = { factor = 2 trait = charitable }
+			modifier = { factor = 2 trait = kind }
+			modifier = { factor = 0.25 trait = zealous }
 		}
 	}
 }
@@ -277,78 +315,61 @@ character_event = {
 	picture = GFX_evt_camaraderie
 	
 	religion = jeffersonian
+	ai = no
 	is_triggered_only = yes
 	
 	option = {
 		name = EVOTPA_ATE_WWW_RELIGION_2
 		custom_tooltip = { text = TXT_custer }
-		hidden_effect = {
-			add_character_modifier = { name = devote_of_custer duration = -1 }
-		}
+		add_trait = militarist_custer
 		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 20
-				OR = {
-					trait = lustful
-					trait = envious
-					trait = greedy
-					trait = ambitious
-					trait = lunatic
-					trait = dull
-					trait = slow
-				}
-			}
+			factor = 25
+			modifier = { factor = 2 trait = cavalry_leader }
+			modifier = { factor = 2 trait = lustful }
+			modifier = { factor = 2 trait = envious }
+			modifier = { factor = 2 trait = greedy }
+			modifier = { factor = 2 trait = cruel }
+			modifier = { factor = 2 trait = lunatic }
+			modifier = { factor = 2 trait = wroth }
+			modifier = { factor = 2 OR = { trait = dull trait = slow } }
+			modifier = { factor = 0 likes_native_americans = yes }
 		}
 	}
 	option = {
 		name = EVOTPB_ATE_WWW_RELIGION_2
 		custom_tooltip = { text = TXT_lee }
-		hidden_effect = {
-			add_character_modifier = { name = devote_of_lee duration = -1 }
-		}
+		add_trait = militarist_lee
 		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 20
-				OR = {
-					trait = scholar
-					trait = patient
-					trait = content
-					trait = diligent
-					trait = proud
-					trait = brave
-				}
-			}
+			factor = 25
+			modifier = { factor = 2 trait = defensive_leader }
+			modifier = { factor = 2 trait = scholar }
+			modifier = { factor = 2 trait = patient }
+			modifier = { factor = 2 trait = content }
+			modifier = { factor = 2 trait = diligent }
+			modifier = { factor = 2 trait = proud }
+			modifier = { factor = 2 trait = brave }
+			modifier = { factor = 2 likes_southern = yes }
+			modifier = { factor = 0.25 likes_yank = yes }
 		}
 	}
 	option = {
 		name = EVOTPC_ATE_WWW_RELIGION_2
 		custom_tooltip = { text = TXT_butler }
-		hidden_effect = {
-			add_character_modifier = { name = devotee_of_butler duration = -1 }
-		}
+		add_trait = militarist_butler
 		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 20
-				OR = {
-				    trait = inspiring_leader
-					trait = inspiring_leader
-					trait = humble
-					trait = cynical
-					trait = charitable
-					trait = kind
-				}
-			}
+			factor = 25
+			modifier = { factor = 2 trait = inspiring_leader }
+			modifier = { factor = 2 trait = light_foot_leader }
+			modifier = { factor = 2 trait = humble }
+			modifier = { factor = 2 trait = cynical }
+			modifier = { factor = 2 trait = charitable }
+			modifier = { factor = 2 trait = kind }
+			modifier = { factor = 0.25 trait = zealous }
 		}
 	}
 	option = {
 		name = EVOTPD_ATE_WWW_RELIGION_2
 		effect = { character_event = { id = ATE_WWW_RELIGION.5 } }
-		ai_chance = {
-			factor = 10
-		}
 	}
 }
 

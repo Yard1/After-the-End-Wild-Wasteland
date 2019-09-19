@@ -14826,6 +14826,12 @@ character_event = {
 		}
 		text = expel_salvation_army
 	}
+	title = { # Order of Saint Expédit
+		trigger = {
+			has_character_flag = expel_saint_expedit_check
+		}
+		text = expel_saint_expedit
+	}
 	title = { # Sons of Kaleva
 		trigger = {
 			has_character_flag = expel_sons_kaleva_check
@@ -15549,6 +15555,36 @@ character_event = {
 				inherit = yes
 			}
 			clr_character_flag = expel_salvation_army_check
+		}
+	}
+	option = { # Order of Saint Expédit
+		trigger = {
+			has_character_flag = expel_saint_expedit_check
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_saint_expedit = {
+				holder_scope = {
+					character_event = {
+						id = NewHolyOrders.107
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_saint_expedit
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_saint_expedit_check
 		}
 	}
 	option = { # Sons of Kaleva

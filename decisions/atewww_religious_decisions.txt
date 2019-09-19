@@ -294,7 +294,12 @@ decisions = {
 			piety = 0
 		}
 		effect = {
-			character_event = { id = ATE_WWW_RELIGION.5 }
+			custom_tooltip = {
+				text = tooltip_choose_patron_general
+				hidden_tooltip = {
+					character_event = { id = ATE_WWW_RELIGION.5 }
+				}
+			}
 		}
 		revoke_allowed = {
 			always = no

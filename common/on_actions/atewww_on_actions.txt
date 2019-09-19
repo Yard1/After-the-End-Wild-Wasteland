@@ -1,3 +1,9 @@
+on_startup = {
+	events = {
+		ATE_WWW_DEBUG.6
+	}
+}
+
 #character
 # Triggers when a change of host has been detected. Note that the from scope is empty for newly created characters. "on_employer_change" is triggered first if a character has had both their employer and host changed since the last check was made.
 # Root = the character that got a new host

@@ -70,6 +70,10 @@ expelled_d_salvation_army = {
 	icon = 35
 }
 
+expelled_d_saint_expedit = {
+	icon = 35
+}
+
 looted_lady_liberty = {
 	icon = 64
 	libertarian_opinion = -50
