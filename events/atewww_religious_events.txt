@@ -733,6 +733,7 @@ character_event = {
 	hide_window = yes
 	religion_group = oldwolrd
 	ai = yes
+	min_age = 16
 	is_triggered_only = yes
 
 	trigger = {

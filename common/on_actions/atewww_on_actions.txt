@@ -106,6 +106,7 @@ on_create_title = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder = {
 	events = {
+		ATE_WWW_RELIGION.16
 		ATE_WWW_RELIGION.11
 		ATE_WWW_RELIGION.9
 		ATE_WWW_PIRATE.7
