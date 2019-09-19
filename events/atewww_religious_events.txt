@@ -261,6 +261,7 @@ character_event = {
 		trigger = { ai = yes }
 		ai_chance = {
 			factor = 25
+			modifier = { factor = 100 has_landed_title = d_border_patrol }
 			modifier = { factor = 2 trait = cavalry_leader }
 			modifier = { factor = 2 trait = lustful }
 			modifier = { factor = 2 trait = envious }
