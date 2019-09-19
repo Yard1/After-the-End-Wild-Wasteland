@@ -13,6 +13,7 @@ on_host_change = {
 	events = {
 		misc.40
 		miscATEWW.1
+		ATE_WWW_RELIGION.16
 	}
 }
 
@@ -84,6 +85,7 @@ on_wonder_stage_loot_finish = {
 on_adulthood = {
 	events = {
 		ATE_WWW_PIRATE.6
+		ATE_WWW_RELIGION.16
 	}
 }
 
@@ -137,12 +139,5 @@ on_new_holder_usurpation = {
 on_excommunicate_interaction = {
 	events = {
 		prez.108
-	}
-}
-
-# character
-on_adulthood = {
-	events = {
-		ATE_WWW_RELIGION.16
 	}
 }
