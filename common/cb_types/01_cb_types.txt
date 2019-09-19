@@ -5584,7 +5584,7 @@ childrens_crusade = {
 			}
 		}
 		ROOT = { 
-			add_trait = crusader 
+			add_am_crusade_trait_effect = yes
 			diplomatic_immunity = no 
 		}
 		any_player = { 
@@ -7319,7 +7319,7 @@ shepherds_crusade_invasion = {
 					}
 					grant_title_no_opinion = new_character
 					new_character = {
-						add_trait = crusader
+						add_am_crusade_trait_effect = yes
 						add_trait = brave
 						ROOT = {
 							set_truce = {

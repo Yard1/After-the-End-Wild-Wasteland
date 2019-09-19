@@ -578,3 +578,179 @@ decisions = {
 		}
 	}
 }
+
+targeted_decisions = {
+	militarist_succession_call_in_favor_targeted = {
+		is_high_prio = yes # Will show an alert if special action is available
+		only_playable = yes
+		filter = liege
+		ai_target_filter = liege
+		
+		potential = {
+			owes_favor_to = FROM
+			FROM = {
+				is_playable = yes
+				primary_title = {
+					has_law = succ_militarist_appointment
+				}
+				ROOT = {
+					government = militarist_government
+					NOT = { has_character_flag = militarist_let_ruler_pick_@FROM }
+				}
+			}
+		}
+		allow = {
+			owes_favor_to = FROM
+			hidden_tooltip = {
+				FROM = {
+					in_seclusion = no
+					prisoner = no
+					is_incapable = no
+				}
+				in_seclusion = no
+				prisoner = no
+				is_incapable = no
+			}
+		}
+		
+		effect = {
+			custom_tooltip = {
+				text = militarist_succession_call_in_favor_targeted_tooltip
+				hidden_tooltip = {
+					reverse_remove_favor = FROM
+					character_event = { id = ATE_WWW_RELIGION.13 days = 3650 }
+					if = {
+						limit = { ai = no }
+						letter_event = { id = ATE_WWW_RELIGION.14 days = 1 }
+					}
+					set_character_flag = militarist_let_ruler_pick_@FROM 
+					FROM = {
+						primary_title = {
+							set_title_flag = militarist_ruler_pick
+							set_title_flag = militarist_ruler_pick_@ROOT
+						}
+					}
+				}
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+			additive_modifier = {
+				value = 0.02
+				FROM = {
+					player_heir = {
+						NOT = { character = FROM }
+						religion = jeffersonian
+						is_adult = yes
+						NOT = { is_liege_of = FROM }
+						#Either the candidate is in the realm, or is landless, or the title is independent, or the realm of the title does NOT have protected inheritance.
+						OR = { 
+							vassal_of = FROM
+							is_ruler = no
+						} 
+						OR = {
+							AND = { 
+								FROM = { 
+									real_tier = KING
+								}
+								real_tier = DUKE
+							}
+							AND = { 
+								FROM = { 
+									real_tier = DUKE
+								}
+								real_tier = COUNT
+							}
+							vassal_of = FROM
+						}
+						OR = { #Either defacto direct vassal, or independent ruler who is dejure vassal.
+							vassal_of = FROM 
+							AND = { 
+								any_dejure_liege = { title = FROM } 
+								independent = yes
+							}
+						}
+						OR = { #Candidate should not be a landless Courtier that is about to inherit a Theocracy or Republic
+							AND = {
+								is_ruler = yes
+								is_landed = yes
+								is_republic = no
+								is_merchant_republic = no
+								is_theocracy = no
+							}
+							NOR = {
+								any_heir_title = {
+									is_republic = yes
+								}
+								any_heir_title = {
+									is_merchant_republic = yes
+								}
+								any_heir_title = {
+									is_theocracy = yes
+								}
+							}
+						}
+						NOR = {
+							trait = cat
+							trait = disinherited
+							trait = horse
+							trait = eunuch
+							AND = { 
+								trait = bastard 
+								is_ruler = no
+							}
+							is_ascetic_trigger = yes
+							is_theocracy = yes
+							is_republic = yes
+							is_merchant_republic = yes
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					player_heir = {
+						current_heir = {
+							character = PREV
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				FROM = {
+					OR = {
+						trait = just
+						trait = zealous
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = ambitious }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = arbitrary }
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					NOT = { health = 3.5 }
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					NOT = { health = 2.5 }
+				}
+			}
+		}
+	}
+}

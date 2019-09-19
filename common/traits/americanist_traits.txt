@@ -179,4 +179,7 @@ medal_freedom = {
 	monthly_character_prestige = 1
 	same_religion_opinion = 15
 	random = no
+
+	male_compliment_adj = COMPL_DECORATED
+	female_compliment_adj = COMPL_DECORATED
 }

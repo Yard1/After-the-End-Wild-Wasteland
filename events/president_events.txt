@@ -436,7 +436,7 @@ letter_event = {
 			#Not much has changed, except for incorporating the Become President ambition into it.
 			additive_modifier = {
 				value = 15
-				localisation_key = tooltip_presidential_elector_vote_myself
+				localisation_key = tooltip_feudal_elector_vote_myself
 				character = event_target:c1
 				NOR = {
 					trait = humble
@@ -466,14 +466,14 @@ letter_event = {
 			}
 			additive_modifier = {
 				value = 40
-				localisation_key = tooltip_presidential_elector_vote_myself_ambitious
+				localisation_key = tooltip_feudal_elector_vote_myself_ambitious
 				character = event_target:c1
 				trait = ambitious
 				NOT = { has_ambition = obj_become_president }
 			}
 			additive_modifier = {
 				value = 40
-				localisation_key = tooltip_presidential_elector_vote_myself_pres_ambition
+				localisation_key = tooltip_feudal_elector_vote_myself_pres_ambition
 				character = event_target:c1
 				has_ambition = obj_become_president
 			}
@@ -657,7 +657,7 @@ letter_event = {
 			#Candidates will favor older candidates, barring exceptional circumstances. Note that, after a candidate reaches the age of 65, the value drops sharply.
 			additive_modifier = { #Even highly-qualified candidates will have a hard time before they turn 40.
 				value = -20
-				localisation_key = tooltip_presidential_elector_vote_young_adult
+				localisation_key = tooltip_feudal_elector_vote_youngster
 				NOT = { character = event_target:c1 }
 				event_target:c1 = {
 					NOT = {
@@ -935,7 +935,7 @@ letter_event = {
 			}
 			additive_modifier = { #Most rulers prefer diplomats and scholars
 				value = 15
-				localisation_key = tooltip_presidential_elector_vote_diplomatic_education
+				localisation_key = tooltip_feudal_elector_vote_diplomatic_education
 				NOT = {
 					is_merchant_republic = yes
 				}
@@ -2621,7 +2621,7 @@ letter_event = {
             #Not much has changed, except for incorporating the Become President ambition into it.
             additive_modifier = {
                 value = 15
-                localisation_key = tooltip_presidential_elector_vote_myself
+                localisation_key = tooltip_feudal_elector_vote_myself
                 character = event_target:c2
                 NOR = {
                     trait = humble
@@ -2651,14 +2651,14 @@ letter_event = {
             }
             additive_modifier = {
                 value = 40
-                localisation_key = tooltip_presidential_elector_vote_myself_ambitious
+                localisation_key = tooltip_feudal_elector_vote_myself_ambitious
                 character = event_target:c2
                 trait = ambitious
                 NOT = { has_ambition = obj_become_president }
             }
             additive_modifier = {
                 value = 40
-                localisation_key = tooltip_presidential_elector_vote_myself_pres_ambition
+                localisation_key = tooltip_feudal_elector_vote_myself_pres_ambition
                 character = event_target:c2
                 has_ambition = obj_become_president
             }
@@ -2842,7 +2842,7 @@ letter_event = {
             #Candidates will favor older candidates, barring exceptional circumstances. Note that, after a candidate reaches the age of 65, the value drops sharply.
             additive_modifier = { #Even highly-qualified candidates will have a hard time before they turn 40.
                 value = -20
-                localisation_key = tooltip_presidential_elector_vote_young_adult
+                localisation_key = tooltip_feudal_elector_vote_youngster
                 NOT = { character = event_target:c2 }
                 event_target:c2 = {
                     NOT = {
@@ -3120,7 +3120,7 @@ letter_event = {
             }
             additive_modifier = { #Most rulers prefer diplomats and scholars
                 value = 15
-                localisation_key = tooltip_presidential_elector_vote_diplomatic_education
+                localisation_key = tooltip_feudal_elector_vote_diplomatic_education
                 NOT = {
                     is_merchant_republic = yes
                 }
@@ -4806,7 +4806,7 @@ letter_event = {
             #Not much has changed, except for incorporating the Become President ambition into it.
             additive_modifier = {
                 value = 15
-                localisation_key = tooltip_presidential_elector_vote_myself
+                localisation_key = tooltip_feudal_elector_vote_myself
                 character = event_target:c3
                 NOR = {
                     trait = humble
@@ -4836,14 +4836,14 @@ letter_event = {
             }
             additive_modifier = {
                 value = 40
-                localisation_key = tooltip_presidential_elector_vote_myself_ambitious
+                localisation_key = tooltip_feudal_elector_vote_myself_ambitious
                 character = event_target:c3
                 trait = ambitious
                 NOT = { has_ambition = obj_become_president }
             }
             additive_modifier = {
                 value = 40
-                localisation_key = tooltip_presidential_elector_vote_myself_pres_ambition
+                localisation_key = tooltip_feudal_elector_vote_myself_pres_ambition
                 character = event_target:c3
                 has_ambition = obj_become_president
             }
@@ -5027,7 +5027,7 @@ letter_event = {
             #Candidates will favor older candidates, barring exceptional circumstances. Note that, after a candidate reaches the age of 65, the value drops sharply.
             additive_modifier = { #Even highly-qualified candidates will have a hard time before they turn 40.
                 value = -20
-                localisation_key = tooltip_presidential_elector_vote_young_adult
+                localisation_key = tooltip_feudal_elector_vote_youngster
                 NOT = { character = event_target:c3 }
                 event_target:c3 = {
                     NOT = {
@@ -5305,7 +5305,7 @@ letter_event = {
             }
             additive_modifier = { #Most rulers prefer diplomats and scholars
                 value = 15
-                localisation_key = tooltip_presidential_elector_vote_diplomatic_education
+                localisation_key = tooltip_feudal_elector_vote_diplomatic_education
                 NOT = {
                     is_merchant_republic = yes
                 }
@@ -6991,7 +6991,7 @@ letter_event = {
             #Not much has changed, except for incorporating the Become President ambition into it.
             additive_modifier = {
                 value = 15
-                localisation_key = tooltip_presidential_elector_vote_myself
+                localisation_key = tooltip_feudal_elector_vote_myself
                 character = event_target:c4
                 NOR = {
                     trait = humble
@@ -7021,14 +7021,14 @@ letter_event = {
             }
             additive_modifier = {
                 value = 40
-                localisation_key = tooltip_presidential_elector_vote_myself_ambitious
+                localisation_key = tooltip_feudal_elector_vote_myself_ambitious
                 character = event_target:c4
                 trait = ambitious
                 NOT = { has_ambition = obj_become_president }
             }
             additive_modifier = {
                 value = 40
-                localisation_key = tooltip_presidential_elector_vote_myself_pres_ambition
+                localisation_key = tooltip_feudal_elector_vote_myself_pres_ambition
                 character = event_target:c4
                 has_ambition = obj_become_president
             }
@@ -7212,7 +7212,7 @@ letter_event = {
             #Candidates will favor older candidates, barring exceptional circumstances. Note that, after a candidate reaches the age of 65, the value drops sharply.
             additive_modifier = { #Even highly-qualified candidates will have a hard time before they turn 40.
                 value = -20
-                localisation_key = tooltip_presidential_elector_vote_young_adult
+                localisation_key = tooltip_feudal_elector_vote_youngster
                 NOT = { character = event_target:c4 }
                 event_target:c4 = {
                     NOT = {
@@ -7490,7 +7490,7 @@ letter_event = {
             }
             additive_modifier = { #Most rulers prefer diplomats and scholars
                 value = 15
-                localisation_key = tooltip_presidential_elector_vote_diplomatic_education
+                localisation_key = tooltip_feudal_elector_vote_diplomatic_education
                 NOT = {
                     is_merchant_republic = yes
                 }
@@ -9810,7 +9810,7 @@ character_event = {
 			#Not much has changed, except for incorporating the Become President ambition into it.
 			additive_modifier = {
 				value = 15
-				localisation_key = tooltip_presidential_elector_vote_myself
+				localisation_key = tooltip_feudal_elector_vote_myself
 				character = event_target:c1
 				NOR = {
 					trait = humble
@@ -9840,14 +9840,14 @@ character_event = {
 			}
 			additive_modifier = {
 				value = 40
-				localisation_key = tooltip_presidential_elector_vote_myself_ambitious
+				localisation_key = tooltip_feudal_elector_vote_myself_ambitious
 				character = event_target:c1
 				trait = ambitious
 				NOT = { has_ambition = obj_become_president }
 			}
 			additive_modifier = {
 				value = 40
-				localisation_key = tooltip_presidential_elector_vote_myself_pres_ambition
+				localisation_key = tooltip_feudal_elector_vote_myself_pres_ambition
 				character = event_target:c1
 				has_ambition = obj_become_president
 			}
@@ -10031,7 +10031,7 @@ character_event = {
 			#Candidates will favor older candidates, barring exceptional circumstances. Note that, after a candidate reaches the age of 65, the value drops sharply.
 			additive_modifier = { #Even highly-qualified candidates will have a hard time before they turn 40.
 				value = -20
-				localisation_key = tooltip_presidential_elector_vote_young_adult
+				localisation_key = tooltip_feudal_elector_vote_youngster
 				NOT = { character = event_target:c1 }
 				event_target:c1 = {
 					NOT = {
@@ -10309,7 +10309,7 @@ character_event = {
 			}
 			additive_modifier = { #Most rulers prefer diplomats and scholars
 				value = 15
-				localisation_key = tooltip_presidential_elector_vote_diplomatic_education
+				localisation_key = tooltip_feudal_elector_vote_diplomatic_education
 				NOT = {
 					is_merchant_republic = yes
 				}
@@ -11994,7 +11994,7 @@ character_event = {
             #Not much has changed, except for incorporating the Become President ambition into it.
             additive_modifier = {
                 value = 15
-                localisation_key = tooltip_presidential_elector_vote_myself
+                localisation_key = tooltip_feudal_elector_vote_myself
                 character = event_target:c2
                 NOR = {
                     trait = humble
@@ -12024,14 +12024,14 @@ character_event = {
             }
             additive_modifier = {
                 value = 40
-                localisation_key = tooltip_presidential_elector_vote_myself_ambitious
+                localisation_key = tooltip_feudal_elector_vote_myself_ambitious
                 character = event_target:c2
                 trait = ambitious
                 NOT = { has_ambition = obj_become_president }
             }
             additive_modifier = {
                 value = 40
-                localisation_key = tooltip_presidential_elector_vote_myself_pres_ambition
+                localisation_key = tooltip_feudal_elector_vote_myself_pres_ambition
                 character = event_target:c2
                 has_ambition = obj_become_president
             }
@@ -12215,7 +12215,7 @@ character_event = {
             #Candidates will favor older candidates, barring exceptional circumstances. Note that, after a candidate reaches the age of 65, the value drops sharply.
             additive_modifier = { #Even highly-qualified candidates will have a hard time before they turn 40.
                 value = -20
-                localisation_key = tooltip_presidential_elector_vote_young_adult
+                localisation_key = tooltip_feudal_elector_vote_youngster
                 NOT = { character = event_target:c2 }
                 event_target:c2 = {
                     NOT = {
@@ -12493,7 +12493,7 @@ character_event = {
             }
             additive_modifier = { #Most rulers prefer diplomats and scholars
                 value = 15
-                localisation_key = tooltip_presidential_elector_vote_diplomatic_education
+                localisation_key = tooltip_feudal_elector_vote_diplomatic_education
                 NOT = {
                     is_merchant_republic = yes
                 }
@@ -14178,7 +14178,7 @@ character_event = {
             #Not much has changed, except for incorporating the Become President ambition into it.
             additive_modifier = {
                 value = 15
-                localisation_key = tooltip_presidential_elector_vote_myself
+                localisation_key = tooltip_feudal_elector_vote_myself
                 character = event_target:c3
                 NOR = {
                     trait = humble
@@ -14208,14 +14208,14 @@ character_event = {
             }
             additive_modifier = {
                 value = 40
-                localisation_key = tooltip_presidential_elector_vote_myself_ambitious
+                localisation_key = tooltip_feudal_elector_vote_myself_ambitious
                 character = event_target:c3
                 trait = ambitious
                 NOT = { has_ambition = obj_become_president }
             }
             additive_modifier = {
                 value = 40
-                localisation_key = tooltip_presidential_elector_vote_myself_pres_ambition
+                localisation_key = tooltip_feudal_elector_vote_myself_pres_ambition
                 character = event_target:c3
                 has_ambition = obj_become_president
             }
@@ -14399,7 +14399,7 @@ character_event = {
             #Candidates will favor older candidates, barring exceptional circumstances. Note that, after a candidate reaches the age of 65, the value drops sharply.
             additive_modifier = { #Even highly-qualified candidates will have a hard time before they turn 40.
                 value = -20
-                localisation_key = tooltip_presidential_elector_vote_young_adult
+                localisation_key = tooltip_feudal_elector_vote_youngster
                 NOT = { character = event_target:c3 }
                 event_target:c3 = {
                     NOT = {
@@ -14677,7 +14677,7 @@ character_event = {
             }
             additive_modifier = { #Most rulers prefer diplomats and scholars
                 value = 15
-                localisation_key = tooltip_presidential_elector_vote_diplomatic_education
+                localisation_key = tooltip_feudal_elector_vote_diplomatic_education
                 NOT = {
                     is_merchant_republic = yes
                 }
@@ -16362,7 +16362,7 @@ character_event = {
             #Not much has changed, except for incorporating the Become President ambition into it.
             additive_modifier = {
                 value = 15
-                localisation_key = tooltip_presidential_elector_vote_myself
+                localisation_key = tooltip_feudal_elector_vote_myself
                 character = event_target:c4
                 NOR = {
                     trait = humble
@@ -16392,14 +16392,14 @@ character_event = {
             }
             additive_modifier = {
                 value = 40
-                localisation_key = tooltip_presidential_elector_vote_myself_ambitious
+                localisation_key = tooltip_feudal_elector_vote_myself_ambitious
                 character = event_target:c4
                 trait = ambitious
                 NOT = { has_ambition = obj_become_president }
             }
             additive_modifier = {
                 value = 40
-                localisation_key = tooltip_presidential_elector_vote_myself_pres_ambition
+                localisation_key = tooltip_feudal_elector_vote_myself_pres_ambition
                 character = event_target:c4
                 has_ambition = obj_become_president
             }
@@ -16583,7 +16583,7 @@ character_event = {
             #Candidates will favor older candidates, barring exceptional circumstances. Note that, after a candidate reaches the age of 65, the value drops sharply.
             additive_modifier = { #Even highly-qualified candidates will have a hard time before they turn 40.
                 value = -20
-                localisation_key = tooltip_presidential_elector_vote_young_adult
+                localisation_key = tooltip_feudal_elector_vote_youngster
                 NOT = { character = event_target:c4 }
                 event_target:c4 = {
                     NOT = {
@@ -16861,7 +16861,7 @@ character_event = {
             }
             additive_modifier = { #Most rulers prefer diplomats and scholars
                 value = 15
-                localisation_key = tooltip_presidential_elector_vote_diplomatic_education
+                localisation_key = tooltip_feudal_elector_vote_diplomatic_education
                 NOT = {
                     is_merchant_republic = yes
                 }

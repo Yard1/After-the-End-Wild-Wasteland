@@ -29,7 +29,14 @@ feudal_governments = {
 				}
 			}
 			NOT = {	religion = cetic }
-			NOT = { religion = jeffersonian }
+			OR = {
+				mercenary = yes
+				NOT = { religion = jeffersonian }
+				AND = {
+					independent = no
+					liege = { NOT = { government = militarist_government } }
+				}
+			}
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			#NOT = { is_government_potential = colonial_government }

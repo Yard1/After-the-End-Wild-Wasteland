@@ -63,11 +63,46 @@ succession_laws = {
 			always = no
 		}
 		default_selection = {
-			factor = 0
+			factor = 100
 			modifier = {
-				factor = 100
+				factor = 0
 				holder_scope = {
-					religion_group = pirate
+					NOT = { religion_group = pirate }
+				}
+			}
+		}
+	}
+    succ_militarist_appointment = {
+		oldest_child_opinion = -5
+		child_opinion = -5
+		dynasty_opinion = -5
+		vassal_opinion = 5
+		potential = {
+			higher_tier_than = COUNT
+			holder_scope = {
+				independent = no
+				liege = { government = militarist_government }
+				government = militarist_government
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = militarist_appointment
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		default_selection = {
+			factor = 0
+			additive_modifier = {
+				value = 1000
+				higher_tier_than = COUNT
+				holder_scope = {
+					independent = no
+					liege = { government = militarist_government }
+					government = militarist_government
 				}
 			}
 		}

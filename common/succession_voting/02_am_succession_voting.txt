@@ -25,11 +25,11 @@
 presidential_elective = {
 	candidate_vote_score = {
 		days = 0
-#########################   Elector voting himself   ##########################
-#Not much has changed, except for incorporating the Become President ambition into it.
+		#########################   Elector voting himself   ##########################
+		#Not much has changed, except for incorporating the Become President ambition into it.
 		additive_modifier = {
 			value = 15
-			localisation_key = tooltip_presidential_elector_vote_myself
+			localisation_key = tooltip_feudal_elector_vote_myself
 			character = FROM
 			NOR = {
 				trait = humble
@@ -66,7 +66,7 @@ presidential_elective = {
 		}
 		additive_modifier = {
 			value = 40
-			localisation_key = tooltip_presidential_elector_vote_myself_heir
+			localisation_key = tooltip_feudal_elector_vote_myself_heir
 			character = FROM
 			NOR = {
 				trait = humble
@@ -86,19 +86,19 @@ presidential_elective = {
 		}
 		additive_modifier = {
 			value = 40
-			localisation_key = tooltip_presidential_elector_vote_myself_ambitious
+			localisation_key = tooltip_feudal_elector_vote_myself_ambitious
 			character = FROM
 			trait = ambitious
 			NOT = { has_ambition = obj_become_president }
 		}
 		additive_modifier = {
 			value = 40
-			localisation_key = tooltip_presidential_elector_vote_myself_pres_ambition
+			localisation_key = tooltip_feudal_elector_vote_myself_pres_ambition
 			character = FROM
 			has_ambition = obj_become_president
 		}
-#########################  Candidate's traits   ##########################
-	#The heir
+		#########################  Candidate's traits   ##########################
+		#The heir
 		additive_modifier = { #Current ruler will always try to elect his player heir.
 			value = 50
 			localisation_key = tooltip_feudal_elector_vote_player_heir
@@ -222,11 +222,11 @@ presidential_elective = {
 				is_female = yes
 			}
 		}
-	##Ageism##
-	#Candidates will favor older candidates, barring exceptional circumstances. Note that, after a candidate reaches the age of 65, the value drops sharply.
+		##Ageism##
+		#Candidates will favor older candidates, barring exceptional circumstances. Note that, after a candidate reaches the age of 65, the value drops sharply.
 		additive_modifier = { #Even highly-qualified candidates will have a hard time before they turn 40.
 			value = -20
-			localisation_key = tooltip_presidential_elector_vote_young_adult
+			localisation_key = tooltip_feudal_elector_vote_youngster
 			NOT = { character = FROM }
 			FROM = {
 				NOT = {
@@ -359,10 +359,10 @@ presidential_elective = {
 				NOT = { 
 					is_close_relative = ROOT
 				}
-				NOR = {
-					trait = just
-					trait = zealous
-				}
+			}
+			NOR = {
+				trait = just
+				trait = zealous
 			}
 		}
 		additive_modifier = { 
@@ -376,10 +376,10 @@ presidential_elective = {
 				NOT = { 
 					is_child_of = ROOT
 				}
-				NOR = {
-					trait = just
-					trait = zealous
-				}
+			}
+			NOR = {
+				trait = just
+				trait = zealous
 			}
 		}
 		additive_modifier = { 
@@ -564,7 +564,7 @@ presidential_elective = {
 		}
 		additive_modifier = { #Most rulers prefer diplomats and scholars
 			value = 15
-			localisation_key = tooltip_presidential_elector_vote_diplomatic_education
+			localisation_key = tooltip_feudal_elector_vote_diplomatic_education
 			NOT = {
 				is_merchant_republic = yes
 			}
@@ -599,7 +599,7 @@ presidential_elective = {
 				} 
 			}
 		}
-#All the Traits
+		#All the Traits
 		additive_modifier = {
 			value = -25
 			localisation_key = tooltip_feudal_elector_vote_depressed
@@ -1905,14 +1905,28 @@ presidential_elective = {
 				trait = blinded
 			}
 		}
-		#Americanists  if their President is a eunuch.
-		additive_modifier = { #Shunned for being excommunicated. (It is almost impossible to become President if you are excommunicated.)
-			value = -100
+		additive_modifier = { #Shunned for being excommunicated
+			value = -25
 			localisation_key = tooltip_feudal_elector_vote_excommunicated_negative
-			NOT = { character = FROM } 
+			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
 				NOT = { trait = excommunicated }
-				trait = arbitrary 
+				trait = arbitrary #No need for consistency
+			}
+			FROM = { 
+				excommunicated_for = ROOT
+			}
+		}
+		additive_modifier = { #Shunned for being excommunicated
+			value = -100
+			localisation_key = tooltip_feudal_elector_vote_excommunicated_negative_zealous
+			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { 
+				trait = cynical
+			}
+			OR = { 
+				NOT = { trait = excommunicated }
+				trait = arbitrary #No need for consistency
 			}
 			FROM = { 
 				excommunicated_for = ROOT
@@ -2099,84 +2113,84 @@ presidential_elective = {
 				trait = giant
 			}
 		}
-########################  Ruler's traits   ##########################
-		#Ruler is lunatic, vote against his pick
-		additive_modifier = {
-			value = -10
-			localisation_key = tooltip_feudal_elector_anti_vote_ruler_lunatic
-			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } #
-			NOR = {
-				trait = lunatic 
-				trait = possessed 
-				trait = arbitrary 
-				trait = zealous #Might be the gods speaking
-			}
-			FROMFROM = { 
-				holder_scope = {
-					trait = lunatic
-				} 
-			}
-		}
-		#Ruler is possessed, vote against his pick
-		additive_modifier = {
-			value = -10
-			localisation_key = tooltip_feudal_elector_anti_vote_ruler_possessed
-			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } 
-			trait = zealous
-			NOR = {
-				trait = lunatic 
-				trait = possessed 
-				trait = arbitrary 
-			}
-			FROMFROM = { 
-				holder_scope = {
-					trait = possessed
-				} 
-			}
-		}
-
-		#Ruler is just, trust his pick
-		additive_modifier = {
-			value = 25
-			localisation_key = tooltip_feudal_elector_pro_vote_ruler_just
-			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } 
-			NOR = {
-				trait = lunatic 
-				trait = possessed 
-				trait = arbitrary #Don't like it
-			}
-			FROMFROM = { 
-				holder_scope = {
-					trait = just
-				} 
-			}
-		}
-		#Ruler is a Tyrant (Opinion), vote against his pick
-		additive_modifier = {
-			value = -25
-			localisation_key = tooltip_feudal_elector_anti_vote_ruler_tyrant
-			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } 
-			NOR = {
-				trait = lunatic 
-				trait = possessed 
-				trait = arbitrary 
-			}
-			FROMFROM = { 
-				holder_scope = {
-					ROOT = {
-						has_opinion_modifier = {
-							modifier = opinion_tyrant
-							who = PREV
+		########################  Ruler's traits   ##########################
+				#Ruler is lunatic, vote against his pick
+				additive_modifier = {
+					value = -10
+					localisation_key = tooltip_feudal_elector_anti_vote_ruler_lunatic
+					FROM = { character = ROOT_FROMFROMFROM }
+					NOT = { character = FROM } #
+					NOR = {
+						trait = lunatic 
+						trait = possessed 
+						trait = arbitrary 
+						trait = zealous #Might be the gods speaking
+					}
+					FROMFROM = { 
+						holder_scope = {
+							trait = lunatic
 						} 
-					} 
-				} 
-			}
-		}
-########################  Raw Opinion bonus towards Candidate   ##########################
+					}
+				}
+				#Ruler is possessed, vote against his pick
+				additive_modifier = {
+					value = -10
+					localisation_key = tooltip_feudal_elector_anti_vote_ruler_possessed
+					FROM = { character = ROOT_FROMFROMFROM }
+					NOT = { character = FROM } 
+					trait = zealous
+					NOR = {
+						trait = lunatic 
+						trait = possessed 
+						trait = arbitrary 
+					}
+					FROMFROM = { 
+						holder_scope = {
+							trait = possessed
+						} 
+					}
+				}
+
+				#Ruler is just, trust his pick
+				additive_modifier = {
+					value = 25
+					localisation_key = tooltip_feudal_elector_pro_vote_ruler_just
+					FROM = { character = ROOT_FROMFROMFROM }
+					NOT = { character = FROM } 
+					NOR = {
+						trait = lunatic 
+						trait = possessed 
+						trait = arbitrary #Don't like it
+					}
+					FROMFROM = { 
+						holder_scope = {
+							trait = just
+						} 
+					}
+				}
+				#Ruler is a Tyrant (Opinion), vote against his pick
+				additive_modifier = {
+					value = -25
+					localisation_key = tooltip_feudal_elector_anti_vote_ruler_tyrant
+					FROM = { character = ROOT_FROMFROMFROM }
+					NOT = { character = FROM } 
+					NOR = {
+						trait = lunatic 
+						trait = possessed 
+						trait = arbitrary 
+					}
+					FROMFROM = { 
+						holder_scope = {
+							ROOT = {
+								has_opinion_modifier = {
+									modifier = opinion_tyrant
+									who = PREV
+								} 
+							} 
+						} 
+					}
+				}
+		########################  Raw Opinion bonus towards Candidate   ##########################
 		additive_modifier = {
 			value = -150
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative

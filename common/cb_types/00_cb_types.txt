@@ -4852,13 +4852,9 @@ new_crusade = {
 								character_event = { id = HFP.41090 days = 1 }
 								if = {
 									limit = {
-										NOR = {
-											trait = crusader
-											trait = crusader_king
-											trait = crusader_queen
-										}
+										has_crusade_trait_trigger = no
 									}
-									add_trait = crusader
+									add_am_crusade_trait_effect = yes
 								}
 							}
 							character_event = { id = HFP.41007 }

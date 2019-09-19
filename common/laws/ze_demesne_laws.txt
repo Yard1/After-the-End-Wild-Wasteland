@@ -559,7 +559,14 @@ laws = {
 		group = revoke_title_law
 		default = yes
 		allow = { 
-			NOT = { has_law = revoke_title_law_2 } }
+			NOT = { has_law = revoke_title_law_2 } 
+			holder_scope = {
+				conditional_tooltip = {
+					trigger = { government = militarist_government }
+					NOT = { government = militarist_government }
+				}
+			}
+		}
 		potential = {
 			has_dlc = "Zeus"
 			NOT = { holder_scope = { is_nomadic = yes } }
@@ -580,6 +587,13 @@ laws = {
 	revoke_title_law_1 = {
 		group = revoke_title_law
 		allow = { }
+		default_selection = {
+			factor = 0
+			additive_modifier = { 
+				value = 1000
+				government = militarist_government
+			}
+		}
 		potential = {
 			has_dlc = "Zeus"
 			NOT = { holder_scope = { is_nomadic = yes } }
@@ -769,6 +783,7 @@ laws = {
 					holder_scope = { 
 						NOR = { 
 							government = military_governorate 
+							government = militarist_government 
 							has_religion_feature = religion_cosmopolitan
 							has_religion_feature = religion_feature_espiritista
 						} 

@@ -50,6 +50,10 @@ title_appointed_regent = {
 		prisoner = no
 		NOT = { trait = incapable }
 		has_regent = no
+		conditional_tooltip = {
+			trigger = { FROM = { government = militarist_government } }
+			has_job_title = job_marshal
+		}
 	}
 	
 	allowed_to_grant = {
@@ -62,7 +66,13 @@ title_appointed_regent = {
 		}
 	}
 	revoke_trigger = {
-		FROM = { has_regent = no }
+		FROM = { 
+			has_regent = no
+		}
+		conditional_tooltip = {
+			trigger = { FROM = { government = militarist_government } }
+			NOT = { has_job_title = job_marshal }
+		}
 	}
 
 	gain_effect = {

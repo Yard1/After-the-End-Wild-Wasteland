@@ -8180,7 +8180,7 @@ hre_feudal_elective = {
 					} 
 				}
 				FROM = { 
-				 	any_dejure_liege = { title = ROOT } #Only dejure vassals.
+				 	any_dejure_liege = { title = FROMFROM } #Only dejure vassals.
 				}
 			}
 		}

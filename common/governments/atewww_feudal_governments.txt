@@ -22,21 +22,28 @@ feudal_governments = {
 			theocratic_feudal_government
 			tribal_government
 		}
-		vassal_call_to_arms = {
-			militarist_government
-		}
-		no_vassal_tax = {
-			militarist_government
-		}
 		potential = {
+			OR = {
+				controls_religion = no
+				has_religion_temporal_head = yes
+				AND = {
+					has_religion_with_temporal_head = yes
+					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
+				}
+			}
 			religion = jeffersonian
+			OR = {
+				independent = yes
+				liege = { government = militarist_government }
+			}
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
 			is_patrician = no
+			mercenary = no
 		}
 		
-		color = { 71 92 193 }
+		color = { 75 83 32 }
 		
 		barons_need_dynasty = yes
 
@@ -49,7 +56,6 @@ feudal_governments = {
 		dukes_called_kings = yes
 		barons_need_dynasty = yes
 
-		uses_prestige_for_law_change = yes
 		can_grant_kingdoms_and_empires_to_other_government = yes
 		can_grant_kingdoms_and_empires_to_other_government_group = yes
 		can_be_granted_kingdoms_and_empires_by_other_government = no
