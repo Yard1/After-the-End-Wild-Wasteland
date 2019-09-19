@@ -2,32 +2,38 @@
 take_medicine_effect = {
 	# side effects
 	hidden_tooltip = {
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						has_artifact_flag = atewww_pills_antibiotics
+						NOT = { has_artifact_flag = atewww_pills_identified_as_antibiotics }
+					}
+					AND = {
+						has_artifact_flag = atewww_pills_antivirals
+						NOT = { has_artifact_flag = atewww_pills_identified_as_antivirals }
+					}
+					AND = {
+						has_artifact_flag = atewww_pills_antidepressants
+						NOT = { has_artifact_flag = atewww_pills_identified_as_antidepressants }
+					}
+					AND = {
+						has_artifact_flag = atewww_pills_viagra
+						NOT = { has_artifact_flag = atewww_pills_identified_as_viagra }
+					}
+					AND = {
+						has_artifact_flag = atewww_pills_painkillers
+						NOT = { has_artifact_flag = atewww_pills_identified_as_painkillers }
+					}
+				}
+			}
+			ROOT = { set_character_flag = pill_misidentified }
+		}
 		random_list = {
 			15 = {
 				modifier = {
 					factor = 6
-					OR = {
-						AND = {
-							has_artifact_flag = atewww_pills_antibiotics
-							NOT = { has_artifact_flag = atewww_pills_identified_as_antibiotics }
-						}
-						AND = {
-							has_artifact_flag = atewww_pills_antivirals
-							NOT = { has_artifact_flag = atewww_pills_identified_as_antivirals }
-						}
-						AND = {
-							has_artifact_flag = atewww_pills_antidepressants
-							NOT = { has_artifact_flag = atewww_pills_identified_as_antidepressants }
-						}
-						AND = {
-							has_artifact_flag = atewww_pills_viagra
-							NOT = { has_artifact_flag = atewww_pills_identified_as_viagra }
-						}
-						AND = {
-							has_artifact_flag = atewww_pills_painkillers
-							NOT = { has_artifact_flag = atewww_pills_identified_as_painkillers }
-						}
-					}
+					ROOT = { has_character_flag = pill_misidentified }
 				}
 				modifier = {
 					factor = 3

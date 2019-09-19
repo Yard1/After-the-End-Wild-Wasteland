@@ -71,15 +71,15 @@ take_antidepressants_desc;I am in possession of at least one container of ancien
 take_viagra;Take Old World Aphrodisiacs;;;;;;;;;;;;;x
 take_viagra_desc;I am in possession of at least one container of ancient aphrodisiac. Apparently it allowed the [Root.GetMenWomen] of old to reach the heights of their virility. I could see if the stories are true on myself.;;;;;;;;;;;;;x
 
-EVTDESC_ATE_WWW_MEDICINE_1;Identify medicine menu desc;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_1;You are in possession of at least one container of ancient, antediluvian medicine. Before it can be used, it would be prudent to actually study it first, in order to avoid any surprises.;;;;;;;;;;;;;x
 EVTOPTA_ATE_WWW_MEDICINE_1;I can try my hand at it myself.;;;;;;;;;;;;;x
 EVTOPTB_ATE_WWW_MEDICINE_1;I can only trust myself!;;;;;;;;;;;;;x
-EVTOPTB_ATE_WWW_MEDICINE_1;My court physician can help.;;;;;;;;;;;;;x
+EVTOPTC_ATE_WWW_MEDICINE_1;My court physician can help.;;;;;;;;;;;;;x
 EVTOPTD_ATE_WWW_MEDICINE_1;I do not have time for this now.;;;;;;;;;;;;;x
 
-EVTDESC_ATE_WWW_MEDICINE_2;Take medicine menu desc;;;;;;;;;;;;;x
-EVTOPTA_ATE_WWW_MEDICINE_2;Those are supposed to help with my current illness.;;;;;;;;;;;;;x
-EVTOPTB_ATE_WWW_MEDICINE_2;Those are said to alleviate the pain.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_2;As your body fights back the illness, you think about the Old World medicaments you have in your treasury. Perhaps they could help you get back on your feet quicker? Who knows what kind of effect they may have.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_MEDICINE_2;I have some that are supposed to help with my current illness.;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_MEDICINE_2;Those ones are said to alleviate the pain.;;;;;;;;;;;;;x
 EVTOPTC_ATE_WWW_MEDICINE_2;Any of those could work!;;;;;;;;;;;;;x
 EVTOPTD_ATE_WWW_MEDICINE_2;Maybe that is not such a good idea...;;;;;;;;;;;;;x
 
@@ -98,20 +98,27 @@ EVTDESC_ATE_WWW_MEDICINE_3_SUGAR;Sadly, the ancient chemicals in those pills hav
 EVTOPTA_ATE_WWW_MEDICINE_3;There are still more to study.;;;;;;;;;;;;;x
 EVTOPTB_ATE_WWW_MEDICINE_3;That is enough.;;;;;;;;;;;;;x
 
-EVTDESC_ATE_WWW_MEDICINE_5_SUCCESS;The miracle comes in the form of a small pill. After a few days, the disease that has been ravaging your body all but disappears, driven back by the creation of the ancients - this is a feat no modern physician could manage on their own.;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_5_PAINKILLERS;While the symptoms of your illness do not disappear, the pain and malaise does. You may not be fully healthy - but you feel almost as well as if you were.;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_5_VIAGRA;The effects of the pill are... profound. You can feel a tremendous increase in your libido, a mysterious energy pushing your sex drive to its limit!;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_5_VITAMINS;While the medicaments you took did not seem to have any instant effect, during the following days you have noticed your health improving slightly, feeling better overall.;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_5_ANTIDEPRESSANT;The mysterious medicaments of old cleared your mind, finally allowing you to think clearly. You may not know how they work, but you certainly can appreciate the effect.;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_5_FUMBLE;Despite taking the Old World pills, you do not notice any changes in your health or demeanor. It seems that they have no effect.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_SUCCESS;The miracle comes in the form of a small pill. After a few days, the disease that has been ravaging your body all but disappears, driven back by the creation of the ancients - this is a feat no modern physician could manage on their own.[Root.GetMisidentified][Root.GetSideEffects];;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_PAINKILLERS;While the symptoms of your illness do not disappear, the pain and malaise does. You may not be fully healthy - but you feel almost as well as if you were.[Root.GetMisidentified][Root.GetSideEffects];;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_VIAGRA;The effects of the pill are... profound. You can feel a tremendous increase in your libido, a mysterious energy pushing your sex drive to its limit![Root.GetMisidentified][Root.GetSideEffects];;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_VITAMINS;While the medicaments you took did not seem to have any instant effect, during the following days you have noticed your health improving slightly, feeling better overall.[Root.GetMisidentified][Root.GetSideEffects];;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_ANTIDEPRESSANT;The mysterious medicaments of old cleared your mind, finally allowing you to think clearly. You may not know how they work, but you certainly can appreciate the effect.[Root.GetMisidentified][Root.GetSideEffects];;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_FUMBLE;Despite taking the Old World pills, you do not notice any positive changes in your health or demeanor. It seems that whatever was their intended effect - isn't.[Root.GetMisidentified][Root.GetSideEffects];;;;;;;;;;;;;x
+
+EVTDESC_ATE_WWW_MEDICINE_5_MISIDENTIFIED;\n\nHowever, those particular medicaments were supposed to work differently...;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_SIDE_EFFECTS;\n\nOn top of it all, you can feel that the effect was not all beneficial - there are some noticeable side effects.;;;;;;;;;;;;;x
 
 EVTOPTA_ATE_WWW_MEDICINE_5;And to think such miracles were once commonplace.;;;;;;;;;;;;;x
 EVTOPTB_ATE_WWW_MEDICINE_5;I feel better, but my stomach hurts...;;;;;;;;;;;;;x
 EVTOPTC_ATE_WWW_MEDICINE_5;But my stomach hurts...;;;;;;;;;;;;;x
 EVTOPTD_ATE_WWW_MEDICINE_5;What a waste of time.;;;;;;;;;;;;;x
 
-taken_vitamins;Taken Old World Supplements;;;;;;;;;;;;;x
-taken_painkillers;Taken Old World Painkillers;;;;;;;;;;;;;x
-pill_side_effects;Side Effects from Old World Medicine;;;;;;;;;;;;;x
-taken_viagra;Taken Old World Aphrodisiacs;;;;;;;;;;;;;x
-taken_viagra_female;Taken Old World Aphrodisiacs;;;;;;;;;;;;;x
+taken_vitamins;Taken Old World supplements;;;;;;;;;;;;;x
+taken_painkillers;Taken Old World painkillers;;;;;;;;;;;;;x
+pill_side_effects;Side effects from Old World medicine;;;;;;;;;;;;;x
+taken_viagra;Taken Old World aphrodisiacs;;;;;;;;;;;;;x
+taken_viagra_female;Taken Old World aphrodisiacs;;;;;;;;;;;;;x
+
+taken_medicine_recently;Recently taken Old World medicine;;;;;;;;;;;;;x
+
+not_taken_medicine_recently;Hasn't taken any Old World medicine recently;;;;;;;;;;;;;x

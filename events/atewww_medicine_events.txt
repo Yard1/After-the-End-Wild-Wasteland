@@ -998,7 +998,7 @@ character_event = {
 				}
 			}
 			set_character_flag = medicine_physician_identified
-			character_event = { id = ATE_WWW_MEDICINE.2 days = 2 random = 5 }
+			character_event = { id = ATE_WWW_MEDICINE.3 days = 2 random = 5 }
 		}
 		ai_chance = {
 			factor = 75
@@ -1106,7 +1106,7 @@ character_event = {
 				}
 				save_event_target_as = taken_pill
 			}
-			set_character_flag = taken_medicine_recently
+			hidden_tooltip = { add_character_modifier = { name = taken_medicine_recently days = 15 hidden = yes } }
 			character_event = { id = ATE_WWW_MEDICINE.5 days = 1 random = 5 }
 		}
 	}
@@ -1128,7 +1128,7 @@ character_event = {
 				}
 				save_event_target_as = taken_pill
 			}
-			set_character_flag = taken_medicine_recently
+			hidden_tooltip = { add_character_modifier = { name = taken_medicine_recently days = 15 hidden = yes } }
 			character_event = { id = ATE_WWW_MEDICINE.6 days = 1 }
 		}
 	}
@@ -1151,7 +1151,7 @@ character_event = {
 				}
 				save_event_target_as = taken_pill
 			}
-			set_character_flag = taken_medicine_recently
+			hidden_tooltip = { add_character_modifier = { name = taken_medicine_recently days = 15 hidden = yes } }
 			character_event = { id = ATE_WWW_MEDICINE.5 days = 1 random = 5 }
 		}
 	}
@@ -1543,7 +1543,6 @@ character_event = {
 		event_target:taken_pill = {
 			take_medicine_effect = yes
 		}
-		clr_character_flag = taken_medicine_recently
 	}
 
 	option = {
@@ -1711,5 +1710,6 @@ character_event = {
 		clr_character_flag = removed_possessed
 		clr_character_flag = was_sick
 		clr_character_flag = side_effects
+		clr_character_flag = pill_misidentified
 	}
 }

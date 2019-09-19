@@ -65,6 +65,9 @@ taken_viagra_female = {
 	fertility = 0.15
 	sex_appeal_opinion = 10
 }
+taken_medicine_recently = {
+	icon = 50
+}
 expelled_d_libertarian = {
 	icon = 35
 }
