@@ -41,7 +41,7 @@ decisions = {
 		}
 		
 		ai_will_do = {
-			factor = 2
+			factor = 0.25
 			modifier = {
 				factor = 0
 				religion = gaian
@@ -115,20 +115,20 @@ decisions = {
 		ai_will_do = {
 			factor = 0
 			additive_modifier = {
-				value = 5
+				value = 0.5
 				NOT = { health = 1.5 }
 			}
 			additive_modifier = {
-				value = 1
+				value = 0.1
 				NOT = { health = 3.5 }
 			}
 			additive_modifier = {
-				value = 2
+				value = 0.2
 				well_treated_for_disease_trigger = yes
 				NOT = { health = 3.5 }
 			}
 			additive_modifier = {
-				value = 2
+				value = 0.2
 				poorly_treated_for_disease_trigger = yes
 			}
 			modifier = {
@@ -227,23 +227,23 @@ decisions = {
 		ai_will_do = {
 			factor = 0
 			additive_modifier = {
-				value = 5
+				value = 0.5
 				NOT = { health = 1.5 }
 			}
 			additive_modifier = {
-				value = 2
+				value = 0.2
 				NOT = { health = 2.5 }
 			}
 			additive_modifier = {
-				value = 2
+				value = 0.2
 				NOT = { health = 3.5 }
 			}
 			additive_modifier = {
-				value = 1
+				value = 0.1
 				NOT = { health = 4.5 }
 			}
 			additive_modifier = {
-				value = 2
+				value = 0.2
 				trait = scurvy
 				NOT = { health = 3.5 }
 			}
@@ -297,12 +297,12 @@ decisions = {
 		ai_will_do = {
 			factor = 0
 			additive_modifier = {
-				value = 0.5
+				value = 0.05
 				trait = stressed
 				NOT = { health = 3.5 }
 			}
 			additive_modifier = {
-				value = 2
+				value = 0.2
 				trait = depressed
 			}
 			modifier = {
@@ -352,23 +352,23 @@ decisions = {
 		ai_will_do = {
 			factor = 0
 			additive_modifier = {
-				value = 5
+				value = 0.5
 				NOT = { fertility = 0.15 }
 			}
 			additive_modifier = {
-				value = 2
+				value = 0.2
 				NOT = { fertility = 0.25 }
 			}
 			additive_modifier = {
-				value = 1
+				value = 0.1
 				NOT = { fertility = 0.35 }
 			}
 			additive_modifier = {
-				value = 2
+				factor = 1.25
 				trait = seducer
 			}
 			additive_modifier = {
-				value = 5
+				factor = 2
 				trait = lustful
 			}
 			modifier = {
