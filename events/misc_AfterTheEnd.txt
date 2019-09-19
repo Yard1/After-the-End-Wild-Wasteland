@@ -10984,6 +10984,17 @@ character_event = {
 
 				if = {
 					limit = {
+						OR = {
+							religion = americanist
+							religion = hamiltonian
+							religion = jeffersonian
+						}
+					}
+					character_event = { id = ATE_WWW_RELIGION.16 }
+				}
+
+				if = {
+					limit = {
 						primary_title = { is_law_potential = succ_brethren_elective }
 					}
 					primary_title = { add_law = { law = succ_brethren_elective cooldown = no opinion_effect = no } }
