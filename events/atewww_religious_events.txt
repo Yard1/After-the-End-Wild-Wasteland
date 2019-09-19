@@ -733,6 +733,7 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	religion_group = oldworld
+	only_playable = yes
 	ai = yes
 	min_age = 16
 
