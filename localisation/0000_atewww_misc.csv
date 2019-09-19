@@ -84,28 +84,28 @@ EVTOPTD_ATE_WWW_MEDICINE_2;Maybe that is not such a good idea...;;;;;;;;;;;;;x
 # [Root.GetYouOrPhysician] - "you" or "your court physician"
 # [Root.GetYouOrPhysicianS] - "" or "s", to be used with verbs - determine[Root.GetYouOrPhysicianS]
 # [Root.GetYouOrPhysicianHaveHas] - "have" or "has"
-EVTDESC_ATE_WWW_MEDICINE_3_CANT_IDENTIFY;Can't identify;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_3_ANTIBIOTICS;Identified as antibiotics;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_3_ANTIVIRALS;Identified as antivirals;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_3_VITAMINS;Identified as supplements;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_3_VIAGRA;Identified as a virility pill;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_3_ANTIDEPRESSANTS;Identified as psychoactive drugs;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_3_PAINKILLERS;Identified as painkillers;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_3_SUGAR;Identified as not working/expired/whatever;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_CANT_IDENTIFY;No matter how much time [Root.GetYouOrPhysician] spend[Root.GetYouOrPhysicianS] over those tiny pills, no useful insight can be gained into their workings. With how little remains, no further study can be conducted.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_ANTIBIOTICS;After some time [Root.GetYouOrPhysician] [Root.GetYouOrPhysicianHaveHas] identified those tablets as so-called "antibiotics". As stated in dusty old tomes, they are used to treat "bacterial" diseases - whatever that means.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_ANTIVIRALS;After some time [Root.GetYouOrPhysician] [Root.GetYouOrPhysicianHaveHas] identified those tablets as so-called "antivirals". As stated in dusty old tomes, they are used to treat "viral" diseases - whatever that means.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_VITAMINS;The pills turn out to be made out of a strengthening concoction that revitalizes ones' body - at least that is what [Root.GetYouOrPhysician] think[Root.GetYouOrPhysicianS].;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_VIAGRA;After a period of study, [Root.GetYouOrPhysician] determine[Root.GetYouOrPhysicianS] that the medicaments are in fact legendary ancient aphrodisiacs, allowing a [Root.GetManWoman] to reach fantastical heights during the act of love.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_ANTIDEPRESSANTS;Those medicaments, as [Root.GetYouOrPhysician] [Root.GetYouOrPhysicianHaveHas] conculded, are the "mind-healers" of old - not intended to heal the body, but the soul from any blemishes.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_PAINKILLERS;The medicaments studied by [Root.GetYouOrPhysician] turn out to be the "killers of pain" - while they do not cure the body, they miraculously take all the pain away, making any illness much more bearable.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_SUGAR;Sadly, the ancient chemicals in those pills have either lost their potency, or indeed, never had it at all. They are not good for anything, [Root.GetYouOrPhysician] think[Root.GetYouOrPhysicianS].;;;;;;;;;;;;;x
 
 EVTOPTA_ATE_WWW_MEDICINE_3;There are still more to study.;;;;;;;;;;;;;x
 EVTOPTB_ATE_WWW_MEDICINE_3;That is enough.;;;;;;;;;;;;;x
 
-EVTDESC_ATE_WWW_MEDICINE_5_SUCCESS;Success, you are cured from your disease;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_5_PAINKILLERS;Painkillers kill pain and you feel better;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_5_VIAGRA;viagra works;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_5_VITAMINS;You took supplements and you feel better;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_5_ANTIDEPRESSANT;You took psychoactives and you feel your mind clearing;;;;;;;;;;;;;x
-EVTDESC_ATE_WWW_MEDICINE_5_FUMBLE;You do not feel any different;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_SUCCESS;The miracle comes in the form of a small pill. After a few days, the disease that has been ravaging your body all but disappears, driven back by the creation of the ancients - this is a feat no modern physician could manage on their own.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_PAINKILLERS;While the symptoms of your illness do not disappear, the pain and malaise does. You may not be fully healthy - but you feel almost as well as if you were.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_VIAGRA;The effects of the pill are... profound. You can feel a tremendous increase in your libido, a mysterious energy pushing your sex drive to its limit!;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_VITAMINS;While the medicaments you took did not seem to have any instant effect, during the following days you have noticed your health improving slightly, feeling better overall.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_ANTIDEPRESSANT;The mysterious medicaments of old cleared your mind, finally allowing you to think clearly. You may not know how they work, but you certainly can appreciate the effect.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_FUMBLE;Despite taking the Old World pills, you do not notice any changes in your health or demeanor. It seems that they have no effect.;;;;;;;;;;;;;x
 
 EVTOPTA_ATE_WWW_MEDICINE_5;And to think such miracles were once commonplace.;;;;;;;;;;;;;x
 EVTOPTB_ATE_WWW_MEDICINE_5;I feel better, but my stomach hurts...;;;;;;;;;;;;;x
-EVTOPTC_ATE_WWW_MEDICINE_5;Ouch, my stomach hurts...;;;;;;;;;;;;;x
+EVTOPTC_ATE_WWW_MEDICINE_5;But my stomach hurts...;;;;;;;;;;;;;x
 EVTOPTD_ATE_WWW_MEDICINE_5;What a waste of time.;;;;;;;;;;;;;x
 
 taken_vitamins;Taken Old World Supplements;;;;;;;;;;;;;x

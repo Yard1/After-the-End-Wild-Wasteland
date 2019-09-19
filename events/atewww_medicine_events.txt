@@ -1482,6 +1482,7 @@ character_event = {
 	}
 	desc = {
 		trigger = {
+			has_character_flag = was_sick
 			has_character_modifier = taken_painkillers
 		}
 		text = EVTDESC_ATE_WWW_MEDICINE_5_PAINKILLERS
@@ -1519,7 +1520,10 @@ character_event = {
 					character_disease_trigger = no
 					NOT = { has_trait = ill }
 				}
-				has_character_modifier = taken_painkillers
+				AND = {
+					has_character_flag = was_sick
+					has_character_modifier = taken_painkillers
+				}
 				has_character_modifier = taken_viagra
 				has_character_modifier = taken_viagra_female
 				has_character_modifier = taken_vitamins
@@ -1552,7 +1556,10 @@ character_event = {
 					character_disease_trigger = no
 					NOT = { has_trait = ill }
 				}
-				has_character_modifier = taken_painkillers
+				AND = {
+					has_character_flag = was_sick
+					has_character_modifier = taken_painkillers
+				}
 				has_character_modifier = taken_viagra
 				has_character_modifier = taken_viagra_female
 				has_character_modifier = taken_vitamins
@@ -1589,7 +1596,10 @@ character_event = {
 					character_disease_trigger = no
 					NOT = { has_trait = ill }
 				}
-				has_character_modifier = taken_painkillers
+				AND = {
+					has_character_flag = was_sick
+					has_character_modifier = taken_painkillers
+				}
 				has_character_modifier = taken_viagra
 				has_character_modifier = taken_viagra_female
 				has_character_modifier = taken_vitamins
@@ -1632,7 +1642,10 @@ character_event = {
 					character_disease_trigger = no
 					NOT = { has_trait = ill }
 				}
-				has_character_modifier = taken_painkillers
+				AND = {
+					has_character_flag = was_sick
+					has_character_modifier = taken_painkillers
+				}
 				has_character_modifier = taken_viagra
 				has_character_modifier = taken_viagra_female
 				has_character_modifier = taken_vitamins
@@ -1676,7 +1689,10 @@ character_event = {
 					character_disease_trigger = no
 					NOT = { has_trait = ill }
 				}
-				has_character_modifier = taken_painkillers
+				AND = {
+					has_character_flag = was_sick
+					has_character_modifier = taken_painkillers
+				}
 				has_character_modifier = taken_viagra
 				has_character_modifier = taken_viagra_female
 				has_character_modifier = taken_vitamins
