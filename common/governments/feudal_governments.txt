@@ -29,6 +29,14 @@ feudal_governments = {
 				}
 			}
 			NOT = {	religion = cetic }
+			OR = {
+				mercenary = yes
+				NOT = { religion = jeffersonian }
+				AND = {
+					independent = no
+					liege = { NOT = { government = militarist_government } }
+				}
+			}
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			#NOT = { is_government_potential = colonial_government }
@@ -154,7 +162,6 @@ feudal_governments = {
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
 			}
-			NOT = {	religion = cetic }
 			AND = {
 				religion = gaian
 				higher_tier_than = BARON

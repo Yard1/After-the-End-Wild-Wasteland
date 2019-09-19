@@ -451,7 +451,8 @@
 	dynasty = 2029096 # Jet
 	dna = "chhditjfgce"
 	culture = southron
-	religion = americanist
+	religion = jeffersonian
+	secret_religion = americanist
 	female = yes
 	father = 1861125
 	mother = 1861126

@@ -19,3 +19,34 @@ government_flavor = {
 		}
 	}
 }
+
+government_flavor = {
+	name = gov_militarist_government_autocracy
+	graphics = GFX_evt_throne_room
+	priority = 1
+	trigger = {
+		government = militarist_government
+	}	
+}
+
+government_flavor = {
+	name = gov_militarist_government_council
+	graphics = GFX_evt_found_hre
+	priority = 2
+	trigger = {
+		government = militarist_government
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			calc_true_if = {
+				amount = 6
+				has_law = law_voting_power_1
+				has_law = banish_voting_power_1
+				has_law = execution_voting_power_1
+				has_law = revoke_title_voting_power_1
+				has_law = grant_title_voting_power_1
+				has_law = imprison_voting_power_1
+				has_law = war_voting_power_1
+			}
+		}
+	}
+}

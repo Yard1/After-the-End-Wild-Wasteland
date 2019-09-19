@@ -279,6 +279,13 @@ feudal_elective = {
 				}
 			}
 		}
+		additive_modifier = {
+			value = -100
+			FROMFROM = {
+				holder_scope = { government = militarist_government }
+			}
+			NOT = { government = militarist_government }
+		}
 	}
 	candidate_vote_score = {
 		days = 0
@@ -964,6 +971,158 @@ feudal_elective = {
 				character = FROM
 			}
 			FROM = { piety = 500 }
+		}
+
+		#ROMAN ATTRIBUTES
+		additive_modifier = { # Roman Generals
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_commander_martial
+			government = militarist_government
+			NOT = {
+				is_merchant_republic = yes
+			}
+			FROM = { 
+				martial = 10
+				NOT = { 
+					martial = 12
+				}
+			}
+		}
+		additive_modifier = { # Roman Generals
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_commander_martial
+			government = militarist_government
+			NOT = {
+				is_merchant_republic = yes
+			}
+			FROM = { 
+				martial = 12
+				NOT = { 
+					martial = 16
+				}
+			}
+		}
+		additive_modifier = { # Roman Generals
+			value = 15
+			localisation_key = tooltip_feudal_elector_vote_commander_martial
+			government = militarist_government
+			NOT = {
+				is_merchant_republic = yes
+			}
+			FROM = { 
+				martial = 16
+				NOT = { 
+					martial = 18
+				}
+			}
+		}
+		additive_modifier = { # Roman Generals
+			value = 20
+			localisation_key = tooltip_feudal_elector_vote_commander_martial
+			government = militarist_government
+			NOT = {
+				is_merchant_republic = yes
+			}
+			FROM = { 
+				martial = 18
+				NOT = { 
+					martial = 20
+				}
+			}
+		}
+		additive_modifier = { # Roman Generals
+			value = 25
+			localisation_key = tooltip_feudal_elector_vote_commander_martial
+			government = militarist_government
+			NOT = {
+				is_merchant_republic = yes
+			}
+			FROM = { 
+				martial = 20
+				NOT = { 
+					martial = 25
+				}
+			}
+		}
+		additive_modifier = { # Roman Generals
+			value = 30
+			localisation_key = tooltip_feudal_elector_vote_commander_martial
+			government = militarist_government
+			NOT = {
+				is_merchant_republic = yes
+			}
+			FROM = { 
+				martial = 30
+			}
+		}
+
+		#Wrong tier
+		additive_modifier = { 
+			value = -100
+			localisation_key = tooltip_feudal_elector_vote_wrong_tier
+			government = militarist_government
+			FROMFROM = { 
+				holder_scope = { government = militarist_government }
+				tier = EMPEROR
+			}
+			FROM = { 
+				NOT = {
+					real_tier = KING
+				}
+			}
+		}
+
+		additive_modifier = { 
+			value = -100
+			localisation_key = tooltip_feudal_elector_vote_wrong_tier
+			government = militarist_government
+			FROMFROM = { 
+				holder_scope = { government = militarist_government }
+				tier = KING
+			}
+			FROM = { 
+				NOT = {
+					real_tier = DUKE
+				}
+			}
+		}
+		additive_modifier = { 
+			value = -100
+			localisation_key = tooltip_feudal_elector_vote_wrong_tier
+			government = militarist_government
+			FROMFROM = { 
+				holder_scope = { government = militarist_government }
+				tier = DUKE
+			}
+			FROM = { 
+				NOT = {
+					real_tier = COUNT
+				}
+				NOR = {
+					is_landed = yes
+					has_minor_title = title_commander
+					has_job_title = job_marshal
+				}
+			}
+		}
+		additive_modifier = { 
+			value = -50
+			localisation_key = tooltip_feudal_elector_vote_wrong_tier
+			government = militarist_government
+			FROMFROM = { 
+				holder_scope = { government = militarist_government }
+				tier = DUKE
+			}
+			FROM = { 
+				NOT = {
+					real_tier = COUNT
+				}
+				OR = {
+					is_landed = yes
+					has_minor_title = title_commander
+					has_job_title = job_marshal
+				}
+			}
 		}
 
 		#Educational preferences
@@ -3575,7 +3734,7 @@ feudal_elective = {
 					OR = { #Either defacto direct vassal, or independent ruler who is dejure vassal.
 						vassal_of = ROOT 
 						AND = { 
-						 	any_dejure_liege = { title = ROOT } 
+						 	any_dejure_liege = { title = FROMFROM } 
 							independent = yes
 						}
 					}

@@ -375,3 +375,332 @@ character_event = {
 		}
 	}
 }
+
+character_event = {
+	id = ATE_WWW_RELIGION.8
+	desc = "Make sure the Marshal is always the regent for militarists"
+	hide_window = yes
+	only_playable = yes
+	religion = jeffersonian
+	
+	trigger = {
+		government = militarist_government
+		job_marshal = {
+			always = yes
+		}
+		job_marshal = {
+			NOT = { has_minor_title = title_appointed_regent }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	immediate = {
+		any_courtier_or_vassal = {
+			limit = { has_minor_title = title_appointed_regent }
+			remove_title = title_appointed_regent
+			remove_opinion = { who = ROOT modifier = opinion_revoked_honorary_title }
+		}
+		job_marshal = {
+			if = {
+				limit = { can_hold_title = title_appointed_regent }
+				give_minor_title = title_appointed_regent
+			}
+		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.9
+	desc = "Re check tax variable"
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		is_feudal = yes
+		higher_tier_than = baron
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		character_event = { id = ATE_WWW_RELIGION.10 days = 1 }
+	}
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.10
+	desc = "Re check tax variable"
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				higher_tier_than = baron
+			}
+			set_variable = { which = current_feudal_tax_level value = 0 }
+			if = {
+				limit = {
+					OR = {
+						has_law = tax_levy_law_feudal_0
+						has_law = tax_levy_law_militarist_0
+					}
+				}
+				set_variable = { which = current_feudal_tax_level value = 1 }
+				break = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						has_law = tax_levy_law_feudal_1
+						has_law = tax_levy_law_militarist_1
+					}
+				}
+				set_variable = { which = current_feudal_tax_level value = 2 }
+				break = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						has_law = tax_levy_law_feudal_2
+						has_law = tax_levy_law_militarist_2
+					}
+				}
+				set_variable = { which = current_feudal_tax_level value = 3 }
+				break = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						has_law = tax_levy_law_feudal_3
+						has_law = tax_levy_law_militarist_3
+					}
+				}
+				set_variable = { which = current_feudal_tax_level value = 4 }
+				break = yes
+			}
+			# 4 ommited on purpose
+			if = {
+				limit = {
+					OR = {
+						has_law = tax_levy_law_feudal_5
+						has_law = tax_levy_law_militarist_5
+					}
+				}
+				set_variable = { which = current_feudal_tax_level value = 6 }
+				break = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						has_law = tax_levy_law_feudal_6
+						has_law = tax_levy_law_militarist_6
+					}
+				}
+				set_variable = { which = current_feudal_tax_level value = 7 }
+				break = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						has_law = tax_levy_law_feudal_7
+						has_law = tax_levy_law_militarist_7
+					}
+				}
+				set_variable = { which = current_feudal_tax_level value = 8 }
+				break = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						has_law = tax_levy_law_feudal_8
+						has_law = tax_levy_law_militarist_8
+					}
+				}
+				set_variable = { which = current_feudal_tax_level value = 9 }
+				break = yes
+			}
+		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.11
+	desc = "Clear militarist_let_ruler_pick"
+	hide_window = yes
+	only_playable = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			FROM = { has_title_flag = militarist_ruler_pick }
+			any_playable_ruler = {
+				FROMFROM = { 
+					NOT = { is_liege_of = PREV }
+					has_character_flag = militarist_let_ruler_pick_@PREV
+				}
+			}
+		}
+	}
+
+	immediate = {
+		any_playable_ruler = {
+			if = {
+				limit = {
+					FROM = { has_title_flag = militarist_ruler_pick_@PREV }
+				}
+				FROM = { 
+					clr_title_flag = militarist_ruler_pick_@PREV 
+					clr_title_flag = militarist_ruler_pick
+				}
+				clr_character_flag = militarist_let_ruler_pick_@FROMFROM
+			}
+			if = {
+				limit = {
+					FROMFROM = { 
+						NOT = { is_liege_of = PREV }
+						has_character_flag = militarist_let_ruler_pick_@PREV
+					}
+				}
+				FROMFROM = { clr_character_flag = militarist_let_ruler_pick_@PREV }
+			}
+		}	
+	}
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.12
+	desc = "Clear militarist_let_ruler_pick"
+	hide_window = yes
+	only_playable = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			primary_title = { has_title_flag = militarist_ruler_pick }
+			any_realm_title = {
+				has_title_flag = militarist_ruler_pick_@ROOT
+			}
+		}
+	}
+
+	immediate = {
+		any_playable_ruler = {
+			ROOT = {
+				primary_title = {
+					clr_title_flag = militarist_ruler_pick_@PREVPREV
+					clr_title_flag = militarist_ruler_pick
+				}
+			}
+			clr_character_flag = militarist_let_ruler_pick_@ROOT
+		}
+		any_realm_title = {
+			clr_title_flag = militarist_ruler_pick_@ROOT
+		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.13
+	desc = "Clear militarist_let_ruler_pick"
+	hide_window = yes
+	only_playable = yes
+	religion = jeffersonian
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		liege = {
+			has_character_flag = militarist_let_ruler_pick_@ROOT 
+			ROOT = { 
+				primary_title = { 
+					has_law = succ_militarist_appointment
+					has_title_flag = militarist_ruler_pick_@PREVPREV
+				} 
+			}
+		}
+	}
+
+	immediate = {
+		liege = {
+			clr_character_flag = militarist_let_ruler_pick_@ROOT
+			ROOT = {
+				primary_title = { 
+					clr_title_flag = militarist_ruler_pick_@PREVPREV
+				}
+			}
+		}
+	}
+}
+
+letter_event = {
+	id = ATE_WWW_RELIGION.14
+	is_triggered_only = yes
+	border = GFX_event_letter_frame_diplomacy
+	
+	trigger = {
+		ai = no
+	}
+
+	desc = EVTDESC_ATE_WWW_RELIGION_14
+
+	option = {
+		name = OK
+		FROM = { show_portrait = yes }
+	}
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.15
+	desc = "Clear militarist_let_ruler_pick"
+	hide_window = yes
+	only_playable = yes
+	religion = jeffersonian
+	is_triggered_only = yes
+
+	trigger = {
+		government = militarist_government
+		OR = {
+			AND = {
+				independent = no
+				primary_title = {
+					NOT = { has_law = succ_militarist_appointment }
+					is_law_potential = succ_militarist_appointment
+				}
+			}
+			AND = {
+				independent = yes
+				primary_title = {
+					NOT = { has_law = succ_feudal_elective }
+					is_law_potential = succ_feudal_elective
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { independent = no }
+			primary_title = {
+				add_law = { law = succ_militarist_appointment cooldown = no opinion_effect = no }
+			}
+		}
+		else = {
+			primary_title = {
+				add_law = { law = succ_feudal_elective cooldown = no opinion_effect = no }
+			}
+		}
+		if = {
+			limit = {
+				primary_title = { has_law = revoke_title_law_0 }
+			}
+			primary_title = { add_law = { law = revoke_title_law_1 cooldown = no opinion_effect = no } }
+		}
+	}
+}

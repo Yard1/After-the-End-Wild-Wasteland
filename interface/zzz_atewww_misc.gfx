@@ -4,4 +4,8 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\laws_gender_strip.dds"
 		noOfFrames = 5
 	}
+	spriteType = {
+		name = "GFX_icon_militarist_government"
+		texturefile = "gfx\\interface\\government_icon_militarist_government.dds"
+	}
 }

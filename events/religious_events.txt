@@ -2828,7 +2828,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.75
-			trait = crusader
+			has_crusade_trait_trigger = yes
 		}
 		modifier = {
 			factor = 0.75

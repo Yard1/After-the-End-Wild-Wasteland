@@ -191,3 +191,16 @@ character_event = {
 	}
 
 }
+
+character_event = {
+	id = ATE_WWW_DEBUG.5
+	desc = "DEBUG"
+	picture = GFX_evt_capitol_building
+	
+	is_triggered_only = yes
+	
+	option = {
+		set_defacto_liege = THIS
+	}
+
+}

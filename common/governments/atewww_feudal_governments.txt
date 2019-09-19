@@ -1,0 +1,77 @@
+feudal_governments = {
+
+	militarist_government = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = { 
+			CASTLE 
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			constitutional_rep
+			feudal_government
+			bureaucratic_government
+			theocratic_feudal_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			feudal_government
+			bureaucratic_government
+			theocratic_feudal_government
+			tribal_government
+		}
+		potential = {
+			OR = {
+				controls_religion = no
+				has_religion_temporal_head = yes
+				AND = {
+					has_religion_with_temporal_head = yes
+					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
+				}
+			}
+			religion = jeffersonian
+			OR = {
+				independent = yes
+				liege = { government = militarist_government }
+			}
+			NOT = { is_government_potential = roman_imperial_government }
+			NOT = { is_government_potential = order_government }
+			NOT = { is_government_potential = military_governorate }
+			is_patrician = no
+			mercenary = no
+		}
+		
+		color = { 75 83 32 }
+		
+		barons_need_dynasty = yes
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+
+		can_grant_kingdoms_and_empires_to_other_government = yes
+		can_grant_kingdoms_and_empires_to_other_government_group = yes
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		can_be_granted_kingdoms_and_empires_by_other_government_group = no
+
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		
+		capital_move_delay = 600
+		
+		court_size_modifier = 10
+
+		unit_modifier = {
+			levy_size = -0.15
+			retinuesize_perc = 0.25
+			key = "OFF_RELIGION"
+		}
+	}
+}

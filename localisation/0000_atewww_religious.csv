@@ -93,6 +93,7 @@ mib_elective;Appointment;;;;;;;;;;;;;x
 hamiltonian;Madisonian;;;;;;;;;;;;;x
 hamiltonian_DESC;Madisonians differ from mainstream Americanism in that they consider the judicary the supreme branch of the government. Legends of Justices of the Supreme Court fighting against tyrannical Presidents and Congressmen have filled them with a conviction that a Chief Justice of the Supreme Court is the superior authority on all matters spiritual and temporal.;;;;;;;;;;;;;x
 THE_CODE_OF_LAWS;The Code of Laws;;;;;;;;;;;;;x
+GOD_THE_JUSTICES;The Justices;;;;;;;;;;;;;x
 
 gov_supreme_court;Supreme Court;;;;;;;;;;;;;x
 
@@ -124,7 +125,6 @@ WAR_NAME_DEPOSE_IMPIOUS_JUDGE;$FIRST_ADJ$ War for the [Root.GetConclaveName];;;;
 depose_impious_judge_desc;A war over the [Root.GetConclaveName], and what is the righteous way forward for the faith.;;;;;;;;;;;;;x
 depose_impious_judge_modifier;Overthrew immoral [Root.RelHead.GetTitle];;;;;;;;;;;;;x
 failed_to_depose_impious_judge_modifier;Impious [Root.RelHead.GetTitle] won the war for the [Root.GetConclaveName];;;;;;;;;;;;;x
-sendforsupremejudge
 scorned_the_judge;By not seeking legitimacy directly from the [Root.GetConclaveName], your inauguration will §ROffend§! the §Y[Root.RelHead.GetTitle]§!.;;;;;;;;;;;;;x
 
 string_crowned_by_bishop_alive_desc;the [coronation_priest_per.GetTitle] of [coronation_priest_per.Capital.GetName];[coronation_priest_per.Get_only_le_Title][coronation_priest_per.GetTitle] de [coronation_priest_per.Capital.GetName];[coronation_priest_per.Getdemder] [coronation_priest_per.GetTitle] von [coronation_priest_per.Capital.GetName];;el [coronation_priest_per.GetTitle] de [coronation_priest_per.Capital.GetName];;;;;;;;x
@@ -174,6 +174,44 @@ GOD_CHAIN_OF_COMMAND;The Chain Of Command;;;;;;;;;;;;;x
 GOD_HIGH_COMMAND;High Command;;;;;;;;;;;;;x
 GOD_THE_GENERALS;The Generals;;;;;;;;;;;;;x
 THE_ARTICLES_OF_WAR;Articles of War;;;;;;;;;;;;;x
+MILITARY_OPERATION;Campaign;;;;;;;;;;;;;x
+THE_DRAFT_DODGER;The Draft Dodger;;;;;;;;;;;;;x
+
+militarist_government;Militarist Feudal;;;;;;;;;;;;;x
+militarist_government_desc;The Militarist Feudal government, much like the ordinary Feudal government, revolves around the oath between liege and vassal, and Militarist Feudal lords can only directly own so many Holdings before they must start to rely on vassals - whose loyalty may vary... The Militarist Feudal government is unique to the [jeffersonian.GetName] faith, and forces a unique succession form on all vassals above Count tier, where the direct liege chooses the successor of the vassals below them. Rulers are not allowed to imprison vassals or revoke their titles unless they have broken the law. If you should convert to a non-[jeffersonian.GetName] religion, or become a vassal of a non-[jeffersonian.GetName] ruler, your government form will change to Feudal.;;;;;;;;;;;;;x
+tooltip_feudal_elector_vote_wrong_tier;[From.GetSheHeCap] is of wrong tier;;;;;;;;;;;;;x
+
+gov_militarist_government_autocracy;Militarist [PrimaryTitle.GetTier];[PrimaryTitle.GetTier] (régime électoral et despotique);[PrimaryTitle.GetTier] (Despotisch und mit Elektorat);;[PrimaryTitle.GetTier] despótico electivo;;;;;;;;;x
+gov_militarist_government_council;Militarist Junta [PrimaryTitle.GetTier];[PrimaryTitle.GetTier] (régime héréditaire et aristocratique);[PrimaryTitle.GetTier] (Aristokratisch und mit Erbfolge);;[PrimaryTitle.GetTier] aristocrático hereditario ;;;;;;;;;x
+
+tax_levy_law_militarist;Noble;Noblesse;Adlige;;Noble;;;;;;;;;x
+tax_levy_law_militarist_desc;Noble Obligation Laws;Lois d'obligations nobles;Adelspflichten;;Leyes de la obligación de la nobleza;;;;;;;;;x
+tax_levy_law_militarist_0;Heavily Tax Focused Noble Obligations;Obligations nobles - Impôt lourd;Adelspflichten: deutlicher Steuerfokus;;Obligaciones nobles profundamente centradas en los impuestos;;;;;;;;;x
+tax_levy_law_militarist_0_desc;This law governs how much tax and levies the gentry in the realm are obliged to contribute. The gentry tend to favor paying taxes over making troops available for their liege.;Cette loi détermine de combien d'impôts et de levées de troupes les vassaux nobles du royaume sont obligés de s'acquitter. La petite noblesse a tendance à favoriser le paiement d'impôts à la levée de troupes pour son seigneur lige.;Das Gesetz reguliert, wie viele Steuern und Truppen die Oberschicht zu liefern hat. Die Oberschicht zieht es vor, dem Lehnsherrn Geld statt Truppen zu liefern.;;Esta ley determina con cuántos impuestos y levas está obligada a contribuir la nobleza del reino. La nobleza tiende a favorecer el pago de impuestos frente a poner disponibles para su señor.;;;;;;;;;x
+tax_levy_law_militarist_1;Tax Focused Noble Obligations;Obligations nobles - Impôt modéré;Adelspflichten: Steuerfokus;;Obligaciones nobles centradas en los impuestos;;;;;;;;;x
+tax_levy_law_militarist_1_desc;This law governs how much tax and levies the gentry in the realm are obliged to contribute. The gentry tend to favor paying taxes over making troops available for their liege.;Cette loi détermine de combien d'impôts et de levées de troupes les vassaux nobles du royaume sont obligés de s'acquitter. La petite noblesse a tendance à favoriser le paiement d'impôts à la levée de troupes pour son seigneur lige.;Das Gesetz reguliert, wie viele Steuern und Truppen die Oberschicht zu liefern hat. Die Oberschicht zieht es vor, dem Lehnsherrn Geld statt Truppen zu liefern.;;Esta ley determina con cuántos impuestos y levas está obligada a contribuir la nobleza del reino. La nobleza tiende a favorecer el pago de impuestos frente a poner disponibles para su señor.;;;;;;;;;x
+tax_levy_law_militarist_2;Slightly Tax Focused Noble Obligations;Obligations nobles - Léger impôt;Adelspflichten: leichter Steuerfokus;;Obligaciones nobles ligeramente centradas en los impuestos;;;;;;;;;x
+tax_levy_law_militarist_2_desc;This law governs how much tax and levies the gentry in the realm are obliged to contribute. The gentry tend to favor paying taxes over making troops available for their liege.;Cette loi détermine de combien d'impôts et de levées de troupes les vassaux nobles du royaume sont obligés de s'acquitter. La petite noblesse a tendance à favoriser le paiement d'impôts à la levée de troupes pour son seigneur lige.;Das Gesetz reguliert, wie viele Steuern und Truppen die Oberschicht zu liefern hat. Die Oberschicht zieht es vor, dem Lehnsherrn Geld statt Truppen zu liefern.;;Esta ley determina con cuántos impuestos y levas está obligada a contribuir la nobleza del reino. La nobleza tiende a favorecer el pago de impuestos frente a poner disponibles para su señor.;;;;;;;;;x
+tax_levy_law_militarist_3;Tax Shifted Noble Obligations;Obligations nobles - Très léger impôt;Adelspflichten: minimaler Steuerfokus;;Obligaciones nobles favorables a los impuestos;;;;;;;;;x
+tax_levy_law_militarist_3_desc;This law governs how much tax and levies the gentry in the realm are obliged to contribute. The gentry tend to favor paying taxes over making troops available for their liege.;Cette loi détermine de combien d'impôts et de levées de troupes les vassaux nobles du royaume sont obligés de s'acquitter. La petite noblesse a tendance à favoriser le paiement d'impôts à la levée de troupes pour son seigneur lige.;Das Gesetz reguliert, wie viele Steuern und Truppen die Oberschicht zu liefern hat. Die Oberschicht zieht es vor, dem Lehnsherrn Geld statt Truppen zu liefern.;;Esta ley determina con cuántos impuestos y levas está obligada a contribuir la nobleza del reino. La nobleza tiende a favorecer el pago de impuestos frente a poner disponibles para su señor.;;;;;;;;;x
+tax_levy_law_militarist_4;Balanced Noble Obligations;Obligations nobles - Équilibre;Adelspflichten: ausgeglichen;;Obligaciones noble equilibradas;;;;;;;;;x
+tax_levy_law_militarist_4_desc;This law governs how much tax and levies the gentry in the realm are obliged to contribute. The gentry tend to favor paying taxes over making troops available for their liege.;Cette loi détermine de combien d'impôts et de levées de troupes les vassaux nobles du royaume sont obligés de s'acquitter. La petite noblesse a tendance à favoriser le paiement d'impôts à la levée de troupes pour son seigneur lige.;Das Gesetz reguliert, wie viele Steuern und Truppen die Oberschicht zu liefern hat. Die Oberschicht zieht es vor, dem Lehnsherrn Geld statt Truppen zu liefern.;;Esta ley determina con cuántos impuestos y levas está obligada a contribuir la nobleza del reino. La nobleza tiende a favorecer el pago de impuestos frente a poner disponibles para su señor.;;;;;;;;;x
+tax_levy_law_militarist_5;Levy Shifted Noble Obligations;Obligations nobles - Très légère levée;Adelspflichten: minimaler Truppenfokus;;Obligaciones nobles favorables a las levas;;;;;;;;;x
+tax_levy_law_militarist_5_desc;This law governs how much tax and levies the gentry in the realm are obliged to contribute. The gentry tend to favor paying taxes over making troops available for their liege.;Cette loi détermine de combien d'impôts et de levées de troupes les vassaux nobles du royaume sont obligés de s'acquitter. La petite noblesse a tendance à favoriser le paiement d'impôts à la levée de troupes pour son seigneur lige.;Das Gesetz reguliert, wie viele Steuern und Truppen die Oberschicht zu liefern hat. Die Oberschicht zieht es vor, dem Lehnsherrn Geld statt Truppen zu liefern.;;Esta ley determina con cuántos impuestos y levas está obligada a contribuir la nobleza del reino. La nobleza tiende a favorecer el pago de impuestos frente a poner disponibles para su señor.;;;;;;;;;x
+tax_levy_law_militarist_6;Slightly Levy Focused Noble Obligations;Obligations nobles - Légère levée;Adelspflichten: leichter Truppenfokus;;Obligaciones nobles ligeramente centradas en las levas;;;;;;;;;x
+tax_levy_law_militarist_6_desc;This law governs how much tax and levies the gentry in the realm are obliged to contribute. The gentry tend to favor paying taxes over making troops available for their liege.;Cette loi détermine de combien d'impôts et de levées de troupes les vassaux nobles du royaume sont obligés de s'acquitter. La petite noblesse a tendance à favoriser le paiement d'impôts à la levée de troupes pour son seigneur lige.;Das Gesetz reguliert, wie viele Steuern und Truppen die Oberschicht zu liefern hat. Die Oberschicht zieht es vor, dem Lehnsherrn Geld statt Truppen zu liefern.;;Esta ley determina con cuántos impuestos y levas está obligada a contribuir la nobleza del reino. La nobleza tiende a favorecer el pago de impuestos frente a poner disponibles para su señor.;;;;;;;;;x
+tax_levy_law_militarist_7;Levy Focused Noble Obligations;Obligations nobles - Levée modérée;Adelspflichten: Truppenfokus;;Obligaciones nobles centradas en las levas;;;;;;;;;x
+tax_levy_law_militarist_7_desc;This law governs how much tax and levies the gentry in the realm are obliged to contribute. The gentry tend to favor paying taxes over making troops available for their liege.;Cette loi détermine de combien d'impôts et de levées de troupes les vassaux nobles du royaume sont obligés de s'acquitter. La petite noblesse a tendance à favoriser le paiement d'impôts à la levée de troupes pour son seigneur lige.;Das Gesetz reguliert, wie viele Steuern und Truppen die Oberschicht zu liefern hat. Die Oberschicht zieht es vor, dem Lehnsherrn Geld statt Truppen zu liefern.;;Esta ley determina con cuántos impuestos y levas está obligada a contribuir la nobleza del reino. La nobleza tiende a favorecer el pago de impuestos frente a poner disponibles para su señor.;;;;;;;;;x
+tax_levy_law_militarist_8;Heavily Levy Focused Noble Obligations;Obligations nobles - Forte levée;Adelspflichten: deutlicher Truppenfokus;;Obligaciones nobles profundamente centradas en las levas;;;;;;;;;x
+tax_levy_law_militarist_8_desc;This law governs how much tax and levies the gentry in the realm are obliged to contribute. The gentry tend to favor paying taxes over making troops available for their liege.;Cette loi détermine de combien d'impôts et de levées de troupes les vassaux nobles du royaume sont obligés de s'acquitter. La petite noblesse a tendance à favoriser le paiement d'impôts à la levée de troupes pour son seigneur lige.;Das Gesetz reguliert, wie viele Steuern und Truppen die Oberschicht zu liefern hat. Die Oberschicht zieht es vor, dem Lehnsherrn Geld statt Truppen zu liefern.;;Esta ley determina con cuántos impuestos y levas está obligada a contribuir la nobleza del reino. La nobleza tiende a favorecer el pago de impuestos frente a poner disponibles para su señor.;;;;;;;;;x
+
+succ_militarist_appointment;Militarist Appointment;;;;;;;;;;;;;x
+succ_feudal_elective_desc;The ruler and their liege can nominate a successor from among the vassals of the ruler. While the liege has complete control over the selection, the ruler can use Favors to force their nominee to be selected. This succession law is unique for Militarist Feudal realms.;;;;;;;;;;;;;x
+militarist_appointment;Appointment;;;;;;;;;;;;;x
+
+militarist_succession_call_in_favor_targeted;Demand Appointment Support;;;;;;;;;;;;;x
+militarist_succession_call_in_favor_targeted_desc;Spend a §YFavor§! to force your liege to appoint your designated heir as your successor.;;;;;;;;;;;;;x
+militarist_succession_call_in_favor_targeted_tooltip;§Y[Root.GetTitledFirstName]§! will select your designated heir for your successor for 120 months.;;;;;;;;;;;;;x
 
 become_general_of_army;Restore the Supreme Allied Command;;;;;;;;;;;;;x
 become_general_of_army_desc;With some of the most important holy sites of the Militarist faith now under my direct control the time has come to bring order back to America by restoring the Supreme Allied Command;;;;;;;;;;;;;x
@@ -219,10 +257,18 @@ temple_emperor_jeffersonian;Judge Advocate General;;;;;;;;;;;;;x
 temple_emperor_female_jeffersonian;Judge Advocate General;;;;;;;;;;;;;x
 temple_emperor_jeffersonians;Judge Advocate Generals;;;;;;;;;;;;;x
 
+job_chancellor_jeffersonian;Public Affairs Officer;;;;;;;;;;;;;x
+job_treasurer_jeffersonian;Quartermaster;;;;;;;;;;;;;x
+job_marshal_jeffersonian;Executive Officer;;;;;;;;;;;;;x
+job_spymaster_jeffersonian;Intelligence Officer ;;;;;;;;;;;;;x
+job_spiritual_jeffersonian;Judge Advocate General;;;;;;;;;;;;;x
+
 d_forscom;Supreme Allied Command;;;;;;;;;;;;;x
 d_forscom_adj;Supreme;;;;;;;;;;;;;x
 GENERAL_OF_ARMY;Supreme Allied Commander;;;;;;;;;;;;;x
 GENERAL_OF_ARMY_FOA;Sir;;;;;;;;;;;;;x
+service_cross;Service Cross;;;;;;;;;;;;;x
+service_cross_desc;This character has fought to retake holy American land.;;;;;;;;;;;;;
 
 devote_of_macarthur;Devotee Of MacArthur;;;;;;;;;;;;;x
 devote_of_macarthur_desc;This character has chosen to become a devotee of General Douglas MacArthur - The Generalissimo.;;;;;;;;;;;;;x

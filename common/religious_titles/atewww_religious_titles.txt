@@ -17,7 +17,7 @@ title_hamiltonian_justice = {
 	can_elect_head = yes
 	revoke_allowed = no
 	
-	grant_limit = 9
+	grant_limit = 8
 	
 	realm_in_name = no
 	show_as_title = yes

@@ -859,6 +859,7 @@ sword_of_the_lamb  = {
 		thunderbird_warrior
 		raven_warrior
 		dragon_soldier
+		service_cross
 	}
 	
 	martial = 2
@@ -893,6 +894,7 @@ knight_templar  = {
 		thunderbird_warrior
 		raven_warrior
 		dragon_soldier
+		service_cross
 	}
 	
 	martial = 2
@@ -927,6 +929,7 @@ order_of_the_garter = {
 		thunderbird_warrior
 		raven_warrior
 		dragon_soldier
+		service_cross
 	}
 	
 	martial = 2
@@ -972,6 +975,7 @@ danite = {
 		thunderbird_warrior
 		raven_warrior
 		dragon_soldier
+		service_cross
 	}
 	
 	martial = 2
@@ -1006,6 +1010,7 @@ thunderbird_warrior = {
 		danite
 		raven_warrior
 		dragon_soldier
+		service_cross
 	}
 	
 	martial = 2
@@ -1040,6 +1045,7 @@ raven_warrior = {
 		danite
 		thunderbird_warrior
 		dragon_soldier
+		service_cross
 	}
 	
 	martial = 2
@@ -1116,8 +1122,7 @@ secretly_rastafarian = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
-		secretly_monetarist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_aphite
 		secretly_pagan
@@ -1208,7 +1213,7 @@ secretly_voodoo = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -1297,7 +1302,7 @@ secretly_santeria = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -1386,7 +1391,7 @@ secretly_candomble = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -1475,7 +1480,7 @@ secretly_espiritista = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -1565,7 +1570,7 @@ secretly_espiritista_reformed = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -1656,7 +1661,7 @@ secretly_peyotist = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -1748,7 +1753,7 @@ secretly_midewiwin = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -1841,7 +1846,7 @@ secretly_midewiwin_reformed = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -1933,7 +1938,7 @@ secretly_raven_tales = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -2024,7 +2029,7 @@ secretly_raven_tales_reformed = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -2114,7 +2119,7 @@ secretly_catholic = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -2203,7 +2208,7 @@ secretly_neognostic = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -2293,7 +2298,7 @@ secretly_sedevacantist = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -2383,7 +2388,7 @@ secretly_nestorian = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -2473,7 +2478,7 @@ secretly_ursuline = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -2563,7 +2568,7 @@ secretly_angeline = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -2653,7 +2658,7 @@ secretly_confederated = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -2744,7 +2749,7 @@ secretly_anabaptist = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -2835,7 +2840,7 @@ secretly_batenburger = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -2926,7 +2931,7 @@ secretly_evangelical = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -3016,7 +3021,7 @@ secretly_antinomian = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -3108,7 +3113,7 @@ secretly_charismatic = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -3200,7 +3205,7 @@ secretly_postadventist = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -3291,7 +3296,7 @@ secretly_falling_star = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -3382,7 +3387,7 @@ secretly_moravian = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -3472,7 +3477,7 @@ secretly_high_church = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -3562,7 +3567,7 @@ secretly_nonconformist = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -3652,7 +3657,7 @@ secretly_apostolic = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -3742,7 +3747,7 @@ secretly_sacred_heart = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -3832,7 +3837,7 @@ secretly_gracia_divina = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -3922,7 +3927,7 @@ secretly_cetic = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -4012,7 +4017,7 @@ secretly_gaian = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -4102,7 +4107,7 @@ secretly_shinto = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -4192,7 +4197,7 @@ secretly_nousthreskeia = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -4282,7 +4287,7 @@ secretly_mormon = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -4372,7 +4377,7 @@ secretly_bickertonite = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -4462,7 +4467,7 @@ secretly_woolleyite = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -4552,7 +4557,7 @@ secretly_strangite = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -4642,7 +4647,7 @@ secretly_sol_invicta = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -4732,7 +4737,7 @@ secretly_mictlantec = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -4822,7 +4827,7 @@ secretly_uahomche = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -4912,7 +4917,7 @@ secretly_neomayan = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -5002,7 +5007,7 @@ secretly_americanist = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -5092,7 +5097,7 @@ secretly_hamiltonian = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -5182,7 +5187,7 @@ secretly_jeffersonian = {
 		secretly_hamiltonian
 		secretly_americanist
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -5272,7 +5277,7 @@ secretly_libertarian = {
 		secretly_hamiltonian
 		secretly_americanist
 		secretly_jeffersonian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -5341,7 +5346,7 @@ secretly_consumerist = {
 		secretly_charismatic   secretly_postadventist
 		secretly_falling_star   secretly_moravian
 		secretly_high_church
-		
+		secretly_monetarist
 		secretly_nonconformist
 		secretly_apostolic
 		
@@ -5390,6 +5395,96 @@ secretly_consumerist = {
 			AND = {
 				is_close_relative = FROM
 				trait = secretly_consumerist
+			}
+		}
+	}
+
+	same_opinion = 15
+	
+	random = no
+	customizer = no
+	ai_zeal = -50
+}
+#Monetarist
+secretly_monetarist = {
+
+	potential = {
+		NOT = {
+			religion = monetarist
+		}
+	}
+	
+	opposites = {
+		secretly_rastafarian
+		secretly_voodoo
+		secretly_santeria
+		secretly_candomble
+		secretly_espiritista
+		secretly_espiritista_reformed
+		secretly_peyotist   secretly_midewiwin   secretly_midewiwin_reformed
+		secretly_raven_tales   secretly_raven_tales_reformed
+		secretly_catholic
+		secretly_neognostic
+		secretly_sedevacantist
+		secretly_nestorian
+		secretly_ursuline
+		secretly_angeline
+		secretly_confederated
+		secretly_anabaptist   secretly_batenburger
+		secretly_evangelical
+		secretly_antinomian
+		secretly_charismatic   secretly_postadventist
+		secretly_falling_star   secretly_moravian
+		secretly_high_church
+		secretly_consumerist
+		secretly_nonconformist
+		secretly_apostolic
+		
+		secretly_sacred_heart
+		secretly_gracia_divina
+		secretly_cetic
+		secretly_gaian
+		secretly_shinto
+		secretly_nousthreskeia
+		secretly_mormon
+		secretly_bickertonite
+		secretly_woolleyite
+		secretly_strangite
+		secretly_sol_invicta
+		secretly_mictlantec
+		secretly_uahomche
+		secretly_neomayan
+		secretly_hamiltonian
+		secretly_americanist
+		secretly_jeffersonian
+		secretly_libertarian
+		secretly_atomicist
+		secretly_pagan
+		secretly_revelationist_reformed
+		secretly_revelationist
+		secretly_chrome_cultist
+		secretly_rust_cultist
+		secretly_occultist_reformed
+		secretly_occultist
+		secretly_thelemic_reformed
+		secretly_thelemic
+		secretly_norse_pagan_reformed
+		secretly_norse_pagan
+		secretly_celtic_pagan_reformed
+		secretly_celtic_pagan
+		secretly_brethren
+		secretly_jewish
+		secretly_reform   secretly_meshichist
+		secretly_hindu
+	}
+
+	is_visible = {
+		OR = {
+			character = FROM
+			society_member_of = secret_religious_society_monetarist
+			AND = {
+				is_close_relative = FROM
+				trait = secretly_monetarist
 			}
 		}
 	}
@@ -5453,7 +5548,7 @@ secretly_atomicist = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_pagan
 		secretly_revelationist_reformed
 		secretly_revelationist
@@ -5543,7 +5638,7 @@ secretly_aphite = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_pagan
 		secretly_revelationist_reformed
 		secretly_revelationist
@@ -5633,7 +5728,7 @@ secretly_pagan = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_revelationist_reformed
 		secretly_revelationist
@@ -5723,7 +5818,7 @@ secretly_revelationist_reformed = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist
@@ -5813,7 +5908,7 @@ secretly_revelationist = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -5903,7 +5998,7 @@ secretly_chrome_cultist = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -5993,7 +6088,7 @@ secretly_rust_cultist = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -6083,7 +6178,7 @@ secretly_occultist_reformed = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -6173,7 +6268,7 @@ secretly_occultist = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -6263,7 +6358,7 @@ secretly_thelemic_reformed = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -6353,7 +6448,7 @@ secretly_thelemic = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -6443,7 +6538,7 @@ secretly_norse_pagan_reformed = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -6533,7 +6628,7 @@ secretly_norse_pagan = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -6623,7 +6718,7 @@ secretly_celtic_pagan = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -6713,7 +6808,7 @@ secretly_celtic_pagan_reformed = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -6803,7 +6898,7 @@ secretly_brethren = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -6892,7 +6987,7 @@ secretly_jewish = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -6982,7 +7077,7 @@ secretly_reform = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -7072,7 +7167,7 @@ secretly_meshichist = {
 		secretly_hamiltonian
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -7163,7 +7258,7 @@ secretly_hindu = {
 		secretly_americanist
 		secretly_jeffersonian
 		secretly_libertarian
-		secretly_consumerist
+		secretly_consumerist secretly_monetarist
 		secretly_atomicist
 		secretly_pagan
 		secretly_revelationist_reformed
@@ -7231,7 +7326,7 @@ bobo_ashanti = {
 	random = no
 }
 
-freebooter= {
+freebooter = {
 	potential = {
 		OR = {
 			religion = brethren

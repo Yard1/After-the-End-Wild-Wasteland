@@ -73,6 +73,9 @@ e_grand_virginia = {
 		# Crusade target weight
 		catholic = 20
 		americanist = 5
+		jeffersonian = 5
+		hamiltonian = 5
+		libertarian = 5
 		revelationist_reformed = 500
 		rust_cultist = 50
 		occultist_reformed = 5
@@ -491,6 +494,9 @@ e_grand_virginia = {
 		# Crusade target weight
 		catholic = 5
 		americanist = 500
+		jeffersonian = 500
+		hamiltonian = 500
+		libertarian = 500
 		revelationist_reformed = 100
 		rust_cultist = 20
 		occultist_reformed = 20
@@ -724,6 +730,9 @@ e_grand_virginia = {
 		# Crusade target weight
 		catholic = 300
 		americanist = 5
+		jeffersonian = 5
+		hamiltonian = 5
+		libertarian = 5
 		revelationist_reformed = 5000
 		rust_cultist = 20
 
@@ -902,6 +911,8 @@ e_grand_virginia = {
 			color={ 221 188 235 }
 			color2={ 220 220 0 }
 
+			libertarian = 250
+
 			culture = riverlander 
 
 			title_prefix = "GRAND_DIVISION_OF"
@@ -914,6 +925,8 @@ e_grand_virginia = {
 				color={ 215 180 225 }
 				color2={ 220 220 0 }
 				holy_site = libertarian
+
+				libertarian = 750
 
 				b_nashville_TN = {}
 				b_franklin_TN = {}

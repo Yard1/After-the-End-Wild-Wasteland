@@ -20,6 +20,9 @@ e_lone_star = {
 		# Crusade target weight
 		catholic = 100
 		americanist = 5
+		jeffersonian = 5
+		hamiltonian = 5
+		libertarian = 5
 		
 		d_alamo = {
 			color = { 163 132 174 }

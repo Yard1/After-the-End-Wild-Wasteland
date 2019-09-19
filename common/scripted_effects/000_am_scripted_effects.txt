@@ -162,6 +162,17 @@ add_am_crusade_trait_effect = {
 		add_trait = dragon_soldier
 		break = yes
 	}
+	if = {
+		limit = {
+			OR = {
+				religion = americanist
+				religion = jeffersonian
+				religion = hamiltonian
+				religion = libertarian
+			}
+		}
+		add_trait = service_cross
+	}
 }
 
 ##SECRET RELIGIONS##
@@ -5266,7 +5277,7 @@ spawn_fantastic_diplomat_effect = {
 			}
 			random = { 
 				chance = 20 
-				add_trait = crusader
+				add_am_crusade_trait_effect = yes
 			}
 		}
 		

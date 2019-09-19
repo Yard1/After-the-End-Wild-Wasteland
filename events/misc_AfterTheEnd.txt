@@ -11040,6 +11040,10 @@ character_event = {
 					character_event = { id = miscATEWW.5 }
 				}
 
+				character_event = { id = ATE_WWW_RELIGION.8 } #Force militarist marshals to become designated regents
+				character_event = { id = ATE_WWW_RELIGION.10 }
+				character_event = { id = ATE_WWW_RELIGION.15 }
+
 				set_character_flag = historical_character
 			}
 
@@ -11084,6 +11088,10 @@ character_event = {
 					gain_title = PREV
 				}
 			}
+		}
+		b_washington_DC = {
+			set_flag = flag_dedicated_to_washington
+			add_building = tp_shrine_washington
 		}
 	}
 

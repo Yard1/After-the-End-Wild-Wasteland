@@ -382,7 +382,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 1.5
-				trait = crusader
+				has_crusade_trait_trigger = yes
 			}
 			modifier = {
 				factor = 0.5
@@ -694,7 +694,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 1.5
-				trait = crusader
+				has_crusade_trait_trigger = yes
 			}
 			modifier = {
 				factor = 0.5

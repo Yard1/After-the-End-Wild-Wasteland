@@ -21,6 +21,7 @@ on_death = {
 	events = {
 		miscATEWW.4
 		ATE_WWW_PIRATE.4
+		ATE_WWW_RELIGION.12
 	}
 }
 
@@ -87,9 +88,18 @@ on_birth = {
 	}
 }
 
+# ROOT is the creating character, FROM is the title
+on_create_title = {
+	events = {
+		ATE_WWW_RELIGION.9
+	}
+}
+
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder = {
 	events = {
+		ATE_WWW_RELIGION.11
+		ATE_WWW_RELIGION.9
 		ATE_WWW_PIRATE.7
 		miscATEWW.7
 	}
@@ -98,6 +108,8 @@ on_new_holder = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder_inheritance = {
 	events = {
+		ATE_WWW_RELIGION.11
+		ATE_WWW_RELIGION.9
 		ATE_WWW_PIRATE.7
 		miscATEWW.7
 	}
@@ -106,6 +118,8 @@ on_new_holder_inheritance = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder_usurpation = {
 	events = {
+		ATE_WWW_RELIGION.11
+		ATE_WWW_RELIGION.9
 		miscATEWW.7
 	}
 }

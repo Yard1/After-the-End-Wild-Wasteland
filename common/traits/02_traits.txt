@@ -2036,6 +2036,8 @@ valhalla_bound  = {
 		thunderbird_warrior
 		raven_warrior
 		dragon_soldier
+		service_cross
+		service_cross
 	}
 	
 	martial = 2
@@ -2290,6 +2292,7 @@ shaddai = {
 		thunderbird_warrior
 		raven_warrior
 		dragon_soldier
+		service_cross
 	}
 	
 	martial = 2
@@ -3719,6 +3722,7 @@ crusader_king = {
 		lughs_own
 		jaguar_warrior
 		dragon_soldier
+		service_cross
 	}
 	
 	ai_zeal = 20
@@ -3751,6 +3755,7 @@ crusader_queen = {
 		lughs_own
 		jaguar_warrior
 		dragon_soldier
+		service_cross
 	}
 
 	ai_zeal = 20
