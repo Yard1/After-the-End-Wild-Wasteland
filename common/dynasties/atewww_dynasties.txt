@@ -125,6 +125,11 @@
 	culture = singaporean
 }
 
+2029104 = { 
+    name = "Beauvoir" 
+	culture = haitian
+}
+
 2029121 = { 
     name = "Trump" 
 	culture = gothamite 

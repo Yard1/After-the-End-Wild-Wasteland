@@ -61,6 +61,7 @@ afro_syncretic = {
 
 		intermarry = brethren
 	}
+	
 	voodoo = {
 		graphical_culture = africangfx
 		secondary_event_pictures = west_african_pagan
@@ -85,21 +86,46 @@ afro_syncretic = {
 			GOD_KALFU
 		}
 		
+		can_excommunicate = no
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		autocephaly = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
 		allows_matrilineal_marriage = yes
 		allow_looting = yes
 		allow_rivermovement = yes
 		can_demand_religious_conversion = no
+		defensive_attrition = yes
+		hard_to_convert = yes
+		
+		unit_modifier = {		
+			garrison_size = 0.3
+			levy_size = 0.1
+			
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.8
+			light_infantry_defensive = 0.8
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			archers_defensive = 0.8
+			
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
+		
 		intermarry = rastafarian
 		intermarry = santeria
 		intermarry = candomble
 		intermarry = espiritista
 		intermarry = espiritista_reformed
-		
 		intermarry = brethren
 	}
 	santeria = {
