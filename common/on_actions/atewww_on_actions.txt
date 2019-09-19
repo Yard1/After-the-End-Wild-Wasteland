@@ -139,3 +139,10 @@ on_excommunicate_interaction = {
 		prez.108
 	}
 }
+
+# character
+on_adulthood = {
+	events = {
+		ATE_WWW_RELIGION.16
+	}
+}

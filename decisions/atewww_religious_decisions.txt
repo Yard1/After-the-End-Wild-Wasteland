@@ -279,6 +279,7 @@ decisions = {
 	select_patron_general = {
 		is_high_prio = yes
 		only_playable = yes
+		ai = no
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
