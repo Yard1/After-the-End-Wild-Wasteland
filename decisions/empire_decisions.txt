@@ -412,7 +412,7 @@ decisions = {
 				hidden_tooltip = {
 					if = {
 						limit = {
-							completely_controls = d_niagara
+							completely_controls = c_erie
 						}
 						c_erie = {
 							de_jure_liege = d_niagara

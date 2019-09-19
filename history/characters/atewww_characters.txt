@@ -451,7 +451,8 @@
 	dynasty = 2029096 # Jet
 	dna = "chhditjfgce"
 	culture = southron
-	religion = americanist
+	religion = jeffersonian
+	secret_religion = americanist
 	female = yes
 	father = 1861125
 	mother = 1861126
@@ -545,6 +546,57 @@
 		} 
     }
 }
+
+2000046 = {
+	name = "Max"
+	dynasty = 2029104 # Beauvoir
+	culture = haitian
+	religion = voodoo
+	diplomacy = 5
+	martial = 5
+	stewardship = 6
+	intrigue = 7
+	learning = 7
+	trait = mastermind_theologian
+	trait = zealous
+	trait = genius
+	trait = scholar
+	trait = gregarious
+	trait = kind
+	trait = charitable
+	2607.6.4 = {
+		birth=yes
+		effect = { set_character_flag = historical_character }
+		effect={
+			set_character_flag = diversity
+			set_character_flag = physique
+		}
+	}
+}
+
+2000047 = {
+	name = "Maugris"
+	dynasty = none
+	culture = creole
+	religion = voodoo
+	diplomacy = 5
+	martial = 7
+	stewardship = 6
+	intrigue = 6
+	learning = 6
+	trait = brilliant_strategist
+	trait = zealous
+	random_traits = yes
+	2629.12.12 = {
+		birth=yes
+		effect = { set_character_flag = historical_character }
+		effect={
+			set_character_flag = diversity
+			set_character_flag = physique
+		}
+	}
+}
+
 
 ### New York ###
 2000060 = {

@@ -48,6 +48,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/become_general_of_army.dds"
 	}
 	spriteType = {
+		name = "GFX_select_patron_general"
+		texturefile = "gfx/interface/form_the_usa.dds"
+	}
+	spriteType = {
 		name = "GFX_become_pirate_king"
 		texturefile = "gfx/interface/become_pirate_king.dds"
 	}
@@ -110,5 +114,21 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_take_viagra"
 		texturefile = "gfx\\interface\\decision_icon_seek_treatment.dds"
+	}
+	spriteType = {
+		name = "GFX_expel_salvation_army"
+		texturefile = "gfx\\interface\\decision_icon_expel_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_donate_money_to_salvation_army"
+		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_expel_saint_expedit"
+		texturefile = "gfx\\interface\\decision_icon_expel_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_donate_money_to_saint_expedit"
+		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
 	}
 }

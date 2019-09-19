@@ -8494,6 +8494,15 @@ faction_increase_council_power = {
 				any_owned_bloodline = { has_bloodline_flag = bloodline_less_factions }
 			}
 		}
+
+		modifier = {
+			factor = 0.25
+			government = militarist_government
+			liege = {  
+				government = militarist_government
+			}
+		}
+
 		modifier = {
 			factor = 0.2
 			FROM = { pacifist = yes }
@@ -8733,6 +8742,16 @@ faction_increase_council_power = {
 			}
 		}
 		
+		modifier = {
+			factor = 0.25
+			government = militarist_government
+			ROOT = {
+				liege = {  
+					government = militarist_government
+				}
+			}
+		}
+
 		modifier = {
 			factor = 0.5
 			ROOT = {  

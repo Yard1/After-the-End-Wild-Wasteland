@@ -32,6 +32,8 @@ d_lake_charles_adj;Charleston;;;;;;;;;;;;;x
 # Religious Features 
 
 DONA;Dona;;;;;;;;;;;;;x
+COMPL_DECORATED;decorated;;;;;;;;;;;;;x
+
 atewww_pills;Old World Medicine;;;;;;;;;;;;;x
 atewww_pills_desc;A small container of unidentified pre-Calamity medicine. A competent scholar should examine it first.;;;;;;;;;;;;;x
 ATEWWW_PILL_ANTIBIOTICS;Old World Medicine (Antibiotics);;;;;;;;;;;;;x

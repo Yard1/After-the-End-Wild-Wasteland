@@ -31,6 +31,9 @@ e_caribbean = {
 		capital = 1100 # Havana
 		
 		americanist = 200
+		jeffersonian = 200
+		hamiltonian = 200
+		libertarian = 200
 		evangelical = 200
 
 		d_havana = {

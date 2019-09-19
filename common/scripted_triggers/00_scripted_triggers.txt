@@ -775,7 +775,11 @@ has_crusade_trait_trigger = {
 		}
 		AND = {
 			religion_group = christian
-			trait = crusader
+			OR = {
+				trait = crusader
+				trait = crusader_king
+				trait = crusader_queen
+			}
 		}
 		AND = {
 			religion_group = jewish_group
@@ -808,6 +812,15 @@ has_crusade_trait_trigger = {
 				religion = aphite
 			}
 			trait = dragon_soldier
+		}
+		AND = {
+			OR = {
+				religion = americanist
+				religion = jeffersonian
+				religion = hamiltonian
+				religion = libertarian
+			}
+			trait = service_cross
 		}
 	}
 }
@@ -988,11 +1001,7 @@ can_be_chancellor_trigger = {
 				}
 				AND = {
 					is_female = yes 
-					OR = { 
-						liege = { matriarchal_religion = yes } 
-						liege = { equal_religion = yes } 
-						liege = { has_religion_feature = religion_feature_midewiwin } 
-					} 
+					liege = { gender_equality_trigger = yes }
 				}
 				trait = horse # So we can have female glitterhoofs! :D
 				AND = {
@@ -1042,16 +1051,6 @@ can_be_chancellor_trigger = {
 						
 					}
 				}
-				OR = {
-					AND = { 
-						is_female = yes
-						liege = { primary_title = { has_law = status_of_women_4 } } 
-					}
-					has_game_rule = {
-						name = gender
-						value = all
-					}
-				}
 			}
 			OR = {
 				trait = druid
@@ -1082,17 +1081,23 @@ can_be_marshal_trigger = {
 	OR = {
 		AND = {
 			OR = {
+				NOT = { government = militarist_government }
+				NOT = { liege = { government = militarist_government } }
+				AND = {
+					government = militarist_government
+					liege = { 
+						government = militarist_government
+					}
+				}
+			}
+			OR = {
 				AND = { #Patriarchal religions can only hire males. Matriarchal religions can only hire females.
 					is_female = no 
 					NOT = { liege = { matriarchal_religion = yes } } 
 				}
 				AND = {
 					is_female = yes 
-					OR = { 
-						liege = { matriarchal_religion = yes } 
-						liege = { equal_religion = yes } 
-						liege = { has_religion_feature = religion_feature_midewiwin } 
-					} 
+					liege = { gender_equality_trigger = yes }
 				}
 				trait = horse # So we can have female glitterhoofs! :D
 				OR = {
@@ -1142,16 +1147,6 @@ can_be_marshal_trigger = {
 						
 					}
 				}
-				OR = {
-					AND = { 
-						is_female = yes
-						liege = { primary_title = { has_law = status_of_women_4 } } 
-					}
-					has_game_rule = {
-						name = gender
-						value = all
-					}
-				}
 			}
 			is_adult = yes
 		}
@@ -1184,11 +1179,7 @@ can_be_treasurer_trigger = {
 				}
 				AND = {
 					is_female = yes 
-					OR = { 
-						liege = { matriarchal_religion = yes } 
-						liege = { equal_religion = yes } 
-						liege = { has_religion_feature = religion_feature_midewiwin } 
-					} 
+					liege = { gender_equality_trigger = yes }
 				}
 				trait = horse # So we can have female glitterhoofs! :D
 				AND = {
@@ -1238,16 +1229,6 @@ can_be_treasurer_trigger = {
 						
 					}
 				}
-				OR = {
-					AND = { 
-						is_female = yes
-						liege = { primary_title = { has_law = status_of_women_4 } } 
-					}
-					has_game_rule = {
-						name = gender
-						value = all
-					}
-				}
 			}
 			is_adult = yes
 		}
@@ -1280,11 +1261,7 @@ can_be_spymaster_trigger = {
 				}
 				AND = {
 					is_female = yes 
-					OR = { 
-						liege = { matriarchal_religion = yes } 
-						liege = { equal_religion = yes } 
-						liege = { has_religion_feature = religion_feature_midewiwin } 
-					} 
+					liege = { gender_equality_trigger = yes }
 				}
 				trait = horse # So we can have female glitterhoofs! :D
 				liege = { 
@@ -1389,16 +1366,6 @@ can_be_spymaster_trigger = {
 						is_landed = yes
 						trait = nun
 						
-					}
-				}
-				OR = {
-					AND = { 
-						is_female = yes
-						liege = { primary_title = { has_law = status_of_women_4 } } 
-					}
-					has_game_rule = {
-						name = gender
-						value = all
 					}
 				}
 			}
@@ -1581,11 +1548,7 @@ can_be_councilmember_emperor_trigger = {
 				}
 				AND = {
 					is_female = yes 
-					OR = { 
-						liege = { matriarchal_religion = yes } 
-						liege = { equal_religion = yes } 
-						liege = { has_religion_feature = religion_feature_midewiwin } 
-					} 
+					liege = { gender_equality_trigger = yes }
 				}
 				AND = {
 					religion = ursuline
@@ -1623,16 +1586,6 @@ can_be_councilmember_emperor_trigger = {
 						}
 					}
 					is_landed = yes
-				}
-				OR = {
-					AND = { 
-						is_female = yes
-						liege = { primary_title = { has_law = status_of_women_4 } } 
-					}
-					has_game_rule = {
-						name = gender
-						value = all
-					}
 				}
 			}
 			is_adult = yes
@@ -7395,6 +7348,7 @@ this_is_warrior_culture_trigger = { #Not really about culture - Used in AI votin
 		religion = norse_pagan
 		religion = raven_tales
 		religion = thelemic
+		religion = jeffersonian
 		OR = {
 			has_religion_feature = religion_warlike
 			has_religion_feature = religion_feature_raven_tales_1
@@ -7427,9 +7381,10 @@ this_is_diplomatic_culture_trigger = { #Not really about culture - Used in AI vo
 		religion_group = cult_of_saints
 		religion_group = latter_day_saints
 		religion_group = jewish_group
-		religion_group = oldworld
-		religion = rust_cultist
-		religion = chrome_cultist
+		AND = { 
+			religion_group = oldworld
+			NOT = { religion = jeffersonian }
+		}
 		has_religion_feature = religion_cosmopolitan
 		has_religion_feature = religion_feature_espiritista
 		#AND = {

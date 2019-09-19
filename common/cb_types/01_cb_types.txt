@@ -5584,7 +5584,7 @@ childrens_crusade = {
 			}
 		}
 		ROOT = { 
-			add_trait = crusader 
+			add_am_crusade_trait_effect = yes
 			diplomatic_immunity = no 
 		}
 		any_player = { 
@@ -6018,10 +6018,7 @@ matriarchal_deposition_war = {
 				has_religion_feature = religion_feature_raven_tales_1
 			}
 			is_female = yes
-			OR = {
-				matriarchal_religion = yes
-				religion = gaian
-			}
+			matriarchal_religion = yes
 			FROM = { is_female = no independent = yes }
 			NOT = { same_realm = FROM }
 		}
@@ -6224,10 +6221,7 @@ matriarchal_deposition_war = {
 					if = {
 						limit = {
 							ROOT = {
-								OR = {
-									matriarchal_religion = yes
-									religion = gaian
-								}
+								matriarchal_religion = yes
 							}
 							event_target:new_swapped_ruler = {
 								NOR = {
@@ -7325,7 +7319,7 @@ shepherds_crusade_invasion = {
 					}
 					grant_title_no_opinion = new_character
 					new_character = {
-						add_trait = crusader
+						add_am_crusade_trait_effect = yes
 						add_trait = brave
 						ROOT = {
 							set_truce = {

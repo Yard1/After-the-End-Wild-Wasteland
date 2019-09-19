@@ -169,3 +169,44 @@ character_event = {
 	}
 
 }
+
+character_event = {
+	id = ATE_WWW_DEBUG.5
+	desc = "DEBUG"
+	picture = GFX_evt_capitol_building
+	
+	is_triggered_only = yes
+	
+	option = {
+		set_defacto_liege = THIS
+	}
+
+}
+
+character_event = {
+	id = ATE_WWW_DEBUG.6
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	ai = no
+	only_playable = yes
+	
+	trigger = {
+		is_save_game = yes
+	}
+	
+	immediate = {
+		any_character = {
+			trigger_switch = {
+				on_trigger = has_character_modifier
+				devote_of_macarthur = { remove_character_modifier = devote_of_macarthur add_trait = militarist_macarthur }
+				devote_of_sherman = { remove_character_modifier = devote_of_sherman add_trait = militarist_sherman }
+				devote_of_patton = { remove_character_modifier = devote_of_patton add_trait = militarist_patton }
+				devote_of_custer = { remove_character_modifier = devote_of_custer add_trait = militarist_custer }
+				devote_of_lee = { remove_character_modifier = devote_of_lee add_trait = militarist_lee }
+				devotee_of_butler = { remove_character_modifier = devotee_of_butler add_trait = militarist_butler }
+			}
+		}
+	}
+}

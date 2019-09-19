@@ -1,0 +1,41 @@
+decisions = {
+	
+	choose_americanist_patron = {
+		only_playable = yes
+		is_high_prio = yes
+		ai = no
+		potential = {
+			is_playable = yes
+			NOR = { 
+				trait = washington
+				trait = jefferson
+				trait = lincoln
+				trait = roosevelt
+			}
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = libertarian
+			}
+			is_adult = yes
+		}
+		allow = {
+			war = no
+			block_general_event_trigger = no
+		}
+		effect = {
+			custom_tooltip = {
+				text = tooltip_choose_patron
+				hidden_tooltip = {
+					character_event = { id = USD.1 }
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

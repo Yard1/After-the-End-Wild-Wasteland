@@ -18,6 +18,7 @@ mujahid = {
 		thunderbird_warrior
 		raven_warrior
 		dragon_soldier
+		service_cross
 	}
 	
 	martial = 2

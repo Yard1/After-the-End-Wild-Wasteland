@@ -138,6 +138,7 @@ job_marshal = {
 		}
 	}
 	gain_effect = {
+		FROM = { character_event = { id = ATE_WWW_RELIGION.8 days = 1 } }
 		if = {
 			limit = {
 				FROM = { 
@@ -212,6 +213,14 @@ job_marshal = {
 	lose_effect = {
 		if = {
 			limit = {
+				FROM = { government = militarist_government }
+				has_minor_title = title_appointed_regent
+			}
+			remove_title = title_appointed_regent
+			remove_opinion = { who = ROOT modifier = opinion_revoked_honorary_title }
+		}
+		if = {
+			limit = {
 				FROM = {
 					NOT = {
 						has_character_flag = swapping_councillors
@@ -231,6 +240,15 @@ job_marshal = {
 		}
 	}
 	retire_effect = {
+		if = {
+			limit = {
+				FROM = { government = militarist_government }
+				has_minor_title = title_appointed_regent
+			}
+			remove_title = title_appointed_regent
+			remove_opinion = { who = ROOT modifier = opinion_revoked_honorary_title }
+		}
+
 		if = {
 			limit = { has_character_flag = relic_hunter }
 			character_event = { id = MNM.9034 }

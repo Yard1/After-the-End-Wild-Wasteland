@@ -88,6 +88,13 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				title = e_usa
 			}
+			NAND = {
+				higher_tier_than = COUNT
+				holder_scope = {
+					religion = jeffersonian
+					government = militarist_government
+				}
+			}
 			holder_scope = {
 				NOT = { religion_group = american_native } #uses Eldership instead
 				NOT = { religion_group = pirate }
@@ -208,6 +215,13 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				title = e_usa
 			}
+			NAND = {
+				higher_tier_than = COUNT
+				holder_scope = {
+					religion = jeffersonian
+					government = militarist_government
+				}
+			}
 			holder_scope = {
 				NOT = { religion_group = american_native } #uses Eldership instead
 				NOT = { religion_group = pirate }
@@ -311,6 +325,13 @@ succession_laws = {
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				title = e_usa
+			}
+			NAND = {
+				higher_tier_than = COUNT
+				holder_scope = {
+					religion = jeffersonian
+					government = militarist_government
+				}
 			}
 			holder_scope = {
 				OR = {
@@ -433,6 +454,15 @@ succession_laws = {
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				title = e_usa
+			}
+			NAND = {
+				higher_tier_than = COUNT
+				holder_scope = {
+					religion = jeffersonian
+					government = militarist_government
+					independent = no
+					liege = { government = militarist_government }
+				}
 			}
 			OR = {
 				AND = {
@@ -600,7 +630,7 @@ succession_laws = {
 		}
 		revoke_allowed = {
 			always = no
-		}			
+		}
 	}
 	
 	succ_primogeniture = {
@@ -612,6 +642,13 @@ succession_laws = {
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				title = e_usa
+			}
+			NAND = {
+				higher_tier_than = COUNT
+				holder_scope = {
+					religion = jeffersonian
+					government = militarist_government
+				}
 			}
 			OR = {
 				AND = {
@@ -791,6 +828,15 @@ succession_laws = {
 				has_law = succ_byzantine_elective
 				title = e_usa
 			}
+			NAND = {
+				higher_tier_than = COUNT
+				holder_scope = {
+					religion = jeffersonian
+					government = militarist_government
+					independent = no
+					liege = { government = militarist_government }
+				}
+			}
 			OR = {
 				AND = {
 					title = k_pirate_kingdom
@@ -890,7 +936,14 @@ succession_laws = {
 		}
 		revoke_allowed = {
 			always = no
-		}			
+		}
+		default_selection = {
+			factor = 0
+			additive_modifier = {
+				value = 2
+				government = militarist_government
+			}
+		}
 	}
 	succ_hre_elective = {
 		oldest_child_opinion = -15
@@ -902,6 +955,13 @@ succession_laws = {
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				title = e_usa
+			}
+			NAND = {
+				higher_tier_than = COUNT
+				holder_scope = {
+					religion = jeffersonian
+					government = militarist_government
+				}
 			}
 			OR = {
 				title = e_dixie #Title-bound.
@@ -1069,6 +1129,13 @@ succession_laws = {
 				has_law = succ_byzantine_elective 
 				title = e_usa
 			}
+			NAND = {
+				higher_tier_than = COUNT
+				holder_scope = {
+					religion = jeffersonian
+					government = militarist_government
+				}
+			}
 			holder_scope = {
 				OR = {
 					independent = yes
@@ -1197,6 +1264,13 @@ succession_laws = {
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				title = e_usa
+			}
+			NAND = {
+				higher_tier_than = COUNT
+				holder_scope = {
+					religion = jeffersonian
+					government = militarist_government
+				}
 			}
 			holder_scope = {
 				OR = {
@@ -1340,6 +1414,13 @@ succession_laws = {
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				title = e_usa
+			}
+			NAND = {
+				higher_tier_than = COUNT
+				holder_scope = {
+					religion = jeffersonian
+					government = militarist_government
+				}
 			}
 			OR = {
 				AND = {

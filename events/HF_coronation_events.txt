@@ -9679,7 +9679,7 @@ character_event = {
 				limit = { year = 1100 }
 				random = { 
 					chance = 30 
-					add_trait = crusader
+					add_am_crusade_trait_effect = yes
 				}
 			}
 		}

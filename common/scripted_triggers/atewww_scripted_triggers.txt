@@ -81,12 +81,12 @@ females_can_hold_minor_commander_title_trigger = {
 
 has_patron_general_trigger = {
 	OR = {
-		has_character_modifier = devote_of_macarthur
-		has_character_modifier = devote_of_sherman
-		has_character_modifier = devote_of_patton
-		has_character_modifier = devote_of_custer
-		has_character_modifier = devote_of_lee
-		has_character_modifier = devotee_of_butler
+		trait = militarist_macarthur
+		trait = militarist_sherman
+		trait = militarist_patton
+		trait = militarist_custer
+		trait = militarist_lee
+		trait = militarist_butler
 	}
 }
 
