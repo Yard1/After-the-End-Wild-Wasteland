@@ -306,9 +306,6 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0.3 # Slow it down a little
-			}
 		}
 	}
 	
