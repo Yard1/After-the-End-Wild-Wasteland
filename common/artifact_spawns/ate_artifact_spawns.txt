@@ -235,7 +235,7 @@ crown_lion_judah = {
 }
 
 ate_salvage_items = {
-	max_amount = 7
+	max_amount = 10
 	spawn_date = -1.1.1
 	
 	spawn_chance = {
@@ -265,6 +265,7 @@ ate_salvage_items = {
 		ate_typewriter = { value = 1 }
 		ate_telescope = { value = 1 }
 		ate_textbooks = { value = 1 }
+		atewww_pills = { value = 1 }
 	}
 }
 

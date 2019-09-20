@@ -14003,6 +14003,12 @@ character_event = {
 				}
 				set_artifact_flag = looted_artifact_tooltip_1
 				set_artifact_flag = looted_artifact_tooltip_2
+				hidden_tooltip = {
+					if = {
+						limit = { artifact = atewww_pills }
+						reset_medicine_effect = yes
+					}
+				}
 				transfer_artifact = {
 					from = PREV
 					to = ROOT

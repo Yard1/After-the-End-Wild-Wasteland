@@ -121,43 +121,21 @@ character_event = {
 	id = ATE_WWW_DEBUG.3
 	desc = "DEBUG"
 	picture = GFX_evt_capitol_building
-	hide_window = yes
 	
 	is_triggered_only = yes
-	trigger = {
-		is_ruler = yes
-		is_landed = yes
-		mercenary = no
-		temporary = no
-		religion = gaian
-		any_demesne_title = {
-			is_law_potential = enatic_cognatic_succession
-			has_law = enatic_succession
-		}
-	}
 	
 	option = {
-		any_demesne_title = {
-			limit = { is_law_potential = enatic_cognatic_succession has_law = enatic_succession }
-			log = "change succession law to enatic_cognatic in [This.GetName]"
-			add_law = { law = enatic_cognatic_succession cooldown = no opinion_effect = no }
-		}
-		ai_chance = {
-			factor = 1
-			additive_modifier = {
-				value = 1
-			}
-		}
+		name = "Add pills"
+		add_artifact = atewww_pills
 	}
 
 	option = {
-		log = "AI CHANCE 2 OPTION B"
-		ai_chance = {
-			factor = 1
-			additive_modifier = {
-				value = 1
-			}
-		}
+		name = "add flu"
+		add_trait = flu
+	}
+
+	option = {
+		name = "nothing"
 	}
 
 }

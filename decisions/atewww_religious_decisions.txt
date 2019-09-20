@@ -1,11 +1,3 @@
-###########################################
-#
-# Religious Decisions for Sons of Abraham
-#
-###########################################
-# Written by Henrik Fåhraeus
-###########################################
-
 decisions = {
 	
 	create_supreme_court = {

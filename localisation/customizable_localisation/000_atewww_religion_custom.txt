@@ -1,14 +1,3 @@
-#GetHouseOfWorship 			Gets name for house of worship of character's religion (character)
-#GetReligiousRite 			Gets name for a common religious rite (character)
-#GetReligionWarrior
-#GetReligionWarriorPlural
-#GetReligiousPerson
-#GetArtifactSource			Gets name for bodypart artifact's source (saint, holy man, hero)
-#GetArtifactSourceCap
-
-#GetBeastString
-
-###RELIGION###
 defined_text = {
 	name = GetWhoTheyServe
 

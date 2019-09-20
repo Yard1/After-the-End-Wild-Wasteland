@@ -33,3 +33,92 @@ d_lake_charles_adj;Charleston;;;;;;;;;;;;;x
 
 DONA;Dona;;;;;;;;;;;;;x
 COMPL_DECORATED;decorated;;;;;;;;;;;;;x
+
+atewww_pills;Old World Medicine;;;;;;;;;;;;;x
+atewww_pills_desc;A small container of unidentified pre-Calamity medicine. A competent scholar should examine it first.;;;;;;;;;;;;;x
+ATEWWW_PILL_ANTIBIOTICS;Old World Medicine (Antibiotics);;;;;;;;;;;;;x
+ATEWWW_PILL_ANTIVIRALS;Old World Medicine (Antivirals);;;;;;;;;;;;;x
+ATEWWW_PILL_VITAMINS;Old World Medicine (Supplements);;;;;;;;;;;;;x
+ATEWWW_PILL_VIAGRA;Old World Medicine (Aphrodisiac);;;;;;;;;;;;;x
+ATEWWW_PILL_ANTIDEPRESSANTS;Old World Medicine (Psychoactive);;;;;;;;;;;;;x
+ATEWWW_PILL_PAINKILLERS;Old World Medicine (Painkillers);;;;;;;;;;;;;x
+ATEWWW_PILL_UNKNOWN;Old World Medicine (Unknown);;;;;;;;;;;;;x
+ATEWWW_PILL_UNIDENTIFIED;Old World Medicine;;;;;;;;;;;;;x
+
+ATEWWW_PILL_ANTIBIOTICS_desc;A small container of pre-Calamity medicine. Those small pills can supposedly heal consumption, the Plague, camp fever, slow fever, dysentery, food poisoning and pneumonia.;;;;;;;;;;;;;x
+ATEWWW_PILL_ANTIVIRALS_desc;A small container of pre-Calamity medicine. This kind can miraculously cure measels, smallpox, flu and even rabies.;;;;;;;;;;;;;x
+ATEWWW_PILL_VITAMINS_desc;A small container of pre-Calamity medicine. It is supposed to strengthen the body.;;;;;;;;;;;;;x
+ATEWWW_PILL_VIAGRA_desc;A small container of pre-Calamity medicine. Those pills are said to be a powerful aphrodisiac.;;;;;;;;;;;;;x
+ATEWWW_PILL_ANTIDEPRESSANTS_desc;A small container of pre-Calamity medicine. Apparently the contents heal the mind, instead of the body.;;;;;;;;;;;;;x
+ATEWWW_PILL_PAINKILLERS_desc;A small container of pre-Calamity medicine. This kind was said to ease any kind of pain.;;;;;;;;;;;;;x
+ATEWWW_PILL_UNKNOWN_desc;A small container of unknown pre-Calamity medicine. It may do anything, or not work at all.;;;;;;;;;;;;;x
+
+EVTOPT_broker_repay_pills;I'll repay him with my Old World Medicine.;;;;;;;;;;;;x
+EVTDESC_broker_buy_pills;[From.GetTitledFirstName] comes to you as you hold court.\n\n"My liege, I see that you are in possession of a bottle of Old World medicine. I will arrange for you to be paid a significant sum of gold for it, with which you could fund an army. Once the sale is complete, I will leave your court.";;;;;;;;;;;;x
+EVTDESC_broker_sell_pills;[From.GetTitledFirstName] comes to you as you hold court.\n\n"My liege, I have recently become aware of a small amount of wondrous, ancient medicine. It is said to cure even the worst diseases and strengthen the body like nothing that modern apothecaries can produce. Once the sale is complete, I will leave your court.";;;;;;;;;;;;x
+
+EVTNAME_salvage_safe_medicine;Pills?;;;;;;;;;;;;x
+EVTDESC_salvage_safe_medicine;The safe door finally opens, and you can see the contents: a few translucent bottles of small, oval and elongated pills. The material the containers are made of is unlike anything modern craftsmen can produce - light, yet resistant. The labels have been worn away by time, but you realize that those are the medicaments of old. "A physician should examine them", you think, as you pocket the bottles.;;;;;;;;;;;;x
+
+identify_medicine;Identify Old World Medicine;;;;;;;;;;;;;x
+identify_medicine_desc;I am in possession of at least one container of unidentified ancient medicaments. It would be prudent to try and determine how they work - if at all.;;;;;;;;;;;;;x
+take_medicine;Take Old World Medicine;;;;;;;;;;;;;x
+take_medicine_desc;I am in possession of at least one container of ancient medicaments. They should aid in recovering from my sickness.;;;;;;;;;;;;;x
+take_vitamins;Take Old World Supplements;;;;;;;;;;;;;x
+take_vitamins_desc;I am in possession of at least one container of ancient "supplements". They are said to help strengthen the body, even if its already healthy. I could see if the stories are true on myself.;;;;;;;;;;;;;x
+take_antidepressants;Take Old World Psychoactive Medicine;;;;;;;;;;;;;x
+take_antidepressants_desc;I am in possession of at least one container of ancient mind-medicine. The scholars agree that those are supposed to heal the mind and soul from lunacy and depression. I could see if the stories are true on myself.;;;;;;;;;;;;;x
+take_viagra;Take Old World Aphrodisiacs;;;;;;;;;;;;;x
+take_viagra_desc;I am in possession of at least one container of ancient aphrodisiac. Apparently it allowed the [Root.GetMenWomen] of old to reach the heights of their virility. I could see if the stories are true on myself.;;;;;;;;;;;;;x
+
+EVTDESC_ATE_WWW_MEDICINE_1;You are in possession of at least one container of ancient, antediluvian medicine. Before it can be used, it would be prudent to actually study it first, in order to avoid any surprises.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_MEDICINE_1;I can try my hand at it myself.;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_MEDICINE_1;I can only trust myself!;;;;;;;;;;;;;x
+EVTOPTC_ATE_WWW_MEDICINE_1;My court physician can help.;;;;;;;;;;;;;x
+EVTOPTD_ATE_WWW_MEDICINE_1;I do not have time for this now.;;;;;;;;;;;;;x
+
+EVTDESC_ATE_WWW_MEDICINE_2;As your body fights back the illness, you think about the Old World medicaments you have in your treasury. Perhaps they could help you get back on your feet quicker? Who knows what kind of effect they may have.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_MEDICINE_2;I have some that are supposed to help with my current illness.;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_MEDICINE_2;Those ones are said to alleviate the pain.;;;;;;;;;;;;;x
+EVTOPTC_ATE_WWW_MEDICINE_2;Any of those could work!;;;;;;;;;;;;;x
+EVTOPTD_ATE_WWW_MEDICINE_2;Maybe that is not such a good idea...;;;;;;;;;;;;;x
+
+# [Root.GetYouOrPhysician] - "you" or "your court physician"
+# [Root.GetYouOrPhysicianS] - "" or "s", to be used with verbs - determine[Root.GetYouOrPhysicianS]
+# [Root.GetYouOrPhysicianHaveHas] - "have" or "has"
+EVTDESC_ATE_WWW_MEDICINE_3_CANT_IDENTIFY;No matter how much time [Root.GetYouOrPhysician] spend[Root.GetYouOrPhysicianS] over those tiny pills, no useful insight can be gained into their workings. With how little remains, no further study can be conducted.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_ANTIBIOTICS;After some time [Root.GetYouOrPhysician] [Root.GetYouOrPhysicianHaveHas] identified those tablets as so-called "antibiotics". As stated in dusty old tomes, they are used to treat "bacterial" diseases - whatever that means.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_ANTIVIRALS;After some time [Root.GetYouOrPhysician] [Root.GetYouOrPhysicianHaveHas] identified those tablets as so-called "antivirals". As stated in dusty old tomes, they are used to treat "viral" diseases - whatever that means.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_VITAMINS;The pills turn out to be made out of a strengthening concoction that revitalizes ones' body - at least that is what [Root.GetYouOrPhysician] think[Root.GetYouOrPhysicianS].;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_VIAGRA;After a period of study, [Root.GetYouOrPhysician] determine[Root.GetYouOrPhysicianS] that the medicaments are in fact legendary ancient aphrodisiacs, allowing a [Root.GetManWoman] to reach fantastical heights during the act of love.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_ANTIDEPRESSANTS;Those medicaments, as [Root.GetYouOrPhysician] [Root.GetYouOrPhysicianHaveHas] conculded, are the "mind-healers" of old - not intended to heal the body, but the soul from any blemishes.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_PAINKILLERS;The medicaments studied by [Root.GetYouOrPhysician] turn out to be the "killers of pain" - while they do not cure the body, they miraculously take all the pain away, making any illness much more bearable.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_3_SUGAR;Sadly, the ancient chemicals in those pills have either lost their potency, or indeed, never had it at all. They are not good for anything, [Root.GetYouOrPhysician] think[Root.GetYouOrPhysicianS].;;;;;;;;;;;;;x
+
+EVTOPTA_ATE_WWW_MEDICINE_3;There are still more to study.;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_MEDICINE_3;That is enough.;;;;;;;;;;;;;x
+
+EVTDESC_ATE_WWW_MEDICINE_5_SUCCESS;The miracle comes in the form of a small pill. After a few days, the disease that has been ravaging your body all but disappears, driven back by the creation of the ancients - this is a feat no modern physician could manage on their own.[Root.GetMisidentified][Root.GetSideEffects];;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_PAINKILLERS;While the symptoms of your illness do not disappear, the pain and malaise does. You may not be fully healthy - but you feel almost as well as if you were.[Root.GetMisidentified][Root.GetSideEffects];;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_VIAGRA;The effects of the pill are... profound. You can feel a tremendous increase in your libido, a mysterious energy pushing your sex drive to its limit![Root.GetMisidentified][Root.GetSideEffects];;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_VITAMINS;While the medicaments you took did not seem to have any instant effect, during the following days you have noticed your health improving slightly, feeling better overall.[Root.GetMisidentified][Root.GetSideEffects];;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_ANTIDEPRESSANT;The mysterious medicaments of old cleared your mind, finally allowing you to think clearly. You may not know how they work, but you certainly can appreciate the effect.[Root.GetMisidentified][Root.GetSideEffects];;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_FUMBLE;Despite taking the Old World pills, you do not notice any positive changes in your health or demeanor. It seems that whatever was their intended effect - isn't.[Root.GetMisidentified][Root.GetSideEffects];;;;;;;;;;;;;x
+
+EVTDESC_ATE_WWW_MEDICINE_5_MISIDENTIFIED;\n\nHowever, those particular medicaments were supposed to work differently...;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MEDICINE_5_SIDE_EFFECTS;\n\nOn top of it all, you can feel that the effect was not all beneficial - there are some noticeable side effects.;;;;;;;;;;;;;x
+
+EVTOPTA_ATE_WWW_MEDICINE_5;And to think such miracles were once commonplace.;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_MEDICINE_5;I feel better, but my stomach hurts...;;;;;;;;;;;;;x
+EVTOPTC_ATE_WWW_MEDICINE_5;But my stomach hurts...;;;;;;;;;;;;;x
+EVTOPTD_ATE_WWW_MEDICINE_5;What a waste of time.;;;;;;;;;;;;;x
+
+taken_vitamins;Taken Old World supplements;;;;;;;;;;;;;x
+taken_painkillers;Taken Old World painkillers;;;;;;;;;;;;;x
+pill_side_effects;Side effects from Old World medicine;;;;;;;;;;;;;x
+taken_viagra;Taken Old World aphrodisiacs;;;;;;;;;;;;;x
+taken_viagra_female;Taken Old World aphrodisiacs;;;;;;;;;;;;;x
+
+taken_medicine_recently;Recently taken Old World medicine;;;;;;;;;;;;;x
+
+not_taken_medicine_recently;Hasn't taken any Old World medicine recently;;;;;;;;;;;;;x

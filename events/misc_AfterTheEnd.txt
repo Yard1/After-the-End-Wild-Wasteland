@@ -11106,8 +11106,8 @@ character_event = {
 			add_building = tp_shrine_washington
 		}
 
-		c_2000060 = { add_rival=2400053 }
-		c_2400053 = { add_rival=2000060 }
+		c_2000060 = { add_rival=1788013 }
+		c_1788013 = { add_rival=2000060 }
 	}
 
 	after = {

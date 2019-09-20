@@ -1,0 +1,331 @@
+#THIS is artifact ROOT is character
+take_medicine_effect = {
+	# side effects
+	hidden_tooltip = {
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						has_artifact_flag = atewww_pills_antibiotics
+						NOT = { has_artifact_flag = atewww_pills_identified_as_antibiotics }
+					}
+					AND = {
+						has_artifact_flag = atewww_pills_antivirals
+						NOT = { has_artifact_flag = atewww_pills_identified_as_antivirals }
+					}
+					AND = {
+						has_artifact_flag = atewww_pills_antidepressants
+						NOT = { has_artifact_flag = atewww_pills_identified_as_antidepressants }
+					}
+					AND = {
+						has_artifact_flag = atewww_pills_viagra
+						NOT = { has_artifact_flag = atewww_pills_identified_as_viagra }
+					}
+					AND = {
+						has_artifact_flag = atewww_pills_painkillers
+						NOT = { has_artifact_flag = atewww_pills_identified_as_painkillers }
+					}
+				}
+			}
+			ROOT = { set_character_flag = pill_misidentified }
+		}
+		random_list = {
+			15 = {
+				modifier = {
+					factor = 6
+					ROOT = { has_character_flag = pill_misidentified }
+				}
+				modifier = {
+					factor = 3
+					has_artifact_flag = atewww_pills_sugar
+				}
+				ROOT = {
+					set_character_flag = side_effects
+				}
+			}
+			85 = {}
+		}
+		ROOT = {
+			if = {
+				limit = { character_disease_trigger = yes }
+				set_character_flag = was_sick
+			}
+		}
+	}
+	if = {
+		limit = { has_artifact_flag = atewww_pills_antibiotics }
+		ROOT = {
+			show_scope_change = no
+			if = { 
+				limit = { trait = ill } 
+				random_list = {
+					75 = { 
+						remove_trait = ill 
+						hidden_tooltip = {
+							remove_treatment_modifiers_effect = yes
+							clear_disease_level_effect = yes
+							remove_disease_flags_effect = yes
+							set_character_flag = seen_the_light_of_modern_medicine
+						}
+					}
+					25 = {}
+				}
+			}
+			else = {
+				if = { limit = { trait = dysentery } remove_trait = dysentery }
+				if = { limit = { trait = food_poisoning } remove_trait = food_poisoning }
+				if = { limit = { trait = pneumonic } remove_trait = pneumonic }
+				if = { limit = { trait = syphilitic } remove_trait = syphilitic set_character_flag = immune_syphilis }
+				if = { limit = { trait = has_tuberculosis } remove_trait = has_tuberculosis set_character_flag = immune_tuberculosis }
+				if = { limit = { trait = has_typhoid_fever } remove_trait = has_typhoid_fever set_character_flag = immune_typhoid_fever}
+				if = { limit = { trait = has_typhus } remove_trait = has_typhus set_character_flag = immune_typhus}
+				if = { limit = { trait = has_bubonic_plague ai = yes } remove_trait = has_bubonic_plague set_character_flag = immune_bubonic_plague}
+				if = { limit = { trait = has_bubonic_plague ai = no } remove_trait = has_bubonic_plague set_character_flag = immune_bubonic_plague set_character_flag = achievement_i_got_better}
+				hidden_tooltip = {
+					remove_treatment_modifiers_effect = yes
+					clear_disease_level_effect = yes
+					remove_disease_flags_effect = yes
+					set_character_flag = seen_the_light_of_modern_medicine
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { has_artifact_flag = atewww_pills_antivirals }
+		ROOT = {
+			show_scope_change = no
+			if = { 
+				limit = { trait = ill } 
+				random_list = {
+					25 = {
+						remove_trait = ill
+						hidden_tooltip = {
+							remove_treatment_modifiers_effect = yes
+							clear_disease_level_effect = yes
+							remove_disease_flags_effect = yes
+							set_character_flag = seen_the_light_of_modern_medicine
+						}
+					}
+					75 = {}
+				}
+			}
+			else = {
+				if = { limit = { trait = flu } remove_trait = flu }
+				if = { limit = { trait = rabies } remove_trait = rabies }
+				if = { limit = { trait = has_measles } remove_trait = has_measles set_character_flag = immune_measles}
+				if = { limit = { trait = has_small_pox } remove_trait = has_small_pox set_character_flag = immune_smallpox }
+				if = { limit = { trait = has_aztec_disease } remove_trait = has_aztec_disease set_character_flag = immune_aztec_disease }
+				hidden_tooltip = {
+					remove_treatment_modifiers_effect = yes
+					clear_disease_level_effect = yes
+					remove_disease_flags_effect = yes
+					set_character_flag = seen_the_light_of_modern_medicine
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { has_artifact_flag = atewww_pills_vitamins }
+		ROOT = {
+			show_scope_change = no
+			add_character_modifier = {
+				name = taken_vitamins
+				duration = 150
+			}
+			if = {
+				limit = { trait = scurvy }
+				remove_trait = scurvy
+				hidden_tooltip = { clear_disease_level_effect = yes }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_artifact_flag = atewww_pills_antidepressants
+			NOT = { has_character_flag = side_effects }
+		}
+		#this is the world drug companies want you to believe in
+		ROOT = {
+			show_scope_change = no
+			if = {
+				limit = {
+					trait = stressed
+				}
+				set_character_flag = removed_stressed
+			}
+			if = {
+				limit = {
+					trait = depressed
+				}
+				set_character_flag = removed_depressed
+			}
+			if = {
+				limit = {
+					trait = lunatic
+				}
+				set_character_flag = removed_lunatic
+			}
+			if = {
+				limit = {
+					trait = possessed
+				}
+				set_character_flag = removed_possessed
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			has_artifact_flag = atewww_pills_antidepressants
+			has_character_flag = side_effects
+		}
+		#whoops, zat was not medicine!
+		hidden_tooltip = {
+			ROOT = {
+				clr_character_flag = side_effects
+				character_event = { id = MNM.6801 days = 1 }
+			}
+		}
+	}
+	else_if = {
+		limit = { has_artifact_flag = atewww_pills_viagra }
+		ROOT = {
+			show_scope_change = no
+			if = {
+				limit = { is_female = no }
+				add_character_modifier = {
+					name = taken_viagra
+					duration = 60
+				}
+			}
+			else = {
+				add_character_modifier = {
+					name = taken_viagra_female
+					duration = 60
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			has_artifact_flag = atewww_pills_painkillers
+			ROOT = { character_disease_trigger = yes }
+		}
+		ROOT = {
+			show_scope_change = no
+			add_character_modifier = {
+				name = taken_painkillers
+				duration = 120
+			}
+		}
+	}
+
+	hidden_tooltip = {
+		if = {
+			limit = {
+				persistent_event_target:identified_by = {
+					NOT = { character = ROOT }
+					OR = {
+						is_vassal_of = ROOT
+						host = { character = ROOT }
+					}
+				}
+			}
+			ROOT = {
+				if = {
+					limit = {
+						has_character_flag = was_sick
+						character_disease_trigger = yes
+						has_character_modifier = pill_side_effects
+					}
+					ROOT = {
+						if = {
+							limit = {
+								host = {
+									NOT = { character = ROOT }
+									OR = {
+										AND = {
+											is_married = yes
+											any_spouse = { character = ROOT }
+										}
+										is_child_of = ROOT
+										is_father = ROOT
+										is_mother = ROOT
+										is_lover = ROOT
+										sibling = ROOT
+									}
+								}
+							}
+							if = {
+								limit = { 
+									persistent_event_target:identified_by = {
+										ai = yes
+									}
+								}
+								host = { character_event = { id = RIP.11060 } }
+							}
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_character_flag = was_sick
+						character_disease_trigger = no
+						NOT = { has_character_modifier = pill_side_effects }
+					}
+					ROOT = {
+						if = {
+							limit = {
+								host = {
+									NOT = { character = ROOT }
+									OR = {
+										AND = {
+											is_married = yes
+											any_spouse = { character = ROOT }
+										}
+										is_child_of = ROOT
+										is_father = ROOT
+										is_mother = ROOT
+										is_lover = ROOT
+										sibling = ROOT
+									}
+								}
+							}
+							host = { 
+								character_event = { id = RIP.11061 }
+								if = {
+									limit = {
+										is_ruler = no
+										persistent_event_target:identified_by = {
+											NOT = {
+												trait = physician
+											}
+										}
+									}
+									random = {
+										chance = 10
+										character_event = { id = RIP.11065 } 
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		clear_persistent_event_target = identified_by
+	}
+	destroy_artifact = yes
+}
+#THIS is artifact ROOT is character
+reset_medicine_effect = {
+	clr_artifact_flag = atewww_pills_identified_as_antibiotics
+	clr_artifact_flag = atewww_pills_identified_as_antivirals
+	clr_artifact_flag = atewww_pills_identified_as_vitamins
+	clr_artifact_flag = atewww_pills_identified_as_viagra
+	clr_artifact_flag = atewww_pills_identified_as_antidepressants
+	clr_artifact_flag = atewww_pills_identified_as_painkillers
+	clr_artifact_flag = atewww_pills_identified_as_sugar
+	clr_artifact_flag = atewww_pills_cannot_be_identified
+	set_name = atewww_pills
+	set_description = atewww_pills_desc
+}

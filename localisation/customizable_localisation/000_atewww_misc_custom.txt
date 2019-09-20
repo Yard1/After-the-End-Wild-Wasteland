@@ -1,0 +1,69 @@
+defined_text = {
+	name = GetYouOrPhysician
+
+	text = {
+		localisation_key = "your court physician"
+		trigger = {
+			has_character_flag = medicine_physician_identified
+		}
+	}
+	fallback_text = {
+		localisation_key = "you"
+	}
+}
+
+defined_text = {
+	name = GetYouOrPhysicianS
+
+	text = {
+		localisation_key = "s"
+		trigger = {
+			has_character_flag = medicine_physician_identified
+		}
+	}
+	fallback_text = {
+		localisation_key = ""
+	}
+}
+
+defined_text = {
+	name = GetYouOrPhysicianHaveHas
+
+	text = {
+		localisation_key = "has"
+		trigger = {
+			has_character_flag = medicine_physician_identified
+		}
+	}
+	fallback_text = {
+		localisation_key = "have"
+	}
+}
+
+defined_text = {
+	name = GetMisidentified
+
+	text = {
+		localisation_key = EVTDESC_ATE_WWW_MEDICINE_5_MISIDENTIFIED
+		trigger = {
+			has_character_flag = pill_misidentified 
+		}
+	}
+	fallback_text = {
+		localisation_key = ""
+	}
+}
+
+defined_text = {
+	name = GetSideEffects
+
+	text = {
+		localisation_key = EVTDESC_ATE_WWW_MEDICINE_5_SIDE_EFFECTS
+		trigger = {
+			has_character_flag = side_effects
+		}
+	}
+	fallback_text = {
+		localisation_key = ""
+	}
+}
