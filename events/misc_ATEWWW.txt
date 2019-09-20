@@ -568,6 +568,18 @@ character_event = {
 		c_2000060 = {
 			create_family_palace = yes
 		}		
+		# trump-clinton rivarly
+		if = {
+			limit = { 
+				c_1788013 = { dynasty_head = { is_alive = yes } }
+			}
+			c_1788013 = { #starting clinton character
+				dynasty_head = { 
+					add_rival=ROOT
+					ROOT = { add_rival=PREV }
+				} 
+			}
+		}
 		set_global_flag = miscATEWW_4_fired
 	}
 	
