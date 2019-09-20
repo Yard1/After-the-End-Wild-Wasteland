@@ -1748,6 +1748,7 @@ pacific = {
 		raised_vassal_opinion_loss = no
 		allows_matrilineal_marriage = yes
 		women_can_take_consorts = yes
+		defensive_attrition = yes
 		max_consorts = 3 #can take concubines
 		men_can_take_consorts = no
 		male_temple_holders = no

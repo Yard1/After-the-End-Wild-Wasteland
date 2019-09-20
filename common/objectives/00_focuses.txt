@@ -31,30 +31,30 @@ focus_rulership = {
 			trait = stressed
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.10
 			trait = depressed
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			OR = {
 				is_republic = yes
 				is_patrician = yes
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = arbitrary
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = slothful
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = diligent
 		}
 		modifier = {
-			factor = 3.0
+			factor = 6.0
 			trait = just
 		}
 	}
@@ -98,31 +98,31 @@ focus_business = {
 	chance = {
 		factor = 100
 		modifier = {
-			factor = 0.2
+			factor = 0.05
 			trait = stressed
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = depressed
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = slothful
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = charitable
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = diligent
 		}
 		modifier = {
-			factor = 3.0
+			factor = 6.0
 			trait = greedy
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			OR = {
 				is_republic = yes
 				is_patrician = yes
@@ -217,63 +217,63 @@ focus_seduction = {
 		}
 		
 		modifier = {
-			factor = 0.25
+			factor = 0.10
 			trait = shy
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = content
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = ugly
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = uncouth
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			trait = honest
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = gregarious
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = cruel
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = ambitious
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = deceitful
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = hedonist
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = fair
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = groomed
 		}
 		modifier = {
-			factor = 5.0
+			factor = 10
 			trait = lustful
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			has_character_modifier = african_adulthood_rites_3
 		}
 		modifier = {
-			factor = 4.0
+			factor = 8.0
 			OR = {
 				AND = {
 					OR = {
@@ -351,7 +351,7 @@ focus_intrigue = {
 			trait = honest
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.10
 			NOR = {
 				trait = amateurish_plotter
 				trait = flamboyant_schemer
@@ -360,47 +360,47 @@ focus_intrigue = {
 			}
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.10
 			trait = kind
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = trusting
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = content
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = wroth
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = envious
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = patient
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = ambitious
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = cruel
 		}
 		modifier = {
-			factor = 5.0
+			factor = 10
 			trait = paranoid
 		}
 		modifier = {
-			factor = 4.0
+			factor = 8.0
 			trait = deceitful
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			has_character_modifier = african_adulthood_rites_3
 		}
 	}
@@ -451,33 +451,33 @@ focus_hunting = {
 			trait = infirm
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.05
 			is_female = yes
-			NOT = { matriarchal_religion = yes }
+			gender_equality_trigger = no
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.05
 			is_female = no
 			matriarchal_religion = yes
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = craven
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = brave
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = hunter
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = falconer
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			has_character_modifier = african_adulthood_rites_2
 		}
 	}
@@ -524,25 +524,26 @@ focus_war = {
 		factor = 100
 		
 		modifier = {
-			factor = 0.1
+			factor = 0.05
 			is_female = yes
-			NOT = { 
+			NOR = { 
+				gender_equality_trigger = yes
 				trait = shieldmaiden
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.05
 			is_female = no
 			matriarchal_religion = yes
 		}
 		
 		modifier = {
-			factor = 0.2
+			factor = 0.1
 			trait = craven
 		}
 		
 		modifier = {
-			factor = 0.25
+			factor = 0.10
 			NOT = {
 				OR = {
 					trait = misguided_warrior
@@ -554,35 +555,35 @@ focus_war = {
 		}
 		
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = kind
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = brave
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			is_feudal = yes
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			is_tribal = yes
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			is_nomadic = yes
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = wroth
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = duelist
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			has_character_modifier = african_adulthood_rites_2
 		}
 	}
@@ -641,35 +642,35 @@ focus_carousing = {
 	chance = {
 		factor = 100
 		modifier = {
-			factor = 0.25
+			factor = 0.10
 			trait = shy
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.10
 			trait = temperate
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = diligent
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = slothful
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = gluttonous
 		}
 		modifier = {
-			factor = 3.0
+			factor = 6.0
 			trait = hedonist
 		}
 		modifier = {
-			factor = 3.0
+			factor = 6.0
 			trait = drunkard
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			has_character_modifier = african_adulthood_rites_1
 		}
 	}
@@ -726,61 +727,62 @@ focus_family = {
 			}
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.10
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			NOT = { age = 25 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			is_female = no
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			trait = gregarious
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			trait = proud
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 			trait = humble
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = gardener
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = craven
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = shy
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = content
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = infirm
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = kind
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			has_character_modifier = african_adulthood_rites_1
 		}
 		modifier = {
-			factor = 3.0
+			factor = 6.0
 			is_female = yes
-			NOT = { 
+			NOR = { 
+				gender_equality_trigger = yes
 				trait = shieldmaiden
 			}
 		}
@@ -834,31 +836,31 @@ focus_scholarship = {
 			trait = inbred
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.10
 			trait = wroth
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			trait = brave
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = craven
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = content
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = patient
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = cynical
 			OR = {
 				trait = detached_priest
@@ -868,15 +870,15 @@ focus_scholarship = {
 			}
 		}
 		modifier = {
-			factor = 3.0
+			factor = 6.0
 			trait = scholar
 		}
 		modifier = {
-			factor = 3.0
+			factor = 6.0
 			is_theocracy = yes
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			has_character_modifier = african_adulthood_rites_4
 		}
 	}
@@ -931,31 +933,31 @@ focus_theology = {
 			trait = cynical
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.10
 			trait = wroth
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.10
 			trait = ambitious
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.10
 			trait = brave
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = craven
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			trait = content
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			trait = patient
 		}
 		modifier = {
-			factor = 2.0
+			factor = 4.0
 			OR = {
 				trait = detached_priest
 				trait = martial_cleric
@@ -964,19 +966,19 @@ focus_theology = {
 			}
 		}
 		modifier = {
-			factor = 3.0
+			factor = 6.0
 			trait = mystic
 		}
 		modifier = {
-			factor = 3.0
+			factor = 6.0
 			trait = zealous
 		}
 		modifier = {
-			factor = 3.0
+			factor = 6.0
 			is_theocracy = yes
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3.0
 			has_character_modifier = african_adulthood_rites_4
 		}
 	}
