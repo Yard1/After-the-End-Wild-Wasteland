@@ -240,9 +240,7 @@ decisions = {
 		}
 		
 		allow = {
-			in_seclusion = no
-			prisoner = no
-			is_incapable = no
+			block_general_event_trigger = no
 			primary_title = { higher_tier_than = DUKE }
 			num_of_holy_sites = 3 #personally controls 3 holy sites
 			prestige = 250
@@ -290,6 +288,12 @@ decisions = {
 				}
 			}
 			narrative_event = { id = ATE_WWW_RELIGION.4 }
+			if = {
+				limit = {
+					NOT = { has_global_flag = liberation_wars_unlocked }
+				}
+				set_global_flag = liberation_wars_unlocked
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -598,6 +602,64 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+
+	start_wars_of_liberation = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 6
+		
+		potential = {
+			NOT = { #immersion-breaking
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOT = { has_global_flag = liberation_wars_unlocked }
+			controls_religion = yes
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+			}
+		}
+		
+		allow = {
+			block_general_event_trigger = no
+			religion_authority = 0.1
+			year = 2675
+			conditional_tooltip = {
+				trigger = { 
+					NOT = { year = 2680 } 
+				}
+				piety = 1000
+			}
+			conditional_tooltip = {
+				trigger = {
+					year = 2680
+					NOT = { year = 2685 } 
+				}
+				piety = 750
+			}
+			conditional_tooltip = {
+				trigger = { 
+					year = 2685
+				}
+				piety = 500
+			}
+		}
+		
+		effect = {
+			narrative_event = { id = ATE_WWW_RELIGION.18 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				trait = cynical
+			}
+			modifier = {
+				factor = 0.25
+				trait = craven
+			}
 		}
 	}
 }

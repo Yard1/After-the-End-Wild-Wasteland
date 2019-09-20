@@ -52,6 +52,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/form_the_usa.dds"
 	}
 	spriteType = {
+		name = "GFX_start_wars_of_liberation"
+		texturefile = "gfx/interface/form_the_usa.dds"
+	}
+	spriteType = {
 		name = "GFX_become_pirate_king"
 		texturefile = "gfx/interface/become_pirate_king.dds"
 	}

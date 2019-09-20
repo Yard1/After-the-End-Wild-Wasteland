@@ -29,6 +29,7 @@ pirate_king = {
 	land_morale = 0.15
 
 	religious = yes
+	customizer = no
 	
 	male_insult = COMPL_PIRATE
 	female_insult = COMPL_PIRATE
@@ -83,6 +84,7 @@ militarist_macarthur = {
 	religious = yes
 	same_opinion = 10
 	random = no
+	customizer = no
 }
 militarist_sherman = {
 	martial = 2
@@ -93,6 +95,7 @@ militarist_sherman = {
 	religious = yes
 	same_opinion = 10
 	random = no
+	customizer = no
 }
 militarist_patton = {
 	martial = 2
@@ -102,6 +105,7 @@ militarist_patton = {
 	religious = yes
 	same_opinion = 10
 	random = no
+	customizer = no
 }
 militarist_custer = {
 	martial = 2
@@ -112,6 +116,7 @@ militarist_custer = {
 	religious = yes
 	same_opinion = 10
 	random = no
+	customizer = no
 }
 militarist_lee = {
 	martial = 2
@@ -124,6 +129,7 @@ militarist_lee = {
 	religious = yes
 	same_opinion = 10
 	random = no
+	customizer = no
 }
 militarist_butler = {
 	martial = 2
@@ -136,9 +142,11 @@ militarist_butler = {
 	same_opinion = 10
 	church_opinion = -5
 	random = no
+	customizer = no
 }
 
 bokor = {
 	random = no
+	customizer = no
 	#for cyrus
 }

@@ -4,6 +4,7 @@ washington = {
 	vassal_opinion = 15
 	same_opinion = 10
 	random = no
+	customizer = no
 }
 jefferson = {
 	religious = yes
@@ -12,6 +13,7 @@ jefferson = {
 	same_opinion = 10
 	global_tax_modifier = 0.2
 	random = no
+	customizer = no
 }
 lincoln = {
 	religious = yes
@@ -21,6 +23,7 @@ lincoln = {
 	church_opinion = 5
 	same_opinion = 10
 	random = no
+	customizer = no
 }
 roosevelt = {
 	religious = yes
@@ -30,6 +33,7 @@ roosevelt = {
 	vassal_opinion = 5
 	same_opinion = 10
 	random = no
+	customizer = no
 }
 
 patriot = {
@@ -179,6 +183,7 @@ medal_freedom = {
 	monthly_character_prestige = 1
 	same_religion_opinion = 15
 	random = no
+	customizer = no
 
 	male_compliment_adj = COMPL_DECORATED
 	female_compliment_adj = COMPL_DECORATED
