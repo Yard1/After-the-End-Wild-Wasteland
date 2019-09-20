@@ -112,6 +112,16 @@ on_government_change = {
 				NOT = { government = militarist_government }
 			}
 			if = {
+				limit = { ROOT = { has_law = succ_militarist_appointment } }
+				if = {
+					limit = { has_law = ze_administration_laws_0 }
+					ROOT = { add_law = { law = succ_gavelkind cooldown = no opinion_effect = no } }
+				}
+				else = {
+					ROOT = { add_law = { law = succ_primogeniture cooldown = no opinion_effect = no } }
+				}
+			}
+			if = {
 				limit = { ROOT = { has_title_flag = was_militarist } }
 				character_event = { id = ATE_WWW_RELIGION.12 }
 			}

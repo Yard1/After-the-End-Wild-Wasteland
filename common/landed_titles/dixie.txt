@@ -98,7 +98,7 @@ e_dixie = {
 		# Crusade target weight
 		catholic = 5
 		americanist = 5
-		jeffersonian = 5
+		jeffersonian = 100
 		hamiltonian = 5
 		libertarian = 5
 		revelationist_reformed = 100
@@ -624,7 +624,7 @@ e_dixie = {
 		# Crusade target weight
 		catholic = 5
 		americanist = 200
-		jeffersonian = 200
+		jeffersonian = 400
 		hamiltonian = 200
 		libertarian = 200
 		revelationist_reformed = 200

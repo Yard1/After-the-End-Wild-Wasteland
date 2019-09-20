@@ -3689,7 +3689,11 @@ feudal_elective = {
 				trait = crusader_king 
 				trait = crusader_queen
 			} 
-		} 
+		}
+		OR = {
+			NOT = { government = militarist_government }
+			FROM = { religion = jeffersonian }
+		}
 		FROM = { #Either the candidate is in the realm, or is landless, or the title is independent, or the realm of the title does NOT have protected inheritance.
 			OR = { 
 				any_liege = { 

@@ -1172,7 +1172,6 @@ e_thunderland = {
 		# Crusade target weight
 		catholic = 20
 		americanist = 100
-		jeffersonian = 100
 		hamiltonian = 100
 		libertarian = 100
 		norse_pagan_reformed = 500
