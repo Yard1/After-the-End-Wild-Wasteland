@@ -190,8 +190,8 @@ militarist_government;Militarist Feudal;;;;;;;;;;;;;x
 militarist_government_desc;The Militarist Feudal government, much like the ordinary Feudal government, revolves around the oath between liege and vassal, and Militarist Feudal lords can only directly own so many Holdings before they must start to rely on vassals - whose loyalty may vary... The Militarist Feudal government is unique to the [jeffersonian.GetName] faith, and forces a unique succession form on all vassals above Count tier, where the direct liege chooses the successor of the vassals below them. Rulers are not allowed to imprison vassals or revoke their titles unless they have broken the law. If you should convert to a non-[jeffersonian.GetName] religion, or become a vassal of a non-[jeffersonian.GetName] ruler, your government form will change to Feudal.;;;;;;;;;;;;;x
 tooltip_feudal_elector_vote_wrong_tier;[From.GetSheHeCap] is of wrong tier;;;;;;;;;;;;;x
 
-gov_militarist_government_autocracy;Militarist [PrimaryTitle.GetTier];[PrimaryTitle.GetTier] (régime électoral et despotique);[PrimaryTitle.GetTier] (Despotisch und mit Elektorat);;[PrimaryTitle.GetTier] despótico electivo;;;;;;;;;x
-gov_militarist_government_council;Militarist Junta [PrimaryTitle.GetTier];[PrimaryTitle.GetTier] (régime héréditaire et aristocratique);[PrimaryTitle.GetTier] (Aristokratisch und mit Erbfolge);;[PrimaryTitle.GetTier] aristocrático hereditario ;;;;;;;;;x
+gov_militarist_government_autocracy;Militarist [PrimaryTitle.GetTier];;;;;;;;;;;;;x
+gov_militarist_government_council;Militarist Junta [PrimaryTitle.GetTier];;;;;;;;;;;;;x
 
 tax_levy_law_militarist;Noble;Noblesse;Adlige;;Noble;;;;;;;;;x
 tax_levy_law_militarist_desc;Noble Obligation Laws;Lois d'obligations nobles;Adelspflichten;;Leyes de la obligación de la nobleza;;;;;;;;;x
@@ -360,3 +360,7 @@ POPE_AIREASON_MODIFIER_RULER_JUST_NEGATIVE_TARGET;[FromFrom.GetTitledFirstName] 
 
 POPE_AIREASON_MODIFIER_RULER_ARBITRARY;[Root.GetTitledFirstName] is §YArbitrary§!;[Root.Get_Le_TitledFirstName] est §Ycynique§!;[Root.GetTitledFirstName] ist §Yzynisch§!;;[Root.GetTitledFirstName] es §Ycínic[Root.GetOA]§!;;;;;;;;x
 POPE_AIREASON_MODIFIER_RULER_ARBITRARY_TARGET;[FromFrom.GetTitledFirstName] is §YArbitrary§!;[FromFrom.Get_Le_TitledFirstName] est §Ycynique§!;[FromFrom.GetTitledFirstName] ist §Yzynisch§!;;[FromFrom.GetTitledFirstName] es §Ycínic[FromFrom.GetOA]§!;;;;;;;;x
+
+EVTDESC_liberation_war;The great [Root.GetTitledFirstName] has declared a [Root.Religion.GetCrusadeName] against [New.GetTitledName] and the adherents of '[New.Religion.GetHighGodName]' in the [From.GetFullBaseName]! All true [Root.Religion.GetName] patriots are called to arms in the name of [Root.Religion.GetHighGodName]!\n\nThe holy lands of America will be reclaimed in the name of [Root.Religion.GetHighGodName]!;;;;;;;;;;;;x
+EVTDESC_liberation_war_pagan;The great [Root.GetTitledFirstName] has declared a [Root.Religion.GetCrusadeName] against [New.GetTitledName] and the followers of [New.Religion.GetHighGodName] in the [From.GetFullBaseName]! All true [Root.Religion.GetName] patriots are called to arms against the uncivilized barbarians!\n\nThese undisciplined scabs will soon know the power of [Root.Religion.GetHighGodName]!;;;;;;;;;;;;x
+EVTDESC_liberation_war_christ;The great [Root.GetTitledFirstName] has declared a [Root.Religion.GetCrusadeName] against [New.GetTitledName] and the [New.Religion.GetName] infidels in [From.GetFullBaseName]! All true [Root.Religion.GetName] patriots are called to arms against the deniers of [Root.Religion.GetHighGodName]!;;;;;;;;;;;;x

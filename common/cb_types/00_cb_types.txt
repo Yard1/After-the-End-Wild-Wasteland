@@ -3560,6 +3560,10 @@ crusade = {
 					religion_group = pagan_group
 					NOT = { religion = ROOT }
 				}
+				AND = {
+					ROOT = { religion_openly_americanist_or_heresy_trigger = yes }
+					religion_openly_americanist_or_heresy_trigger = no
+				}
 			}
 		}
 		
@@ -3621,6 +3625,10 @@ crusade = {
 				AND = {
 					religion_group = pagan_group
 					NOT = { religion = ROOT }
+				}
+				AND = {
+					ROOT = { religion_openly_americanist_or_heresy_trigger = yes }
+					religion_openly_americanist_or_heresy_trigger = no
 				}
 			}
 		}

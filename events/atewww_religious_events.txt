@@ -110,7 +110,7 @@ character_event = {
 	
 	is_triggered_only = yes
 	#major_trigger = {
-	#	religion_group = christian
+	#	religion_openly_americanist_or_heresy_trigger = yes
 	#}
 	
 	only_playable = yes
@@ -770,16 +770,9 @@ narrative_event = {
 	desc = {
 		text = EVTDESC_liberation_war
 		trigger = {
-			ROOT = { 
-				OR = {
-					religion = americanist 
-					religion = hamiltonian
-					religion = libertarian
-				}
-			}
 			OR = {
 				new_character = {
-					NOT = { religion_group = christian }
+					NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 					NOT = { religion_group = pagan_group }
 				}
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -789,13 +782,6 @@ narrative_event = {
 	desc = {
 		text = EVTDESC_liberation_war_pagan
 		trigger = {
-			ROOT = { 
-				OR = {
-					religion = americanist 
-					religion = hamiltonian
-					religion = libertarian
-				}
-			}
 			new_character = {
 				religion_group = pagan_group
 			}
@@ -807,59 +793,8 @@ narrative_event = {
 	desc = {
 		text = EVTDESC_liberation_war_christ
 		trigger = {
-			ROOT = { 
-				OR = {
-					religion = americanist 
-					religion = hamiltonian
-					religion = libertarian
-				}
-			}
 			new_character = {
-				religion_group = christian
-			}
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	
-	desc = {
-		text = EVTDESC_military_campaign
-		trigger = {
-			ROOT = { 
-				religion = jeffersonian
-			}
-			OR = {
-				new_character = {
-					NOT = { religion_group = christian }
-					NOT = { religion_group = pagan_group }
-				}
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	desc = {
-		text = EVTDESC_military_campaign_pagan
-		trigger = {
-			ROOT = { 
-				religion = jeffersonian
-			}
-			new_character = {
-				religion_group = pagan_group
-			}
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-	}
-	desc = {
-		text = EVTDESC_military_campaign_christ
-		trigger = {
-			ROOT = { 
-				religion = jeffersonian
-			}
-			new_character = {
-				religion_group = christian
+				religion_openly_americanist_or_heresy_trigger = yes
 			}
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -884,6 +819,11 @@ narrative_event = {
 		}
 	}
 	
+	
+	immediate = {
+		sound_effect = liberation_war_start_01
+	}
+
 	option = {
 		name = EVTOPTA324 # For [God Name]!
 		trigger = { religion = ROOT }
@@ -913,6 +853,243 @@ narrative_event = {
 				religion = PREV
 				NOT = { character = PREV }
 			}
+		}
+	}
+}
+
+narrative_event = {
+	id = ATE_WWW_RELIGION.18
+	title = EVTNAME_ATE_WWW_RELIGION_18
+	desc = EVTDESC_ATE_WWW_RELIGION_18
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		religion = ursuline
+		controls_religion = yes
+		year = 2690
+		
+		OR = {
+			1010 = { # Sault
+				NOT = { owner = { religion_openly_americanist_or_heresy_trigger = yes } }
+			}
+			118 = { # Detroit
+				NOT = { owner = { religion_openly_americanist_or_heresy_trigger = yes } }
+			}
+		}
+		
+		NOT = { has_global_flag = liberation_wars_unlocked }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	immediate = {
+		set_global_flag = liberation_wars_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_RELIGION_18
+		trigger = {
+			religion_openly_americanist_or_heresy_trigger = yes
+		}
+	}
+	
+	option = {
+		name = EVTOPTB39660
+		trigger = {
+			NOT = { religion_openly_americanist_or_heresy_trigger = yes }
+		}
+	}
+}
+
+# THE START OF THE URSULINE CRUSADES - MARITIMES FAILING
+narrative_event = {
+	id = ATE_WWW_RELIGION.19
+	title = EVTNAME_ATE_WWW_RELIGION_18
+	desc = EVTDESC_ATE_WWW_RELIGION_19
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		religion = ursuline
+		controls_religion = yes
+		NOT = { has_global_flag = liberation_wars_unlocked }
+		
+		OR = {
+			k_maritimes = {
+				holder_scope = {
+					NOT = { religion_openly_americanist_or_heresy_trigger = yes }
+				}
+			}
+			1260 = { # Chebucto (Halifax)
+				NOT = { owner = { religion_openly_americanist_or_heresy_trigger = yes } }
+			}
+			1163 = { # Meduxnekeag (Canterbury)
+				NOT = { owner = { religion_openly_americanist_or_heresy_trigger = yes } }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = liberation_wars_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_RELIGION_18
+		trigger = {
+			religion_openly_americanist_or_heresy_trigger = yes
+		}
+	}
+	
+	option = {
+		name = EVTOPTB39660
+		trigger = {
+			NOT = { religion_openly_americanist_or_heresy_trigger = yes }
+		}
+	}
+}
+
+# THE START OF THE URSULINE CRUSADES - QUEBEC CITY HAS FALLEN
+narrative_event = {
+	id = ATE_WWW_RELIGION.20
+	title = EVTNAME_ATE_WWW_RELIGION_18
+	desc = EVTDESC_ATE_WWW_RELIGION_20
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		religion = ursuline
+		controls_religion = yes
+		NOT = { has_global_flag = liberation_wars_unlocked }
+		
+		1199 = { # Cap Diamant
+			owner = {
+				OR = {
+					NOT = { religion_openly_americanist_or_heresy_trigger = yes }
+					is_heretic = yes
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = liberation_wars_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_RELIGION_18
+		trigger = {
+			religion_openly_americanist_or_heresy_trigger = yes
+		}
+	}
+	
+	option = {
+		name = EVTOPTB39660
+		trigger = {
+			NOT = { religion_openly_americanist_or_heresy_trigger = yes }
+		}
+	}
+}
+
+# THE START OF THE URSULINE CRUSADES - MISC CHRISTENDOM
+narrative_event = {
+	id = ATE_WWW_RELIGION.21
+	title = EVTNAME_ATE_WWW_RELIGION_18
+	desc = EVTDESC_ATE_WWW_RELIGION_21
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		religion = ursuline
+		controls_religion = yes
+		NOT = { has_global_flag = liberation_wars_unlocked }
+		
+		OR = {
+			1271 = { # Toronto
+				NOT = { owner = { religion_openly_americanist_or_heresy_trigger = yes } }
+			}
+			1217 = { # Hochelaga (Montreal)
+				NOT = { owner = { religion_openly_americanist_or_heresy_trigger = yes } }
+			}
+			1297 = { # Ottawa
+				NOT = { owner = { religion_openly_americanist_or_heresy_trigger = yes } }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = liberation_wars_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_RELIGION_18
+		trigger = {
+			religion_openly_americanist_or_heresy_trigger = yes
+		}
+	}
+	
+	option = {
+		name = EVTOPTB39660
+		trigger = {
+			NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 		}
 	}
 }
