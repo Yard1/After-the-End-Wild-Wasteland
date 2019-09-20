@@ -85,3 +85,49 @@ pirate_queen_bloodline = {
 	}
 	flags = { bloodline_spawned_ships bloodline_pirate more_raiders_bloodline created_bloodline }
 }
+
+high_commander_bloodline = {
+	monthly_character_piety = 0.3
+	command_modifier = {
+		religious_enemy = 0.2
+	}	
+	martial = 1
+	combat_rating = 10
+	inheritance = patrilineal
+	allow_bastards = no
+	flags = { high_commander bloodline_heroes created_bloodline }
+	picture = GFX_bloodlines_symbol_tengri_eagle
+	active = {
+		custom_tooltip = {
+			text = militarist_bloodline_TT
+			FROM = {
+				founder = {
+					religion = ROOT
+				}
+			}
+		}
+	}
+}
+
+high_commander_female_bloodline = {
+	monthly_character_piety = 0.3
+	command_modifier = {
+		religious_enemy = 0.2
+	}	
+	martial = 1
+	combat_rating = 10
+	inheritance = matrilineal
+	allow_bastards = no
+	flags = { high_commander bloodline_heroes created_bloodline }
+	picture = GFX_bloodlines_symbol_tengri_eagle
+	active = {
+		custom_tooltip = {
+			text = militarist_bloodline_TT
+			FROM = {
+				founder = {
+					religion = ROOT
+				}
+			}
+		}
+	}
+}

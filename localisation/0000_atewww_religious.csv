@@ -3,6 +3,7 @@
 ROADMEN;Roadmen;;;;;;;;;;;;;x
 PRIEST_PLURAL;[This.GetPriest]s;;;;;;;;;;;;;x
 monetarist_opinion;[monetarist.GetName] Opinion;;;;;;;;;;;;;x
+CRUSADE_DESC_IRO;A $CRUSADE$ has been declared to reclaim all parts of the §Y$TITLE$§! held by §Y$ENEMY$§!.;Sa Sainteté le §Y$POPE$§! a lancé une $CRUSADE$ pour reconquérir toutes les terres du §Y$TITLE$§! détenues par §Y$ENEMY$§!.;Seine Heiligkeit, §Y$POPE$§! hat einen $CRUSADE$ ausgerufen, um alle Besitztümer des Titels §Y"$TITLE$"§!, die §Y$ENEMY$§! innehat, zurückzufordern.;;Su santidad, §Y$POPE$§! ha declarado una $CRUSADE$ para reclamar todas las partes del §Y$TITLE$§! en poder de §Y$ENEMY$§!.;;;;;;;;;x
 
 REL_INVESTITURE_DESC;$NAME$ priests may pay tax to the religious head rather than their secular liege;Les évêques de religion $NAME$ peuvent payer leurs impôts auprès du pape au détriment de leur souverain séculier;$NAME$e Bischöfe können beschließen, die Steuern dem Papst statt dem weltlichen Lehnsherrn zu zahlen.;;Los obispos $NAME$ pueden pagar el impuesto al Papa, en lugar de a su señor secular;;;;;;;;;x
 REL_PRIESTS_INHERIT_DESC;Priests (Temple holders) can inherit titles;Les religieux terriens peuvent hériter de titres;Priester (Eigentümer der Tempel) können Titel erben;;Los sacerdotes (titulares de templo) pueden heredar títulos;;;;;;;;;x
@@ -176,6 +177,14 @@ GOD_THE_GENERALS;The Generals;;;;;;;;;;;;;x
 THE_ARTICLES_OF_WAR;Articles of War;;;;;;;;;;;;;x
 MILITARY_OPERATION;Campaign;;;;;;;;;;;;;x
 THE_DRAFT_DODGER;The Draft Dodger;;;;;;;;;;;;;x
+
+militarist_bloodline_TT;Is a Militarist;;;;;;;;;;;;;x
+
+high_commander_bloodline;Blood of Supreme Commander [Root.GetOnlyDynastyName];;;;;;;;;;;;;x
+high_commander_bloodline_desc;This character is a descendant of the brave Supreme Commander [Root.GetOnlyDynastyName], who restored the Supreme Allied Command, to which all Militarists answer to.;;;;;;;;;;;;;x 
+
+high_commander_female_bloodline;Blood of Supreme Commander [Root.GetOnlyDynastyName];;;;;;;;;;;;;x
+high_commander_female_bloodline_desc;This character is a descendant of the brave Supreme Commander [Root.GetOnlyDynastyName], who restored the Supreme Allied Command, to which all Militarists answer to.;;;;;;;;;;;;;x 
 
 militarist_government;Militarist Feudal;;;;;;;;;;;;;x
 militarist_government_desc;The Militarist Feudal government, much like the ordinary Feudal government, revolves around the oath between liege and vassal, and Militarist Feudal lords can only directly own so many Holdings before they must start to rely on vassals - whose loyalty may vary... The Militarist Feudal government is unique to the [jeffersonian.GetName] faith, and forces a unique succession form on all vassals above Count tier, where the direct liege chooses the successor of the vassals below them. Rulers are not allowed to imprison vassals or revoke their titles unless they have broken the law. If you should convert to a non-[jeffersonian.GetName] religion, or become a vassal of a non-[jeffersonian.GetName] ruler, your government form will change to Feudal.;;;;;;;;;;;;;x

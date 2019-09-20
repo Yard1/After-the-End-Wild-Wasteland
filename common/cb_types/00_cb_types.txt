@@ -3490,7 +3490,12 @@ crusade = {
 						}
 					}
 					AND = {
-						religion = americanist
+						OR = {
+							religion = americanist
+							religion = jeffersonian
+							religion = hamiltonian
+							religion = libertarian
+						}
 						custom_tooltip = {
 							text = CTT_LIBERATION_WARS_UNLOCKED
 							has_global_flag = liberation_wars_unlocked
@@ -3513,13 +3518,44 @@ crusade = {
 		ROOT = {
 			uses_new_crusade = no
 			can_call_crusade = yes
+			conditional_tooltip = {
+				trigger = { religion = americanist }
+				NOT = {
+					any_independent_ruler = {
+						any_war = {
+							attacker = { religion = americanist }
+							using_cb = crusade
+						}
+					}
+				}
+			}
 		}
 		
 		FROM = {
 			OR = {
 				NOT = { religion_group = ROOT }
-				is_heresy_of = ROOT
-				is_parent_religion = ROOT
+				AND = {
+					ROOT = {
+						NOR = {
+							religion = americanist
+							religion = jeffersonian
+							religion = hamiltonian
+							religion = libertarian
+						}
+					}
+					is_heresy_of = ROOT
+				}
+				AND = {
+					ROOT = {
+						NOR = {
+							religion = americanist
+							religion = jeffersonian
+							religion = hamiltonian
+							religion = libertarian
+						}
+					}
+					is_parent_religion = ROOT
+				}
 				AND = {
 					religion_group = pagan_group
 					NOT = { religion = ROOT }
@@ -3552,13 +3588,36 @@ crusade = {
 	
 	is_valid = {
 		ROOT = {
-			can_call_crusade = yes
+			OR = {
+				can_call_crusade = yes
+				religion = americanist
+			}
 		}
 		FROM = {
 			OR = {
 				NOT = { religion_group = ROOT }
-				is_heresy_of = ROOT
-				is_parent_religion = ROOT
+				AND = {
+					ROOT = {
+						NOR = {
+							religion = americanist
+							religion = jeffersonian
+							religion = hamiltonian
+							religion = libertarian
+						}
+					}
+					is_heresy_of = ROOT
+				}
+				AND = {
+						ROOT = {
+						NOR = {
+							religion = americanist
+							religion = jeffersonian
+							religion = hamiltonian
+							religion = libertarian
+						}
+					}
+					is_parent_religion = ROOT
+				}
 				AND = {
 					religion_group = pagan_group
 					NOT = { religion = ROOT }

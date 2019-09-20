@@ -126,12 +126,19 @@ character_event = {
 	
 	option = {
 		name = "Add pills"
-		add_artifact = atewww_pills
+		d_americanist = {
+			holder_scope = {
+				set_up_americanist_acting_president = yes
+			}
+		}
 	}
 
 	option = {
 		name = "add flu"
-		add_trait = flu
+	}
+
+	option = {
+		name = "d_americanist succ"
 	}
 
 	option = {

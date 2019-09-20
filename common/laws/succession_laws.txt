@@ -472,6 +472,7 @@ succession_laws = {
 				holder_scope = { NOT = { religion_group = pirate } }
 			}
 			holder_scope = {
+				NOT = { has_landed_title = d_forscom }
 				OR = {
 					independent = yes
 					NOT = {

@@ -11108,6 +11108,8 @@ character_event = {
 
 		c_2000060 = { add_rival=1788013 }
 		c_1788013 = { add_rival=2000060 }
+
+		set_global_flag = liberation_wars_unlocked
 	}
 
 	after = {

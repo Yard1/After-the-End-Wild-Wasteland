@@ -1711,7 +1711,12 @@ liberate_religion = { # New6
 										has_global_flag = ursuline_crusades_unlocked
 									}
 									AND = {
-										religion = americanist
+										OR = {
+											religion = americanist
+											religion = jeffersonian
+											religion = hamiltonian
+											religion = libertarian
+										}
 										has_global_flag = liberation_wars_unlocked
 									}
 									AND = {

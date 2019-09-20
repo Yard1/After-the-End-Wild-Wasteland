@@ -142,3 +142,10 @@ on_excommunicate_interaction = {
 		prez.108
 	}
 }
+
+#character
+on_crusade_creation = {
+	events = {
+		ATE_WWW_RELIGION.17
+ 	}
+}

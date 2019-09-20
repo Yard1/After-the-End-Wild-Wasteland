@@ -149,14 +149,6 @@ narrative_event = {
 
 	is_triggered_only = yes
 	
-	trigger = {
-		NOT = { has_global_flag = general_of_army }
-	}
-	
-	immediate = {
-		set_global_flag = general_of_army
-	}
-	
 	option = {
 		name = EVTOPTA_general_of_army
 		trigger = {
@@ -760,6 +752,167 @@ character_event = {
 		}
 		else = {
 			character_event = { id = USD.1 }
+		}
+	}
+}
+
+# AMERICANIST LIBERATION WAR
+# Called from 'on_crusade_creation'
+# new_character is the targetted enemy
+# ROOT is the religious head
+# FROM is the attacked kingdom title
+narrative_event = {
+	id = ATE_WWW_RELIGION.17
+	title = EVTNAME200
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	desc = {
+		text = EVTDESC_liberation_war
+		trigger = {
+			ROOT = { 
+				OR = {
+					religion = americanist 
+					religion = hamiltonian
+					religion = libertarian
+				}
+			}
+			OR = {
+				new_character = {
+					NOT = { religion_group = christian }
+					NOT = { religion_group = pagan_group }
+				}
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_liberation_war_pagan
+		trigger = {
+			ROOT = { 
+				OR = {
+					religion = americanist 
+					religion = hamiltonian
+					religion = libertarian
+				}
+			}
+			new_character = {
+				religion_group = pagan_group
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_liberation_war_christ
+		trigger = {
+			ROOT = { 
+				OR = {
+					religion = americanist 
+					religion = hamiltonian
+					religion = libertarian
+				}
+			}
+			new_character = {
+				religion_group = christian
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	
+	desc = {
+		text = EVTDESC_military_campaign
+		trigger = {
+			ROOT = { 
+				religion = jeffersonian
+			}
+			OR = {
+				new_character = {
+					NOT = { religion_group = christian }
+					NOT = { religion_group = pagan_group }
+				}
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_military_campaign_pagan
+		trigger = {
+			ROOT = { 
+				religion = jeffersonian
+			}
+			new_character = {
+				religion_group = pagan_group
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESC_military_campaign_christ
+		trigger = {
+			ROOT = { 
+				religion = jeffersonian
+			}
+			new_character = {
+				religion_group = christian
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+	}
+
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { 
+			OR = {
+				religion = americanist 
+				religion = jeffersonian
+				religion = hamiltonian
+				religion = libertarian
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA324 # For [God Name]!
+		trigger = { religion = ROOT }
+	}
+	option = {
+		name = EVTOPTB200 # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD200 # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE200 # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
 		}
 	}
 }

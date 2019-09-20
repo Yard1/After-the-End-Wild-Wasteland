@@ -43,10 +43,7 @@ d_forscom = {
 	location_ruler_title = yes
 	
 	allow = { #only via special decision
-		has_global_flag = general_of_army
-		religion = jeffersonian
-		num_of_holy_sites = 3
-		piety = 500
+		always = no
 	}
 	
 	# Always exists

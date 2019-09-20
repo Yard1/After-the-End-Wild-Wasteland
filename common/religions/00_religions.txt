@@ -2277,6 +2277,7 @@ oldworld = {
 		female_temple_holders = yes
 		feminist = yes
 		allows_matrilineal_marriage = yes
+		can_call_crusade = yes
 		
 		priests_can_marry = yes
 		
@@ -2387,7 +2388,7 @@ oldworld = {
 		high_god_name = GOD_THE_GENERALS
 
 		god_names = {
-			GOD_THE_PRESIDENTS GOD_WASHINGTON GOD_ROOSEVELT GOD_THE_FLAG
+			GOD_WASHINGTON GOD_ROOSEVELT GOD_THE_FLAG
 			GOD_EISENHOWER GOD_REAGAN GOD_TRUMAN GOD_JACKSON GOD_UNCLE_SAM
 			GOD_CHAIN_OF_COMMAND GOD_HIGH_COMMAND GOD_THE_GENERALS
 		}

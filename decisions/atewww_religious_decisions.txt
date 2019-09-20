@@ -261,6 +261,34 @@ decisions = {
 		effect = {
 			piety = -250
 			d_forscom = { grant_title = ROOT }
+			if = {
+				limit = {
+					primary_title = { NOT = { has_law = succ_feudal_elective } }
+				}
+				primary_title = {
+					add_law = { law = succ_feudal_elective opinion_effect = no }
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_owned_bloodline = { has_bloodline_flag = high_commander }
+					}
+				}
+				if = {
+					limit = { is_female = yes }
+					create_bloodline = { 
+						type = high_commander_female_bloodline 
+						religion = jeffersonian
+					}
+				}
+				else = {
+					create_bloodline = { 
+						type = high_commander_bloodline 
+						religion = jeffersonian
+					}
+				}
+			}
 			narrative_event = { id = ATE_WWW_RELIGION.4 }
 		}
 		ai_will_do = {
