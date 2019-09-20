@@ -1,5 +1,11 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_secretly_monetarist"
+		texturefile = "gfx\\traits\\secret_religion_consumerist.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
 		name = "GFX_trait_inaug_by_sjudge"
 		texturefile = "gfx/traits/inaug_by_sjudge.dds"
 		noOfFrames = 1

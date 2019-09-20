@@ -827,6 +827,7 @@ narrative_event = {
 		NOT = { has_global_flag = monetarist_heresy }
 		trait = investor
 		is_landed = yes
+		block_general_event_trigger = no
 		NOT = { has_landed_title = d_consumerist }
 	}
 	
