@@ -845,3 +845,37 @@
 	    birth=yes
 	}
 }
+
+### Arizona ###
+
+1491025 = {
+	name = "Dude"
+	dynasty = 2029105 #Dude
+	dna = "cdajbdjcjfc"
+	culture = arixan
+	religion = atomicist
+	martial = 8
+	diplomacy = 7
+	stewardship = 6
+	intrigue = 6
+	learning = 4
+	trait = tough_soldier
+	trait = atom_bless
+	trait = gamer
+	trait = strong
+	trait = arbitrary
+	trait = brave
+	trait = stubborn
+	trait = cruel
+	trait = cynical
+	trait = lunatic
+	trait = drunkard
+	trait = diligent
+	give_nickname = nick_the_postal_dude 
+	2639.5.12 = {
+		birth = yes
+		effect = {
+		    add_artifact = old_world_shades
+		} 
+	}
+}

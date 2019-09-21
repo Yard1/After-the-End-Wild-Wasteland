@@ -130,6 +130,23 @@
 	culture = haitian
 }
 
+2029105 = { 
+    name = "Dude" 
+	culture = arixan
+	coat_of_arms = {
+        religion = atomicist
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 29
+            emblem = 0
+            color = 1
+            color = 5
+            color = 5
+        }
+    }
+}
+
 2029121 = { 
     name = "Trump" 
 	culture = gothamite 
