@@ -7692,7 +7692,22 @@ coat_of_arms = {
 2001031 = { name="Lavaud" culture=haitian }
 2001032 = { name="Estimé" culture=haitian }
 2001033 = { name="Magloire" culture=haitian }
-2001034 = { name="Sylvain" culture=haitian }
+2001034 = { 
+    name = "Sylvain" 
+	culture = haitian 
+	coat_of_arms = {
+        religion = voodoo
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 9
+            emblem = 0
+            color = 13
+            color = 13
+            color = 0
+        }
+    }
+}
 2001035 = { name="Fignolé" culture=haitian }
 2001036 = { name="Kbreau" culture=haitian }
 2001037 = { name="Namphy" culture=haitian }

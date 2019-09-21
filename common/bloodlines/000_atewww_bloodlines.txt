@@ -34,6 +34,22 @@ creaux = { #Created the Kingdom Of Louisiana
 	}
 }
 
+sylvain = { #Somehow Managed To Overcome Being A Zombi
+	combat_rating = 5
+	health = 0.50
+	voodoo_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_generic_hero
+	flags = { 
+	    historical_bloodline 
+		bloodline_heroes 
+	}
+	active = {
+		religion = voodoo
+	}
+}
+
 trump = { #Trumps
 	monthly_character_prestige = 0.1
 	stewardship = 1
