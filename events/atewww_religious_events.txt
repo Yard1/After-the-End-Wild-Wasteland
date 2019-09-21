@@ -772,7 +772,7 @@ narrative_event = {
 		trigger = {
 			OR = {
 				new_character = {
-					NOT = { religion_openly_americanist_or_heresy_trigger = yes }
+					NOT = { religion_group = christian }
 					NOT = { religion_group = pagan_group }
 				}
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -794,7 +794,7 @@ narrative_event = {
 		text = EVTDESC_liberation_war_christ
 		trigger = {
 			new_character = {
-				religion_openly_americanist_or_heresy_trigger = yes
+				religion_group = christian
 			}
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }

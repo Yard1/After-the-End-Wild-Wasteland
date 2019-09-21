@@ -8544,6 +8544,12 @@ militarist_appointment = {
 				}
 				NOR = {
 					is_landed = yes
+					has_job_title = job_chancellor
+					has_job_title = job_treasurer
+					has_job_title = job_spymaster
+					has_job_title = job_spiritual
+					has_minor_title = title_councilmember_king
+					has_minor_title = title_councilmember_emperor
 					has_minor_title = title_commander
 					has_job_title = job_marshal
 				}
@@ -8561,6 +8567,12 @@ militarist_appointment = {
 				}
 				OR = {
 					is_landed = yes
+					has_job_title = job_chancellor
+					has_job_title = job_treasurer
+					has_job_title = job_spymaster
+					has_job_title = job_spiritual
+					has_minor_title = title_councilmember_king
+					has_minor_title = title_councilmember_emperor
 					has_minor_title = title_commander
 					has_job_title = job_marshal
 				}
