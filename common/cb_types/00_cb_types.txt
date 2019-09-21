@@ -3698,6 +3698,7 @@ crusade = {
 				NOT = { character = FROM }
 				religion = FROM
 				NOT = { war_with = FROM }
+				NOT = { war_with = ROOT }
 				any_realm_title = {
 					de_jure_liege_or_above = PREVPREV
 				}
@@ -4422,6 +4423,7 @@ new_crusade = {
 	}
 
 	on_add_title = {
+		ROOT = { save_event_target_as = crusade_attacker }
 		save_event_target_as = crusade_title
 		FROM = {
 			character_event = { id = ATE_WWW_RELIGION.23 days = 1 }
@@ -4976,11 +4978,15 @@ new_crusade = {
 					}
 					any_independent_ruler = {
 						limit = {
-							NOT = { character = FROM }
-							religion = FROM
-							any_war = {
-								using_cb = new_crusade
-								any_attacker = { character = ROOT }
+							OR = {
+								character = FROM
+								AND = {
+									religion = FROM
+									any_war = {
+										using_cb = new_crusade
+										any_attacker = { character = ROOT }
+									}
+								}
 							}
 						}
 						event_target:new_owner = {

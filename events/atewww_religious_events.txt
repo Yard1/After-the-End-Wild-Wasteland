@@ -1133,11 +1133,15 @@ character_event = {
 				NOT = { character = ROOT }
 				religion = ROOT
 				NOT = { war_with = ROOT }
+				NOT = { war_with = event_target:crusade_attacker }
 				any_realm_title = {
 					de_jure_liege_or_above = event_target:crusade_title
 				}
 			}
-			pledge_crusade_defense = yes
+			if = {
+				limit = { has_pledged_crusade_participation = no }
+				pledge_crusade_defense = yes
+			}
 			join_defender_wars = ROOT
 		}
 	}
