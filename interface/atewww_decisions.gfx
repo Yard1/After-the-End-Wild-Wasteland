@@ -135,4 +135,28 @@ spriteTypes = {
 		name = "GFX_donate_money_to_saint_expedit"
 		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
 	}
+	spriteType = {
+		name = "GFX_expel_lightbringers"
+		texturefile = "gfx\\interface\\decision_icon_expel_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_donate_money_to_lightbringers"
+		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_vassalize_lightbringers"
+		texturefile = "gfx/interface/decision_icon_vassalize_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_expel_dead_sun"
+		texturefile = "gfx\\interface\\decision_icon_expel_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_donate_money_to_dead_sun"
+		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_vassalize_dead_sun"
+		texturefile = "gfx/interface/decision_icon_vassalize_holy_order.dds"
+	}
 }
