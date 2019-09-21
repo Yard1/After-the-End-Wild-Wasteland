@@ -3694,8 +3694,10 @@ crusade = {
 	on_add_title = {
 		any_independent_ruler = {
 			limit = {
+				mercenary = no
 				NOT = { character = FROM }
 				religion = FROM
+				NOT = { war_with = FROM }
 				any_realm_title = {
 					de_jure_liege_or_above = PREVPREV
 				}
@@ -3722,6 +3724,7 @@ crusade = {
 				limit = { ROOT = { NOT = { war_with = FROM } } } #just for a tooltip
 				any_independent_ruler = {
 					limit = {
+						mercenary = no
 						religion = FROM
 						any_realm_title = {
 							de_jure_liege_or_above = PREVPREV
@@ -3781,6 +3784,7 @@ crusade = {
 				limit = { ROOT = { NOT = { war_with = FROM } } } #just for a tooltip
 				any_independent_ruler = {
 					limit = {
+						mercenary = no
 						religion = FROM
 						any_realm_title = {
 							de_jure_liege_or_above = PREVPREV
@@ -3872,6 +3876,7 @@ crusade = {
 				limit = { ROOT = { NOT = { war_with = FROM } } } #just for a tooltip
 				any_independent_ruler = {
 					limit = {
+						mercenary = no
 						religion = FROM
 						any_realm_title = {
 							de_jure_liege_or_above = PREVPREV
@@ -4362,6 +4367,7 @@ new_crusade = {
 				}
 				NOT = {
 					any_independent_ruler = {
+						mercenary = no
 						any_realm_title = {
 							de_jure_liege_or_above = PREVPREV
 						}
@@ -4412,6 +4418,13 @@ new_crusade = {
 				sound_effect = china_angered_emperor
 				detract_grace_super_huge_effect = yes 
 			}
+		}
+	}
+
+	on_add_title = {
+		save_event_target_as = crusade_title
+		FROM = {
+			character_event = { id = ATE_WWW_RELIGION.23 days = 1 }
 		}
 	}
 
@@ -4961,11 +4974,18 @@ new_crusade = {
 					most_participating_crusader = {
 						save_event_target_as = new_owner
 					}
-					any_defender = {
-						show_scope_change = no
+					any_independent_ruler = {
+						limit = {
+							NOT = { character = FROM }
+							religion = FROM
+							any_war = {
+								using_cb = new_crusade
+								any_attacker = { character = ROOT }
+							}
+						}
 						event_target:new_owner = {
 							gain_settlements_under_title = {
-								title = PREVPREV
+								title = event_target:new_crusade_title
 								enemy = PREV
 								type = holy_war
 							}
@@ -5156,22 +5176,19 @@ new_crusade = {
 				}
 				# Otherwise
 				else = {
-					hidden_tooltip = {
-						PREV = {
-							any_defender = {
-								limit = {
-									NOT = { character = FROM }
-									religion = FROM
-									any_realm_title = {
-										de_jure_vassal_or_below = PREVPREV
-									}
-								}
-								FROM = {
-									vassalize_or_take_under_title = {
-										title = PREVPREV
-										enemy = PREV
-									}
-								}
+					any_independent_ruler = {
+						limit = {
+							NOT = { character = FROM }
+							religion = FROM
+							any_war = {
+								using_cb = new_crusade
+								any_attacker = { character = ROOT }
+							}
+						}
+						FROM = {
+							vassalize_or_take_under_title = {
+								title = event_target:new_crusade_title
+								enemy = PREV
 							}
 						}
 					}

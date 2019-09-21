@@ -1118,3 +1118,28 @@ character_event = {
 		remove_trait = hidden_ai_zeal_boost_for_americanists
 	}
 }
+
+
+character_event = {
+	id = ATE_WWW_RELIGION.23
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		any_independent_ruler = {
+			limit = {
+				mercenary = no
+				NOT = { character = ROOT }
+				religion = ROOT
+				NOT = { war_with = ROOT }
+				any_realm_title = {
+					de_jure_liege_or_above = event_target:crusade_title
+				}
+			}
+			pledge_crusade_defense = yes
+			join_defender_wars = ROOT
+		}
+	}
+
+}

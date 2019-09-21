@@ -619,6 +619,11 @@ character_event = {
 				factor = 4
 				has_character_flag = 80_20_female
 			}
+			modifier = {
+				factor = 0
+				is_ruler = yes
+				primary_title = { has_law = agnatic_succession }
+			}
 		}
 	}
 	option = {

@@ -169,7 +169,20 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		set_defacto_liege = THIS
+		log = "ATE_WWW_DEBUG.5: fire for [Root.GetBestName], crusade for [crusade_title.GetName]"
+		any_independent_ruler = {
+			limit = {
+				NOT = { character = ROOT }
+				religion = ROOT
+				NOT = { war_with = ROOT }
+				any_realm_title = {
+					de_jure_liege_or_above = event_target:crusade_title
+				}
+			}
+			log = "ATE_WWW_DEBUG.5: found [This.GetBestName]"
+			pledge_crusade_defense = yes
+			join_defender_wars = ROOT
+		}
 	}
 
 }

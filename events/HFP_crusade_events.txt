@@ -4688,6 +4688,7 @@ character_event = {
 
     immediate = {
 		crusade_target_title = {
+			save_event_target_as = crusade_target_kingdom
 			any_title = {
 				limit = {
 					de_jure_vassal_or_below = PREV
@@ -4765,6 +4766,12 @@ character_event = {
     				primary_title = {
     					holy_order = yes
     				}
+    			}
+    			modifier = {
+    				factor = 100
+					any_realm_title = {
+						de_jure_liege_or_above = event_target:crusade_target_kingdom
+					}
     			}
     			modifier = {
     				factor = 4
