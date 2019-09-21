@@ -4953,3 +4953,1064 @@ letter_event = {
 		name = EVTOPTB_SOA_1061
 	}
 }
+
+########################################
+# Lightbringers
+########################################
+
+# The son of a ruler volunteers to join the Lightbringers
+character_event = {
+	id = NewHolyOrders.109
+	hide_window = yes
+	
+	min_age = 16
+	max_age = 45
+	only_capable = yes
+	prisoner = no
+	religion = sol_invicta
+	only_men = yes
+	
+	trigger = {
+		is_ruler = no
+		d_lightbringers = {
+			holy_order_can_PREV_join = yes
+		}
+		
+		martial = 5
+				
+		OR = {
+			father_even_if_dead = {
+				primary_title = { higher_tier_than = BARON }
+			}
+			mother_even_if_dead = {
+				primary_title = { higher_tier_than = BARON }
+			}
+		}
+		
+		liege = {
+			holy_order = no
+            religion = sol_invicta
+			liege = {
+				holy_order = no
+			}
+		}
+		
+		
+		
+		NOT = { has_character_modifier = expelled_d_lightbringers }
+		NOT = {
+			any_liege = {
+				has_character_modifier = expelled_d_lightbringers
+			}
+		}
+
+		OR = {
+			AND = {
+				is_female = no
+				NOT = {
+					any_spouse = {
+						OR = {
+							is_landed = yes
+							AND = {
+								is_pregnant = yes
+								father_of_unborn = { character = ROOT } # Won't happen if spouse is pregnant with non-bastard child
+							}
+						}
+					}
+				}
+			}
+			AND = {
+				is_female = yes
+				NOR = {
+					is_landed = yes
+					is_pregnant = yes #Simply won't join if pregnant
+				}
+			}
+		}
+	}
+	
+	has_dlc = "Sons of Abraham"
+	mean_time_to_happen = {
+		years = 80
+		modifier = {
+			factor = 0.25
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.5
+			trait = celibate
+		}
+		modifier = {
+			factor = 0.5
+			trait = homosexual
+		}
+		modifier = {
+			factor = 0.7
+			trait = content
+		}
+		modifier = {
+			factor = 0.75
+			trait = chaste
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { age = 25 }
+		}
+		modifier = {
+			factor = 1.5
+			trait = slothful
+		}
+		modifier = {
+			factor = 2.0
+			trait = lustful
+		}
+		modifier = {
+			factor = 2.0
+			trait = cynical
+		}
+		modifier = {
+			factor = 2.0
+			trait = hedonist
+		}
+		modifier = {
+			factor = 2.0
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2.0
+			any_heir_title = {
+				always = yes
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_primary_heir = yes
+		}
+		modifier = {
+			factor = 2
+			any_spouse = {
+				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_lightbringers = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
+			}
+		}
+	}
+	
+	immediate = {
+		liege = {
+			character_event = {
+				id = NewHolyOrders.110
+			}
+		}
+	}
+}
+
+# Son or brother asks to join the Lightbringers
+character_event = {
+	id = NewHolyOrders.110
+	desc = EVTDESC_ATEWWNHO_110
+	picture = GFX_evt_crusaders
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SOA_1031 # Agree
+		ai_chance = {
+			factor = 100
+		}
+		
+		if = {
+			limit = {
+				religion = FROM
+			}
+			piety = 100
+		}
+		
+		FROM = {
+			character_event = {
+				id = NewHolyOrders.111
+				tooltip = EVTTOOLTIP_ATEWWNHO_110
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_SOA_1031 # Refuse
+		
+		if = {
+			limit = {
+				religion = FROM
+			}
+			piety = -100
+		}
+		
+		FROM = {
+			character_event = {
+				id = NewHolyOrders.112
+				tooltip = EVTTOOLTIP_SOA_1033
+			}
+		}
+	}
+}
+
+# Son or brother joins the the Lightbringers
+character_event = {
+	id = NewHolyOrders.111
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		d_lightbringers = {
+			holder_scope = {
+				save_event_target_as = order_target
+				ROOT = {
+					character_event = { id = SoA.2864 }
+				}
+			}
+		}
+	}
+}
+
+# Liege refuses request to join the the Lightbringers
+character_event = {
+	id = NewHolyOrders.112
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		opinion = {
+			who = FROM
+			modifier = opinion_refused_request_holy_order
+		}
+	}
+}
+
+# Ping event when donating money to the the Lightbringers
+character_event = {
+	id = NewHolyOrders.113
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		wealth = 300
+		FROM = {
+			letter_event = {
+				id = NewHolyOrders.114
+			}
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_generous_donation
+		}
+	}
+}
+
+# Notification event when donating money to the the Lightbringers
+letter_event = {
+	id = NewHolyOrders.114
+	desc = HOLY_ORDER_DONATE_MONEY_ALT
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+	}
+}
+
+# The Grand Master humbly requests the right to build a castle in your demesne
+character_event = {
+	id = NewHolyOrders.115
+	hide_window = yes
+	
+	min_age = 16
+	only_rulers = yes
+	religion = sol_invicta
+	
+	trigger = {
+        d_lightbringers = {
+			holder_scope = {
+				character = yes
+				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
+			}
+		}
+		d_lightbringers = {
+			holder_scope = {
+				wealth = 300
+				NOT = {
+					realm_size = 10
+				}
+			}
+		}
+		
+		any_demesne_province = {
+			has_empty_holding = yes
+			region = custom_oldworld_mexico
+		}
+		
+		
+		NOT = { has_character_modifier = expelled_d_lightbringers }
+		NOT = {
+			any_liege = {
+				has_character_modifier = expelled_d_lightbringers
+			}
+		}
+	}
+	
+	has_dlc = "Sons of Abraham"
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.5
+			d_lightbringers = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			d_lightbringers = {
+				holder_scope = {
+					NOT = { demesne_size = 1 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			d_lightbringers = {
+				holder_scope = {
+					NOT = { demesne_size = 2 }
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			d_lightbringers = {
+				holder_scope = {
+					num_of_count_titles = 1
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			d_lightbringers = {
+				holder_scope = {
+					realm_size = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_lightbringers = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
+			}
+		}
+	}
+	
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				has_empty_holding = yes
+				region = custom_oldworld_mexico
+			}
+			preferred_limit = {
+				any_province_holding = {
+					is_holy_site = ROOT
+				}
+			}
+			preferred_limit = {
+				religion = ROOT
+			}
+			province_event = {
+				id = NewHolyOrders.116
+			}
+		}
+	}
+}
+
+province_event = {
+	id = NewHolyOrders.116
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		d_lightbringers = {
+			holder_scope = {
+				character_event = {
+					id = NewHolyOrders.117
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = NewHolyOrders.117
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROM = {
+			letter_event = {
+				id = NewHolyOrders.118
+			}
+		}
+	}
+}
+
+letter_event = {
+	id = NewHolyOrders.118
+	desc = HOLY_ORDER_BUILD_CASTLE_FOR_MONEY_ALT
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SOA_1023 # Agree
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				has_character_modifier = expelled_d_lightbringers
+			}
+		}
+		
+		hidden_tooltip = {
+			FROMFROM = {
+				province_event = { id = NewHolyOrders.119 }
+			}
+			remove_character_modifier = expelled_d_lightbringers
+		}
+		
+		piety = 200
+		wealth = 100
+	}
+	
+	option = {
+		name = EVTOPTB_SOA_1153 # Refuse
+		ai_chance = {
+			factor = 20
+		}
+		
+		piety = -100
+	}
+}
+
+# Castle has been erected
+province_event = {
+	id = NewHolyOrders.119
+	desc = HOLY_ORDER_CONSTRUCTION_COMPLETE_ALT
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROM = {
+			wealth = -300
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_SOA_1024
+		build_holding = {
+		   type = castle
+		   holder = FROMFROM
+		}
+	}
+}
+
+# Ping event when expelling the Lightbringers
+character_event = {
+	id = NewHolyOrders.120
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		any_title_under = {
+			limit = {
+				tier = BARON
+				location = {
+					owner = {
+						OR = {
+							character = FROM
+							is_liege_or_above = FROM
+						}
+					}
+				}
+			}
+			usurp_title = FROM
+		}
+	
+		FROM = {
+			letter_event = {
+				id = NewHolyOrders.121
+			}
+		}
+		
+		opinion = {
+			who = FROM
+			modifier = opinion_expelled_from_realm
+		}
+	}
+}
+
+# Notification event when expelling the Lightbringers
+letter_event = {
+	id = NewHolyOrders.121
+	desc = HOLY_ORDER_EXPEL_ALT
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTB_SOA_1061
+	}
+}
+
+
+########################################
+# Dead Sun
+########################################
+
+# The son of a ruler volunteers to join the Dead Sun
+character_event = {
+	id = NewHolyOrders.122
+	hide_window = yes
+	
+	min_age = 16
+	max_age = 45
+	only_capable = yes
+	prisoner = no
+	religion = mictlantec
+	only_men = yes
+	
+	trigger = {
+		is_ruler = no
+		d_dead_sun = {
+			holy_order_can_PREV_join = yes
+		}
+		
+		martial = 5
+				
+		OR = {
+			father_even_if_dead = {
+				primary_title = { higher_tier_than = BARON }
+			}
+			mother_even_if_dead = {
+				primary_title = { higher_tier_than = BARON }
+			}
+		}
+		
+		liege = {
+			holy_order = no
+            religion = mictlantec
+			liege = {
+				holy_order = no
+			}
+		}
+		
+		
+		
+		NOT = { has_character_modifier = expelled_d_dead_sun }
+		NOT = {
+			any_liege = {
+				has_character_modifier = expelled_d_dead_sun
+			}
+		}
+
+		OR = {
+			AND = {
+				is_female = no
+				NOT = {
+					any_spouse = {
+						OR = {
+							is_landed = yes
+							AND = {
+								is_pregnant = yes
+								father_of_unborn = { character = ROOT } # Won't happen if spouse is pregnant with non-bastard child
+							}
+						}
+					}
+				}
+			}
+			AND = {
+				is_female = yes
+				NOR = {
+					is_landed = yes
+					is_pregnant = yes #Simply won't join if pregnant
+				}
+			}
+		}
+	}
+	
+	has_dlc = "Sons of Abraham"
+	mean_time_to_happen = {
+		years = 80
+		modifier = {
+			factor = 0.25
+			trait = zealous
+		}
+		modifier = {
+			factor = 0.5
+			trait = celibate
+		}
+		modifier = {
+			factor = 0.5
+			trait = homosexual
+		}
+		modifier = {
+			factor = 0.7
+			trait = content
+		}
+		modifier = {
+			factor = 0.75
+			trait = chaste
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { age = 25 }
+		}
+		modifier = {
+			factor = 1.5
+			trait = slothful
+		}
+		modifier = {
+			factor = 2.0
+			trait = lustful
+		}
+		modifier = {
+			factor = 2.0
+			trait = cynical
+		}
+		modifier = {
+			factor = 2.0
+			trait = hedonist
+		}
+		modifier = {
+			factor = 2.0
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2.0
+			any_heir_title = {
+				always = yes
+			}
+		}
+		modifier = {
+			factor = 2.0
+			is_primary_heir = yes
+		}
+		modifier = {
+			factor = 2
+			any_spouse = {
+				reverse_opinion = { who = ROOT value = 100 }
+			}
+		}
+		modifier = {
+			factor = 2
+			d_dead_sun = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
+			}
+		}
+	}
+	
+	immediate = {
+		liege = {
+			character_event = {
+				id = NewHolyOrders.123
+			}
+		}
+	}
+}
+
+# Son or brother asks to join the Dead Sun
+character_event = {
+	id = NewHolyOrders.123
+	desc = EVTDESC_ATEWWNHO_123
+	picture = GFX_evt_crusaders
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SOA_1031 # Agree
+		ai_chance = {
+			factor = 100
+		}
+		
+		if = {
+			limit = {
+				religion = FROM
+			}
+			piety = 100
+		}
+		
+		FROM = {
+			character_event = {
+				id = NewHolyOrders.124
+				tooltip = EVTTOOLTIP_ATEWWNHO_123
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_SOA_1031 # Refuse
+		
+		if = {
+			limit = {
+				religion = FROM
+			}
+			piety = -100
+		}
+		
+		FROM = {
+			character_event = {
+				id = NewHolyOrders.125
+				tooltip = EVTTOOLTIP_SOA_1033
+			}
+		}
+	}
+}
+
+# Son or brother joins the the Dead Sun
+character_event = {
+	id = NewHolyOrders.124
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		d_dead_sun = {
+			holder_scope = {
+				save_event_target_as = order_target
+				ROOT = {
+					character_event = { id = SoA.2864 }
+				}
+			}
+		}
+	}
+}
+
+# Liege refuses request to join the the Dead Sun
+character_event = {
+	id = NewHolyOrders.125
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		opinion = {
+			who = FROM
+			modifier = opinion_refused_request_holy_order
+		}
+	}
+}
+
+# Ping event when donating money to the the Dead Sun
+character_event = {
+	id = NewHolyOrders.126
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		wealth = 300
+		FROM = {
+			letter_event = {
+				id = NewHolyOrders.127
+			}
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_generous_donation
+		}
+	}
+}
+
+# Notification event when donating money to the the Dead Sun
+letter_event = {
+	id = NewHolyOrders.127
+	desc = HOLY_ORDER_DONATE_MONEY_ALT
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+	}
+}
+
+# The Grand Master humbly requests the right to build a castle in your demesne
+character_event = {
+	id = NewHolyOrders.128
+	hide_window = yes
+	
+	min_age = 16
+	only_rulers = yes
+	religion = mictlantec
+	
+	trigger = {
+        d_dead_sun = {
+			holder_scope = {
+				character = yes
+				religion = ROOT
+				OR = {
+					is_vassal_or_below_of = ROOT
+					independent = yes
+				}
+			}
+		}
+		d_dead_sun = {
+			holder_scope = {
+				wealth = 300
+				NOT = {
+					realm_size = 10
+				}
+			}
+		}
+		
+		any_demesne_province = {
+			has_empty_holding = yes
+			region = custom_oldworld_mexico
+		}
+		
+		
+		NOT = { has_character_modifier = expelled_d_dead_sun }
+		NOT = {
+			any_liege = {
+				has_character_modifier = expelled_d_dead_sun
+			}
+		}
+	}
+	
+	has_dlc = "Sons of Abraham"
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 0.5
+			d_dead_sun = {
+				holder_scope = {
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			d_dead_sun = {
+				holder_scope = {
+					NOT = { demesne_size = 1 }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			d_dead_sun = {
+				holder_scope = {
+					NOT = { demesne_size = 2 }
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			d_dead_sun = {
+				holder_scope = {
+					num_of_count_titles = 1
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			d_dead_sun = {
+				holder_scope = {
+					realm_size = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			d_dead_sun = {
+				holder_scope = { NOT = { is_within_diplo_range = ROOT } }
+			}
+		}
+	}
+	
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				has_empty_holding = yes
+				region = custom_oldworld_mexico
+			}
+			preferred_limit = {
+				any_province_holding = {
+					is_holy_site = ROOT
+				}
+			}
+			preferred_limit = {
+				religion = ROOT
+			}
+			province_event = {
+				id = NewHolyOrders.129
+			}
+		}
+	}
+}
+
+province_event = {
+	id = NewHolyOrders.129
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		d_dead_sun = {
+			holder_scope = {
+				character_event = {
+					id = NewHolyOrders.130
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = NewHolyOrders.130
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROM = {
+			letter_event = {
+				id = NewHolyOrders.131
+			}
+		}
+	}
+}
+
+letter_event = {
+	id = NewHolyOrders.131
+	desc = HOLY_ORDER_BUILD_CASTLE_FOR_MONEY_ALT
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_SOA_1023 # Agree
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				has_character_modifier = expelled_d_dead_sun
+			}
+		}
+		
+		hidden_tooltip = {
+			FROMFROM = {
+				province_event = { id = NewHolyOrders.132 }
+			}
+			remove_character_modifier = expelled_d_dead_sun
+		}
+		
+		piety = 200
+		wealth = 100
+	}
+	
+	option = {
+		name = EVTOPTB_SOA_1153 # Refuse
+		ai_chance = {
+			factor = 20
+		}
+		
+		piety = -100
+	}
+}
+
+# Castle has been erected
+province_event = {
+	id = NewHolyOrders.132
+	desc = HOLY_ORDER_CONSTRUCTION_COMPLETE_ALT
+	picture = GFX_evt_castle_construction
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROMFROM = {
+			wealth = -300
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_SOA_1024
+		build_holding = {
+		   type = castle
+		   holder = FROMFROM
+		}
+	}
+}
+
+# Ping event when expelling the Dead Sun
+character_event = {
+	id = NewHolyOrders.133
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		any_title_under = {
+			limit = {
+				tier = BARON
+				location = {
+					owner = {
+						OR = {
+							character = FROM
+							is_liege_or_above = FROM
+						}
+					}
+				}
+			}
+			usurp_title = FROM
+		}
+	
+		FROM = {
+			letter_event = {
+				id = NewHolyOrders.134
+			}
+		}
+		
+		opinion = {
+			who = FROM
+			modifier = opinion_expelled_from_realm
+		}
+	}
+}
+
+# Notification event when expelling the Dead Sun
+letter_event = {
+	id = NewHolyOrders.134
+	desc = HOLY_ORDER_EXPEL_ALT
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTB_SOA_1061
+	}
+}

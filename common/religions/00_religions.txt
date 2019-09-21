@@ -2194,6 +2194,7 @@ mesoamerican_gods = {
 		feminist = yes
 		allows_matrilineal_marriage = yes
 		peace_piety_gain = 1.0 #Gains 1 extra piety per month while at peace
+		aggression = 0.5
 		
 		crusade_name = CRUSADE
 		scripture_name = THE_DREAMSPELL

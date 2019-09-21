@@ -15617,7 +15617,7 @@ character_event = {
 			d_lightbringers = {
 				holder_scope = {
 					character_event = {
-						id = NewHolyOrders.107
+						id = NewHolyOrders.120
 					}
 				}
 			}
@@ -15647,7 +15647,7 @@ character_event = {
 			d_dead_sun = {
 				holder_scope = {
 					character_event = {
-						id = NewHolyOrders.107
+						id = NewHolyOrders.133
 					}
 				}
 			}
