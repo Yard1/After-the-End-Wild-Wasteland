@@ -125,24 +125,8 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Add pills"
-		d_americanist = {
-			holder_scope = {
-				set_up_americanist_acting_president = yes
-			}
-		}
-	}
-
-	option = {
-		name = "add flu"
-	}
-
-	option = {
-		name = "d_americanist succ"
-	}
-
-	option = {
-		name = "nothing"
+		name = "enable americanists ghws"
+		set_global_flag = liberation_wars_unlocked
 	}
 
 }
