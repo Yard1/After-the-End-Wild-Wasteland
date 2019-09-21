@@ -2754,6 +2754,6 @@ wonder_complete_third_tier = {
 liberation_war_start_01 =
 {
 	file = "sfx_liberation_war_start_event_01.wav"
-	volume = 75
+	volume = 80
 	on_demand = yes
 }
