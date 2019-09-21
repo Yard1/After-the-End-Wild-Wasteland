@@ -18,3 +18,23 @@ atewww_pills = {
 	stacking = yes
 	picture = "GFX_atewww_pills"
 }
+
+atewww_alien_firearm = {
+	monthly_character_prestige = 1
+	martial = 4
+	learning = 2
+	health = -0.25
+	combat_rating = 40
+	command_modifier = {
+		morale_offence = 0.20
+	}
+	quality = 5
+	active = {
+		is_adult = yes
+		learning = 12
+	}
+	flags = { oldworld salvage combat_weapon gun }
+	stacking = no
+	picture = "GFX_brazilian_firearm"
+	slot = weapon
+}
