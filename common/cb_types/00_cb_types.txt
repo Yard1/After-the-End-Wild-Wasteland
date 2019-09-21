@@ -4923,7 +4923,6 @@ new_crusade = {
 				}
 				set_crusade_pot_multiplier = 0
 			}
-
 			# Distribute the Pot and Titles
 			ROOT = {
 				set_global_flag = distributing_crusade
@@ -4960,10 +4959,16 @@ new_crusade = {
 						}
 					}
 					most_participating_crusader = {
-						gain_settlements_under_title = {
-							title = PREVPREV
-							enemy = FROM
-							type = holy_war
+						save_event_target_as = new_owner
+					}
+					any_defender = {
+						show_scope_change = no
+						event_target:new_owner = {
+							gain_settlements_under_title = {
+								title = PREVPREV
+								enemy = PREV
+								type = holy_war
+							}
 						}
 					}
 					any_playable_ruler = {
@@ -5157,7 +5162,9 @@ new_crusade = {
 								limit = {
 									NOT = { character = FROM }
 									religion = FROM
-									de_jure_vassal_or_below = PREV
+									any_realm_title = {
+										de_jure_vassal_or_below = PREVPREV
+									}
 								}
 								FROM = {
 									vassalize_or_take_under_title = {
