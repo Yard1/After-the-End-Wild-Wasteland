@@ -124,3 +124,5 @@ taken_viagra_female;Taken Old World aphrodisiacs;;;;;;;;;;;;;x
 taken_medicine_recently;Recently taken Old World medicine;;;;;;;;;;;;;x
 
 not_taken_medicine_recently;Hasn't taken any Old World medicine recently;;;;;;;;;;;;;x
+
+crusade_desc;§Y$CLAIMANT$§! can use this Casus Belli to seize all titles held by the §Y$TARGET$§! and other infidels of the same faith, within the de jure §Y$TITLE$§!.;§Y$CLAIMANT$§! peut utiliser ce casus belli pour s'emparer de tous les titres que possède l'infidèle §Y$TARGET$§! au sein de §Y$TITLE$§! de jure.;§Y$CLAIMANT$§! kann diesen Kriegsgrund dazu benutzen, dem ungläubigen Ziel, §Y$TARGET$§!, sämtliche Titel unter dem De-jure-Titel §Y$TITLE$§! abzunehmen.;;§Y$CLAIMANT$§! puede usar este Casus Belli para apoderarse de todos los títulos que posee el infiel, §Y$TARGET$§!, dentro del §Y$TITLE$§! de iure.;;;;;;;;;x
