@@ -14832,6 +14832,18 @@ character_event = {
 		}
 		text = expel_saint_expedit
 	}
+	title = { # The Lightbringers
+		trigger = {
+			has_character_flag = expel_lightbringers_check
+		}
+		text = expel_lightbringers
+	}
+	title = { # The Dead Sun
+		trigger = {
+			has_character_flag = expel_dead_sun_check
+		}
+		text = expel_dead_sun
+	}
 	title = { # Sons of Kaleva
 		trigger = {
 			has_character_flag = expel_sons_kaleva_check
@@ -15585,6 +15597,66 @@ character_event = {
 				inherit = yes
 			}
 			clr_character_flag = expel_saint_expedit_check
+		}
+	}
+	option = { # The Lightbringers
+		trigger = {
+			has_character_flag = expel_lightbringers_check
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_lightbringers = {
+				holder_scope = {
+					character_event = {
+						id = NewHolyOrders.107
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_lightbringers
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_lightbringers_check
+		}
+	}
+	option = { # The Dead Sun
+		trigger = {
+			has_character_flag = expel_dead_sun_check
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_dead_sun = {
+				holder_scope = {
+					character_event = {
+						id = NewHolyOrders.107
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_dead_sun
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_dead_sun_check
 		}
 	}
 	option = { # Sons of Kaleva

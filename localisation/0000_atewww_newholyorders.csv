@@ -148,3 +148,19 @@ donate_money_to_saint_expedit_desc;I can donate money to the Order of Saint Expé
 EVTDESC_ATEWWNHO_97;My [GetFromRelation], [From.GetTitledFirstName], has requested to Order of Saint Expédit in their struggle against the infidel, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
 EVTTOOLTIP_ATEWWNHO_97;[This.GetTitledFirstName] becomes a member of the Order of Saint Expédit.;;;;;;;;;;;;;x
 expelled_d_saint_expedit;Expelled the Order of Saint Expédit;;;;;;;;;;;;;x
+
+expel_lightbringers;Expel the Lightbringers;;;;;;;;;;;;;x
+expel_lightbringers_desc;I can drive the Lightbringers from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_lightbringers;Donate 300¤ to the Lightbringers;;;;;;;;;;;;;x
+donate_money_lightbringers_desc;I can donate money to the Lightbringers in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Priests.;;;;;;;;;;;;;x
+vassalize_lightbringers;Vassalize the Golden Archers;;;;;;;;;;;;;x
+vassalize_lightbringers_desc;As the new Emperor of Mexico, it is within my power to vassalize the powerful Lightbringers.;;;;;;;;;;;;;x
+expelled_d_lightbringers;Expelled the Lightbringers;;;;;;;;;;;;;x
+
+expel_dead_sun;Expel the Dead Sun;;;;;;;;;;;;;x
+expel_dead_sun_desc;I can drive the Dead Sun from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_dead_sun;Donate 300¤ to the Dead Sun;;;;;;;;;;;;;x
+donate_dead_sun_desc;I can donate money to the Dead Sun in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Priests.;;;;;;;;;;;;;x
+vassalize_dead_sun;Vassalize the Dead Sun;;;;;;;;;;;;;x
+vassalize_dead_sun_desc;As the new Emperor of Mexico, it is within my power to vassalize the powerful Dead Sun.;;;;;;;;;;;;;x
+expelled_d_dead_sun;Expelled the Dead Sun;;;;;;;;;;;;;x

@@ -100,6 +100,14 @@ expelled_d_saint_expedit = {
 	icon = 35
 }
 
+expelled_d_lightbringers = {
+	icon = 35
+}
+
+expelled_d_dead_sun = {
+	icon = 35
+}
+
 looted_lady_liberty = {
 	icon = 64
 	libertarian_opinion = -50

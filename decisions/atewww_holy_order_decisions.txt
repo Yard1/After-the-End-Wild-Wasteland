@@ -1763,6 +1763,510 @@ decisions = {
 			}
 		}
 	}
+	
+	expel_lightbringers = {
+		only_independent = yes
+		ai = no
+
+		potential = {
+			d_lightbringers = {
+				holder_scope = {
+					character = yes
+					religion = ROOT
+				}
+			}
+			higher_tier_than = DUKE
+			independent = yes
+			NOT = { has_character_modifier = expelled_d_lightbringers }
+			
+			any_realm_province = {
+				any_province_lord = {
+					d_lightbringers = {
+						holder_scope = {
+							OR = {
+								character = PREVPREV
+								is_vassal_or_below = PREVPREV
+							}
+						}
+					}
+				}
+			}
+			
+			has_dlc = "Sons of Abraham"
+		}
+		
+		allow = {
+			piety = 1000
+			custom_tooltip = {
+				text = expelling_holy_order_decision_tooltip
+				hidden_tooltip = {
+					NOT = { has_character_flag = expel_lightbringers_check }
+				}
+			}
+		}
+		
+		effect = {
+			set_character_flag = expel_lightbringers_check
+			custom_tooltip = {
+				text = expelling_holy_order_decision_tooltip_b
+				hidden_tooltip = {
+					character_event = { id = SoA.2990 }
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	donate_money_to_lightbringers = {
+		only_playable = yes
+		ai_check_interval = 80
+
+		potential = {
+			is_playable = yes
+			
+			d_lightbringers = {
+				holder_scope = {
+					character = yes
+					religion = ROOT
+				}
+			}
+			
+			OR = {
+				AND = {
+					wealth = 1000
+					NOR = {
+						trait = cynical
+						piety = 50
+					}
+				}
+				ai = no
+			}
+
+			NOT = { government = order_government }
+						
+			has_dlc = "Sons of Abraham"
+			
+			NOT = { has_character_modifier = expelled_d_lightbringers }
+			
+			d_lightbringers = {
+				holder_scope = {
+					liege = {
+						NOT = { character = ROOT }
+					}
+				}
+			}
+		}
+		
+		allow = {
+			wealth = 300
+			custom_tooltip = {
+				text = holy_order_donate_cooldown_tt
+				NOT = { has_character_modifier = donate_to_holy_order_cooldown }
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = { society_member_of = monastic_order_lightbringers }
+				add_society_currency_minor_effect = yes
+			}
+			hidden_effect = {
+				add_character_modifier = {
+					modifier = donate_to_holy_order_cooldown
+					hidden = yes
+					years = 1
+				}
+			}
+			if = {
+				limit = { 
+					NOT = { has_character_modifier = donated_to_holy_order }
+				}
+				add_character_modifier = {
+					name = donated_to_holy_order
+					duration = -1
+				}
+			}
+			
+			hidden_tooltip = {
+				d_lightbringers = {
+					holder_scope = {
+						character_event = {
+							id = NewHolyOrders.5
+						}
+					}
+				}
+			}
+			
+			wealth = -300
+			piety = 100
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1 # Slow it down
+			}
+			modifier = {
+				factor = 2.5
+				trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_lightbringers = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_lightbringers = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	vassalize_lightbringers = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+
+		potential = {
+			is_alternate_start = no
+			
+			religion = sol_invicta
+			
+			is_heretic = no
+
+			tier = EMPEROR
+			
+			is_title_active = d_lightbringers
+			
+			d_lightbringers = {
+				holder_scope = {
+					NOT = { has_truce = ROOT }
+					ROOT = { NOT = { has_truce = PREV } }
+					liege = {
+						NOT = { character = ROOT }
+					}
+					NOT = { num_of_count_titles = 3 }
+					independent = yes
+					primary_title = { title = d_lightbringers }
+				}
+			}
+		}
+		
+		allow = {
+			wealth = 500
+			piety = 2500
+		}
+		
+		effect = {
+			wealth = -500
+			piety = -50
+			d_lightbringers = {
+				holder_scope = {
+					wealth = 500
+					ROOT = {
+						set_defacto_vassal = PREV
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	expel_dead_sun = {
+		only_independent = yes
+		ai = no
+
+		potential = {
+			d_dead_sun = {
+				holder_scope = {
+					character = yes
+					religion = ROOT
+				}
+			}
+			higher_tier_than = DUKE
+			independent = yes
+			NOT = { has_character_modifier = expelled_d_dead_sun }
+			
+			any_realm_province = {
+				any_province_lord = {
+					d_dead_sun = {
+						holder_scope = {
+							OR = {
+								character = PREVPREV
+								is_vassal_or_below = PREVPREV
+							}
+						}
+					}
+				}
+			}
+			
+			has_dlc = "Sons of Abraham"
+		}
+		
+		allow = {
+			piety = 1000
+			custom_tooltip = {
+				text = expelling_holy_order_decision_tooltip
+				hidden_tooltip = {
+					NOT = { has_character_flag = expel_dead_sun_check }
+				}
+			}
+		}
+		
+		effect = {
+			set_character_flag = expel_dead_sun_check
+			custom_tooltip = {
+				text = expelling_holy_order_decision_tooltip_b
+				hidden_tooltip = {
+					character_event = { id = SoA.2990 }
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	donate_money_to_dead_sun = {
+		only_playable = yes
+		ai_check_interval = 80
+
+		potential = {
+			is_playable = yes
+			
+			d_dead_sun = {
+				holder_scope = {
+					character = yes
+					religion = ROOT
+				}
+			}
+			
+			OR = {
+				AND = {
+					wealth = 1000
+					NOR = {
+						trait = cynical
+						piety = 50
+					}
+				}
+				ai = no
+			}
+
+			NOT = { government = order_government }
+						
+			has_dlc = "Sons of Abraham"
+			
+			NOT = { has_character_modifier = expelled_d_dead_sun }
+			
+			d_dead_sun = {
+				holder_scope = {
+					liege = {
+						NOT = { character = ROOT }
+					}
+				}
+			}
+		}
+		
+		allow = {
+			wealth = 300
+			custom_tooltip = {
+				text = holy_order_donate_cooldown_tt
+				NOT = { has_character_modifier = donate_to_holy_order_cooldown }
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = { society_member_of = monastic_order_dead_sun }
+				add_society_currency_minor_effect = yes
+			}
+			hidden_effect = {
+				add_character_modifier = {
+					modifier = donate_to_holy_order_cooldown
+					hidden = yes
+					years = 1
+				}
+			}
+			if = {
+				limit = { 
+					NOT = { has_character_modifier = donated_to_holy_order }
+				}
+				add_character_modifier = {
+					name = donated_to_holy_order
+					duration = -1
+				}
+			}
+			
+			hidden_tooltip = {
+				d_dead_sun = {
+					holder_scope = {
+						character_event = {
+							id = NewHolyOrders.5
+						}
+					}
+				}
+			}
+			
+			wealth = -300
+			piety = 100
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1 # Slow it down
+			}
+			modifier = {
+				factor = 2.5
+				trait = zealous
+			}
+			modifier = {
+				factor = 2
+				d_dead_sun = {
+					holder_scope = {
+						OR = {
+							is_friend = ROOT
+							opinion = {
+								who = FROM
+								value = 75
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				trait = greedy
+			}
+			modifier = {
+				factor = 0
+				d_dead_sun = {
+					holder_scope = {
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								reverse_opinion = {
+									who = ROOT
+									value = -25
+								}
+							}
+							NOT = { is_within_diplo_range = ROOT }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	vassalize_dead_sun = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+
+		potential = {
+			is_alternate_start = no
+			
+			religion = micltlantec
+			
+			is_heretic = no
+
+			tier = EMPEROR
+			
+			is_title_active = d_dead_sun
+			
+			d_dead_sun = {
+				holder_scope = {
+					NOT = { has_truce = ROOT }
+					ROOT = { NOT = { has_truce = PREV } }
+					liege = {
+						NOT = { character = ROOT }
+					}
+					NOT = { num_of_count_titles = 3 }
+					independent = yes
+					primary_title = { title = d_dead_sun }
+				}
+			}
+		}
+		
+		allow = {
+			wealth = 500
+			piety = 2500
+		}
+		
+		effect = {
+			wealth = -500
+			piety = -50
+			d_dead_sun = {
+				holder_scope = {
+					wealth = 500
+					ROOT = {
+						set_defacto_vassal = PREV
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
 
 title_decisions = {
