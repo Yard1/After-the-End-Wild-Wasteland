@@ -680,41 +680,54 @@ character_event = {
 
 	trigger = {
 		government = militarist_government
-		OR = {
-			AND = {
-				independent = no
+	}
+
+	immediate = {
+		if = {
+			limit = { 
+				independent = no 
 				primary_title = {
 					NOT = { has_law = succ_militarist_appointment }
 					is_law_potential = succ_militarist_appointment
 				}
 			}
-			AND = {
+			primary_title = {
+				add_law = { law = succ_militarist_appointment cooldown = no opinion_effect = no }
+			}
+		}
+		else_if = {
+			limit = {
 				independent = yes
 				primary_title = {
 					NOT = { has_law = succ_feudal_elective }
 					is_law_potential = succ_feudal_elective
 				}
 			}
-		}
-	}
-
-	immediate = {
-		if = {
-			limit = { independent = no }
-			primary_title = {
-				add_law = { law = succ_militarist_appointment cooldown = no opinion_effect = no }
-			}
-		}
-		else = {
 			primary_title = {
 				add_law = { law = succ_feudal_elective cooldown = no opinion_effect = no }
 			}
 		}
 		if = {
 			limit = {
-				primary_title = { has_law = revoke_title_law_0 }
+				any_demesne_title = { has_law = revoke_title_law_0 }
 			}
-			primary_title = { add_law = { law = revoke_title_law_1 cooldown = no opinion_effect = no } }
+			any_demesne_title = { add_law = { law = revoke_title_law_1 cooldown = no opinion_effect = no } }
+		}
+		any_demesne_title = {
+			limit = {
+				higher_tier_than = DUKE
+				has_law = vassal_wars_law_0
+				is_law_allowed = vassal_wars_law_1
+			}
+			add_law = { law = vassal_wars_law_1 cooldown = no opinion_effect = no }
+		}
+		any_demesne_title = {
+			limit = {
+				higher_tier_than = DUKE
+				has_law = out_of_realm_inheritance_law_0
+				is_law_allowed = out_of_realm_inheritance_law_1
+			}
+			add_law = { law = out_of_realm_inheritance_law_1 cooldown = no opinion_effect = no }
 		}
 	}
 }
@@ -871,6 +884,8 @@ narrative_event = {
 	
 	only_playable = yes
 	min_age = 16
+
+	religion_group = oldworld
 	
 	trigger = {
 		NOT = { #immersion-breaking
@@ -921,6 +936,8 @@ narrative_event = {
 	
 	only_playable = yes
 	min_age = 16
+
+	religion = americanist
 	
 	trigger = {
 		NOT = { #immersion-breaking
@@ -1043,5 +1060,61 @@ narrative_event = {
 		trigger = {
 			NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.21
+	hide_window = yes
+	
+	only_playable = yes
+	min_age = 16
+	religion_group = oldworld
+	ai = yes
+	
+	trigger = {
+		religion_openly_americanist_or_heresy_trigger = yes
+		NOT = { trait = hidden_ai_zeal_boost_for_americanists }
+		63 = { # DC
+			owner = {
+				NOT = { religion_openly_americanist_or_heresy_trigger = yes }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		add_trait = hidden_ai_zeal_boost_for_americanists
+	}
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.22
+	hide_window = yes
+	
+	only_playable = yes
+	min_age = 16
+	religion_group = oldworld
+	ai = yes
+	
+	trigger = {
+		religion_openly_americanist_or_heresy_trigger = yes
+		trait = hidden_ai_zeal_boost_for_americanists
+		63 = { # DC
+			owner = {
+				religion_openly_americanist_or_heresy_trigger = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		remove_trait = hidden_ai_zeal_boost_for_americanists
 	}
 }

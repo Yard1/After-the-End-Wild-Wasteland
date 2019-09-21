@@ -121,6 +121,24 @@ on_government_change = {
 					ROOT = { add_law = { law = succ_primogeniture cooldown = no opinion_effect = no } }
 				}
 			}
+			ROOT = {
+				if = {
+					limit = {
+						higher_tier_than = DUKE
+						has_law = vassal_wars_law_1
+						NOT = { is_law_allowed = vassal_wars_law_1 }
+					}
+					add_law = { law = vassal_wars_law_0 cooldown = no opinion_effect = no }
+				}
+				if = {
+					limit = {
+						higher_tier_than = DUKE
+						has_law = out_of_realm_inheritance_law_1
+						NOT = { is_law_allowed = out_of_realm_inheritance_law_1 }
+					}
+					add_law = { law = out_of_realm_inheritance_law_0 cooldown = no opinion_effect = no }
+				}
+			}
 			if = {
 				limit = { ROOT = { has_title_flag = was_militarist } }
 				character_event = { id = ATE_WWW_RELIGION.12 }

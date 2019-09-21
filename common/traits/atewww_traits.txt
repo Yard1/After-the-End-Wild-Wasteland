@@ -28,6 +28,8 @@ pirate_king = {
 	global_levy_size = 0.25
 	land_morale = 0.15
 
+	ai_zeal = 10
+
 	religious = yes
 	customizer = no
 	
@@ -149,4 +151,12 @@ bokor = {
 	random = no
 	customizer = no
 	#for cyrus
+}
+
+hidden_ai_zeal_boost_for_americanists = {
+	hidden = yes
+	random = no
+	customizer = no
+	religious = yes
+	ai_zeal = 25
 }
