@@ -229,7 +229,6 @@ religion_priests_cant_marry = {
 		religion = sedevacantist
 		religion = nestorian
 		religion = ursuline
-		religion = angeline
 		religion = confederated
 		religion = high_church
 	}
