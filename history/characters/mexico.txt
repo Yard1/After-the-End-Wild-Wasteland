@@ -2839,7 +2839,7 @@
 	name="Pakótami"
 	dynasty=1260000
 	culture=raramuri
-	religion=sol_invicta
+	religion=peyotist
 	trait=charismatic_negotiator
 	trait=cynical
 	trait=arbitrary
@@ -2856,7 +2856,7 @@
 	female=yes
 	dynasty=1260000
 	culture=raramuri
-	religion=sol_invicta
+	religion=peyotist
 	trait=grey_eminence
 	trait=cynical
 	trait=brave
@@ -2872,7 +2872,7 @@
 	name="Soma"
 	dynasty=1260000
 	culture=raramuri
-	religion=sol_invicta
+	religion=peyotist
 	trait=brave
 	trait=honest
 	father=1810215
@@ -2885,7 +2885,7 @@
 	name="Torécani"
 	dynasty=1260017
 	culture=raramuri
-	religion=sol_invicta
+	religion=peyotist
 	trait=sympathy_oldworld
 	trait=kind
 	trait=slothful
