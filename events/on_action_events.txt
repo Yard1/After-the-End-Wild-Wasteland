@@ -4561,6 +4561,7 @@ narrative_event = {
 				remove_intermarry = sacred_heart
 				remove_intermarry = gracia_divina
 				remove_intermarry = cetic
+				remove_intermarry = neutic
 				remove_intermarry = gaian
 				remove_intermarry = shinto
 				remove_intermarry = nousthreskeia

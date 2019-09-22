@@ -5828,7 +5828,16 @@ religious = {
 				NOT = { has_character_modifier = holy_war_cooldown }
 				has_game_rule = { name = holy_war_cooldown_rule value = off }
 			}
-			piety = 100
+			OR = { 
+				AND = {
+					piety = 100
+					NOT = { religion = neutic }
+				}
+				AND = {
+					piety = 200
+					religion = neutic
+				}
+			}
 		}
 	}
 	
@@ -5850,7 +5859,13 @@ religious = {
 					}
 				}
 			}
-			piety = -100
+			if = { 
+				limit = { religion = neutic }
+				piety = -200
+			}
+			else_if = { 
+				piety = -100
+			}
 		}
 		if = {
 			limit = { defender = { is_offmap_governor = offmap_china } }

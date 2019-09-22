@@ -3988,6 +3988,13 @@ character_event = {
 			}
 		}
 		if = {
+			limit = { neutic = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			random_playable_ruler = {
+				limit = { religion = neutic }
+				apply_cosmopolian_on_start_effect = yes
+			}
+		}
+		if = {
 			limit = { gaian = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
 			random_playable_ruler = {
 				limit = { religion = gaian }
@@ -4411,6 +4418,13 @@ character_event = {
 			limit = { cetic = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
 				limit = { religion = cetic }
+				apply_dogmatic_on_start_effect = yes
+			}
+		}
+		if = {
+			limit = { neutic = { has_religion_feature = religion_dogmatic } }
+			random_playable_ruler = {
+				limit = { religion = neutic }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}

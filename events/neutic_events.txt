@@ -1,0 +1,1971 @@
+namespace = neutic
+
+# ************************** guru writes new teachings ****************************
+character_event = {
+	id = neutic.1
+	desc = EVTDESC_neutic_write_block
+	picture = GFX_evt_library
+	religion = neutic
+	
+	trigger = {
+		has_character_modifier = intense_writing
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		modifier = { factor = 0.7 trait = slothful }
+		modifier = { factor = 0.5 trait = stressed }
+		modifier = { factor = 0.5 trait = depressed }
+		modifier = { factor = 2 trait = diligent }
+		modifier = { factor = 5 has_character_modifier = writing_inspiration_neutic_neutic }
+	}
+	
+	immediate = {
+		remove_character_modifier = intense_writing
+	}
+	
+	option = {
+		name = EVTOPT_neutic_write_block_dil
+		trigger = { trait = diligent }
+		tooltip_info = diligent
+		add_character_modifier = { name = intense_writing duration = -1 }
+		ai_chance = { factor = 500 }
+	}
+	
+	option = {
+		name = EVTOPT_neutic_write_block_greg
+		trigger = { trait = gregarious }
+		tooltip_info = gregarious
+		add_character_modifier = { name = intense_writing duration = -1 }
+		ai_chance = { factor = 500 }
+	}
+	
+	option = {
+		name = EVTOPT_neutic_write_block_quit
+		piety = -20
+		prestige = -20
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = EVTOPT_neutic_write_block_stress
+		random_list = {
+			30 = { add_trait = stressed }
+			10 = { add_trait = depressed }
+			10 = { add_trait = drunkard }
+			50 = { add_character_modifier = { name = intense_writing duration = -1 } }
+		}
+		ai_chance = { factor = 5 }
+	}
+}
+
+narrative_event = {
+	id = neutic.2
+	title = EVTNAME_neutic_write_inspire
+	desc = EVTDESC_neutic_write_inspire
+	picture = GFX_evt_library
+	religion = neutic
+	
+	trigger = {
+		has_character_modifier = intense_writing
+		OR = {
+			learning = 12
+			has_character_modifier = writing_inspiration_neutic
+		}
+		NOT = { trait = slow }
+		NOT = { trait = imbecile }
+		NOT = { trait = inbred }
+		NOT = { trait = incapable }
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+		modifier = { factor = 1.5 trait = slothful }
+		modifier = { factor = 0.8 trait = diligent }
+		modifier = { factor = 0.8 has_character_modifier = writing_inspiration_neutic }
+		modifier = { factor = 0.5 trait = genius }
+		modifier = { factor = 0.7 trait = quick }
+		modifier = { factor = 0.9 learning = 14 }
+		modifier = { factor = 0.9 learning = 16 }
+		modifier = { factor = 0.9 learning = 18 }
+		modifier = { factor = 0.9 learning = 20 }
+		modifier = { factor = 0.9 learning = 22 }
+		modifier = { factor = 0.9 learning = 24 }
+		modifier = { factor = 10 NOT = { learning = 12 } }
+	}
+	
+	immediate = {
+		remove_character_modifier = intense_writing
+		add_character_modifier = { name = recent_writings duration = 180 }
+		if = {
+			limit = { has_quest = quest_monastic_order_neutic_writings }
+			character_event = { id = MNM.40202 days = 1}
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_write_inspire
+		religion_authority = { modifier = inspired_teachings_neutic }
+		prestige = 50
+		piety = 50
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = { 
+					religion = neutic
+					same_realm = ROOT
+				}
+				character_event = { id = neutic.6 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = neutic.3
+	desc = EVTDESC_neutic_write_competent
+	picture = GFX_evt_library
+	religion = neutic
+	
+	trigger = {
+		has_character_modifier = intense_writing
+		NOT = { trait = imbecile }
+		NOT = { trait = inbred }
+		NOT = { trait = incapable }
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		modifier = { factor = 1.5 trait = slothful }
+		modifier = { factor = 0.8 trait = diligent }
+		modifier = { factor = 0.8 has_character_modifier = writing_inspiration_neutic }
+		modifier = { factor = 2 NOT = { learning = 6 } }
+		modifier = { factor = 3 NOT = { learning = 4 } }
+		modifier = { factor = 5 NOT = { learning = 2 } }
+		modifier = { factor = 1.2 learning = 12 }
+		modifier = { factor = 1.2 learning = 16 }
+		modifier = { factor = 1.2 learning = 20 }
+	}
+	
+	immediate = {
+		remove_character_modifier = intense_writing
+		add_character_modifier = { name = recent_writings duration = 180 }
+		if = {
+			limit = { has_quest = quest_monastic_order_neutic_writings }
+			character_event = { id = MNM.40202 days = 1}
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_write_better
+		piety = 10
+		random_list = {
+			10 = { add_trait = stressed }
+			10 = { add_trait = zealous }
+			10 = { add_trait = diligent }
+			10 = { add_trait = proud }
+			10 = { add_trait = ambitious }
+			50 = { }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_write_goodenough
+		prestige = 10
+		random_list = {
+			10 = { add_trait = humble }
+			10 = { add_trait = slothful }
+			10 = { add_trait = cynical }
+			10 = { add_trait = content }
+			40 = { }
+		}
+	}
+}
+
+narrative_event = {
+	id = neutic.4
+	title = EVTNAME_neutic_write_terrible
+	desc = EVTDESC_neutic_write_terrible
+	picture = GFX_evt_lunatic
+	religion = neutic
+	
+	trigger = {
+		has_character_modifier = intense_writing
+		NOT = { trait = genius }
+		NOT = { trait = quick }
+		OR = {
+			NOT = { learning = 7 }
+			trait = lunatic
+			trait = possessed
+			trait = slow
+			trait = imbecile
+			trait = inbred
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		modifier = { factor = 1.5 trait = slothful }
+		modifier = { factor = 0.8 trait = diligent }
+		modifier = { factor = 0.5 trait = lunatic }
+		modifier = { factor = 0.8 trait = possessed }
+		modifier = { factor = 0.8 trait = slow }
+		modifier = { factor = 0.8 trait = imbecile }
+		modifier = { factor = 0.8 trait = inbred }
+		modifier = { factor = 1.5 has_character_modifier = writing_inspiration_neutic }
+		modifier = { factor = 0.8 NOT = { learning = 2 } }
+		modifier = { factor = 0.8 NOT = { learning = 3 } }
+		modifier = { factor = 0.8 NOT = { learning = 4 } }
+		modifier = { factor = 0.8 NOT = { learning = 5 } }
+		modifier = { factor = 0.8 NOT = { learning = 7 } }
+		modifier = { factor = 2 learning = 10 }
+		modifier = { factor = 2 learning = 14 }
+		modifier = { factor = 2 learning = 18 }
+	}
+	
+	immediate = {
+		remove_character_modifier = intense_writing
+		any_playable_ruler = {
+			limit = { 
+				religion = neutic
+				same_realm = ROOT
+			}
+			character_event = { id = neutic.7 }
+		}
+		add_character_modifier = { name = recent_writings duration = 180 }
+		if = {
+			limit = { has_quest = quest_monastic_order_neutic_writings }
+			clr_quest = { id = quest_monastic_order_neutic_writings failure = yes }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_write_lapse
+		trigger = { learning = 16 }
+		tooltip_info = learning
+		prestige = -50
+		ai_chance = { factor = 50 }
+		
+	}
+	
+	option = {
+		name = EVTOPT_neutic_write_gurus
+		prestige = -50
+		scaled_wealth = -1
+		random = { chance = 50 change_learning = 1 }
+		religion_authority = { modifier = unenlightened_guru }
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 2 trait = humble }
+			modifier = { factor = 2 trait = diligent }
+			modifier = { factor = 2 trait = patient }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_write_tyrant
+		prestige = -50
+		piety = -100
+		religion_authority = { modifier = unenlightened_guru }
+		custom_tooltip = { text = TXT_neutic_unrest }
+		hidden_tooltip = {
+			ROOT = {
+				limit = { religion = neutic }
+				any_realm_province = {
+					limit = { religion = neutic }
+					add_province_modifier = { name = unenlightened_guru duration = 365 }
+				}
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 2 trait = cynical }
+			modifier = { factor = 2 trait = ambitious }
+			modifier = { factor = 2 trait = proud }
+			modifier = { factor = 2 trait = slothful }
+			modifier = { factor = 2 trait = arbitrary }
+		}
+	}
+}
+
+character_event = {
+	id = neutic.5
+	desc = EVTDESC_neutic_write_discuss
+	picture = GFX_evt_courtiers_talking
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = neutic
+		has_character_modifier = intense_writing
+		NOT = { has_character_modifier = writing_inspiration_neutic }
+	}
+	
+	option = {
+		name = EVTOPT_neutic_write_discuss_proud
+		prestige = 10
+		piety = 5
+	}
+	
+	option = {
+		name = EVTOPT_neutic_write_discuss_inspire
+		add_character_modifier = { name = writing_inspiration_neutic duration = 120 }
+		opinion = { modifier = opinion_inspiring who = FROM years = 10 }
+	}
+}
+
+character_event = {
+	id = neutic.6
+	desc = EVTDESC_neutic_inspire_inform
+	picture = GFX_evt_library
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = neutic
+	}
+	
+	option = {
+		name = EVTOPT_neutic_inspire_inform_switch
+		trigger = {
+			NOT = { trait = way_book_neutic }
+			FROM = { trait = way_book_neutic }
+		}
+		add_trait = way_book_neutic
+		opinion = { modifier = opinion_inspiring who = FROM years = 10 }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = diligent }
+			modifier = { factor = 2 trait = humble }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_inspire_inform_switch
+		trigger = {
+			NOT = { trait = way_dove_neutic }
+			FROM = { trait = way_dove_neutic }
+		}
+		add_trait = way_dove_neutic
+		opinion = { modifier = opinion_inspiring who = FROM years = 10 }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = kind }
+			modifier = { factor = 2 trait = just }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_inspire_inform_switch
+		trigger = {
+			NOT = { trait = way_cowl_neutic }
+			FROM = { trait = way_cowl_neutic }
+		}
+		add_trait = way_cowl_neutic
+		opinion = { modifier = opinion_inspiring who = FROM years = 10 }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = deceitful }
+			modifier = { factor = 2 trait = cruel }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_inspire_inform_switch
+		trigger = {
+			NOT = { trait = way_fist_neutic }
+			FROM = { trait = way_fist_neutic }
+		}
+		add_trait = way_fist_neutic
+		opinion = { modifier = opinion_inspiring who = FROM years = 10 }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = brave }
+			modifier = { factor = 2 trait = wroth }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_inspire_inform_praise
+		piety = 10
+		opinion = { modifier = opinion_inspiring who = FROM years = 2 }
+		ai_chance = {
+			factor = 100
+			modifier = { factor = 2 trait = zealous }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_inspire_inform_cynic
+		piety = -10
+		add_trait = cynical
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 trait = cynical }
+		}
+	}
+}
+
+character_event = {
+	id = neutic.7
+	desc = EVTDESC_neutic_terrible_inform
+	picture = GFX_evt_lunatic
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = neutic
+	}
+	
+	option = {
+		name = EVTOPT_neutic_terrible_inform_switch
+		trigger = {
+			OR = {
+				AND = {
+					trait = way_book_neutic
+					FROM = { trait = way_book_neutic }
+				}
+				AND = {
+					trait = way_fist_neutic
+					FROM = { trait = way_fist_neutic }
+				}
+				AND = {
+					trait = way_cowl_neutic
+					FROM = { trait = way_cowl_neutic }
+				}
+				AND = {
+					trait = way_dove_neutic
+					FROM = { trait = way_dove_neutic }
+				}
+			}
+		}
+		opinion = { modifier = opinion_unenlightened who = FROM years = 10 }
+		custom_tooltip = { text = TXT_neutic_switch_way }
+		hidden_tooltip = { character_event = { id = neutic.19 } }
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 trait = arbitrary }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_terrible_inform_insult
+		opinion = { modifier = opinion_unenlightened who = FROM years = 10 }
+		random = { chance = 25 add_trait = cynical }
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 trait = cynical }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_terrible_inform_zeal
+		piety = 10
+		random = { chance = 25 add_trait = zealous }
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 3 trait = zealous }
+		}
+	}
+}
+
+character_event = {
+	id = neutic.8
+	desc = EVTDESC_neutic_choose_way
+	picture = GFX_evt_chinese_bureaucrat
+	is_triggered_only = yes
+
+	trigger = {
+		religion = neutic
+	}
+	
+	option = {
+		name = EVTOPT_neutic_choose_same
+		trigger = {
+			any_close_relative = {
+				NOT = {
+					reverse_has_opinion_modifier = { who = ROOT modifier = opinion_unenlightened }
+				}
+			}
+		}
+		piety = 20
+		ai_chance = {
+			factor = 100
+			modifier = { factor = 2	trait = zealous }
+			modifier = { factor = 0.3 trait = arbitrary }
+			modifier = { factor = 0.5 trait = cynical }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_choose_book
+		trigger = { NOT = { trait = way_book_neutic } }
+		hidden_tooltip = {
+			remove_trait = way_fist_neutic
+			remove_trait = way_cowl_neutic
+			remove_trait = way_dove_neutic
+		}
+		add_trait = way_book_neutic
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 5	trait = mastermind_theologian }
+			modifier = { factor = 4	trait = scholarly_theologian }
+			modifier = { factor = 3	trait = martial_cleric }
+			modifier = { factor = 2	trait = detached_priest }
+			modifier = { factor = 4	trait = theologian }
+			modifier = { factor = 3	trait = scholar }
+			modifier = { factor = 2	trait = mystic }
+			modifier = { factor = 2	trait = zealous }
+			modifier = { factor = 1.5 trait = diligent }
+			modifier = { factor = 1.5 trait = humble }
+			modifier = { factor = 0.2 trait = cynical }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_choose_fist
+		trigger = { NOT = { trait = way_fist_neutic } }
+		hidden_tooltip = {
+			remove_trait = way_book_neutic
+			remove_trait = way_cowl_neutic
+			remove_trait = way_dove_neutic
+		}
+		add_trait = way_fist_neutic
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5 trait = brilliant_strategist }
+			modifier = { factor = 4 trait = skilled_tactician }
+			modifier = { factor = 3 trait = tough_soldier }
+			modifier = { factor = 2 trait = misguided_warrior }
+			modifier = { factor = 4	trait = strategist }
+			modifier = { factor = 3	trait = duelist }
+			modifier = { factor = 2	trait = hunter }
+			modifier = { factor = 2	trait = brave }
+			modifier = { factor = 1.5 trait = wroth }
+			modifier = { factor = 1.5 trait = strong }
+			modifier = { factor = 0.2 trait = craven }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_choose_cowl
+		trigger = { NOT = { trait = way_cowl_neutic } }
+		hidden_tooltip = {
+			remove_trait = way_fist_neutic
+			remove_trait = way_book_neutic
+			remove_trait = way_dove_neutic
+		}
+		add_trait = way_cowl_neutic
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	trait = elusive_shadow }
+			modifier = { factor = 4	trait = intricate_webweaver }
+			modifier = { factor = 3	trait = flamboyant_schemer }
+			modifier = { factor = 2	trait = amateurish_plotter }
+			modifier = { factor = 4	trait = impaler }
+			modifier = { factor = 3	trait = schemer }
+			modifier = { factor = 2	trait = seducer }
+			modifier = { factor = 2	trait = seductress  }
+			modifier = { factor = 2	trait = cruel }
+			modifier = { factor = 1.5 trait = deceitful }
+			modifier = { factor = 1.5 trait = envious }
+			modifier = { factor = 1.5 trait = greedy }
+			modifier = { factor = 0.3 trait = kind }
+			modifier = { factor = 0.3 trait = just }
+			modifier = { factor = 0.3 trait = honest }
+			modifier = { factor = 0.3 trait = content }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_neutic_choose_dove
+		trigger = { NOT = { trait = way_dove_neutic } }
+		hidden_tooltip = {
+			remove_trait = way_fist_neutic
+			remove_trait = way_cowl_neutic
+			remove_trait = way_book_neutic
+		}
+		add_trait = way_dove_neutic
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	trait = grey_eminence }
+			modifier = { factor = 4	trait = charismatic_negotiator }
+			modifier = { factor = 3	trait = underhanded_rogue }
+			modifier = { factor = 2	trait = naive_appeaser }
+			modifier = { factor = 4	trait = socializer }
+			modifier = { factor = 3	trait = hedonist }
+			modifier = { factor = 2	trait = kind }
+			modifier = { factor = 1.5 trait = charitable }
+			modifier = { factor = 1.5 trait = just }
+			modifier = { factor = 0.3 trait = cruel }
+			modifier = { factor = 0.3 trait = arbitrary }
+		}
+	}
+}
+
+# Converting to Neutic
+
+character_event = {
+	id = neutic.100
+	desc = EVTDESC_neutic_conversion
+	picture = GFX_evt_library
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+	
+	trigger = {
+		religion = neutic
+	}
+	
+	option = {
+		name = EVTOPT_neutic_choose_book
+		add_trait = way_book_neutic
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 5	trait = mastermind_theologian }
+			modifier = { factor = 4	trait = scholarly_theologian }
+			modifier = { factor = 3	trait = martial_cleric }
+			modifier = { factor = 2	trait = detached_priest }
+			modifier = { factor = 4	trait = theologian }
+			modifier = { factor = 3	trait = scholar }
+			modifier = { factor = 2	trait = mystic }
+			modifier = { factor = 2	trait = zealous }
+			modifier = { factor = 1.5 trait = diligent }
+			modifier = { factor = 1.5 trait = humble }
+			modifier = { factor = 0.2 trait = cynical }
+		}
+	}
+	option = {
+		name = EVTOPT_neutic_choose_fist
+		add_trait = way_fist_neutic
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5 trait = brilliant_strategist }
+			modifier = { factor = 4 trait = skilled_tactician }
+			modifier = { factor = 3 trait = tough_soldier }
+			modifier = { factor = 2 trait = misguided_warrior }
+			modifier = { factor = 4	trait = strategist }
+			modifier = { factor = 3	trait = duelist }
+			modifier = { factor = 2	trait = hunter }
+			modifier = { factor = 2	trait = brave }
+			modifier = { factor = 1.5 trait = wroth }
+			modifier = { factor = 1.5 trait = strong }
+			modifier = { factor = 0.2 trait = craven }
+		}
+	}
+	option = {
+		name = EVTOPT_neutic_choose_cowl
+		add_trait = way_cowl_neutic
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	trait = elusive_shadow }
+			modifier = { factor = 4	trait = intricate_webweaver }
+			modifier = { factor = 3	trait = flamboyant_schemer }
+			modifier = { factor = 2	trait = amateurish_plotter }
+			modifier = { factor = 4	trait = impaler }
+			modifier = { factor = 3	trait = schemer }
+			modifier = { factor = 2	trait = seducer }
+			modifier = { factor = 2	trait = seductress  }
+			modifier = { factor = 2	trait = cruel }
+			modifier = { factor = 1.5 trait = deceitful }
+			modifier = { factor = 1.5 trait = envious }
+			modifier = { factor = 1.5 trait = greedy }
+			modifier = { factor = 0.3 trait = kind }
+			modifier = { factor = 0.3 trait = just }
+			modifier = { factor = 0.3 trait = honest }
+			modifier = { factor = 0.3 trait = content }
+		}
+	}
+	option = {
+		name = EVTOPT_neutic_choose_dove
+		add_trait = way_dove_neutic
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	trait = grey_eminence }
+			modifier = { factor = 4	trait = charismatic_negotiator }
+			modifier = { factor = 3	trait = underhanded_rogue }
+			modifier = { factor = 2	trait = naive_appeaser }
+			modifier = { factor = 4	trait = socializer }
+			modifier = { factor = 3	trait = hedonist }
+			modifier = { factor = 2	trait = kind }
+			modifier = { factor = 1.5 trait = charitable }
+			modifier = { factor = 1.5 trait = just }
+			modifier = { factor = 0.3 trait = cruel }
+			modifier = { factor = 0.3 trait = arbitrary }
+		}
+	}
+}
+
+#Fall of California
+
+character_event = { # set up neutic_wildfire flag
+	id = neutic.101
+	hide_window = yes
+	only_playable = yes
+	only_capable = yes
+	prisoner = no
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		2046 = { # Sacramento
+			owner = { NOT = { religion = cetic } }
+		}
+		e_california = { has_holder = no }
+	}
+	
+	mean_time_to_happen = { weeks = 2 }
+
+	option = {
+		set_global_flag = neutic_wildfire
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+long_character_event = {
+	id = neutic.102
+	desc = EVTDESC_neutic_102
+	picture = GFX_evt_imam
+	only_playable = yes
+	only_capable = yes
+	prisoner = no
+	religion = cetic
+	
+	trigger = {
+		has_global_flag = neutic_wildfire
+		NOT = {
+			has_character_flag = neutic_chosen_side
+		}
+	}
+	
+	immediate = {
+		character_event = { id = neutic.103 years = 1 }
+	}
+	
+	mean_time_to_happen = { days = 60 }
+	
+	option = { # Yes
+		name = EVTOPTA_neutic_102
+		religion = neutic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				liege = { character = ROOT }
+				is_landed = no
+			}
+			religion = neutic
+		}
+		capital_scope = {
+			religion = neutic
+		}
+		hidden_tooltip = {
+			set_character_flag = neutic_chosen_side
+		}
+		ai_chance = {
+			factor = 20
+			modifier = { #Cynical characters more likely to flip
+				factor = 50
+				trait = cynical
+			}
+			modifier = { #Zealous characters will never flip
+				factor = 0
+				trait = zealous
+			}
+		}
+	}
+	option = { # No
+		name = EVTOPTB_neutic_102
+		hidden_tooltip = {
+			set_character_flag = neutic_chosen_side
+		}
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 50
+				trait = cynical
+			}
+			modifier = {
+				factor = 100
+				trait = zealous
+			}
+		}
+	}
+}
+
+character_event = { # clean up and remove monetarist_heresy flag
+	id = neutic.103
+	hide_window = yes
+	only_playable = yes
+	only_capable = yes
+	prisoner = no
+	is_triggered_only = yes
+	
+	trigger = {
+		has_global_flag = neutic_wildfire
+	}
+
+	option = {
+		clr_global_flag = neutic_wildfire
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+#Fellowship of Gurus events
+
+narrative_event = {
+	id = neutic.200
+	title = EVTNAME_neutic_gurus_created
+	desc = EVTDESC_neutic_gurus_created
+	hide_from = yes
+	hide_new = yes
+
+	picture = GFX_evt_library
+	
+	only_playable = yes
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_neutic_gurus_created
+		trigger = {
+			OR = { 
+				society_member_of = monastic_order_neutic
+				religion = neutic
+				can_join_society = monastic_order_neutic
+			}
+		}
+		if = {
+			limit = { 
+				NOT = { society_member_of = monastic_order_stoics }
+				can_join_society = monastic_order_neutic
+			}
+			join_society = monastic_order_neutic
+		}
+	}
+	option = {
+		name = EVTOPTB_neutic_gurus_created
+		trigger = {
+			NOR = { 
+				society_member_of = monastic_order_neutic
+				society_member_of = monastic_order_cetic
+				religion = neutic
+				religion = cetic
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_neutic_gurus_created
+		trigger = {
+			OR = { 
+				religion = cetic
+				society_member_of = monastic_order_cetic
+			}
+		}
+	}
+}
+
+society_quest_event = { # Neutic Writings mission
+	id = neutic.201
+	desc = EVTDESC_monastic_order_neutic_writings
+	border = GFX_event_letter_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = ACCEPT
+		set_quest = quest_monastic_order_neutic_writings
+	}
+	option = {
+		name = DECLINE
+		custom_tooltip = { text = decline_quest_tooltip }
+
+		add_character_modifier = {
+			name = quest_cooldown_timer
+			hidden = yes
+			days = 1000
+		}
+
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Neutic Emperor of New California thinks about restoring the Celestial Empire.
+character_event = {
+	id = neutic.300
+	desc = EVTDESC_neutic_300
+
+	trigger = { religion = neutic }
+
+	picture = GFX_evt_holy_emperor
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Become a secret Cetic.
+		name = EVTOPTA_neutic_300
+		custom_tooltip = { text = tooltip_neutic_300_A }
+		if = { 
+			limit = { 
+				NOR = {
+					religion = cetic
+					secret_religion = cetic				} 
+			} 
+			set_secret_religion = cetic
+		}
+		character_event = { id = neutic.301 }
+		ai_chance = { 
+			factor = 100 
+			modifier = { 
+				factor = 0
+				NOR = { 
+					secret_religion = cetic
+					trait = lunatic
+					trait = possessed
+					trait = ambitious
+				} 
+			}
+		} 
+	}
+	option = { #Do nothing.
+		name = EVTOPTB_neutic_300
+		ai_chance = { 
+			factor = 100 
+			modifier = { 
+				factor = 0
+				OR = { 
+					secret_religion = cetic
+					trait = lunatic
+					trait = possessed
+				} 
+			}
+		}
+	}
+}
+
+
+#The Emperor restores Ceticism
+character_event = {
+	id = neutic.301
+	desc = EVTDESC_neutic_301
+
+	picture = GFX_evt_victory_arch_byzantine
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #No time to wait, we must act now.
+		name = EVTOPTA_neutic_301
+		custom_tooltip = { text = tooltip_neutic_cetic_restoration }  
+		religion = cetic
+		hidden_tooltip = {
+			any_demesne_province = {
+				limit = { has_province_modifier = secret_cetic_community } 
+				religion = cetic
+				remove_province_modifier = secret_cetic_community
+			}
+		} 
+		ROOT = { give_nickname = nick_the_dictator } 
+		hidden_tooltip = { any_courtier_or_vassal = { letter_event = { id = neutic.302 days = 7 } } }
+		hidden_tooltip = { 
+			any_player = { 
+				limit = { 
+					is_within_diplo_range = ROOT 
+					NOT = { character = ROOT } #Root needs to receive the event even if not a player.
+				} 
+				narrative_event = { id = neutic.306 days = 27 }
+			} 
+			ROOT = { 
+				narrative_event = { id = neutic.306 days = 27 }
+			} 
+		}
+		if = { 
+			limit = { 
+				NOR = {
+					trait = lunatic
+					trait = possessed 
+				} 
+			} 
+			random = { 
+				chance = 15 
+				add_trait = lunatic 
+			} 
+		}
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Vassals receive ultimatum.
+letter_event = {
+	id = neutic.302
+	desc = EVTDESC_neutic_302
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Do not convert.
+		name = EVTOPTA_neutic_302
+		if = { 
+			limit = { religion = neutic }
+			opinion = { 
+				who = FROM 
+				modifier = insane_heathen
+				years = 30
+			} 
+		}
+		hidden_tooltip = { 
+			if = { 
+				limit = { 
+					higher_tier_than = BARON 
+				}
+				FROM = { letter_event = { id = neutic.303 } } 
+			}
+		}
+		ai_chance = { 
+			factor = 90 
+			modifier = { 
+				factor = 0.1
+				OR = {
+					secret_religion = FROM
+					religion = FROM
+					is_lover = FROM
+					is_friend = FROM
+				}
+			}
+			modifier = { 
+				factor = 0
+				NOT = { has_character_flag = ai_flag_refuse_conversion }
+				is_adult = no 
+				is_close_relative = FROM
+				is_ruler = no
+			}
+			modifier = { 
+				factor = 0.1
+				is_ruler = no 
+				is_close_relative = FROM
+				opinion = { who = FROM value = 20 }
+			}
+		}
+	}
+
+	option = { #Convert.
+		name = {
+			text = EVTOPTB_neutic_302_A
+			trigger = {
+				OR = {
+					religion = FROM
+					secret_religion = FROM
+				}
+			}
+		}
+		name = {
+			text = EVTOPTB_neutic_302_B
+			trigger = {
+				NOR = {
+					religion = FROM
+					secret_religion = FROM
+				}
+			}
+		}
+		trigger = { 
+			OR = { 
+				ai = no 
+				is_lover = FROM
+				is_friend = FROM
+				is_theocracy = no
+			}
+			OR = { 
+				religion = FROM
+				secret_religion = FROM
+				NOT = { trait = zealous } 
+			} 
+		}
+		religion = FROM
+		if = { 
+			limit = { 
+				is_in_society = secret_religious_cult
+				secret_religion = FROM
+				secret_religion = cetic	 
+			} 
+			hidden_tooltip = {
+				any_demesne_province = {
+					limit = { has_province_modifier = secret_cetic_community } 
+					religion = cetic
+					remove_province_modifier = secret_cetic_community
+				}
+			}
+		}
+		hidden_tooltip = { 
+			if = { 
+				limit = { 
+					higher_tier_than = BARON 
+				}
+				FROM = { letter_event = { id = neutic.304 } } 
+			}
+		}
+		if = { 
+			limit = { higher_tier_than = BARON } 
+			hidden_tooltip = {
+				any_courtier_or_vassal = {
+					limit =  { NOT = { is_theocracy = yes } }
+					character_event = { id = neutic.305 } #Keep going until the bottom.
+				}
+			}
+		}
+		ai_chance = { 
+			factor = 5
+			modifier = { 
+				factor = 0
+				has_character_flag = ai_flag_refuse_conversion
+			}
+		}
+	}
+}
+
+#Vassal will not convert.
+letter_event = {
+	id = neutic.303
+	desc = EVTDESC_neutic_303
+	border = GFX_event_letter_frame_religion
+
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Do not convert.
+		name = EVTOPTA_neutic_303
+	}
+}
+#Vassal will convert.
+letter_event = {
+	id = neutic.304
+	desc = EVTDESC_neutic_304
+	border = GFX_event_letter_frame_religion
+
+	notification = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Do not convert.
+		name = EVTOPTA_neutic_304
+	}
+}
+
+#Vassals of Vassals automatically convert alongside their immediate liege (unless player or theocracies).
+letter_event = {
+	id = neutic.305
+	desc = EVTDESC_neutic_305
+
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Convert
+		name = EVTOPTA_neutic_305
+		religion = FROM
+		if = { 
+			limit = { 
+				is_in_society = secret_religious_cult
+				secret_religion = FROM
+				secret_religion = cetic	 
+			} 
+			hidden_tooltip = {
+				any_demesne_province = {
+					limit = { has_province_modifier = secret_cetic_community } 
+					religion = cetic
+					remove_province_modifier = secret_cetic_community
+				}
+			}
+		} 
+		if = { 
+			limit = { higher_tier_than = BARON } 
+			hidden_tooltip = {
+				any_courtier_or_vassal = {
+					limit =  { NOT = { is_theocracy = yes } }
+					character_event = { id = neutic.305 } #Keep going until the bottom.
+				}
+			}
+		}
+		ai_chance = { 
+			factor = 100 
+			modifier = { 
+				factor = 0 
+				has_character_flag = ai_flag_refuse_conversion
+			}
+			modifier = { 
+				factor = 0 
+				is_theocracy = yes
+			}
+		}
+	}
+	option = { #Do not convert.
+		name = EVTOPTB_neutic_305
+		ai_chance = { 
+			factor = 1 
+			modifier = { 
+				factor = 0 
+				NOT = { has_character_flag = ai_flag_refuse_conversion }
+				is_theocracy = no
+			}
+		}
+	}
+}
+
+#New California turns Cetic.
+narrative_event = {
+	id = neutic.306
+	title = EVTTITLE_neutic_306
+	desc = EVTDESC_neutic_306
+	sound = pagan_reformation
+
+	picture = GFX_evt_rome_restored_byzantine
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Restorer
+		name = EVTOPTA_neutic_306
+		trigger = { character = FROM }
+		prestige = -1000
+		if = { 
+			limit = { NOT = { piety = 500 } } 
+			piety = 750
+		}
+
+#		if = { #Facilitate restoration for the AI by making it take over all owned holy sites.
+#			limit = { 
+#				2046 = { 
+#					top_liege = { character = FROM }
+#					any_province_holding = { 
+#						holding_type = temple 
+#						is_holy_site = FROM
+#						holder_scope = { 
+#							OR = { 
+#								NOT = { religion = FROM }
+#								character = FROM 
+#							} 
+#						}
+#					} 
+#				}
+#			} 
+#			2046 = { 
+#				random_province_holding = { 
+#					limit = { 
+#						holding_type = temple 
+#						is_holy_site = FROM
+#						holder_scope = { 
+#							OR = { 
+#								NOT = { religion = FROM }
+#								character = FROM 
+#							} 
+#						} 
+#					} 
+#					save_event_target_as = scoped_sacramento_temple
+#				}
+#			}
+#			custom_tooltip = { text = tooltip_rome_church_seized }
+#			hidden_tooltip = {
+#				create_random_priest = {
+#					random_traits = yes
+#					dynasty = random
+#					female = no
+#					attributes = {
+#						diplomacy = 2
+#						learning = 8
+#						stewardship = 2
+#						intrigue = 2
+#						martial = 2
+#					}
+#				}
+#				new_character = { event_target:scoped_rome_temple = { grant_title = PREV } } 
+#			}
+#		}
+#		if = { #Facilitate restoration for the AI by making it take over all owned holy sites.
+#			limit = { 
+#				490 = { 
+#					top_liege = { character = FROM }
+#					any_province_holding = { 
+#						holding_type = temple 
+#						is_holy_site = FROM
+#						holder_scope = { 
+#							OR = { 
+#								NOT = { religion = FROM }
+#								character = FROM 
+#							} 
+#						}
+#					} 
+#				}
+#			} 
+#			490 = { 
+#				random_province_holding = { 
+#					limit = { 
+#						holding_type = temple 
+#						is_holy_site = FROM
+#						holder_scope = { 
+#							OR = { 
+#								NOT = { religion = FROM }
+#								character = FROM 
+#							} 
+#						} 
+#					} 
+#					save_event_target_as = scoped_thessalonike_temple
+#				}
+#			}
+#			custom_tooltip = { text = tooltip_thessalonike_church_seized }
+#			hidden_tooltip = {
+#				create_random_priest = {
+#					random_traits = yes
+#					dynasty = random
+#					female = no
+#					attributes = {
+#						diplomacy = 2
+#						learning = 8
+#						stewardship = 2
+#						intrigue = 2
+#						martial = 2
+#					}
+#				}
+#				new_character = { event_target:scoped_thessalonike_temple = { grant_title = PREV } } 
+#			}
+#		}
+#		if = { #Facilitate restoration for the AI by making it take over all owned holy sites.
+#			limit = { 
+#				482 = { 
+#					top_liege = { character = FROM }
+#					any_province_holding = { 
+#						holding_type = temple 
+#						is_holy_site = FROM
+#						holder_scope = { 
+#							OR = { 
+#								NOT = { religion = FROM }
+#								character = FROM 
+#							} 
+#						}
+#					} 
+#				}
+#			} 
+#			482 = { 
+#				random_province_holding = { 
+#					limit = { 
+#						holding_type = temple 
+#						is_holy_site = FROM
+#						holder_scope = { 
+#							OR = { 
+#								NOT = { religion = FROM }
+#								character = FROM 
+#							} 
+#						} 
+#					} 
+#					save_event_target_as = scoped_atheniai_temple
+#				}
+#			}
+#			custom_tooltip = { text = tooltip_atheniai_church_seized }
+#			hidden_tooltip = {
+#				create_random_priest = {
+#					random_traits = yes
+#					dynasty = random
+#					female = no
+#					attributes = {
+#						diplomacy = 2
+#						learning = 8
+#						stewardship = 2
+#						intrigue = 2
+#						martial = 2
+#					}
+#				}
+#				new_character = { event_target:scoped_atheniai_temple = { grant_title = PREV } } 
+#			}
+#		}
+#		if = { #Facilitate restoration for the AI by making it take over all owned holy sites.
+#			limit = { 
+#				343 = { 
+#				top_liege = { character = FROM }
+#					any_province_holding = { 
+#						holding_type = temple 
+#						is_holy_site = FROM
+#						holder_scope = { 
+#							OR = { 
+#								NOT = { religion = FROM }
+#								character = FROM 
+#							} 
+#						}
+#					} 
+#				}
+#			} 
+#			343 = { 
+#				random_province_holding = { 
+#					limit = { 
+#						holding_type = temple 
+#						is_holy_site = FROM
+#						holder_scope = { 
+#							OR = { 
+#								NOT = { religion = FROM }
+#								character = FROM 
+#							} 
+#						} 
+#					} 
+#					save_event_target_as = scoped_siracusa_temple
+#				}
+#			}
+#			custom_tooltip = { text = tooltip_siracusa_church_seized }
+#			hidden_tooltip = {
+#				create_random_priest = {
+#					random_traits = yes
+#					dynasty = random
+#					female = no
+#					attributes = {
+#						diplomacy = 2
+#						learning = 8
+#						stewardship = 2
+#						intrigue = 2
+#						martial = 2
+#					}
+#				}
+#				new_character = { event_target:scoped_siracusa_temple = { grant_title = PREV } } 
+#			}
+#		}
+#		if = { #Facilitate restoration for the AI by making it take over all owned holy sites.
+#			limit = { 
+#				802 = { 
+#					top_liege = { character = FROM }
+#					any_province_holding = { 
+#						holding_type = temple 
+#						is_holy_site = FROM
+#						holder_scope = { 
+#							OR = { 
+#								NOT = { religion = FROM }
+#								character = FROM 							} 
+#						}
+#					} 
+#				}
+#			} 
+#			802 = { 
+#				random_province_holding = { 
+#					limit = { 
+#						holding_type = temple 
+#						is_holy_site = FROM
+#						holder_scope = { 
+#							OR = { 
+#								NOT = { religion = FROM }
+#								character = FROM 
+#							} 
+#						} 
+#					} 
+#					save_event_target_as = scoped_alexandria_temple
+#				}
+#			}
+#			custom_tooltip = { text = tooltip_alexandria_church_seized }
+#			hidden_tooltip = {
+#				create_random_priest = {
+#					random_traits = yes
+#					dynasty = random
+#					female = no
+#					attributes = {
+#						diplomacy = 2
+#						learning = 8
+#						stewardship = 2
+#						intrigue = 2
+#						martial = 2
+#					}
+#				}
+#				new_character = { event_target:scoped_alexandria_temple = { grant_title = PREV } } 
+#			}
+#		}
+		hidden_tooltip = { #Set up great rebellion.
+			save_event_target_as = scoped_cetic_emperor
+			random_vassal = { 
+				limit = { 
+					is_landed = yes
+					prisoner = no
+					higher_tier_than = COUNT 
+					OR = { 
+						is_feudal = yes
+						is_merchant_republic = yes
+					} 
+					AND = { 
+						religion_group = pacific
+						NOT = { religion = cetic }
+					} 
+				} 
+				preferred_limit = { 
+					is_powerful_vassal = yes
+					ai = no 
+					trait = zealous
+					religion = neutic
+				} 
+				preferred_limit = { 
+					is_powerful_vassal = yes
+					ai = no 
+					religion = neutic
+				} 
+				preferred_limit = { 
+					is_powerful_vassal = yes
+					ai = no 
+					religion_group = neutic
+				} 
+				preferred_limit = { 
+					is_powerful_vassal = yes
+					ai = no 
+				} 
+				preferred_limit = { 
+					is_powerful_vassal = yes
+					religion = neutic
+					trait = zealous
+				}
+				preferred_limit = { 
+					is_powerful_vassal = yes
+					religion = neutic
+				}
+				preferred_limit = { 
+					is_powerful_vassal = yes
+					religion_group = pacific
+				}
+				preferred_limit = { 
+					is_powerful_vassal = yes
+				} 
+				character_event = { id = neutic.307 days = 12 }
+			} 
+		}
+	}
+	option = { #Convert Vassals
+		name = EVTOPTB_neutic_306
+		trigger = { 
+			NOT = { character = FROM } 
+			religion = cetic
+		}
+	}
+	option = { #Pacifics
+		name = EVTOPTC_neutic_306
+		trigger = { 
+			NOT = { character = FROM }
+			AND = { 
+				religion_group = pacific
+				NOT = { religion = cetic }
+			}
+		}
+	}
+	option = { #Everyone else
+		name = EVTOPTD_neutic_306
+		trigger = { 
+			NOT = { character = FROM } 
+			NOT = { religion_group = pacific }
+		}
+	}
+}
+
+#Random Pacific ruler starts a rebellion against the Cetic Emperor.
+character_event = {
+	id = neutic.307
+	desc = EVTDESC_neutic_307
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	hide_new = yes
+	
+	is_triggered_only = yes
+
+	trigger = { 
+		liege = { character = event_target:scoped_cetic_emperor } 
+		AND = { 
+			religion_group = pacific
+			NOT = { religion = cetic }
+		} 
+	}
+
+	fail_trigger_effect = {
+		event_target:scoped_cetic_emperor = {
+			random_vassal = {
+				limit = { 
+					is_landed = yes
+					higher_tier_than = COUNT 
+					OR = { 
+						is_feudal = yes
+						is_merchant_republic = yes
+					} 
+					AND = { 
+						religion_group = pacific
+						NOT = { religion = cetic }
+					} 
+				}
+				character_event  = { id = neutic.307 } 
+			}
+		}
+	}
+
+	
+	option = {
+		name = EVTOPTA_neutic_307
+		set_character_flag = flag_neutic_revolter
+		custom_tooltip = { 
+			text = tooltip_neutic_307_A
+		}
+		hidden_tooltip = { 
+			start_faction = { 
+				faction = faction_neutic_revolters
+			}
+		}
+		hidden_tooltip = { 
+			event_target:scoped_cetic_emperor = {
+				any_vassal = {
+					limit = { 
+						higher_tier_than = BARON
+						is_theocracy = no
+						prisoner = no
+						AND = { 
+							religion_group = pacific
+							NOT = { religion = cetic }
+						} 
+						NOT = { character = ROOT }
+					}
+				letter_event = { id = neutic.308 }	#Call to Arms 
+				}
+			}
+		}
+		hidden_tooltip = { character_event = { id = neutic.309 days = 4 } }	#War actually starts.
+		ai_chance = { factor = 100 }
+	}
+	
+	option = {		#Player refuses to start a war
+		name = EVTOPTB_neutic_307
+		trigger = { ai = no }
+	}
+}
+
+#Other Vassals join the cause
+letter_event = {
+	id = neutic.308
+	desc = EVTDESC_neutic_308
+	border = GFX_event_letter_frame_religion
+	hide_new = yes
+
+	trigger = { 
+		vassal_of = event_target:scoped_cetic_emperor
+		AND = { 
+			religion_group = pacific
+			NOT = { religion = cetic }
+		} 
+	}
+	
+	is_triggered_only = yes
+	
+	option = {	#Join Independence war
+		name = EVTOPTA_neutic_308
+		join_faction = { 
+			faction = faction_neutic_revolters
+			faction_leader = FROM
+			can_join_existing = yes
+		}
+		ai_chance = { 
+			factor = 95 
+			modifier = { 
+				factor = 0.5
+				NOT = { religion_group = FROM }
+			}
+			modifier = { 
+				factor = 0.5
+				trait = cynical
+			}
+			modifier = { 
+				factor = 0.5
+				trait = craven
+			}
+			modifier = { 
+				factor = 1.5
+				trait = zealous
+			}
+
+		}
+	}
+	option = { #Refuse.
+		name = EVTOPTB_neutic_308
+		ai_chance = { factor = 5 }
+	}
+}
+
+#The True Believers have gathered, now time to actually start the war.
+character_event = {
+	id = neutic.309
+	desc = EVTDESC_neutic_309
+	picture = GFX_evt_riots_byzantine
+	border = GFX_event_normal_frame_war
+	hide_new = yes
+	
+	is_triggered_only = yes
+
+	trigger = { 
+		liege = { character = event_target:scoped_cetic_emperor } 
+		AND = { 
+			religion_group = pacific
+			NOT = { religion = cetic }
+		} 
+	}
+	
+	option = {
+		name = EVTOPTA_neutic_309
+		hidden_tooltip = {
+			set_character_flag = ai_flag_refuse_conversion
+			event_target:scoped_cetic_emperor = {
+				character_event = { id = neutic.310 } #Notification to Emperor
+				any_vassal = {
+					limit = { 
+						is_playable = yes
+						ai = no
+					}
+				character_event = { id = neutic.310 } #Notification to other vassals.
+				}
+			}
+			top_liege = {
+				ROOT = {
+					set_defacto_liege = PREV
+				}
+			}	
+		}
+		hidden_tooltip = {
+			event_target:scoped_cetic_emperor = {
+				any_vassal = { 
+					limit = { in_faction = faction_neutic_revolters } 
+					event_target:scoped_cetic_emperor = {
+						opinion = {
+							who = PREV
+							modifier = opinion_charge_traitor
+							months = 240
+						}
+					}
+				}
+			}
+		}
+		liege = {
+			reverse_war = {
+				target = ROOT
+				casus_belli = neutic_anticetic_revolt
+				faction = faction_neutic_revolters
+			}
+		}
+		prestige = 500
+		piety = 200
+		ai_chance = { factor = 100 }
+	}	
+}
+
+#Notify players of the revolt
+character_event = {
+	id = neutic.310
+	desc = EVTDESC_neutic_310
+	picture = GFX_evt_riots_byzantine
+	border = GFX_event_normal_frame_war
+	hide_new = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_neutic_310
+		trigger = { character = event_target:scoped_cetic_emperor } 
+	}
+	option = {
+		name = EVTOPTB_neutic_310
+		trigger = { NOT = { character = event_target:scoped_cetic_emperor } } 
+	}
+}
+
+#The Cetic Emperor won, ensuring the rebirth of the faith.
+narrative_event = {
+	id = neutic.311
+	title = EVTTITLE_neutic_311
+	desc = EVTDESC_neutic_311
+	picture = GFX_evt_hellenic_temple
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_neutic_311
+		trigger = { religion = cetic } 
+		if = { 
+			limit = { character = FROMFROM } #The reformer
+			custom_tooltip = { text = tooltip_peasants_become_cetics }
+			hidden_tooltip = { 
+				any_demesne_province = { 
+					limit = {
+						NOT = { 
+							is_occupied = yes 
+						}
+					}
+					random = { 
+						chance = 50 
+						religion = FROMFROM
+					} 
+				}
+				any_courtier = { 
+					limit = {
+						NOT = { 
+							is_ruler = yes 
+						}
+					}
+					religion = FROMFROM
+				} 
+				any_vassal = { 
+					limit = {
+						NOR = { 
+							religion = FROMFROM 
+							is_theocracy = yes
+						}
+					}
+					character_event = { id = neutic.312 } #Second chance to convert.
+				}
+			}
+			set_global_flag = california_restored
+			activate_title = { title = e_new_california status = no }
+			activate_title = { title = e_california status = yes }
+			primary_title = {
+				e_california = {
+					grant_title = FROMFROM
+					copy_title_laws = PREV
+				}
+			}
+			k_socal = {
+				de_jure_liege = e_california
+			}
+			k_sacramento = {
+				de_jure_liege = e_california
+			}
+			k_francisco = {
+				de_jure_liege = e_california
+			}
+			k_the_valley = {
+				de_jure_liege = e_california
+			}
+			any_realm_title = {
+				limit = { 
+					tier = KING
+				}
+				de_jure_liege = e_california
+			}
+			any_demesne_title = {
+				limit = { 
+					tier = KING
+				}
+				de_jure_liege = e_california
+			}
+			hidden_tooltip = {
+				primary_title = {
+					if = {
+						limit = { tier = EMPEROR }
+						any_direct_de_jure_vassal_title = {
+							de_jure_liege = e_california
+						}
+					}
+				}				
+				narrative_event = { id = ruin.4 }				
+			}
+			any_demesne_title = {
+				limit = {
+					tier = EMPEROR
+					NOT = { title = e_california }
+				}
+				destroy_landed_title = THIS
+				hidden_tooltip = { activate_title = { title = THIS status = no } }
+			}
+		}
+	}	
+	option = {
+		name = EVTOPTB_neutic_311
+		trigger = { NOT = { religion = cetic } } 
+	}
+}
+
+#Vassals get a second chance to convert after the war.
+character_event = {
+	id = neutic.312
+	desc = EVTDESC_neutic_312
+	picture = GFX_evt_hellenic_temple
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	trigger = { 
+		prisoner = no
+		NOT = { trait = incapable }
+		is_inaccessible_trigger = no
+	} 
+	
+	option = { #Convert
+		name = EVTOPTA_neutic_312
+		trigger = {  
+			OR = { 
+				NOT = { has_character_flag = ai_flag_refuse_conversion } 
+				ai = no
+			}
+			OR = { 
+				ai = no
+				NOT = { trait = zealous }
+				NOT = { trait = stubborn }
+			}
+		}
+		hidden_tooltip = { religion = FROM }
+		custom_tooltip = { text = tooltip_neutic_312_A } 
+		if = { 
+			limit = { 
+				has_character_flag = ai_flag_refuse_conversion 
+			} 
+			clr_character_flag = ai_flag_refuse_conversion
+		} 
+		if = { 
+			limit = { 
+				is_in_society = secret_religious_cult
+				secret_religion = FROM
+				secret_religion = cetic	 
+			} 
+			hidden_tooltip = {
+				any_demesne_province = {
+					limit = { has_province_modifier = secret_cetic_community } 
+					religion = cetic
+					remove_province_modifier = secret_cetic_community
+				}
+			}
+		} 
+		
+		if = { 
+			limit = { higher_tier_than = BARON } 
+			hidden_tooltip = {
+				any_courtier_or_vassal = {
+					limit =  { NOT = { is_theocracy = yes } }
+					character_event = { id = neutic.305 } #Keep going until the bottom.
+				}
+			}
+		}
+		ai_chance = { 
+			factor = 50 
+			modifier = { 
+				factor = 0.25
+				NOT = { opinion = { who = FROM value = -30 } }
+			}
+			modifier = { 
+				factor = 0.1
+				trait = zealous
+			}
+			modifier = { 
+				factor = 0
+				has_character_flag = ai_flag_refuse_conversion
+			}
+			modifier = { 
+				factor = 0
+				is_theocracy = yes
+			}
+		}
+	}
+
+	option = { #Do not Convert.
+		name = EVTOPTB_neutic_312
+		ai_chance = { 
+			factor = 50 
+			modifier = { 
+				factor = 0.25
+				opinion = { who = FROM value = -30 }
+			}
+			modifier = { 
+				factor = 0.1
+				trait = cynical
+			}
+		}
+	}
+}
+

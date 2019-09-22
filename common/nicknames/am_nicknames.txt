@@ -505,7 +505,10 @@ nick_the_revealer = {
 nick_the_enlightened = {
 	allow = {
 		is_adult = yes
-		religion = cetic
+		OR = {	
+			religion = cetic 
+			religion = neutic
+		}
 		trait = zealous
 		learning = 10
 		piety = 500

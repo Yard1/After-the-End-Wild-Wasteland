@@ -246,6 +246,7 @@ character_event = {
 			OR = {
 				religion = gaian
 				religion = cetic
+				religion = neutic
 			}
 			location = {
 				NOR = {

@@ -111,7 +111,10 @@ society_decisions = { # Society decisions are only evaluated by members of socie
 			custom_tooltip = {
 				text = request_to_rank_up_within_society_cynical_tt
 				OR = {
-					NOT = { society_member_of = monastic_order_cetic }
+					NOR = { 
+						society_member_of = monastic_order_cetic
+						society_member_of = monastic_order_neutic 
+					}
 					AND = {
 						society_rank == 1
 						NOT = {
@@ -143,7 +146,10 @@ society_decisions = { # Society decisions are only evaluated by members of socie
 			custom_tooltip = {
 				text = request_to_rank_up_within_society_virtues_tt
 				OR = {
-					NOR = { society_member_of = monastic_order_cetic }
+					NOR = { 
+						society_member_of = monastic_order_cetic
+						society_member_of = monastic_order_neutic 
+					}
 					AND = {
 						society_rank == 1
 						OR = {
@@ -409,6 +415,7 @@ society_decisions = {
 			OR = {
 				is_dharmic_monastic_member_trigger = yes
 				society_member_of = monastic_order_cetic
+				society_member_of = monastic_order_neutic
 			}
 			has_quest = quest_monastic_order_meditation
 		}
@@ -1443,6 +1450,7 @@ society_decisions = {
 				is_christian_monastic_member_trigger = yes
 				society_member_of = monastic_order_cetic
 				society_member_of = monastic_order_libertarian
+				society_member_of = monastic_order_neutic
 			}
 			society_rank >= 2
 			NOT = { has_character_modifier = promise_of_celibacy }
@@ -1480,6 +1488,7 @@ society_decisions = {
 				is_dharmic_monastic_member_trigger = yes
 				society_member_of = monastic_order_cetic
 				society_member_of = monastic_order_libertarian
+				society_member_of = monastic_order_neutic
 			}
 			society_rank >= 2
 			trait = celibate

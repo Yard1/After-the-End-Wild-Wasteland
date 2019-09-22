@@ -2240,6 +2240,9 @@ true_religion_gracia_divina_trigger = {
 true_religion_cetic_trigger = {
 	true_religion = cetic
 }
+true_religion_neutic_trigger = {
+	true_religion = neutic
+}
 true_religion_gaian_trigger = {
 	true_religion = gaian
 }
@@ -4454,6 +4457,13 @@ looting_artifact_event_religious_artifacts_trigger = {
 				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = cetic
 				ROOT = { religion = cetic }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = neutic
+				ROOT = { religion = neutic }
 			}
 		}
 		NAND = {

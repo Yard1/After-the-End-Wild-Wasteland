@@ -1062,9 +1062,14 @@ decisions = {
 		potential = {
 			is_alternate_start = no
 			
-			religion = cetic
-			controls_religion = yes
-			
+			OR = {
+				AND = {
+					religion = cetic
+					controls_religion = yes
+				}
+				religion = neutic
+			}
+
 			is_heretic = no
 
 			NOT = { trait = figurehead }

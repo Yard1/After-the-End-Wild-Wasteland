@@ -3985,7 +3985,10 @@ character_event = {
 		}
 		if = {
 			limit = {
-				religion = cetic
+				OR = { 
+					religion = cetic
+					religion = neutic
+				}
 			}
 			set_government_type = bureaucratic_government
 		}

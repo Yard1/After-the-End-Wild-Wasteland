@@ -148,7 +148,7 @@ laws = {
 					OR = {
 						religion_group = christian
 						religion_group = pacific
-						religion = americanist
+						religion_openly_americanist_or_heresy_trigger = yes = yes
 						religion = mormon
 						religion = sacred_heart
 					}
@@ -348,7 +348,8 @@ laws = {
 						religion = catholic
 						religion = evangelical
 						religion = cetic
-						religion = americanist
+						religion = neutic
+						religion_openly_americanist_or_heresy_trigger = yes = yes
 					}
 					is_feudal = yes
 				}	
@@ -526,7 +527,8 @@ laws = {
 					OR = {
 						religion = catholic
 						religion = cetic
-						religion = americanist
+						religion = neutic
+						religion_openly_americanist_or_heresy_trigger = yes = yes
 					}
 					is_feudal = yes
 				}	
@@ -700,7 +702,8 @@ laws = {
 					OR = {
 						religion = catholic
 						religion = cetic
-						religion = americanist
+						religion = neutic
+						religion_openly_americanist_or_heresy_trigger = yes = yes
 					}
 					is_feudal = yes
 				}	
@@ -873,7 +876,8 @@ laws = {
 					OR = {
 						religion = catholic
 						religion = cetic
-						religion = americanist
+						religion = neutic
+						religion_openly_americanist_or_heresy_trigger = yes = yes
 					}
 					is_feudal = yes
 				}	
@@ -1047,7 +1051,8 @@ laws = {
 					OR = {
 						religion = catholic
 						religion = cetic
-						religion = americanist
+						religion = neutic
+						religion_openly_americanist_or_heresy_trigger = yes = yes
 					}
 					is_feudal = yes
 				}	
@@ -1220,7 +1225,8 @@ laws = {
 					OR = {
 						religion = catholic
 						religion = cetic
-						religion = americanist
+						religion = neutic
+						religion_openly_americanist_or_heresy_trigger = yes = yes
 					}
 					is_feudal = yes
 				}	
