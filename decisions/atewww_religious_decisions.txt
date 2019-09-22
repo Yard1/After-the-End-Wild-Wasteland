@@ -94,7 +94,7 @@ decisions = {
 			}
 			d_supreme_court = {
 				holder_scope = {
-					c_washington = {
+					b_washington_DC = {
 						grant_title = PREV
 						any_de_jure_vassal_title = {
 							limit = {
@@ -142,7 +142,7 @@ decisions = {
 			
 			controls_religion = no
 			
-			c_washington = {
+			b_washington_DC = {
 				holder_scope = {
 					OR = {
 						character = ROOT
@@ -168,7 +168,7 @@ decisions = {
 		effect = {		
 			d_supreme_court = {
 				holder_scope = {
-					c_washington = {
+					b_washington_DC = {
 						grant_title = PREV
 						any_de_jure_vassal_title = {
 							limit = {
@@ -213,7 +213,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				c_washington = {
+				b_washington_DC = {
 					holder_scope = {
 						OR = {
 							ai = no
