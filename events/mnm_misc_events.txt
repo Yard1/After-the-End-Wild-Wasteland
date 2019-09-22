@@ -2686,6 +2686,7 @@ character_event = {
     			is_christian_monastic_member_trigger = yes
     			society_member_of = monastic_order_jewish
     			society_member_of = monastic_order_cetic
+				society_member_of = monastic_order_neutic
 				society_member_of = banking_society
     		}
     	}
@@ -2722,6 +2723,7 @@ character_event = {
 			OR = {
 				is_dharmic_monastic_member_trigger = yes
 				society_member_of = monastic_order_cetic
+				society_member_of = monastic_order_neutic
 			}
 		}
     	text = EVTDESC_MNM_10045

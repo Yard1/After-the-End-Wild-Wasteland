@@ -1038,8 +1038,12 @@ decisions = {
 							de_jure_liege = e_new_california
 						}
 					}
-				}				
-				narrative_event = { id = ruin.3 }				
+				}
+				narrative_event = { id = ruin.3 }
+				if = { #Cetic Resurgence
+					limit = { religion = neutic }
+					character_event = { id = neutic.300 days = 15 }
+				}
 			}
 			any_demesne_title = {
 				limit = {

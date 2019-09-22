@@ -20,6 +20,8 @@ equal_religion = {
 		religion = antinomian
 		religion = bickertonite
 		religion = strangite
+		religion = neutic
+		religion = cetic
 		religion_group = oldworld
 	}
 }

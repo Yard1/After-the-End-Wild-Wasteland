@@ -1411,6 +1411,7 @@ decisions = {
 				limit = {
 					NOR = {
 						religion = cetic
+						religion = neutic
 						religion = gaian
 					}
 				}
@@ -1429,7 +1430,10 @@ decisions = {
 			
 			if = {
 				limit = {
-					religion = cetic
+					OR = {
+						religion = cetic
+						religion = neutic
+					}
 				}
 				
 				if = {
@@ -1609,6 +1613,7 @@ decisions = {
 				limit = {
 					NOR = {
 						religion = cetic
+						religion = neutic
 						religion = gaian
 					}
 				}
@@ -1627,7 +1632,10 @@ decisions = {
 			
 			if = {
 				limit = {
-					religion = cetic
+					OR = {
+						religion = cetic
+						religion = neutic
+					}
 				}
 				
 				if = {

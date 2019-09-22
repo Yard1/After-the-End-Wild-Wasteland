@@ -1,0 +1,11 @@
+secret_neutic_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_neutic
+	}
+}
+
+unenlightened_guru = {
+	local_revolt_risk = 0.01
+	icon = 35
+}

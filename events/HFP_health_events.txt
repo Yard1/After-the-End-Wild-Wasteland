@@ -1146,7 +1146,7 @@ character_event = {
 		#Status
 		if = { 
 			limit = { 
-				religion = cetic
+				religion_group = pacific
 			}
 			change_variable = { which = physique_variable value = -1 }
 		}

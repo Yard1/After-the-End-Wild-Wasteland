@@ -640,11 +640,13 @@ christian = {
 		intermarry = moravian
 		
 		intermarry = cetic
+		intermarry = neutic
 		intermarry = gaian
 		intermarry = shinto
 
 		character_modifier = {
 			cetic_opinion = 5
+			neutic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1680,7 +1682,7 @@ pacific = {
 		secondary_event_pictures = sunni
 
 		icon = 44
-		heresy_icon = 44
+		heresy_icon = 76
 		
 		color = { 0.7 0.52 0.90 }
 		
@@ -1711,6 +1713,7 @@ pacific = {
 		priest_title = GURU
 		piety_name = KARMA
 		
+		intermarry = neutic
 		intermarry = gaian
 		intermarry = shinto
 		intermarry = nousthreskeia
@@ -1721,6 +1724,50 @@ pacific = {
 		}
 	}
 	
+	neutic = {
+		graphical_culture = chinesegfx
+		secondary_event_pictures = sunni
+		
+		parent = cetic
+
+		icon = 44
+		heresy_icon = 76
+		
+		color = { 0.90 0.7 0.52 }
+		
+		interface_skin = { cetic_interface taoist_interface indian_interface muslim_interface }
+		
+		high_god_name = GOD_THE_GURUS
+		
+		god_names = {
+			GOD_THE_GURUS GOD_THE_FIRST_EMPEROR GOD_MOHAMMED GOD_BUDDHA GOD_CHRIST GOD_HUBBARD
+		}
+		
+		evil_god_names = {
+			THE_UNENLIGHTENED MOLOCH GOD_MAMMON
+		}
+		
+		character_modifier = {
+			neognostic_opinion = 5
+		}
+		allow_rivermovement = yes
+		can_retire_to_monastery = yes
+		
+		religious_clothing_head = 10
+		religious_clothing_priest = 10
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_WRITINGS
+		priest_title = GURU
+		piety_name = KARMA
+		
+		intermarry = cetic
+		intermarry = gaian
+		intermarry = shinto
+		intermarry = nousthreskeia
+		intermarry = neognostic
+	}
+
 	gaian = {
 		graphical_culture = buddhistgfx
 		secondary_event_pictures = sunni
@@ -1763,6 +1810,7 @@ pacific = {
 		religious_clothing_head = 16
 		religious_clothing_priest = 16
 		
+		intermarry = neutic
 		intermarry = cetic
 		intermarry = shinto
 		intermarry = nousthreskeia
@@ -1804,6 +1852,7 @@ pacific = {
 		priest_title = PRIEST
 		piety_name = PURITY
 		
+		intermarry = neutic
 		intermarry = gaian
 		intermarry = cetic
 		intermarry = nousthreskeia
@@ -1812,6 +1861,8 @@ pacific = {
 	nousthreskeia = {
 		graphical_culture = buddhistgfx
 		secondary_event_pictures = slavic_pagan
+
+		ai_peaceful = no
 
 		icon = 71
 		heresy_icon = 71
@@ -1834,6 +1885,7 @@ pacific = {
 		priests_can_inherit = yes
 		priests_can_marry = yes
 		allow_rivermovement = yes
+		allow_looting = yes
 		max_consorts = 3 #can take concubines
 		
 		religious_clothing_head = 14
@@ -1844,6 +1896,7 @@ pacific = {
 		priest_title = PREACHER
 		piety_name = CONSCIOUSNESS
 		
+		intermarry = neutic
 		intermarry = gaian
 		intermarry = cetic
 		intermarry = shinto

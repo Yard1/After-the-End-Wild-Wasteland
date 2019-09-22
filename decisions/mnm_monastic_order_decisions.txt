@@ -18,6 +18,7 @@ society_decisions = {
 				is_dharmic_monastic_member_trigger = yes
 				society_member_of = monastic_order_cetic
 				society_member_of = monastic_order_libertarian
+				society_member_of = monastic_order_neutic
 			}
 			NOT = { has_character_flag = ascetic_arriving }
 			NOT = { has_character_modifier = recently_invited_ascetic }
@@ -512,6 +513,7 @@ title_decisions = {
 				is_dharmic_monastic_member_trigger = yes
 				society_member_of = monastic_order_cetic
 				society_member_of = monastic_order_libertarian
+				society_member_of = monastic_order_neutic
 			}
 			society_rank == 4
 		}

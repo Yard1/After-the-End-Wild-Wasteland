@@ -675,7 +675,10 @@ golden_oscar = {
 			value = 100
 			is_landed = yes
 			is_tribal = no
-			religion = cetic
+			OR = {
+				religion = cetic
+				religion = neutic
+			}
 		}
 	}
 
@@ -865,7 +868,10 @@ imperial_writings = {
 		additive_modifier = {
 			value = 100
 			is_landed = yes
-			religion = cetic
+			OR = {
+				religion = cetic
+				religion = neutic
+			}
 		}
 	}
 

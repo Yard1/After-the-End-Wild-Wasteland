@@ -973,6 +973,22 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
     				NOT = {
 						has_character_was_religion_flag_trigger = yes
     				}
+    				religion = neutic
+    			}
+    			has_character_flag = character_was_neutic
+			}
+    	}
+    	set_secret_religion = neutic
+    	clr_character_flag = character_was_neutic
+		break = yes
+    }
+	if = {
+    	limit = {
+    		OR = {
+    			AND = {
+    				NOT = {
+						has_character_was_religion_flag_trigger = yes
+    				}
     				religion = gaian
     			}
     			has_character_flag = character_was_gaian
@@ -1690,6 +1706,10 @@ add_religion_char_flag_effect = {
     	set_character_flag = character_was_cetic
     }
 	if = {
+    	limit = { religion = neutic }
+    	set_character_flag = character_was_neutic
+    }
+	if = {
     	limit = { religion = gaian }
     	set_character_flag = character_was_gaian
     }
@@ -1871,6 +1891,7 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_sacred_heart
 	clr_character_flag = character_was_gracia_divina
 	clr_character_flag = character_was_cetic
+	clr_character_flag = character_was_neutic
 	clr_character_flag = character_was_gaian
 	clr_character_flag = character_was_shinto
 	clr_character_flag = character_was_nousthreskeia
@@ -2139,6 +2160,13 @@ event_target_old_religion_from_flag_effect = {
     	limit = { has_character_flag = character_was_cetic }
     	random_character = {
     		limit = { religion = cetic }
+    		save_event_target_as = old_religion
+    	}
+    }
+	if = {
+    	limit = { has_character_flag = character_was_neutic }
+    	random_character = {
+    		limit = { religion = neutic }
     		save_event_target_as = old_religion
     	}
     }
@@ -2756,6 +2784,17 @@ flip_secret_religious_community_provinces = {
 					}
 					religion = cetic
 					remove_province_modifier = secret_cetic_community
+				}
+			}
+		}
+		secret_religious_society_neutic = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_neutic_community
+					}
+					religion = neutic
+					remove_province_modifier = secret_neutic_community
 				}
 			}
 		}
@@ -3914,6 +3953,17 @@ root_secret_religion_provinces_convert_effect = {
 					}
 				}
 			}
+			secret_religious_society_neutic = {
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_neutic_community
+						}
+						religion = neutic
+						remove_province_modifier = secret_neutic_community
+					}
+				}
+			}
 			secret_religious_society_gaian = { 
 				PREV = {
 					any_demesne_province = {
@@ -4480,6 +4530,10 @@ join_prev_monastic_order_society = {
 	if = {
 		limit = { PREV = { society_member_of = monastic_order_libertarian } }
 		join_society = monastic_order_libertarian
+	}
+	if = {
+		limit = { PREV = { society_member_of = monastic_order_neutic } }
+		join_society = monastic_order_neutic
 	}
 }
 
@@ -9258,6 +9312,7 @@ apply_any_applicable_harsh_penalties_effect = {
 	                    religion_group = pagan_group
 	                    is_nomadic = yes
 	                    religion = cetic
+						religion = neutic
 	                    religion = neognostic
 	                }
 	                event_target:combatant_1 = { #Same as "FROM" in this case
@@ -9266,6 +9321,7 @@ apply_any_applicable_harsh_penalties_effect = {
 	                        religion_group = pagan_group
 	                        is_nomadic = yes
 	                        religion = cetic
+							religion = neutic
 	                        religion = neognostic
 	                    }
 	                }
@@ -9296,8 +9352,9 @@ apply_any_applicable_harsh_penalties_effect = {
 	                    gender_equality_trigger = yes
 	                    religion_group = pagan_group
 	                    is_nomadic = yes
-	                    religion = buddhist
-	                    religion = bogomilist
+						religion = cetic
+						religion = neutic
+						religion = neognostic
 	                }
 	                event_target:combatant_1 = { #Same as "FROM" in this case
 	                    OR = {
@@ -9305,6 +9362,7 @@ apply_any_applicable_harsh_penalties_effect = {
 	                        religion_group = pagan_group
 	                        is_nomadic = yes
 	                        religion = cetic
+							religion = neutic
 	                        religion = neognostic
 	                    }
 	                }
@@ -10713,6 +10771,10 @@ set_bloodline_founder_religion_flag_effect = {
 	else_if = {
 		limit = { religion = cetic }
 		new_bloodline = { set_bloodline_flag = requires_cetic_religion }
+	}
+	else_if = {
+		limit = { religion = neutic }
+		new_bloodline = { set_bloodline_flag = requires_neutic_religion }
 	}
 	else_if = {
 		limit = { religion = gaian }

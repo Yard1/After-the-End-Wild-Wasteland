@@ -385,6 +385,7 @@ this_can_duel_with_from_trigger = {
 				religion_group = oldworld
 	            is_nomadic = yes
 	            religion = cetic
+				religion = neutic
 	            religion = neognostic
 	        }
 	        FROM = {
@@ -395,6 +396,7 @@ this_can_duel_with_from_trigger = {
 					religion_group = oldworld
 	                is_nomadic = yes
 					religion = cetic
+					religion = neutic
 					religion = neognostic
 	            }
 	        }
@@ -415,6 +417,7 @@ this_can_duel_with_from_trigger = {
 					religion_group = oldworld
                     is_nomadic = yes
 					religion = cetic
+					religion = neutic
 					religion = neognostic
                 }
                 ROOT = {
@@ -425,6 +428,7 @@ this_can_duel_with_from_trigger = {
 						religion_group = oldworld
                         is_nomadic = yes
 						religion = cetic
+						religion = neutic
 						religion = neognostic
                     }
                 }

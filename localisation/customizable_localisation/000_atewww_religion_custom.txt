@@ -262,6 +262,7 @@ defined_text = {
 		trigger = { 
 			OR = {
 				religion = cetic
+				religion = neutic
 				religion = hindu
 			}
 		}
