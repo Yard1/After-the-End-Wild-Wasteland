@@ -137,12 +137,12 @@ b_valenzuela = {
 	culture = jarocho
 }
 
-b_de_ulua = {
+b_portocarrero = {
 	culture = jarocho
 }
 
-b_portocarrero = {
-	culture = jarocho
+b_lubetzky = {
+	culture = neoladino
 }
 
 ## Colima

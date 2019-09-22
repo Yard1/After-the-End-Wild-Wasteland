@@ -1,0 +1,7 @@
+2641.7.4={
+	holding_dynasty = 2029106
+	liege="d_veracruz"
+}
+2641.7.4 = {
+	holder = 1810252
+}

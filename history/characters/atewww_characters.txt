@@ -879,3 +879,32 @@
 		} 
 	}
 }
+
+### Mexico ###
+
+1810252 = {
+	name = "Daniel"
+	dynasty = 2029106 # Lubetzky
+	culture = neoladino
+	religion = jewish
+	martial = 5
+	diplomacy = 6
+	stewardship = 8
+	intrigue = 7
+	learning = 5
+	trait = midas_touched
+	trait = quick
+	trait = administrator
+	trait = just
+	trait = deceitful
+	trait = cynical
+	trait = ambitious
+	trait = temperate
+	2641.7.4 = {
+	    birth = yes
+		effect = { 
+		    set_character_flag = historical_character 
+		}
+		wealth = 250
+	}
+}
