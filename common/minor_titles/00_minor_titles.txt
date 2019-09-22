@@ -1171,7 +1171,7 @@ title_court_musician = {
 	message = yes
 }
 
-title_1oet = {
+title_court_poet = {
 	dignity = 0.05
 	realm_in_name = yes
 	grant_limit = 1

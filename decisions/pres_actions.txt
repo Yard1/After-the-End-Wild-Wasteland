@@ -79,8 +79,7 @@ decisions = {
 		}
 		allow = {
 			age = 35
-			NOT = { trait = in_hiding }
-			NOT = { trait = incapable }
+			block_general_event_trigger = no
 			is_landed = yes
 			holy_order = no
 			mercenary = no

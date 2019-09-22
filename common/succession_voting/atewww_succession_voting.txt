@@ -8519,6 +8519,14 @@ militarist_appointment = {
 				} 
 			}
 		}
+		additive_modifier = { 
+			value = -25
+			localisation_key = tooltip_feudal_elector_vote_lowborn
+			NOT = { dynasty = NONE }
+			FROM = {
+				dynasty = NONE
+			}
+		}
 		#Wrong tier
 		additive_modifier = { 
 			value = -100

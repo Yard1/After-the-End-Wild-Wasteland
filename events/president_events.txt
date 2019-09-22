@@ -57,15 +57,42 @@ character_event = {
 	desc = DEBUG
 	is_triggered_only = yes # called from on_yearly_pulse
 	hide_window = yes
+	only_rulers = yes
 	
 	trigger = {
 		has_landed_title = k_papal_state
-		d_americanist = { has_holder = no }
+		OR = {
+			NOT = { is_title_active = d_americanist }
+			d_americanist = { has_holder = no }
+		}
 	}
 	
 	option = {
 		name = DEBUG
-		character_event = { id = prez.1 }
+		if = {
+			limit = {
+				NOT = {
+					e_usa = { holder_scope = { always = yes } }
+				}
+				NOT = { has_global_flag = pres_election }
+			}
+			set_global_flag = pres_election
+			set_global_flag = declare_candidacy
+			any_playable_ruler = { # Inform players
+				limit = { religion = americanist }
+				character_event = { id = prez.3 }
+			}
+			k_papal_state = {
+				holder_scope = {
+					set_variable = { which = num_candidates value = 0 }
+					character_event = { id = prez.7 days = 30 } # End candidate declaration period
+				}
+			}
+			d_americanist = {
+				activate_title = { title = THIS status = no }
+				unsafe_destroy_landed_title = THIS
+			}
+		}
 	}
 }
 
@@ -19165,11 +19192,7 @@ narrative_event = {
 	picture = GFX_evt_coronation
 	is_triggered_only = yes
 	only_rulers = yes
-	religion_group = oldworld
-	
-	trigger = {
-		religion = americanist
-	}
+	religion = americanist
 	
 	option = {
 		name = EVTOPTA_presidency_restored

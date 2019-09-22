@@ -219,7 +219,7 @@ character_event = {
 			modifier = { factor = 2 trait = holy_warrior }
 			modifier = { factor = 2 trait = berserker }
 			modifier = { factor = 2 trait = inspiring_leader }
-			modifier = { factor = 0.25 likes_southern = yes }
+			modifier = { factor = 0.1 likes_southern = yes }
 			modifier = { factor = 2 likes_yank = yes }
 		}
 	}
@@ -280,7 +280,7 @@ character_event = {
 			modifier = { factor = 2 trait = proud }
 			modifier = { factor = 2 trait = brave }
 			modifier = { factor = 2 likes_southern = yes }
-			modifier = { factor = 0.25 likes_yank = yes }
+			modifier = { factor = 0.1 likes_yank = yes }
 		}
 	}
 	option = {
