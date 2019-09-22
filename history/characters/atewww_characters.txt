@@ -939,3 +939,89 @@
 	    add_spouse = 1810252 
 	}
 }
+
+### Central America ###
+
+1670003 = {
+	name = "Teocuitlatl"
+	dynasty = 2029108 #Metztuna
+	dna = "alkbhejcbdm"
+	culture = chilango
+	religion = uahomche
+	martial = 5
+	diplomacy = 6
+	stewardship = 6
+	intrigue = 6
+	learning = 8
+	trait = skilled_tactician
+	trait = duelist
+	trait = robust
+	trait = lustful
+	trait = ambitious
+	trait = gregarious
+	trait = brave
+	trait = stubborn
+	2637.5.7 = {
+	    birth = yes
+		culture = maya
+		effect = { 
+		    set_character_flag = historical_character 
+		}
+	}
+	2666.6.1 = {
+        wealth = 115
+        prestige = 300
+		add_spouse = 1670004 
+		add_claim = d_chiapas
+        effect = {
+            spawn_unit = {
+                province = 3134 # Comitan
+                owner = ROOT
+                troops = {
+                    pikemen = { 
+					   600 
+					   600
+					}
+					archers = { 
+					   400 
+					   400
+					}
+                }
+                attrition = 1.0
+            }
+        }
+    }
+}
+
+1670004 = {
+	name = "Ginny"
+	dynasty = 2029109 #Breeze
+	culture = delawarean
+	religion = americanist
+	female = yes
+	martial = 5
+	diplomacy = 1
+	stewardship = 7
+	intrigue = 7
+	learning = 8
+	trait = scholarly_theologian
+	trait = physician
+	trait = feeble
+	trait = patient
+	trait = envious
+	trait = cynical
+	trait = erudite
+	trait = uncouth
+	2639.11.7 = {
+	    birth = yes
+		effect = { 
+		    set_character_flag = historical_character 
+		}
+	}
+	2666.6.1 = {
+	    add_spouse = 1670003 
+		effect = { 
+			add_artifact = brazilian_book_health
+		}
+    }
+}

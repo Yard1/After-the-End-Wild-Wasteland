@@ -169,6 +169,40 @@
 	culture = neoladino
 }
 
+2029108 = { 
+    name = "Metztuna" 
+	culture = maya
+	coat_of_arms = {
+        religion = uahomche
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 1
+            emblem = 0
+            color = 1
+            color = 2
+            color = 2
+        }
+    }
+}
+
+2029109 = { 
+    name = "Breeze" 
+	culture = delawarean
+	coat_of_arms = {
+        religion = americanist
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 46
+            emblem = 0
+            color = 1
+            color = 0
+            color = 0
+        }
+    }
+}
+
 2029121 = { 
     name = "Trump" 
 	culture = gothamite 
