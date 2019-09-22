@@ -84,6 +84,7 @@ decisions = {
 			holy_order = no
 			mercenary = no
 			OR = {
+				ai = no
 				independent = yes
 				liege = { higher_tier_than = DUKE }
 			}

@@ -4069,6 +4069,7 @@ has_assassins_prerequisites = {
 
 has_common_devilworship_prerequisites = {
 	age = 16
+	NOT = { trait = zealous }
 	custom_tooltip = {
 		text = must_be_a_sinner_tooltip
 		hidden_tooltip = {

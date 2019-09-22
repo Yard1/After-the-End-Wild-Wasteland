@@ -1,0 +1,67 @@
+# Become President
+obj_become_president = {
+	type = character
+	
+	potential = {
+		is_adult = yes
+		religion = americanist
+		NOT = { has_landed_title = d_americanist }
+		holy_order = no
+		mercenary = no
+		is_landed = yes
+		NOT = { trait = legendary }
+		#NOT = { has_minor_title = former_president }
+	}
+	
+	allow = {
+		age = 35
+		block_general_event_trigger = no
+		OR = {
+			ai = no
+			independent = yes
+			liege = { higher_tier_than = DUKE }
+		}
+	}
+	chance = {
+		factor = 50
+		modifier = {
+			factor = 1.5
+			trait = president
+			NOT = { trait = content }
+		}
+		modifier = {
+			factor = 1.5
+			trait = diligent
+		}
+		modifier = {
+			factor = 2
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.01
+			trait = content
+		}
+		modifier = {
+			factor = 0.01
+			trait = slothful
+		}
+	}
+	success = {
+		has_landed_title = d_americanist
+	}
+	abort = {
+		OR = {
+			holy_order = yes
+			mercenary = yes
+			has_character_flag = dropped_out
+			block_general_event_trigger = yes
+			NOT = { religion = americanist }
+		}
+	}
+	abort_effect = {
+	}
+	effect = {
+		prestige = 500
+		piety = 500
+	}
+}

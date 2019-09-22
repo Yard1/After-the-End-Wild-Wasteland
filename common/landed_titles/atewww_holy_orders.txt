@@ -47,3 +47,27 @@ d_enclave = {
 
 	mercenary_type = d_steel_brotherhood_composition
 }
+
+d_order_airmen = {
+	color = { 109 191 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 1231 # Bexar
+	
+	title = "GENERAL"
+	title_female = "GENERAL"
+	foa = "CAPTAIN_FOA"
+	
+	culture = texan
+	religion = americanist
+	
+	holy_order = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 1.0
+	monthly_income = 1
+
+	mercenary_type = d_sun_knights_composition
+}

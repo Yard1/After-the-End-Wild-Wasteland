@@ -1,0 +1,317 @@
+namespace = ATE_WWWW_AIRMEN
+
+character_event = {
+	id = ATE_WWWW_AIRMEN.1
+	hide_window = yes
+	
+	only_playable = yes
+	
+	trigger = {
+		religion_openly_americanist_or_heresy_trigger = no
+		NOT = { has_global_flag = d_order_airmen_activated }
+		FROMFROM = {
+			has_landed_title = d_airmen
+		}
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "ATE_WWWW_AIRMEN.1: ROOT:[Root.GetBestName] FROM: [From.GetName] FROMFROM: [FromFrom.GetBestName]"
+		FROMFROM = {
+			character_event = { id = ATE_WWWW_AIRMEN.2 days = 1 }
+		}
+	}
+
+}
+
+character_event = {
+	id = ATE_WWWW_AIRMEN.2
+	hide_window = yes
+	religion = americanist
+		
+	trigger = {
+		is_ruler = no
+		d_airmen = {
+			has_holder = no
+			any_previous_holder = {
+				character = ROOT
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "ATE_WWWW_AIRMEN.2: ROOT:[Root.GetBestName]"
+		if = {
+			limit = {
+				any_dynasty_member = {
+					NOT = { character = ROOT }
+					NOT = { any_liege = { character = ROOT } }
+					is_ruler = yes
+				}
+			}
+			set_character_flag = no_seniority
+		}
+		set_global_flag = d_order_airmen_activated
+		d_airmen = { destroy_landed_title = THIS }
+		activate_title = { title = d_order_airmen status = yes }
+		d_order_airmen = {
+			grant_title = PREV
+			save_persistent_event_target = { 
+				name = airmen_order_founder 
+				scope = ROOT 
+			}
+		}
+		set_government_type = order_government
+		d_order_airmen = {
+			if = {
+				limit = { ROOT = { has_character_flag = no_seniority } }
+				add_law = succ_primogeniture
+				succession = primogeniture
+			}
+			else = {
+				add_law = succ_seniority
+				succession = seniority
+			}
+		}
+		character_event = { id = misc.6 }
+		recalc_succession = yes
+		d_airmen = { add_pressed_claim = ROOT }
+		c_comal = { add_pressed_claim = ROOT }
+		c_bexar = { add_pressed_claim = ROOT }
+		c_duval = { add_pressed_claim = ROOT }
+		c_live_oak = { add_pressed_claim = ROOT }
+		c_nueces = { add_pressed_claim = ROOT }
+		c_goliad = { add_pressed_claim = ROOT }
+		clr_character_flag = no_seniority
+
+		create_character = {
+			name = "Curtis"
+			religion = ROOT
+			culture = rostmann
+			dynasty = 2029122
+			random_traits = no
+			female = no
+			age = 55
+			health = 6
+			attributes = {
+				martial = 10
+				diplomacy = 5
+				stewardship = 5
+			}
+			flag = historical_character
+			trait = brilliant_strategist
+			trait = holy_warrior
+			trait = zealous
+			trait = cruel
+			trait = wroth
+			trait = dilligent
+			trait = service_cross
+			trait = ambitious
+			trait = shrewd
+			trait = strong
+		}
+	}
+
+}
+
+character_event = {
+	id = ATE_WWWW_AIRMEN.3
+	hide_window = yes
+	only_rulers = yes
+	religion = americanist
+		
+	trigger = {
+		has_global_flag = d_order_airmen_activated
+		has_landed_title = d_order_airmen
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "ATE_WWWW_AIRMEN.3: ROOT:[Root.GetBestName]"
+		character_event = { id = ATE_WWWW_AIRMEN.4 }
+		character_event = { id = ATE_WWWW_AIRMEN.4 days = 2 }
+	}
+
+}
+
+character_event = {
+	id = ATE_WWWW_AIRMEN.4
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "ATE_WWWW_AIRMEN.4: ROOT:[Root.GetBestName]"
+		d_airmen = { remove_claim = ROOT add_pressed_claim = ROOT }
+		c_comal = { remove_claim = ROOT add_pressed_claim = ROOT }
+		c_bexar = { remove_claim = ROOT add_pressed_claim = ROOT }
+		c_duval = { remove_claim = ROOT add_pressed_claim = ROOT }
+		c_live_oak = { remove_claim = ROOT add_pressed_claim = ROOT }
+		c_nueces = { remove_claim = ROOT add_pressed_claim = ROOT }
+		c_goliad = { remove_claim = ROOT add_pressed_claim = ROOT }
+
+		if = {
+			limit = {
+				d_order_airmen = {
+					persistent_event_target:airmen_order_founder = {
+						dynasty = ROOT
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_dynasty_member = {
+						NOT = { character = ROOT }
+						NOT = { any_liege = { character = ROOT } }
+						is_ruler = yes
+					}
+				}
+				set_character_flag = no_seniority
+			}
+			d_order_airmen = {
+				log = "ATE_WWWW_AIRMEN.4: set d_order_airmen to dynastical succession"
+				if = {
+					limit = { 
+						ROOT = { has_character_flag = no_seniority } 
+						NOT = { has_law = succ_primogeniture }
+					}
+					add_law = succ_primogeniture
+					succession = primogeniture
+				}
+				else_if = {
+					NOT = { has_law = succ_seniority }
+					add_law = succ_seniority
+					succession = seniority
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				d_order_airmen = { NOT = { has_law = succ_open_elective } }
+			}
+			d_order_airmen = {
+				log = "ATE_WWWW_AIRMEN.4: set d_order_airmen to open elective"
+				add_law = succ_open_elective
+			}
+		}
+		recalc_succession = yes
+	}
+
+}
+
+character_event = {
+	id = ATE_WWWW_AIRMEN.40
+	hide_window = yes
+	religion = americanist
+	is_triggered_only = yes
+
+	trigger = {
+		any_liege = {
+			has_landed_title = d_order_airmen
+		}
+	}
+
+	immediate = {
+		log = "ATE_WWWW_AIRMEN.40: ROOT:[Root.GetBestName]"
+		any_liege = {
+			limit = { has_landed_title = d_order_airmen }
+			character_event = { id = ATE_WWWW_AIRMEN.4 }
+		}
+	}
+
+}
+
+character_event = {
+	id = ATE_WWWW_AIRMEN.5
+	hide_window = yes
+	only_rulers = yes
+	religion = americanist
+	is_triggered_only = yes
+
+	trigger = {
+		has_landed_title = d_order_airmen
+	}
+
+	immediate = {
+		log = "ATE_WWWW_AIRMEN.5: ROOT:[Root.GetBestName]"
+		if = {
+			limit = { has_law = succ_open_elective }
+			character_event = { id = ATE_WWWW_AIRMEN.4 }
+		}
+		if = {
+			limit = {
+				is_married = no
+				is_marriage_adult = yes
+				NOR = {
+					trait = dog
+					trait = eunuch
+					trait = monk
+					trait = nun
+					trait = horse
+					trait = cannot_marry
+					trait = cat
+				}
+				is_inaccessible_or_incapable_trigger = no
+				prisoner = no
+				is_incapable = no
+			}
+			character_event = { id = ATE_WWWW_AIRMEN.6 }
+		}
+		any_dynasty_member = {
+			limit = {
+				NOT = { character = ROOT }
+				is_married = no
+				is_marriage_adult = yes
+				NOR = {
+					trait = dog
+					trait = eunuch
+					trait = monk
+					trait = nun
+					trait = horse
+					trait = cannot_marry
+					trait = cat
+				}
+				is_inaccessible_or_incapable_trigger = no
+				prisoner = no
+				is_incapable = no
+				any_liege = { character = ROOT }
+			}
+			character_event = { id = ATE_WWWW_AIRMEN.6 }
+		}
+	}
+
+}
+
+character_event = {
+	id = ATE_WWWW_AIRMEN.6
+	hide_window = yes
+	religion = americanist
+	is_triggered_only = yes
+
+	trigger = {
+		is_married = no
+		is_marriage_adult = yes
+		NOR = {
+			trait = dog
+			trait = eunuch
+			trait = monk
+			trait = nun
+			trait = horse
+			trait = cannot_marry
+			trait = cat
+		}
+		is_inaccessible_or_incapable_trigger = no
+		prisoner = no
+		is_incapable = no
+	}
+
+	immediate = {
+		log = "ATE_WWWW_AIRMEN.6: ROOT:[Root.GetBestName]"
+		marry_suitable_courtier_or_vassal = yes
+	}
+
+}

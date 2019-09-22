@@ -219,3 +219,19 @@
 		}
 	} 
 }
+
+2029122 = { 
+    name = "LeMay" 
+	coat_of_arms = {
+		template = 0
+		religion = americanist
+		layer = {
+			texture = 1
+			texture_internal = 2
+			emblem = 0
+			color = 0
+			color = 0
+			color = 0
+		}
+	} 
+}

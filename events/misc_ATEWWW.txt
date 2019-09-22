@@ -7,31 +7,19 @@ character_event = {
 	hide_window = yes
 
 	trigger = {
+		OR = {
+			is_ruler = no
+			tier = BARON
+		}
 		FROMFROM = {
 			ai = yes
+			is_playable = yes
+			NOT = { character = ROOT }
 			OR = {
 				holy_order = yes
 				is_theocracy = yes
 				mercenary = yes
 				primary_title = { is_landless_type_title = yes }
-			}
-			primary_title = { 
-				NOR = { 
-					has_law = agnatic_succession 
-					AND = {
-						is_theocracy = yes
-						religion_allows_female_temple_holders = no
-						religion_allows_male_temple_holders = yes
-					}
-					AND = {
-						holy_order = yes
-						OR = {
-							religion_allows_female_temple_holders = no
-							females_can_hold_minor_commander_title_trigger = no
-						}
-						religion_allows_male_temple_holders = yes
-					}
-				}
 			}
 		}
 	}
@@ -44,95 +32,116 @@ character_event = {
 			}
 			if = {
 				limit = {
-					FROMFROM = { 
-						OR = {
-							holy_order = yes
-							mercenary = yes
-						}
-					}
-				}
-				log = "miscATEWW.1: [FromFrom.GetBestName] is holy order or mercenary"
-				#all female
-				if = {
-					limit = {
-						FROMFROM = {
-							primary_title = {
-								has_law = enatic_succession
+					FROMFROM = {
+						primary_title = {
+							OR = {
+								title = d_order_airmen
+								NOR = { 
+									has_law = agnatic_succession 
+									AND = {
+										is_theocracy = yes
+										religion_allows_female_temple_holders = no
+										religion_allows_male_temple_holders = yes
+									}
+									AND = {
+										holy_order = yes
+										OR = {
+											religion_allows_female_temple_holders = no
+											females_can_hold_minor_commander_title_trigger = no
+										}
+										religion_allows_male_temple_holders = yes
+									}
+								}
 							}
 						}
 					}
-					log = "miscATEWW.1: [Root.GetBestName] holy order/merc"
-					set_gender = female
-					if = {
-						limit = { religion = libertarian }
-						give_ROOT_random_female_libertarian_name = yes
-					}
-					else = {
-						give_ROOT_random_name = yes
-					}
-				}
-				else = {
-					#50/50
-					log = "miscATEWW.1: [Root.GetBestName] 50/50 holy order/merc"
-					character_event = { id = miscATEWW.5 }
-				}
-			}
-			else_if = {
-				limit = {
-					OR = {
-						is_priest = yes
-						trait = detached_priest
-						trait = martial_cleric
-						trait = scholarly_theologian
-						trait = mastermind_theologian
-					}
 				}
 				if = {
 					limit = {
-						FROMFROM = {
-							religion_allows_female_temple_holders = yes
-							religion_allows_male_temple_holders = no
+						FROMFROM = { 
+							OR = {
+								holy_order = yes
+								mercenary = yes
+							}
 						}
 					}
-					log = "miscATEWW.1: [Root.GetBestName] priest"
-					set_gender = female
+					log = "miscATEWW.1: [FromFrom.GetBestName] of [FromFrom.PrimaryTitle.GetName] is holy order or mercenary"
+					#all female
 					if = {
-						limit = { religion = libertarian }
-						give_ROOT_random_female_libertarian_name = yes
+						limit = {
+							FROMFROM = {
+								primary_title = {
+									has_law = enatic_succession
+								}
+							}
+						}
+						log = "miscATEWW.1: [Root.GetBestName] in [FromFrom.PrimaryTitle.GetName] holy order/merc"
+						set_gender = female
+						if = {
+							limit = { religion = libertarian }
+							give_ROOT_random_female_libertarian_name = yes
+						}
+						else = {
+							give_ROOT_random_name = yes
+						}
 					}
 					else = {
-						give_ROOT_random_name = yes
+						#50/50
+						log = "miscATEWW.1: [Root.GetBestName] 50/50 holy order/merc"
+						character_event = { id = miscATEWW.5 }
 					}
 				}
 				else_if = {
 					limit = {
-						FROMFROM = {
-							religion_allows_female_temple_holders = yes
-							religion_allows_male_temple_holders = yes
+						OR = {
+							is_priest = yes
+							trait = detached_priest
+							trait = martial_cleric
+							trait = scholarly_theologian
+							trait = mastermind_theologian
 						}
 					}
-					log = "miscATEWW.1: [Root.GetBestName] 50/50 priest"
+					if = {
+						limit = {
+							FROMFROM = {
+								religion_allows_female_temple_holders = yes
+								religion_allows_male_temple_holders = no
+							}
+						}
+						log = "miscATEWW.1: [Root.GetBestName] priest"
+						set_gender = female
+						if = {
+							limit = { religion = libertarian }
+							give_ROOT_random_female_libertarian_name = yes
+						}
+						else = {
+							give_ROOT_random_name = yes
+						}
+					}
+					else_if = {
+						limit = {
+							FROMFROM = {
+								religion_allows_female_temple_holders = yes
+								religion_allows_male_temple_holders = yes
+							}
+						}
+						log = "miscATEWW.1: [Root.GetBestName] 50/50 priest"
+						character_event = { id = miscATEWW.5 }
+					}
+				}
+				else_if = {
+					limit = {
+						FROMFROM = { matriarchal_religion = yes }
+					}
+					log = "miscATEWW.1: [Root.GetBestName] 80/20"
+					set_character_flag = 80_20_female
+					character_event = { id = miscATEWW.5 }
+				}
+				else = {
+					log = "miscATEWW.1: [Root.GetBestName] 50/50"
 					character_event = { id = miscATEWW.5 }
 				}
 			}
-			else_if = {
-				limit = {
-					FROMFROM = { matriarchal_religion = yes }
-				}
-				log = "miscATEWW.1: [Root.GetBestName] 80/20"
-				set_character_flag = 80_20_female
-				character_event = { id = miscATEWW.5 }
-			}
-			else = {
-				log = "miscATEWW.1: [Root.GetBestName] 50/50"
-				character_event = { id = miscATEWW.5 }
-			}
-		}
-		if = {
-			limit = {
-				religion = libertarian
-			}
-			character_event = { id = miscATEWW.3 days = 1 }
 		}
 		if = {
 			limit = {
@@ -151,6 +160,23 @@ character_event = {
 					martial = 20
 				}
 				add_trait = shieldmaiden
+			}
+		}
+		if = {
+			limit = {
+				FROMFROM = { 
+					OR = {
+						holy_order = yes
+						is_theocracy = yes
+					}
+				}
+			}
+			religion = FROMFROM
+			if = {
+				limit = {
+					religion = libertarian
+				}
+				character_event = { id = miscATEWW.3 days = 1 }
 			}
 		}
 		if = {
@@ -625,7 +651,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				is_ruler = yes
-				primary_title = { has_law = agnatic_succession }
+				primary_title = { 
+					NOT = { title = d_order_airmen }
+					has_law = agnatic_succession
+				}
 			}
 		}
 	}
@@ -637,7 +666,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				is_ruler = yes
-				primary_title = { has_law = enatic_succession }
+				primary_title = {
+					NOT = { title = d_order_airmen }
+					has_law = enatic_succession
+				}
 			}
 		}
 	}

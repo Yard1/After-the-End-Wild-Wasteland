@@ -25,6 +25,15 @@ monastic_order_libertarian = {
 				}
 			}
 		}
+		hidden_trigger = {
+			OR = {
+				holy_order = no
+				has_landed_title = d_libertarian
+				any_liege = {
+					has_landed_title = d_libertarian
+				}
+			}
+		}
 		age = 16
 		religion = libertarian
 		OR = {

@@ -11040,7 +11040,8 @@ character_event = {
 						NOT = { spouse_even_if_dead = { always = yes } }
 						NOT = { any_child = { always = yes } }
 					}
-					character_event = { id = misc.40 }
+					character_event = { id = misc.3 }
+					character_event = { id = misc.4 }
 				}
 				else = {
 					set_character_flag = physique
@@ -11255,7 +11256,8 @@ character_event = {
 		}
 	}
 	option = {
-		character_event = { id = misc.40 } # Diversity
+		character_event = { id = misc.3 }
+		character_event = { id = misc.4 }
 		if = {
 			limit = {
 				is_theocracy = yes

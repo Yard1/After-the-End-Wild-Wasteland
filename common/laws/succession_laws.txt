@@ -475,6 +475,7 @@ succession_laws = {
 				NOT = { has_landed_title = d_forscom }
 				OR = {
 					independent = yes
+					ROOT = { title = d_order_airmen }
 					NOT = {
 						any_liege = {
 							holy_order = yes
@@ -520,6 +521,7 @@ succession_laws = {
 				is_landless_type_title = no
 				is_tribal_type_title = yes
 				temporary = yes
+				ROOT = { title = d_order_airmen }
 			}
 			OR = {
 				AND = {
@@ -528,6 +530,7 @@ succession_laws = {
 				}
 				holder_scope = { is_feudal = yes }
 				holder_scope = { is_patrician = yes }
+				ROOT = { title = d_order_airmen }
 			}
 			
 			is_primary_type_title = no
@@ -672,6 +675,7 @@ succession_laws = {
 					holder_scope = {
 						OR = {
 							independent = yes
+							ROOT = { title = d_order_airmen }
 							NOT = {
 								any_liege = {
 									holy_order = yes
@@ -690,6 +694,7 @@ succession_laws = {
 						is_landless_type_title = no
 						is_tribal_type_title = yes
 						temporary = yes
+						ROOT = { title = d_order_airmen }
 					}
 					is_primary_type_title = no
 					OR = {
@@ -698,6 +703,7 @@ succession_laws = {
 							is_feudal = yes
 						}
 						holder_scope = { is_feudal = yes }
+						ROOT = { title = d_order_airmen }
 					}
 				}
 				has_title_flag = alternate_byz
@@ -1951,36 +1957,39 @@ gender_laws = {
 		
 		potential = { 
 			NOT = { title = d_nancy_harts }
-			holder_scope = {
-				OR = {
-					AND = {
-						is_theocracy = yes
-						religion_allows_female_temple_holders = yes
-						religion_allows_male_temple_holders = yes
-					}
-					AND = {
-						holy_order = yes
-						females_can_hold_minor_commander_title_trigger = yes
-						religion_allows_female_temple_holders = yes
-						religion_allows_male_temple_holders = yes
-					}
-					AND = {
-						mercenary = yes
-						females_can_hold_minor_commander_title_trigger = yes
-						OR = {
-							gender_equality_trigger = yes
-							has_feminist_culture_trigger = yes
+			OR = {
+				title = d_order_airmen
+				holder_scope = {
+					OR = {
+						AND = {
+							is_theocracy = yes
+							religion_allows_female_temple_holders = yes
+							religion_allows_male_temple_holders = yes
 						}
-					}
-					AND = {
-						is_theocracy = no
-						holy_order = no
-						mercenary = no
-						OR = {
-							gender_equality_trigger = yes
-							has_feminist_culture_trigger = yes
-							any_owned_bloodline = {
-								has_bloodline_flag = bloodline_effect_cognatic
+						AND = {
+							holy_order = yes
+							females_can_hold_minor_commander_title_trigger = yes
+							religion_allows_female_temple_holders = yes
+							religion_allows_male_temple_holders = yes
+						}
+						AND = {
+							mercenary = yes
+							females_can_hold_minor_commander_title_trigger = yes
+							OR = {
+								gender_equality_trigger = yes
+								has_feminist_culture_trigger = yes
+							}
+						}
+						AND = {
+							is_theocracy = no
+							holy_order = no
+							mercenary = no
+							OR = {
+								gender_equality_trigger = yes
+								has_feminist_culture_trigger = yes
+								any_owned_bloodline = {
+									has_bloodline_flag = bloodline_effect_cognatic
+								}
 							}
 						}
 					}
