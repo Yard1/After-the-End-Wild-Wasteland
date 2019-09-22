@@ -114,7 +114,13 @@ on_government_change = {
 				ROOT = { has_title_flag = was_militarist }
 			}
 			log = "on_government_change: fire for [This.GetBestName] was militarist"
-			character_event = { id = ATE_WWW_RELIGION.25 }
+			if = {
+				limit = { independent = yes }
+				character_event = { id = ATE_WWW_RELIGION.25 }
+			}
+			else = {
+				top_liege = { character_event = { id = ATE_WWW_RELIGION.25 } }
+			}
 			ROOT = { 
 				clr_title_flag = was_militarist 
 				set_title_flag = was_feudal 
