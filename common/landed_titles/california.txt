@@ -911,7 +911,7 @@ e_california = {
 		
 		capital = 2071 # c_inyo
 		
-		mormon = 750
+		mormon = 500
 		
 		allow = {
 			always = no

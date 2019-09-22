@@ -551,7 +551,7 @@ e_the_rockies = {
 		capital = 448
 		
 		#Crusade target weight
-		mormon = 500
+		mormon = 800
 
 		culture = mountainer
 
@@ -786,7 +786,7 @@ e_the_rockies = {
 
 		culture = mountainer
 		
-		mormon = 500
+		mormon = 800
 		raven_tales_reformed = 100
 
 		d_west_snake = {
