@@ -52,6 +52,7 @@ obj_become_president = {
 	}
 	abort = {
 		OR = {
+			is_playable = no
 			holy_order = yes
 			mercenary = yes
 			has_character_flag = dropped_out
