@@ -1262,13 +1262,6 @@ monastic_order_ursuline = {
 	indestructible = yes
 
 	can_join_society = {
-		OR = {
-			is_female = yes
-			has_game_rule = {
-				name = gender
-				value = all
-			}
-		}
 		hidden_trigger = {
 			NAND = {
 				ai = yes
@@ -1540,12 +1533,15 @@ monastic_order_ursuline = {
 			trait = zealous
 			factor = 1.1
 		}
+		modifier = {
+			is_female = yes
+			factor = 1.2
+		}
 	}
 	
 	startup_populate = {
 	    trigger = {
 			ai = yes
-			is_female = yes
 		   	religion = ursuline
 			controls_religion = no
 			age = 16

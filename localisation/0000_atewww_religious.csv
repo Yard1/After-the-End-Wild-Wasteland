@@ -370,3 +370,10 @@ EVTDESC_liberation_war_christ;The great [Root.GetTitledFirstName] has declared a
 
 start_wars_of_liberation;The Liberation Wars;;;;;;;;;;;;x
 start_wars_of_liberation_desc;The time has come for me, the President, to sign an Executive Order requiring all able-bodied citizens to fight for the restoration of America.;;;;;;;;;;;;x
+
+title_ursuline_cardinal;Delegate;Cardinal;Kardinal;;Cardenal;;;;;;;;;x
+expected_next_title_ursuline_cardinal;Expected Next Delegate;Prochain cardinal prévu;Erwarteter neuer Kardinal;;Presunto próximo cardenal;;;;;;;;;x
+expected_next_title_ursuline_cardinal_tooltip;This Abbess is probably next in line for a Delegateship when one becomes available.;Cet évêque sera probablement le prochain cardinal dès qu'une place se libérera.;Dieser Bischof wird wahrscheinlich als nächster zum Kardinal ernannt, wenn ein Sitz im Kollegium frei wird.;;Este obispo será, probablemente, el próximo Cardenal cuando haya una vacante.;;;;;;;;;x
+best_candidate_title_ursuline_cardinal;My Best Delegate Candidate;Mes meilleurs cardinaux potentiels;Mein bester Kardinalskandidat;;Mi mejor candidato a Cardenal;;;;;;;;;x
+best_candidate_title_ursuline_cardinal_tooltip;Of all the bishops in my realm, this one is the likeliest to get appointed Delegate by the Abbess-General.;De tous les évêques de mon royaume, celui-ci est le plus susceptible d'être nommé cardinal par le pape.;Von allen Bischöfen in meinem Reich wird dieser wahrscheinlich am ehesten vom Papst zum Kardinal ernannt.;;De todos los obispos de mi Reino, este es el que tiene más probabilidades de que el Papa lo nombre Cardenal.;;;;;;;;;x
+COLLEGE_OF_CARDINALS_URSULINE;Convention of Delegates;;;;;;;;;;;;;x

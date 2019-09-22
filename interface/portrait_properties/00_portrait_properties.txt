@@ -4598,7 +4598,6 @@
 			factor = 0
 			OR = {
 				has_minor_title = title_cardinal
-				has_minor_title = title_ursuline_cardinal
 				has_minor_title = title_mormon_cardinal
 				has_minor_title = title_druid_circle_member
 			}
@@ -4774,7 +4773,6 @@
 			factor = 0
 			OR = {
 				has_minor_title = title_cardinal
-				has_minor_title = title_ursuline_cardinal
 				has_minor_title = title_mormon_cardinal
 				has_minor_title = title_druid_circle_member
 			}
@@ -5122,7 +5120,6 @@
 			factor = 0
 			NOR = {
 				has_minor_title = title_cardinal
-				has_minor_title = title_ursuline_cardinal
 				has_minor_title = title_mormon_cardinal
 				has_minor_title = title_druid_circle_member
 			}
@@ -5142,7 +5139,6 @@
 			factor = 0
 			NOR = {
 				has_minor_title = title_cardinal
-				has_minor_title = title_ursuline_cardinal
 				has_minor_title = title_mormon_cardinal
 				has_minor_title = title_druid_circle_member
 			}

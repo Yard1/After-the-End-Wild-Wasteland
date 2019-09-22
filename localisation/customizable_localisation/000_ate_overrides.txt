@@ -5352,12 +5352,15 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			OR = {
-				religion = catholic
-				religion = ursuline
-			}
+			religion = ursuline
 		}
 		localisation_key = title_cardinal
+	}
+	text = {
+		trigger = {
+			religion = ursuline
+		}
+		localisation_key = title_ursuline_cardinal
 	}
 	text = {
 		trigger = {
@@ -5381,12 +5384,15 @@ defined_text = {
 	
 	text = {
 		trigger = {
-			OR = {
-				religion = catholic
-				religion = ursuline
-			}
+			religion = catholic
 		}
 		localisation_key = COLLEGE_OF_CARDINALS
+	}
+	text = {
+		trigger = {
+			religion = ursuline
+		}
+		localisation_key = COLLEGE_OF_CARDINALS_URSULINE
 	}
 	text = {
 		trigger = {
