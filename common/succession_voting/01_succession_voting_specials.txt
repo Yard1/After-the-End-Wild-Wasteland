@@ -2316,6 +2316,36 @@ byzantine_elective = {
 			}
 		}
 
+		#Crusader
+		additive_modifier = { 
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			NOR = {
+				trait = cynical
+				trait = zealous
+			}
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
+		additive_modifier = { 
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			trait = zealous
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
 
 		#All the Traits
 		additive_modifier = {
@@ -5744,6 +5774,37 @@ hre_feudal_elective = {
 			localisation_key = tooltip_feudal_elector_vote_weak_claimant
 			FROM = { 
 				has_weak_claim = FROMFROM
+			}
+		}
+
+		#Crusader
+		additive_modifier = { 
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			NOR = {
+				trait = cynical
+				trait = zealous
+			}
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
+		additive_modifier = { 
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			trait = zealous
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
 			}
 		}
 

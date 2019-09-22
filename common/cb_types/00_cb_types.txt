@@ -3421,6 +3421,15 @@ crusade = {
 	
 	can_use_gui = {
 		ROOT = {
+			custom_tooltip = {
+				text = CRUSADE_COOLDOWN
+				religion_scope = {
+					OR = {
+						NOT = { has_flag = crusade_fired }
+						had_flag = { flag = crusade_fired days = 3650 }
+					}
+				}
+			}
 			uses_new_crusade = no
 			has_called_crusade = no
 			religion_authority = 0.05
@@ -3593,6 +3602,20 @@ crusade = {
 						value = 6
 						title = PREV
 					}
+					AND = {
+						num_of_realm_counties = {
+							value = 3
+							title = PREV
+						}
+						PREV = {
+							any_realm_title = {
+								is_holy_site = ROOT
+								holder_scope = {
+									OR = { character = FROM any_liege = { character = FROM } }
+								}
+							}
+						}
+					}
 				}
 			}
 			AND = {
@@ -3681,7 +3704,15 @@ crusade = {
 	}
 
 	on_add = {
-		hidden_tooltip = { fire_haruspicy_event_effect = yes }
+		hidden_tooltip = { 
+			fire_haruspicy_event_effect = yes 
+			ROOT = {
+				religion_scope = {
+					clr_flag = crusade_fired
+					set_flag = crusade_fired
+				}
+			}
+		}
 		if = {
 			limit = { defender = { is_offmap_governor = offmap_china } }
 			attacker = {  
@@ -4246,6 +4277,15 @@ new_crusade = {
 
 	can_use_gui = {
 		ROOT = {
+			custom_tooltip = {
+				text = CRUSADE_COOLDOWN
+				religion_scope = {
+					OR = {
+						NOT = { has_flag = crusade_fired }
+						had_flag = { flag = crusade_fired days = 3650 }
+					}
+				}
+			}
 			uses_new_crusade = yes
 			has_called_crusade = no
 			religion_authority = 0.05
@@ -4359,6 +4399,20 @@ new_crusade = {
 					PREV = {
 						title = k_maritimes	
 					} 
+					AND = {
+						num_of_realm_counties = {
+							value = 3
+							title = PREV
+						}
+						PREV = {
+							any_realm_title = {
+								is_holy_site = ROOT
+								holder_scope = {
+									OR = { character = FROM any_liege = { character = FROM } }
+								}
+							}
+						}
+					}
 				}
 			}
 			AND = {
@@ -4412,7 +4466,15 @@ new_crusade = {
 	}
 
 	on_add = {
-		hidden_tooltip = { fire_haruspicy_event_effect = yes }
+		hidden_tooltip = {
+			fire_haruspicy_event_effect = yes
+			ROOT = {
+				religion_scope = {
+					clr_flag = crusade_fired
+					set_flag = crusade_fired
+				}
+			}
+		}
 		if = {
 			limit = { defender = { is_offmap_governor = offmap_china } }
 			attacker = {  

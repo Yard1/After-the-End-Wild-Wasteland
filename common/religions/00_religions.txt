@@ -566,6 +566,7 @@ christian = {
 		priests_can_inherit = no
 		priests_can_marry = no
 		allow_rivermovement = yes
+		rel_head_defense = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -779,6 +780,7 @@ christian = {
 		priests_can_marry = no
 		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
+		rel_head_defense = yes
 
 		religious_clothing_head = 12
 		religious_clothing_priest = 12
@@ -891,6 +893,7 @@ christian = {
 		female_temple_holders = yes
 		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
+		rel_head_defense = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -1395,6 +1398,7 @@ christian = {
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
 		allow_rivermovement = yes
+		rel_head_defense = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -1665,7 +1669,7 @@ pacific = {
 	hostile_within_group = yes
 	
 	ai_convert_same_group = 1 # try to convert if ai_zeal is high
-	ai_convert_other_group = 2 # always try to convert
+	ai_convert_other_group = 1 # try to convert if ai_zeal is high
 	
 	color = { 0.6 0.1 0.5 }
 
@@ -1697,6 +1701,7 @@ pacific = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 		allow_rivermovement = yes
+		rel_head_defense = yes
 		
 		religious_clothing_head = 10
 		religious_clothing_priest = 10
@@ -1719,7 +1724,6 @@ pacific = {
 	gaian = {
 		graphical_culture = buddhistgfx
 		secondary_event_pictures = sunni
-
 		icon = 15
 		heresy_icon = 45
 		
@@ -1741,9 +1745,9 @@ pacific = {
 		scripture_name = THE_BOOK_OF_SHADOWS
 		priest_title = DRUID
 		piety_name = PURITY
-		
+		pacifist = yes
 		peace_piety_gain = 1.0
-		aggression = 0.5
+		aggression = 0.25
 		hard_to_convert = yes
 		priests_can_marry = yes
 		allow_rivermovement = yes
@@ -1900,6 +1904,7 @@ latter_day_saints = {
 		priests_can_inherit = no
 		priests_can_marry = yes
 		allow_rivermovement = yes
+		rel_head_defense = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 2
@@ -1937,6 +1942,7 @@ latter_day_saints = {
 		priests_can_marry = yes
 		allow_rivermovement = yes
 		max_wives = 1
+		rel_head_defense = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 2
@@ -2010,6 +2016,7 @@ latter_day_saints = {
 		allow_rivermovement = yes
 		max_wives = 4
 		can_demand_religious_conversion = no
+		rel_head_defense = yes
 		
 		crusade_name = EXPEDITION
 		
@@ -2370,6 +2377,7 @@ oldworld = {
 		feminist = yes
 		allows_matrilineal_marriage = yes
 		can_call_crusade = yes
+		rel_head_defense = yes
 		
 		priests_can_marry = yes
 
@@ -2502,6 +2510,7 @@ oldworld = {
 		male_temple_holders = no
 		feminist = yes
 		allows_matrilineal_marriage = yes
+		rel_head_defense = yes
 		
 		priests_can_marry = no
 		priests_can_inherit = no

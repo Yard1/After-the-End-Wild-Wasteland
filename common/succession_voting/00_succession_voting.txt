@@ -1191,6 +1191,37 @@ feudal_elective = {
 		}
 
 
+		#Crusader
+		additive_modifier = { 
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			NOR = {
+				trait = cynical
+				trait = zealous
+			}
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
+		additive_modifier = { 
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			trait = zealous
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
+
 		#All the Traits
 		additive_modifier = {
 			value = 5
@@ -4641,6 +4672,36 @@ tanistry = {
 			}
 		}
 
+		#Crusader
+		additive_modifier = { 
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			NOR = {
+				trait = cynical
+				trait = zealous
+			}
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
+		additive_modifier = { 
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			trait = zealous
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
 
 		#All the Traits
 		additive_modifier = {
@@ -8075,6 +8136,36 @@ elective_gavelkind = {
 			}
 		}
 
+		#Crusader
+		additive_modifier = { 
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			NOR = {
+				trait = cynical
+				trait = zealous
+			}
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
+		additive_modifier = { 
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			trait = zealous
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
 
 		#All the Traits
 		additive_modifier = {
@@ -11483,6 +11574,38 @@ eldership_rules = {
 		}
 
 		#Claims - The title holder does not care, he wants his children to be the heirs.
+
+		#Crusader
+		additive_modifier = { 
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			NOR = {
+				trait = cynical
+				trait = zealous
+			}
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
+		additive_modifier = { 
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			trait = zealous
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
+
 
 		#All the Traits
 		additive_modifier = {
@@ -14901,6 +15024,37 @@ eldership_rules = {
 
 		#All the Traits
 		#Child traits removed, the Elder will not think of children as good candidates to begin with.
+
+		#Crusader
+		additive_modifier = { 
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			NOR = {
+				trait = cynical
+				trait = zealous
+			}
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
+		additive_modifier = { 
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			trait = zealous
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
 
 		additive_modifier = {
 			value = -25

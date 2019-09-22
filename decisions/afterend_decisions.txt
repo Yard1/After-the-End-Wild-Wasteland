@@ -546,6 +546,9 @@ decisions = {
 		}
 		effect = {
 			remove_trait = figurehead
+			cetic = {
+				set_rel_head_defense = no
+			}
 			narrative_event = { id = cetic.15 }
 			any_playable_ruler = {
 				limit = {
