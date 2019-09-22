@@ -706,7 +706,22 @@
 1402024 = { name="Opengroves" culture=arixan }
 1402025 = { name="Bullpine" culture=arixan }
 1402026 = { name="Kino" culture=arixan }
-1402027 = { name="Kaiser" culture=arixan }
+1402027 = { 
+    name = "Kaiser" 
+    culture = arixan
+    coat_of_arms = {
+        religion = atomicist
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 46
+            emblem = 0
+            color = 0
+            color = 3
+            color = 0
+        }
+    }	
+}
 1402028 = { name="Hidebark" culture=arixan }
 1402029 = { name="Maíz" culture=arixan }
 
@@ -4971,7 +4986,19 @@
 1795003 = { name="Beaulieu" culture=cajun }
 1795004 = {
     name = "Vallencourt" 
-	culture = creole 
+	culture = creole
+    coat_of_arms = {
+        religion = rastafarian
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 35
+            emblem = 0
+            color = 1
+            color = 4
+            color = 4
+        }
+    }	
 }
 1795005 = { name="Grenouille" culture=cajun }
 1795006 = { name="Robideaux" culture=cajun }
