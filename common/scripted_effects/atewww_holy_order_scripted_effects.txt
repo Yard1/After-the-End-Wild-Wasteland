@@ -101,6 +101,7 @@ on_government_change = {
 				government = militarist_government
 				ROOT = { has_title_flag = was_feudal }
 			}
+			log = "on_government_change: fire for [This.GetBestName] was feudal"
 			character_event = { id = ATE_WWW_RELIGION.15 }
 			ROOT = { 
 				clr_title_flag = was_feudal 
@@ -110,39 +111,10 @@ on_government_change = {
 		else_if = {
 			limit = { 
 				NOT = { government = militarist_government }
+				ROOT = { has_title_flag = was_militarist }
 			}
-			if = {
-				limit = { ROOT = { has_law = succ_militarist_appointment } }
-				if = {
-					limit = { has_law = ze_administration_laws_0 }
-					ROOT = { add_law = { law = succ_gavelkind cooldown = no opinion_effect = no } }
-				}
-				else = {
-					ROOT = { add_law = { law = succ_primogeniture cooldown = no opinion_effect = no } }
-				}
-			}
-			ROOT = {
-				if = {
-					limit = {
-						higher_tier_than = DUKE
-						has_law = vassal_wars_law_1
-						NOT = { is_law_allowed = vassal_wars_law_1 }
-					}
-					add_law = { law = vassal_wars_law_0 cooldown = no opinion_effect = no }
-				}
-				if = {
-					limit = {
-						higher_tier_than = DUKE
-						has_law = out_of_realm_inheritance_law_1
-						NOT = { is_law_allowed = out_of_realm_inheritance_law_1 }
-					}
-					add_law = { law = out_of_realm_inheritance_law_0 cooldown = no opinion_effect = no }
-				}
-			}
-			if = {
-				limit = { ROOT = { has_title_flag = was_militarist } }
-				character_event = { id = ATE_WWW_RELIGION.12 }
-			}
+			log = "on_government_change: fire for [This.GetBestName] was militarist"
+			character_event = { id = ATE_WWW_RELIGION.25 }
 			ROOT = { 
 				clr_title_flag = was_militarist 
 				set_title_flag = was_feudal 

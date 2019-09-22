@@ -10788,43 +10788,26 @@ militarist_appointment = {
 			religion = jeffersonian
 			is_adult = yes
 			NOT = { is_liege_of = ROOT }
+			lower_real_tier_than = FROMFROM
+			NOT = {
+				any_heir_title = {
+					has_law = succ_militarist_appointment
+				}
+			}
 			#Either the candidate is in the realm, or is landless, or the title is independent, or the realm of the title does NOT have protected inheritance.
 			OR = { 
 				vassal_of = ROOT
-				is_ruler = no
-				ROOT_FROMFROM = { holder_scope = { independent = yes } }
-				NOR = { 
-					ROOT_FROMFROM = { has_law = out_of_realm_inheritance_law_1 } 
-					ROOT_FROMFROM = { has_law = crown_authority_3 } 
-					ROOT_FROMFROM = { has_law = crown_authority_4 } 
-				} 
-			} 
-		} 
-		OR = {
-			any_claim = { title = ROOT_FROMFROM }
-			AND = { 
-				ROOT = { 
-					real_tier = KING
+				AND = {
+					is_ruler = no
+					host = { character = ROOT }
 				}
-				FROM = { real_tier = DUKE }
-			}
-			AND = { 
-				ROOT = { 
-					real_tier = DUKE
+				AND = {
+					top_liege = {
+						is_liege_or_above = ROOT
+					}
+					any_dejure_liege = { title = FROMFROM }
 				}
-				FROM = { real_tier = COUNT }
 			}
-			vassal_of = ROOT
-			host = { character = ROOT }
-		}
-		FROM = { 
-			OR = { #Either defacto direct vassal, or dejure vassal.
-				vassal_of = ROOT 
-				host = { character = ROOT }
-				any_dejure_liege = { title = FROMFROM }
-			}
-		} 
-		FROM = {
 			OR = { #Candidate should not be a landless Courtier that is about to inherit a Theocracy or Republic
 				AND = {
 					is_ruler = yes

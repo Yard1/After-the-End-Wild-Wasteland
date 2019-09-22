@@ -683,27 +683,30 @@ character_event = {
 	}
 
 	immediate = {
+		log = "ATE_WWW_RELIGION.15: fire for [Root.GetBestName]"
 		if = {
 			limit = { 
 				independent = no 
-				primary_title = {
+			}
+			any_demesne_title = {
+				limit = {
+					higher_tier_than = BARON
 					NOT = { has_law = succ_militarist_appointment }
 					is_law_potential = succ_militarist_appointment
 				}
-			}
-			primary_title = {
 				add_law = { law = succ_militarist_appointment cooldown = no opinion_effect = no }
 			}
 		}
 		else_if = {
 			limit = {
 				independent = yes
-				primary_title = {
+			}
+			any_demesne_title = {
+				limit = {
+					higher_tier_than = BARON
 					NOT = { has_law = succ_feudal_elective }
 					is_law_potential = succ_feudal_elective
 				}
-			}
-			primary_title = {
 				add_law = { law = succ_feudal_elective cooldown = no opinion_effect = no }
 			}
 		}
@@ -728,6 +731,15 @@ character_event = {
 				is_law_allowed = out_of_realm_inheritance_law_1
 			}
 			add_law = { law = out_of_realm_inheritance_law_1 cooldown = no opinion_effect = no }
+		}
+		any_demesne_title = { 
+			limit = { higher_tier_than = BARON }
+			clr_title_flag = was_feudal 
+			set_title_flag = was_militarist
+		}
+		any_vassal = {
+			limit = { government = militarist_government is_ruler = yes mercenary = no }
+			character_event = { id = ATE_WWW_RELIGION.15 }
 		}
 	}
 }
@@ -1143,6 +1155,188 @@ character_event = {
 				pledge_crusade_defense = yes
 			}
 			join_defender_wars = ROOT
+		}
+	}
+
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.24
+	hide_window = yes
+	
+	only_independent = yes
+	religion = jeffersonian
+	
+	trigger = {
+		government = militarist_government
+		any_vassal = {
+			government = militarist_government
+			higher_tier_than = BARON
+			any_demesne_title = {
+				NOT = { has_law = succ_militarist_appointment }
+				is_law_potential = succ_militarist_appointment
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		log = "ATE_WWW_RELIGION.24: fire for [Root.GetBestName]"
+		character_event = { id = ATE_WWW_RELIGION.15 }
+	}
+
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.25
+	hide_window = yes
+	
+	only_independent = yes
+	
+	trigger = {
+		NOT = { government = militarist_government }
+		any_vassal = {
+			higher_tier_than = BARON
+			any_demesne_title = {
+				has_law = succ_militarist_appointment
+				NOT = { is_law_potential = succ_militarist_appointment }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		log = "ATE_WWW_RELIGION.25: fire for [Root.GetBestName]"
+		if = {
+			limit = { has_law = ze_administration_laws_0 }
+			any_demesne_title = { 
+				limit = {
+					has_law = succ_militarist_appointment
+					NOT = { is_law_potential = succ_militarist_appointment }
+				}
+				add_law = { law = succ_gavelkind cooldown = no opinion_effect = no } 
+			}
+		}
+		else = {
+			any_demesne_title = { 
+				limit = {
+					has_law = succ_militarist_appointment
+					NOT = { is_law_potential = succ_militarist_appointment }
+				}
+				add_law = { law = succ_primogeniture cooldown = no opinion_effect = no } 
+			}
+		}
+		any_demesne_title = {
+			if = {
+				limit = {
+					higher_tier_than = DUKE
+					has_law = vassal_wars_law_1
+					NOT = { is_law_allowed = vassal_wars_law_1 }
+				}
+				add_law = { law = vassal_wars_law_0 cooldown = no opinion_effect = no }
+			}
+			if = {
+				limit = {
+					higher_tier_than = DUKE
+					has_law = out_of_realm_inheritance_law_1
+					NOT = { is_law_allowed = out_of_realm_inheritance_law_1 }
+				}
+				add_law = { law = out_of_realm_inheritance_law_0 cooldown = no opinion_effect = no }
+			}
+		}
+		if = {
+			limit = { any_demesne_title = { has_title_flag = was_militarist } }
+			character_event = { id = ATE_WWW_RELIGION.12 }
+		}
+		any_demesne_title = { 
+			limit = { higher_tier_than = BARON }
+			clr_title_flag = was_militarist 
+			set_title_flag = was_feudal 
+		}
+		any_vassal = {
+			limit = { is_feudal = yes is_ruler = yes mercenary = no }
+			character_event = { id = ATE_WWW_RELIGION.26 }
+		}
+	}
+
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.26
+	hide_window = yes
+	
+	only_playable = yes
+	
+	trigger = {
+		NOT = { government = militarist_government }
+		any_vassal = {
+			higher_tier_than = BARON
+			any_demesne_title = {
+				has_law = succ_militarist_appointment
+				NOT = { is_law_potential = succ_militarist_appointment }
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "ATE_WWW_RELIGION.25: fire for [Root.GetBestName]"
+		if = {
+			limit = { has_law = ze_administration_laws_0 }
+			any_demesne_title = { 
+				limit = {
+					has_law = succ_militarist_appointment
+					NOT = { is_law_potential = succ_militarist_appointment }
+				}
+				add_law = { law = succ_gavelkind cooldown = no opinion_effect = no } 
+			}
+		}
+		else = {
+			any_demesne_title = { 
+				limit = {
+					has_law = succ_militarist_appointment
+					NOT = { is_law_potential = succ_militarist_appointment }
+				}
+				add_law = { law = succ_primogeniture cooldown = no opinion_effect = no } 
+			}
+		}
+		any_demesne_title = {
+			if = {
+				limit = {
+					higher_tier_than = DUKE
+					has_law = vassal_wars_law_1
+					NOT = { is_law_allowed = vassal_wars_law_1 }
+				}
+				add_law = { law = vassal_wars_law_0 cooldown = no opinion_effect = no }
+			}
+			if = {
+				limit = {
+					higher_tier_than = DUKE
+					has_law = out_of_realm_inheritance_law_1
+					NOT = { is_law_allowed = out_of_realm_inheritance_law_1 }
+				}
+				add_law = { law = out_of_realm_inheritance_law_0 cooldown = no opinion_effect = no }
+			}
+		}
+		if = {
+			limit = { any_demesne_title = { has_title_flag = was_militarist } }
+			character_event = { id = ATE_WWW_RELIGION.12 }
+		}
+		any_demesne_title = { 
+			limit = { higher_tier_than = BARON }
+			clr_title_flag = was_militarist 
+			set_title_flag = was_feudal 
+		}
+		any_vassal = {
+			limit = { is_feudal = yes is_ruler = yes mercenary = no }
+			character_event = { id = ATE_WWW_RELIGION.26 }
 		}
 	}
 
