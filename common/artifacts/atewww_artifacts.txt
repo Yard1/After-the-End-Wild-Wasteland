@@ -35,6 +35,6 @@ atewww_alien_firearm = {
 	}
 	flags = { oldworld salvage combat_weapon gun }
 	stacking = no
-	picture = "GFX_brazilian_firearm"
+	picture = "GFX_atewww_alien_firearm"
 	slot = weapon
 }
