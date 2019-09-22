@@ -9,18 +9,6 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\government_icon_militarist_government.dds"
 	}
 	spriteType = {
-		name = "GFX_atewww_pills"
-		texturefile = "gfx\\interface\\inventory\\artifacts\\atewww_pills.dds"
-		noOfFrames = 1
-		norefcount = yes
-	}
-	spriteType = {
-		name = "GFX_atewww_pills_small"
-		texturefile = "gfx\\interface\\inventory\\artifacts\\atewww_pills_small.dds"
-		noOfFrames = 1
-		norefcount = yes
-	}
-	spriteType = {
 		name = "GFX_trait_president"
 		texturefile = "gfx/traits/president.dds"
 		noOfFrames = 1
