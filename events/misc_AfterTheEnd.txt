@@ -11055,6 +11055,7 @@ character_event = {
 				character_event = { id = ATE_WWW_RELIGION.8 } #Force militarist marshals to become designated regents
 				character_event = { id = ATE_WWW_RELIGION.10 }
 				character_event = { id = ATE_WWW_RELIGION.15 }
+				character_event = { id = ATE_WWW_MAWL.100 }
 
 				set_character_flag = historical_character
 			}

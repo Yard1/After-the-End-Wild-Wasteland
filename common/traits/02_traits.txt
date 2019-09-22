@@ -3102,7 +3102,6 @@ americanist_leader = {
 		#morale_offence = 0.2
 	}
 }
-
 pagan_branch_1 = {
 	opposites = {
 		pagan_branch_2

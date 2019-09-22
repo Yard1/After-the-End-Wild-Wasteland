@@ -155,3 +155,48 @@ on_crusade_creation = {
 		ATE_WWW_RELIGION.17
  	}
 }
+
+# A character joins a society. The has_game_started trigger can be useful to avoid firing events from auto-assignment of characters at game start
+# Root = Character
+# From = Society
+on_character_join_society = {
+	events = {
+		ATE_WWW_MAWL.1
+	}
+}
+
+# A character leaves or is forced to leave a society
+# Root = Character
+# From = Society
+on_character_leave_society = {
+	events = {
+		ATE_WWW_MAWL.2
+	}
+}
+
+# A character is removed from society for failing the potential trigger.
+# Root = Character
+# From = Society
+on_character_kicked_from_society = {
+	events = {
+		ATE_WWW_MAWL.2
+	}
+}
+
+# A character ranks up in their society, or becomes grandmaster
+# Root = Character
+# From = Society
+on_character_society_rank_up = {
+	events = {
+		ATE_WWW_MAWL.1
+	}
+}
+
+# A character ranks down in their society
+# Root = Character
+# From = Society
+on_character_society_rank_down = {
+	events = {
+		ATE_WWW_MAWL.2
+	}
+}

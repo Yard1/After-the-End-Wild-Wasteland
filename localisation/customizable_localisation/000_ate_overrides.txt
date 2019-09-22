@@ -8316,6 +8316,14 @@ defined_text = { #Used in HF.10040 (Power: Warrior Training)
 		trigger = { society_member_of = warrior_lodge_americanist }
 		localisation_key = string_americanist_training
 	}
+	text = {
+		trigger = { society_member_of = warrior_lodge_mesoamerican_eagle }
+		localisation_key = string_mesoamerican_training
+	}
+	text = {
+		trigger = { society_member_of = warrior_lodge_mesoamerican_jaguar }
+		localisation_key = string_mesoamerican_training
+	}
 	fallback_text = {
 		localisation_key = string_norse_training #fallback, in case it fails to find relevant info
 	}
@@ -8360,6 +8368,14 @@ defined_text = { #Used in HFP.11028 (battle event)
 		trigger = { society_member_of = warrior_lodge_americanist }
 		localisation_key = string_americanist_symbol
 	}
+	text = {
+		trigger = { society_member_of = warrior_lodge_mesoamerican_eagle }
+		localisation_key = string_mesoamerican_eagle_symbol
+	}
+	text = {
+		trigger = { society_member_of = warrior_lodge_mesoamerican_jaguar }
+		localisation_key = string_mesoamerican_jaguar_symbol
+	}
 	fallback_text = {
 		localisation_key = string_hellenic_symbol #"the gods". Fallback, in case it fails to find relevant info
 	}
@@ -8402,6 +8418,14 @@ defined_text = { #Used here and there? Made *singular*, on purpose...
 	text = {
 		trigger = { society_member_of = warrior_lodge_americanist }
 		localisation_key = string_americanist_symbol_short
+	}
+	text = {
+		trigger = { society_member_of = warrior_lodge_mesoamerican_eagle }
+		localisation_key = string_mesoamerican_eagle_symbol_short
+	}
+	text = {
+		trigger = { society_member_of = warrior_lodge_mesoamerican_jaguar }
+		localisation_key = string_mesoamerican_jaguar_symbol_short
 	}
 	fallback_text = {
 		localisation_key = string_hellenic_symbol_short #"the gods". Fallback, in case it fails to find relevant info
@@ -8446,6 +8470,14 @@ defined_text = { #Used here and there? Made *singular*, on purpose... (I despise
 		trigger = { society_member_of = warrior_lodge_americanist }
 		localisation_key = string_americanist_symbol_short_cap
 	}
+	text = {
+		trigger = { society_member_of = warrior_lodge_mesoamerican_eagle }
+		localisation_key = string_mesoamerican_eagle_symbol_short_cap
+	}
+	text = {
+		trigger = { society_member_of = warrior_lodge_mesoamerican_jaguar }
+		localisation_key = string_mesoamerican_jaguar_symbol_short_cap
+	}
 	fallback_text = {
 		localisation_key = string_hellenic_symbol_short_cap #"the gods". Fallback, in case it fails to find relevant info
 	}
@@ -8488,6 +8520,14 @@ defined_text = { #Used in HFP.11038 (battle event)
 	text = {
 		trigger = { society_member_of = warrior_lodge_americanist }
 		localisation_key = string_battle_nick_americanist_symbol
+	}
+	text = {
+		trigger = { society_member_of = warrior_lodge_mesoamerican_eagle }
+		localisation_key = string_battle_nick_mesoamerican_eagle_symbol
+	}
+	text = {
+		trigger = { society_member_of = warrior_lodge_mesoamerican_jaguar }
+		localisation_key = string_battle_nick_mesoamerican_jaguar_symbol
 	}
 	fallback_text = {
 		localisation_key = string_battle_nick_neutral_symbol #"Battering Ram". Fallback, in case it fails to find relevant info
@@ -8532,6 +8572,14 @@ defined_text = { #Used in HFP.11038 (battle event)
 		trigger = { FROM = { is_society = warrior_lodge_americanist } }
 		localisation_key = string_WL_americanist_religion
 	}
+	text = {
+		trigger = { FROM = { is_society = warrior_lodge_mesoamerican_eagle } }
+		localisation_key = string_WL_mesoamerican_religion
+	}
+	text = {
+		trigger = { FROM = { is_society = warrior_lodge_mesoamerican_jaguar } }
+		localisation_key = string_WL_mesoamerican_religion
+	}
 	fallback_text = {
 		localisation_key = string_no_religion # Fallback, in case it fails to find relevant info
 	}
@@ -8549,9 +8597,6 @@ defined_text = { #Used to refer to a type of "warrior", initial cap...
 				society_member_of = warrior_lodge_occultist
 			}
 		}
-	}
-	text = {
-		localisation_key = String_arm_wrestling
 	}
 	text = {
 		localisation_key = String_drinking
@@ -9176,6 +9221,42 @@ defined_text = {
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = warrior_lodge_americanist_desc_real
+	}
+}
+defined_text = {
+	name = GetMesoamericanEagleWarriorName
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = warrior_lodge_mesoamerican_eagle_random
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = warrior_lodge_mesoamerican_eagle_real
+	}
+}
+defined_text = {
+	name = GetMesoamericanEagleWarriorSocietyDesc
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = warrior_lodge_mesoamerican_eagle_desc_random
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = warrior_lodge_mesoamerican_eagle_desc_real
+	}
+}
+defined_text = {
+	name = GetMesoamericanJaguarWarriorSocietyName
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = warrior_lodge_mesoamerican_jaguar_random
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = warrior_lodge_mesoamerican_jaguar_real
+	}
+}
+defined_text = {
+	name = GetMesoamericanJaguarWarriorSocietyDesc
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = warrior_lodge_mesoamerican_jaguar_desc_random
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = warrior_lodge_mesoamerican_jaguar_desc_real
 	}
 }
 

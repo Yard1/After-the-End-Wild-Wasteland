@@ -7502,7 +7502,7 @@ warrior_lodge_norse = {
 			value = 1
 		}
 		has_trait = {
-			trait = eagle_warrior
+			trait = sword_of_the_lamb
 			value = 1
 		}
 		has_trait = {
@@ -7510,11 +7510,15 @@ warrior_lodge_norse = {
 			value = 1
 		}
 		has_trait = {
-			trait = sword_of_the_lamb
+			trait = knight_templar
 			value = 1
 		}
 		has_trait = {
-			trait = knight_templar
+			trait = lughs_own
+			value = 1
+		}
+		has_trait = {
+			trait = danite
 			value = 1
 		}
 		has_trait = {
@@ -7522,7 +7526,40 @@ warrior_lodge_norse = {
 			value = 1
 		}
 		has_trait = {
-			trait = lughs_own
+			trait = crusader
+			value = 1
+		}
+
+		has_trait = {
+			trait = crusader_king
+			value = 1
+		}
+		has_trait = {
+			trait = crusader_queen
+			value = 1
+		}
+		has_trait = {
+			trait = shaddai
+			value = 1
+		}
+		has_trait = {
+			trait = jaguar_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = thunderbird_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = raven_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = dragon_soldier
+			value = 1
+		}
+		has_trait = {
+			trait = service_cross
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -7708,7 +7745,7 @@ warrior_lodge_norse = {
 			factor = 1.1
 		}
 		modifier = {
-			trait = valhalla_bound
+			has_crusade_trait_trigger = yes
 			factor = 1.1
 		}
 		#NEGATIVE modifiers
@@ -8080,7 +8117,7 @@ warrior_lodge_peyotist = { # Also generally for Nomads? (will keep for now)
 			value = 1
 		}
 		has_trait = {
-			trait = eagle_warrior
+			trait = sword_of_the_lamb
 			value = 1
 		}
 		has_trait = {
@@ -8088,11 +8125,15 @@ warrior_lodge_peyotist = { # Also generally for Nomads? (will keep for now)
 			value = 1
 		}
 		has_trait = {
-			trait = sword_of_the_lamb
+			trait = knight_templar
 			value = 1
 		}
 		has_trait = {
-			trait = knight_templar
+			trait = lughs_own
+			value = 1
+		}
+		has_trait = {
+			trait = danite
 			value = 1
 		}
 		has_trait = {
@@ -8100,7 +8141,40 @@ warrior_lodge_peyotist = { # Also generally for Nomads? (will keep for now)
 			value = 1
 		}
 		has_trait = {
-			trait = lughs_own
+			trait = crusader
+			value = 1
+		}
+
+		has_trait = {
+			trait = crusader_king
+			value = 1
+		}
+		has_trait = {
+			trait = crusader_queen
+			value = 1
+		}
+		has_trait = {
+			trait = shaddai
+			value = 1
+		}
+		has_trait = {
+			trait = jaguar_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = thunderbird_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = raven_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = dragon_soldier
+			value = 1
+		}
+		has_trait = {
+			trait = service_cross
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -8285,10 +8359,10 @@ warrior_lodge_peyotist = { # Also generally for Nomads? (will keep for now)
 			trait = varangian
 			factor = 1.1
 		}
-		#modifier = {
-		#	trait = tengri_warrior
-		#	factor = 1.1
-		#}
+		modifier = {
+			has_crusade_trait_trigger = yes
+			factor = 1.1
+		}
 		#NEGATIVE modifiers
 		modifier = {
 			trait = craven
@@ -8417,13 +8491,16 @@ warrior_lodge_atomicist = {
 				
 				OR = {
 					#You have neighbors, etc, of the correct religion...
-					any_vassal = { religion = atomicist }
-					any_liege = { religion = atomicist }
-					any_neighbor_independent_ruler = { religion = atomicist }
+					any_vassal = { OR = { religion = atomicist religion = aphite } }
+					any_liege = { OR = { religion = atomicist religion = aphite } }
+					any_neighbor_independent_ruler = { OR = { religion = atomicist religion = aphite } }
 				}
 			}
 			NOT = { #Hide if: you don't have a religion that corresponds to this lodge, but there is another society available to you already
-				NOT = { religion = atomicist }
+				NOR = {
+					religion = atomicist 
+					religion = aphite
+				}
 				has_religion_matching_available_warrior_lodge_trigger = yes
 			}
 			#Always show if: You are already a member. Duh.
@@ -8663,7 +8740,7 @@ warrior_lodge_atomicist = {
 			value = 1
 		}
 		has_trait = {
-			trait = eagle_warrior
+			trait = sword_of_the_lamb
 			value = 1
 		}
 		has_trait = {
@@ -8671,11 +8748,15 @@ warrior_lodge_atomicist = {
 			value = 1
 		}
 		has_trait = {
-			trait = sword_of_the_lamb
+			trait = knight_templar
 			value = 1
 		}
 		has_trait = {
-			trait = knight_templar
+			trait = lughs_own
+			value = 1
+		}
+		has_trait = {
+			trait = danite
 			value = 1
 		}
 		has_trait = {
@@ -8683,7 +8764,40 @@ warrior_lodge_atomicist = {
 			value = 1
 		}
 		has_trait = {
-			trait = lughs_own
+			trait = crusader
+			value = 1
+		}
+
+		has_trait = {
+			trait = crusader_king
+			value = 1
+		}
+		has_trait = {
+			trait = crusader_queen
+			value = 1
+		}
+		has_trait = {
+			trait = shaddai
+			value = 1
+		}
+		has_trait = {
+			trait = jaguar_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = thunderbird_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = raven_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = dragon_soldier
+			value = 1
+		}
+		has_trait = {
+			trait = service_cross
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -8868,10 +8982,10 @@ warrior_lodge_atomicist = {
 			trait = varangian
 			factor = 1.1
 		}
-		#modifier = {
-		#	trait = romuvas_own
-		#	factor = 1.1
-		#}
+		modifier = {
+			has_crusade_trait_trigger = yes
+			factor = 1.1
+		}
 		#NEGATIVE modifiers
 		modifier = {
 			trait = craven
@@ -8911,7 +9025,7 @@ warrior_lodge_atomicist = {
 	    trigger = {
 			ai = yes
 	    	controls_religion = no
-		   	religion = atomicist
+		   	OR = { religion = atomicist religion = aphite } }
 			is_adult = yes
 			is_in_society = no
 			OR = {
@@ -9240,11 +9354,11 @@ warrior_lodge_occultist = {
 			value = 1
 		}
 		has_trait = {
-			trait = fords_striker
+			trait = sword_of_the_lamb
 			value = 1
 		}
 		has_trait = {
-			trait = sword_of_the_lamb
+			trait = fords_striker
 			value = 1
 		}
 		has_trait = {
@@ -9252,11 +9366,52 @@ warrior_lodge_occultist = {
 			value = 1
 		}
 		has_trait = {
+			trait = lughs_own
+			value = 1
+		}
+		has_trait = {
+			trait = danite
+			value = 1
+		}
+		has_trait = {
 			trait = order_of_the_garter
 			value = 1
 		}
 		has_trait = {
-			trait = lughs_own
+			trait = crusader
+			value = 1
+		}
+
+		has_trait = {
+			trait = crusader_king
+			value = 1
+		}
+		has_trait = {
+			trait = crusader_queen
+			value = 1
+		}
+		has_trait = {
+			trait = shaddai
+			value = 1
+		}
+		has_trait = {
+			trait = jaguar_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = thunderbird_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = raven_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = dragon_soldier
+			value = 1
+		}
+		has_trait = {
+			trait = service_cross
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -9442,7 +9597,7 @@ warrior_lodge_occultist = {
 			factor = 1.1
 		}
 		modifier = {
-			trait = knight_templar
+			has_crusade_trait_trigger = yes
 			factor = 1.1
 		}
 		#NEGATIVE modifiers
@@ -9812,7 +9967,7 @@ warrior_lodge_raven_tales = {
 			value = 1
 		}
 		has_trait = {
-			trait = eagle_warrior
+			trait = sword_of_the_lamb
 			value = 1
 		}
 		has_trait = {
@@ -9820,11 +9975,15 @@ warrior_lodge_raven_tales = {
 			value = 1
 		}
 		has_trait = {
-			trait = sword_of_the_lamb
+			trait = knight_templar
 			value = 1
 		}
 		has_trait = {
-			trait = knight_templar
+			trait = lughs_own
+			value = 1
+		}
+		has_trait = {
+			trait = danite
 			value = 1
 		}
 		has_trait = {
@@ -9832,7 +9991,40 @@ warrior_lodge_raven_tales = {
 			value = 1
 		}
 		has_trait = {
-			trait = lughs_own
+			trait = crusader
+			value = 1
+		}
+
+		has_trait = {
+			trait = crusader_king
+			value = 1
+		}
+		has_trait = {
+			trait = crusader_queen
+			value = 1
+		}
+		has_trait = {
+			trait = shaddai
+			value = 1
+		}
+		has_trait = {
+			trait = jaguar_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = thunderbird_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = raven_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = dragon_soldier
+			value = 1
+		}
+		has_trait = {
+			trait = service_cross
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -10013,14 +10205,14 @@ warrior_lodge_raven_tales = {
 			trait = berserker
 			factor = 1.1
 		}
-		#modifier = {
-		#	trait = varangian
-		#	factor = 1.1
-		#}
-		#modifier = {
-		#	trait = peruns_chosen
-		#	factor = 1.1
-		#}
+		modifier = {
+			trait = varangian
+			factor = 1.1
+		}
+		modifier = {
+			has_crusade_trait_trigger = yes
+			factor = 1.1
+		}
 		#NEGATIVE modifiers
 		modifier = {
 			trait = craven
@@ -10392,7 +10584,7 @@ warrior_lodge_celtic = {
 			value = 1
 		}
 		has_trait = {
-			trait = eagle_warrior
+			trait = sword_of_the_lamb
 			value = 1
 		}
 		has_trait = {
@@ -10400,11 +10592,15 @@ warrior_lodge_celtic = {
 			value = 1
 		}
 		has_trait = {
-			trait = sword_of_the_lamb
+			trait = knight_templar
 			value = 1
 		}
 		has_trait = {
-			trait = knight_templar
+			trait = lughs_own
+			value = 1
+		}
+		has_trait = {
+			trait = danite
 			value = 1
 		}
 		has_trait = {
@@ -10412,7 +10608,40 @@ warrior_lodge_celtic = {
 			value = 1
 		}
 		has_trait = {
-			trait = lughs_own
+			trait = crusader
+			value = 1
+		}
+
+		has_trait = {
+			trait = crusader_king
+			value = 1
+		}
+		has_trait = {
+			trait = crusader_queen
+			value = 1
+		}
+		has_trait = {
+			trait = shaddai
+			value = 1
+		}
+		has_trait = {
+			trait = jaguar_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = thunderbird_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = raven_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = dragon_soldier
+			value = 1
+		}
+		has_trait = {
+			trait = service_cross
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -10594,11 +10823,7 @@ warrior_lodge_celtic = {
 			factor = 1.1
 		}
 		modifier = {
-			trait = varangian
-			factor = 1.1
-		}
-		modifier = {
-			trait = lughs_own
+			has_crusade_trait_trigger = yes
 			factor = 1.1
 		}
 		#NEGATIVE modifiers
@@ -10968,7 +11193,7 @@ warrior_lodge_revelationist = {
 			value = 1
 		}
 		has_trait = {
-			trait = eagle_warrior
+			trait = sword_of_the_lamb
 			value = 1
 		}
 		has_trait = {
@@ -10976,11 +11201,15 @@ warrior_lodge_revelationist = {
 			value = 1
 		}
 		has_trait = {
-			trait = sword_of_the_lamb
+			trait = knight_templar
 			value = 1
 		}
 		has_trait = {
-			trait = knight_templar
+			trait = lughs_own
+			value = 1
+		}
+		has_trait = {
+			trait = danite
 			value = 1
 		}
 		has_trait = {
@@ -10988,7 +11217,40 @@ warrior_lodge_revelationist = {
 			value = 1
 		}
 		has_trait = {
-			trait = lughs_own
+			trait = crusader
+			value = 1
+		}
+
+		has_trait = {
+			trait = crusader_king
+			value = 1
+		}
+		has_trait = {
+			trait = crusader_queen
+			value = 1
+		}
+		has_trait = {
+			trait = shaddai
+			value = 1
+		}
+		has_trait = {
+			trait = jaguar_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = thunderbird_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = raven_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = dragon_soldier
+			value = 1
+		}
+		has_trait = {
+			trait = service_cross
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -11174,7 +11436,7 @@ warrior_lodge_revelationist = {
 			factor = 1.1
 		}
 		modifier = {
-			trait = sword_of_the_lamb
+			has_crusade_trait_trigger = yes
 			factor = 1.1
 		}
 		#NEGATIVE modifiers
@@ -11544,7 +11806,7 @@ warrior_lodge_rust_cultist = {
 			value = 1
 		}
 		has_trait = {
-			trait = eagle_warrior
+			trait = sword_of_the_lamb
 			value = 1
 		}
 		has_trait = {
@@ -11552,11 +11814,15 @@ warrior_lodge_rust_cultist = {
 			value = 1
 		}
 		has_trait = {
-			trait = sword_of_the_lamb
+			trait = knight_templar
 			value = 1
 		}
 		has_trait = {
-			trait = knight_templar
+			trait = lughs_own
+			value = 1
+		}
+		has_trait = {
+			trait = danite
 			value = 1
 		}
 		has_trait = {
@@ -11564,7 +11830,40 @@ warrior_lodge_rust_cultist = {
 			value = 1
 		}
 		has_trait = {
-			trait = lughs_own
+			trait = crusader
+			value = 1
+		}
+
+		has_trait = {
+			trait = crusader_king
+			value = 1
+		}
+		has_trait = {
+			trait = crusader_queen
+			value = 1
+		}
+		has_trait = {
+			trait = shaddai
+			value = 1
+		}
+		has_trait = {
+			trait = jaguar_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = thunderbird_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = raven_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = dragon_soldier
+			value = 1
+		}
+		has_trait = {
+			trait = service_cross
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -11750,7 +12049,7 @@ warrior_lodge_rust_cultist = {
 			factor = 1.1
 		}
 		modifier = {
-			trait = fords_striker
+			has_crusade_trait_trigger = yes
 			factor = 1.1
 		}
 		#NEGATIVE modifiers
@@ -12128,7 +12427,7 @@ warrior_lodge_americanist = {
 			value = 1
 		}
 		has_trait = {
-			trait = eagle_warrior
+			trait = sword_of_the_lamb
 			value = 1
 		}
 		has_trait = {
@@ -12136,11 +12435,15 @@ warrior_lodge_americanist = {
 			value = 1
 		}
 		has_trait = {
-			trait = sword_of_the_lamb
+			trait = knight_templar
 			value = 1
 		}
 		has_trait = {
-			trait = knight_templar
+			trait = lughs_own
+			value = 1
+		}
+		has_trait = {
+			trait = danite
 			value = 1
 		}
 		has_trait = {
@@ -12148,7 +12451,40 @@ warrior_lodge_americanist = {
 			value = 1
 		}
 		has_trait = {
-			trait = lughs_own
+			trait = crusader
+			value = 1
+		}
+
+		has_trait = {
+			trait = crusader_king
+			value = 1
+		}
+		has_trait = {
+			trait = crusader_queen
+			value = 1
+		}
+		has_trait = {
+			trait = shaddai
+			value = 1
+		}
+		has_trait = {
+			trait = jaguar_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = thunderbird_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = raven_warrior
+			value = 1
+		}
+		has_trait = {
+			trait = dragon_soldier
+			value = 1
+		}
+		has_trait = {
+			trait = service_cross
 			value = 1
 		}
 		#NEGATIVE modifiers
@@ -12331,6 +12667,10 @@ warrior_lodge_americanist = {
 		}
 		modifier = {
 			trait = varangian
+			factor = 1.1
+		}
+		modifier = {
+			has_crusade_trait_trigger = yes
 			factor = 1.1
 		}
 		#modifier = {

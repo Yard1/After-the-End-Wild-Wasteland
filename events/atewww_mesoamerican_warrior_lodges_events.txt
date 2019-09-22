@@ -1,0 +1,160 @@
+namespace = ATE_WWW_MAWL
+
+character_event = {
+	id = ATE_WWW_MAWL.1
+	hide_window = yes 
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			OR = {
+				is_society = warrior_lodge_mesoamerican_eagle
+				is_society = warrior_lodge_mesoamerican_jaguar
+			}
+		}
+	}
+
+	immediate = {
+		log = "ATE_WWW_MAWL.1: [This.GetBestName]"
+		if = {
+			limit = { 
+				FROM = { is_society = warrior_lodge_mesoamerican_eagle }
+				NOT = { trait = mesoamerican_eagle_warrior }
+			}
+			add_trait = mesoamerican_eagle_warrior
+		}
+		else_if = {
+			limit = {
+				FROM = { is_society = warrior_lodge_mesoamerican_jaguar }
+				NOT = { trait = mesoamerican_jaguar_warrior }
+			}
+			add_trait = mesoamerican_jaguar_warrior
+		}
+		
+		character_event = { id = ATE_WWW_MAWL.100 days = 1 }
+	}
+}
+
+character_event = {
+	id = ATE_WWW_MAWL.100
+	hide_window = yes 
+	is_triggered_only = yes
+
+	trigger = {
+		is_society_grandmaster = yes
+		OR = {
+			society_member_of = warrior_lodge_mesoamerican_jaguar
+			society_member_of = warrior_lodge_mesoamerican_eagle
+		}
+	}
+
+	immediate = {
+		log = "ATE_WWW_MAWL.100: [This.GetBestName]"
+		if = {
+			limit = { society_member_of = warrior_lodge_mesoamerican_jaguar }
+			warrior_lodge_mesoamerican_eagle = {
+				log = "ATE_WWW_MAWL.100: enemy: [This.GetName]"
+				any_society_member = {
+					limit = { is_society_grandmaster = yes }
+					save_event_target_as = enemy_grandmaster
+				}
+			}
+		}
+		else_if = {
+			limit = { society_member_of = warrior_lodge_mesoamerican_eagle }
+			warrior_lodge_mesoamerican_jaguar = {
+				log = "ATE_WWW_MAWL.100: enemy: [This.GetName]"
+				any_society_member = {
+					limit = { is_society_grandmaster = yes }
+					save_event_target_as = enemy_grandmaster
+				}
+			}
+		}
+
+		event_target:enemy_grandmaster = {
+			log = "ATE_WWW_MAWL.100: Enemy Grandmaster of [Root.GetBestName] is [enemy_grandmaster.GetBestName]"
+		}
+
+		if = {
+			limit = {
+				NOT = { is_lover = event_target:enemy_grandmaster }
+				NOT = { is_friend = event_target:enemy_grandmaster }
+			}
+			event_target:enemy_grandmaster = {
+				ROOT = { set_character_flag = enemy_grandmaster_@PREV }
+				set_character_flag = enemy_grandmaster_@ROOT
+			}
+			if = {
+				limit = { NOT = { is_rival = event_target:enemy_grandmaster } }
+				add_rival = event_target:enemy_grandmaster
+				event_target:enemy_grandmaster = { add_rival = ROOT }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_MAWL.2
+	hide_window = yes 
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			OR = {
+				is_society = warrior_lodge_mesoamerican_eagle
+				is_society = warrior_lodge_mesoamerican_jaguar
+			}
+		}
+	}
+
+	immediate = {
+		remove_trait = mesoamerican_eagle_warrior
+		remove_trait = mesoamerican_jaguar_warrior
+
+		if = {
+			limit = { FROM = { is_society = warrior_lodge_mesoamerican_jaguar } }
+			warrior_lodge_mesoamerican_eagle = {
+				any_society_member = {
+					limit = { is_society_grandmaster = yes }
+					save_event_target_as = enemy_grandmaster
+				}
+			}
+		}
+		else_if = {
+			limit = { FROM = { is_society = warrior_lodge_mesoamerican_eagle } }
+			warrior_lodge_mesoamerican_jaguar = {
+				any_society_member = {
+					limit = { is_society_grandmaster = yes }
+					save_event_target_as = enemy_grandmaster
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				event_target:enemy_grandmaster = {
+					has_character_flag = enemy_grandmaster_@ROOT
+				}
+			}
+			event_target:enemy_grandmaster = {
+				ROOT = { clr_character_flag = enemy_grandmaster_@PREV }
+				clr_character_flag = enemy_grandmaster_@ROOT
+			}
+			if = {
+				limit = {
+					event_target:enemy_grandmaster = {
+						has_character_flag = enemy_grandmaster_remove_rival_@ROOT
+					}
+				}
+				event_target:enemy_grandmaster = {
+					ROOT = { 
+						clr_character_flag = enemy_grandmaster_remove_rival_@PREV 
+						remove_rival = PREV
+					}
+					clr_character_flag = enemy_grandmaster_remove_rival_@ROOT
+					remove_rival = ROOT
+				}
+			}
+		}
+	}
+}

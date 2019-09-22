@@ -3,3 +3,48 @@
 mictlantec_FEATURES;§Y*§! Sacrifice prisoners to their gods, either individually or in a major ceremony\n§Y*§! Kings and emperors are expected to declare themselves Incarnates (living gods)\n§Y*§! May go on vision quests with the aid of sacramental herbs.\n§Y*§! May declare Flower Wars to gain captives for sacrifice\n§Y*§! Mictlantec rulers have a greater chance of capturing enemies and looting artifacts from their holder when leading armies and successfully sieging holdings;;;;;;;;;;;;;x
 uahomche_FEATURES;§Y*§! May go on vision quests with the aid of sacramental herbs\n§Y*§! Rulers may sacrifice prisoners to their gods;;;;;;;;;;;;;x
 sol_invicta_FEATURES;§Y*§! May go on vision quests with the aid of sacramental herbs;;;;;;;;;;;;;x
+
+mesoamerican_leader;Jungle Warrior;;;;;;;;;;;;;x
+mesoamerican_leader_desc;This character is used to fighting in thick jungles.;;;;;;;;;;;;;x
+
+warrior_lodge_mesoamerican_eagle;[GetMesoamericanEagleWarriorName];;;;;;;;;;;;;x
+warrior_lodge_mesoamerican_eagle_random;The Eagle Hearts;;;;;;;;;;;;;x
+warrior_lodge_mesoamerican_eagle_desc;[GetMesoamericanEagleWarriorSocietyDesc];;;;;;;;;;;;;x
+warrior_lodge_mesoamerican_eagle_real;The Eagle Warriors;;;;;;;;;;;;;x
+warrior_lodge_mesoamerican_eagle_desc_real;The Eagle Warriors of the Plains carry on the ancient tradition of training and hunting with birds, the most prestigious type being the bald eagle. The hunters, are said to only need three things in life: a fast horse, a faithful dog, and an eagle.;;;;;;;;;;;;x
+warrior_lodge_mesoamerican_eagle_leader_desc;[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];;[GetSocietyLeaderDesc];;;;;;;;;x
+warrior_lodge_mesoamerican_eagle_rank_1_female;Fledgling;Novice;Grünschnabel;;Novata;;;;;;;;;x
+warrior_lodge_mesoamerican_eagle_rank_2_female;Warrior;Guerrière;Kriegerin;;Guerrera;;;;;;;;;x
+warrior_lodge_mesoamerican_eagle_rank_3_female;Veteran;Vétérane;Veteranin;;Veterana;;;;;;;;;x
+warrior_lodge_mesoamerican_eagle_rank_4_female;Heroine;Héroïne;Heldin;;Heroína;;;;;;;;;x
+warrior_lodge_mesoamerican_eagle_rank_1_male;Fledgling;Novice;Grünschnabel;;Novato;;;;;;;;;x
+warrior_lodge_mesoamerican_eagle_rank_2_male;Warrior;Guerrier;Krieger;;Guerrero;;;;;;;;;x
+warrior_lodge_mesoamerican_eagle_rank_3_male;Veteran;Vétéran;Veteran;;Veterano;;;;;;;;;x
+warrior_lodge_mesoamerican_eagle_rank_4_male;Hero;Héros;Held;;Héroe;;;;;;;;;x
+
+warrior_lodge_mesoamerican_jaguar;[GetMesoamericanJaguarWarriorSocietyName];;;;;;;;;;;;;x
+warrior_lodge_mesoamerican_jaguar_random;The Eagle Hearts;;;;;;;;;;;;;x
+warrior_lodge_mesoamerican_jaguar_desc;[GetMesoamericanJaguarWarriorSocietyDesc];;;;;;;;;;;;;x
+warrior_lodge_mesoamerican_jaguar_desc_random;The Eagle Hearts carry on the ancient tradition of training and hunting with birds, the most prestigious type being the golden eagle. The hunters, also known as 'berkutchi', are said to only need three things in life: a fast horse, a faithful dog, and an eagle.;;;;;;;;;;;;;x
+warrior_lodge_mesoamerican_jaguar_real;The Eagle Warriors;Guerriers aigles;Adlerkrieger;;los Guerreros águila;;;;;;;;;x
+warrior_lodge_mesoamerican_jaguar_desc_real;The Eagle Warriors of the Plains carry on the ancient tradition of training and hunting with birds, the most prestigious type being the bald eagle. The hunters, are said to only need three things in life: a fast horse, a faithful dog, and an eagle.;;;;;;;;;;;;x
+warrior_lodge_mesoamerican_jaguar_leader_desc;[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];[GetSocietyLeaderDesc];;[GetSocietyLeaderDesc];;;;;;;;;x
+warrior_lodge_mesoamerican_jaguar_rank_1_female;Fledgling;Novice;Grünschnabel;;Novata;;;;;;;;;x
+warrior_lodge_mesoamerican_jaguar_rank_2_female;Warrior;Guerrière;Kriegerin;;Guerrera;;;;;;;;;x
+warrior_lodge_mesoamerican_jaguar_rank_3_female;Veteran;Vétérane;Veteranin;;Veterana;;;;;;;;;x
+warrior_lodge_mesoamerican_jaguar_rank_4_female;Heroine;Héroïne;Heldin;;Heroína;;;;;;;;;x
+warrior_lodge_mesoamerican_jaguar_rank_1_male;Fledgling;Novice;Grünschnabel;;Novato;;;;;;;;;x
+warrior_lodge_mesoamerican_jaguar_rank_2_male;Warrior;Guerrier;Krieger;;Guerrero;;;;;;;;;x
+warrior_lodge_mesoamerican_jaguar_rank_3_male;Veteran;Vétéran;Veteran;;Veterano;;;;;;;;;x
+warrior_lodge_mesoamerican_jaguar_rank_4_male;Hero;Héros;Held;;Héroe;;;;;;;;;x
+
+string_americanist_training;softly humming the tune I just finished singing, before clearing [fellow_member.GetHerHis] throat. "It's just something I made up, while we were marching" I say, dismissively. "You should keep it up, friend!", the [fellow_member.GetManWoman] argues. "It's good for morale, for the troops, you know".;;;;;;;;;;;;;x
+string_mesoamerican_eagle_symbol;the eagle;l'aigle;der Adler;;el águila;;;;;;;;;x
+string_mesoamerican_eagle_symbol_short;eagle;aigle;Adler;;águila;;;;;;;;;x
+string_battle_nick_mesoamerican_eagle_symbol;Eagle Spirit;;;;;;;;;;;;x
+
+string_mesoamerican_jaguar_symbol;the jaguar;;;;;;;;;;;;;x
+string_mesoamerican_jaguar_symbol_short;jaguar;;;;;;;;;;;;;x
+string_battle_nick_mesoamerican_jaguar_symbol;Jaguar Spirit;;;;;;;;;;;;x
+
+string_WL_mesoamerican_religion;§YMesoamerican§! religion;;;;;;;;;;;;;x

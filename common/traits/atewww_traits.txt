@@ -160,3 +160,31 @@ hidden_ai_zeal_boost_for_americanists = {
 	religious = yes
 	ai_zeal = 25
 }
+
+mesoamerican_leader = {
+	leader = yes
+	random = no
+	command_modifier = {
+		terrain = jungle
+		morale_defence = 0.2
+		morale_offence = 0.2
+	}
+}
+
+mesoamerican_jaguar_warrior = {
+	random = no
+	customizer = no
+	opposites = {
+		mesoamerican_eagle_warrior
+	}
+	opposite_opinion = -15
+}
+
+mesoamerican_eagle_warrior = {
+	random = no
+	customizer = no
+	opposites = {
+		mesoamerican_jaguar_warrior
+	}
+	opposite_opinion = -15
+}

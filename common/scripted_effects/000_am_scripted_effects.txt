@@ -7340,6 +7340,12 @@ add_warrior_lodge_leader_trait_effect_ate = { #NOTE: These traits don't exist ri
 		warrior_lodge_americanist = {
 			add_trait = americanist_leader
 		}
+		warrior_lodge_mesoamerican_eagle = {
+			add_trait = mesoamerican_leader
+		}
+		warrior_lodge_mesoamerican_jaguar = {
+			add_trait = mesoamerican_leader
+		}
 	}
 }
 
