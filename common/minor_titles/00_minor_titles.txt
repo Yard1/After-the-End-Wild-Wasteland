@@ -1171,7 +1171,7 @@ title_court_musician = {
 	message = yes
 }
 
-title_court_poet = {
+title_1oet = {
 	dignity = 0.05
 	realm_in_name = yes
 	grant_limit = 1
@@ -1255,7 +1255,7 @@ title_chief_justice = {
 	dignity = 0.15
 	realm_in_name = yes
 	grant_limit = 1
-	opinion_effect = 30
+	opinion_effect = 10
 	
 	monthly_salary = 0.05
 	monthly_prestige = 0.60
@@ -1274,17 +1274,11 @@ title_chief_justice = {
 		}
 		OR = {
 			religion = americanist
-			religion = hamiltonian
 			religion = jeffersonian
 			religion = libertarian
 		}
 		liege = { religion = PREV }
-		OR = {
-			trait = detached_priest
-			trait = martial_cleric
-			trait = scholarly_theologian
-			trait = mastermind_theologian
-		}
+		is_priest = yes
 		NOT = { trait = incapable } 
 	}
 
@@ -1301,7 +1295,6 @@ title_chief_justice = {
 		}
 		OR = {
 			religion = americanist
-			religion = hamiltonian
 			religion = jeffersonian
 			religion = libertarian
 		}

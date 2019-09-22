@@ -10785,10 +10785,10 @@ militarist_appointment = {
 	candidate_trigger = {
 		NOT = { character = FROM }
 		FROM = { 
-			religion = jeffersonian
+			government = militarist_government
 			is_adult = yes
 			NOT = { is_liege_of = ROOT }
-			lower_real_tier_than = FROMFROM
+			lower_tier_than = FROMFROM
 			NOT = {
 				any_heir_title = {
 					has_law = succ_militarist_appointment
