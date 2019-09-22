@@ -1052,11 +1052,6 @@ can_be_chancellor_trigger = {
 					}
 				}
 			}
-			OR = {
-				trait = druid
-				trait = bad_druid
-				NOT = { religion_openly_in_celtic_subgroup_trigger = yes }
-			}
 			is_adult = yes
 		}
 		has_character_flag = special_chancellor
@@ -1407,6 +1402,11 @@ can_be_spiritual_trigger = {
 
 	liege = {
 		religion = ROOT
+	}
+	OR = {
+		trait = druid
+		trait = bad_druid
+		NOT = { religion_openly_in_celtic_subgroup_trigger = yes }
 	}
 	OR = {
 		AND = {
