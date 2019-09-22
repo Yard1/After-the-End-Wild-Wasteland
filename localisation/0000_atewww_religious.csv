@@ -355,7 +355,20 @@ kingdom_libertarian;Commonwealth;;;;;;;;;;;;;x
 emperor_libertarian;Commander-in-Chief;;;;;;;;;;;;;x
 emperor_female_libertarian;Commander-in-Chief;;;;;;;;;;;;;x
 
+title_prince_americanist;First Son;;;;;;;;;;;;;x
+title_prince_female_americanist;First Daughter;;;;;;;;;;;;;x
+title_prince_hamiltonian;First Son;;;;;;;;;;;;;x
+title_prince_female_hamiltonian;First Daughter;;;;;;;;;;;;;x
+title_prince_jeffersonian;First Son;;;;;;;;;;;;;x
+title_prince_female_jeffersonian;First Daughter;;;;;;;;;;;;;x
+title_prince_libertarian;First Son;;;;;;;;;;;;;x
+title_prince_female_libertarian;First Daughter;;;;;;;;;;;;;x
+
 # Americanists
+
+EVTDESC39690;For too long, Americans have lived under the rule of tyrants who reject the wisdom of the Founders and worship monstrosities, rust, or men with oversized hats. [Root.GetTitle] [Root.GetFullName] cannot simply stand by and watch as the oppressors take away the rights of Americans and refuse to honor the Flag, and [Root.GetSheHe] has issued an Executive Order requiring all able-bodied citizens to fight for the restoration of America.;;;;;;;;;;;;;x
+EVTDESC39692;The great city of Washington has fallen into the hands of un-American tyrants. The oppressors are burning the temples of the Founders, defiling their graves, destroying the holy documents, and fluoridating the Potomac River. In response, [Root.GetTitle] [Root.GetFullName] has issued an Executive Order requiring all able-bodied citizens to fight for the restoration of America.;;;;;;;;;;;;;x
+EVTDESC39693;The great cities of America have fallen into the hands of un-American tyrants. The oppressors will not stop until they have destroyed every remaining bastion of freedom. [Root.GetTitle] [Root.GetFullName] cannot allow that to happen, and [Root.GetSheHe] has issued an Executive Order requiring all able-bodied citizens to fight for the restoration of America.;;;;;;;;;;;;;x
 
 POPE_AIREASON_MODIFIER_RULER_JUST;[Root.GetTitledFirstName] is §YJust§!;[Root.Get_Le_TitledFirstName] a du §Yzèle§!;[Root.GetTitledFirstName] ist ein §YReligiöser Eiferer§!;;[Root.GetTitledFirstName] es §Yceloso§!;;;;;;;;x
 POPE_AIREASON_MODIFIER_RULER_JUST_NEGATIVE;[Root.GetTitledFirstName] is §YJust§!;[Root.Get_Le_TitledFirstName] a du §Yzèle§!;[Root.GetTitledFirstName] ist ein §YReligiöser Eiferer§!;;[Root.GetTitledFirstName] es §Ycelos[Root.GetOA]§!;;;;;;;;x
