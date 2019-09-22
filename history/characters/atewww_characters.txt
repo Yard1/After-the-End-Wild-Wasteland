@@ -907,4 +907,35 @@
 		}
 		wealth = 250
 	}
+	2664.12.11 = {
+	    add_spouse = 1810253 
+	}
+}
+
+1810253 = {
+	name = "Helena"
+	dynasty = 2029107 # Da Costa
+	culture = neoladino
+	religion = jewish
+	female = yes
+	martial = 5
+	diplomacy = 6
+	stewardship = 4
+	intrigue = 4
+	learning = 5
+	trait = intricate_webweaver
+	trait = lustful
+	trait = ambitious
+	trait = patient
+	trait = quick
+	trait = charitable
+	2643.5.11 = {
+	    birth = yes
+		effect = { 
+		    set_character_flag = historical_character 
+		}
+	}
+	2664.12.11 = {
+	    add_spouse = 1810252 
+	}
 }
