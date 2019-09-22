@@ -5933,7 +5933,22 @@ coat_of_arms = {
 	} }
 1830022 = { name="Velez" culture=utahn }
 1830023 = { name="Tetslaph" culture=utahn }
-1830024 = { name="Malpais" culture=utahn }
+1830024 = { 
+    name = "Malpais" 
+	culture = utahn
+    coat_of_arms = {
+        religion = mormon
+        template = 0
+        layer = {
+            texture = 0
+            texture_internal = 24
+            emblem = 0
+            color = 0
+            color = 13
+            color = 13
+        }
+    }	
+}
 1830025 = { name="Timp" culture=utahn }
 1830026 = { name="Vina" culture=utahn }
 

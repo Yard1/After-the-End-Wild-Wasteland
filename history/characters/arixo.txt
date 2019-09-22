@@ -306,6 +306,11 @@
 		    set_character_flag = no_historical_family
 		}
 	}
+	2660.6.21 = {
+		effect = { 
+		    add_rival = 1830014
+		}
+	}
 }
 
 1491023={
