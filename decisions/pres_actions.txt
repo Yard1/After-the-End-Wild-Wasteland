@@ -83,7 +83,7 @@ decisions = {
 			is_landed = yes
 			holy_order = no
 			mercenary = no
-			higher_tier_than = BARON
+			is_playable = yes
 			OR = {
 				independent = yes
 				liege = { higher_tier_than = DUKE }
