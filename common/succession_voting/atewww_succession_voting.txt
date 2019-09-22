@@ -10785,15 +10785,9 @@ militarist_appointment = {
 	candidate_trigger = {
 		NOT = { character = FROM }
 		FROM = { 
-			government = militarist_government
+			religion = jeffersonian
 			is_adult = yes
 			NOT = { is_liege_of = ROOT }
-			lower_tier_than = FROMFROM
-			NOT = {
-				any_heir_title = {
-					has_law = succ_militarist_appointment
-				}
-			}
 			#Either the candidate is in the realm, or is landless, or the title is independent, or the realm of the title does NOT have protected inheritance.
 			OR = { 
 				vassal_of = ROOT
