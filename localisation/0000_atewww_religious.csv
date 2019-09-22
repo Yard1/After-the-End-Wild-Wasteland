@@ -218,7 +218,7 @@ tax_levy_law_militarist_8;Heavily Levy Focused Noble Obligations;Obligations nob
 tax_levy_law_militarist_8_desc;This law governs how much tax and levies the gentry in the realm are obliged to contribute. The gentry tend to favor paying taxes over making troops available for their liege.;Cette loi détermine de combien d'impôts et de levées de troupes les vassaux nobles du royaume sont obligés de s'acquitter. La petite noblesse a tendance à favoriser le paiement d'impôts à la levée de troupes pour son seigneur lige.;Das Gesetz reguliert, wie viele Steuern und Truppen die Oberschicht zu liefern hat. Die Oberschicht zieht es vor, dem Lehnsherrn Geld statt Truppen zu liefern.;;Esta ley determina con cuántos impuestos y levas está obligada a contribuir la nobleza del reino. La nobleza tiende a favorecer el pago de impuestos frente a poner disponibles para su señor.;;;;;;;;;x
 
 succ_militarist_appointment;Militarist Appointment;;;;;;;;;;;;;x
-succ_feudal_elective_desc;The ruler and their liege can nominate a successor from among the vassals of the ruler. While the liege has complete control over the selection, the ruler can use Favors to force their nominee to be selected. This succession law is unique for Militarist Feudal realms.;;;;;;;;;;;;;x
+succ_militarist_appointment_desc;The ruler and their liege can nominate a successor from among the vassals of the ruler. While the liege has complete control over the selection, the ruler can use Favors to force their nominee to be selected. This succession law is unique for Militarist Feudal realms.;;;;;;;;;;;;;x
 militarist_appointment;Appointment;;;;;;;;;;;;;x
 
 militarist_succession_call_in_favor_targeted;Demand Appointment Support;;;;;;;;;;;;;x
