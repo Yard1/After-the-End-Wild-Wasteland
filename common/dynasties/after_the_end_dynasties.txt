@@ -4987,18 +4987,6 @@
 1795004 = {
     name = "Vallencourt" 
 	culture = creole
-    coat_of_arms = {
-        religion = rastafarian
-        template = 0
-        layer = {
-            texture = 0
-            texture_internal = 35
-            emblem = 0
-            color = 1
-            color = 4
-            color = 4
-        }
-    }	
 }
 1795005 = { name="Grenouille" culture=cajun }
 1795006 = { name="Robideaux" culture=cajun }
