@@ -24,10 +24,17 @@ republic_governments = {
 		title_prefix = "mconst_"
 		potential = {
 			is_patrician = yes
-			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			has_landed_title = e_usa
 			has_global_flag = edict_w
+			OR = {
+				controls_religion = no
+				has_religion_temporal_head = yes
+				AND = {
+					has_religion_with_temporal_head = yes
+					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
+				}
+			}
 		}
 		
 		color = { 16 89 173 }

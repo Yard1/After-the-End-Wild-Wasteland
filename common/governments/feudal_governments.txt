@@ -39,7 +39,7 @@ feudal_governments = {
 			}
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
-			#NOT = { is_government_potential = colonial_government }
+			NOT = { is_government_potential = constitutional_rep }
 			NOT = { is_government_potential = military_governorate }
 			NAND = {
 				religion = gaian
@@ -320,22 +320,7 @@ feudal_governments = {
 		}
 		frame_suffix = "_romanimperial"
 		potential = {
-			OR = { 
-				AND = { 
-					is_save_game = no
-					has_game_started = no
-					primary_title = { 
-						title = e_usa
-					}
-				}
-				AND = { 
-					primary_title = { 
-						title = e_usa
-						has_law = succ_byzantine_elective
-					}
-				}
-			}
-			is_patrician = no
+			always = no
 		}
 		
 		color = { 143 12 125 }
