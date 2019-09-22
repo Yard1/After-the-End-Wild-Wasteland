@@ -57,19 +57,19 @@ character_event = {
 					limit = {
 						FROMFROM = {
 							primary_title = {
-								OR = {
-									has_law = enatic_succession
-									AND = {
-										holy_order = yes
-										religion_allows_female_temple_holders = yes
-										religion_allows_male_temple_holders = no
-									}
-								}
+								has_law = enatic_succession
 							}
 						}
 					}
 					log = "miscATEWW.1: [Root.GetBestName] holy order/merc"
 					set_gender = female
+					if = {
+						limit = { religion = libertarian }
+						give_ROOT_random_female_libertarian_name = yes
+					}
+					else = {
+						give_ROOT_random_name = yes
+					}
 				}
 				else = {
 					#50/50
@@ -96,6 +96,13 @@ character_event = {
 					}
 					log = "miscATEWW.1: [Root.GetBestName] priest"
 					set_gender = female
+					if = {
+						limit = { religion = libertarian }
+						give_ROOT_random_female_libertarian_name = yes
+					}
+					else = {
+						give_ROOT_random_name = yes
+					}
 				}
 				else_if = {
 					limit = {
@@ -119,10 +126,6 @@ character_event = {
 			else = {
 				log = "miscATEWW.1: [Root.GetBestName] 50/50"
 				character_event = { id = miscATEWW.5 }
-			}
-			if = {
-				limit = { is_female = yes religion = libertarian }
-				give_ROOT_random_female_libertarian_name = yes
 			}
 		}
 		if = {
