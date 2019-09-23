@@ -66,8 +66,8 @@ d_order_airmen = {
 	landless = yes
 	primary = yes
 	independent = yes
-	strength_growth_per_century = 1.0
+	strength_growth_per_century = 1.1
 	monthly_income = 1
 
-	mercenary_type = d_sun_knights_composition
+	mercenary_type = d_atlanta_composition
 }

@@ -4372,21 +4372,7 @@ faction_independence = {
 					using_cb = cb_faction_independence
 				}
 			}
-			
-			# Brits do not have independence revolt problems before 1350
-			OR = {
-				year = 1350
-				primary_title = { is_tribal = no }
-				NOT = { culture = ROOT }
-				NOT = { religion = ROOT }
-				NOT = {
-					OR = { 
-						culture = british
-						culture = amazonense
-					}
-				}
-			}
-			
+
 			# Not allowed to start factions like this if our capital borders the liege's capital
 			NOT = {
 				capital_scope = {
@@ -4546,6 +4532,15 @@ faction_independence = {
 			liege = {
 				NOT = { higher_tier_than = DUKE }
 				realm_size = 12
+			}
+		}
+
+		modifier = {
+			factor = 1.5
+			culture = texan
+			liege = {
+				NOT = { culture = texan }
+				NOT = { religion_group = ROOT }
 			}
 		}
 
@@ -4964,6 +4959,15 @@ faction_independence = {
 			}
 		}
 		
+		modifier = {
+			factor = 1.5
+			culture = texan
+			liege = {
+				NOT = { culture = texan }
+				NOT = { religion_group = ROOT }
+			}
+		}
+
 		modifier = {
 			factor = 0.2
 			pacifist = yes

@@ -6,7 +6,12 @@ matriarchal_religion = {
 }
 
 equal_religion = {
-	NOT = { religion = jeffersonian }
+	NOR = {
+		religion = jeffersonian
+		religion = rust_cultist
+		religion = consumerist
+		religion = monetarist
+	}
 	OR = {
 		has_religion_feature = religion_equal
 		religion = ursuline

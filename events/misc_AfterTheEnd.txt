@@ -145,6 +145,7 @@ character_event = {
 	min_age = 16
 	
 	trigger = {
+		NOT = { has_character_flag = historical_character }
 		NOT = { has_character_flag = diversity }
 	}
 	
@@ -10552,6 +10553,7 @@ character_event = {
 	min_age = 16
 	
 	trigger = {
+		NOT = { has_character_flag = historical_character }
 		NOT = { has_character_flag = physique }
 	}
 	
