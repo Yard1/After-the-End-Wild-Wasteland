@@ -4543,6 +4543,16 @@ faction_independence = {
 				NOT = { religion_group = ROOT }
 			}
 		}
+		
+		modifier = {
+			factor = 1.25
+			culture = texan
+			liege = {
+				culture_group = mexicano #hated enemy!
+				NOT = { culture = texan }
+				NOT = { religion_group = ROOT }
+			}
+		}
 
 		modifier = {
 			factor = 0.2
@@ -4963,6 +4973,16 @@ faction_independence = {
 			factor = 1.5
 			culture = texan
 			liege = {
+				NOT = { culture = texan }
+				NOT = { religion_group = ROOT }
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			culture = texan
+			liege = {
+				culture_group = mexicano #hated enemy!
 				NOT = { culture = texan }
 				NOT = { religion_group = ROOT }
 			}
