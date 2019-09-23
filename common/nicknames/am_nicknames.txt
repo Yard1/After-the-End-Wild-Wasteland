@@ -533,7 +533,7 @@ nick_the_enlightened = {
 nick_the_pure = {
 	allow = {
 		is_adult = yes
-		religion = gaian
+		religion_openly_gaian_or_heresy_trigger = yes
 		NOT = { trait = lustful }
 		NOT = { trait = wroth }
 		NOT = { trait = greedy }
@@ -565,7 +565,7 @@ nick_the_pure = {
 nick_the_defiler = {
 	allow = {
 		is_adult = yes
-		religion = gaian
+		religion_openly_gaian_or_heresy_trigger = yes
 		ruled_years = 5
 		trait = cynical
 		NOT = { piety = 0 }

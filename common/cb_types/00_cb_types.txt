@@ -5872,7 +5872,10 @@ religious = {
 
 	can_use = { #American Natives no longer have access to the Holy War CB, are given County Conquest CB instead.
 		ROOT = {
-			NOT = { religion = cetic }
+			NOR = { 
+				religion = cetic 
+				religion_openly_gaian_or_heresy_trigger = yes
+			}
 			is_nomadic = no
 			NOR = {
 				religion_group = pagan_group
@@ -6381,7 +6384,7 @@ religious = {
 			factor = 0.5
 			ROOT = {
 				OR = {
-					religion = gaian
+					religion_openly_gaian_or_heresy_trigger = yes
 					religion = atomicist
 				}
 			}

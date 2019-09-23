@@ -160,3 +160,19 @@ hidden_ai_zeal_boost_for_americanists = {
 	religious = yes
 	ai_zeal = 25
 }
+
+hidden_male_trait = {
+	hidden = yes
+	customizer = no
+	potential = {
+		is_female = no
+	}
+}
+
+hidden_female_trait = {
+	hidden = yes
+	customizer = no
+	potential = {
+		is_female = yes
+	}
+}

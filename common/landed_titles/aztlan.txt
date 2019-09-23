@@ -468,6 +468,7 @@ e_aztlan = {
 				color={ 241 145 124 }
 				color2={ 255 255 255 }
 				holy_site = gaian
+				holy_site = amazonian
 				
 				b_mesquite_NV = {}
 				b_hoover_NV = {}

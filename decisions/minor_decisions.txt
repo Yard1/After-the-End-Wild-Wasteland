@@ -1351,7 +1351,7 @@ decisions = {
 			has_character_flag = sky_burial
 			NOT = { has_character_flag = performed_sky_burial }
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				AND = {
 					government = nomadic_government
 					has_dharmic_religion_trigger = yes

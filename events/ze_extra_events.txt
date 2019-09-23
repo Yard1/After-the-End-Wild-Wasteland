@@ -1707,7 +1707,7 @@ character_event = {
 					is_female = yes
 					ROOT = {
 						OR = {
-							religion = gaian
+							religion_openly_gaian_or_heresy_trigger = yes
 							religion = ursuline
 							religion = angeline
 							religion = reform
@@ -1750,7 +1750,7 @@ character_event = {
 						is_female = yes
 						ROOT = { 
 							OR = { 
-								religion = gaian
+								religion_openly_gaian_or_heresy_trigger = yes
 								religion = ursuline
 								religion = angeline
 								religion = reform
@@ -1854,7 +1854,7 @@ character_event = {
 				}
 				else_if = {
 					limit = {
-						religion = gaian
+						religion_openly_gaian_or_heresy_trigger = yes
 					}
 					set_government_type = theocratic_feudal_government
 				}

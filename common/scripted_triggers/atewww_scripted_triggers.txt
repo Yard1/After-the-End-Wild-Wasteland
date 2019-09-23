@@ -2,6 +2,7 @@ matriarchal_religion = {
 	OR = {
 		has_religion_feature = religion_matriarchal
 		religion = gaian
+		religion = amazonian
 	}
 }
 
@@ -154,8 +155,10 @@ can_have_pagan_religion_interpretation = {
 	NOT = { religion_head = { always = yes } } #check if there is no religious head
 	OR = {
 		religion = gaian
-		religion_group = pagan_group
-		has_religion_feature = religion_no_leader
+		AND = {
+			religion_group = pagan_group
+			has_religion_feature = religion_no_leader
+		}
 	}
 }
 
@@ -238,6 +241,18 @@ has_identified_medicine_to_take = {
 						trait = ill
 					}
 				}
+			}
+		}
+	}
+}
+
+religion_openly_gaian_or_heresy_trigger = {
+	custom_tooltip = {
+		text = religion_openly_gaian_or_heresy_tooltip
+		hidden_trigger = {
+			OR = {
+				religion = gaian
+				religion = amazonian
 			}
 		}
 	}

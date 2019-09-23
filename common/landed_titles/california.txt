@@ -446,6 +446,7 @@ e_california = {
 				color2={ 255 255 255 }
 				holy_site = cetic
 				holy_site = shinto
+				holy_site = amazonian
 				
 				b_fort_point_CA = {}
 				b_alcatraz_CA = {}

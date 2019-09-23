@@ -1736,6 +1736,7 @@ pacific = {
 		piety_name = KARMA
 		
 		intermarry = neutic
+		intermarry = amazonian
 		intermarry = gaian
 		intermarry = shinto
 		intermarry = nousthreskeia
@@ -1785,6 +1786,7 @@ pacific = {
 		piety_name = KARMA
 		
 		intermarry = cetic
+		intermarry = amazonian
 		intermarry = gaian
 		intermarry = shinto
 		intermarry = nousthreskeia
@@ -1822,7 +1824,6 @@ pacific = {
 		priests_can_marry = yes
 		allow_rivermovement = yes
 		female_temple_holders = yes
-		raised_vassal_opinion_loss = no
 		allows_matrilineal_marriage = yes
 		women_can_take_consorts = yes
 		defensive_attrition = yes
@@ -1834,10 +1835,69 @@ pacific = {
 		religious_clothing_priest = 16
 		
 		intermarry = neutic
+		intermarry = amazonian
 		intermarry = cetic
 		intermarry = shinto
 		intermarry = nousthreskeia
 		intermarry = neognostic
+
+		character_modifier = {
+			opinion_of_hidden_male_trait = -5
+		}
+	}
+
+	amazonian = {
+		graphical_culture = buddhistgfx
+		secondary_event_pictures = sunni
+		icon = 15
+		heresy_icon = 45
+
+		parent = gaian
+		
+		color = { 0.74 0.27 0.33 }
+		
+		interface_skin = { gaian_interface indian_interface muslim_interface }
+		
+		high_god_name = GOD_DIANA
+		
+		god_names = {
+			GOD_GAIA GOD_THE_GODDESS GOD_GAEA GOD_HARMONIA GOD_SOLANAS GOD_DIANA GOD_ARTEMIS
+		}
+		evil_god_names = {
+			GOD_THE_DARK_FATHER GOD_THE_PATRIARCHY GOD_HADES GOD_THE_PRIVILEGE
+		}
+		
+		feminist = yes
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_BOOK_OF_SHADOWS
+		priest_title = DRUID
+		piety_name = PURITY
+		pacifist = no
+		peace_piety_gain = 0
+		aggression = 2
+		raised_vassal_opinion_loss = no
+		allow_looting = yes
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		female_temple_holders = yes
+		allows_matrilineal_marriage = yes
+		women_can_take_consorts = yes
+		defensive_attrition = yes
+		max_consorts = 3 #can take concubines
+		men_can_take_consorts = no
+		male_temple_holders = no
+		peace_prestige_loss = yes
+
+		religious_clothing_head = 16
+		religious_clothing_priest = 16
+		
+		intermarry = neutic
+		intermarry = cetic
+		intermarry = neognostic
+
+		character_modifier = {
+			opinion_of_hidden_male_trait = -15
+		}
 	}
 	
 	shinto = {

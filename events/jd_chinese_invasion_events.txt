@@ -3994,7 +3994,7 @@ character_event = {
 		}
 		else_if = {
 			limit = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				higher_tier_than = BARON
 			}
 			set_government_type = theocratic_feudal_government

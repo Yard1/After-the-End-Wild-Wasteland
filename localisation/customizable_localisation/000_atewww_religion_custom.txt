@@ -251,7 +251,7 @@ defined_text = {
 	text = {
 		trigger = { 
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = celtic_pagan_reformed
 				religion = celtic_pagan
 			}

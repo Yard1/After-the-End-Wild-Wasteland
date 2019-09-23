@@ -4563,6 +4563,7 @@ narrative_event = {
 				remove_intermarry = cetic
 				remove_intermarry = neutic
 				remove_intermarry = gaian
+				remove_intermarry = amazonian
 				remove_intermarry = shinto
 				remove_intermarry = nousthreskeia
 				remove_intermarry = mormon
@@ -4615,7 +4616,7 @@ narrative_event = {
 		if = {
 			limit = { #Switch to matriarchy.
 				ROOT = { 
-					matriarchal_religion = yes 
+					has_religion_feature = religion_matriarchal
 				}
 			}
 			ROOT = { 
@@ -4647,7 +4648,7 @@ narrative_event = {
 		if = {
 			limit = { #Switch to equality.
 				ROOT = { 
-					equal_religion = yes 
+					has_religion_feature = religion_equal
 				}
 			}
 			ROOT = { 

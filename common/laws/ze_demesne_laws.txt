@@ -158,6 +158,11 @@ laws = {
 				holder_scope = { equal_religion = yes }
 				holder_scope = { has_religion_feature = religion_feature_midewiwin }
 				holder_scope = { has_religion_feature = religion_patriarchal }
+				holder_scope = {
+					any_suzerain = {
+						has_religion_feature = religion_patriarchal
+					}
+				}
 			}
 			conditional_tooltip = {
 				trigger = { semi_equal_religion = no }
@@ -463,6 +468,11 @@ laws = {
 				holder_scope = { equal_religion = yes }
 				holder_scope = { has_religion_feature = religion_feature_midewiwin }
 				holder_scope = { has_religion_feature = religion_patriarchal }
+				holder_scope = {
+					any_suzerain = {
+						matriarchal_religion = yes
+					}
+				}
 			}
 			conditional_tooltip = {
 				trigger = { semi_equal_religion = no }
@@ -612,15 +622,24 @@ laws = {
 			}
 		}
 		allow = {
-			has_law = status_of_women_3
-			NOR = {
-				holder_scope = { has_religion_feature = religion_patriarchal }
-			}
-			conditional_tooltip = {
-				trigger = { semi_equal_religion = no }
-				custom_tooltip = {
-					text = TT_HAS_TOLERANCE_6
-					holder_scope = { capital_scope = { TECH_CULTURE_FLEX = 6 } }
+			OR = {
+				AND = {
+					has_law = status_of_women_3
+					NOR = {
+						holder_scope = { has_religion_feature = religion_patriarchal }
+					}
+					conditional_tooltip = {
+						trigger = { semi_equal_religion = no }
+						custom_tooltip = {
+							text = TT_HAS_TOLERANCE_6
+							holder_scope = { capital_scope = { TECH_CULTURE_FLEX = 6 } }
+						}
+					}
+				}
+				holder_scope = {
+					any_suzerain = {
+						matriarchal_religion = yes
+					}
 				}
 			}
 		}

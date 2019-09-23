@@ -386,6 +386,65 @@ EVTDESC_liberation_war_christ;The great [Root.GetTitledFirstName] has declared a
 start_wars_of_liberation;The Liberation Wars;;;;;;;;;;;;x
 start_wars_of_liberation_desc;The time has come for me, the President, to sign an Executive Order requiring all able-bodied citizens to fight for the restoration of America.;;;;;;;;;;;;x
 
+# Gaian
+gaian_FEATURES;§Y*§! Enatic law is enforced.\n§Y*§! Gaians gain 1.00 purity per month when at peace.\n§Y*§! Gaian faith prohibits eating, hunting or otherwise hurting animals.\n§Y*§! Are adherents of the ancient practice of Astrology.;;;;;;;;;;;;;x
+religion_openly_gaian_or_heresy_tooltip;Publicly follows the §Y[gaian.GetName]§! religion (or a heresy);;;;;;;;;;;;;x
+secret_religious_society_gaian_leader_desc;The High Priestess, leading the international effort of bringing more people into the fold.;Le grand prêtre dirige l'effort mondial visant à réunir davantage de personnes dans les rangs de sa société.;Der Hohepriester des $SOCIETY|Y$-Zirkels, der die internationalen Bemühungen leitet, mehr Menschen in den Schoß der Familie zu führen.;;El Sumo sacerdote, que dirige la misión a escala internacional para atraer a más fieles.;;;;;;;;;x
+
+hidden_male_trait;Male;;;;;;;;;;;;x
+hidden_female_trait;Female;;;;;;;;;;;;x
+
+amazonian;Themyscirai;;;;;;;;;;;;x
+amazonian_DESC;Themysciraians are a sect of radical, strictly matriarchal Gaians. Believing that men are solely responsible for the ruination of Earth, the followers of Diana are determined to not only prevent that from ever happening again, but also to punish the man for all his sins - real or not. They consider themselves tools of their high god, Diana, who in turn has been created by the Earth Mother, Gaia, to avenge her. Mainstream Gaianism rejects Themysciraism for not only its bloodthirstiness, but also for forgoing the aspect of protection of nature for revenge against what men did in the past.;;;;;;;;;;;;;x
+amazonian_FEATURES;§Y*§! Enatic law is strictly enforced.\n§Y*§! Has access to §YMatriarchal Deposition War§! CB instead of §YHoly War§! CB.\n§Y*§! Are adherents of the ancient practice of Astrology.;;;;;;;;;;;;x
+amazonian_opinion;[amazonian.GetName] Opinion;;;;;;;;;;;;;x
+
+GOD_SOLANAS;Solanas;;;;;;;;;;;;x
+GOD_THE_PATRIARCHY;The Patriarchy;;;;;;;;;;;;x
+GOD_THE_PRIVILEGE;The Privilege;;;;;;;;;;;;x
+GOD_HARMONIA;Harmonia;;;;;;;;;;;;x
+GOD_GAEA;Gaea;;;;;;;;;;;;x
+GOD_DIANA;Diana;;;;;;;;;;;;x
+GOD_ARTEMIS;Artemis;;;;;;;;;;;;x
+
+opinion_of_hidden_male_trait;Opinion of Males;;;;;;;;;;;;x
+
+secret_religious_society_amazonian;[GetReligiousCommunityName_amazonian];[GetReligiousCommunityName_amazonian];[GetReligiousCommunityName_amazonian];;[GetReligiousCommunityName_amazonian];;;;;;;;;x
+secret_religious_society_REAL_amazonian;The Daughters of Diana;;;;;;;;;;;;x
+alt_start_community_name_amazonian;The [amazonian.GetName] Faithful;;;;;;;;;;;;;x
+secret_religious_society_amazonian_desc;[GetReligiousSocietyDesc_amazonian];[GetReligiousSocietyDesc_amazonian];[GetReligiousSocietyDesc_amazonian];;[GetReligiousSocietyDesc_amazonian];;;;;;;;;x
+secret_religious_society_amazonian_desc_REAL;Diana's faithful are forced to live in secret, and their beliefs have been deemed radical and disruptive by an oppressive and destructive society. Although they are forced to participate in this society, true Themysciraians continue to live simple lives and tell others about Diana's grace in secret. Hopefully,  soon they will realize the extend of the Patriarchy's bondage..;;;;;;;;;x
+secretly_convert_to_amazonian_holy_site;Secretly Convert to Themysciraian;;;;;;;;;;;;;x
+secretly_convert_to_amazonian_holy_site_desc;The §YThemysciraian§! pilgrims that flock to the holy site in §Y[Root.Location.GetName]§! impress me with the depth and passion of their faith. I am tempted to convert in secrecy...;;;;;;;;;;;;;x
+secret_religious_society_amazonian_currency;Devotion;Dévotion;Hingabe;;Devoción;;;;;;;;;x
+secret_religious_society_amazonian_rank_1_female;Faithful;Fidèle;Getreue;;Fiel;;;;x
+secret_religious_society_amazonian_rank_2_female;Adherent;Adhérente;Anhängerin;;Seguidora;;;;x
+secret_religious_society_amazonian_rank_3_female;Preacher;Prêcheuse;Predigerin;;Predicadora;;;;x
+secret_religious_society_amazonian_rank_4_female;Herald;Messagère;Herold;;Mensajera;;;;x
+secret_religious_society_amazonian_rank_1_male;Faithful;Fidèle;Getreuer;;Fiel;;;;x
+secret_religious_society_amazonian_rank_2_male;Adherent;Adhérent;Anhänger;;Seguidor;;;;x
+secret_religious_society_amazonian_rank_3_male;Preacher;Prêcheur;Prediger;;Predicador;;;;x
+secret_religious_society_amazonian_rank_4_male;Herald;Messager;Herold;;Mensajero;;;;x
+secret_religious_community_amazonian;Secret Themysciraian Community;;;;;;;;;;;;;x
+secret_amazonian_community;Secret Themysciraian Community;;;;;;;;;;;;;x
+secret_amazonian_community_desc;In secret, Themysciraian faithful have organized themselves as a community in this province. From there it converts others, grows, and protects their own.;En secret, les fidèles se sont organisés en tant que communauté dans cette province. De là, la commaunauté convertit d'autres personnes, grandit et protège les siens.;;;;;;;;;;;;x
+secret_religious_society_amazonian_leader_desc;The High Priestess, leading the international effort of bringing more people into the fold.;Le grand prêtre dirige l'effort mondial visant à réunir davantage de personnes dans les rangs de sa société.;Der Hohepriester des $SOCIETY|Y$-Zirkels, der die internationalen Bemühungen leitet, mehr Menschen in den Schoß der Familie zu führen.;;El Sumo sacerdote, que dirige la misión a escala internacional para atraer a más fieles.;;;;;;;;;x
+
+temple_baron_amazonian;Druid;;;;;;;;;;;;;x
+temple_baron_female_amazonian;Druidess;;;;;;;;;;;;;x
+temple_baron_amazonians;Druids;;;;;;;;;;;;;x
+temple_barony_of_amazonian;Grove of;;;;;;;;;;;;;x
+temple_count_amazonian;Archdruid;;;;;;;;;;;;;x
+temple_count_female_amazonian;Archdruidess;;;;;;;;;;;;;x
+temple_county_of_amazonian;Wood of;;;;;;;;;;;;;x
+temple_duke_amazonian;Grand Druid;;;;;;;;;;;;;x
+temple_duke_female_amazonian;Grand Druidess;;;;;;;;;;;;;x
+temple_duchy_of_amazonian;Forest of;;;;;;;;;;;;;x
+String_Amazonian;Themysciraian;;;;;;;;;;;;;x
+String_Amazonians;Themysciraians;;;;;;;;;;;;;x
+
+# Misc
+
 title_ursuline_cardinal;Delegate;Cardinal;Kardinal;;Cardenal;;;;;;;;;x
 expected_next_title_ursuline_cardinal;Expected Next Delegate;Prochain cardinal prévu;Erwarteter neuer Kardinal;;Presunto próximo cardenal;;;;;;;;;x
 expected_next_title_ursuline_cardinal_tooltip;This Abbess is probably next in line for a Delegateship when one becomes available.;Cet évêque sera probablement le prochain cardinal dès qu'une place se libérera.;Dieser Bischof wird wahrscheinlich als nächster zum Kardinal ernannt, wenn ein Sitz im Kollegium frei wird.;;Este obispo será, probablemente, el próximo Cardenal cuando haya una vacante.;;;;;;;;;x
@@ -402,3 +461,5 @@ gracia_divina_FEATURES;§Y*§! Can venerate ancestors;;;;;;;;;;;;;x
 peyotist_FEATURES;§Y*§! Can venerate ancestors\n§Y*§! May go on vision quests with the aid of sacramental herbs.;;;;;;;;;;;;;x
 midewiwin_FEATURES;§Y*§! Can venerate ancestors\n§Y*§! May go on vision quests with the aid of sacramental herbs.\n§Y*§!;;;;;;;;;;;;;x
 raven_tales_FEATURES;§Y*§! Can venerate ancestors\n§Y*§! May go on vision quests with the aid of sacramental herbs.;;;;;;;;;;;;;x
+
+tooltip_vote_strength_theocratic_feudal_government;[Root.GetFirstName] is a §Y[Root.GetPriest]§! under a §YMonastic Feudal§! government;;;;;;;;;x

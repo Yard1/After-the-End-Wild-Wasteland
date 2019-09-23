@@ -1483,7 +1483,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTC_RoI_3402
 		trigger = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 		}
 		if = {
 			limit = { trait = stressed }

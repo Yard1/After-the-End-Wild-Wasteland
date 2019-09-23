@@ -98,7 +98,7 @@ succession_laws = {
 			holder_scope = {
 				NOT = { religion_group = american_native } #uses Eldership instead
 				NOT = { religion_group = pirate }
-				NOT = { religion = gaian }
+				NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 				OR = {
 					independent = yes
 					NOT = {
@@ -226,7 +226,7 @@ succession_laws = {
 			holder_scope = {
 				NOT = { religion_group = american_native } #uses Eldership instead
 				NOT = { religion_group = pirate }
-				NOT = { religion = gaian }
+				NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 				is_nomadic = no
 				OR = {
 					independent = yes
@@ -343,7 +343,7 @@ succession_laws = {
 						is_tribal = yes
 						OR = {
 							religion = occultist
-							religion = gaian
+							religion_openly_gaian_or_heresy_trigger = yes
 							religion = celtic_pagan
 						}
 					}
@@ -402,7 +402,7 @@ succession_laws = {
 							OR = {
 								religion_group = afro_syncretic
 								religion = occultist
-								religion = gaian
+								religion_openly_gaian_or_heresy_trigger = yes
 								religion = celtic_pagan
 							}
 						}
@@ -427,7 +427,7 @@ succession_laws = {
 							OR = {
 								religion = occultist
 								religion = celtic_pagan
-								religion = gaian
+								religion_openly_gaian_or_heresy_trigger = yes
 							}
 						}
 						has_ancestor_veneration = yes
@@ -514,7 +514,7 @@ succession_laws = {
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
 					NOT = { religion = raven_tales }
-					NOT = { religion = gaian }
+					NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 					is_reformed_religion = yes
 					is_patrician = yes
 				}
@@ -862,6 +862,7 @@ succession_laws = {
 				holder_scope = { NOT = { religion_group = pirate } }
 			}
 			holder_scope = {
+				NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 				OR = {
 					independent = yes
 					NOT = {
@@ -889,7 +890,6 @@ succession_laws = {
 				OR = {
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
-					NOT = { religion = gaian }
 					NOT = { religion = raven_tales }
 					is_reformed_religion = yes
 					has_law = succession_voting_power_1
@@ -1172,7 +1172,7 @@ succession_laws = {
 					culture = newfie
 					culture = carpetbagger
 					AND = {
-						religion = gaian
+						religion_openly_gaian_or_heresy_trigger = yes
 						is_tribal = no
 					}
 					any_owned_bloodline = {
@@ -1203,7 +1203,7 @@ succession_laws = {
 						culture = newfie
 						culture = carpetbagger
 						AND = {
-							religion = gaian
+							religion_openly_gaian_or_heresy_trigger = yes
 							is_tribal = no
 						}
 						any_owned_bloodline = {
@@ -1766,6 +1766,9 @@ gender_laws = {
 							any_owned_bloodline = {
 								has_bloodline_flag = bloodline_effect_cognatic
 							}
+							any_suzerain = {
+								has_religion_feature = religion_patriarchal
+							}
 						}
 					}
 					AND = {
@@ -2164,6 +2167,9 @@ gender_laws = {
 								any_owned_bloodline = {
 									has_bloodline_flag = bloodline_enatic
 								}
+								any_suzerain = {
+									matriarchal_religion = yes
+								}
 							}
 						}
 						AND = {
@@ -2207,6 +2213,12 @@ gender_laws = {
 		ai_will_do = {
 			factor = 2
 			modifier = {
+				factor = 100
+				holder_scope = {
+					religion = amazonian
+				}
+			}
+			modifier = {
 				factor = 0
 				holder_scope = {
 					OR = {
@@ -2229,6 +2241,17 @@ gender_laws = {
 				}
 			}
 		}
+
+		default_selection = {
+			factor = 0
+			
+			additive_modifier = {
+				value = 1000
+				holder_scope = {
+					religion = amazonian
+				}
+			}
+		}
 	}
 	
 	enatic_cognatic_succession = {
@@ -2241,6 +2264,7 @@ gender_laws = {
 				is_theocracy = no
 				holy_order = no
 				NOT = { has_religion_feature = religion_patriarchal }
+				NOT = { religion = amazonian }
 				OR = {
 					matriarchal_religion = yes
 					any_owned_bloodline = {
@@ -2309,6 +2333,7 @@ gender_laws = {
 					is_theocracy = no
 					holy_order = no
 					matriarchal_religion = yes
+					NOT = { religion = amazonian }
 				}
 			}
 		}		

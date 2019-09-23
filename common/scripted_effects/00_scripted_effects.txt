@@ -15848,7 +15848,7 @@ spawn_good_commander_effect = {
 			if = {
 				limit = {
 					OR = {
-						religion = gaian
+						religion_openly_gaian_or_heresy_trigger = yes
 						religion = neomayan
 						has_religion_feature = religion_astrology
 						has_religion_feature = religion_feature_occultist
@@ -15858,8 +15858,7 @@ spawn_good_commander_effect = {
 			}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {
@@ -16054,7 +16053,7 @@ spawn_great_commander_effect = {
 			if = {
 				limit = {
 					OR = {
-						religion = gaian
+						religion_openly_gaian_or_heresy_trigger = yes
 						religion = neomayan
 						has_religion_feature = religion_astrology
 						has_religion_feature = religion_feature_occultist
@@ -16064,8 +16063,7 @@ spawn_great_commander_effect = {
 			}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {
@@ -16380,8 +16378,7 @@ spawn_fantastic_commander_effect = {
 			#}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {
@@ -16530,8 +16527,7 @@ spawn_fantastic_diplomat_effect = {
 			#}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {
@@ -16666,8 +16662,7 @@ spawn_fantastic_scholar_effect = {
 			#}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {
@@ -25087,7 +25082,7 @@ spawn_debutante_effect = {
 			if = {
 				limit = {
 					OR = {
-						religion = gaian
+						religion_openly_gaian_or_heresy_trigger = yes
 						religion = neomayan
 						has_religion_feature = religion_astrology
 						has_religion_feature = religion_feature_occultist
@@ -25097,8 +25092,7 @@ spawn_debutante_effect = {
 			}
 			if = {
 				limit = {
-					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					can_have_pagan_religion_interpretation = yes
 				}
 				random_list = {  
 					5 = {

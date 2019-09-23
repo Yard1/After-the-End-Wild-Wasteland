@@ -72,7 +72,7 @@ defined_text = {
 				religion_group = american_native
 				AND = {
 					religion_group = pacific
-					NOT = { religion = gaian }
+					NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 				}
 				religion_group = mesoamerican_gods
 				religion_group = pirate
@@ -87,7 +87,7 @@ defined_text = {
 	text = {
 		localisation_key = GetHouseOfWorship_Celtic
 		trigger = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 		}
 	}
 	text = {
@@ -320,6 +320,13 @@ defined_text = {
 			religion = gaian
 		}
 	}
+
+	text = {
+		localisation_key = String_Amazonian
+		trigger = {
+			religion = amazonian
+		}
+	}
 	
 	text = {
 		localisation_key = String_Cetic
@@ -518,6 +525,13 @@ defined_text = {
 		localisation_key = String_Gaian
 		trigger = {
 			religion = gaian
+		}
+	}
+
+	text = {
+		localisation_key = String_Amazonian
+		trigger = {
+			religion = amazonian
 		}
 	}
 	
@@ -3217,7 +3231,7 @@ defined_text = {
 		trigger = {
 			society_member_of = bohemian_grove
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = cetic
 				religion = neutic
 			}
@@ -3376,7 +3390,7 @@ defined_text = {
 			society_member_of = bohemian_grove
 			OR = {
 				religion = cetic
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 			}
 		}
 	}
@@ -3446,7 +3460,7 @@ defined_text = {
 		trigger = {
 			society_member_of = bohemian_grove
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = cetic
 			}
 		}
@@ -3720,7 +3734,7 @@ defined_text = {
 		trigger = {
 			society_member_of = bohemian_grove
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = cetic
 				religion = neutic
 			}
@@ -3815,7 +3829,7 @@ defined_text = {
 			society_member_of = bohemian_grove
 			OR = {
 				religion = cetic
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = neutic
 			}
 		}
@@ -4103,7 +4117,7 @@ defined_text = {
 		trigger = {
 			society_member_of = bohemian_grove
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = cetic
 				religion = neutic
 			}
@@ -4114,7 +4128,7 @@ defined_text = {
 		trigger = {
 			society_member_of = bohemian_grove
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = cetic
 				religion = neutic
 			}
@@ -4931,6 +4945,12 @@ defined_text = {
 			religion = gaian
 		}
 		localisation_key = Holy_Order_Gaian
+	}
+	text = {
+		trigger = {
+			religion = amazonian
+		}
+		localisation_key = Holy_Order_Amazonian
 	}
 	text = {
 		trigger = {
@@ -7338,6 +7358,18 @@ defined_text = {
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_gaian_desc_REAL
+	}
+}
+
+defined_text = {
+	name = GetReligiousSocietyDesc_amazonian
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_amazonian_desc_REAL
 	}
 }
 

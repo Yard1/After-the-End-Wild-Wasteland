@@ -216,6 +216,7 @@ character_event = {
 						true_religion_cetic_trigger = no
 						true_religion_neutic_trigger = no
 						true_religion_gaian_trigger = no
+						true_religion_amazonian_trigger = no
 						true_religion_shinto_trigger = no
 						true_religion_nousthreskeia_trigger = no
 					}

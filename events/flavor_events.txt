@@ -1010,19 +1010,19 @@ character_event = {
 				modifier = { factor = 1.5 learning = 8 }
 			}
 			10 = { set_variable = { which = debate_opinion value = 11 }
-				modifier = { factor = 2 religion = gaian }
+				modifier = { factor = 2 religion_openly_gaian_or_heresy_trigger = yes }
 			}
 			10 = { set_variable = { which = debate_opinion value = 12 } 
 			}
 			10 = { set_variable = { which = debate_opinion value = 13 }
-				modifier = { factor = 0 religion = gaian } #there's no way a Gaian would say this
+				modifier = { factor = 0 religion_openly_gaian_or_heresy_trigger = yes } #there's no way a Gaian would say this
 			}
 			10 = { set_variable = { which = debate_opinion value = 14 } 
 				modifier = { factor = 1.5 learning = 8 }
 			}
 			10 = { set_variable = { which = debate_opinion value = 15 } 
 				modifier = { factor = 1.5 learning = 8 }
-				modifier = { factor = 2 religion = gaian }
+				modifier = { factor = 2 religion_openly_gaian_or_heresy_trigger = yes }
 			}
 			10 = { set_variable = { which = debate_opinion value = 16 } 
 				modifier = { factor = 2 trait = cynical }

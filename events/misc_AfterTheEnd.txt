@@ -11008,7 +11008,7 @@ character_event = {
 							AND = {
 								NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 								OR = {
-									religion = gaian
+									religion_openly_gaian_or_heresy_trigger = yes
 									religion = neomayan
 								}
 							}
@@ -11055,6 +11055,7 @@ character_event = {
 				character_event = { id = ATE_WWW_RELIGION.8 } #Force militarist marshals to become designated regents
 				character_event = { id = ATE_WWW_RELIGION.10 }
 				character_event = { id = ATE_WWW_RELIGION.15 }
+				character_event = { id = ATE_WWW_RELIGION.28 }
 
 				set_character_flag = historical_character
 			}
@@ -11073,7 +11074,6 @@ character_event = {
 				}
 			}
 
-			
 		}
 		d_libertarian = {
 			holder_scope = {
@@ -11280,9 +11280,16 @@ character_event = {
 						primary_title = { has_law = enatic_succession }
 						is_female = no
 						NOT = { current_heir = { is_female = yes } } # Preserve investiture if valid
+						NOT = {
+							any_player = {
+								dynasty = PREV
+							}
+						}
 					}
 					log = "misc.6: [Root.GetBestName] make female"
 					set_gender = female
+					add_trait = hidden_female_trait
+					remove_trait = hidden_male_trait
 					give_ROOT_random_name = yes
 					character_event = { id = misc.6 days = 1 }
 				}
@@ -11291,6 +11298,11 @@ character_event = {
 						primary_title = { has_law = true_cognatic_succession }
 						is_female = no
 						NOT = { current_heir = { always = yes } } # Preserve investiture if valid
+						NOT = {
+							any_player = {
+								dynasty = PREV
+							}
+						}
 					}
 					log = "misc.6: [Root.GetBestName] make female 50/50"
 					character_event = { id = miscATEWW.5 }
@@ -11301,9 +11313,16 @@ character_event = {
 						primary_title = { has_law = agnatic_succession }
 						is_female = yes
 						NOT = { current_heir = { is_female = no } } # Preserve investiture if valid
+						NOT = {
+							any_player = {
+								dynasty = PREV
+							}
+						}
 					}
 					log = "misc.6: [Root.GetBestName] make male"
 					set_gender = male
+					add_trait = hidden_male_trait
+					remove_trait = hidden_female_trait
 					give_ROOT_random_name = yes
 					character_event = { id = misc.6 days = 1 }
 				}
@@ -11361,9 +11380,16 @@ character_event = {
 					limit = {
 						primary_title = { has_law = enatic_succession }
 						is_female = no
+						NOT = {
+							any_player = {
+								dynasty = PREV
+							}
+						}
 					}
 					log = "misc.6: [Root.GetBestName] make female"
 					set_gender = female
+					add_trait = hidden_female_trait
+					remove_trait = hidden_male_trait
 					give_ROOT_random_name = yes
 					character_event = { id = misc.6 days = 1 }
 				}
@@ -11371,6 +11397,11 @@ character_event = {
 					limit = {
 						primary_title = { has_law = true_cognatic_succession }
 						is_female = no
+						NOT = {
+							any_player = {
+								dynasty = PREV
+							}
+						}
 					}
 					log = "misc.6: [Root.GetBestName] make female 50/50"
 					character_event = { id = miscATEWW.5 }
@@ -11380,9 +11411,16 @@ character_event = {
 					limit = {
 						primary_title = { has_law = agnatic_succession }
 						is_female = yes
+						NOT = {
+							any_player = {
+								dynasty = PREV
+							}
+						}
 					}
 					log = "misc.6: [Root.GetBestName] make male"
 					set_gender = male
+					add_trait = hidden_male_trait
+					remove_trait = hidden_female_trait
 					give_ROOT_random_name = yes
 					character_event = { id = misc.6 days = 1 }
 				}
@@ -11443,9 +11481,16 @@ character_event = {
 					limit = {
 						primary_title = { has_law = enatic_succession }
 						is_female = no
+						NOT = {
+							any_player = {
+								dynasty = PREV
+							}
+						}
 					}
 					log = "misc.6: [Root.GetBestName] make female"
 					set_gender = female
+					add_trait = hidden_female_trait
+					remove_trait = hidden_male_trait
 					give_ROOT_random_name = yes
 					character_event = { id = misc.6 days = 1 }
 				}
@@ -11453,6 +11498,11 @@ character_event = {
 					limit = {
 						primary_title = { has_law = true_cognatic_succession }
 						is_female = no
+						NOT = {
+							any_player = {
+								dynasty = PREV
+							}
+						}
 					}
 					log = "misc.6: [Root.GetBestName] make female 50/50"
 					character_event = { id = miscATEWW.5 }
@@ -11462,9 +11512,16 @@ character_event = {
 					limit = {
 						primary_title = { has_law = agnatic_succession }
 						is_female = yes
+						NOT = {
+							any_player = {
+								dynasty = PREV
+							}
+						}
 					}
 					log = "misc.6: [Root.GetBestName] make male"
 					set_gender = male
+					add_trait = hidden_male_trait
+					remove_trait = hidden_female_trait
 					give_ROOT_random_name = yes
 					character_event = { id = misc.6 days = 1 }
 				}
@@ -11520,9 +11577,16 @@ character_event = {
 					limit = {
 						primary_title = { has_law = enatic_succession }
 						is_female = no
+						NOT = {
+							any_player = {
+								dynasty = PREV
+							}
+						}
 					}
 					log = "misc.6: [Root.GetBestName] make female"
 					set_gender = female
+					add_trait = hidden_female_trait
+					remove_trait = hidden_male_trait
 					give_ROOT_random_name = yes
 					character_event = { id = misc.6 days = 1 }
 				}
@@ -11530,6 +11594,11 @@ character_event = {
 					limit = {
 						primary_title = { has_law = true_cognatic_succession }
 						is_female = no
+						NOT = {
+							any_player = {
+								dynasty = PREV
+							}
+						}
 					}
 					log = "misc.6: [Root.GetBestName] make female 50/50"
 					character_event = { id = miscATEWW.5 }
@@ -11539,9 +11608,16 @@ character_event = {
 					limit = {
 						primary_title = { has_law = agnatic_succession }
 						is_female = yes
+						NOT = {
+							any_player = {
+								dynasty = PREV
+							}
+						}
 					}
 					log = "misc.6: [Root.GetBestName] make male"
 					set_gender = male
+					add_trait = hidden_male_trait
+					remove_trait = hidden_female_trait
 					give_ROOT_random_name = yes
 					character_event = { id = misc.6 days = 1 }
 				}

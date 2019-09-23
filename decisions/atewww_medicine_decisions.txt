@@ -44,7 +44,7 @@ decisions = {
 			factor = 0.25
 			modifier = {
 				factor = 0
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				NOT = { trait = cynical }
 			}
 			modifier = {
@@ -187,7 +187,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				NOT = { trait = cynical }
 			}
 			modifier = {
@@ -257,7 +257,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				NOT = { trait = cynical }
 			}
 			modifier = {
@@ -320,7 +320,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				NOT = { trait = cynical }
 			}
 			modifier = {
@@ -395,7 +395,7 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				NOT = { trait = cynical }
 			}
 			modifier = {

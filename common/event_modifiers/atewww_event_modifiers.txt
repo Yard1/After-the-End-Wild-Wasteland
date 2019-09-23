@@ -117,3 +117,10 @@ upgraded_lady_liberty = {
 	icon = 17
 	libertarian_opinion = 10
 }
+
+secret_amazonian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_amazonian
+	}
+}

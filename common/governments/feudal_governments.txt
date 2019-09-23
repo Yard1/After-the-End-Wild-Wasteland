@@ -45,7 +45,7 @@ feudal_governments = {
 			NOT = { is_government_potential = constitutional_rep }
 			NOT = { is_government_potential = military_governorate }
 			NAND = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				higher_tier_than = BARON
 			}
 			#Removed Chinese Imperial stuff
@@ -169,7 +169,7 @@ feudal_governments = {
 				}
 			}
 			AND = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				higher_tier_than = BARON
 			}
 			NOT = { is_government_potential = roman_imperial_government }

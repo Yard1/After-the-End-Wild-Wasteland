@@ -380,7 +380,6 @@ feudal_elective = {
 				has_law = cognatic_succession
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -420,7 +419,6 @@ feudal_elective = {
 				has_law = status_of_women_0
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -440,7 +438,6 @@ feudal_elective = {
 				has_law = status_of_women_1
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -460,7 +457,6 @@ feudal_elective = {
 				has_law = status_of_women_2
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -480,7 +476,6 @@ feudal_elective = {
 				has_law = status_of_women_3
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -511,7 +506,6 @@ feudal_elective = {
 			value = -75
 			localisation_key = tooltip_feudal_elector_vote_matriarchal
 			OR = {
-				religion = gaian
 				matriarchal_religion = yes
 			}
 			NOT = {
@@ -3843,9 +3837,17 @@ tanistry = {
 		days = 1
 		additive_modifier = {
 			value = 1
-			is_theocracy = yes
-			religion = gaian
-			FROMFROM = { holder_scope = { religion = gaian } }
+			localisation_key = tooltip_vote_strength_theocratic_feudal_government
+			OR = {
+				is_theocracy = yes
+				is_priest = yes
+			}
+			FROMFROM = {
+				holder_scope = {
+					government = theocratic_feudal_government
+					NOT = { character = ROOT }
+				}
+			}
 		}
 	}
 	
@@ -3974,7 +3976,6 @@ tanistry = {
 				has_law = cognatic_succession
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -4014,7 +4015,6 @@ tanistry = {
 				has_law = status_of_women_0
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -4034,7 +4034,6 @@ tanistry = {
 				has_law = status_of_women_1
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -4054,7 +4053,6 @@ tanistry = {
 				has_law = status_of_women_2
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -4074,7 +4072,6 @@ tanistry = {
 				has_law = status_of_women_3
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -4105,7 +4102,6 @@ tanistry = {
 			value = -75
 			localisation_key = tooltip_feudal_elector_vote_matriarchal
 			OR = {
-				religion = gaian
 				matriarchal_religion = yes
 			}
 			NOT = {
@@ -7389,7 +7385,6 @@ elective_gavelkind = {
 				has_law = cognatic_succession
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -7409,7 +7404,7 @@ elective_gavelkind = {
 				has_law = enatic_cognatic_succession
 			}
 			NOR = {
-				religion = gaian
+				matriarchal_religion = yes
 				has_religion_feature = religion_patriarchal
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -7430,7 +7425,6 @@ elective_gavelkind = {
 				has_law = status_of_women_0
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -7450,7 +7444,6 @@ elective_gavelkind = {
 				has_law = status_of_women_1
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -7470,7 +7463,6 @@ elective_gavelkind = {
 				has_law = status_of_women_2
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -7490,7 +7482,6 @@ elective_gavelkind = {
 				has_law = status_of_women_3
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -7521,7 +7512,6 @@ elective_gavelkind = {
 			value = -75
 			localisation_key = tooltip_feudal_elector_vote_matriarchal
 			OR = {
-				religion = gaian
 				matriarchal_religion = yes
 			}
 			NOT = {
@@ -10834,8 +10824,8 @@ eldership_rules = {
 				OR = {
 					trait = stubborn
 					AND = {
-						religion = gaian
-						FROMFROM = { holder_scope = { religion = gaian } }
+						religion_openly_gaian_or_heresy_trigger = yes
+						FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 						trait = cynical
 					}
 				}
@@ -10860,8 +10850,8 @@ eldership_rules = {
 				OR = {
 					trait = stubborn
 					AND = {
-						religion = gaian
-						FROMFROM = { holder_scope = { religion = gaian } }
+						religion_openly_gaian_or_heresy_trigger = yes
+						FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 						trait = cynical
 					}
 				}
@@ -10924,8 +10914,8 @@ eldership_rules = {
 			value = 6
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			liege = { character = ROOT }
 			has_character_modifier = elder_long_life_modifier #Favor former Elders who are still in your court or your direct vassals.
@@ -10935,8 +10925,8 @@ eldership_rules = {
 			value = 16
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			liege = { character = ROOT }
 			has_character_modifier = elder_long_life_modifier #Favor former Elders who are still in your court or your direct vassals, and who are old even more.
@@ -10946,8 +10936,8 @@ eldership_rules = {
 			value = 4
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			NOT = { liege = { character = ROOT } }
 			has_character_modifier = elder_long_life_modifier #Favor former Elders.
@@ -10957,8 +10947,8 @@ eldership_rules = {
 			value = 6
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			NOT = { liege = { character = ROOT } }
 			has_character_modifier = elder_long_life_modifier #Favor former Elders who are old even more.
@@ -10968,8 +10958,8 @@ eldership_rules = {
 			value = 20
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			age = 70
 		}
@@ -10977,8 +10967,8 @@ eldership_rules = {
 			value = 15
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			NOT = { age = 70 }
 			age = 60
@@ -10987,8 +10977,8 @@ eldership_rules = {
 			value = 10
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			NOT = { age = 60 }
 			age = 50
@@ -10997,8 +10987,8 @@ eldership_rules = {
 			value = 8
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			NOT = { age = 50 }
 			age = 40
@@ -11007,8 +10997,8 @@ eldership_rules = {
 			value = 7
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			NOT = { age = 40 }
 			age = 35
@@ -11017,8 +11007,8 @@ eldership_rules = {
 			value = 6
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			NOT = { age = 35 }
 			age = 30
@@ -11027,8 +11017,8 @@ eldership_rules = {
 			value = -8
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			NOT = { age = 27 }
 		}
@@ -11036,8 +11026,8 @@ eldership_rules = {
 			value = 9
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			learning = 18
 			age = 35
@@ -11046,8 +11036,8 @@ eldership_rules = {
 			value = 8
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			NOT = { learning = 18 }
 			learning = 16
@@ -11057,8 +11047,8 @@ eldership_rules = {
 			value = 7
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			NOT = { learning = 16 }
 			learning = 14
@@ -11068,8 +11058,8 @@ eldership_rules = {
 			value = 6
 			is_vassal_or_below_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			NOT = { learning = 14 }
 			learning = 12
@@ -11079,8 +11069,8 @@ eldership_rules = {
 			value = 8
 			vassal_of = FROMFROM
 			NAND = {
-				religion = gaian #Gaians don't care that much about age
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			age = 37
 			FROMFROM = { holder_scope = { culture = ROOT } }
@@ -11093,8 +11083,8 @@ eldership_rules = {
 		additive_modifier = {
 			value = 3
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			liege = { character = ROOT }
 			has_character_modifier = elder_long_life_modifier #Favor former Elders who are still in your court or your direct vassals.
 			NOT = { age = 40 }
@@ -11102,8 +11092,8 @@ eldership_rules = {
 		additive_modifier = {
 			value = 8
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			liege = { character = ROOT }
 			has_character_modifier = elder_long_life_modifier #Favor former Elders who are still in your court or your direct vassals, and who are old even more.
 			age = 40
@@ -11111,8 +11101,8 @@ eldership_rules = {
 		additive_modifier = {
 			value = 2
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { liege = { character = ROOT } }
 			has_character_modifier = elder_long_life_modifier #Favor former Elders.
 			NOT = { age = 40 }
@@ -11120,8 +11110,8 @@ eldership_rules = {
 		additive_modifier = {
 			value = 3
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { liege = { character = ROOT } }
 			has_character_modifier = elder_long_life_modifier #Favor former Elders who are old even more.
 			age = 40
@@ -11129,154 +11119,154 @@ eldership_rules = {
 		additive_modifier = {
 			value = 10
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians care about piety
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians care about piety
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			piety = 1250
 		}
 		additive_modifier = {
 			value = 7
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians care about piety
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians care about piety
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			piety = 1000
 			NOT = { piety = 1250 }
 		}
 		additive_modifier = {
 			value = 5
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians care about piety
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians care about piety
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			piety = 750
 			NOT = { piety = 1000 }
 		}
 		additive_modifier = {
 			value = 4
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians care about piety
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians care about piety
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			piety = 500
 			NOT = { piety = 750 }
 		}
 		additive_modifier = {
 			value = 4
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians care about piety
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians care about piety
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			piety = 250
 			NOT = { piety = 500 }
 		}
 		additive_modifier = {
 			value = 3
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians care about piety
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians care about piety
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			piety = 100
 			NOT = { piety = 250 }
 		}
 		additive_modifier = {
 			value = 10
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			age = 70
 		}
 		additive_modifier = {
 			value = 7
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { age = 70 }
 			age = 60
 		}
 		additive_modifier = {
 			value = 5
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { age = 60 }
 			age = 50
 		}
 		additive_modifier = {
 			value = 4
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { age = 50 }
 			age = 40
 		}
 		additive_modifier = {
 			value = 4
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { age = 40 }
 			age = 35
 		}
 		additive_modifier = {
 			value = 3
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { age = 35 }
 			age = 30
 		}
 		additive_modifier = {
 			value = -4
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			is_adult = no
 		}
 		additive_modifier = {
 			value = 5
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			learning = 18
 		}
 		additive_modifier = {
 			value = 4
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { learning = 18 }
 			learning = 16
 		}
 		additive_modifier = {
 			value = 4
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { learning = 16 }
 			learning = 14
 		}
 		additive_modifier = {
 			value = 3
 			is_vassal_or_below_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { learning = 14 }
 			learning = 12
 		}
 		additive_modifier = {
 			value = 4
 			vassal_of = FROMFROM
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			FROMFROM = { holder_scope = { culture = ROOT } }
 			FROMFROM = { holder_scope = { religion = ROOT } }
 			has_job_title = job_spiritual
 		}
 		additive_modifier = { #For Gaians, the elder should be a priest
 			value =  2
-			religion = gaian
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			is_priest = yes
 		}
 		additive_modifier = { #For Gaians, the elder should be a priest
 			value = -5
-			religion = gaian
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = {
 				FROMFROM = { holder_scope = { character = ROOT } }
 			}
@@ -11377,7 +11367,6 @@ eldership_rules = {
 				has_law = cognatic_succession
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -11400,7 +11389,7 @@ eldership_rules = {
 				has_law = enatic_cognatic_succession
 			}
 			NOR = {
-				religion = gaian
+				matriarchal_religion = yes
 				has_religion_feature = religion_patriarchal
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -11424,7 +11413,6 @@ eldership_rules = {
 				has_law = status_of_women_0
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -11447,7 +11435,6 @@ eldership_rules = {
 				has_law = status_of_women_1
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -11470,7 +11457,6 @@ eldership_rules = {
 				has_law = status_of_women_2
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -11493,7 +11479,6 @@ eldership_rules = {
 				has_law = status_of_women_3
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -11530,7 +11515,6 @@ eldership_rules = {
 			value = -75
 			localisation_key = tooltip_feudal_elector_vote_matriarchal
 			OR = {
-				religion = gaian
 				matriarchal_religion = yes
 			}
 			NOT = {
@@ -11582,8 +11566,8 @@ eldership_rules = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_infidel
 			NAND = {
-				religion = gaian
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
@@ -11603,8 +11587,8 @@ eldership_rules = {
 			value = -25
 			localisation_key = tooltip_feudal_elector_vote_heathen
 			NAND = {
-				religion = gaian
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
@@ -11673,8 +11657,8 @@ eldership_rules = {
 			value = -30
 			localisation_key = tooltip_feudal_elector_vote_heretic
 			NAND = {
-				religion = gaian
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
@@ -11703,8 +11687,8 @@ eldership_rules = {
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
 			NOT = { has_religion_feature = religion_dogmatic }
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			FROM = { 
 				religion_group = ROOT
 				NOT = { religion = ROOT } 
@@ -11717,8 +11701,8 @@ eldership_rules = {
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
 			NOT = { has_religion_feature = religion_dogmatic }
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOR = { 
 				AND = {  
 					trait = sympathy_christendom
@@ -11780,8 +11764,8 @@ eldership_rules = {
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
 			NOT = { has_religion_feature = religion_dogmatic }
-			religion = gaian #Gaians don't care that much about age
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			FROM = { is_heresy_of = ROOT }
 		}
 
@@ -11893,8 +11877,8 @@ eldership_rules = {
 		additive_modifier = { 
 			value = -20
 			localisation_key = tooltip_feudal_elector_vote_piety_negative
-			religion = gaian #Gaians care about piety
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians care about piety
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { 
 				character = FROM
 			}
@@ -11903,8 +11887,8 @@ eldership_rules = {
 		additive_modifier = { 
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_piety_negative
-			religion = gaian #Gaians care about piety
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians care about piety
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { 
 				character = FROM
 			}
@@ -11914,8 +11898,8 @@ eldership_rules = {
 		additive_modifier = { 
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_piety_negative
-			religion = gaian #Gaians care about piety
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians care about piety
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { 
 				character = FROM
 			}
@@ -11925,8 +11909,8 @@ eldership_rules = {
 		additive_modifier = { 
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_piety_negative
-			religion = gaian #Gaians care about piety
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians care about piety
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { 
 				character = FROM
 			}
@@ -11936,8 +11920,8 @@ eldership_rules = {
 		additive_modifier = { 
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_piety_positive
-			religion = gaian #Gaians care about piety
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians care about piety
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { 
 				character = FROM
 			}
@@ -11947,8 +11931,8 @@ eldership_rules = {
 		additive_modifier = { 
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_piety_positive
-			religion = gaian #Gaians care about piety
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians care about piety
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { 
 				character = FROM
 			}
@@ -11958,8 +11942,8 @@ eldership_rules = {
 		additive_modifier = { 
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_piety_positive
-			religion = gaian #Gaians care about piety
-			FROMFROM = { holder_scope = { religion = gaian } }
+			religion_openly_gaian_or_heresy_trigger = yes #Gaians care about piety
+			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOT = { 
 				character = FROM
 			}
@@ -12038,8 +12022,8 @@ eldership_rules = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_martial_score_negative
 			NAND = {
-				religion = gaian
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			FROM = { 
 				NOT = { stewardship = 5 }
@@ -12052,8 +12036,8 @@ eldership_rules = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_martial_score
 			NAND = {
-				religion = gaian
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			FROM = { 
 				stewardship = 10
@@ -12067,8 +12051,8 @@ eldership_rules = {
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_martial_score
 			NAND = {
-				religion = gaian
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			FROM = { 
 				stewardship = 15
@@ -12082,8 +12066,8 @@ eldership_rules = {
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_martial_score
 			NAND = {
-				religion = gaian
-				FROMFROM = { holder_scope = { religion = gaian } }
+				religion_openly_gaian_or_heresy_trigger = yes
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			FROM = { 
 				stewardship = 20
@@ -12098,7 +12082,7 @@ eldership_rules = {
 			localisation_key = tooltip_feudal_elector_vote_spiritual_education
 			NAND = {
 				religion = gaian
-				FROMFROM = { holder_scope = { religion = gaian } }
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			FROM = { 
 				NOT = { learning = 5 }
@@ -12112,7 +12096,7 @@ eldership_rules = {
 			localisation_key = tooltip_feudal_elector_vote_spiritual_education
 			NAND = {
 				religion = gaian
-				FROMFROM = { holder_scope = { religion = gaian } }
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			FROM = { 
 				learning = 10
@@ -12127,7 +12111,7 @@ eldership_rules = {
 			localisation_key = tooltip_feudal_elector_vote_spiritual_education
 			NAND = {
 				religion = gaian
-				FROMFROM = { holder_scope = { religion = gaian } }
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			FROM = { 
 				learning = 15
@@ -12142,10 +12126,69 @@ eldership_rules = {
 			localisation_key = tooltip_feudal_elector_vote_spiritual_education
 			NAND = {
 				religion = gaian
-				FROMFROM = { holder_scope = { religion = gaian } }
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			}
 			FROM = { 
 				learning = 20
+			}
+			FROMFROM = { 
+				holder_scope = { character = ROOT } 
+			}
+		}
+
+		additive_modifier = { # ...but Amazonians favor martial
+			value = -10
+			localisation_key = tooltip_feudal_elector_vote_spiritual_education
+			NAND = {
+				religion = amazonian
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
+			}
+			FROM = { 
+				NOT = { martial = 5 }
+			}
+			FROMFROM = { 
+				holder_scope = { character = ROOT } 
+			}
+		}
+		additive_modifier = {  # ...but Amazonians favor martial
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_spiritual_education
+			NAND = {
+				religion = amazonian
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
+			}
+			FROM = { 
+				martial = 10
+				NOT = { martial = 15 }
+			}
+			FROMFROM = { 
+				holder_scope = { character = ROOT } 
+			}
+		}
+		additive_modifier = { # ...but Amazonians favor martial
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_spiritual_education
+			NAND = {
+				religion = amazonian
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
+			}
+			FROM = { 
+				martial = 15
+				NOT = { martial = 20 }
+			}
+			FROMFROM = { 
+				holder_scope = { character = ROOT } 
+			}
+		}
+		additive_modifier = { # ...but Amazonians favor martial
+			value = 15
+			localisation_key = tooltip_feudal_elector_vote_spiritual_education
+			NAND = {
+				religion = amazonian
+				FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
+			}
+			FROM = { 
+				martial = 20
 			}
 			FROMFROM = { 
 				holder_scope = { character = ROOT } 
@@ -14953,7 +14996,6 @@ eldership_rules = {
 				has_law = cognatic_succession
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -14974,7 +15016,7 @@ eldership_rules = {
 				has_law = enatic_cognatic_succession
 			}
 			NOR = {
-				religion = gaian
+				matriarchal_religion = yes
 				has_religion_feature = religion_patriarchal
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -14995,7 +15037,6 @@ eldership_rules = {
 				has_law = status_of_women_0
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -15016,7 +15057,6 @@ eldership_rules = {
 				has_law = status_of_women_1
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -15037,7 +15077,6 @@ eldership_rules = {
 				has_law = status_of_women_2
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -15058,7 +15097,6 @@ eldership_rules = {
 				has_law = status_of_women_3
 			}
 			NOR = {
-				religion = gaian
 				matriarchal_religion = yes
 				equal_religion = yes
 				has_religion_feature = religion_feature_midewiwin
@@ -15091,7 +15129,6 @@ eldership_rules = {
 			value = -75
 			localisation_key = tooltip_feudal_elector_vote_matriarchal
 			OR = {
-				religion = gaian
 				matriarchal_religion = yes
 			}
 			NOT = {

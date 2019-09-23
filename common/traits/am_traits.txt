@@ -1109,6 +1109,7 @@ secretly_rastafarian = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -1200,6 +1201,7 @@ secretly_voodoo = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -1289,6 +1291,7 @@ secretly_santeria = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -1378,6 +1381,7 @@ secretly_candomble = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -1467,6 +1471,7 @@ secretly_espiritista = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -1557,6 +1562,7 @@ secretly_espiritista_reformed = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -1648,6 +1654,7 @@ secretly_peyotist = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -1740,6 +1747,7 @@ secretly_midewiwin = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -1833,6 +1841,7 @@ secretly_midewiwin_reformed = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -1925,6 +1934,7 @@ secretly_raven_tales = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -2016,6 +2026,7 @@ secretly_raven_tales_reformed = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -2106,6 +2117,7 @@ secretly_catholic = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -2195,6 +2207,7 @@ secretly_neognostic = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -2285,6 +2298,7 @@ secretly_sedevacantist = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -2375,6 +2389,7 @@ secretly_nestorian = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -2465,6 +2480,7 @@ secretly_ursuline = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -2555,6 +2571,7 @@ secretly_angeline = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -2645,6 +2662,7 @@ secretly_confederated = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -2736,6 +2754,7 @@ secretly_anabaptist = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -2827,6 +2846,7 @@ secretly_batenburger = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -2918,6 +2938,7 @@ secretly_evangelical = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -3008,6 +3029,7 @@ secretly_antinomian = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -3099,6 +3121,7 @@ secretly_charismatic = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -3191,6 +3214,7 @@ secretly_postadventist = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -3283,6 +3307,7 @@ secretly_falling_star = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -3374,6 +3399,7 @@ secretly_moravian = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -3464,6 +3490,7 @@ secretly_high_church = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -3554,6 +3581,7 @@ secretly_nonconformist = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -3644,6 +3672,7 @@ secretly_apostolic = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -3734,6 +3763,7 @@ secretly_sacred_heart = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -3824,6 +3854,7 @@ secretly_gracia_divina = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -3914,6 +3945,7 @@ secretly_cetic = {
 		secretly_gracia_divina
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -3996,7 +4028,7 @@ secretly_gaian = {
 		secretly_charismatic   secretly_postadventist
 		secretly_falling_star   secretly_moravian
 		secretly_high_church
-		
+		secretly_amazonian
 		secretly_nonconformist
 		secretly_apostolic
 		
@@ -4045,6 +4077,96 @@ secretly_gaian = {
 			AND = {
 				is_close_relative = FROM
 				trait = secretly_gaian
+			}
+		}
+	}
+
+	same_opinion = 15
+	
+	random = no
+	customizer = no
+	ai_zeal = -50
+}
+#Amazonian
+secretly_amazonian = {
+
+	potential = {
+		NOT = {
+			religion = amazonian
+		}
+	}
+	
+	opposites = {
+		secretly_rastafarian
+		secretly_voodoo
+		secretly_santeria
+		secretly_candomble
+		secretly_espiritista
+		secretly_espiritista_reformed
+		secretly_peyotist   secretly_midewiwin   secretly_midewiwin_reformed
+		secretly_raven_tales   secretly_raven_tales_reformed
+		secretly_catholic
+		secretly_neognostic
+		secretly_sedevacantist
+		secretly_nestorian
+		secretly_ursuline
+		secretly_angeline
+		secretly_confederated
+		secretly_anabaptist   secretly_batenburger
+		secretly_evangelical
+		secretly_antinomian
+		secretly_charismatic   secretly_postadventist
+		secretly_falling_star   secretly_moravian
+		secretly_high_church
+		secretly_amazonian
+		secretly_nonconformist
+		secretly_apostolic
+		
+		secretly_sacred_heart
+		secretly_gracia_divina
+		secretly_cetic
+		secretly_shinto
+		secretly_nousthreskeia
+		secretly_mormon
+		secretly_bickertonite
+		secretly_woolleyite
+		secretly_strangite
+		secretly_sol_invicta
+		secretly_mictlantec
+		secretly_uahomche
+		secretly_neomayan
+		secretly_hamiltonian
+		secretly_americanist
+		secretly_jeffersonian
+		secretly_libertarian
+		secretly_consumerist secretly_monetarist
+		secretly_atomicist
+		secretly_pagan
+		secretly_revelationist_reformed
+		secretly_revelationist
+		secretly_chrome_cultist
+		secretly_rust_cultist
+		secretly_occultist_reformed
+		secretly_occultist
+		secretly_thelemic_reformed
+		secretly_thelemic
+		secretly_norse_pagan_reformed
+		secretly_norse_pagan
+		secretly_celtic_pagan
+		secretly_celtic_pagan_reformed		
+		secretly_brethren
+		secretly_jewish
+		secretly_reform   secretly_meshichist
+		secretly_hindu
+	}
+
+	is_visible = {
+		OR = {
+			character = FROM
+			society_member_of = secret_religious_society_amazonian
+			AND = {
+				is_close_relative = FROM
+				trait = secretly_amazonian
 			}
 		}
 	}
@@ -4185,6 +4307,7 @@ secretly_nousthreskeia = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_mormon
 		secretly_bickertonite
 		secretly_woolleyite
@@ -4275,6 +4398,7 @@ secretly_mormon = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_bickertonite
 		secretly_woolleyite
@@ -4365,6 +4489,7 @@ secretly_bickertonite = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_woolleyite
@@ -4455,6 +4580,7 @@ secretly_woolleyite = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -4545,6 +4671,7 @@ secretly_strangite = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -4635,6 +4762,7 @@ secretly_sol_invicta = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -4725,6 +4853,7 @@ secretly_mictlantec = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -4815,6 +4944,7 @@ secretly_uahomche = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -4905,6 +5035,7 @@ secretly_neomayan = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -4995,6 +5126,7 @@ secretly_americanist = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -5085,6 +5217,7 @@ secretly_hamiltonian = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -5175,6 +5308,7 @@ secretly_jeffersonian = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -5265,6 +5399,7 @@ secretly_libertarian = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -5355,6 +5490,7 @@ secretly_consumerist = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -5445,6 +5581,7 @@ secretly_monetarist = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -5535,6 +5672,7 @@ secretly_atomicist = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -5625,6 +5763,7 @@ secretly_aphite = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -5715,6 +5854,7 @@ secretly_pagan = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -5805,6 +5945,7 @@ secretly_revelationist_reformed = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -5895,6 +6036,7 @@ secretly_revelationist = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -5985,6 +6127,7 @@ secretly_chrome_cultist = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -6075,6 +6218,7 @@ secretly_rust_cultist = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -6165,6 +6309,7 @@ secretly_occultist_reformed = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -6255,6 +6400,7 @@ secretly_occultist = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -6345,6 +6491,7 @@ secretly_thelemic_reformed = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -6435,6 +6582,7 @@ secretly_thelemic = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -6525,6 +6673,7 @@ secretly_norse_pagan_reformed = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -6615,6 +6764,7 @@ secretly_norse_pagan = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -6705,6 +6855,7 @@ secretly_celtic_pagan = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -6795,6 +6946,7 @@ secretly_celtic_pagan_reformed = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -6885,6 +7037,7 @@ secretly_brethren = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -6974,6 +7127,7 @@ secretly_jewish = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -7064,6 +7218,7 @@ secretly_reform = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -7154,6 +7309,7 @@ secretly_meshichist = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite
@@ -7245,6 +7401,7 @@ secretly_hindu = {
 		secretly_cetic
 		secretly_gaian
 		secretly_shinto
+		secretly_amazonian
 		secretly_nousthreskeia
 		secretly_mormon
 		secretly_bickertonite

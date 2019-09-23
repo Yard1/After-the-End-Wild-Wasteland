@@ -302,6 +302,12 @@ religion_same_as_bloodline_founder_trigger = { #WHY PARADOX
 	}
 	trigger_if = {
 		limit = {
+			FROM = { has_bloodline_flag = requires_amazonian_religion }
+		}
+		ROOT = { show_scope_change = no religion = amazonian }
+	}
+	trigger_if = {
+		limit = {
 			FROM = { has_bloodline_flag = requires_shinto_religion }
 		}
 		ROOT = { show_scope_change = no religion = shinto }

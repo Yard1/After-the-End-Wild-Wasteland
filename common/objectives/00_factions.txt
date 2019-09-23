@@ -4565,6 +4565,12 @@ faction_independence = {
 			factor = 0
 			war = yes
 		}
+
+		modifier = {
+			factor = 2
+			religion = amazonian
+			liege = { matriarchal_religion = no }
+		}
 		
 		modifier = {
 			factor = 0
@@ -4993,6 +4999,12 @@ faction_independence = {
 			is_merchant_republic = no
 		}
 		
+		modifier = {
+			factor = 2
+			religion = amazonian
+			liege = { matriarchal_religion = no }
+		}
+
 		modifier = {
 			factor = 0
 			OR = {

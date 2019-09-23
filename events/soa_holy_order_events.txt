@@ -10271,7 +10271,7 @@ character_event = {
 	max_age = 45
 	only_capable = yes
 	prisoner = no
-	religion = gaian
+	religion_group = pacific
 	
 	trigger = {
 		is_ruler = no
@@ -10293,7 +10293,7 @@ character_event = {
 		
 		liege = {
 			holy_order = no
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			liege = {
 				holy_order = no
 			}
@@ -10556,7 +10556,7 @@ character_event = {
 	
 	min_age = 16
 	only_rulers = yes
-	religion = gaian
+	religion_group = pacific
 	
 	trigger = {
 		d_keepers_of_the_green_peace = {

@@ -1358,3 +1358,101 @@ character_event = {
 	}
 
 }
+
+character_event = {
+	id = ATE_WWW_RELIGION.27
+	hide_window = yes
+		
+	trigger = {
+		NOT = { government = militarist_government }
+		any_vassal = {
+			higher_tier_than = BARON
+			any_demesne_title = {
+				has_law = succ_militarist_appointment
+				NOT = { is_law_potential = succ_militarist_appointment }
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		log = "ATE_WWW_RELIGION.25: fire for [Root.GetBestName]"
+		if = {
+			limit = { has_law = ze_administration_laws_0 }
+			any_demesne_title = { 
+				limit = {
+					has_law = succ_militarist_appointment
+					NOT = { is_law_potential = succ_militarist_appointment }
+				}
+				add_law = { law = succ_gavelkind cooldown = no opinion_effect = no } 
+			}
+		}
+		else = {
+			any_demesne_title = { 
+				limit = {
+					has_law = succ_militarist_appointment
+					NOT = { is_law_potential = succ_militarist_appointment }
+				}
+				add_law = { law = succ_primogeniture cooldown = no opinion_effect = no } 
+			}
+		}
+		any_demesne_title = {
+			if = {
+				limit = {
+					higher_tier_than = DUKE
+					has_law = vassal_wars_law_1
+					NOT = { is_law_allowed = vassal_wars_law_1 }
+				}
+				add_law = { law = vassal_wars_law_0 cooldown = no opinion_effect = no }
+			}
+			if = {
+				limit = {
+					higher_tier_than = DUKE
+					has_law = out_of_realm_inheritance_law_1
+					NOT = { is_law_allowed = out_of_realm_inheritance_law_1 }
+				}
+				add_law = { law = out_of_realm_inheritance_law_0 cooldown = no opinion_effect = no }
+			}
+		}
+		if = {
+			limit = { any_demesne_title = { has_title_flag = was_militarist } }
+			character_event = { id = ATE_WWW_RELIGION.12 }
+		}
+		any_demesne_title = { 
+			limit = { higher_tier_than = BARON }
+			clr_title_flag = was_militarist 
+			set_title_flag = was_feudal 
+		}
+		any_vassal = {
+			limit = { is_feudal = yes is_ruler = yes mercenary = no }
+			character_event = { id = ATE_WWW_RELIGION.26 }
+		}
+	}
+
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.28
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOR = {
+			trait = hidden_male_trait
+			trait = hidden_female_trait
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { is_female = yes }
+			add_trait = hidden_female_trait
+		}
+		else = {
+			add_trait = hidden_male_trait
+		}
+	}
+
+}

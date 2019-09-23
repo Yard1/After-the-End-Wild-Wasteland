@@ -2941,7 +2941,7 @@ character_event = {
 		trigger = {
 			NOT = {	religion = cetic } #do not believe in a God in the traditional sense
 			NOT = { religion = neutic }
-			NOT = {	religion = gaian }
+			NOT = {	religion_openly_gaian_or_heresy_trigger = yes }
 		}
 		random_list = {
 			70 = {

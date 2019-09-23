@@ -1412,7 +1412,7 @@ decisions = {
 					NOR = {
 						religion = cetic
 						religion = neutic
-						religion = gaian
+						religion_openly_gaian_or_heresy_trigger = yes
 					}
 				}
 				
@@ -1450,7 +1450,7 @@ decisions = {
 			
 			if = {
 				limit = {
-					religion = gaian
+					religion_openly_gaian_or_heresy_trigger = yes
 					higher_tier_than = BARON
 				}
 				
@@ -1614,7 +1614,7 @@ decisions = {
 					NOR = {
 						religion = cetic
 						religion = neutic
-						religion = gaian
+						religion_openly_gaian_or_heresy_trigger = yes
 					}
 				}
 				
@@ -1652,7 +1652,7 @@ decisions = {
 			
 			if = {
 				limit = {
-					religion = gaian
+					religion_openly_gaian_or_heresy_trigger = yes
 					higher_tier_than = BARON
 				}
 				

@@ -1461,7 +1461,7 @@ letter_event = {
 						religion_group = latter_day_saints
 						religion = cetic
 						religion = neutic
-						religion = gaian
+						religion_openly_gaian_or_heresy_trigger = yes
 					}
 				}
 			}

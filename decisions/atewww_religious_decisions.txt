@@ -357,10 +357,7 @@ decisions = {
 			#	text = tooltip_vote_at_least_one_kill
 			#	has_character_flag = killed_a_man
 			#}
-			OR = {
-				trait = buccaneer
-				trait = corsair
-			}
+			trait = corsair
 			prestige = 8000
 			piety = 2000
 		}
@@ -369,18 +366,7 @@ decisions = {
 			wealth = -600
 			prestige = -4000
 			piety = -1000
-			if = {
-				limit = {
-					trait = buccaneer
-				}
-				remove_trait = buccaneer
-			}
-			else_if = {
-				limit = {
-					trait = corsair
-				}
-				remove_trait = corsair
-			}
+			hidden_tooltip = { remove_trait = corsair }
 			add_trait = pirate_king
 			set_character_flag = pirate_king_flag
 			activate_title = { title = k_pirate_kingdom status = yes }
@@ -503,6 +489,13 @@ decisions = {
 				save_persistent_event_target = {
 					name = first_pirate_king
 					scope = owner
+				}
+			}
+			any_playable_ruler = {
+				limit = { religion = brethren }
+				opinion = {
+					modifier = succ_law_change
+					who = ROOT
 				}
 			}
 			hidden_tooltip = { 

@@ -132,7 +132,7 @@ character_event = {
         								religion = trevelationist_reformed
         							}
         						}
-        						religion = gaian
+        						religion_openly_gaian_or_heresy_trigger = yes
         					}
         				}
         				modifier = {

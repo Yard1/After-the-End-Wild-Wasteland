@@ -4393,7 +4393,7 @@
 			OR = {
 				religion = consumerist
 				religion = monetarist
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 			}
 		}
 	}

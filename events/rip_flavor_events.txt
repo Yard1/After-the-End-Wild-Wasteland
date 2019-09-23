@@ -7967,7 +7967,7 @@ character_event = {
 		}
 		OR = {
 			religion = neognostic
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			religion = cetic
 			religion = neutic
 		}

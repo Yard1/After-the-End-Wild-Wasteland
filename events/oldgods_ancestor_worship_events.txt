@@ -1594,15 +1594,7 @@ character_event = {
 	immediate = {
 		if = { 
 			limit = {
-				OR = { 
-					has_law = status_of_women_3
-					has_law = status_of_women_4
-					has_game_rule = {
-						name = gender
-						value = all
-					}
-					matriarchal_religion = yes
-				}
+				matriarchal_religion = yes
 			}
 
 			create_character = {
@@ -1626,24 +1618,34 @@ character_event = {
 				save_event_target_as = ancestors_commander
 			}
 		}
-		if = { 
+		else_if = {
 			limit = {
-				NOR = { 
-					religion = gaian
-					religion = ursuline
-					religion = angeline
-					religion = reform
-					religion = sol_invicta
-					religion = neomayan
-					has_law = status_of_women_3
-					has_law = status_of_women_4
-					has_game_rule = {
-						name = gender
-						value = all
-					}
-				}
+				gender_equality_trigger = yes
 			}
 
+			create_character = {
+				female = 50
+				age = 35
+				random_traits = yes
+				trait = strong
+				trait = brave
+				trait = brilliant_strategist
+				trait = holy_warrior
+				flag = keep_male
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+				remove_trait = feeble
+				remove_trait = weak
+				remove_trait = craven
+				remove_trait = imbecile
+				remove_trait = slow
+				remove_trait = dull
+				save_event_target_as = ancestors_commander
+			}
+		}
+		else = { 
 			create_character = {
 				female = no
 				age = 35

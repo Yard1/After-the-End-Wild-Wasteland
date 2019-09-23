@@ -848,45 +848,7 @@ can_be_mercenary_leader_potential_trigger = {
 	same_realm = FROM
 	OR = {
 		is_female = no
-		AND = {
-			religion = ursuline
-			FROM = {
-				religion = ursuline
-			}
-		}
-		AND = {
-			religion = angeline
-			FROM = {
-				religion = angeline
-			}
-		}
-		AND = {
-			religion = gaian
-			FROM = {
-				religion = gaian
-			}
-		}
-		AND = {
-			religion = sol_invicta
-			FROM = {
-				religion = sol_invicta
-			}
-		}
-		AND = {
-			religion = neomayan
-			FROM = {
-				religion = neomayan
-			}
-		}
-		FROM = {
-			has_law = true_cognatic_succession
-		}
-		FROM = {
-			has_law = enatic_cognatic_succession
-		}
-		FROM = {
-			has_law = enatic_succession
-		}
+		gender_equality_trigger = yes
 	}
 }
 #Used with character interaction to replace merc leader. DO NOT REMOVE
@@ -1005,30 +967,6 @@ can_be_chancellor_trigger = {
 				}
 				trait = horse # So we can have female glitterhoofs! :D
 				AND = {
-					religion = gaian
-					liege = { religion = gaian }
-				}
-				AND = {
-					religion = ursuline
-					liege = { religion = ursuline }
-				}
-				AND = {
-					religion = angeline
-					liege = { religion = angeline }
-				}
-				AND = {
-					religion = sol_invicta
-					liege = { religion = sol_invicta }
-				}
-				AND = {
-					religion = neomayan
-					liege = { religion = neomayan }
-				}
-				AND = {
-					religion = reform
-					liege = { religion = reform }
-				}
-				AND = {
 					liege = {
 						primary_title = {
 							OR = {
@@ -1095,32 +1033,6 @@ can_be_marshal_trigger = {
 					liege = { gender_equality_trigger = yes }
 				}
 				trait = horse # So we can have female glitterhoofs! :D
-				OR = {
-					AND = {
-						religion = gaian
-						liege = { religion = gaian }
-					}
-					AND = {
-						religion = ursuline
-						liege = { religion = ursuline }
-					}
-					AND = {
-						religion = angeline
-						liege = { religion = angeline }
-					}
-					AND = {
-						religion = sol_invicta
-						liege = { religion = sol_invicta }
-					}
-					AND = {
-						religion = neomayan
-						liege = { religion = neomayan }
-					}
-					AND = {
-						religion = reform
-						liege = { religion = reform }
-					}
-				}
 				AND = {
 					liege = {
 						primary_title = {
@@ -1177,30 +1089,6 @@ can_be_treasurer_trigger = {
 					liege = { gender_equality_trigger = yes }
 				}
 				trait = horse # So we can have female glitterhoofs! :D
-				AND = {
-					religion = gaian
-					liege = { religion = gaian }
-				}
-				AND = {
-					religion = ursuline
-					liege = { religion = ursuline }
-				}
-				AND = {
-					religion = angeline
-					liege = { religion = angeline }
-				}
-				AND = {
-					religion = sol_invicta
-					liege = { religion = sol_invicta }
-				}
-				AND = {
-					religion = neomayan
-					liege = { religion = neomayan }
-				}
-				AND = {
-					religion = reform
-					liege = { religion = reform }
-				}
 				AND = {
 					liege = {
 						primary_title = {
@@ -1267,76 +1155,6 @@ can_be_spymaster_trigger = {
 					OR = {
 						mother = { character = ROOT }
 						any_spouse = { character = ROOT }
-					}
-				}
-				AND = {
-					religion_group = pagan_group
-					liege = {
-						religion_group = pagan_group
-						NOR = {
-							liege = { matriarchal_religion = yes } 
-							liege = { has_religion_feature = religion_patriarchal } 
-						}
-					}
-				}
-				AND = {
-					religion = ursuline
-					liege = { 
-						religion = ursuline 
-						NOR = {
-							liege = { matriarchal_religion = yes } 
-							liege = { has_religion_feature = religion_patriarchal } 
-						}
-					}
-				}
-				AND = {
-					religion = angeline
-					liege = { 
-						religion = angeline 
-						NOR = {
-							liege = { matriarchal_religion = yes } 
-							liege = { has_religion_feature = religion_patriarchal } 
-						}
-					}
-				}
-				AND = {
-					religion = gaian
-					liege = { 
-						religion = gaian 
-						NOR = {
-							liege = { matriarchal_religion = yes } 
-							liege = { has_religion_feature = religion_patriarchal } 
-						}
-					}
-				}
-				AND = {
-					religion = sol_invicta
-					liege = { 
-						religion = sol_invicta 
-						NOR = {
-							liege = { matriarchal_religion = yes } 
-							liege = { has_religion_feature = religion_patriarchal } 
-						}
-					}
-				}
-				AND = {
-					religion = neomayan
-					liege = { 
-						religion = neomayan 
-						NOR = {
-							liege = { matriarchal_religion = yes } 
-							liege = { has_religion_feature = religion_patriarchal } 
-						}
-					}
-				}
-				AND = {
-					religion = reform
-					liege = { 
-						religion = reform 
-						NOR = {
-							liege = { matriarchal_religion = yes } 
-							liege = { has_religion_feature = religion_patriarchal } 
-						}
 					}
 				}
 				AND = {
@@ -1492,17 +1310,6 @@ can_be_councilmember_king_trigger = {
 				NOT = { liege = { has_religion_feature = religion_patriarchal } } 
 			}
 			AND = {
-				OR = {
-					religion = gaian
-					religion = ursuline
-					religion = angeline
-					religion = reform
-					religion = sol_invicta
-					religion = neomayan
-				}
-				liege = { religion = ROOT }
-			}
-			AND = {
 				is_female = yes
 				liege = {
 					primary_title = {
@@ -1554,30 +1361,6 @@ can_be_councilmember_emperor_trigger = {
 				AND = {
 					is_female = yes 
 					liege = { gender_equality_trigger = yes }
-				}
-				AND = {
-					religion = ursuline
-					liege = { religion = ursuline }
-				}
-				AND = {
-					religion = angeline
-					liege = { religion = angeline }
-				}
-				AND = {
-					religion = gaian
-					liege = { religion = gaian }
-				}
-				AND = {
-					religion = sol_invicta
-					liege = { religion = sol_invicta }
-				}
-				AND = {
-					religion = neomayan
-					liege = { religion = neomayan }
-				}
-				AND = {
-					religion = reform
-					liege = { religion = reform }
 				}
 				AND = {
 					is_female = yes
@@ -2250,6 +2033,9 @@ true_religion_neutic_trigger = {
 }
 true_religion_gaian_trigger = {
 	true_religion = gaian
+}
+true_religion_amazonian_trigger = {
+	true_religion = amazonian
 }
 true_religion_shinto_trigger = {
 	true_religion = shinto
@@ -3430,6 +3216,10 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_gaian }
 		}
 		AND = {
+			society_member_of = secret_religious_society_amazonian
+			PREV = { interested_in_society = secret_religious_society_amazonian }
+		}
+		AND = {
 			society_member_of = secret_religious_society_shinto
 			PREV = { interested_in_society = secret_religious_society_shinto }
 		}
@@ -3800,6 +3590,12 @@ has_any_char_old_religion = {
 			has_character_flag = character_was_gaian
 	    	any_character = {
 	    		religion = gaian
+	    	}
+	    }
+		AND = {
+			has_character_flag = character_was_amazonian
+	    	any_character = {
+	    		religion = amazonian
 	    	}
 	    }
 		AND = {
@@ -4476,6 +4272,13 @@ looting_artifact_event_religious_artifacts_trigger = {
 				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = gaian
 				ROOT = { religion = gaian }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = amazonian
+				ROOT = { religion = amazonian }
 			}
 		}
 		NAND = {
@@ -7369,6 +7172,7 @@ this_is_warrior_culture_trigger = { #Not really about culture - Used in AI votin
 		religion_group = mesoamerican_gods
 		religion_group = pirate
 		religion = norse_pagan
+		religion = amazonian
 		religion = raven_tales
 		religion = thelemic
 		religion = jeffersonian
@@ -7417,10 +7221,12 @@ this_is_diplomatic_culture_trigger = { #Not really about culture - Used in AI vo
 	}
 }
 this_is_spiritual_culture_trigger = { #Not really about culture - Used in AI voting logic.
+	NOT = { religion = amazonian }
 	OR = { 
 		religion_group = indian_group
 		religion_group = pacific
 		has_religion_feature = religion_peaceful
+		pacifist = yes
 		#AND = { 
 		#	NOT = { has_dlc = "Holy Fury"}
 		#	religion = bon_reformed
@@ -8831,28 +8637,6 @@ can_still_be_marshal_byzantine_trigger = {
 					} 
 				}
 				trait = horse # So we can have female glitterhoofs! :D
-				OR = {
-					AND = {
-						religion = ursuline
-						liege = { religion = ursuline }
-					}
-					AND = {
-						religion = angeline
-						liege = { religion = angeline }
-					}
-					AND = {
-						religion = neomayan
-						liege = { religion = neomayan }
-					}
-					AND = {
-						religion = sol_invicta
-						liege = { religion = sol_invicta }
-					}
-					AND = {
-						religion = gaian
-						liege = { religion = gaian }
-					}
-				}
 				AND = {
 					liege = {
 						primary_title = {
@@ -8989,6 +8773,7 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_gracia_divina
 		has_character_flag = character_was_cetic
 		has_character_flag = character_was_gaian
+		has_character_flag = character_was_amazonian
 		has_character_flag = character_was_shinto
 		has_character_flag = character_was_nousthreskeia
 		has_character_flag = character_was_mormon

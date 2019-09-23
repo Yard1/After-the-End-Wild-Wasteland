@@ -5,8 +5,14 @@ character_event = {
 	desc = "Make sure newly spawned characters in AI holy orders/theocracies make sense"
 	is_triggered_only = yes
 	hide_window = yes
+	ai = yes
 
 	trigger = {
+		NOT = {
+			any_player = {
+				dynasty = PREV
+			}
+		}
 		FROMFROM = {
 			ai = yes
 			OR = {
@@ -63,6 +69,8 @@ character_event = {
 					}
 					log = "miscATEWW.1: [Root.GetBestName] holy order/merc"
 					set_gender = female
+					add_trait = hidden_female_trait
+					remove_trait = hidden_male_trait
 					if = {
 						limit = { religion = libertarian }
 						give_ROOT_random_female_libertarian_name = yes
@@ -96,6 +104,8 @@ character_event = {
 					}
 					log = "miscATEWW.1: [Root.GetBestName] priest"
 					set_gender = female
+					add_trait = hidden_female_trait
+					remove_trait = hidden_male_trait
 					if = {
 						limit = { religion = libertarian }
 						give_ROOT_random_female_libertarian_name = yes
@@ -538,6 +548,7 @@ character_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	religion = libertarian
+	ai = yes
 	trigger = {
 		is_priest = yes
 		NOT = { society_member_of = monastic_order_libertarian }
@@ -596,6 +607,19 @@ character_event = {
 	only_men = yes
 	ai = yes
 	trigger = {
+		NOT = {
+			any_player = {
+				dynasty = PREV
+			}
+		}
+		is_patrician = no
+		OR = {
+			is_playable = no
+			is_theocracy = yes
+			holy_order = yes
+			is_republic = yes
+			mercenary = yes
+		}
 		is_alive = yes
 		OR = {
 			NOT = { has_global_flag = scenario_initialization }
@@ -614,6 +638,8 @@ character_event = {
 	option = {
 		log = "miscATEWW.5: [Root.GetBestName] make female"
 		set_gender = female
+		add_trait = hidden_female_trait
+		remove_trait = hidden_male_trait
 		give_ROOT_random_name = yes
 		clr_character_flag = 80_20_female
 		ai_chance = {
@@ -632,6 +658,8 @@ character_event = {
 	option = {
 		log = "miscATEWW.5: [Root.GetBestName] keep_male"
 		set_character_flag = keep_male
+		add_trait = hidden_male_trait
+		remove_trait = hidden_female_trait
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -650,6 +678,22 @@ character_event = {
 	hide_window = yes
 	religion = libertarian
 	only_women = yes
+	ai = yes
+	trigger = {
+		NOT = {
+			any_player = {
+				dynasty = PREV
+			}
+		}
+		is_patrician = no
+		OR = {
+			is_playable = no
+			is_theocracy = yes
+			holy_order = yes
+			is_republic = yes
+			mercenary = yes
+		}
+	}
 	option = {
 		give_ROOT_random_name = yes
 		ai_chance = {

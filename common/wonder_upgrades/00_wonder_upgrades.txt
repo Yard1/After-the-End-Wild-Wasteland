@@ -1105,7 +1105,7 @@ upgrade_sacred_grove = {
 	potential = {
 		OR = {
 			religion_group = pagan_group
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 		}
 	}
 	allow = {
@@ -1113,19 +1113,19 @@ upgrade_sacred_grove = {
 			limit = {
 				NOR = {
 					religion_group = pagan_group
-					religion = gaian
+					religion_openly_gaian_or_heresy_trigger = yes
 				}
 			}
 			OR = {
 				religion_group = pagan_group
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 			}
 		}
 	}
 	active = {
 		OR = {
 			religion_group = pagan_group
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 		}
 	}
 

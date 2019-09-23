@@ -2192,7 +2192,7 @@ character_event = {
 	
 	trigger = {
 		OR = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			religion = neomayan
 			has_religion_feature = religion_feature_occultist 
 			has_religion_feature = religion_astrology
@@ -2398,7 +2398,7 @@ character_event = {
 		name = EVTOPTAHF23022
 		trigger = { 
 			NOR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = neomayan
 				has_religion_feature = religion_feature_occultist 
 				has_religion_feature = religion_astrology
@@ -2504,7 +2504,7 @@ character_event = {
 		}
 		trigger = { 
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = neomayan
 				has_religion_feature = religion_feature_occultist 
 				has_religion_feature = religion_astrology 
@@ -2627,7 +2627,7 @@ character_event = {
 		}
 		trigger = { 
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = neomayan
 				has_religion_feature = religion_feature_occultist 
 				has_religion_feature = religion_astrology
@@ -3391,6 +3391,76 @@ character_event = {
 		if = {
 			limit = { 
 				ROOT = { 
+					religion = gaian
+				}
+			}
+			ROOT = { 
+				any_demesne_title = { 
+					if = {
+						limit = { ROOT = { is_female = no } }
+						add_law = {
+							law = enatic_cognatic_succession
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+					else = {
+						add_law = {
+							law = enatic_succession
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+					add_law = {
+						law = status_of_women_4
+						cooldown = no
+						opinion_effect = no
+					}
+					if = { 
+						limit = { 
+							ROOT = { 
+								NOR = { 
+									has_law = succ_byzantine_elective 
+									has_law = succ_turkish_succession 
+								}
+								OR = { 
+									is_feudal = yes 
+									is_tribal = yes
+									is_nomadic = yes
+								}
+							}
+						}
+						if = {
+							limit = { is_law_potential = succ_eldership }
+							add_law = {
+								law = succ_eldership
+								cooldown = no
+								opinion_effect = no
+							}
+						}
+						else_if = {
+							limit = { is_law_potential = succ_tanistry }
+							add_law = {
+								law = succ_tanistry
+								cooldown = no
+								opinion_effect = no
+							}
+						}
+						else = {
+							add_law = {
+								law = succ_turkish_succession
+								cooldown = no
+								opinion_effect = no
+							}
+						}
+					}
+				} 
+				recalc_succession = yes
+			} 
+		}
+		else_if = {
+			limit = { 
+				ROOT = { 
 					matriarchal_religion = yes 
 				}
 			}
@@ -3659,6 +3729,8 @@ character_event = {
 					}
 				}
 			}
+
+			character_event = { id = misc.6 }
 		}
 	}
 }
@@ -3683,17 +3755,89 @@ character_event = {
 	immediate = { 
 		if = {
 			limit = { 
-				ROOT = { matriarchal_religion = yes }
+				ROOT = { 
+					religion = gaian
+				}
 			}
 			ROOT = { 
 				any_demesne_title = { 
+					if = {
+						limit = { ROOT = { is_female = no } }
+						add_law = {
+							law = enatic_cognatic_succession
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+					else = {
+						add_law = {
+							law = enatic_succession
+							cooldown = no
+							opinion_effect = no
+						}
+					}
 					add_law = {
 						law = status_of_women_4
 						cooldown = no
 						opinion_effect = no
 					}
+					if = { 
+						limit = { 
+							ROOT = { 
+								NOR = { 
+									has_law = succ_byzantine_elective 
+									has_law = succ_turkish_succession 
+								}
+								OR = { 
+									is_feudal = yes 
+									is_tribal = yes
+									is_nomadic = yes
+								}
+							}
+						}
+						if = {
+							limit = { is_law_potential = succ_eldership }
+							add_law = {
+								law = succ_eldership
+								cooldown = no
+								opinion_effect = no
+							}
+						}
+						else_if = {
+							limit = { is_law_potential = succ_tanistry }
+							add_law = {
+								law = succ_tanistry
+								cooldown = no
+								opinion_effect = no
+							}
+						}
+						else = {
+							add_law = {
+								law = succ_turkish_succession
+								cooldown = no
+								opinion_effect = no
+							}
+						}
+					}
+				} 
+				recalc_succession = yes
+			} 
+		}
+		else_if = {
+			limit = { 
+				ROOT = { 
+					matriarchal_religion = yes 
+				}
+			}
+			ROOT = { 
+				any_demesne_title = { 
 					add_law = {
 						law = enatic_succession
+						cooldown = no
+						opinion_effect = no
+					}
+					add_law = {
+						law = status_of_women_4
 						cooldown = no
 						opinion_effect = no
 					}
@@ -3715,6 +3859,7 @@ character_event = {
 						}
 					}
 				} 
+				recalc_succession = yes
 			} 
 		}
 		if = {
@@ -3777,6 +3922,8 @@ character_event = {
 				} 
 			} 
 		}
+
+		character_event = { id = misc.6 }
 	}
 }
 ################################################################
@@ -3998,6 +4145,13 @@ character_event = {
 			limit = { gaian = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
 			random_playable_ruler = {
 				limit = { religion = gaian }
+				apply_cosmopolian_on_start_effect = yes
+			}
+		}
+		if = {
+			limit = { amazonian = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			random_playable_ruler = {
+				limit = { religion = amazonian }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
@@ -4432,6 +4586,13 @@ character_event = {
 			limit = { gaian = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
 				limit = { religion = gaian }
+				apply_dogmatic_on_start_effect = yes
+			}
+		}
+		if = {
+			limit = { amazonian = { has_religion_feature = religion_dogmatic } }
+			random_playable_ruler = {
+				limit = { religion = amazonian }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
@@ -7189,7 +7350,7 @@ narrative_event = {
 				has_religion_feature = religion_no_leader 
 			}
 			AND = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				is_alternate_start = no
 			}
 			AND = {
@@ -11488,10 +11649,6 @@ character_event = {
 				ROOT = { matriarchal_religion = yes }
 				FROMFROM = { matriarchal_religion = yes }
 			}
-			AND = {
-				ROOT = { religion = gaian }
-				FROMFROM = { religion = gaian }
-			}
 		}
 	}
 	is_triggered_only = yes
@@ -11511,10 +11668,76 @@ character_event = {
 		if = {
 			limit = { 
 				ROOT = { 
-					OR = {
-						matriarchal_religion = yes 
-						religion = gaian
+					religion = gaian
+					NOR = {  
+						#is_merchant_republic = yes
+						is_republic = yes
 					}
+				}
+			}
+			FROMFROM = { 
+				if = {
+					limit = { ROOT = { is_female = no } }
+					add_law = {
+						law = enatic_cognatic_succession
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+				else = {
+					add_law = {
+						law = enatic_succession
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+				add_law = {
+					law = status_of_women_4
+					cooldown = no
+					opinion_effect = no
+				}
+				if = { 
+					limit = { 
+						NOR = { 
+							has_law = succ_byzantine_elective 
+							has_law = succ_turkish_succession 
+						}
+						OR = { 
+							is_feudal = yes 
+							is_tribal = yes
+							is_nomadic = yes
+						}
+					}
+					if = {
+						limit = { is_law_potential = succ_eldership }
+						add_law = {
+							law = succ_eldership
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+					else_if = {
+						limit = { is_law_potential = succ_tanistry }
+						add_law = {
+							law = succ_tanistry
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+					else = {
+						add_law = {
+							law = succ_turkish_succession
+							cooldown = no
+							opinion_effect = no
+						}
+					}
+				}
+			} 
+		}
+		else_if = {
+			limit = { 
+				ROOT = { 
+					matriarchal_religion = yes 
 					NOR = {  
 						#is_merchant_republic = yes
 						is_republic = yes
@@ -11607,6 +11830,8 @@ character_event = {
 				}
 			} 
 		}
+
+		character_event = { id = misc.6 }
 	}
 }
 

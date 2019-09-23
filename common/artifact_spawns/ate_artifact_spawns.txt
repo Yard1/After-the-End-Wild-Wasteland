@@ -644,7 +644,7 @@ living_thyrsus = {
 			value = 100
 			higher_tier_than = COUNT
 			is_tribal = no
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 		}
 	}
 
@@ -838,7 +838,7 @@ ancient_bonsai = {
 		additive_modifier = {
 			value = 100
 			is_landed = yes
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 		}
 	}
 

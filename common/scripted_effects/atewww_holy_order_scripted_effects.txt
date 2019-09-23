@@ -51,44 +51,51 @@ remove_patron_general_trigger = {
 
 give_ROOT_random_name = {
 	if = {
-		limit = { ROOT = { is_female = yes } }
-		random_character = {
-			limit = { 
-				NOT = { character = ROOT }
-				is_female = yes
-				culture = ROOT
+		limit = {
+			ROOT = {
+				ai = yes
 			}
-			preferred_limit = {
-				religion = ROOT
-			}
-			preferred_limit = {
-				ROOT = {
-					any_host_courtier = {
-						NOT = { same_regnal_name = PREVPREV }
-					}
-				}
-			}
-			ROOT = { copy_name = PREV }
 		}
-	}
-	else = {
-		random_character = {
-			limit = { 
-				NOT = { character = ROOT }
-				is_female = no
-				culture = ROOT
-			}
-			preferred_limit = {
-				religion = ROOT
-			}
-			preferred_limit = {
-				ROOT = {
-					any_host_courtier = {
-						NOT = { same_regnal_name = PREVPREV }
+		if = {
+			limit = { ROOT = { is_female = yes } }
+			random_character = {
+				limit = { 
+					NOT = { character = ROOT }
+					is_female = yes
+					culture = ROOT
+				}
+				preferred_limit = {
+					religion = ROOT
+				}
+				preferred_limit = {
+					ROOT = {
+						any_host_courtier = {
+							NOT = { same_regnal_name = PREVPREV }
+						}
 					}
 				}
+				ROOT = { copy_name = PREV }
 			}
-			ROOT = { copy_name = PREV }
+		}
+		else = {
+			random_character = {
+				limit = { 
+					NOT = { character = ROOT }
+					is_female = no
+					culture = ROOT
+				}
+				preferred_limit = {
+					religion = ROOT
+				}
+				preferred_limit = {
+					ROOT = {
+						any_host_courtier = {
+							NOT = { same_regnal_name = PREVPREV }
+						}
+					}
+				}
+				ROOT = { copy_name = PREV }
+			}
 		}
 	}
 }

@@ -292,7 +292,7 @@ character_event = {
 		name = EVTOPTC2010 # Thank God for X's virtues!
 		trigger = {
 			NOT = { trait = cynical }
-			NOT = { religion = gaian }
+			NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 			NOT = { religion = cetic }
 			NOT = { religion = neutic }
 		}
@@ -636,7 +636,7 @@ character_event = {
 		name = EVTOPTC2030 # Thank God for X's virtues!
 		trigger = {
 			NOT = { trait = cynical }
-			NOT = { religion = gaian }
+			NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 			NOT = { religion = cetic }
 			NOT = { religion = neutic }
 		}
@@ -1002,7 +1002,7 @@ character_event = {
 		name = EVTOPTC2050 # Thank God for X's virtues!
 		trigger = {
 			NOT = { trait = cynical }
-			NOT = { religion = gaian }
+			NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 			NOT = { religion = cetic }
 			NOT = { religion = neutic }
 		}
@@ -1350,7 +1350,7 @@ character_event = {
 		name = EVTOPTC2070 # Thank God for X's virtues!
 		trigger = {
 			NOT = { trait = cynical }
-			NOT = { religion = gaian }
+			NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 			NOT = { religion = cetic }
 			NOT = { religion = neutic }
 		}
@@ -1697,7 +1697,7 @@ character_event = {
 		name = EVTOPTC2090 # Thank God for X's virtues!
 		trigger = {
 			NOT = { trait = cynical }
-			NOT = { religion = gaian }
+			NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 			NOT = { religion = cetic }
 			NOT = { religion = neutic }
 		}
@@ -1984,7 +1984,7 @@ character_event = {
 		name = EVTOPTB2110 # Thank God for X's virtues!
 		trigger = {
 			NOT = { trait = cynical }
-			NOT = { religion = gaian }
+			NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 			NOT = { religion = cetic }
 			NOT = { religion = neutic }
 		}
@@ -3000,7 +3000,7 @@ character_event = {
 		name = EVTOPTD2170 # Pray God will give her strength.
 		trigger = {
 			NOT = { trait = cynical }
-			NOT = { religion = gaian }
+			NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 			NOT = { religion = cetic }
 			NOT = { religion = neutic }
 		}
@@ -3134,7 +3134,7 @@ character_event = {
 		name = EVTOPTC2180 # Thank God for X's virtues!
 		trigger = {
 			NOT = { trait = cynical }
-			NOT = { religion = gaian }
+			NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 			NOT = { religion = cetic }
 			NOT = { religion = neutic }
 		}
