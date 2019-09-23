@@ -4569,7 +4569,22 @@ faction_independence = {
 		modifier = {
 			factor = 2
 			religion = amazonian
+			matriarchal_religion = yes
 			liege = { matriarchal_religion = no }
+		}
+
+		modifier = {
+			factor = 2
+			matriarchal_religion = yes
+			liege = {
+				is_female = no
+			}
+		}
+
+		modifier = {
+			factor = 2
+			has_religion_feature = religion_patriarchal
+			liege = { is_female = yes }
 		}
 		
 		modifier = {
@@ -5002,7 +5017,22 @@ faction_independence = {
 		modifier = {
 			factor = 2
 			religion = amazonian
+			matriarchal_religion = yes
 			liege = { matriarchal_religion = no }
+		}
+
+		modifier = {
+			factor = 2
+			matriarchal_religion = yes
+			liege = {
+				is_female = no
+			}
+		}
+
+		modifier = {
+			factor = 2
+			has_religion_feature = religion_patriarchal
+			liege = { is_female = yes }
 		}
 
 		modifier = {
