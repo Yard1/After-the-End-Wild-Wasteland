@@ -2666,124 +2666,148 @@
 	2713.7.13={death=yes}
 }
 
-1810200={
-	name="Luis"
-	dynasty=1815018
-	culture=tejano
-	religion=atomicist
-	martial=5
-	diplomacy=4
-	stewardship=3
-	intrigue=5
-	learning=3
-	trait=strong
-	trait=skilled_tactician
-	trait=atom_bless
-	trait=just
-	trait=wroth
-	trait=zealous
-	trait=paranoid
-	give_nickname=nick_the_conqueror
-	2593.5.8={birth=yes}
-	2620.1.31={add_spouse=1810201}
-	2670.7.13={death=yes}
+1810200 = {
+	name = "Luis"
+	dynasty = 1815018
+	culture = tejano
+	religion = atomicist
+	martial = 5
+	diplomacy = 4
+	stewardship = 3
+	intrigue = 5
+	learning = 3
+	trait = strong
+	trait = brilliant_strategist
+	trait = atom_bless
+	trait = just
+	trait = wroth
+	trait = zealous
+	trait = paranoid
+	give_nickname = nick_the_conqueror
+	2603.5.8 = {
+	    birth = yes
+		effect = {
+		    set_character_flag = great_conqueror
+		}
+	}
+	2620.1.31 = {
+	    add_spouse = 1810201
+	}
 }
 
-1810201={
-	name="Gabriela"
-	female=yes
-	culture=norteno
-	religion=atomicist #sacred_heart
-	trait=intricate_webweaver
-	trait=atom_deny
-	trait=humble
-	trait=diligent
-	2603.5.8={birth=yes}
-	2620.1.31={add_spouse=1810200}
-	2661.7.13={death=yes}
+1810201 = {
+	name = "Gabriela"
+	female = yes
+	culture = norteno
+	religion =atomicist #sacred_heart
+	trait = intricate_webweaver
+	trait = atom_deny
+	trait = humble
+	trait = diligent
+	2603.5.8 = { 
+	    birth=yes
+	}
+	2620.1.31 = { 
+	    add_spouse = 1810200
+	}
+	2661.7.13 = {
+	    death = yes
+	}
 }
 
-1810202={
-	name="Alejandra"
-	female=yes
-	dynasty=1815018
-	culture=tejano
-	religion=atomicist
-	trait=intricate_webweaver
-	trait=atom_deny
-	trait=ambitious
-	trait=just
-	mother=1810201
-	father=1810200
-	2622.5.8={birth=yes}
-	2640.1.31={add_spouse=1810210}
-	2690.7.13={death=yes}
+1810202 = {
+	name = "Alejandra"
+	female = yes
+	dynasty = 1815018
+	culture = tejano
+	religion = atomicist
+	trait = intricate_webweaver
+	trait = atom_deny
+	trait = ambitious
+	trait = just
+	mother = 1810201
+	father = 1810200
+	2622.5.8 = {
+	    birth = yes
+	}
+	2640.1.31 = {
+	    add_spouse = 1810210
+	}
 }
 
-1810203={
-	name="Magdalena"
-	female=yes
-	dynasty=1815018
-	culture=tejano
-	religion=atomicist
-	trait=skilled_tactician
-	trait=atom_bless
-	trait=humble
-	trait=diligent
-	mother=1810201
-	father=1810200
-	2624.5.8={birth=yes}
-	2644.1.31={add_spouse=1810215}
-	2690.7.13={death=yes}
+1810203 = {
+	name = "Magdalena"
+	female = yes
+	dynasty = 1815018
+	culture = tejano
+	religion = atomicist
+	trait = skilled_tactician
+	trait = atom_bless
+	trait = humble
+	trait = diligent
+	mother = 1810201
+	father = 1810200
+	2624.5.8 = {
+	    birth = yes
+	}
+	2644.1.31 = {
+	    add_spouse = 1810215
+	}
 }
 
-1810204={
-	name="Susana"
-	female=yes
-	dynasty=1815018
-	culture=tejano
-	religion=atomicist
-	trait=intricate_webweaver
-	trait=atom_bless
-	trait=ambitious
-	trait=proud
-	mother=1810201
-	father=1810200
-	2629.5.8={birth=yes}
-	2690.7.13={death=yes}
+1810204 = {
+	name = "Susana"
+	female = yes
+	dynasty = 1815018
+	culture = tejano
+	religion = atomicist
+	trait = intricate_webweaver
+	trait = atom_bless
+	trait = ambitious
+	trait = proud
+	mother = 1810201
+	father = 1810200
+	2629.5.8 = {
+	    birth = yes
+	}
 }
 
-1810205={
-	name="Dulce"
-	female=yes
-	dynasty=1815018
-	culture=tejano
-	religion=atomicist
-	trait=intricate_webweaver
-	trait=atom_bless
-	trait=ambitious
-	trait=honest
-	mother=1810201
-	father=1810200
-	2636.5.8={birth=yes}
-	2690.7.13={death=yes}
+1810205 = {
+	name = "Dulce"
+	female = yes
+	dynasty = 1815018
+	culture = tejano
+	religion = atomicist
+	trait = intricate_webweaver
+	trait = atom_bless
+	trait = ambitious
+	trait = honest
+	mother = 1810201
+	father = 1810200
+	2636.5.8 = { 
+	    birth = yes
+	}
 }
 
-1810206={
-	name="Jesús"
-	dynasty=1815018
-	culture=tejano
-	religion=atomicist
-	trait=brilliant_strategist
-	trait=atom_bless
-	trait=duelist
-	trait=proud
-	trait=just
-	trait=zealous
-	mother=1810201
-	father=1810200
-	2642.5.8={birth=yes}
-	2690.7.13={death=yes}
+1810206 = {
+	name = "Jesús"
+	dynasty = 1815018
+	culture = tejano
+	religion = atomicist
+	trait = brilliant_strategist
+	trait = atom_bless
+	trait = duelist
+	trait = proud
+	trait = just
+	trait = zealous
+	mother = 1810201
+	father = 1810200
+	2621.5.8 = {
+	    birth = yes
+		effect = {
+		    set_character_flag = great_conqueror
+		}
+	}
 }
 
 1810210={
@@ -2896,9 +2920,8 @@
 	name="Fernando"
 	dynasty=1700003
 	culture=sonorense
-	religion=atomicist
+	religion=sacred_heart
 	trait=grey_eminence
-	trait=atom_curse
 	trait=weak
 	trait=gregarious
 	trait=diligent
@@ -2914,9 +2937,8 @@
 	name="Veronica"
 	female=yes
 	culture=sonorense
-	religion=atomicist
+	religion=sacred_heart
 	trait=fortune_builder
-	trait=atom_bless
 	trait=quick
 	trait=ambitious
 	2646.5.8={birth=yes}
@@ -2928,8 +2950,7 @@
 	name="Raúl"
 	dynasty=1700003
 	culture=sonorense
-	religion=atomicist
-	trait=atom_bless
+	religion=sacred_heart
 	trait=quick
 	father=1810220
 	mother=1810221
