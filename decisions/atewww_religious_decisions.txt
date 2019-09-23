@@ -312,6 +312,7 @@ decisions = {
 			is_playable = yes
 			is_adult = yes
 			has_patron_general_trigger = no
+			NOT = { has_character_flag = choosing_patron_general }
 		}
 		allow = {
 			war = no
@@ -351,31 +352,31 @@ decisions = {
 		allow = {
 			block_general_event_trigger = no
 			primary_title = { higher_tier_than = COUNT }
-			wealth = 200
+			wealth = 400
 			#custom_tooltip = {
 			#	text = tooltip_vote_at_least_one_kill
 			#	has_character_flag = killed_a_man
 			#}
 			has_pirate_trait = yes
-			prestige = 3000
-			piety = 1000
+			prestige = 6000
+			piety = 2000
 		}
 		
 		effect = {
-			wealth = -200
+			wealth = -400
 			if = {
 				limit = { trait = freebooter }
-				prestige = -1750
-				piety = -625
+				prestige = -3500
+				piety = -1250
 			}
 			else_if = {
 				limit = { trait = buccaneer }
-				prestige = -1500
-				piety = -500
+				prestige = -3000
+				piety = -1000
 			}
 			else = {
-				prestige = -1000
-				piety = -250
+				prestige = -2000
+				piety = -500
 			}
 			if = {
 				limit = {
@@ -489,21 +490,21 @@ decisions = {
 			has_pirate_trait = yes
 			OR = {
 				AND = {
-					prestige = 8000
+					prestige = 10000
 					piety = 2000
 				}
 				AND = {
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_pirate
 					}
-					prestige = 6000
+					prestige = 8000
 					piety = 1500
 				}
 			}
 		}
 		
 		effect = {
-			prestige = -4000
+			prestige = -6000
 			piety = -1500
 			set_global_flag = pirate_king_hereditary
 			k_pirate_kingdom = {

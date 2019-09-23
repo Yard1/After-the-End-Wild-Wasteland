@@ -189,11 +189,20 @@ character_event = {
 	
 	religion = jeffersonian
 	is_triggered_only = yes
+
+	trigger = {
+		has_patron_general_trigger = no
+	}
+
+	immediate = {
+		set_character_flag = choosing_patron_general
+	}
 	
 	option = {
 		name = EVOTPA_ATE_WWW_RELIGION_1
 		custom_tooltip = { text = TXT_macarthur }
 		add_trait = militarist_macarthur
+		clr_character_flag = choosing_patron_general
 		ai_chance = {
 			factor = 25
 			modifier = { factor = 2 higher_tier_than = DUKE }
@@ -210,6 +219,7 @@ character_event = {
 		name = EVOTPB_ATE_WWW_RELIGION_1
 		custom_tooltip = { text = TXT_sherman }
 		add_trait = militarist_sherman
+		clr_character_flag = choosing_patron_general
 		ai_chance = {
 			factor = 25
 			modifier = { factor = 2 trait = siege_leader }
@@ -227,6 +237,7 @@ character_event = {
 		name = EVOTPC_ATE_WWW_RELIGION_1
 		custom_tooltip = { text = TXT_patton }
 		add_trait = militarist_patton
+		clr_character_flag = choosing_patron_general
 		ai_chance = {
 			factor = 25
 			modifier = { factor = 2 trait = flanker }
@@ -250,6 +261,7 @@ character_event = {
 		name = EVOTPA_ATE_WWW_RELIGION_2
 		custom_tooltip = { text = TXT_custer }
 		add_trait = militarist_custer
+		clr_character_flag = choosing_patron_general
 		trigger = { ai = yes }
 		ai_chance = {
 			factor = 25
@@ -269,6 +281,7 @@ character_event = {
 		name = EVOTPB_ATE_WWW_RELIGION_2
 		custom_tooltip = { text = TXT_lee }
 		add_trait = militarist_lee
+		clr_character_flag = choosing_patron_general
 		trigger = { ai = yes }
 		ai_chance = {
 			factor = 25
@@ -287,6 +300,7 @@ character_event = {
 		name = EVOTPC_ATE_WWW_RELIGION_2
 		custom_tooltip = { text = TXT_butler }
 		add_trait = militarist_butler
+		clr_character_flag = choosing_patron_general
 		trigger = { ai = yes }
 		ai_chance = {
 			factor = 25
@@ -315,6 +329,7 @@ character_event = {
 		name = EVOTPA_ATE_WWW_RELIGION_2
 		custom_tooltip = { text = TXT_custer }
 		add_trait = militarist_custer
+		clr_character_flag = choosing_patron_general
 		ai_chance = {
 			factor = 25
 			modifier = { factor = 2 trait = cavalry_leader }
@@ -332,6 +347,7 @@ character_event = {
 		name = EVOTPB_ATE_WWW_RELIGION_2
 		custom_tooltip = { text = TXT_lee }
 		add_trait = militarist_lee
+		clr_character_flag = choosing_patron_general
 		ai_chance = {
 			factor = 25
 			modifier = { factor = 2 trait = defensive_leader }
@@ -349,6 +365,7 @@ character_event = {
 		name = EVOTPC_ATE_WWW_RELIGION_2
 		custom_tooltip = { text = TXT_butler }
 		add_trait = militarist_butler
+		clr_character_flag = choosing_patron_general
 		ai_chance = {
 			factor = 25
 			modifier = { factor = 2 trait = inspiring_leader }
