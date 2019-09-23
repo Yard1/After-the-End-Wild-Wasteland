@@ -1900,6 +1900,24 @@ gender_laws = {
 						has_bloodline_flag = bloodline_effect_cognatic
 					}
 				}
+				NOR = {
+					AND = {
+						has_law = agnatic_succession
+							holder_scope = {
+							any_suzerain = {
+								has_religion_feature = religion_patriarchal
+							}
+						}
+					}
+					AND = {
+						has_law = enatic_succession
+							holder_scope = {
+							any_suzerain = {
+								matriarchal_religion = yes
+							}
+						}
+					}
+				}
 			}
 		}
 		
@@ -2014,6 +2032,24 @@ gender_laws = {
 							any_owned_bloodline = {
 								has_bloodline_flag = bloodline_effect_cognatic
 							}
+						}
+					}
+				}
+			}
+			NOR = {
+				AND = {
+					has_law = agnatic_succession
+						holder_scope = {
+						any_suzerain = {
+							has_religion_feature = religion_patriarchal
+						}
+					}
+				}
+				AND = {
+					has_law = enatic_succession
+						holder_scope = {
+						any_suzerain = {
+							matriarchal_religion = yes
 						}
 					}
 				}
@@ -2269,6 +2305,24 @@ gender_laws = {
 					matriarchal_religion = yes
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_enatic
+					}
+				}
+			}
+			NOR = {
+				AND = {
+					has_law = agnatic_succession
+						holder_scope = {
+						any_suzerain = {
+							has_religion_feature = religion_patriarchal
+						}
+					}
+				}
+				AND = {
+					has_law = enatic_succession
+						holder_scope = {
+						any_suzerain = {
+							matriarchal_religion = yes
+						}
 					}
 				}
 			}

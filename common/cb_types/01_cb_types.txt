@@ -6036,6 +6036,7 @@ matriarchal_deposition_war = {
 			matriarchal_religion = yes
 			FROM = { is_female = no independent = yes }
 			NOT = { same_realm = FROM }
+			is_within_diplo_range = FROM
 		}
 		FROM = {
 			is_nomadic = no
@@ -6083,6 +6084,21 @@ matriarchal_deposition_war = {
 		}
 		FROM = { piety = -100 }
 		FROM = { prestige = -50 }
+		FROM = {
+			show_scope_change = no
+			any_realm_province = {
+				any_province_holding = {
+					limit = {
+						is_holy_site = ROOT
+						holder_scope = { NOT = { religion = ROOT } }
+					}
+					ROOT = {
+						show_scope_change = no
+						usurp_title = { target = PREV type = invasion }
+					}
+				}
+			}
+		}
 		custom_tooltip = {
 			text = sex_deposition_cb_succ_tip
 			hidden_tooltip = {
@@ -6516,6 +6532,7 @@ patriarchal_deposition_war = {
 			top_liege = {
 				religion = ROOT
 			}
+			is_within_diplo_range = FROM
 		}
 		FROM = {
 			is_nomadic = no
@@ -6593,6 +6610,21 @@ patriarchal_deposition_war = {
 		}
 		FROM = { piety = -100 }
 		FROM = { prestige = -50 }
+		FROM = {
+			show_scope_change = no
+			any_realm_province = {
+				any_province_holding = {
+					limit = {
+						is_holy_site = ROOT
+						holder_scope = { NOT = { religion = ROOT } }
+					}
+					ROOT = {
+						show_scope_change = no
+						usurp_title = { target = PREV type = invasion }
+					}
+				}
+			}
+		}
 		custom_tooltip = {
 			text = sex_deposition_cb_succ_tip
 			hidden_tooltip = {
