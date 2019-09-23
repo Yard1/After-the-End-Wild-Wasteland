@@ -1,0 +1,17 @@
+# c_guaymas
+
+# County Title
+title = c_guaymas
+
+# Settlements
+max_settlements = 4
+
+b_guaymas_SO = tribal
+#b_ciudad_obregon_SO = city
+#b_san_carlos_SO = temple
+
+# Misc
+culture = sonorense
+religion = atomicist #sacred_heart
+
+#History
