@@ -695,7 +695,10 @@ decisions = {
 		potential = {
 			is_alternate_start = no
 			
-			religion = anabaptist
+			OR = {
+				religion = anabaptist
+				religion = batenburger
+			}
 			
 			is_heretic = no
 			

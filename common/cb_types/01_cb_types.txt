@@ -459,7 +459,7 @@ force_vassalization = { # New2
 		}
 		ROOT = {
 			NOT = { trait = figurehead }
-			NOT = { religion = anabaptist }
+			pacifist = no
 		}
 	}
 	
@@ -674,7 +674,7 @@ great_realm_conflict = { # New3
 			prestige = 3000
 			piety = 1500
 			NOT = { trait = figurehead }
-			NOT = { religion = anabaptist }
+			pacifist = no
 		}
 		FROM = {
 			relative_power = {
@@ -2281,7 +2281,7 @@ unjust_conquest = { # New7
 				scaled_wealth = { value = 1.0 min = 400 }
 			}
 			NOT = { trait = figurehead }
-			NOT = { religion = anabaptist }
+			pacifist = no
 		}
 	}
 	

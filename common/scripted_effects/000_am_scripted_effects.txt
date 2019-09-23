@@ -3616,18 +3616,7 @@ increase_visibility_minor_effect = {
 			if = {
 				limit = {
 					controls_religion = no
-					OR = {
-						religion = catholic
-						religion = ursuline
-						religion = confederated
-						religion = evangelical
-						religion = high_church
-						religion = mormon
-						religion = americanist
-						religion = libertarian
-						religion = anabaptist
-						religion = apostolic
-					}
+					religion_can_excommunicate = yes
 				}
 				add_trait = excommunicated
 			}

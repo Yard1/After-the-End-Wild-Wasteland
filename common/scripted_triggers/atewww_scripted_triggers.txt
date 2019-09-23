@@ -47,6 +47,24 @@ has_ancestor_veneration = {
 	}
 }
 
+religion_can_excommunicate = {
+	OR = {
+		religion = catholic
+		religion = nestorian
+		religion = evangelical
+		religion = mormon
+		religion = high_church
+		religion = ursuline
+		religion = confederated
+		religion = americanist
+		religion = apostolic
+		religion = hamiltonian
+		religion = jeffersonian
+		religion = libertarian
+		religion = brethren
+	}
+}
+
 has_monasticism = {
 	OR = {
 		has_religion_feature = religion_monastic

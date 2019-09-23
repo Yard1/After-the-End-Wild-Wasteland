@@ -690,7 +690,7 @@ decisions = {
 			}	
 			NOR = {
 				religion_group = jewish_group
-				religion = anabaptist
+				pacifist = yes
 				has_character_modifier = expelled_jewish
 				is_nomadic = yes
 				secret_religion = jewish

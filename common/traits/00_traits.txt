@@ -1309,7 +1309,10 @@ hunter = {
 	lifestyle = yes
 
 	potential = {
-		NOT = { religion = anabaptist }
+		NOR = {
+			religion = anabaptist
+			religion = gaian
+		}
 	}
 	
 	martial = 2

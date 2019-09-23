@@ -76,7 +76,7 @@ character_event = {
 			}
 			modifier = {
 				factor = 0.3
-				religion = anabaptist
+				pacifist = yes
 			}
 			modifier = {
 				religion_group = christian

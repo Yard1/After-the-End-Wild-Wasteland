@@ -3004,18 +3004,7 @@ character_event = {
 		if = {
 			limit = {
 				controls_religion = no
-				OR = {
-					religion = catholic
-					religion = nestorian
-					religion = evangelical
-					religion = mormon
-					religion = high_church
-					religion = ursuline
-					religion = confederated
-					religion = anabaptist
-					religion = americanist
-					religion = apostolic
-				}
+				religion_can_excommunicate = yes
 			}
 			add_trait = excommunicated
 		}

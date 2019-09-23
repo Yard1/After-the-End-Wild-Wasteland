@@ -2884,18 +2884,7 @@ character_event = { # What does the liege wish to do with the apostate?
 					limit = {
 						religion = ROOT
 						controls_religion = no
-						OR = {
-							religion = catholic
-							religion = nestorian
-							religion = evangelical
-							religion = mormon
-							religion = high_church
-							religion = ursuline
-							religion = confederated
-							religion = anabaptist
-							religion = americanist
-							religion = apostolic
-						}
+						religion_can_excommunicate = yes
 					}
 					add_trait = excommunicated
 				}
@@ -3006,18 +2995,7 @@ character_event = { # What does the liege wish to do with the apostate?
 				limit = {
 					religion = ROOT
 					controls_religion = no
-					OR = {
-						religion = catholic
-						religion = nestorian
-						religion = evangelical
-						religion = mormon
-						religion = high_church
-						religion = ursuline
-						religion = confederated
-						religion = anabaptist
-						religion = americanist
-						religion = apostolic
-					}
+					religion_can_excommunicate = yes
 				}
 				add_trait = excommunicated
 			}
@@ -3090,18 +3068,7 @@ character_event = { # What does the liege wish to do with the apostate?
 				limit = {
 					religion = ROOT
 					controls_religion = no
-					OR = {
-						religion = catholic
-						religion = nestorian
-						religion = evangelical
-						religion = mormon
-						religion = high_church
-						religion = ursuline
-						religion = confederated
-						religion = anabaptist
-						religion = americanist
-						religion = apostolic
-					}
+					religion_can_excommunicate = yes
 				}
 				add_trait = excommunicated
 			}
@@ -3258,18 +3225,7 @@ character_event = { # The Apostate reacts to Imprisonment
 				limit = {
 					religion = FROM
 					controls_religion = no
-					OR = {
-						religion = catholic
-						religion = nestorian
-						religion = evangelical
-						religion = mormon
-						religion = high_church
-						religion = ursuline
-						religion = confederated
-						religion = anabaptist
-						religion = americanist
-						religion = apostolic
-					}
+					religion_can_excommunicate = yes
 				}
 				add_trait = excommunicated
 			}
@@ -3348,18 +3304,7 @@ character_event = { # The Apostate reacts to Branding
 				limit = {
 					religion = FROM
 					controls_religion = no
-					OR = {
-						religion = catholic
-						religion = nestorian
-						religion = evangelical
-						religion = mormon
-						religion = high_church
-						religion = ursuline
-						religion = confederated
-						religion = anabaptist
-						religion = americanist
-						religion = apostolic
-					}
+					religion_can_excommunicate = yes
 				}
 				add_trait = excommunicated
 			}
