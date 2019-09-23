@@ -665,6 +665,7 @@ christian = {
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
 		allow_rivermovement = yes
+		priests_can_marry = no
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -711,6 +712,7 @@ christian = {
 		can_grant_invasion_cb = invasion
 		can_call_crusade = no
 		priests_can_inherit = no
+		priests_can_marry = no
 		allow_rivermovement = yes
 		can_retire_to_monastery = yes
 
@@ -829,6 +831,7 @@ christian = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 		male_temple_holders = yes
+		allows_matrilineal_marriage = yes
 		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
 
@@ -893,9 +896,11 @@ christian = {
 		can_retire_to_monastery = yes
 		priests_can_inherit = yes
 		female_temple_holders = yes
+		male_temple_holders = yes
 		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
 		rel_head_defense = yes
+		priests_can_marry = no
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -949,10 +954,6 @@ christian = {
 		}
 		
 		pacifist = yes # Makes the AI less likely to start wars, plots and factions
-		can_excommunicate = yes
-		can_grant_divorce = yes
-		can_grant_invasion_cb = invasion
-		can_grant_claim = yes
 		can_call_crusade = no
 		allow_rivermovement = yes
 		priests_can_inherit = no
@@ -1121,6 +1122,8 @@ christian = {
 		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allows_matrilineal_marriage = yes
 		allow_rivermovement = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 2
@@ -1174,6 +1177,8 @@ christian = {
 		can_retire_to_monastery = no
 		female_temple_holders = yes
 		allow_rivermovement = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
 
 		religious_clothing_head = 0
 		religious_clothing_priest = 2
@@ -1221,7 +1226,8 @@ christian = {
 		female_temple_holders = no #relatively recent innovation
 		allow_rivermovement = yes
 		can_grant_divorce = no
-		can_retire_to_monastery = no
+		priests_can_inherit = no
+		priests_can_marry = yes
 
 		religious_clothing_head = 0
 		religious_clothing_priest = 2
@@ -1274,6 +1280,7 @@ christian = {
 		priests_can_inherit = no
 		priests_can_marry = no
 		allow_rivermovement = yes
+		can_retire_to_monastery = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -1306,6 +1313,8 @@ christian = {
 		intermarry = gracia_divina
 
 		character_modifier = {
+			cult_of_saints_opinion = 5
+			apostolic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1330,8 +1339,11 @@ christian = {
 			THE_DEVIL SATAN LUCIFER GOD_THE_FALLEN_STAR
 		}
 
+		can_grant_divorce = yes
+		priests_can_inherit = no
 		priests_can_marry = yes
 		allow_rivermovement = yes
+		can_retire_to_monastery = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -1363,6 +1375,8 @@ christian = {
 		intermarry = gracia_divina
 
 		character_modifier = {
+			cult_of_saints_opinion = 5
+			apostolic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1399,6 +1413,7 @@ christian = {
 		can_call_crusade = no #yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
+		priests_can_marry = no
 		allow_rivermovement = yes
 		rel_head_defense = yes
 		
@@ -1444,7 +1459,6 @@ christian = {
 		parent = high_church
 		
 		crusade_name = CRUSADE
-		can_grant_divorce = yes
 		can_retire_to_monastery = yes
 		female_temple_holders = yes
 		priests_can_marry = yes
@@ -1544,6 +1558,9 @@ christian = {
 		intermarry = candomble
 
 		character_modifier = {
+			cult_of_saints_opinion = 5
+			falling_star_opinion = 5
+			moravian_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1590,7 +1607,6 @@ cult_of_saints= {
 			THE_DEVIL SATAN LUCIFER
 		}
 	
-		can_grant_divorce = yes
 		priests_can_inherit = no
 		priests_can_marry = no
 		allow_rivermovement = yes
@@ -1612,6 +1628,9 @@ cult_of_saints= {
 		intermarry = moravian
 
 		character_modifier = {
+			falling_star_opinion = 5
+			moravian_opinion = 5
+			apostolic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1635,7 +1654,6 @@ cult_of_saints= {
 			THE_DEVIL SATAN LUCIFER
 		}
 		
-		can_grant_divorce = yes
 		priests_can_inherit = no
 		priests_can_marry = no
 		allow_rivermovement = yes
@@ -1657,6 +1675,9 @@ cult_of_saints= {
 		intermarry = moravian
 
 		character_modifier = {
+			falling_star_opinion = 5
+			moravian_opinion = 5
+			apostolic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1820,6 +1841,7 @@ pacific = {
 	shinto = {
 		graphical_culture = chinesegfx
 		secondary_event_pictures = sunni
+		ai_peaceful = no
 
 		icon = 47
 		heresy_icon = 47
@@ -1838,11 +1860,11 @@ pacific = {
 			GOD_THE_YOKAI
 		}
 		
-		can_grant_divorce = yes
 		priests_can_inherit = yes
 		priests_can_marry = yes
 		allow_rivermovement = yes
 		max_consorts = 3 #can take concubines
+		seafarer = yes
 
 		religious_clothing_head = 10
 		religious_clothing_priest = 10
@@ -1881,7 +1903,6 @@ pacific = {
 			DENEB THE_DARK_ONES MARKED_ONE
 		}
 		
-		can_grant_divorce = yes
 		priests_can_inherit = yes
 		priests_can_marry = yes
 		allow_rivermovement = yes
@@ -2733,7 +2754,10 @@ oldworld = {
 		scripture_name = THE_LEGENDS
 		priest_title = PRIEST
 		priests_can_marry = yes
+		priests_can_inherit = yes
 		female_temple_holders = yes
+		allows_matrilineal_marriage = yes
+		feminist = yes
 		allow_rivermovement = yes
 		
 		can_grant_claim = yes
@@ -2784,12 +2808,16 @@ oldworld = {
 		evil_god_names = {
 			THE_DEMON_CORE THE_VOID GOD_FAT_MAN GOD_LITTLE_BOY GOD_TSAR_BOMBA
 		}
+
 		crusade_name = FIRST_STRIKE
-		#allow_viking_invasion = yes
+		can_call_crusade = yes #overlooked this somehow
 		scripture_name = THE_LEGENDS
 		priest_title = PRIEST
 		priests_can_marry = yes
+		priests_can_inherit = yes
 		female_temple_holders = yes
+		allows_matrilineal_marriage = yes
+		feminist = yes
 		allow_rivermovement = yes
 		
 		can_grant_claim = yes
@@ -2888,6 +2916,9 @@ oldworld = {
 		can_grant_claim = no
 		feminist = yes #taking it to the next level
 		allows_matrilineal_marriage = yes
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		priests_can_inherit = no
 				
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -3648,6 +3679,7 @@ indian_group = {
 			THE_VINAYAKAS KALI
 		}
 		
+		aggression = 0.75
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		priests_can_marry = yes
