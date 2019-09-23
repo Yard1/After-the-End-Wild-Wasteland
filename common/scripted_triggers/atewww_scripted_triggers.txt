@@ -6,7 +6,6 @@ matriarchal_religion = {
 }
 
 equal_religion = {
-	NOT = { religion = jeffersonian }
 	OR = {
 		has_religion_feature = religion_equal
 		religion = ursuline
@@ -20,9 +19,55 @@ equal_religion = {
 		religion = antinomian
 		religion = bickertonite
 		religion = strangite
-		religion = neutic
-		religion = cetic
-		religion_group = oldworld
+		religion = americanist
+		religion = hamiltonian
+		religion = libertarian
+		religion = atomicist
+		religion = aphite
+		religion = chrome_cultist
+	}
+}
+
+semi_equal_religion = {
+	OR = {
+		religion = jeffersonian
+		religion = rust_cultist
+		religion = consumerist
+		religion = monetarist
+	}
+}
+
+has_ancestor_veneration = {
+	OR = {
+		religion_group = american_native
+		religion = gracia_divina
+		has_religion_feature = religion_beatification
+		has_religion_feature = religion_feature_espiritista
+	}
+}
+
+has_monasticism = {
+	OR = {
+		has_religion_feature = religion_monastic
+		AND = {
+			#is_alternate_start = no
+			OR = {
+				religion = catholic
+				religion = neognostic
+				religion = sedevacantist
+				religion = nestorian
+				religion = ursuline
+				religion = confederated
+				religion = anabaptist
+				religion = evangelical
+				religion = falling_star
+				religion = moravian
+				religion = high_church
+				religion = nonconformist
+				religion = apostolic
+				religion = neutic
+			}
+		}
 	}
 }
 
@@ -115,6 +160,7 @@ can_have_pagan_religion_interpretation = {
 }
 
 has_religion_with_temporal_head = {
+	#is_alternate_start = no
 	OR = {
 		religion = americanist
 		religion = jeffersonian
@@ -129,6 +175,25 @@ has_religion_temporal_head = {
 	OR = {
 		has_religion_with_temporal_head = yes
 		has_religion_feature = religion_temporal_head
+	}
+}
+
+is_pope = {
+	has_religion_temporal_head = no
+	has_autocephaly = no
+	is_theocracy = yes
+	religious_head = { character = PREV }
+}
+
+is_antipope = {
+	any_claim = {
+		OR = {
+			title = k_papal_state
+			title = k_ursuline
+			title = d_high_church
+			title = d_confederated
+			title = d_quorum_of_the_twelve
+		}
 	}
 }
 

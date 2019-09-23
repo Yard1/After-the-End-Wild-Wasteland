@@ -130,3 +130,15 @@ taken_medicine_recently;Recently taken Old World medicine;;;;;;;;;;;;;x
 not_taken_medicine_recently;Hasn't taken any Old World medicine recently;;;;;;;;;;;;;x
 
 crusade_desc;§Y$CLAIMANT$§! can use this Casus Belli to seize all titles held by the §Y$TARGET$§! and other infidels of the same faith, within the de jure §Y$TITLE$§!.;§Y$CLAIMANT$§! peut utiliser ce casus belli pour s'emparer de tous les titres que possède l'infidèle §Y$TARGET$§! au sein de §Y$TITLE$§! de jure.;§Y$CLAIMANT$§! kann diesen Kriegsgrund dazu benutzen, dem ungläubigen Ziel, §Y$TARGET$§!, sämtliche Titel unter dem De-jure-Titel §Y$TITLE$§! abzunehmen.;;§Y$CLAIMANT$§! puede usar este Casus Belli para apoderarse de todos los títulos que posee el infiel, §Y$TARGET$§!, dentro del §Y$TITLE$§! de iure.;;;;;;;;;x
+
+TT_HAS_TOLERANCE_1;§YTolerance§! level is greater or equal to §Y1§!;;;;;;;;;;;;;x
+TT_HAS_TOLERANCE_2;§YTolerance§! level is greater or equal to §Y2§!;;;;;;;;;;;;;x
+TT_HAS_TOLERANCE_3;§YTolerance§! level is greater or equal to §Y3§!;;;;;;;;;;;;;x
+TT_HAS_TOLERANCE_4;§YTolerance§! level is greater or equal to §Y4§!;;;;;;;;;;;;;x
+TT_HAS_TOLERANCE_5;§YTolerance§! level is greater or equal to §Y5§!;;;;;;;;;;;;;x
+TT_HAS_TOLERANCE_6;§YTolerance§! level is greater or equal to §Y6§!;;;;;;;;;;;;;x
+
+TOOLTIP_ALLOW_FEMALE_SPYMASTER_ALL;Women are allowed to hold the office of [Root.Holder.GetSpymasterName]\n;Les femmes ayant un lien de parenté avec le dirigeant ont le droit d'occuper le poste de [Root.Holder.GetSpymasterName]\n;Erlaubt für weibliche Verwandte des Herrschers: [Root.Holder.GetSpymasterName]\n;;Se permite que las mujeres relacionadas con el gobernante ocupen el cargo de [Root.Holder.GetSpymasterName];;;;;;;;;x
+TOOLTIP_ALLOW_FEMALE_CHANCELLOR_ALL;Women are allowed to hold the office of [Root.Holder.GetChancellorName]\n;Les femmes ayant un lien de parenté avec le dirigeant ont le droit d'occuper le poste de [Root.Holder.GetChancellorName]\n;Erlaubt für weibliche Verwandte des Herrschers: [Root.Holder.GetChancellorName]\n;;Se permite que las mujeres relacionadas con el gobernante ocupen el cargo de [Root.Holder.GetChancellorName];;;;;;;;;x
+TOOLTIP_ALLOW_FEMALE_TREASURER_ALL;Women are allowed to hold the office of [Root.Holder.GetTreasurerName]\n;Les femmes ayant un lien de parenté avec le dirigeant ont le droit d'occuper le poste de [Root.Holder.GetTreasurerName]\n;Erlaubt für weibliche Verwandte des Herrschers: [Root.Holder.GetTreasurerName]\n;;Se permite que las mujeres relacionadas con el gobernante ocupen el cargo de [Root.Holder.GetTreasurerName];;;;;;;;;x
+TOOLTIP_ALLOW_FEMALE_MARSHAL_ALL;Women are allowed to hold the office of [Root.Holder.GetMarshalName]\n;Les femmes ayant un lien de parenté avec le dirigeant ont le droit d'occuper le poste de [Root.Holder.GetMarshalName]\n;Erlaubt für weibliche Verwandte des Herrschers: [Root.Holder.GetMarshalName]\n;;Se permite que las mujeres relacionadas con el gobernante ocupen el cargo de [Root.Holder.GetMarshalName];;;;;;;;;x

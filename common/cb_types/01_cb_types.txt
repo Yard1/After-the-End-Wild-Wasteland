@@ -6948,22 +6948,11 @@ depose_impious_pope = {
 			}
 			hidden_tooltip = {
 				OR = {
-					AND = {
-						religion = catholic
-						has_landed_title = k_papal_state
-					}
-					AND = {
-						religion = ursuline
-						has_landed_title = k_ursuline
-					}
-					AND = {
-						religion = high_church
-						has_landed_title = d_high_church
-					}
-					AND = {
-						religion = mormon
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					has_landed_title = k_papal_state
+					has_landed_title = d_confederated
+					has_landed_title = k_ursuline
+					has_landed_title = d_high_church
+					has_landed_title = d_quorum_of_the_twelve
 				}
 			}
 			independent = yes
@@ -7035,6 +7024,19 @@ depose_impious_pope = {
 					}
 				}
 				d_high_church = {
+					owner = {
+						save_event_target_as = current_pope
+						reverse_imprison = FROM
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_landed_title = d_confederated
+					}
+				}
+				d_confederated = {
 					owner = {
 						save_event_target_as = current_pope
 						reverse_imprison = FROM

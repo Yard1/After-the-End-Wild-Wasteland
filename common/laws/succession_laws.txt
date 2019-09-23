@@ -98,6 +98,7 @@ succession_laws = {
 			holder_scope = {
 				NOT = { religion_group = american_native } #uses Eldership instead
 				NOT = { religion_group = pirate }
+				NOT = { religion = gaian }
 				OR = {
 					independent = yes
 					NOT = {
@@ -225,6 +226,7 @@ succession_laws = {
 			holder_scope = {
 				NOT = { religion_group = american_native } #uses Eldership instead
 				NOT = { religion_group = pirate }
+				NOT = { religion = gaian }
 				is_nomadic = no
 				OR = {
 					independent = yes
@@ -341,10 +343,11 @@ succession_laws = {
 						is_tribal = yes
 						OR = {
 							religion = occultist
+							religion = gaian
 							religion = celtic_pagan
 						}
 					}
-					has_religion_feature = religion_beatification
+					has_ancestor_veneration = yes
 					has_religion_feature = religion_feature_occultist
 					has_religion_feature = religion_feature_celtic
 				}
@@ -359,10 +362,6 @@ succession_laws = {
 							holy_order = yes
 						}
 					}
-				}
-				NOR = {
-					matriarchal_religion = yes
-					has_religion_feature = religion_patriarchal
 				}
 				is_merchant_republic = no
 				is_patrician = no
@@ -392,6 +391,28 @@ succession_laws = {
 			NOT = { holder_scope = { government = military_governorate } }
 			#NOT = { holder_scope = { government = chinese_imperial_government } }
 		}
+		default_selection = {
+			modifier = {
+				factor = 10
+				holder_scope = {
+					OR = {
+						religion_group = american_native
+						AND = {
+							is_tribal = yes
+							OR = {
+								religion_group = afro_syncretic
+								religion = occultist
+								religion = gaian
+								religion = celtic_pagan
+							}
+						}
+						has_ancestor_veneration = yes
+						has_religion_feature = religion_feature_occultist
+						has_religion_feature = religion_feature_celtic
+					}
+				}
+			}
+		}
 		allow = {
 			conditional_tooltip = {
 				trigger = {
@@ -406,10 +427,10 @@ succession_laws = {
 							OR = {
 								religion = occultist
 								religion = celtic_pagan
+								religion = gaian
 							}
 						}
-						has_religion_feature = religion_beatification
-						has_religion_feature = religion_feature_espiritista
+						has_ancestor_veneration = yes
 						has_religion_feature = religion_feature_occultist
 						has_religion_feature = religion_feature_celtic
 					}
@@ -488,17 +509,12 @@ succession_laws = {
 					}
 				}
 				
-                OR = {
-                    NOT = {
-						religion_group = indian_group 
-					}
-                    is_patrician = yes
-                }
-				
 				OR = {
+					NOT = { religion_group = indian_group }
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
 					NOT = { religion = raven_tales }
+					NOT = { religion = gaian }
 					is_reformed_religion = yes
 					is_patrician = yes
 				}
@@ -873,6 +889,7 @@ succession_laws = {
 				OR = {
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
+					NOT = { religion = gaian }
 					NOT = { religion = raven_tales }
 					is_reformed_religion = yes
 					has_law = succession_voting_power_1
@@ -1154,6 +1171,10 @@ succession_laws = {
 					culture = maritimer
 					culture = newfie
 					culture = carpetbagger
+					AND = {
+						religion = gaian
+						is_tribal = no
+					}
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_tanistry
 					}
@@ -1181,6 +1202,10 @@ succession_laws = {
 						culture = maritimer
 						culture = newfie
 						culture = carpetbagger
+						AND = {
+							religion = gaian
+							is_tribal = no
+						}
 						any_owned_bloodline = {
 							has_bloodline_flag = bloodline_tanistry
 						}
@@ -1976,6 +2001,10 @@ gender_laws = {
 						is_theocracy = no
 						holy_order = no
 						mercenary = no
+						NOR = {
+							matriarchal_religion = yes
+							has_religion_feature = religion_patriarchal
+						}
 						OR = {
 							gender_equality_trigger = yes
 							has_feminist_culture_trigger = yes
@@ -2014,20 +2043,6 @@ gender_laws = {
 			factor = 2.5
 			modifier = {
 				factor = 0
-				holder_scope = { 
-					matriarchal_religion = yes 
-					is_female = yes
-				}
-			}
-			modifier = {
-				factor = 0
-				holder_scope = { 
-					has_religion_feature = religion_patriarchal
-					is_female = no
-				}
-			}
-			modifier = {
-				factor = 0
 				holder_scope = {
 					OR = {
 						holy_order = yes
@@ -2043,7 +2058,12 @@ gender_laws = {
 			
 			modifier = {
 				factor = 0
-				holder_scope = { matriarchal_religion = yes }
+				holder_scope = { 
+					OR = {
+						matriarchal_religion = yes 
+						has_religion_feature = religion_patriarchal
+					}
+				}
 			}
 
 			modifier = {
@@ -2055,6 +2075,10 @@ gender_laws = {
 								is_theocracy = no
 								holy_order = no
 								mercenary = no
+								NOR = {
+									matriarchal_religion = yes
+									has_religion_feature = religion_patriarchal
+								}
 								OR = {
 									equal_religion = yes
 									any_owned_bloodline = {
@@ -2094,6 +2118,10 @@ gender_laws = {
 							is_theocracy = no
 							holy_order = no
 							equal_religion = yes
+							NOR = {
+								matriarchal_religion = yes
+								has_religion_feature = religion_patriarchal
+							}
 							OR = {
 								equal_religion = yes
 								any_owned_bloodline = {

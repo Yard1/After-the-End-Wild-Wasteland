@@ -747,7 +747,7 @@ decisions = {
 			is_landed = yes
 			is_adult = yes
 			prisoner = no
-			religion_group = american_native
+			has_ancestor_veneration = yes
 		}
 
 		allow = {

@@ -34,10 +34,7 @@ character_event = {
             has_character_modifier = corrupting_magic_minor
             has_character_modifier = corrupting_magic_major
             
-            any_claim = { title = k_papal_state } # Antipopes
-            any_claim = { title = k_ursuline } # Antipopes
-            any_claim = { title = d_high_church } # Antipopes
-            any_claim = { title = d_quorum_of_the_twelve } # Antipopes
+            is_antipope = yes
 		}
 		OR = {
 			AND = {
@@ -184,6 +181,7 @@ province_event = {
         		limit = {
         			OR = {
 						has_global_flag = only_papal_saints
+						has_global_flag = only_confed_saints
 						has_global_flag = only_abbess_saints
 						has_global_flag = only_archbishop_saints
 						has_global_flag = only_presidential_saints
@@ -192,6 +190,7 @@ province_event = {
         				OR = {
 							religion = catholic
 							religion = ursuline
+							religion = confederated
 							religion = high_church
 							religion = mormon
 						}
@@ -444,10 +443,7 @@ character_event = {
                 OR = {
                     has_global_flag = qa_testing
                     event_target:saint_person = {
-                        has_religion_feature = religion_beatification
-                    }
-					event_target:saint_person = {
-                        has_religion_feature = religion_feature_espiritista
+                        has_ancestor_veneration = yes
                     }
                 }
             }
@@ -477,8 +473,7 @@ province_event = {
         event_target:saint_person = {
             OR = {
                 trait = beatified
-                has_religion_feature = religion_beatification
-                has_religion_feature = religion_feature_espiritista
+                has_ancestor_veneration = yes
             }
             NOT = {
                 has_character_flag = blessed_ancestor_prestige
@@ -2876,6 +2871,12 @@ character_event = {
 			}
 			AND = {
 				rightful_religious_head_scope = {
+					has_landed_title = d_confederated
+				}
+				NOT = { has_global_flag = only_confed_saints }
+			}
+			AND = {
+				rightful_religious_head_scope = {
 					has_landed_title = k_ursuline
 				}
 				NOT = { has_global_flag = only_abbess_saints }
@@ -3018,6 +3019,12 @@ character_event = {
 			}
 			AND = {
 				rightful_religious_head_scope = {
+					has_landed_title = d_confederated
+				}
+				NOT = { has_global_flag = only_confed_saints }
+			}
+			AND = {
+				rightful_religious_head_scope = {
 					has_landed_title = k_ursuline
 				}
 				NOT = {
@@ -3067,6 +3074,12 @@ character_event = {
 					religion = catholic
 				}
 				set_global_flag = bad_catholic_saint
+			}
+			else_if = {
+				limit = {
+					religion = confederated
+				}
+				set_global_flag = bad_confed_saint
 			}
 			else_if = {
 				limit = {
@@ -3300,6 +3313,16 @@ province_event = {
 		}
 		else_if = {
 			limit = {
+				has_global_flag = bad_confed_saint
+			}
+			d_confederated = { 
+				holder_scope = {
+					character_event = { id = HF.40058 }
+				}
+			}
+		}
+		else_if = {
+			limit = {
 				has_global_flag = bad_ursuline_saint
 			}
 			k_ursuline = { 
@@ -3341,6 +3364,7 @@ character_event = {
     trigger = {
         NOR = {
             has_global_flag = only_papal_saints
+			has_global_flag = only_confed_saints
             has_global_flag = only_abbess_saints
             has_global_flag = only_archbishop_saints
             has_global_flag = only_presidential_saints
@@ -3358,6 +3382,20 @@ character_event = {
 			any_playable_ruler = {
 				limit = {
 					religion = catholic
+				}
+				narrative_event = { id = HF.40060 }
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = bad_confed_saint
+			}
+			set_global_flag = only_confed_saints
+			clr_global_flag = bad_confed_saint
+			log = "Only Papal Beatifications, declared by [Root.GetTitledName]"
+			any_playable_ruler = {
+				limit = {
+					religion = confederated
 				}
 				narrative_event = { id = HF.40060 }
 			}
@@ -4352,6 +4390,7 @@ narrative_event = {
         FROM = {
             OR = {
 				has_landed_title = k_papal_state
+				has_landed_title = d_confederated
 				has_landed_title = k_ursuline
 				has_landed_title = d_high_church
 				has_landed_title = d_quorum_of_the_twelve

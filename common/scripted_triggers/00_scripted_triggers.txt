@@ -1459,6 +1459,11 @@ can_be_spiritual_trigger = {
 		trait = scholarly_theologian
 		trait = mastermind_theologian
 		has_character_flag = special_spiritual
+		AND = {
+			trait = druid
+			trait = bad_druid
+			NOT = { religion_openly_in_celtic_subgroup_trigger = yes }
+		}
 	}
 }
 
@@ -9151,21 +9156,7 @@ has_feminist_culture_trigger = {
 }
 
 has_feminist_religion_trigger = {
-	OR = {
-		religion = gaian
-		religion = ursuline
-		religion = angeline
-		religion = sol_invicta
-		religion = reform
-		religion = neomayan
-		religion = nonconformist
-		religion = neognostic
-		religion = confederated
-		religion = antinomian
-		religion = bickertonite
-		religion = strangite
-		religion_group = oldworld
-	}
+	gender_equality_trigger = yes
 }
 
 americanism_under_threat_trigger = {

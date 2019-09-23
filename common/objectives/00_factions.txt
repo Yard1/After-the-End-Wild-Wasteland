@@ -5578,11 +5578,7 @@ faction_claimant = {
 				has_claim = ROOT
 			}
 			
-			NOR = {
-				has_landed_title = k_papal_state
-				has_landed_title = k_ursuline
-				has_landed_title = d_quorum_of_the_twelve
-			}
+			is_pope = no
 
 			OR = {
 				is_ruler = no

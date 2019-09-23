@@ -9,13 +9,9 @@ fit_to_lead_troops = {
 	NOT = { has_character_modifier = out_traveling }
 	NOT = { has_character_modifier = mother_dark_rest }
 	NAND = { # Only certain popes will lead troops
-		OR = {
-			has_landed_title = k_papal_state
-			has_landed_title = k_ursuline
-			has_landed_title = d_quorum_of_the_twelve
-			has_landed_title = d_supreme_court
-		}
+		is_pope = yes
 		NOR = {
+			holy_order = yes
 			has_education_martial_trigger = yes
 			has_minor_title = title_commander
 			has_job_title = job_marshal

@@ -394,10 +394,7 @@ character_event = {
 			}
 			5 = { #Send Son/Daughter to monastery.
 				trigger = {
-					OR = { 
-						religion_group = christian
-						has_religion_feature = religion_monastic
-					} 
+					has_monasticism = yes
 					FROM = { 
 						any_child = { 
 							is_adult = yes
@@ -684,7 +681,7 @@ character_event = {
 						religion = americanist
 						religion = hamiltonian
 						religion = libertarian
-						has_religion_feature = religion_monastic
+						has_monasticism = yes
 					} 
 					FROM = { higher_real_tier_than = DUKE player_heir = { dynasty = PREV } } #Do not impose a game over.
 				} 
@@ -1252,7 +1249,7 @@ character_event = {
 				}
 				modifier = {
 					factor = 1.5
-					has_landed_title = k_papal_state
+					is_pope = yes
 				}
 				modifier = {
 					factor = 2

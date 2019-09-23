@@ -21,7 +21,7 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		religion_group = american_native
+		has_ancestor_veneration = yes
 	}
 
 	#Health
@@ -281,6 +281,8 @@ character_event = {
 				}
 			}
 			NOT = { trait = maimed }
+			pacifist = no
+			NOT = { religion = gracia_divina }
 		}
 
 		set_character_flag = ancestors_limb
@@ -374,6 +376,8 @@ character_event = {
 
 		trigger = { 
 			event_target:human_sacrifice_prisoner = { always = yes }
+			pacifist = no
+			NOT = { religion = gracia_divina }
 		}
 
 		set_character_flag = ancestors_human
@@ -414,6 +418,8 @@ character_event = {
 		trigger = {
 			NOT = { event_target:human_sacrifice_prisoner = { always = yes } }
 			event_target:human_sacrifice_courtier = { always = yes }
+			pacifist = no
+			NOT = { religion = gracia_divina }
 		}
 
 		set_character_flag = ancestors_human

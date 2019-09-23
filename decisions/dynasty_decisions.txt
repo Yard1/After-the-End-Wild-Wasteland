@@ -299,26 +299,7 @@ targetted_decisions = {
 			prisoner = no
 			is_adult = yes
 			has_dlc = "Sons of Abraham"
-			OR = {
-				AND = { 
-					religion_group = christian
-					is_alternate_start = no
-				}
-				AND = { 
-					religion_group = cult_of_saints
-					is_alternate_start = no
-				}
-				AND = { 
-					religion_group = latter_day_saints
-					is_alternate_start = no
-				}
-				AND = { 
-					religion = hindu
-					is_alternate_start = no
-				}
-				has_religion_feature = religion_monastic
-				has_religion_feature = religion_feature_west_african
-			}
+			has_monasticism = yes
 		}
 		
 		potential = {

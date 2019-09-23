@@ -13,6 +13,10 @@ law_groups = {
 laws = {
 	status_of_women_0 = {
 		group = status_of_women
+		default = yes
+		default_selection = {
+			factor = 1
+		}
 		allow = {
 			has_law = status_of_women_1
 			NOR = {
@@ -126,6 +130,24 @@ laws = {
 	}
 	status_of_women_1 = {
 		group = status_of_women
+		default_selection = {
+			factor = 0
+			additive_modifier = {
+				value = 3
+				holder_scope = {
+					OR = {
+						AND = {
+							semi_equal_religion = no
+							capital_scope = { TECH_CULTURE_FLEX = 3 }
+						}
+						AND = {
+							semi_equal_religion = yes
+							capital_scope = { TECH_CULTURE_FLEX = 1 }
+						}
+					}
+				}
+			}
+		}
 		allow = {
 			OR = {
 				has_law = status_of_women_0
@@ -136,6 +158,13 @@ laws = {
 				holder_scope = { equal_religion = yes }
 				holder_scope = { has_religion_feature = religion_feature_midewiwin }
 				holder_scope = { has_religion_feature = religion_patriarchal }
+			}
+			conditional_tooltip = {
+				trigger = { semi_equal_religion = no }
+				custom_tooltip = {
+					text = TT_HAS_TOLERANCE_3
+					holder_scope = { capital_scope = { TECH_CULTURE_FLEX = 3 } }
+				}
 			}
 		}
 		potential = {
@@ -160,7 +189,23 @@ laws = {
 			always = no
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 0.05
+			modifier = {
+				factor = 0
+				has_law = status_of_women_2
+			}
+			modifier = {
+				factor = 1.5
+				holder_scope = { is_female = yes }
+			}
+			modifier = {
+				factor = 1.5
+				holder_scope = { has_feminist_culture_trigger = yes }
+			}
+			modifier = {
+				factor = 1.5
+				holder_scope = { semi_equal_religion = yes }
+			}
 		}
 		ai_will_revoke = {
 			factor = 0
@@ -205,6 +250,9 @@ laws = {
 			if = {
 				limit = {
 					has_law = status_of_women_4
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_SPYMASTER
 				}
 				custom_tooltip = {
 					text = TOOLTIP_DISALLOW_FEMALE_CHANCELLOR
@@ -235,6 +283,24 @@ laws = {
 	}
 	status_of_women_2 = {
 		group = status_of_women
+		default_selection = {
+			factor = 0
+			additive_modifier = {
+				value = 4
+				holder_scope = {
+					OR = {
+						AND = {
+							semi_equal_religion = no
+							capital_scope = { TECH_CULTURE_FLEX = 4 }
+						}
+						AND = {
+							semi_equal_religion = yes
+							capital_scope = { TECH_CULTURE_FLEX = 2 }
+						}
+					}
+				}
+			}
+		}
 		allow = {
 			OR = {
 				has_law = status_of_women_1
@@ -245,6 +311,13 @@ laws = {
 				holder_scope = { equal_religion = yes }
 				holder_scope = { has_religion_feature = religion_feature_midewiwin }
 				holder_scope = { has_religion_feature = religion_patriarchal }
+			}
+			conditional_tooltip = {
+				trigger = { semi_equal_religion = no }
+				custom_tooltip = {
+					text = TT_HAS_TOLERANCE_4
+					holder_scope = { capital_scope = { TECH_CULTURE_FLEX = 4 } }
+				}
 			}
 		}
 		potential = {
@@ -269,7 +342,23 @@ laws = {
 			always = no
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 0.05
+			modifier = {
+				factor = 0
+				has_law = status_of_women_3
+			}
+			modifier = {
+				factor = 1.5
+				holder_scope = { is_female = yes }
+			}
+			modifier = {
+				factor = 1.5
+				holder_scope = { has_feminist_culture_trigger = yes }
+			}
+			modifier = {
+				factor = 1.5
+				holder_scope = { semi_equal_religion = yes }
+			}
 		}
 		ai_will_revoke = {
 			factor = 0
@@ -314,6 +403,15 @@ laws = {
 			if = {
 				limit = {
 					has_law = status_of_women_4
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_SPYMASTER
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_CHANCELLOR
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_TREASURER
 				}
 				custom_tooltip = {
 					text = TOOLTIP_DISALLOW_FEMALE_MARSHAL
@@ -337,6 +435,24 @@ laws = {
 	}
 	status_of_women_3 = {
 		group = status_of_women
+		default_selection = {
+			factor = 0
+			additive_modifier = {
+				value = 5
+				holder_scope = {
+					OR = {
+						AND = {
+							semi_equal_religion = no
+							capital_scope = { TECH_CULTURE_FLEX = 5 }
+						}
+						AND = {
+							semi_equal_religion = yes
+							capital_scope = { TECH_CULTURE_FLEX = 3 }
+						}
+					}
+				}
+			}
+		}
 		allow = {
 			OR = {
 				has_law = status_of_women_2
@@ -347,6 +463,13 @@ laws = {
 				holder_scope = { equal_religion = yes }
 				holder_scope = { has_religion_feature = religion_feature_midewiwin }
 				holder_scope = { has_religion_feature = religion_patriarchal }
+			}
+			conditional_tooltip = {
+				trigger = { semi_equal_religion = no }
+				custom_tooltip = {
+					text = TT_HAS_TOLERANCE_5
+					holder_scope = { capital_scope = { TECH_CULTURE_FLEX = 5 } }
+				}
 			}
 		}
 		potential = {
@@ -371,7 +494,23 @@ laws = {
 			always = no
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 0.05
+			modifier = {
+				factor = 0
+				has_law = status_of_women_4
+			}
+			modifier = {
+				factor = 1.5
+				holder_scope = { is_female = yes }
+			}
+			modifier = {
+				factor = 1.5
+				holder_scope = { has_feminist_culture_trigger = yes }
+			}
+			modifier = {
+				factor = 1.5
+				holder_scope = { semi_equal_religion = yes }
+			}
 		}
 		ai_will_revoke = {
 			factor = 0
@@ -424,6 +563,18 @@ laws = {
 					has_law = status_of_women_4
 				}
 				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_SPYMASTER
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_CHANCELLOR
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_TREASURER
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_MARSHAL
+				}
+				custom_tooltip = {
 					text = TOOLTIP_DISALLOW_TRUE_COGNATIC
 				}
 				custom_tooltip = {
@@ -442,10 +593,35 @@ laws = {
 	}
 	status_of_women_4 = {
 		group = status_of_women
+		default_selection = {
+			factor = 0
+			additive_modifier = {
+				value = 6
+				holder_scope = {
+					OR = {
+						AND = {
+							semi_equal_religion = no
+							capital_scope = { TECH_CULTURE_FLEX = 6 }
+						}
+						AND = {
+							semi_equal_religion = yes
+							capital_scope = { TECH_CULTURE_FLEX = 4 }
+						}
+					}
+				}
+			}
+		}
 		allow = {
 			has_law = status_of_women_3
 			NOR = {
 				holder_scope = { has_religion_feature = religion_patriarchal }
+			}
+			conditional_tooltip = {
+				trigger = { semi_equal_religion = no }
+				custom_tooltip = {
+					text = TT_HAS_TOLERANCE_6
+					holder_scope = { capital_scope = { TECH_CULTURE_FLEX = 6 } }
+				}
 			}
 		}
 		potential = {
@@ -467,7 +643,19 @@ laws = {
 			always = no
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 0.05
+			modifier = {
+				factor = 1.5
+				holder_scope = { is_female = yes }
+			}
+			modifier = {
+				factor = 1.5
+				holder_scope = { has_feminist_culture_trigger = yes }
+			}
+			modifier = {
+				factor = 1.5
+				holder_scope = { semi_equal_religion = yes }
+			}
 		}
 		ai_will_revoke = {
 			factor = 0
@@ -481,16 +669,16 @@ laws = {
 					has_law = status_of_women_0
 				}
 				custom_tooltip = {
-					text = TOOLTIP_ALLOW_FEMALE_SPYMASTER
+					text = TOOLTIP_ALLOW_FEMALE_SPYMASTER_ALL
 				}
 				custom_tooltip = {
-					text = TOOLTIP_ALLOW_FEMALE_CHANCELLOR
+					text = TOOLTIP_ALLOW_FEMALE_CHANCELLOR_ALL
 				}
 				custom_tooltip = {
-					text = TOOLTIP_ALLOW_FEMALE_TREASURER
+					text = TOOLTIP_ALLOW_FEMALE_TREASURER_ALL
 				}
 				custom_tooltip = {
-					text = TOOLTIP_ALLOW_FEMALE_MARSHAL
+					text = TOOLTIP_ALLOW_FEMALE_MARSHAL_ALL
 				}
 				custom_tooltip = {
 					text = TOOLTIP_ALLOW_TRUE_COGNATIC
@@ -504,13 +692,16 @@ laws = {
 					has_law = status_of_women_1
 				}
 				custom_tooltip = {
-					text = TOOLTIP_ALLOW_FEMALE_CHANCELLOR
+					text = TOOLTIP_ALLOW_FEMALE_SPYMASTER_ALL
 				}
 				custom_tooltip = {
-					text = TOOLTIP_ALLOW_FEMALE_TREASURER
+					text = TOOLTIP_ALLOW_FEMALE_CHANCELLOR_ALL
 				}
 				custom_tooltip = {
-					text = TOOLTIP_ALLOW_FEMALE_MARSHAL
+					text = TOOLTIP_ALLOW_FEMALE_TREASURER_ALL
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_MARSHAL_ALL
 				}
 				custom_tooltip = {
 					text = TOOLTIP_ALLOW_TRUE_COGNATIC
@@ -524,7 +715,16 @@ laws = {
 					has_law = status_of_women_2
 				}
 				custom_tooltip = {
-					text = TOOLTIP_ALLOW_FEMALE_MARSHAL
+					text = TOOLTIP_ALLOW_FEMALE_SPYMASTER_ALL
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_CHANCELLOR_ALL
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_TREASURER_ALL
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_MARSHAL_ALL
 				}
 				custom_tooltip = {
 					text = TOOLTIP_ALLOW_TRUE_COGNATIC
@@ -536,6 +736,18 @@ laws = {
 			if = {
 				limit = {
 					has_law = status_of_women_3
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_SPYMASTER_ALL
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_CHANCELLOR_ALL
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_TREASURER_ALL
+				}
+				custom_tooltip = {
+					text = TOOLTIP_ALLOW_FEMALE_MARSHAL_ALL
 				}
 				custom_tooltip = {
 					text = TOOLTIP_ALLOW_TRUE_COGNATIC

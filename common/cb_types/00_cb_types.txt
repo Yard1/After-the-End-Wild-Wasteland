@@ -495,10 +495,7 @@ other_claim = {
 			# Anti-Popes take all the gold of the Vatican.
 			if = {
 				limit = {
-					OR = {
-						title = k_papal_state
-						title = k_ursuline
-					}
+					is_pope = yes
 				}
 				FROM = {
 					transfer_scaled_wealth = {
@@ -4595,10 +4592,7 @@ new_crusade = {
 					most_participating_crusader = {
 						holy_order = no
 						mercenary = no
-						NOR = {
-							has_landed_title = k_papal_state
-							has_landed_title = k_ursuline
-						}
+						is_pope = no
 						OR = {
 							AND = {
 								ai = yes
