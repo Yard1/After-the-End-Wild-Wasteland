@@ -2802,7 +2802,7 @@
 	trait = zealous
 	mother = 1810201
 	father = 1810200
-	2641.5.8 = {
+	2621.5.8 = {
 	    birth = yes
 		effect = {
 		    set_character_flag = great_conqueror
