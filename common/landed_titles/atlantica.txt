@@ -1660,6 +1660,7 @@ e_atlantica = {
 		deitsch = "Nei-England"
 		maritimer = "Sasainn Nuadh"
 		newfie = "Sasana Nua"
+		mikmaq = "Wabanahk"
 		
 		capital = 69
 
@@ -1684,6 +1685,9 @@ e_atlantica = {
 			
 			deitsch = "Greibarigen"
 			yiddish = "Grinberg"
+			mikmaq = "Masipskoik" 
+			quebecois = "Monts-Verts" 
+			acadien = "Monts-Verts" 
 			
 			c_bennington = {
 				color={ 53 217 102 }
@@ -2022,6 +2026,7 @@ e_atlantica = {
 			
 			deitsch = "Meyn"
 			yiddish = "Meyb"
+			mikmaq = "Malesse'jik" 
 			
 			c_mahoosuc = {
 				color={ 130 65 125 }
@@ -2112,6 +2117,7 @@ e_atlantica = {
 			capital = 196
 			
 			deitsch = "Pennaufschot"
+			quebecois = "Pentagouët"
 			acadien = "Pentagouët"
 			
 			c_bangor = {
@@ -2156,7 +2162,9 @@ e_atlantica = {
 				
 				deitsch = "Machiyas"
 				yiddish = "Machiyas"
+				quebecois = "Mages"
 				acadien = "Mages"
+				mikmaq = "Sipayik" 
 				
 				b_machias_ME = {acadien = "Mages"}
 				b_machiasport_ME = {acadien = "Havre au Mage"}

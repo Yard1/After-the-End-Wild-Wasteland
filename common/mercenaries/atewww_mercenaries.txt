@@ -4,3 +4,9 @@ secret_service_composition = {
 	heavy_infantry = 350
 	archers = 50
 }
+
+d_mounties_composition = {
+	levy_size = 1
+	knights = 800
+	horse_archers = 400
+}
