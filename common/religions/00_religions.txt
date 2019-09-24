@@ -1898,6 +1898,7 @@ pacific = {
 
 		character_modifier = {
 			opinion_of_hidden_male_trait = -15
+			opinion_of_enuch = 10
 			opinion_of_homosexual = 5
 		}
 	}

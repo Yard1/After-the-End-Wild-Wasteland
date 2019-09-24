@@ -5450,15 +5450,49 @@ spawn_peasant_army_effect = {
 					}
 					attrition = 1.0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5475,15 +5509,49 @@ spawn_peasant_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5515,15 +5583,49 @@ spawn_peasant_army_effect = {
 					}
 					attrition = 1.0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5540,15 +5642,49 @@ spawn_peasant_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5580,15 +5716,49 @@ spawn_peasant_army_effect = {
 					}
 					attrition = 1.0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5605,15 +5775,49 @@ spawn_peasant_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5645,15 +5849,49 @@ spawn_peasant_army_effect = {
 					}
 					attrition = 1.0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5670,15 +5908,49 @@ spawn_peasant_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5709,15 +5981,49 @@ spawn_peasant_army_effect = {
 					}
 					attrition = 1.0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5733,15 +6039,49 @@ spawn_peasant_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5771,15 +6111,49 @@ spawn_peasant_army_effect = {
 					}
 					attrition = 1.0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5795,15 +6169,49 @@ spawn_peasant_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5847,15 +6255,49 @@ spawn_peasant_army_effect = {
 					}
 					attrition = 0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5872,15 +6314,49 @@ spawn_peasant_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5912,15 +6388,49 @@ spawn_peasant_army_effect = {
 					}
 					attrition = 0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5937,15 +6447,49 @@ spawn_peasant_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -5977,15 +6521,49 @@ spawn_peasant_army_effect = {
 					}
 					attrition = 0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6002,15 +6580,49 @@ spawn_peasant_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6042,15 +6654,49 @@ spawn_peasant_army_effect = {
 					}
 					attrition = 0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6067,15 +6713,49 @@ spawn_peasant_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6106,15 +6786,49 @@ spawn_peasant_army_effect = {
 					}
 					attrition = 0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6130,15 +6844,49 @@ spawn_peasant_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6168,15 +6916,49 @@ spawn_peasant_army_effect = {
 					}
 					attrition = 0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6192,15 +6974,49 @@ spawn_peasant_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6255,15 +7071,49 @@ spawn_peasant_reinforcements_effect = {
 						attrition = 1.0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6280,15 +7130,49 @@ spawn_peasant_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6331,15 +7215,49 @@ spawn_peasant_reinforcements_effect = {
 						attrition = 1.0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6356,15 +7274,49 @@ spawn_peasant_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6407,15 +7359,49 @@ spawn_peasant_reinforcements_effect = {
 						attrition = 1.0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6432,15 +7418,49 @@ spawn_peasant_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6483,15 +7503,49 @@ spawn_peasant_reinforcements_effect = {
 						attrition = 1.0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6508,15 +7562,49 @@ spawn_peasant_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6558,15 +7646,49 @@ spawn_peasant_reinforcements_effect = {
 						attrition = 1.0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6582,15 +7704,49 @@ spawn_peasant_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6631,15 +7787,49 @@ spawn_peasant_reinforcements_effect = {
 						attrition = 1.0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6655,15 +7845,49 @@ spawn_peasant_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6717,15 +7941,49 @@ spawn_peasant_reinforcements_effect = {
 						attrition = 0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6793,15 +8051,49 @@ spawn_peasant_reinforcements_effect = {
 						attrition = 0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6869,15 +8161,49 @@ spawn_peasant_reinforcements_effect = {
 						attrition = 0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -6945,15 +8271,49 @@ spawn_peasant_reinforcements_effect = {
 						attrition = 0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7020,15 +8380,49 @@ spawn_peasant_reinforcements_effect = {
 						attrition = 0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7093,15 +8487,49 @@ spawn_peasant_reinforcements_effect = {
 						attrition = 0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7117,15 +8545,49 @@ spawn_peasant_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 31
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 31
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { gender_equality_trigger_rebellion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 31
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7169,15 +8631,49 @@ spawn_heretic_army_effect = {
 					}
 					attrition = 1.0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7194,15 +8690,49 @@ spawn_heretic_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7234,15 +8764,49 @@ spawn_heretic_army_effect = {
 					}
 					attrition = 1.0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7259,15 +8823,49 @@ spawn_heretic_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7298,15 +8896,49 @@ spawn_heretic_army_effect = {
 					}
 					attrition = 1.0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7322,15 +8954,49 @@ spawn_heretic_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7373,15 +9039,49 @@ spawn_heretic_army_effect = {
 					}
 					attrition = 0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7398,15 +9098,49 @@ spawn_heretic_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7438,15 +9172,49 @@ spawn_heretic_army_effect = {
 					}
 					attrition = 0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7463,15 +9231,49 @@ spawn_heretic_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7502,15 +9304,49 @@ spawn_heretic_army_effect = {
 					}
 					attrition = 0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7526,15 +9362,49 @@ spawn_heretic_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7589,15 +9459,49 @@ spawn_heretic_reinforcements_effect = {
 						attrition = 1.0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7614,15 +9518,49 @@ spawn_heretic_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7665,15 +9603,49 @@ spawn_heretic_reinforcements_effect = {
 						attrition = 1.0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7690,15 +9662,49 @@ spawn_heretic_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7740,15 +9746,49 @@ spawn_heretic_reinforcements_effect = {
 						attrition = 1.0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7764,15 +9804,49 @@ spawn_heretic_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7826,15 +9900,49 @@ spawn_heretic_reinforcements_effect = {
 						attrition = 0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7851,15 +9959,49 @@ spawn_heretic_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7902,15 +10044,49 @@ spawn_heretic_reinforcements_effect = {
 						attrition = 0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7927,15 +10103,49 @@ spawn_heretic_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -7977,15 +10187,49 @@ spawn_heretic_reinforcements_effect = {
 						attrition = 0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8001,15 +10245,49 @@ spawn_heretic_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8031,17 +10309,55 @@ spawn_heretic_reinforcements_effect = {
 }
 
 spawn_nationalist_army_effect = {
-	create_character = {
-		random_traits = yes
-		dynasty = none
-		religion = ROOT
-		culture = ROOT
-		female = no
-		age = 34
-		attributes = {
-			martial = 7
+	if = {
+		limit = {
+			ROOT = { matriarchal_religion = yes }
 		}
-		trait = skilled_tactician
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 34
+			attributes = {
+				martial = 7
+			}
+			trait = skilled_tactician
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { gender_equality_trigger_rebellion = yes }
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = 50
+			age = 34
+			flag = keep_male
+			attributes = {
+				martial = 7
+			}
+			trait = skilled_tactician
+		}
+	}
+	else = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 34
+			flag = keep_male
+			attributes = {
+				martial = 7
+			}
+			trait = skilled_tactician
+		}
 	}
 	new_character = {
 		spawn_unit = {
@@ -8059,18 +10375,55 @@ spawn_nationalist_army_effect = {
 			}
 		}
 	}
-	
-	create_character = {
-		random_traits = yes
-		dynasty = none
-		religion = ROOT
-		culture = ROOT
-		female = no
-		age = 23
-		attributes = {
-			martial = 7
+	if = {
+		limit = {
+			ROOT = { matriarchal_religion = yes }
 		}
-		trait = skilled_tactician
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 23
+			attributes = {
+				martial = 7
+			}
+			trait = skilled_tactician
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { gender_equality_trigger_rebellion = yes }
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = 50
+			age = 23
+			flag = keep_male
+			attributes = {
+				martial = 7
+			}
+			trait = skilled_tactician
+		}
+	}
+	else = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 23
+			flag = keep_male
+			attributes = {
+				martial = 7
+			}
+			trait = skilled_tactician
+		}
 	}
 	new_character = {
 		spawn_unit = {
@@ -8119,17 +10472,55 @@ spawn_nationalist_reinforcements_effect = {
 			}
 		}
 	}
-	create_character = {
-		random_traits = yes
-		dynasty = none
-		religion = ROOT
-		culture = ROOT
-		female = no
-		age = 27
-		attributes = {
-			martial = 7
+	if = {
+		limit = {
+			ROOT = { matriarchal_religion = yes }
 		}
-		trait = skilled_tactician
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 27
+			attributes = {
+				martial = 7
+			}
+			trait = skilled_tactician
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { gender_equality_trigger_rebellion = yes }
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = 50
+			age = 27
+			flag = keep_male
+			attributes = {
+				martial = 7
+			}
+			trait = skilled_tactician
+		}
+	}
+	else = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 27
+			flag = keep_male
+			attributes = {
+				martial = 7
+			}
+			trait = skilled_tactician
+		}
 	}
 	new_character = {
 		spawn_unit = {
@@ -8147,17 +10538,55 @@ spawn_nationalist_reinforcements_effect = {
 			}
 		}
 	}
-	create_character = {
-		random_traits = yes
-		dynasty = none
-		religion = ROOT
-		culture = ROOT
-		female = no
-		age = 30
-		attributes = {
-			martial = 7
+	if = {
+		limit = {
+			ROOT = { matriarchal_religion = yes }
 		}
-		trait = skilled_tactician
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 30
+			attributes = {
+				martial = 7
+			}
+			trait = skilled_tactician
+		}
+	}
+	else_if = {
+		limit = {
+			ROOT = { gender_equality_trigger_rebellion = yes }
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = 50
+			age = 30
+			flag = keep_male
+			attributes = {
+				martial = 7
+			}
+			trait = skilled_tactician
+		}
+	}
+	else = {
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 30
+			flag = keep_male
+			attributes = {
+				martial = 7
+			}
+			trait = skilled_tactician
+		}
 	}
 	new_character = {
 		spawn_unit = {
@@ -8200,15 +10629,49 @@ spawn_religious_army_effect = {
 					}
 					attrition = 1.0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8225,15 +10688,49 @@ spawn_religious_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8265,15 +10762,49 @@ spawn_religious_army_effect = {
 					}
 					attrition = 1.0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8290,15 +10821,49 @@ spawn_religious_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8329,15 +10894,49 @@ spawn_religious_army_effect = {
 					}
 					attrition = 1.0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8353,15 +10952,49 @@ spawn_religious_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8404,15 +11037,49 @@ spawn_religious_army_effect = {
 					}
 					attrition = 0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8429,15 +11096,49 @@ spawn_religious_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8469,15 +11170,49 @@ spawn_religious_army_effect = {
 					}
 					attrition = 0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8494,15 +11229,49 @@ spawn_religious_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8533,15 +11302,49 @@ spawn_religious_army_effect = {
 					}
 					attrition = 0
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8557,15 +11360,49 @@ spawn_religious_army_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8620,15 +11457,49 @@ spawn_religious_reinforcements_effect = {
 						attrition = 1.0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8645,15 +11516,49 @@ spawn_religious_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8696,15 +11601,49 @@ spawn_religious_reinforcements_effect = {
 						attrition = 1.0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8721,15 +11660,49 @@ spawn_religious_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8771,15 +11744,49 @@ spawn_religious_reinforcements_effect = {
 						attrition = 1.0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8795,15 +11802,49 @@ spawn_religious_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8857,15 +11898,49 @@ spawn_religious_reinforcements_effect = {
 						attrition = 0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8882,15 +11957,49 @@ spawn_religious_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8933,15 +12042,49 @@ spawn_religious_reinforcements_effect = {
 						attrition = 0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -8958,15 +12101,49 @@ spawn_religious_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -9008,15 +12185,49 @@ spawn_religious_reinforcements_effect = {
 						attrition = 0
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 30
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 30
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 30
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {
@@ -9032,15 +12243,49 @@ spawn_religious_reinforcements_effect = {
 						disband_on_peace = yes
 					}
 				}
-				create_character = {
-					random_traits = yes
-					dynasty = none
-					religion = THIS
-					culture = THIS
-					female = no
-					age = 23
-					trait = peasant_leader
-					trait = tough_soldier
+				if = {
+					limit = {
+						THIS = { matriarchal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = yes
+						age = 23
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else_if = {
+					limit = {
+						THIS = { equal_religion = yes }
+					}
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = 50
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = yes
+						dynasty = none
+						religion = THIS
+						culture = THIS
+						female = no
+						age = 23
+						flag = keep_male
+						trait = peasant_leader
+						trait = tough_soldier
+					}
 				}
 				new_character = {
 					spawn_unit = {

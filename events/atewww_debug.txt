@@ -126,8 +126,7 @@ character_event = {
 	
 	option = {
 		name = "enable americanists ghws"
-		religion = amazonian
-		capital_scope = { religion = amazonian }
+		set_global_flag = liberation_wars_unlocked
 	}
 
 }

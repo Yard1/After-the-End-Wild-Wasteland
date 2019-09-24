@@ -634,11 +634,6 @@ character_event = {
 	only_men = yes
 	ai = yes
 	trigger = {
-		NOT = {
-			any_player = {
-				dynasty = PREV
-			}
-		}
 		is_patrician = no
 		OR = {
 			is_playable = no
@@ -678,7 +673,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				is_ruler = yes
-				primary_title = { has_law = agnatic_succession }
+				primary_title = {
+					NOT = { title = d_order_airmen }
+					has_law = agnatic_succession
+				}
 			}
 		}
 	}
@@ -692,7 +690,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				is_ruler = yes
-				primary_title = { has_law = enatic_succession }
+				primary_title = {
+					NOT = { title = d_order_airmen }
+					has_law = enatic_succession
+				}
 			}
 		}
 	}

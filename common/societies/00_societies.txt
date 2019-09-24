@@ -3238,6 +3238,15 @@ the_assassins = {
 		}
 		age = 16
 		hidden_trigger = { mercenary = no }
+		hidden_trigger = {
+			OR = {
+				holy_order = no
+				has_landed_title = d_men_in_black
+				any_liege = {
+					has_landed_title = d_men_in_black
+				}
+			}
+		}
 		OR = {
 			true_religion = americanist
 			true_religion = jeffersonian

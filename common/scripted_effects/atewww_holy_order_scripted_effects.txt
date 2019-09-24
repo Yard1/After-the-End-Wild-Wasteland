@@ -144,3 +144,135 @@ on_government_change = {
 		}
 	}
 }
+
+marry_suitable_courtier_or_vassal = {
+	random = {
+		chance = 25
+		modifier = {
+			factor = 0.25
+			is_ruler = no
+			NOT = {
+				any_heir_title = {
+					title = d_order_airmen
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			age = 25
+			OR = {
+				is_ruler = yes
+				any_heir_title = {
+					title = d_order_airmen
+				}
+			}
+			OR = {
+				has_children = no
+				d_order_airmen = {
+					current_heir = {
+						NOT = { dynasty = ROOT }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			age = 30
+			OR = {
+				is_ruler = yes
+				any_heir_title = {
+					title = d_order_airmen
+				}
+			}
+			OR = {
+				has_children = no
+				d_order_airmen = {
+					current_heir = {
+						NOT = { dynasty = ROOT }
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 100
+			age = 35
+			OR = {
+				is_ruler = yes
+				any_heir_title = {
+					title = d_order_airmen
+				}
+			}
+			OR = {
+				has_children = no
+				d_order_airmen = {
+					current_heir = {
+						NOT = { dynasty = ROOT }
+					}
+				}
+			}
+		}
+
+		any_courtier_or_vassal = {
+			limit = {
+				is_inaccessible_or_incapable_trigger = no
+				prisoner = no
+				is_incapable = no
+				is_opposite_sex = ROOT
+				is_married = no
+				is_marriage_adult = yes
+				NOR = {
+					trait = dog
+					trait = eunuch
+					trait = monk
+					trait = nun
+					trait = horse
+					trait = cannot_marry
+					trait = cat
+					trait = celibate
+					is_rival_of = ROOT
+				}
+				NOT = { is_close_relative = ROOT }
+				OR = {
+					NOT = { dynasty = ROOT }
+					is_cousin_of = ROOT
+				}
+			}
+			score_value = {
+				value = 10
+				beloved_target_selection_score = yes
+			}
+			score_value = {
+				value = 5
+				prev_likes_this_score = yes
+			}
+			score_value = {
+				value = 5
+				interesting_courtier_selection_score = yes
+			}
+			score_value = {
+				value = 1
+				warrior_recruit_score = yes
+			}
+			count = 3
+			set_character_flag = potential_marriage_candidate
+		}
+		random_courtier_or_vassal = {
+			limit = { has_character_flag = potential_marriage_candidate }
+			save_event_target_as = marriage_candidate
+		}
+		any_courtier_or_vassal = {
+			limit = { has_character_flag = potential_marriage_candidate }
+			clr_character_flag = potential_marriage_candidate
+		}
+		if = {
+			limit = { event_target:marriage_candidate = { always = yes } }
+			if = {
+				limit = { is_female = yes }
+				add_spouse_matrilineal = event_target:marriage_candidate
+			}
+			else = {
+				add_spouse = event_target:marriage_candidate
+			}
+		}
+	}
+}

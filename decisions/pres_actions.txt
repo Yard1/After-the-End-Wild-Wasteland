@@ -85,6 +85,7 @@ decisions = {
 			mercenary = no
 			is_playable = yes
 			OR = {
+				ai = no
 				independent = yes
 				liege = { higher_tier_than = DUKE }
 			}

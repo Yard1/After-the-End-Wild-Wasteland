@@ -496,6 +496,7 @@ succession_laws = {
 				NOT = { has_landed_title = d_forscom }
 				OR = {
 					independent = yes
+					ROOT = { title = d_order_airmen }
 					NOT = {
 						any_liege = {
 							holy_order = yes
@@ -536,6 +537,7 @@ succession_laws = {
 				is_landless_type_title = no
 				is_tribal_type_title = yes
 				temporary = yes
+				ROOT = { title = d_order_airmen }
 			}
 			OR = {
 				AND = {
@@ -544,6 +546,7 @@ succession_laws = {
 				}
 				holder_scope = { is_feudal = yes }
 				holder_scope = { is_patrician = yes }
+				ROOT = { title = d_order_airmen }
 			}
 			
 			is_primary_type_title = no
@@ -688,6 +691,7 @@ succession_laws = {
 					holder_scope = {
 						OR = {
 							independent = yes
+							ROOT = { title = d_order_airmen }
 							NOT = {
 								any_liege = {
 									holy_order = yes
@@ -706,6 +710,7 @@ succession_laws = {
 						is_landless_type_title = no
 						is_tribal_type_title = yes
 						temporary = yes
+						ROOT = { title = d_order_airmen }
 					}
 					is_primary_type_title = no
 					OR = {
@@ -714,6 +719,7 @@ succession_laws = {
 							is_feudal = yes
 						}
 						holder_scope = { is_feudal = yes }
+						ROOT = { title = d_order_airmen }
 					}
 				}
 				has_title_flag = alternate_byz

@@ -145,6 +145,7 @@ character_event = {
 	min_age = 16
 	
 	trigger = {
+		NOT = { has_character_flag = historical_character }
 		NOT = { has_character_flag = diversity }
 	}
 	
@@ -20958,6 +20959,7 @@ character_event = {
 	min_age = 16
 	
 	trigger = {
+		NOT = { has_character_flag = historical_character }
 		NOT = { has_character_flag = physique }
 	}
 	
@@ -21447,7 +21449,8 @@ character_event = {
 						NOT = { spouse_even_if_dead = { always = yes } }
 						NOT = { any_child = { always = yes } }
 					}
-					character_event = { id = misc.40 }
+					character_event = { id = misc.3 }
+					character_event = { id = misc.4 }
 				}
 				else = {
 					set_character_flag = physique
@@ -21527,6 +21530,7 @@ character_event = {
 	only_rulers = yes
 	trigger = {
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+		NOT = { has_landed_title = d_americanist }
 		OR = {
 			has_law = succ_open_elective
 			has_law = succ_libertarian_elective
@@ -21651,7 +21655,8 @@ character_event = {
 		}
 	}
 	option = {
-		character_event = { id = misc.40 } # Diversity
+		character_event = { id = misc.3 }
+		character_event = { id = misc.4 }
 		if = {
 			limit = {
 				is_theocracy = yes
