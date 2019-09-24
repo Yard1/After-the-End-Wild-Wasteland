@@ -285,60 +285,6 @@ character_event = {
 		}
 		add_trait = sympathy_christendom
 		clr_character_flag = flag_picking_sympathy
-		ai_chance = { 
-			factor = 25 
-			modifier = { 
-				factor = 0 
-				liege = { 
-					OR = { 
-						trait = sympathy_oldworld
-						trait = sympathy_cult_of_saints
-						trait = sympathy_latter_day_saints
-						trait = sympathy_pacific
-						trait = sympathy_judaism
-						trait = sympathy_indian 
-					}
-				}
-			}
-			modifier = { 
-				factor = 0 
-				top_liege = { 
-					OR = { 
-						trait = sympathy_oldworld
-						trait = sympathy_cult_of_saints
-						trait = sympathy_latter_day_saints
-						trait = sympathy_pacific
-						trait = sympathy_judaism
-						trait = sympathy_indian 
-					}
-				}
-			}
-			modifier = { 
-				factor = 0.25
-				spouse = { 
-					OR = { 
-						trait = sympathy_oldworld
-						trait = sympathy_cult_of_saints
-						trait = sympathy_latter_day_saints
-						trait = sympathy_pacific
-						trait = sympathy_judaism
-						trait = sympathy_indian 
-					}
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_demesne_province = { 
-					religion_group = christian
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_courtier_or_vassal = { 
-					religion_group = christian
-				}
-			}
-		}
 	}
 	option = { #Old World Cultist
 		name = {
@@ -358,60 +304,6 @@ character_event = {
 		}
 		add_trait = sympathy_oldworld
 		clr_character_flag = flag_picking_sympathy
-		ai_chance = { 
-			factor = 25 
-			modifier = { 
-				factor = 0 
-				liege = { 
-					OR = { 
-						trait = sympathy_christendom
-						trait = sympathy_cult_of_saints
-						trait = sympathy_latter_day_saints
-						trait = sympathy_pacific
-						trait = sympathy_judaism
-						trait = sympathy_indian 
-					}
-				}
-			}
-			modifier = { 
-				factor = 0 
-				top_liege = { 
-					OR = { 
-						trait = sympathy_christendom
-						trait = sympathy_cult_of_saints
-						trait = sympathy_latter_day_saints
-						trait = sympathy_pacific
-						trait = sympathy_judaism
-						trait = sympathy_indian 
-					}
-				}
-			}
-			modifier = { 
-				factor = 0.25
-				spouse = { 
-					OR = { 
-						trait = sympathy_christendom
-						trait = sympathy_cult_of_saints
-						trait = sympathy_latter_day_saints
-						trait = sympathy_pacific
-						trait = sympathy_judaism
-						trait = sympathy_indian 
-					}
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_demesne_province = { 
-					religion_group = oldworld
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_courtier_or_vassal = { 
-					religion_group = oldworld
-				}
-			}
-		}
 	}
 	option = { #Jews
 		name = {
@@ -431,60 +323,6 @@ character_event = {
 		}
 		add_trait = sympathy_judaism
 		clr_character_flag = flag_picking_sympathy
-		ai_chance = { 
-			factor = 25 
-			modifier = { 
-				factor = 0 
-				liege = { 
-					OR = { 
-						trait = sympathy_oldworld
-						trait = sympathy_cult_of_saints
-						trait = sympathy_latter_day_saints
-						trait = sympathy_pacific
-						trait = sympathy_christendom
-						trait = sympathy_indian 
-					}
-				}
-			}
-			modifier = { 
-				factor = 0 
-				top_liege = { 
-					OR = { 
-						trait = sympathy_oldworld
-						trait = sympathy_cult_of_saints
-						trait = sympathy_latter_day_saints
-						trait = sympathy_pacific
-						trait = sympathy_christendom
-						trait = sympathy_indian 
-					}
-				}
-			}
-			modifier = { 
-				factor = 0.25
-				spouse = { 
-					OR = { 
-						trait = sympathy_oldworld
-						trait = sympathy_cult_of_saints
-						trait = sympathy_latter_day_saints
-						trait = sympathy_pacific
-						trait = sympathy_christendom
-						trait = sympathy_indian 
-					}
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_demesne_province = { 
-					religion_group = jewish_group
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_courtier_or_vassal = { 
-					religion_group = jewish_group
-				}
-			}
-		}
 	}
 	option = { #Others
 		name = {
@@ -500,63 +338,6 @@ character_event = {
 			}
 		}
 		hidden_tooltip = { character_event = { id = HF.23004 } }
-		ai_chance = { 
-			factor = 25 
-			modifier = { 
-				factor = 0 
-				liege = { 
-					OR = { 
-						trait = sympathy_oldworld
-						trait = sympathy_judaism
-						trait = sympathy_christendom
-					}
-				}
-			}
-			modifier = { 
-				factor = 0 
-				top_liege = { 
-					OR = { 
-						trait = sympathy_oldworld
-						trait = sympathy_judaism
-						trait = sympathy_christendom
-					}
-				}
-			}
-			modifier = { 
-				factor = 0.25
-				spouse = { 
-					OR = { 
-						trait = sympathy_oldworld
-						trait = sympathy_judaism
-						trait = sympathy_christendom
-					}
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_demesne_province = { 
-					religion_group = indian_group
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_courtier_or_vassal = { 
-					religion_group = indian_group
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_demesne_province = { 
-					religion_group = pacific
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_courtier_or_vassal = { 
-					religion_group = pacific
-				}
-			}
-		}
 	}
 }
 
@@ -588,57 +369,6 @@ character_event = {
 		}
 		add_trait = sympathy_pacific
 		clr_character_flag = flag_picking_sympathy
-		ai_chance = { 
-			factor = 25 
-			modifier = { 
-				factor = 0 
-				liege = { 
-					trait = sympathy_indian 
-				}
-			}
-			modifier = { 
-				factor = 0 
-				top_liege = { 
-					trait = sympathy_indian 
-				}
-			}
-			modifier = { 
-				factor = 0.25
-				spouse = { 
-					trait = sympathy_indian 
-				}
-			}
-			modifier = { 
-				factor = 0 
-				liege = { 
-					trait = sympathy_pagans 
-				}
-			}
-			modifier = { 
-				factor = 0 
-				top_liege = { 
-					trait = sympathy_pagans 
-				}
-			}
-			modifier = { 
-				factor = 0.25
-				spouse = { 
-					trait = sympathy_pagans 
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_demesne_province = { 
-					religion_group = pacific
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_courtier_or_vassal = { 
-					religion_group = pacific
-				}
-			}
-		}
 	}
 	option = { #Indians
 		name = {
@@ -658,57 +388,6 @@ character_event = {
 		}
 		add_trait = sympathy_indian
 		clr_character_flag = flag_picking_sympathy
-		ai_chance = { 
-			factor = 25 
-			modifier = { 
-				factor = 0 
-				liege = { 
-					trait = sympathy_pacific
-				}
-			}
-			modifier = { 
-				factor = 0 
-				top_liege = { 
-					trait = sympathy_pacific
-				}
-			}
-			modifier = { 
-				factor = 0.25
-				spouse = { 
-					trait = sympathy_pacific
-				}
-			}
-			modifier = { 
-				factor = 0 
-				liege = { 
-					trait = sympathy_pagans 
-				}
-			}
-			modifier = { 
-				factor = 0 
-				top_liege = { 
-					trait = sympathy_pagans 
-				}
-			}
-			modifier = { 
-				factor = 0.25
-				spouse = { 
-					trait = sympathy_pagans 
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_demesne_province = { 
-					religion_group = indian_group
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_courtier_or_vassal = { 
-					religion_group = indian_group
-				}
-			}
-		}
 	}
 	option = { #Pagans - Just for Random World.
 		name = {
@@ -728,57 +407,6 @@ character_event = {
 		}
 		add_trait = sympathy_pagans
 		clr_character_flag = flag_picking_sympathy
-		ai_chance = { 
-			factor = 25 
-			modifier = { 
-				factor = 0 
-				liege = { 
-					trait = sympathy_pacific
-				}
-			}
-			modifier = { 
-				factor = 0 
-				top_liege = { 
-					trait = sympathy_pacific
-				}
-			}
-			modifier = { 
-				factor = 0.25
-				spouse = { 
-					trait = sympathy_pacific
-				}
-			}
-			modifier = { 
-				factor = 0 
-				liege = { 
-					trait = sympathy_indian 
-				}
-			}
-			modifier = { 
-				factor = 0 
-				top_liege = { 
-					trait = sympathy_indian 
-				}
-			}
-			modifier = { 
-				factor = 0.25
-				spouse = { 
-					trait = sympathy_indian 
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_demesne_province = { 
-					religion_group = pagan_group
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_courtier_or_vassal = { 
-					religion_group = pagan_group
-				}
-			}
-		}
 	}
 	#Third List
 		option = { #Others
@@ -882,39 +510,6 @@ character_event = {
 		}
 		add_trait = sympathy_cult_of_saints
 		clr_character_flag = flag_picking_sympathy
-		ai_chance = { 
-			factor = 25 
-			modifier = { 
-				factor = 0 
-				liege = { 
-					trait = sympathy_latter_day_saints
-				}
-			}
-			modifier = { 
-				factor = 0 
-				top_liege = { 
-					trait = sympathy_latter_day_saints
-				}
-			}
-			modifier = { 
-				factor = 0.25
-				spouse = { 
-					trait = sympathy_latter_day_saints 
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_demesne_province = { 
-					religion_group = cult_of_saints
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_courtier_or_vassal = { 
-					religion_group = cult_of_saints
-				}
-			}
-		}
 	}
 	
 	option = { #Latter-Day Saints
@@ -935,39 +530,104 @@ character_event = {
 		}
 		add_trait = sympathy_latter_day_saints
 		clr_character_flag = flag_picking_sympathy
-		ai_chance = { 
-			factor = 25 
-			modifier = { 
-				factor = 0 
-				liege = { 
-					trait = sympathy_cult_of_saints
-				}
-			}
-			modifier = { 
-				factor = 0 
-				top_liege = { 
-					trait = sympathy_cult_of_saints
-				}
-			}
-			modifier = { 
-				factor = 0.25
-				spouse = { 
-					trait = sympathy_cult_of_saints 
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_demesne_province = { 
-					religion_group = latter_day_saints
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				any_courtier_or_vassal = { 
-					religion_group = latter_day_saints
-				}
+	}
+
+	option = { #Afro-Syncretic
+		name = {
+			text = EVTOPTBHF23090
+			trigger = {
+				is_alternate_start = no
 			}
 		}
+		name = {
+			text = EVTOPTAHF23004_ALT
+			trigger = {
+				is_alternate_start = yes
+			}
+		}
+		trigger = {
+			NOT = { religion_group = afro_syncretic } #Random World safety check.
+		}
+		add_trait = sympathy_afro_syncretic
+		clr_character_flag = flag_picking_sympathy
+	}
+	option = { #Return
+		name = {
+			text = EVTOPTDHF23090
+		}
+		hidden_tooltip = { character_event = { id = HF.23091 } }
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Third sympathy list (Cult of Saints and Latter-Day Saints)
+character_event = {
+	id = HF.23091
+	desc = EVTDESCHF23004
+	
+	picture = GFX_evt_library
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = {
+			text = EVTOPTAHF23090
+			trigger = {
+				is_alternate_start = no
+			}
+		}
+		name = {
+			text = EVTOPTAHF23004_ALT
+			trigger = {
+				is_alternate_start = yes
+			}
+		}
+		trigger = {
+			NOT = { religion_group = mesoamerican_gods } #Random World safety check.
+		}
+		add_trait = sympathy_mesoamerican_gods
+		clr_character_flag = flag_picking_sympathy
+	}
+	
+	option = {
+		name = {
+			text = EVTOPTBHF23090
+			trigger = {
+				is_alternate_start = no
+			}
+		}
+		name = {
+			text = EVTOPTAHF23004_ALT
+			trigger = {
+				is_alternate_start = yes
+			}
+		}
+		trigger = {
+			NOT = { religion_group = american_native } #Random World safety check.
+		}
+		add_trait = sympathy_american_native
+		clr_character_flag = flag_picking_sympathy
+	}
+
+	option = { #Pirate
+		name = {
+			text = EVTOPTBHF23090
+			trigger = {
+				is_alternate_start = no
+			}
+		}
+		name = {
+			text = EVTOPTAHF23004_ALT
+			trigger = {
+				is_alternate_start = yes
+			}
+		}
+		trigger = {
+			NOT = { religion_group = pirate } #Random World safety check.
+		}
+		add_trait = sympathy_pirate
+		clr_character_flag = flag_picking_sympathy
 	}
 	option = { #Return
 		name = {
@@ -975,6 +635,67 @@ character_event = {
 		}
 		hidden_tooltip = { character_event = { id = HF.23003 } }
 		ai_chance = { factor = 0 }
+	}
+}
+
+# Syncretic rulers can pick a random sympathy. (THREE PAGES)
+character_event = {
+	id = HF.23092
+	desc = EVTDESCHF23004
+	
+	picture = GFX_evt_library
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	religion = exovedate
+	
+	option = { #American Native
+		name = {
+			text = EVTOPTAHF23003
+			trigger = {
+				is_alternate_start = no
+			}
+		}
+		name = {
+			text = EVTOPTAHF23003_ALT
+			trigger = {
+				is_alternate_start = yes
+			}
+		}
+		add_trait = sympathy_american_native
+		clr_character_flag = flag_picking_sympathy
+	}
+	option = { #Jews
+		name = {
+			text = EVTOPTBHF23003
+			trigger = {
+				is_alternate_start = no
+			}
+		}
+		name = {
+			text = EVTOPTBHF23003_ALT
+			trigger = {
+				is_alternate_start = yes
+			}
+		}
+		add_trait = sympathy_judaism
+		clr_character_flag = flag_picking_sympathy
+	}
+	option = { #Pagans
+		name = {
+			text = EVTOPTCHF23003
+			trigger = {
+				is_alternate_start = no
+			}
+		}
+		name = {
+			text = EVTOPTCHF23003_ALT
+			trigger = {
+				is_alternate_start = yes
+			}
+		}
+		add_trait = sympathy_pagans
+		clr_character_flag = flag_picking_sympathy
 	}
 }
 
@@ -4125,6 +3846,13 @@ character_event = {
 			}
 		}
 		if = {
+			limit = { exovedate = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			random_playable_ruler = {
+				limit = { religion = exovedate }
+				apply_cosmopolian_on_start_effect = yes
+			}
+		}
+		if = {
 			limit = { confederated = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
 			random_playable_ruler = {
 				limit = { religion = confederated }
@@ -4569,6 +4297,13 @@ character_event = {
 			limit = { angeline = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
 				limit = { religion = angeline }
+				apply_dogmatic_on_start_effect = yes
+			}
+		}
+		if = {
+			limit = { exovedate = { has_religion_feature = religion_dogmatic } }
+			random_playable_ruler = {
+				limit = { religion = exovedate }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}

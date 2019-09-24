@@ -125,6 +125,13 @@ secret_amazonian_community = {
 	}
 }
 
+secret_exovedate_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_exovedate
+	}
+}
+
 atom_bless_health_effect = {
 	health_penalty = -0.5
 	icon = 55

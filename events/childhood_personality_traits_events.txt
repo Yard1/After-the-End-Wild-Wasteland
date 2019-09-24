@@ -5552,6 +5552,8 @@ character_event = {
 			OR = {
 				religion = ursuline
 				religion = angeline
+				religion = confederated
+				matriarchal_religion = yes
 			}
 			factor = 3
 		}

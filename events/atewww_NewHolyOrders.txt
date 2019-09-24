@@ -2095,7 +2095,9 @@ character_event = {
 				religion = ursuline
 				religion = angeline
 				religion = confederated
-				religion = anglican
+				religion = high_church
+				religion = nonconformist
+				religion = exovedate
 			}
 			liege = {
 				holy_order = no

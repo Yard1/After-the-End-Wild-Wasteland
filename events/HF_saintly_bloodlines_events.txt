@@ -681,87 +681,29 @@ character_event = { #PLEASE NO
             religion_group = christian
             is_in_society = no
             is_heretic = no
+			any_society_member = {
+				is_christian_monastic_member_trigger = yes
+				society = { ROOT = { can_join_society = PREV } }
+			}
         }
-        if = {
-            limit = {
-                religion = catholic
-            }
-            join_society = monastic_order_leibowitz
-            change_society_currency = {
-                society = monastic_order_leibowitz
-                value = 350
-            }
-        }
-        else_if = {
-            limit = {
-                religion = evangelical
-            }
-            join_society = monastic_order_evangelical
-            change_society_currency = {
-                society = monastic_order_evangelical
-                value = 350
-            }
-        }
-        else_if = {
-            limit = {
-                religion = ursuline
-            }
-            join_society = monastic_order_ursuline
-            change_society_currency = {
-                society = monastic_order_ursuline
-                value = 350
-            }
-        }
-        else_if = {
-            limit = {
-                religion = high_church 
-            }
-            join_society = monastic_order_high_church
-            change_society_currency = {
-                society = monastic_order_high_church
-                value = 350
-            }
-        }
-        else_if = {
-            limit = {
-                religion = mormon
-            }
-            join_society = monastic_order_mormon
-            change_society_currency = {
-                society = monastic_order_mormon
-                value = 350
-            }
-        }
-        else_if = {
-            limit = {
-                religion = nestorian
-            }
-            join_society = monastic_order_leibowitz
-            change_society_currency = {
-                society = monastic_order_leibowitz
-                value = 350
-            }
-        }
-        else_if = {
-            limit = {
-                religion = angeline
-            }
-            join_society = monastic_order_ursuline
-            change_society_currency = {
-                society = monastic_order_ursuline
-                value = 350
-            }
-        }
-		else_if = {
-            limit = {
-                religion = nonconformist
-            }
-            join_society = monastic_order_high_church
-            change_society_currency = {
-                society = monastic_order_high_church
-                value = 350
-            }
-        }
+		any_society_member = {
+			show_scope_change = no
+			limit = {
+				is_christian_monastic_member_trigger = yes
+				society = { ROOT = { can_join_society = PREV } }
+			}
+			society = {
+				show_scope_change = no
+				ROOT = {
+					show_scope_change = no
+					join_society = PREV
+					change_society_currency = {
+						society = PREV
+						value = 350
+					}
+				}
+			}
+		}
     }
     option = {
         name = EVTOPTC_HF_43400

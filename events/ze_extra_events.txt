@@ -1706,19 +1706,7 @@ character_event = {
 				AND = {
 					is_female = yes
 					ROOT = {
-						OR = {
-							religion_openly_gaian_or_heresy_trigger = yes
-							religion = ursuline
-							religion = angeline
-							religion = reform
-							religion = sol_invicta
-							religion = neomayan
-							primary_title = { has_law = status_of_women_4 }
-							has_game_rule = {
-								name = gender
-								value = all
-							}
-						}
+						gender_equality_trigger = yes
 					}
 				}
 			}
@@ -1749,19 +1737,7 @@ character_event = {
 					AND = {
 						is_female = yes
 						ROOT = { 
-							OR = { 
-								religion_openly_gaian_or_heresy_trigger = yes
-								religion = ursuline
-								religion = angeline
-								religion = reform
-								religion = sol_invicta
-								religion = neomayan
-								primary_title = { has_law = status_of_women_4 }
-								has_game_rule = {
-									name = gender
-									value = all
-								}
-							} 
+							gender_equality_trigger = yes
 						}
 					}
 				}

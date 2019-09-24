@@ -6186,6 +6186,15 @@ defined_text = {
 	}
 }
 defined_text = {
+	name = GetReligiousCommunityName_exovedate
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_exovedate
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_exovedate
+	}
+}
+defined_text = {
 	name = GetReligiousCommunityName_nonconformist
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = alt_start_community_name_nonconformist
@@ -7286,6 +7295,18 @@ defined_text = {
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_angeline_desc_REAL
+	}
+}
+
+defined_text = {
+	name = GetReligiousSocietyDesc_exovedate
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_exovedate_desc_REAL
 	}
 }
 

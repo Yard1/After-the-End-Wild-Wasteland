@@ -1004,6 +1004,7 @@ character_event = {
                                 OR = {
 									religion = ursuline
 									religion = angeline
+									religion = confederated
 								}
                             }
                             create_bloodline = {
@@ -1347,6 +1348,7 @@ character_event = {
                                 OR = {
 									religion = ursuline
 									religion = angeline
+									religion = confederated
 								}
                             }
                             create_bloodline = {
@@ -1447,6 +1449,7 @@ character_event = {
                                 OR = {
 									religion = ursuline
 									religion = angeline
+									religion = confederated
 								}
                             }
                             create_bloodline = {
@@ -1776,6 +1779,7 @@ character_event = {
                                 OR = {
 									religion = ursuline
 									religion = angeline
+									religion = confederated
 								}
                             }
                             create_bloodline = {
@@ -2099,6 +2103,7 @@ character_event = {
                                 OR = {
 									religion = ursuline
 									religion = angeline
+									religion = confederated
 								}
                             }
                             create_bloodline = {
@@ -2417,6 +2422,7 @@ character_event = {
                                 OR = {
 									religion = ursuline
 									religion = angeline
+									religion = confederated
 								}
                             }
                             create_bloodline = {

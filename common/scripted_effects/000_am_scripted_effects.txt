@@ -733,6 +733,22 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
     				NOT = {
 						has_character_was_religion_flag_trigger = yes
     				}
+    				religion = exovedate
+    			}
+    			has_character_flag = character_was_exovedate
+			}
+    	}
+    	set_secret_religion = exovedate
+    	clr_character_flag = character_was_exovedate
+		break = yes
+    }
+	if = {
+    	limit = {
+    		OR = {
+    			AND = {
+    				NOT = {
+						has_character_was_religion_flag_trigger = yes
+    				}
     				religion = confederated
     			}
     			has_character_flag = character_was_confederated
@@ -1662,6 +1678,10 @@ add_religion_char_flag_effect = {
     	set_character_flag = character_was_angeline
     }
 	else_if = {
+    	limit = { religion = exovedate }
+    	set_character_flag = character_was_exovedate
+    }
+	else_if = {
     	limit = { religion = confederated }
     	set_character_flag = character_was_confederated
     }
@@ -1896,6 +1916,7 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_sedevacantist
 	clr_character_flag = character_was_ursuline
 	clr_character_flag = character_was_angeline
+	clr_character_flag = character_was_exovedate
 	clr_character_flag = character_was_confederated
 	clr_character_flag = character_was_anabaptist
 	clr_character_flag = character_was_batenburger
@@ -2076,6 +2097,13 @@ event_target_old_religion_from_flag_effect = {
     	limit = { has_character_flag = character_was_angeline }
     	random_character = {
     		limit = { religion = angeline }
+    		save_event_target_as = old_religion
+    	}
+    }
+	else_if = {
+    	limit = { has_character_flag = character_was_exovedate }
+    	random_character = {
+    		limit = { religion = exovedate }
     		save_event_target_as = old_religion
     	}
     }
@@ -2647,6 +2675,17 @@ flip_secret_religious_community_provinces = {
 					}
 					religion = angeline
 					remove_province_modifier = secret_angeline_community
+				}
+			}
+		}
+		secret_religious_society_exovedate = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_exovedate_community
+					}
+					religion = exovedate
+					remove_province_modifier = secret_exovedate_community
 				}
 			}
 		}
@@ -3813,6 +3852,17 @@ root_secret_religion_provinces_convert_effect = {
 						}
 						religion = angeline
 						remove_province_modifier = secret_angeline_community
+					}
+				}
+			}
+			secret_religious_society_exovedate = {
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_exovedate_community
+						}
+						religion = exovedate
+						remove_province_modifier = secret_exovedate_community
 					}
 				}
 			}
@@ -10360,6 +10410,14 @@ set_bloodline_founder_religion_flag_effect = {
 	else_if = {
 		limit = { religion = angeline }
 		new_bloodline = { set_bloodline_flag = requires_angeline_religion }
+	}
+	else_if = {
+		limit = { religion = exovedate }
+		new_bloodline = { set_bloodline_flag = requires_exovedate_religion }
+	}
+	else_if = {
+		limit = { religion = exovedate }
+		new_bloodline = { set_bloodline_flag = requires_exovedate_religion }
 	}
 	else_if = {
 		limit = { religion = confederated }

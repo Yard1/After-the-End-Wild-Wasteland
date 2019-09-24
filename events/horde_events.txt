@@ -1210,6 +1210,90 @@ character_event = {
 	}
 }
 
+# Redcoat Dominion converts to Confederated
+character_event = {
+	id = 177505
+	title = redcoats.5.name_conf
+	desc = "redcoats.5.desc"
+	picture = "GFX_evt_brit_laughing"
+	border = "GFX_event_normal_frame_religion"
+	major = yes
+	   
+	only_playable = yes
+	   
+	trigger = {
+		primary_title = {
+			title = e_redcoat_dominion
+			holder_scope = {
+				religion = thelemic
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = redcoats_arrival days = 14600 }
+		NOT = { had_global_flag = { flag = redcoats_arrival days = 29200 } }
+		NOT = { has_global_flag = redcoats_convert }
+		any_realm_province = {
+			religion = confederated
+		}
+	}
+ 
+	mean_time_to_happen = {
+		years = 75
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = confederated
+			}
+		}
+	}
+	   
+	immediate = {
+		set_global_flag = redcoats_convert
+	}
+	   
+	option = {      # High Church
+		name = "EVTOPTA60010"
+		trigger = {
+			has_landed_title = e_redcoat_dominion
+		}
+		religion = confederated
+		any_realm_character = {
+			limit = { religion = thelemic }
+			religion = confederated
+			if = {
+				limit = {
+					is_playable = yes
+					capital_scope = {
+						religion = thelemic
+					}
+				}
+				capital_scope = {
+					religion = confederated
+				}
+			}
+		}
+		e_redcoat_dominion = {
+			add_law = succ_primogeniture
+		}
+	}
+	# Other rulers are informed
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = e_redcoat_dominion }
+		}
+	}
+	option = {
+		name = "redcoats.5.optC"
+		trigger = {
+			NOT = { religion_group = christian }
+			NOT = { has_landed_title = e_redcoat_dominion }
+		}
+	}
+}
+
 ### Redcoats sack American cities ###
  
 # Redcoats sack DC

@@ -3265,6 +3265,7 @@ character_event = {
 						OR = {
 							religion = ursuline
 							religion = angeline
+							religion = confederated
 						}
 	    			}
 	    			d_st_ursulas_chosen = {
@@ -3279,6 +3280,7 @@ character_event = {
 						OR = {
 							religion = ursuline
 							religion = angeline
+							religion = confederated
 						}
 	    			}
 	    			k_ursuline_state = {

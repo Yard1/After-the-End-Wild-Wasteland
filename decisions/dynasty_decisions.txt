@@ -450,7 +450,7 @@ targetted_decisions = {
 						religion = ursuline
 						AND = {
 							is_heretic = no
-							religion = angeline
+							religion = confederated
 						}
 					}
 				}

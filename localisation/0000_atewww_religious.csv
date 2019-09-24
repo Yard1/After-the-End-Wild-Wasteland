@@ -490,6 +490,33 @@ EVTOPTA_ATE_WWW_RELIGION_31;Welcome, [From.GetSonDaughter].;;;;;;;;;;;;;x
 atom_bless_health_effect;The Price of Atom;;;;;;;;;;;;;x
 atom_curse_health_effect;The Price of Atom;;;;;;;;;;;;;x
 
+# Exovedate
+
+secret_religious_society_Exovedate;[GetReligiousCommunityName_Exovedate];[GetReligiousCommunityName_Exovedate];[GetReligiousCommunityName_Exovedate];;[GetReligiousCommunityName_Exovedate];;;;;;;;;x
+secret_religious_society_REAL_Exovedate;The Followers of Riel;Pure Laine;;;;;;;;;;;;;x
+alt_start_community_name_Exovedate;The [Exovedate.GetName] Faithful;;;;;;;;;;;;;x
+secret_religious_society_Exovedate_desc;[GetReligiousSocietyDesc_Exovedate];[GetReligiousSocietyDesc_Exovedate];[GetReligiousSocietyDesc_Exovedate];;[GetReligiousSocietyDesc_Exovedate];;;;;;;;;x
+secret_religious_society_Exovedate_desc_REAL;Ever since its humble roots, Christians have marked themselves by their refusal to abandon their faith in the face of persecution. So it is that a rich tradition of martyrs and underground parishes can give hope to groups of believers in even the darkest of times, no matter what they are outwardly forced to profess. To each other they can profess their true faith in God, and their God is love.;;;;;;;;x
+secretly_convert_to_Exovedate_holy_site;Secretly Convert to Exovedate;;;;;;;;;;;;;x
+secretly_convert_to_Exovedate_holy_site_desc;The §YExovedate§! pilgrims that flock to the holy site in §Y[Root.Location.GetName]§! impress me with the depth and passion of their faith. I am tempted to convert in secrecy...;;;;;;;;;;;;;x
+secret_religious_society_Exovedate_currency;Devotion;Dévotion;Hingabe;;Devoción;;;;;;;;;x
+secret_religious_society_Exovedate_rank_1_female;Faithful;Fidèle;Getreue;;Fiel;;;;x
+secret_religious_society_Exovedate_rank_2_female;Adherent;Adhérente;Anhängerin;;Seguidora;;;;x
+secret_religious_society_Exovedate_rank_3_female;Preacher;Prêcheuse;Predigerin;;Predicadora;;;;x
+secret_religious_society_Exovedate_rank_4_female;Herald;Messagère;Herold;;Mensajera;;;;x
+secret_religious_society_Exovedate_rank_1_male;Faithful;Fidèle;Getreuer;;Fiel;;;;x
+secret_religious_society_Exovedate_rank_2_male;Adherent;Adhérent;Anhänger;;Seguidor;;;;x
+secret_religious_society_Exovedate_rank_3_male;Preacher;Prêcheur;Prediger;;Predicador;;;;x
+secret_religious_society_Exovedate_rank_4_male;Herald;Messager;Herold;;Mensajero;;;;x
+secret_religious_community_Exovedate;Secret Exovedate Community;;;;;;;;;;;;;x
+secret_Exovedate_community;Secret Exovedate Community;;;;;;;;;;;;;x
+secret_Exovedate_community_desc;In secret, Exovedate faithful have organized themselves as a community in this province. From there it converts others, grows, and protects their own.;En secret, les fidèles se sont organisés en tant que communauté dans cette province. De là, la commaunauté convertit d'autres personnes, grandit et protège les siens.;;;;;;;;;;;;x
+secret_religious_society_Exovedate_leader_desc;The High Priest, leading the international effort of bringing more people into the fold.;Le grand prêtre dirige l'effort mondial visant à réunir davantage de personnes dans les rangs de sa société.;Der Hohepriester des $SOCIETY|Y$-Zirkels, der die internationalen Bemühungen leitet, mehr Menschen in den Schoß der Familie zu führen.;;El Sumo sacerdote, que dirige la misión a escala internacional para atraer a más fieles.;;;;;;;;;x
+
+GOD_RIEL;Riel;;;;;;;;;;;;;x
+
+exovedate_FEATURES;§Y*§! Rulers can gain Sympathy towards American Native, Judaist or Pagan religious group.;;;;;;;;;;;;;x
+
 # Misc
 
 title_ursuline_cardinal;Delegate;Cardinal;Kardinal;;Cardenal;;;;;;;;;x
@@ -510,3 +537,5 @@ midewiwin_FEATURES;§Y*§! Can venerate ancestors\n§Y*§! May go on vision quests w
 raven_tales_FEATURES;§Y*§! Can venerate ancestors\n§Y*§! May go on vision quests with the aid of sacramental herbs.;;;;;;;;;;;;;x
 
 tooltip_vote_strength_theocratic_feudal_government;[Root.GetFirstName] is a §Y[Root.GetPriest]§! under a §YMonastic Feudal§! government;;;;;;;;;x
+
+redcoats.5.name_conf;The Redcoats become Confederated;;;;;;;;;;;;;x

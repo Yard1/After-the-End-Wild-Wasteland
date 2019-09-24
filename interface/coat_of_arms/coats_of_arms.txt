@@ -6,6 +6,7 @@ culture =
 		"sedevacantist"
 		"ursuline"
 		"angeline"
+		"exovedate"
 		"confederated"
 		"evangelical"
 		"high_church"

@@ -1276,10 +1276,7 @@ monastic_order_ursuline = {
 			religion = ursuline
 			AND = {
 				is_heretic = no
-				OR = {
-					religion = angeline
-					religion = confederated
-				}
+				religion = confederated
 			}
 		}
 		NOT = { trait = excommunicated }
@@ -1298,10 +1295,7 @@ monastic_order_ursuline = {
 			religion = ursuline
 			AND = {
 				is_heretic = no
-				OR = {
-					religion = angeline
-					religion = confederated
-				}
+				religion = confederated
 			}
 			society_member_of = monastic_order_ursuline
 		}
@@ -1312,10 +1306,7 @@ monastic_order_ursuline = {
 			religion = ursuline
 			AND = {
 				is_heretic = no
-				OR = {
-					religion = angeline
-					religion = confederated
-				}
+				religion = confederated
 			}
 		}
 	}
