@@ -6,7 +6,7 @@ mictlantec_FEATURES;§Y*§! Sacrifice prisoners to their gods, either individually
 # Sol Invicta
 sol_invicta_FEATURES;§Y*§! May go on vision quests with the aid of sacramental herbs;;;;;;;;;;;;;x
 
-# Nahualist
-uahomche;Nahualist;;;;;;;;;;;;;x
-uahomche_DESC;Nahualist blends aspects of both Christianity and the traditional Mayan faith. Adherents believe that the Event was the end of the 5th world cycle, which was caused by both a lack of sacrifices and the conversion of Mayan believers to monotheism. Gods in the Nahualist pantheon are referred to as ‘angels’, but most of these ‘angels’ are simply pre-Christian Maya deities under a different name.;;;;;;;;;;;;;x
+# Uahomche
+uahomche;Uahomche;;;;;;;;;;;;;x
+uahomche_DESC;Uahomche blends aspects of both Christianity and the traditional Mayan faith. Adherents believe that the Event was the end of the 5th world cycle, which was caused by both a lack of sacrifices and the conversion of Mayan believers to monotheism. Gods in the Uahomche pantheon are referred to as ‘angels’, but most of these ‘angels’ are simply pre-Christian Maya deities under a different name.;;;;;;;;;;;;;x
 uahomche_FEATURES;§Y*§! May go on vision quests with the aid of sacramental herbs\n§Y*§! Rulers may sacrifice prisoners to their gods;;;;;;;;;;;;;x
