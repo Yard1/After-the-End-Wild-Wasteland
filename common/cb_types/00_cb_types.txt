@@ -3736,7 +3736,311 @@ crusade = {
 	}
 
 	on_success_title = {
-	
+		
+		# Special case for Airmen
+		if = {
+			limit = {
+				has_global_flag = d_order_airmen_activated
+				any_attacker = {
+					has_landed_title = d_order_airmen
+					religion = ROOT
+					any_claim = {
+						OR = {
+							title = c_comal
+							title = c_bexar
+							title = c_duval
+							title = c_live_oak
+							title = c_nueces
+							title = c_goliad
+						}
+						de_jure_liege_or_above = PREVPREV
+					}
+				}
+			}
+			log = "crusade cb in special airmen case"
+			d_order_airmen = {
+				holder_scope = {
+					save_event_target_as = airmen_order
+				}
+			}
+			if = {
+				limit = {
+					c_comal = {
+						de_jure_liege_or_above = PREV
+						holder_scope = {
+							PREVPREV = {
+								any_defender = {
+									OR = {
+										character = PREVPREV
+										is_vassal_or_below = PREVPREV
+									}
+								}
+							}
+						}
+					}
+				}
+				log = "crusade cb in special airmen case, c_comal"
+				c_comal = {
+					show_scope_change = no
+					holder_scope = {
+						if = {
+							limit = {
+								religion = ROOT
+								event_target:airmen_order = {
+									is_landed = yes
+									any_demesne_title = { is_landless_type_title = no }
+								}
+							}
+							set_defacto_liege = event_target:airmen_order
+						}
+						else = {
+							show_scope_change = no
+							event_target:airmen_order = {
+								vassalize_or_take_under_title = {
+									title = PREVPREV
+									enemy = PREV
+									same_religion = yes # Only vassalize rulers of my religion
+									is_crusade = yes
+									type = holy_war
+								}
+								usurp_title_plus_barony_if_unlanded = { target = PREVPREV type = holy_war }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					c_bexar = {
+						de_jure_liege_or_above = PREV
+						holder_scope = {
+							PREVPREV = {
+								any_defender = {
+									OR = {
+										character = PREVPREV
+										is_vassal_or_below = PREVPREV
+									}
+								}
+							}
+						}
+					}
+				}
+				log = "crusade cb in special airmen case, c_bexar"
+				c_bexar = {
+					show_scope_change = no
+					holder_scope = {
+						if = {
+							limit = {
+								religion = ROOT
+								event_target:airmen_order = {
+									is_landed = yes
+									any_demesne_title = { is_landless_type_title = no }
+								}
+							}
+							set_defacto_liege = event_target:airmen_order
+						}
+						else = {
+							show_scope_change = no
+							event_target:airmen_order = {
+								vassalize_or_take_under_title = {
+									title = PREVPREV
+									enemy = PREV
+									same_religion = yes # Only vassalize rulers of my religion
+									is_crusade = yes
+									type = holy_war
+								}
+								usurp_title_plus_barony_if_unlanded = { target = PREVPREV type = holy_war }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					c_duval = {
+						de_jure_liege_or_above = PREV
+						holder_scope = {
+							PREVPREV = {
+								any_defender = {
+									OR = {
+										character = PREVPREV
+										is_vassal_or_below = PREVPREV
+									}
+								}
+							}
+						}
+					}
+				}
+				log = "crusade cb in special airmen case, c_duval"
+				c_duval = {
+					show_scope_change = no
+					holder_scope = {
+						if = {
+							limit = {
+								religion = ROOT
+								event_target:airmen_order = {
+									is_landed = yes
+									any_demesne_title = { is_landless_type_title = no }
+								}
+							}
+							set_defacto_liege = event_target:airmen_order
+						}
+						else = {
+							show_scope_change = no
+							event_target:airmen_order = {
+								vassalize_or_take_under_title = {
+									title = PREVPREV
+									enemy = PREV
+									same_religion = yes # Only vassalize rulers of my religion
+									is_crusade = yes
+									type = holy_war
+								}
+								usurp_title_plus_barony_if_unlanded = { target = PREVPREV type = holy_war }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					c_live_oak = {
+						de_jure_liege_or_above = PREV
+						holder_scope = {
+							PREVPREV = {
+								any_defender = {
+									OR = {
+										character = PREVPREV
+										is_vassal_or_below = PREVPREV
+									}
+								}
+							}
+						}
+					}
+				}
+				log = "crusade cb in special airmen case, c_live_oak"
+				c_live_oak = {
+					show_scope_change = no
+					holder_scope = {
+						if = {
+							limit = {
+								religion = ROOT
+								event_target:airmen_order = {
+									is_landed = yes
+									any_demesne_title = { is_landless_type_title = no }
+								}
+							}
+							set_defacto_liege = event_target:airmen_order
+						}
+						else = {
+							show_scope_change = no
+							event_target:airmen_order = {
+								vassalize_or_take_under_title = {
+									title = PREVPREV
+									enemy = PREV
+									same_religion = yes # Only vassalize rulers of my religion
+									is_crusade = yes
+									type = holy_war
+								}
+								usurp_title_plus_barony_if_unlanded = { target = PREVPREV type = holy_war }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					c_nueces = {
+						de_jure_liege_or_above = PREV
+						holder_scope = {
+							PREVPREV = {
+								any_defender = {
+									OR = {
+										character = PREVPREV
+										is_vassal_or_below = PREVPREV
+									}
+								}
+							}
+						}
+					}
+				}
+				log = "crusade cb in special airmen case, c_nueces"
+				c_nueces = {
+					show_scope_change = no
+					holder_scope = {
+						if = {
+							limit = {
+								religion = ROOT
+								event_target:airmen_order = {
+									is_landed = yes
+									any_demesne_title = { is_landless_type_title = no }
+								}
+							}
+							set_defacto_liege = event_target:airmen_order
+						}
+						else = {
+							show_scope_change = no
+							event_target:airmen_order = {
+								vassalize_or_take_under_title = {
+									title = PREVPREV
+									enemy = PREV
+									same_religion = yes # Only vassalize rulers of my religion
+									is_crusade = yes
+									type = holy_war
+								}
+								usurp_title_plus_barony_if_unlanded = { target = PREVPREV type = holy_war }
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					c_goliad = {
+						de_jure_liege_or_above = PREV
+						holder_scope = {
+							PREVPREV = {
+								any_defender = {
+									OR = {
+										character = PREVPREV
+										is_vassal_or_below = PREVPREV
+									}
+								}
+							}
+						}
+					}
+				}
+				log = "crusade cb in special airmen case, c_goliad"
+				c_goliad = {
+					show_scope_change = no
+					holder_scope = {
+						if = {
+							limit = {
+								religion = ROOT
+								event_target:airmen_order = {
+									is_landed = yes
+									any_demesne_title = { is_landless_type_title = no }
+								}
+							}
+							set_defacto_liege = event_target:airmen_order
+						}
+						else = {
+							show_scope_change = no
+							event_target:airmen_order = {
+								vassalize_or_take_under_title = {
+									title = PREVPREV
+									enemy = PREV
+									same_religion = yes # Only vassalize rulers of my religion
+									is_crusade = yes
+									type = holy_war
+								}
+								usurp_title_plus_barony_if_unlanded = { target = PREVPREV type = holy_war }
+							}
+						}
+					}
+				}
+			}
+		}
+
 		# Should we give the seized land to its current king?
 		if = {
 			limit = {
@@ -3784,7 +4088,7 @@ crusade = {
 				}
 			}
 		}
-		
+
 		# Should we give the seized land to a claimant of our faith?
 		if = {
 			limit = {
@@ -3799,7 +4103,7 @@ crusade = {
 					always = yes # There is a "best" claimant
 				}
 			}
-			
+
 			# Claimants must be of ROOT's religion, and are ranked by strength of claim and actual contribution to the war
 			best_crusade_claimant = {
 				if = {
@@ -3844,7 +4148,7 @@ crusade = {
 				}
 			}
 
-			best_crusade_claimant = {
+			event_target:new_owner = {
 				if = {
 					limit = {
 						top_liege = {

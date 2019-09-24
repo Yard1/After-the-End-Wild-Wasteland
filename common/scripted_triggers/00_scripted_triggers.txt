@@ -1743,6 +1743,19 @@ gender_equality_trigger = {
 	}
 }
 
+gender_equality_trigger_rebellion = {
+	OR = {
+		matriarchal_religion = yes
+		equal_religion = yes
+		has_religion_feature = religion_feature_midewiwin
+		ROOT = { holder_scope = { primary_title = { has_law = status_of_women_4 } } }
+		has_game_rule = {
+			name = gender
+			value = all
+		}
+	}
+}
+
 male_can_hold_minor_title_trigger = {
 	trigger_if = {
 		limit = {

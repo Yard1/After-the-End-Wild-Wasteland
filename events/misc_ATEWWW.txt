@@ -634,11 +634,6 @@ character_event = {
 	only_men = yes
 	ai = yes
 	trigger = {
-		NOT = {
-			any_player = {
-				dynasty = PREV
-			}
-		}
 		is_patrician = no
 		OR = {
 			is_playable = no

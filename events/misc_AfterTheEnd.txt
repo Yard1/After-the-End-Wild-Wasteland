@@ -21530,6 +21530,7 @@ character_event = {
 	only_rulers = yes
 	trigger = {
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+		NOT = { has_landed_title = d_americanist }
 		OR = {
 			has_law = succ_open_elective
 			has_law = succ_libertarian_elective

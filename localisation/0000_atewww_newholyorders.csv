@@ -172,4 +172,7 @@ EVTTOOLTIP_ATEWWNHO_123;[This.GetTitledFirstName] becomes a member of the Dead S
 expelled_d_dead_sun;Expelled the Dead Sun;;;;;;;;;;;;;x
 
 d_order_airmen_adj;Airman;;;;;;;;;;;;;x
-d_order_airmen;The Airmen;;;;;;;;;;;;;x
+d_order_airmen;Airmen;;;;;;;;;;;;;x
+
+EVTNAME_ATE_WWWW_AIRMEN_7;The Airmen Assemble;;;;;;;;;;;;;x
+EVTDESC_ATE_WWWW_AIRMEN_7;Having been driven from their lands by [airmen_destroyer.GetTitledName], the [Root.Religion.GetName] Texan Airmen, led by [Root.GetTitledFirstName] of the [Root.GetOnlyDynastyName] dynasty refused to scatter to the wind. Instead, they have rallied around [Root.GetBestName], who has pledged their service to [Root.Religion.GetHighGodName] and all patriotic [Root.Religion.GetName] faithful. In time, they hope to return to their rightful territory - but for now, they seem to be content to carry out the will of [Root.Religion.GetRandomGodName] with fire and sword.;;;;;;;;;;;;;x
