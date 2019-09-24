@@ -6178,7 +6178,11 @@ religious = {
 		ROOT = {
 			NOR = { 
 				religion = cetic 
-				religion_openly_gaian_or_heresy_trigger = yes
+				religion = gaian
+				AND = {
+					religion = amazonian
+					FROM = { is_nomadic = no }
+				}
 			}
 			is_nomadic = no
 			NOR = {
@@ -6388,7 +6392,14 @@ religious = {
 
 	is_valid = {
 		ROOT = {
-			NOT = { religion = cetic }
+			NOR = { 
+				religion = cetic 
+				religion = gaian
+				AND = {
+					religion = amazonian
+					FROM = { is_nomadic = no }
+				}
+			}
 			NOR = { 
 				religion_group = pagan_group
 				religion = midewiwin

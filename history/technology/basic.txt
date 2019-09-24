@@ -702,7 +702,7 @@ technology = {
 		economy = 1.3
 		culture = 1.3
 		TECH_NAVAL = 0.5
-		TECH_LIGHT_INFANTRY = 2.5
+		TECH_SKIRMISH = 2.5
 	}
 
 	2666 = {
@@ -710,7 +710,7 @@ technology = {
 		economy = 1.3
 		culture = 1.3
 		TECH_NAVAL = 0.5
-		TECH_LIGHT_INFANTRY = 2.5
+		TECH_SKIRMISH = 2.5
 	}
 }
 

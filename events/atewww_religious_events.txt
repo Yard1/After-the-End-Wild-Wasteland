@@ -1848,6 +1848,7 @@ character_event = {
 		opinion = {
 			who = event_target:abductor
 			modifier = opinion_abducted_parent_child
+			years = 200
 		}
 		recalc_succession = yes
 	}
@@ -1864,6 +1865,7 @@ character_event = {
 		opinion = {
 			who = event_target:abductor
 			modifier = opinion_abducted_parent_child
+			years = 200
 		}
 		recalc_succession = yes
 	}

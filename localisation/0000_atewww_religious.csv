@@ -492,6 +492,8 @@ atom_curse_health_effect;The Price of Atom;;;;;;;;;;;;;x
 
 # Exovedate
 
+exovedate_opinion;[exovedate.GetName] Opinion;;;;;;;;;;;;;x
+
 secret_religious_society_Exovedate;[GetReligiousCommunityName_Exovedate];[GetReligiousCommunityName_Exovedate];[GetReligiousCommunityName_Exovedate];;[GetReligiousCommunityName_Exovedate];;;;;;;;;x
 secret_religious_society_REAL_Exovedate;The Followers of Riel;Pure Laine;;;;;;;;;;;;;x
 alt_start_community_name_Exovedate;The [Exovedate.GetName] Faithful;;;;;;;;;;;;;x

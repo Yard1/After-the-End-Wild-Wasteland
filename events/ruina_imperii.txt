@@ -1,0 +1,425 @@
+namespace = ruin
+
+# Fall of generic empire
+narrative_event = {
+	id = ruin.1
+	title = TITLE_collapse
+	desc = EVTDESC_collapse
+	picture = GFX_evt_ruina_imperii
+	
+	major = yes	
+	only_playable = yes
+	is_triggered_only = yes
+	show_root = yes
+	trigger = {
+		independent = yes
+		real_tier = emperor
+		in_revolt = no
+		NOT = { has_character_flag = settled_nomad }
+		NOT = { has_character_flag = the_protector_general }
+		NOR = {
+			government = nomadic_government
+			government = merchant_republic_government
+			government = colonial_government
+		}		
+		OR = {
+			NOT = {
+					realm_size = 120
+			}
+			AND = {
+				NOT = {
+					realm_size = 100
+				}	
+				NOT = {
+					dynastic_prestige = 1500
+				}
+			}
+		}
+		AND = {
+			NOT = {
+				primary_title = {
+					title = e_california
+				}		
+			}
+			NOT = {
+				primary_title = {
+					title = e_new_california
+				}		
+			}
+			NOT = {
+				primary_title = {
+					title = e_redcoat_dominion
+				}		
+			}
+			NOT = {
+				primary_title = {
+					title = e_estelaria
+				}
+			}
+			NOR = {
+				primary_title = {
+					title = e_edokko
+				}
+				primary_title = {
+					title = e_novorusskiy
+				}
+				primary_title = {
+					title = e_china_west_governor
+				}
+				primary_title = {
+					title = offmap_china
+				}
+			}
+		}
+		primary_title = {
+			is_titular = yes
+			temporary = no
+		}
+	
+	}	
+	immediate = {
+		ROOT = {
+			primary_title = {
+				destroy_landed_title = yes
+			}
+			prestige = -500
+		}
+	}
+	option = {
+		name = "RUIN_generic"
+		trigger = {
+			always = yes
+		}		
+	}
+}
+
+#Fall of Caribbean empire
+narrative_event = {
+	id = ruin.2
+	title = TITLE_collapse_CARIBBEAN
+	desc = EVTDESC_collapse_CARIBBEAN
+	picture = GFX_evt_ruina_imperii	
+
+	major = yes
+	only_playable = yes
+	hide_from = yes
+
+	trigger = {
+		NOT = {
+			has_game_rule = {
+				name = caribbean_collapse
+				value = off
+			}
+		}
+		independent = yes
+		real_tier = emperor
+		NOT = {
+			has_character_flag = empress_portia
+		}
+		NOT = {
+			year = 2710
+		}
+		OR = {
+			AND = {				
+				NOT = {
+					realm_size = 90
+				}
+			}
+			AND = {
+				NOT = {
+					completely_controls = d_haiti
+				}
+				NOT = {
+					completely_controls = d_santo_domingo
+				}
+				NOT = {
+					completely_controls = d_el_cibao
+				}
+				NOT = {
+					completely_controls = k_west_indies
+				}
+				NOT = {
+					completely_controls = k_cuba
+				}
+			}
+		}
+		NOT = {
+			realm_stewardship = 26
+		}
+		NOT = {
+			realm_diplomacy = 26
+		}
+		primary_title = {
+			temporary = no
+			title = e_caribbean
+		}
+	}	
+	mean_time_to_happen = {
+		months = 25
+	}
+	immediate = {
+		primary_title = {
+			destroy_landed_title = yes
+		}
+		prestige = -500
+	}	
+	option = {
+		name = "RUIN_CARIBBEAN_NORM"
+		trigger = {
+			NOT = {
+				primary_title = {
+					OR = {
+						region = world_caribbean
+						region = world_gulf_coast
+						region = world_central_america_caribbean
+						region = world_south_america_caribbean
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "RUIN_CARIBBEAN_OPPORTUNITY"
+		trigger = {
+			primary_title = {
+				OR = {
+					region = world_caribbean
+					region = world_gulf_coast
+					region = world_central_america_caribbean
+					region = world_south_america_caribbean
+				}
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = ruin.3
+	title = TITLE_reformed_CALIFORNIA
+	desc = EVTDESC_reformed_CALIFORNIA
+	
+	picture = GFX_evt_steppe_mercenaries
+	border = GFX_event_narrative_frame_diplomacy
+	
+	show_root = yes
+	only_rulers = yes
+	major = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		primary_title = { holy_order = no }
+		primary_title = { is_landless_type_title = no }
+		mercenary = no
+		primary_title = { higher_tier_than = BARON }	
+	}
+	
+	option = {
+		name = "NEW_CALIFORNIA_EMPEROR"
+		trigger = {
+			has_landed_title = e_new_california
+		}
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "NEW_CALIFORNIA_ACK"
+		trigger = {
+			OR = {				
+				NOR = {
+					primary_title = {
+						region = custom_california
+					}
+					has_landed_title = e_new_california
+				}
+				is_vassal_or_below_of = FROM
+				primary_title = { is_landless_type_title = yes }
+				mercenary = yes
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "NEW_CALIFORNIA_JOIN"
+		trigger = {		
+			NOT = { has_landed_title = e_new_california }
+			primary_title = {
+				region = custom_california
+			}
+			NOT = {
+				is_vassal_or_below_of = FROM
+				primary_title = { higher_tier_than = KING }
+				FROM = {
+					is_liege_or_above_of = ROOT
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+		set_defacto_liege = FROM		
+	}	
+	option = {
+		name = "NEW_CALIFORNIA_REFUSE"
+		trigger = {
+			NOT = { has_landed_title = e_new_california }
+			primary_title = {
+				region = custom_california
+			}
+			NOT = {
+				is_vassal_or_below_of = FROM
+				primary_title = { higher_tier_than = KING }
+				FROM = {
+					is_liege_or_above_of = ROOT
+				}
+			}
+		}
+		primary_title = {
+			add_claim = FROM			
+		}		
+		ai_chance = {
+			factor = 10		
+		}
+	}	
+	option = {
+		name = "NEW_CALIFORNIA_TRIBUTARY"
+		trigger = {
+			NOT = { has_landed_title = e_new_california }
+			primary_title = {
+				region = custom_california
+			}
+			NOT = {
+				is_vassal_or_below_of = FROM
+				primary_title = { higher_tier_than = KING }
+				FROM = {
+					is_liege_or_above_of = ROOT
+				}
+			}
+			diplomacy = 20
+		}
+		FROM = {
+			show_scope_change = no
+			make_tributary = { who = ROOT tributary_type = permanent }
+		}	
+		ai_chance = {
+			factor = 1000
+		}
+	}
+}
+
+narrative_event = {
+	id = ruin.4
+	title = TITLE_restored_CALIFORNIA
+	desc = EVTDESC_restored_CALIFORNIA
+	
+	picture = GFX_evt_china_golden_age
+	border = GFX_event_narrative_frame_diplomacy
+	
+	show_root = yes
+	only_rulers = yes
+	major = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		primary_title = { holy_order = no }
+		primary_title = { is_landless_type_title = no }
+		mercenary = no
+		primary_title = { higher_tier_than = BARON }	
+	}
+	
+	option = {
+		name = "RESTORED_CALIFORNIA_EMPEROR"
+		trigger = {
+			has_landed_title = e_california
+		}
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "RESTORED_CALIFORNIA_ACK"
+		trigger = {
+			NOT = { has_landed_title = e_california }
+			OR = {				
+				NOT = {
+					primary_title = {
+						region = custom_california
+					}
+				}
+				is_vassal_or_below_of = FROM
+				primary_title = { is_landless_type_title = yes }
+				mercenary = yes
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "RESTORED_CALIFORNIA_JOIN"
+		trigger = {	
+			NOT = { has_landed_title = e_california }
+			primary_title = {
+				region = custom_california
+			}
+			NOT = {
+				is_vassal_or_below_of = FROM
+				primary_title = { higher_tier_than = KING }
+				FROM = {
+					is_liege_or_above_of = ROOT
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+		set_defacto_liege = FROM		
+	}	
+	option = {
+		name = "RESTORED_CALIFORNIA_REFUSE"
+		trigger = {
+			NOT = { has_landed_title = e_california }
+			primary_title = {
+				region = custom_california
+			}
+			NOT = {
+				is_vassal_or_below_of = FROM
+				primary_title = { higher_tier_than = KING }
+				FROM = {
+					is_liege_or_above_of = ROOT
+				}
+			}
+		}
+		primary_title = {
+			add_claim = FROM			
+		}		
+		ai_chance = {
+			factor = 10		
+		}
+	}	
+	option = {
+		name = "RESTORED_CALIFORNIA_TRIBUTARY"
+		trigger = {
+			NOT = { has_landed_title = e_california }
+			primary_title = {
+				region = custom_california
+			}
+			NOT = {
+				is_vassal_or_below_of = FROM
+				primary_title = { higher_tier_than = KING }
+				FROM = {
+					is_liege_or_above_of = ROOT
+				}
+			}
+			diplomacy = 20
+		}
+		FROM = {
+			make_tributary = ROOT
+		}	
+		ai_chance = {
+			factor = 1000
+		}
+	}
+}

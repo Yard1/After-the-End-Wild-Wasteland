@@ -335,7 +335,7 @@ character_event = {
 	
 	trigger = {
 		#NOT = {	religion_group = muslim	}
-		NOT = {	religion_openly_gaian_or_heresy_trigger }
+		NOT = {	religion_openly_gaian_or_heresy_trigger = yes }
 		NOT = {	religion = cetic }
 		NOT = { religion = neutic }
 		trait = stressed
@@ -1812,7 +1812,7 @@ character_event = {
 	option = {
 		name = EVTOPTC65049	#God cures me!
 		trigger = {
-			NOT = { religion_openly_gaian_or_heresy_trigger }
+			NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 			NOT = { religion = cetic }
 			NOT = { religion = neutic } 
 		}
@@ -1863,7 +1863,7 @@ character_event = {
 		name = EVTOPTB65050	#ask priests for advice.
 		trigger = {
 			#NOT = {	religion_group = muslim	}
-			NOT = {	religion_openly_gaian_or_heresy_trigger }
+			NOT = {	religion_openly_gaian_or_heresy_trigger = yes }
 			NOT = {	religion = cetic }
 			NOT = { religion = neutic }
 		}

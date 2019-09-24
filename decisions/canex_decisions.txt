@@ -1,0 +1,172 @@
+decisions = {
+	organize_mounties = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = {
+				is_female = no
+				gender_equality_trigger = yes
+			}
+			prisoner = no
+			is_adult = yes
+			NOT = { trait = incapable }
+			OR = {
+				has_landed_title = e_canada
+			}
+			NOT = { has_global_flag = varangian_guard_founded }
+		}
+		allow = {
+			prestige = 300
+			wealth = 300
+		}
+		effect = {
+			set_global_flag = varangian_guard_founded
+			prestige = -300
+			wealth = -300
+			activate_title = { title = d_mounties status = yes }
+			narrative_event = { id = canada.70 }
+			hidden_tooltip = {
+					create_character = {
+						religion = high_church
+						culture = canadian
+						name="Samuel"
+						dynasty = NONE
+						age = 34
+						trait=brave
+						trait=strong
+						trait=just
+						trait=gregarious
+						trait=zealous
+						trait = skilled_tactician
+					}
+				new_character = {
+					add_trait = mountie
+					set_character_flag = is_chosen_varangian_leader
+					d_mounties = {
+						grant_title = PREV
+					}
+					set_defacto_liege = ROOT
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#newshit
+	canadian_renaissance = {
+		ai_check_interval = 120 #check only once every 120 months.
+		only_playable = yes
+		is_high_prio = yes
+		
+		potential = {
+			is_playable = yes
+			OR = { 
+				culture = ontarian
+				culture = quebecois
+			}
+			has_dlc = "Holy Fury"
+			has_landed_title = e_canada
+			NOT = { has_global_flag = flag_started_canada_renaissance }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			show_only_failed_conditions = yes
+			war = no
+		}
+		effect = {
+			set_global_flag = flag_started_canada_renaissance
+			culture = canadian
+			narrative_event = { id = canada.68 }
+			hidden_tooltip = {
+				any_courtier_or_vassal = { 
+					limit = { lower_tier_than = COUNT }
+					culture = canadian
+				}
+			}
+
+			if = { #New Imperial Bloodline. (male)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = no
+				}
+				create_bloodline = {
+					type = confederator_male
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_confederator"
+				}	
+				sound_effect = bloodline_added			
+			}
+			else_if = { #New Imperial Bloodline. (female)
+				limit = { 
+					has_dlc = "Holy Fury" 
+					is_female = yes
+				}
+				create_bloodline = {
+					type = confederator_female
+				}
+				new_bloodline = {
+					set_description = "bloodline_desc_confederator"
+				}	
+				sound_effect = bloodline_added			
+			}
+			capital_scope = { culture = canadian }
+			custom_tooltip = {
+				text = tooltip_canadian_culture_starts_spreading
+			}
+		}
+			
+		revoke_allowed = {
+			always = no
+		}
+	}
+	embrace_canadian_culture = {
+		ai_check_interval = 120 #check only once every 120 months.
+		
+		potential = {
+			is_playable = yes
+			NOT = { culture = canadian }
+			has_dlc = "Holy Fury"
+			has_global_flag = flag_started_canada_renaissance
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+			top_liege = { has_landed_title = e_canada }
+		}
+		allow = {
+			show_only_failed_conditions = yes
+		}
+		effect = {
+			culture = canadian
+			hidden_tooltip = {
+				any_courtier_or_vassal = { 
+					limit = { lower_tier_than = COUNT }
+					culture = canadian
+				}
+			}
+			capital_scope = { culture = canadian }
+			custom_tooltip = {
+				text = tooltip_roman_culture_spreads
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				capital_scope = { culture = canadian } 
+			}
+		}
+	}
+
+}

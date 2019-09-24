@@ -5,7 +5,7 @@ adopted_child = {
 
 opinion_abducted_parent_child = {
 	opinion = -100
-	duration = -1
+	years = 200
 }
 
 opinion_abducted_relative_child = {

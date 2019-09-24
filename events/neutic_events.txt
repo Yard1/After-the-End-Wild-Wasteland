@@ -711,7 +711,7 @@ character_event = { # set up neutic_wildfire flag
 		e_california = { has_holder = no }
 	}
 	
-	mean_time_to_happen = { weeks = 2 }
+	mean_time_to_happen = { days = 14 }
 
 	option = {
 		set_global_flag = neutic_wildfire
