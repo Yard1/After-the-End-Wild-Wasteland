@@ -173,10 +173,7 @@ can_have_pagan_religion_interpretation = {
 	NOT = { religion_head = { always = yes } } #check if there is no religious head
 	OR = {
 		religion = gaian
-		AND = {
-			religion_group = pagan_group
-			has_religion_feature = religion_no_leader
-		}
+		has_religion_feature = religion_no_leader
 	}
 }
 
