@@ -3821,7 +3821,9 @@ feudal_elective = {
 				#	parent_for_elective_succession_trigger = yes
 				#}
 				trait = cat
+				trait = dog
 				trait = disinherited
+				trait = atom_curse
 				trait = horse
 				trait = eunuch
 				AND = { 
@@ -7252,7 +7254,9 @@ tanistry = {
 			}
 			NOR = {
 				trait = cat
+				trait = dog
 				trait = disinherited
+				trait = atom_curse
 				trait = horse
 				trait = eunuch
 				trait = bastard
@@ -10746,7 +10750,9 @@ elective_gavelkind = {
 			}
 			NOR = {
 				trait = cat
+				trait = dog
 				trait = disinherited
+				trait = atom_curse
 				trait = horse
 				trait = eunuch
 				trait = bastard
@@ -18491,7 +18497,9 @@ eldership_rules = {
 			}
 			NOR = {
 				trait = cat
+				trait = dog
 				trait = disinherited
+				trait = atom_curse
 				trait = horse
 				trait = eunuch
 				trait = bastard

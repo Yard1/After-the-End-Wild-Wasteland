@@ -485,6 +485,10 @@ EVTDESC_ATE_WWW_RELIGION_34;[abductor.GetBestName] has forced my [From.GetSonDau
 EVTDESC_ATE_WWW_RELIGION_31;As I pick up the fragile, little body of [From.GetFirstName], I cannot help but wonder what sort of a [From.GetSonDaughter] [From.GetSheHe] will be, now that I will raise [From.GetHerHim] in accordance to the will of [Root.Religion.GetHighGodName], as I would have raised a [From.GetSonDaughter] of my own blood.;;;;;;;;;;;;;x
 EVTOPTA_ATE_WWW_RELIGION_31;Welcome, [From.GetSonDaughter].;;;;;;;;;;;;;x
 
+# Atomiscists
+atom_bless_health_effect;The Price of Atom;;;;;;;;;;;;;x
+atom_curse_health_effect;The Price of Atom;;;;;;;;;;;;;x
+
 # Misc
 
 title_ursuline_cardinal;Delegate;Cardinal;Kardinal;;Cardenal;;;;;;;;;x

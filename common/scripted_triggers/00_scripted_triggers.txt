@@ -8200,8 +8200,10 @@ parent_for_elective_succession_trigger = {
 			}
 		}
 		NOR = {
+			trait = dog
 			trait = cat
 			trait = disinherited
+			trait = atom_curse
 			trait = horse
 			trait = eunuch
 			trait = bastard

@@ -1722,7 +1722,7 @@ character_event = {
 			hidden_tooltip = {
 				character_event = { id = ATE_WWW_RELIGION.32 }
 			}
-			imprison = no
+			any_claim = { remove_claim = PREV }
 			religion = ROOT
 			dynasty	= ROOT
 			if = {

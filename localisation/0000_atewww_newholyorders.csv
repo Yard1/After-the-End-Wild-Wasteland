@@ -170,3 +170,5 @@ vassalize_dead_sun_desc;As the new Emperor of Mexico, it is within my power to v
 EVTDESC_ATEWWNHO_123;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the Dead Sun in their struggle against the infidel, even though this will forever disinherit [From.GetHerHim].;;;;;;;;;;;;;x
 EVTTOOLTIP_ATEWWNHO_123;[This.GetTitledFirstName] becomes a member of the Dead Sun.;;;;;;;;;;;;;x
 expelled_d_dead_sun;Expelled the Dead Sun;;;;;;;;;;;;;x
+
+ORDER_KINGDOM_NAME;[This.GetAdjective] State;;;;;;;;;;;;;x

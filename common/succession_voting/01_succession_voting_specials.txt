@@ -4780,7 +4780,9 @@ byzantine_elective = {
 			}
 			NOR = {
 				trait = cat
+				trait = dog
 				trait = disinherited
+				trait = atom_curse
 				trait = horse
 				trait = eunuch
 				trait = disfigured
@@ -8310,8 +8312,10 @@ hre_feudal_elective = {
 					NOT = { is_married = ROOT }
 					parent_for_elective_succession_trigger = yes
 				}
+				trait = dog
 				trait = cat
 				trait = disinherited
+				trait = atom_curse
 				trait = horse
 				trait = eunuch
 				AND = { 

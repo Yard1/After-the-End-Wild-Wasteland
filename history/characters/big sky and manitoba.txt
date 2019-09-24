@@ -368,7 +368,11 @@
 	trait=fair
 	2639.5.13={birth=yes}
 	2659.1.1={add_spouse=1667040 }
-	2663.6.2={death=yes}
+	2663.6.2={
+		death = {
+			death_reason = death_murder_unknown
+			killer = 1667040
+	}}
 }
 
 1667040 = {
@@ -384,7 +388,6 @@
 	trait=cruel
 	trait=ambitious
 	trait=zealous
-	trait=amazon_trait
 	give_nickname=nick_the_cruel
 	2641.10.31={birth=yes}
 	2659.1.1 = { 
@@ -399,6 +402,7 @@
 			clr_character_flag = recieved_royal_marriage_aid_duty
 		}
 	}
+	2663.6.3={add_trait = amazon_trait}
 	2700.1.1={death=yes}
 }
 

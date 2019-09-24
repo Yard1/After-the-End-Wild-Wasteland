@@ -1106,7 +1106,9 @@ targeted_decisions = {
 						}
 						NOR = {
 							trait = cat
+							trait = dog
 							trait = disinherited
+							trait = atom_curse
 							trait = horse
 							trait = eunuch
 							AND = { 

@@ -2550,6 +2550,7 @@ presidential_elective = {
 			is_ruler = yes
 			NOR = {
 				trait = cat
+				trait = dog
 				trait = horse
 			}
 		}

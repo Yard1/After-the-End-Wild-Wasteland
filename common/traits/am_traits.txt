@@ -33,17 +33,16 @@ atom_bless = {
 	atomicist_opinion = 5
 	aphite_opinion = -5
 	monthly_character_piety = 0.2
-	health = -0.5
+	religious = yes
 	
 	male_compliment_adj = COMPL_BLESSED
 	female_compliment_adj = COMPL_BLESSED
 	child_compliment_adj = COMPL_LUCKY
 }
 atom_curse = {
-	is_health = yes
-	monthly_character_piety = 0.2
-	health = -1.0
-	fertility = -0.2
+	monthly_character_piety = -0.2
+	religious = yes
+	cannot_inherit = yes
 	
 	male_insult = INSULT_ABOMINATION
 	female_insult = INSULT_ABOMINATION

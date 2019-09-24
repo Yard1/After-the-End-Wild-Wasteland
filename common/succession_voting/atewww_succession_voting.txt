@@ -2309,6 +2309,7 @@ libertarian_elective = {
 			}
 			NOR = {
 				trait = cat
+				trait = dog
 				trait = horse
 			}
 		}
@@ -3987,6 +3988,7 @@ mib_elective = {
 			}
 			NOR = {
 				trait = cat
+				trait = dog
 				trait = horse
 			}
 		}
@@ -8146,7 +8148,9 @@ brethren_elective = {
 			}
 			NOR = {
 				trait = cat
+				trait = dog
 				trait = disinherited
+				trait = atom_curse
 				trait = horse
 				trait = eunuch
 				trait = disfigured
@@ -10905,7 +10909,9 @@ militarist_appointment = {
 			}
 			NOR = {
 				trait = cat
+				trait = dog
 				trait = disinherited
+				trait = atom_curse
 				trait = horse
 				trait = eunuch
 				AND = { 
