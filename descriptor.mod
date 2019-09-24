@@ -7,9 +7,11 @@ picture = "AtE_WWW.png"
 dependencies = { 
 	"After the End Fan Fork" 
 	"After the End Fan Fork - Americanist Flavor" 
+	"After The End - Guruism"
+	"Canada Expanded"
 }
 
 supported_checksums=
 {
-	NIMB 
+	BYVJ CTTK
 }

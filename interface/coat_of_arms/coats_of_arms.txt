@@ -167,6 +167,7 @@ culture =
 			random = no # Do not use for random CoAs
 		}
 		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111	}
+	}
 }
 
 culture =
