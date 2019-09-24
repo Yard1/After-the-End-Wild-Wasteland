@@ -19,11 +19,7 @@ character_event = {
 			rightful_religious_head_scope = { 
 				is_alive = yes 
 				NOT = { block_general_event_trigger = yes }
-				OR = { 
-					has_landed_title = k_papal_state
-					has_landed_title = k_ursuline
-					has_landed_title = d_quorum_of_the_twelve
-				} 
+				is_pope = yes
 			} 
 		}
 		religion_head = { show_portrait = THIS }
@@ -42,11 +38,7 @@ character_event = {
 			modifier = {
 				factor = 0.1
 				religion_head = { 
-					OR = { 
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 					NOT = { 
 						opinion = { 
 							who = ROOT
@@ -58,11 +50,7 @@ character_event = {
 			modifier = {
 				factor = 0.25
 				religion_head = { 
-					OR = { 
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 					NOT = { 
 						opinion = { 
 							who = ROOT
@@ -74,11 +62,7 @@ character_event = {
 			modifier = {
 				factor = 0.5
 				religion_head = { 
-					OR = { 
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 					NOT = { 
 						opinion = { 
 							who = ROOT
@@ -90,11 +74,7 @@ character_event = {
 			modifier = {
 				factor = 0.7
 				religion_head = { 
-					OR = { 
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 					NOT = { 
 						opinion = { 
 							who = ROOT
@@ -106,11 +86,7 @@ character_event = {
 			modifier = {
 				factor = 0.8
 				religion_head = { 
-					OR = { 
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 					NOT = { 
 						opinion = { 
 							who = ROOT
@@ -122,11 +98,7 @@ character_event = {
 			modifier = {
 				factor = 1.25
 				religion_head = { 
-					OR = { 
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 					NOT = { 
 						opinion = { 
 							who = ROOT
@@ -138,11 +110,7 @@ character_event = {
 			modifier = {
 				factor = 1.25
 				religion_head = { 
-					OR = { 
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 					NOT = { 
 						opinion = { 
 							who = ROOT
@@ -154,11 +122,7 @@ character_event = {
 			modifier = {
 				factor = 1.5
 				religion_head = { 
-					OR = { 
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 					NOT = { 
 						opinion = { 
 							who = ROOT
@@ -170,11 +134,7 @@ character_event = {
 			modifier = {
 				factor = 1.75
 				religion_head = { 
-					OR = { 
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 					NOT = { 
 						opinion = { 
 							who = ROOT
@@ -186,11 +146,7 @@ character_event = {
 			modifier = {
 				factor = 2
 				religion_head = { 
-					OR = { 
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 					NOT = { 
 						opinion = { 
 							who = ROOT
@@ -219,13 +175,9 @@ character_event = {
 					has_minor_title = title_cardinal
 					has_minor_title = title_ursuline_cardinal
 					has_minor_title = title_mormon_cardinal
-					any_claim = { title = k_papal_state } #Antipope
-					any_claim = { title = k_ursuline } #Antipope
-					any_claim = { title = d_quorum_of_the_twelve } #Antipope
+					is_antipope = yes
 				}
-				NOT = { has_landed_title = k_papal_state }
-				NOT = { has_landed_title = k_ursuline }
-				NOT = { has_landed_title = d_quorum_of_the_twelve }
+				is_pope = no
 			}
 		}
 		custom_tooltip = { text = EVTTOOLTIPBHF20200 }
@@ -234,11 +186,7 @@ character_event = {
 				tier = EMPEROR
 				religion_head = { 
 					is_alive = yes 
-					OR = { 
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					} 
+					is_pope = yes
 				}
 			}
 			custom_tooltip = { text = scorned_the_pope }
@@ -265,31 +213,19 @@ character_event = {
 					has_minor_title = title_cardinal
 					has_minor_title = title_ursuline_cardinal
 					has_minor_title = title_mormon_cardinal
-					any_claim = { title = k_papal_state } #Antipope
-					any_claim = { title = k_ursuline } #Antipope
-					any_claim = { title = d_quorum_of_the_twelve } #Antipope
+					is_antipope = yes
 				}
-				NOT = { has_landed_title = k_papal_state }
-				NOT = { has_landed_title = k_ursuline }
-				NOT = { has_landed_title = d_quorum_of_the_twelve }
+				is_pope = no
 			}
 			preferred_limit = { #First search for a possible antipopes.
-				any_claim = { title = k_papal_state } 
+				is_antipope = yes
 			}
 			preferred_limit = { 
-				any_claim = { title = k_ursuline } 
-			}
-			preferred_limit = { 
-				any_claim = { title = d_quorum_of_the_twelve } 
-			}
-			preferred_limit = { 
-				has_minor_title = title_cardinal
-			}
-			preferred_limit = { 
-				has_minor_title = title_ursuline_cardinal
-			}
-			preferred_limit = { 
-				has_minor_title = title_mormon_cardinal
+				OR = {
+					has_minor_title = title_cardinal
+					has_minor_title = title_ursuline_cardinal
+					has_minor_title = title_mormon_cardinal
+				}
 			}
 			hidden_tooltip = { letter_event = { id = HF.20201 days = 30 random = 5 } } 
 			break = yes
@@ -314,16 +250,12 @@ character_event = {
 				religion = ROOT
 				NOT = { block_general_event_trigger = yes }
 				NOR = { 
-					has_landed_title = k_papal_state
-					has_landed_title = k_ursuline
-					has_landed_title = d_quorum_of_the_twelve
+					is_pope = yes
 					higher_real_tier_than = BARON 
 					has_minor_title = title_cardinal
 					has_minor_title = title_ursuline_cardinal
 					has_minor_title = title_mormon_cardinal
-					any_claim = { title = k_papal_state } #Antipope
-					any_claim = { title = k_ursuline } #Antipope
-					any_claim = { title = d_quorum_of_the_twelve } #Antipope
+					is_antipope = yes
 				}
 			}
 		}
@@ -338,11 +270,7 @@ character_event = {
 				tier = EMPEROR
 				religion_head = { 
 					is_alive = yes 
-					OR = { 
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					} 
+					is_pope = yes
 				}
 			}
 			custom_tooltip = { text = scorned_the_pope }
@@ -374,13 +302,9 @@ character_event = {
 						has_minor_title = title_cardinal
 						has_minor_title = title_ursuline_cardinal
 						has_minor_title = title_mormon_cardinal
-						any_claim = { title = k_papal_state } #Antipope
-						any_claim = { title = k_ursuline } 
-						any_claim = { title = d_quorum_of_the_twelve } 
+						is_antipope = yes
 					}
-					NOT = { has_landed_title = k_papal_state }
-					NOT = { has_landed_title = k_ursuline }
-					NOT = { has_landed_title = d_quorum_of_the_twelve }
+					is_pope = no
 				}
 			}
 			custom_tooltip = { text = scorned_powerful_theocrats }
@@ -396,13 +320,9 @@ character_event = {
 							has_minor_title = title_cardinal
 							has_minor_title = title_ursuline_cardinal
 							has_minor_title = title_mormon_cardinal
-							any_claim = { title = k_papal_state } #Antipope
-							any_claim = { title = k_ursuline } 
-							any_claim = { title = d_quorum_of_the_twelve } 
+							is_antipope = yes
 						}
-						NOT = { has_landed_title = k_papal_state }
-						NOT = { has_landed_title = k_ursuline }
-						NOT = { has_landed_title = d_quorum_of_the_twelve }
+						is_pope = no
 					}			
 					opinion = {
 						modifier = opinion_offended
@@ -420,16 +340,12 @@ character_event = {
 				any_liege = { character = ROOT }
 				NOT = { block_general_event_trigger = yes }
 				NOR = { 
-					has_landed_title = k_papal_state
-					has_landed_title = k_ursuline
-					has_landed_title = d_quorum_of_the_twelve
+					is_pope = yes
 					higher_real_tier_than = BARON 
 					has_minor_title = title_cardinal
 					has_minor_title = title_ursuline_cardinal
 					has_minor_title = title_mormon_cardinal
-					any_claim = { title = k_papal_state } #Antipope
-					any_claim = { title = k_ursuline } 
-					any_claim = { title = d_quorum_of_the_twelve } 
+					is_antipope = yes
 				}
 			}
 			preferred_limit = { 
@@ -510,16 +426,12 @@ letter_event = {
 		name = EVTOPTAHF20201
 		trigger = { 
 			NOR = { 
-				has_landed_title = k_papal_state
-				has_landed_title = k_ursuline
-				has_landed_title = d_quorum_of_the_twelve
+				is_pope = yes
 				higher_real_tier_than = BARON 
 				has_minor_title = title_cardinal
 				has_minor_title = title_ursuline_cardinal
 				has_minor_title = title_mormon_cardinal
-				any_claim = { title = k_papal_state } #Antipope
-				any_claim = { title = k_ursuline } 
-				any_claim = { title = d_quorum_of_the_twelve } 
+				is_antipope = yes
 			}
 		}
 		random_list = { 
@@ -631,22 +543,13 @@ letter_event = {
 	option = { #For powerful theocrat
 		name = EVTOPTBHF20201
 		trigger = { 
-			NOR = { 
-				has_landed_title = k_papal_state
-				has_landed_title = k_ursuline
-				has_landed_title = d_quorum_of_the_twelve
-			}
+			is_pope = no
 			OR = { 
-				has_landed_title = k_papal_state
-				has_landed_title = k_ursuline
-				has_landed_title = d_quorum_of_the_twelve
 				higher_real_tier_than = BARON 
 				has_minor_title = title_cardinal
 				has_minor_title = title_ursuline_cardinal
 				has_minor_title = title_mormon_cardinal
-				any_claim = { title = k_papal_state } #Antipope
-				any_claim = { title = k_ursuline } 
-				any_claim = { title = d_quorum_of_the_twelve } 
+				is_antipope = yes
 			}
 		}
 		random_list = { 
@@ -1211,11 +1114,7 @@ letter_event = {
 	option = { #For the Pope
 		name = EVTOPTCHF20201
 		trigger = { 
-			OR = { 
-				has_landed_title = k_papal_state
-				has_landed_title = k_ursuline
-				has_landed_title = d_quorum_of_the_twelve
-			}
+			is_pope = yes
 		}
 		random_list = { 
 			80 = {
@@ -1232,11 +1131,7 @@ letter_event = {
 				}
 				modifier = {
 					factor = 1.5
-					OR = {
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 				}
 				modifier = {
 					factor = 2
@@ -6015,9 +5910,7 @@ character_event = {
 		trigger = {
 			NOR = {
 				FROMFROM = { 
-					has_landed_title = k_papal_state
-					has_landed_title = k_ursuline
-					has_landed_title = d_quorum_of_the_twelve
+					is_pope = yes
 				}
 			}
 		}
@@ -6026,11 +5919,7 @@ character_event = {
 		text = EVTDESCHFB20236
 		trigger = {
 			FROMFROM = { 
-				OR = {
-					has_landed_title = k_papal_state
-					has_landed_title = k_ursuline
-					has_landed_title = d_quorum_of_the_twelve
-				}
+				is_pope = yes
 			}
 		}
 	}
@@ -6056,11 +5945,7 @@ character_event = {
 		if = { 
 			limit = {
 				FROMFROM = {
-					OR = {
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 				} 	
 			} 
 			prestige = 50
@@ -6086,11 +5971,7 @@ character_event = {
 		if = { 
 			limit = {
 				FROMFROM = {
-					OR = {
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 				}
 			} 
 			prestige = 50
@@ -6116,11 +5997,7 @@ character_event = {
 		if = { 
 			limit = {
 				FROMFROM = {
-					NOR = {
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = no
 				}
 			} 
 			gain_weight_medium_effect = yes
@@ -6129,11 +6006,7 @@ character_event = {
 		if = { 
 			limit = {
 				FROMFROM = {
-					OR = {
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 				}
 			} 
 			gain_weight_large_effect = yes
@@ -6142,11 +6015,7 @@ character_event = {
 		if = { 
 			limit = {
 				FROMFROM = {
-					OR = {
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 				}
 			} 
 			prestige = 50
@@ -6249,11 +6118,7 @@ character_event = {
 		trigger = {
 			NOT = {
 				FROMFROMFROM = { 
-					OR = {
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 				}
 			}
 		}
@@ -6262,11 +6127,7 @@ character_event = {
 		text = EVTDESCHFB20237
 		trigger = {
 			FROMFROMFROM = { 
-				OR = {
-					has_landed_title = k_papal_state
-					has_landed_title = k_ursuline
-					has_landed_title = d_quorum_of_the_twelve
-				}
+				is_pope = yes
 			}
 		}
 	}
@@ -6338,10 +6199,7 @@ character_event = {
 					if = { 
 						limit = {
 							FROMFROMFROM = {
-									OR = {
-										has_landed_title = k_papal_state
-										has_landed_title = d_quorum_of_the_twelve
-									}
+									is_pope = yes
 								}
 							} 
 						set_character_flag = flag_vatican_prince #cleared on birth.
@@ -6404,7 +6262,7 @@ character_event = {
 					if = { 
 						limit = {
 							ROOT = {
-									has_landed_title = k_ursuline
+									is_pope = yes
 								}
 							} 
 						set_character_flag = flag_vatican_prince #cleared on birth.
@@ -6457,11 +6315,7 @@ character_event = {
 		trigger = {
 			NOT = {
 				event_target:coronation_priest = { 
-					OR = {
-						has_landed_title = k_papal_state
-						has_landed_title = k_ursuline
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					is_pope = yes
 				}
 			}
 		}
@@ -6470,11 +6324,7 @@ character_event = {
 		text = EVTDESCHFB20239
 		trigger = {
 			event_target:coronation_priest = { 
-				OR = {
-					has_landed_title = k_papal_state
-					has_landed_title = k_ursuline
-					has_landed_title = d_quorum_of_the_twelve
-				}
+				is_pope = yes
 			}
 		}
 	}
@@ -11145,7 +10995,7 @@ character_event = {
 		trigger = { 
 			tier = EMPEROR
 			age = 16 # Has to be strong enough to grab the crown from the Pope's clutches.
-			event_target:coronation_priest = { has_landed_title = k_papal_state }
+			event_target:coronation_priest = { is_pope = yes }
 			has_character_flag = flag_extravagant_coronation				#Only allowed to screw everything up if you have spent the most money in it already.
 			OR = { 
 				trait = lunatic
@@ -11908,7 +11758,7 @@ character_event = {
 						OR = { 
 							trait = excommunicated
 							trait = possessed 
-							NOT = { religion_head = { has_landed_title = k_papal_state } }
+							NOT = { religion_head = { is_pope = yes } }
 						}
 					}
 					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Pope.
@@ -11978,7 +11828,7 @@ character_event = {
 						factor = 0.1
 						NOT = { trait = excommunicated }
 						NOT = { trait = possessed }
-						religion_head = { has_landed_title = k_papal_state } 
+						religion_head = { is_pope = yes } 
 						tier = EMPEROR
 					}
 					modifier = { #Checking if Emperor, Bishop Coronation unavailable when without investiture law.
@@ -11997,13 +11847,9 @@ character_event = {
 									has_minor_title = title_cardinal
 									has_minor_title = title_ursuline_cardinal
 									has_minor_title = title_mormon_cardinal
-									any_claim = { title = k_papal_state } #Antipope
-									any_claim = { title = k_ursuline } #Antipope
-									any_claim = { title = d_quorum_of_the_twelve } #Antipope
+									is_antipope = yes
 								}
-								NOT = { has_landed_title = k_papal_state }
-								NOT = { has_landed_title = k_ursuline }
-								NOT = { has_landed_title = d_quorum_of_the_twelve }
+								is_pope = no
 							}
 						} 
 					}
@@ -12029,13 +11875,9 @@ character_event = {
 								has_minor_title = title_cardinal
 								has_minor_title = title_ursuline_cardinal
 								has_minor_title = title_mormon_cardinal
-								any_claim = { title = k_papal_state } #Antipope
-								any_claim = { title = k_ursuline } #Antipope
-								any_claim = { title = d_quorum_of_the_twelve } #Antipope
+								is_antipope = yes
 							}
-							NOT = { has_landed_title = k_papal_state }
-							NOT = { has_landed_title = k_ursuline }
-							NOT = { has_landed_title = d_quorum_of_the_twelve }
+							is_pope = no
 						}
 					}
 					add_trait = crowned_by_priest
@@ -12095,10 +11937,8 @@ character_event = {
 				has_minor_title = title_cardinal
 				has_minor_title = title_ursuline_cardinal
 				has_minor_title = title_mormon_cardinal
-				any_claim = { title = k_papal_state } #Antipope
-				any_claim = { title = k_ursuline } #Antipope
-				any_claim = { title = d_quorum_of_the_twelve } #Antipope
-				}
+				is_antipope = yes
+			}
 			NOT = { has_landed_title = k_papal_state }
 			NOT = { has_landed_title = k_ursuline }
 			NOT = { has_landed_title = d_quorum_of_the_twelve }

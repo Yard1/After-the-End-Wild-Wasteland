@@ -2808,6 +2808,7 @@ character_event = {
 	hide_window = yes
 	
 	only_rulers = yes
+	has_dlc = "Holy Fury"
 
 	is_triggered_only = yes
 
@@ -2815,60 +2816,15 @@ character_event = {
 		is_save_game = no
 		is_tribal = yes #Can be used by feudals, but only tribals should start with it.
 		is_landed = yes
-		has_dlc = "Holy Fury"
 		primary_title = {
-			holder_scope = {
-				is_nomadic = no
-				OR = {
-					independent = yes
-					NOT = {
-						any_liege = {
-							holy_order = yes
-						}
-					}
-				}
-				NOR = { 
-					#religion_group = muslim 
-					matriarchal_religion = yes
-					has_religion_feature = religion_patriarchal
-				}
-				is_merchant_republic = no
-				is_patrician = no
-				OR = {
-					independent = yes
-					NOT = {
-						any_demesne_title = {
-							is_vice_royalty = yes
-						}
-					}
-				}
-			}
-			rebel = no
-			is_primary_type_title = no
-			#NOT = { holder_scope = { government = confucian_bureaucracy } }
-			#NOT = { holder_scope = { government = chinese_imperial_government } }
-			holder_scope = {
-				OR = {
-					#AND = {
-					#	is_tribal = yes
-					#	religion = baltic_pagan
-					#}
-					#AND = {
-					#	is_tribal = yes
-					#	religion = west_african_pagan
-					#}
-					has_religion_feature = religion_beatification
-					has_religion_feature = religion_feature_espiritista
-					#has_religion_feature = religion_feature_baltic
-					#has_religion_feature = religion_feature_west_african
-				}
-			}
+			is_law_potential = succ_eldership
 		}
 	}
 
 	immediate = {
 		ROOT = { 
 			any_demesne_title = { #First apply law.
+				limit = { is_law_potential = succ_eldership }
 				add_law = {
 					law = succ_eldership
 					cooldown = no

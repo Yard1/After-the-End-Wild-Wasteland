@@ -1,0 +1,230 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+###########Religions###########
+neutic;Neutic;;;;;;;;;;;;;x
+neutic_DESC;Neutics study the same Great Teachers of Ceticism, such as Mohammed, Buddha, Christ, and Hubbard, but reject the Celestial Emperor's spiritual authority. While still based on Elton the Lawgiver's writings, followers hold that later emperors' interpretations are no more valid than any other guru's. Since they interpret the Great Teachers individually, many different readings exist, often contradictory. Although far less organized, the Neutic faith doesn't have to deal with many of the restrictions Cetics face.;;;;;;;;;;;;;x
+neutic_FEATURES;ßY*ß! Adherents follow one of four specific Ways (schools of Neutic thought).;;;;;;;;;;;;;x
+
+###########Other###########
+
+GOD_MOHAMMED;Mohammed;;;;;;;;;;;;;x
+GOD_THE_FIRST_EMPEROR;The First Emperor;;;;;;;;;;;;;x
+GOD_THE_GURUS;The Gurus;;;;;;;;;;;;;x
+
+neutic_opinion;[neutic.GetName] Opinion;;;;;;;;;;;;;x
+unenlightened_guru;Unenlightened Guru;;;;;;;;;;;;;x
+inspired_teachings_neutic;Inspired Teachings;;;;;;;;;;;;;x
+
+create_neutic_gurus;Establish the Fellowship of Gurus;;;;;;;;;;;;x
+create_neutic_gurus_desc;The Fellowship of Gurus was one of the predominant associations of Neutic philosophers at the time of the Lawgiver, based upon the pursuit of Freethought and Nirvana.;L'√©cole du sto√Øcisme √©tait l'une des branches pr√©dominantes des philosophies hell√©niques √† l'√©poque de l'ancien Empire romain, fond√©e sur la recherche de la vertu et de la mod√©ration.;Die Schule des Stoizismus war eine der vorherrschenden Zweige der hellenischen Philosophie im alten R√∂mischen Reich, das auf dem Streben nach Tugend und M√§√üigung beruhte.;;El estoicismo era una de las ramas predominantes de las filosof√≠as hel√©nicas en la √©poca del antiguo Imperio romano, basado en la b√∫squeda de la virtud y la moderaci√≥n.;;;;;;;;x
+create_neutic_gurus_tooltip;The ßYFellowship of Gurusß! is founded.;La soci√©t√© 'ßYIntelligentsia sto√Øcienneß! est fond√©e.;Die Gesellschaft ßYStoische Intelligenzß! wird gegr√ºndet.;;Se funda la sociedad ßYIntelectualidad estoicaß!;;;;;;;;x
+EVTNAME_neutic_gurus_created;Guruism Resurgent;;;;;;;;;;;;x
+EVTDESC_neutic_gurus_created;[From.GetTitledFirstName] has decided to restore the Fellowship of Gurus. Based upon the pursuit of enlightenment through freedom of expression, Fellows believe Nirvana is found through the open exchange of ideas.\nOriginally suppressed by the Celestial Emperors, this philosophy has always been closely related to Neuticism.;;;;;;;;;;;;x
+EVTOPTA_neutic_gurus_created;They shall be a bulwark for enlightened society!;;;;;;;;;;;;x
+EVTOPTB_neutic_gurus_created;More heathen sophists...;Plus de sophistes pa√Øens...;Mehr heidnische Sophisten...;;M√°s sofistas paganos‚Ä¶;;;;;;;;x
+EVTOPTC_neutic_gurus_created;No word is above the Emperor's!;;;;;;;;;;;;;x
+
+String_Namaste;Namaste;;;;;;;;;;;;x
+
+nick_the_dictator;the Dictator;;;;;;;;;;;;;x
+insane_heathen;Insane Heathen;;;;;;;;;;;;;;x
+faction_neutic_revolters;Neutic Dissidents;;;;;;;;;;;;;;x
+faction_neutic_revolters_title;Neutic Dissidents;;;;;;;;;;;;;;x
+faction_neutic_revolters_desc;The decision to reinstate a tyrannical personality cult in place of the open interpretation of the Great Teachers has upset many vassals across the Empire.;;;;;;;;;;;;;;x
+neutic_anticetic_revolt;Civil War;;;;;;;;;;;;;;x
+neutic_anticetic_revolt_desc;The decision to reinstate a tyrannical personality cult in place of the open interpretation of the Great Teachers has dragged the newly-reformed Empire into civil war.;;;;;;;;;;;;;;x
+CB_ANTICETIC_WAR;Californian Civil War;;;;;;;;;;;;;;x
+WAR_NAME_ANTICETIC_WAR;$ORDER$$SECOND_ADJ$ Californian Civil War;;;;;;;;;;;;;;x
+
+# Neutic Events
+
+neutic_writings;Neutic Teachings;;;;;;;;;;;;;x
+neutic_writings_desc;As an adherent of the Neutic faith, you are entitled to interpret the writings of the Great Teachers as well as produce original teachings of your own.;;;;;;;;;;;;;x
+neutic_writings_end;Cease Teachings;;;;;;;;;;;;;x
+neutic_writings_end_desc;Cease the writing of new teachings for now. Though necessary under certain circumstances, this will damage your standing with other Neutics.;;;;;;;;;;;;;x
+unenlightened_guru;Unenlightened Guru;;;;;;;;;;;;;x
+writing_inspiration_neutic;Writing Inspiration;;;;;;;;;;;;;x
+writing_inspiration_neutic_desc;This character is inspired to write new Neutic teachings;;;;;;;;;;;;;x
+EVTDESC_neutic_write_block;Lately, you have been having a difficult time writing anything substantial. There are times when it has come easily to you, but now is not one of those times. How can you inspire your fellow Neutics with your teachings if you can't even inspire yourself to put quill to paper?;;;;;;;;;;;;;x
+EVTOPT_neutic_write_block_dil;I must redouble my efforts!;;;;;;;;;;;;;x
+EVTOPT_neutic_write_block_greg;I will find inspiration in discourse.;;;;;;;;;;;;;x
+EVTOPT_neutic_write_block_quit;I'll attend to other tasks.;;;;;;;;;;;;;x
+EVTOPT_neutic_write_block_stress;It's utterly hopeless.;;;;;;;;;;;;;x
+EVTNAME_neutic_write_inspire;Inspiration Strikes!;;;;;;;;;;;;;x
+EVTDESC_neutic_write_inspire;Inspiration has struck you! You are swept along with a great wave of ideas, your quill furiously filling pages with insightful teachings as your candles burn down to nubs. In this moment you feel transcendent and enlightened, certain that your words will match those of the Great Teachers. Whether your words stand the test of time remains to be seen, but for now there is no room for doubt... this will be a masterpiece.;;;;;;;;;;;;;x
+EVTOPT_neutic_write_inspire;Excellent!;;;;;;;;;;;;;x
+EVTDESC_neutic_write_competent;You have produced entiely average writings. The prose is simple and careful, guiding willing minds towards enlightenment. While it's possible that there are nuggets of real wisdom scattered throughout the teachings, it's not clear that this particular work will stand out amongst your fellow Neutics.;;;;;;;;;;;;;x
+EVTOPT_neutic_write_better;I can do better.;;;;;;;;;;;;;x
+EVTOPT_neutic_write_goodenough;Good enough for now.;;;;;;;;;;;;;x
+EVTNAME_neutic_write_terrible;Terrible Writings!;;;;;;;;;;;;;x
+EVTDESC_neutic_write_terrible;You thought your latest teachings would be well received, but there are whispers in your court that suggest otherwise. Your courtiers cast pitying glances at you, and you overheard a conversion attempting to determine whether you are a fool or a madman.\n\nYour poor writing has severely damaged your standing as a guru and shamed your dynasty. Already there is rumbling that you have damaged the integrity of the Neutic faith in its entirety.;;;;;;;;;;;;;x
+EVTOPT_neutic_write_lapse;This was just a temporary lapse.;;;;;;;;;;;;;x
+EVTOPT_neutic_write_gurus;Call for learned gurus to enlighten you.;;;;;;;;;;;;;x
+EVTOPT_neutic_write_tyrant;I am more enlightened than any of them!;;;;;;;;;;;;;x
+TXT_neutic_unrest;There will be unrest among your subjects!\n;;;;;;;;;;;;;x
+EVTDESC_neutic_inspire_inform;[From.GetTitledFirstName] has offered a new interpretation of great teachings. Those who have read it claim that the writings are insightful and enlightening, delving deep into the heart of long-standing theological and philosophical questions. Gurus are already incorporating it into their own teachings.;;;;;;;;;;;;;x
+EVTOPT_neutic_inspire_inform_switch;This guru walks the true Neutic path!;;;;;;;;;;;;;x
+EVTOPT_neutic_inspire_inform_praise;Truly an enlightened Great Teacher!;;;;;;;;;;;;;x
+EVTOPT_neutic_inspire_inform_cynic;Bah! Nothing new under the sun.;;;;;;;;;;;;;x
+opinion_inspiring;Inspiring Writings;;;;;;;;;;;;;x
+EVTDESC_neutic_terrible_inform;[From.GetTitledFirstName] has written a new set of teachings. Those who have read it claim that the writings are incoherent and vacant, failing to inspire enlightenment and revealing [From.GetTitledFirstName] to be either a fool or a madman.;;;;;;;;;;;;;x
+EVTOPT_neutic_terrible_inform_switch;This guru walks a false path!;;;;;;;;;;;;;x
+TXT_neutic_switch_way;You choose a new Neutic Way.\n;;;;;;;;;;;;;x
+EVTOPT_neutic_terrible_inform_insult;Another worthless guru.;;;;;;;;;;;;;x
+EVTOPT_neutic_terrible_inform_zeal;My faith is not shaken.;;;;;;;;;;;;;x
+
+way_cowl_neutic;Way of the Cowl;;;;;;;;;;;;;x
+way_cowl_neutic_desc;The Way of the Cowl attracts ruthless and ambitious adherents, who desire practical methods for acquiring and consolidating power. Revered gurus of the Way include Hubbard and Stanford.;;;;;;;;;;;;;x
+way_fist_neutic;Way of the Fist;;;;;;;;;;;;;x
+way_fist_neutic_desc;The Way of the Fist attracts aggressive and warlike adherents, who love battle and wish to spread the faith at the tip of the sword. Revered gurus of the Way include the First Emperor and Mohammed.;;;;;;;;;;;;;x
+way_book_neutic;Way of the Book;;;;;;;;;;;;;x
+way_book_neutic_desc;The Way of the Book attracts diligent and introspective adherents, who seek enlightenment in this life and the next. Revered gurus of the Way include Buddha, Sagan, and Hawking.;;;;;;;;;;;;;x
+way_dove_neutic;Way of the Dove;;;;;;;;;;;;;x
+way_dove_neutic_desc;The Way of the Dove attracts just and honorable adherents, who desire peace and prosperity in their realms and beyond. Revered gurus of the Way include Christ and Muir.;;;;;;;;;;;;;x
+
+EVTDESC_neutic_choose_way;You have come to a crossroad of faith. You need not follow the Neutic Way of your childhood, there are other paths you could choose... other gurus whose writings you could study.;;;;;;;;;;;;;x
+EVTOPT_neutic_choose_same;I will continue on this path.;;;;;;;;;;;;;x
+EVTOPT_neutic_choose_book;The Way of the Book;;;;;;;;;;;;;x
+EVTOPT_neutic_choose_fist;The Way of the Fist;;;;;;;;;;;;;x
+EVTOPT_neutic_choose_cowl;The Way of the Cowl;;;;;;;;;;;;;x
+EVTOPT_neutic_choose_dove;The Way of the Dove;;;;;;;;;;;;;x
+EVTDESC_neutic_conversion;The vast amount of Neutic writings now available to you is overwhelming. To attain any true level of expertise, you should dedicate your studies to one of the four Ways.
+
+EVTNAME_neutic_gurus_created;Guruism Resurgent;;;;;;;;;;;;x
+EVTDESC_neutic_gurus_created;[From.GetTitledFirstName] has decided to restore the Fellowship of Gurus. Based upon the pursuit of enlightenment through freedom of expression, Fellows believe Nirvana is found through the open exchange of ideas.\nOriginally suppressed by the Celestial Emperors, this philosophy has always been closely related to Neuticism.;;;;;;;;;;;;x
+EVTOPTA_neutic_gurus_created;They shall be a bulwark for enlightened society!;;;;;;;;;;;;x
+EVTOPTB_neutic_gurus_created;More heathen sophists...;Plus de sophistes pa√ÉØens...;Mehr heidnische Sophisten...;;M√É°s sofistas paganos√¢‚Ç¨¶;;;;;;;;x
+EVTOPTC_neutic_gurus_created;No word is above the Emperor's!;;;;;;;;;;;;x
+
+EVTDESC_neutic_102;The fall of California has spread panic and confusion to the courts of all the Cetic faithful, including your own. Without the Celestial Emperor's spiritual leadership, there is no one to properly interpret the writings of the Great Teachers.\nYour Court Guru has urged you to stay faithful and work toward the restoration of the Celestial Empire, but this could be an opportunity to break free from the Imperial mandate once and for all. After all, what could a pampered prince in Sacramento teach that a wise old sage in your own demesne can't?;;;;;;;;;;;;x
+EVTOPTA_neutic_102;Perhaps these Neutics are onto something.;;;;;;;;;;;;;x
+EVTOPTB_neutic_102;Nonsense! The Emperor will be restored!;;;;;;;;;;;;;x 
+
+EVTDESC_neutic_300;I have reunited California, a feat worthy of immortal glory, yet now doubts beset my mind. How can I ensure that this Empire will not fall like it did in the past? When looking for the causes that fragmented and destroyed the old Empire, there is only one thing that appears to be constant...;J'ai r√©tabli l'empire, un exploit digne de gloire √©ternelle, mais maintenant les doutes assaillent mon esprit. Comment puis-je m'assurer que cet Empire ne s'effondrera pas comme par le pass√©†? En cherchant les causes qui ont fragment√© et d√©truit l'ancien empire, il n'y a qu'une seule chose qui semble constante...;Ich habe das Reich wiederhergestellt. Wahrlich eine Leistung, die unsterblichen Ruhm verdient. Jetzt jedoch vernebeln Zweifel meine Gedanken. Wie kann ich sicherstellen, dass dieses Reich nicht wie das vorherige fallen wird? Wenn man nach den Ursachen sucht, die das alte Reich zersplittert und zerst√∂rt haben, scheint nur eines konstant zu sein...;;He restaurado el Imperio, una haza√±a digna de gloria inmortal, pero ahora dudas me acosan. øC√≥mo puedo asegurarme de que este imperio no caer√° como en el pasado? Cuando se buscan las causas que fragmentaron y destruyeron el viejo imperio, solo hay una cosa que parece ser constante‚Ä¶;;;;;;;;x
+EVTOPTA_neutic_300;Losing control of the faith led us to our fall...;;;;;;;;;;;;x
+tooltip_neutic_300_A;Work to reinstate the ßYCeticß! faith with yourself at the head in the hopes that it will strengthen the Empire.;;;;;;;;;;;;x
+EVTOPTB_neutic_300;Weak and unenlightened leaders doomed us.;;;;;;;;;;;;x
+EVTDESC_neutic_301;Could it be possible that, by embracing the leaderless heresy of Neuticism, my own family weakened the Empire, and that, conversely, I might be able to strengthen it by reintroducing reverence for the Celestial Emperor? My decision could just as easily doom the Empire a second time as I attempt to save it...;;;;;;;;;;;;x
+EVTOPTA_neutic_301;I must act quickly, when people still praise me for reuniting California!;;;;;;;;;;;;x
+tooltip_neutic_cetic_restoration;Declare yourself the Celestial Emperor and head of the Cetic faith.\nSend letters to all your ßYVassalsß!, ordering them to follow you in your conversion.\nSeize all old ßYCeticß! holy sites under your control so that new temples can be established within them.;;;;;;;;;;;;x
+EVTDESC_neutic_302;[Root.GetTitledName],\nWe have come to the conclusion that Our predecessors' attachment to the anarchic cult of Neuticism is inextricably tied to the fall of this great Empire of ours, and we have come to the resolution that, in order to truly restore the glory of California, we must also restore its reverence for its Celestial Leader.\n\nSincerely, \n[From.GetTitledName];;;;;;;;;;;;x
+EVTOPTA_neutic_302;[From.GetSheHeCap] must have gone mad!;;;;;;;;;;;;x
+EVTOPTB_neutic_302_A;Finally! Our time has come!;;;;;;;;;;;;x
+EVTOPTB_neutic_302_B;I must bow to the Imperial will.;;;;;;;;;;;;x
+EVTDESC_neutic_303;I shall not be part of this farce. I am a ßY[From.Religion.GetName]ß!, and I will not abandon my faith in [From.Religion.GetHighGodName].\n\nSincerely, \n[From.GetTitledName];;;;;;;;;;;;x
+EVTOPTA_neutic_303;Unfortunate.;;;;;;;;;;;;x
+EVTDESC_neutic_304;I am happy to stand right beside you for the resurgence of the ßYCeticß! faith, my [Root.GetTitle].\n\nSincerely, \n[From.GetTitledName];;;;;;;;;;;;x
+EVTOPTA_neutic_304;Excellent.;Excellent.;Hervorragend.;;Excelente;;;;;;;;x
+EVTDESC_neutic_305;[Root.GetTitledName],\nI have come to the conclusion to abide by the new Imperial decree and convert to the Cetic faith. I expect all my subordinates to follow me in this decision.\n\nSincerely, \n[From.GetTitledName];[Root.GetTitledName],\nJe respecte le nouveau d√©cret imp√©rial et me convertis √† la foi hell√©nique. Je m'attends √† ce que tous mes vassaux me suivent dans cette d√©cision.\n\nCordialement,\n[From.GetTitledName];[Root.GetTitledName],\nIch bin zu dem Schluss gekommen, mich an das kaiserliche Dekret zu halten und zum hellenischen Glauben zu konvertieren. Ich erwarte von allen meinen Untergebenen, dass sie mir bei dieser Entscheidung folgen.\n\nHochachtungsvoll,\n[From.GetTitledName];;[Root.GetTitledName],\nHe decidido acatar el nuevo decreto imperial y convertirme a la fe hel√©nica. Espero que todos mis subordinados me sigan en esta decisi√≥n.\n\nAtentamente, \n[From.GetTitledName];;;;;;;;x
+EVTOPTA_neutic_305;I must respect Imperial law.;Je dois respecter la loi imp√©riale.;Ich muss die kaiserlichen Gesetze respektieren.;;Debo respetar la ley imperial.;;;;;;;;x
+EVTOPTB_neutic_305;I will not convert to a personality cult!;;;;;;;;;;;;x
+EVTTITLE_neutic_306;Cetic Resurgence;;;;;;;;;;;;x
+EVTDESC_neutic_306;The great celebrations across the Neutic world after the reunification of California at the hands of [From.GetTitledFirstName] have been cut short by a terrifying and unexpected turn of events. The new [From.GetTitle] has determined that Neuticism is an anarchic and seditious cult that has no place in [From.GetHerHis] new Empire. \nIn an effort to rebuild the past glory of California in its entirety, [From.GetSheHe] has forsaken [From.GetHerHis] faith in favor of demanding [From.GetSheHe] [From.GetHerselfHimself] be worshipped as with the Celestial Emperors of old.;Les grandes c√©l√©brations dans le monde chr√©tien apr√®s la restauration de l'Empire romain par [From.Get_le_TitledFirstName] ont √©t√© interrompues par un √©v√©nement terrifiant et inattendu. [From.GetLeLaCap] nouv[From.GetEauElle] [From.GetTitle] a d√©clar√© que le christianisme est un culte barbare et s√©ditieux qui n'a pas sa place dans son nouvel empire.\nDans une tentative pour retrouver int√©gralement la gloire pass√©e de Rome, [From.GetIlElle] a abandonn√© sa foi en faveur des dieux pa√Øens ador√©s par ses anc√™tres.;Die gro√üen Feierlichkeiten der christlichen Welt nach der Wiederherstellung des R√∂mischen Reiches durch die H√§nde von [From.GetTitledFirstName] wurden durch eine erschreckende und unerwartete Wendung der Ereignisse gest√∂rt. [From.GetDerDie] neue [From.GetTitle] hat beschlossen, dass das Christentum ein barbarischer und aufr√ºhrerischer Kult sei, der keinen Platz in [From.GetHerHis]em neuen Reich hat. In dem Bestreben, den alten Ruhm Roms in seiner Gesamtheit wiederherzustellen, hat [From.GetSheHe] [From.GetHerHis]en alten Glauben aufgegeben, um die alten heidnischen G√∂tter [From.GetHerHis]er Vorfahrten zu verehren.;;Las grandes celebraciones a lo largo del mundo cristiano tras la restauraci√≥n del Imperio romano a manos de [From.GetTitledFirstName] se han interrumpido con un giro aterrador e inesperado de los acontecimientos. [From.GetElLaCap] nuev[From.GetOA] [From.GetTitle] ha decidido que el cristianismo es un culto b√°rbaro y sedicioso que no tiene lugar en su nuevo imperio. \nEn un intento por reconstruir totalmente la antigua gloria de Roma, [From.GetTitledFirstName] ha renunciado a su fe en favor del culto a los antiguos dioses paganos de sus antepasados;;;;;;;;x
+EVTOPTA_neutic_306;The old way will rise from the ashes of the "freethinkers"!;;;;;;;;;;;;x
+tooltip_sacramento_church_seized;A new ßYCetic Templeß! is established in ßYSacramentoß!.;;;;;;;;;;;;x
+tooltip_san_francisco_church_seized;A new ßYCetic Templeß! is established in ßYSan Franciscoß!.;;;;;;;;;;;;x
+tooltip_los_angeles_church_seized;A new ßYCetic Templeß! is established in ßYLos Angelesß!.;;;;;;;;;;;;x
+tooltip_portland_church_seized;A new ßYCetic Templeß! is established in ßYPortlandß!.;;;;;;;;;;;;x
+tooltip_las_vegas_church_seized;A new ßYCetic Templeß! is established in ßYLas Vegasß!.;;;;;;;;;;;;x
+EVTOPTB_neutic_306;We stand united against the anarchy of the Neutics!;;;;;;;;;;;;x
+EVTOPTC_neutic_306;Moloch has risen again! The end time is near!;;;;;;;;;;;;x
+EVTOPTD_neutic_306;This is of no concern to us.;Cela ne nous concerne pas.;Das geht uns nichts an.;;No es asunto nuestro.;;;;;;;;x
+EVTDESC_neutic_307;[From.GetTitledFirstName] has clearly gone insane, yet, with the authority [From.GetSheHe] has accumulated after [From.GetHerHis] many accomplishments, [From.GetSheHe] might be able of perverting the Empire into a force for evil, a nation of idolaters. [From.GetSheHeCap] must be stopped now, before it's too late!;[From.Get_Le_TitledFirstName] est clairement devenu[From.Get_E] f[From.GetOuOlle] et avec l'autorit√© qu'[From.GetIlElle] a accumul√©e apr√®s ses nombreux accomplissements, [From.GetIlElle] pourrait √™tre capable de pervertir l'Empire en une force pour le mal, un pays d'idol√¢tres. [From.GetIlElleCap] doit √™tre arr√™t√©[From.Get_E] maintenant, avant qu'il ne soit trop tard†!;[From.GetTitledFirstName] ist eindeutig verr√ºckt geworden, aber mit der Autorit√§t, die [From.GetSheHe] durch [From.GetHerHis]e vielen Errungenschaften angesammelt hat, k√∂nnte [From.GetSheHe] in der Lage sein, das Reich in eine Macht des B√∂sen zu verwandeln. Eine Nation der G√∂tzendiener. [From.GetSheHeCap] muss aufgehalten werden, bevor es zu sp√§t ist.;;Es obvio que [From.GetTitledFirstName] ha perdido la cabeza. Pero con la autoridad que ha reunido despu√©s de tantos logros, bien podr√≠a pervertir el Imperio para convertirlo en una fuerza del mal, una naci√≥n de id√≥latras. °Debemos impedir sus planes antes de que sea demasiado tarde!;;;;;;;;x
+EVTOPTA_neutic_307;We must rise up and depose this tyrant!;Nous devons nous r√©volter et d√©poser c[From.GetEEtte] tyra[From.GetNNne]†!;Wir m√ºssen uns erheben und diesen Tyrannen absetzen!;;°Hemos de rebelarnos y derrocar al tirano!;;;;;;;;x
+tooltip_neutic_307_A;Send letters urging all the followers of ßYFreethoughtß! in the Empire to band together against the Dictator on the throne.;;;;;;;;;;;;x
+EVTOPTB_neutic_307;There is nothing we can do.;Il n'y a rien que nous puissions faire.;Es gibt nichts, das wir tun k√∂nnen.;;No podemos hacer nada.;;;;;;;;x
+EVTDESC_neutic_308;To all the followers of Freethought!\n[From.Religion.GetRandomEvilGodName] has taken over our [scoped_cetic_emperor.GetTitle]'s mind, twisting it with lies and madness. We must stand together and depose the Dictator who sits on the Golden Throne of Sacramento or see the accursed anarchists spread once again across our world.\n[From.GetTitledName];√Ä tous les fid√®les du seul vrai Dieu†!\nL'esprit de notre [scoped_cetic_emperor.GetTitle] est habit√© par [From.GetEvilGodLeLaLes], ce qui en ressort n'est que folie et mensonges. Nous devons nous r√©unir et d√©poser l'apostat[From.Get_E] qui si√®ge sur le saint tr√¥ne de Rome ou voir les maudits pa√Øens se r√©pandre encore une fois dans notre monde.\n[From.GetTitledName];An alle Anh√§nger des Einen Wahren Gottes!\n[From.Religion.GetRandomEvilGodName] hat den Verstand [scoped_cetic_emperor.Getunseresunserer] [scoped_cetic_emperor.GetTitle][scoped_cetic_emperor.GetsMale] √ºbernommen und ihn mit L√ºgen und Wahnsinn gef√ºllt. Wir m√ºssen zusammenstehen und den Apostat absetzen, der auf dem heiligen Thron von Rom sitzt oder m√ºssen dabei zusehen, wie sich die verfluchten Heiden erneut in unserer Welt verbreiten.\n[From.GetTitledName];;°A todos los fieles del √∫nico Dios verdadero!\n[From.Religion.GetRandomEvilGodName] se ha apoderado de la mente de nuestr[scoped_cetic_emperor.GetOA] [scoped_cetic_emperor.GetTitle] retorci√©ndola con mentiras y locura. Debemos unirnos y derrocar [scoped_cetic_emperor.GetAlAla] ap√≥stata que se sienta en el sagrado trono de Roma si no queremos ver a los malditos paganos extendi√©ndose de nuevo por todo el mundo.\n[From.GetTitledName];;;;;;;;x
+EVTOPTA_neutic_308;Death to the tyrant!;Mort [From.GetAuAla] tyra[From.GetNNne]†!;Tod dem Tyrannen!;;°Muerte [From.GetAlAla] tiran[From.GetOA]!;;;;;;;;x
+EVTOPTB_neutic_308;These are the words of a traitor.;Ce sont les mots d'un[From.Get_E] tra√Ætr[From.GetEEsse].;Dies sind die Worte eines Verr√§ters.;;As√≠ habla un traidor.;;;;;;;;x
+EVTDESC_neutic_309;The time has come!\nAll the followers of the One True God suffering under the yoke of our mad [scoped_cetic_emperor.GetTitle] have reunited under my lead and are ready to bring the blasphemous tyrant to justice.;;;;;;;;;;;;x
+EVTOPTA_neutic_309;To war!;Aux armes†!;Auf in den Krieg!;;°A la guerra!;;;;;;;;x
+EVTDESC_neutic_310;Several indignant vassals have banded together to stand against the new Imperial religion of California. They have taken arms and plan to overthrow their own [scoped_cetic_emperor.GetTitle] and restore freedom of interpretation throughout the Empire.;;;;;;;;;;;;x
+EVTOPTA_neutic_310;Traitors, all of them!;Ce sont tous des tra√Ætres†!;Verr√§ter! Alle von ihnen!;;°Traidores, todos traidores!;;;;;;;;x
+EVTOPTB_neutic_310;I cannot say I am surprised...;Je ne peux pas dire que je suis surpris[Root.Get_E]...;Es kommt wenig √ºberraschend...;;No puedo decir que me sorprenda‚Ä¶;;;;;;;;x
+EVTTITLE_neutic_311;The Dictator Triumphant!;;;;;;;;;;;;x
+EVTDESC_neutic_311;Despite the incredible unpopularity of [FromFrom.GetHerHis] decision, [FromFrom.GetTitledFirstName] has managed to emerge victorious from the Celestial Empire's recent civil war and reaffirm [FromFrom.GetHerHis] desire to restore the Cetic faith to the Californian world. After [FromFrom.GetHerHis] show of force and lucidity, the Celestial Emperor has gained several new supporters, both amongst the people as well as the nobility. \n\nThis is truly a new beginning for California and a dark day for Neutics everywhere.;;;;;;;;;;;;x
+EVTOPTA_neutic_311;We have finally been vindicated!;Nous avons enfin obtenu gain de cause†!;Wir haben endlich Best√§tigung erlangt!;;°Al fin se nos ha hecho justicia!;;;;;;;;x
+EVTOPTB_neutic_311;This is horrible!;C'est horrible†!;Das ist schrecklich!;;°Esto es horrible!;;;;;;;;x
+EVTDESC_neutic_312;The Civil War has ended, and [FromFromFrom.GetFirstName] has reaffirmed [FromFromFrom.GetHerHis] authority as our rightful [FromFromFrom.GetTitle]. Perhaps it is time I reconsidered my choice and embraced Ceticism, lest I suffer the [FromFromFrom.GetTitle]'s wrath.;;;;;;;;;;;;x
+EVTOPTA_neutic_312;Deep down I always believed in [cetic.GetHighGodName]!;;;;;;;;;;;;x
+EVTOPTB_neutic_312;No, I must stand my ground!;;;;;;;;;;;;x
+tooltip_neutic_312_A;Convert to ßYCeticismß! and urge your ßYVassalsß! to do the same.;;;;;;;;;;;;x
+
+# Neutic Societies
+
+secret_religious_society_neutic;[GetReligiousCommunityName_neutic];[GetReligiousCommunityName_neutic];[GetReligiousCommunityName_neutic];;[GetReligiousCommunityName_neutic];;;;;;;;;x
+secret_religious_society_REAL_neutic;The Freethinkers Society;;;;;;;;;;;;x
+alt_start_community_name_neutic;The [neutic.GetName] Faithful;;;;;;;;;;;;;x
+secret_religious_society_neutic_desc;[GetReligiousSocietyDesc_neutic];[GetReligiousSocietyDesc_neutic];[GetReligiousSocietyDesc_neutic];;[GetReligiousSocietyDesc_neutic];;;;;;;;;x
+secret_religious_society_neutic_desc_REAL;Even while forced to utter his praises, followers of Neuticism know that the Celestial Emperor is no more an arbiter of wisdom than any other man. Working in the name of truth and enlightenment, they prepare for the day they do not have to hide in caves and grottos to discuss their personal interpretations of the Great Teachers.;;;;;;;;;;;;;x
+secretly_convert_to_neutic_holy_site;Secretly Convert to Neutic;;;;;;;;;;;;;x
+secretly_convert_to_neutic_holy_site_desc;The ßYNeuticß! pilgrims that flock to the holy site in ßY[Root.Location.GetName]ß! impress me with the depth and passion of their faith. I am tempted to convert in secrecy...;;;;;;;;;;;;;x
+secret_religious_society_neutic_currency;Devotion;DÈvotion;Hingabe;;DevociÛn;;;;;;;;;x
+secret_religious_society_neutic_rank_1_female;Faithful;FidËle;Getreue;;Fiel;;;;x
+secret_religious_society_neutic_rank_2_female;Adherent;AdhÈrente;Anh‰ngerin;;Seguidora;;;;x
+secret_religious_society_neutic_rank_3_female;Preacher;PrÍcheuse;Predigerin;;Predicadora;;;;x
+secret_religious_society_neutic_rank_4_female;Herald;MessagËre;Herold;;Mensajera;;;;x
+secret_religious_society_neutic_rank_1_male;Faithful;FidËle;Getreuer;;Fiel;;;;x
+secret_religious_society_neutic_rank_2_male;Adherent;AdhÈrent;Anh‰nger;;Seguidor;;;;x
+secret_religious_society_neutic_rank_3_male;Preacher;PrÍcheur;Prediger;;Predicador;;;;x
+secret_religious_society_neutic_rank_4_male;Herald;Messager;Herold;;Mensajero;;;;x
+secret_religious_community_neutic;Secret Neutic Community;;;;;;;;;;;;;x
+secret_neutic_community;Secret Neutic Community;;;;;;;;;;;;;x
+secret_neutic_community_desc;In secret, Neutic faithful have organized themselves as a community in this province. From there it converts others, grows, and protects their own.;En secret, les fidËles se sont organisÈs en tant que communautÈ dans cette province. De l‡, la commaunautÈ convertit d'autres personnes, grandit et protËge les siens.;;;;;;;;;;;;x
+secret_religious_society_neutic_leader_desc;The Chief Guru, leading the international effort of bringing more people into the fold.;Le grand prÍtre dirige l'effort mondial visant ‡ rÈunir davantage de personnes dans les rangs de sa sociÈtÈ.;Der Hohepriester des $SOCIETY|Y$-Zirkels, der die internationalen Bem¸hungen leitet, mehr Menschen in den Schoﬂ der Familie zu f¸hren.;;El Sumo sacerdote, que dirige la misiÛn a escala internacional para atraer a m·s fieles.;;;;;;;;;x
+
+monastic_order_neutic;[GetNeuticSocietyName];[GetNeuticSocietyName];[GetNeuticSocietyName];;;;;;;;;;;x
+monastic_order_neutic_real;The Fellowship of Gurus;;;;;;;;;;;;;x
+monastic_order_neutic_random;The Ardent Followers;Fervents Disciples;Die inbr¸nstigen Anh‰nger;;Los Seguidores fervorosos;;;;;;;;;x
+monastic_order_neutic_desc;[GetNeuticSocietyDesc];[GetNeuticSocietyDesc];[GetNeuticSocietyDesc];;;;;;;;;;;x
+monastic_order_neutic_desc_real;The Neutic Fellowship of Gurus is based on the shunning of religious hierarchy in favor of the free exchange of ideas, centered around the virtues of Wisdom, Openness, Zen, and Freethought. Most members believe that Nirvana can be achieved by studying the Great Teachers and leading a virtuous life.;;;;;;;;;;;;x
+monastic_order_neutic_desc_random;Members of [neutic.GetName] monasteries are expected to follow a strict set of rules aiming to attain enlightenment through a simple and meditative life. Foreswearing all physical property except the bare necessities.;Les membres des monastËres [neutic.GetName]s sont censÈs suivre un ensemble de rËgles strictes visant ‡ atteindre l'illumination ‡ travers une vie simple et mÈditative. Ils renoncent ainsi ‡ tous les biens matÈriels, hormis le minimum vital.;Von den Mitgliedern [neutic.GetName]er Klˆster wird die Einhaltung strenger Regeln erwartet, die durch ein einfaches und meditatives Leben die Erleuchtung ermˆglichen sollen. Der Verzicht auf jede Form des physischen Besitzes bedeutet, dass sie nur von dem leben, was ihnen von anderen ¸berlassen wird.;;Se espera que los miembros de los monasterios [buddhist.GetName] sigan una estricta serie de normas con la pretensiÛn de alcanzar la iluminaciÛn mediante una vida sencilla y de meditaciÛn, renegando toda propiedad fÌsica, excepto las necesidades b·sicas.;;;;;;;;;x
+monastic_order_neutic_leader_desc;The Great Teacher of the Fellowship of Gurus.;;;;;;;;;;;;;x
+monastic_order_neutic_rank_1_female;Student;;;;;;;;;;;;x
+monastic_order_neutic_rank_2_female;Thinker;;;;;;;;;;;;x
+monastic_order_neutic_rank_3_female;Guru;;;;;;;;;;;;x
+monastic_order_neutic_rank_4_female;Great Teacher;;;;;;;;;;;;x
+monastic_order_neutic_rank_1_male;Student;;;;;;;;;;;;x
+
+##Neutic flavor##
+
+temple_county_neutic;School;;;;;;;;;;;;;x
+temple_duchy_neutic;Lamate;;;;;;;;;;;;;x
+temple_kingdom_neutic;Academy;;;;;;;;;;;;;x
+temple_empire_neutic;Exalted Academy;;;;;;;;;;;;;x
+
+temple_baron_neutic;Teacher;;;;;;;;;;;;;x
+temple_baron_female_neutic;Teacher;;;;;;;;;;;;;x
+temple_barony_of_neutic;Temple of;;;;;;;;;;;;;x
+temple_baron_neutics;Teachers;;;;;;;;;;;;;x
+temple_count_neutic;Master;;;;;;;;;;;;;x
+temple_count_female_neutic;Mistress;;;;;;;;;;;;;x
+temple_county_of_neutic;School of;;;;;;;;;;;;;x
+temple_duke_neutic;Lama;;;;;;;;;;;;;x
+temple_duke_female_neutic;Lama;;;;;;;;;;;;;x
+temple_duchy_of_neutic;Lamate;;;;;;;;;;;;;x
+temple_king_neutic;Grand Master;;;;;;;;;;;;;x
+temple_king_female_neutic;Grand Mistress;;;;;;;;;;;;;x
+temple_kingdom_of_neutic;Academy of;;;;;;;;;;;;;x
+temple_emperor_neutic;Exalted Master;;;;;;;;;;;;;x
+temple_emperor_female_neutic;Exalted Mistress;;;;;;;;;;;;;x
+temple_empire_of_neutic;Exalted Academy of;;;;;;;;;;;;;x
+job_spiritual_neutic;Court Guru;;;;;;;;;;;;;x
+
+bureaucracy_emperor_neutic;Emperor;;;;;;;;;;;;;x
+bureaucracy_emperor_female;Empress;;;;;;;;;;;;;x
+bureaucracy_empire_of_neutic;Empire of;;;;;;;;;;;;;x
+
+monastic_order_neutic_rank_2_male;Thinker;;;;;;;;;;;;x
+monastic_order_neutic_rank_3_male;Guru;;;;;;;;;;;;x
+monastic_order_neutic_rank_4_male;Great Teacher;;;;;;;;;;;;x
+currency_name_monastic_order_neutic;Devotion;DÈvotion;Hingabe;;DevociÛn;;;;;;;;;x
+
+quest_monastic_order_neutic_writings;Pen New Writings;;;;;;;;;;;;x
+quest_monastic_order_neutic_writings_desc;You must write new reflections and expand upon the teachings of past gurus. This spiritual duty will help you reflect upon yourself and increase your standing with the order.;;;;;;;;;;;;x
+quest_monastic_order_neutic_writings_tooltip;To complete this mission, activate the decision ßY'Neutic Writings'ß! in the Intrigue menu and successfully craft competent ings.;;;;;;;;;;;;x
+EVTDESC_monastic_order_neutic_writings;[Root.GetMOGreeting], [Root.GetSocietyRank] [Root.GetFirstName]\n\nThe Order relies on the insights of all our members to reach enlightenment. As such we would like to advise you to write new teachings, since you have not done so recently.\n\n[Root.GetMOFarewell],\nSigned, [From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;x
+EVTDESC_monastic_order_neutic_writings_success;[Root.GetMOGreeting] [Root.GetSocietyRank] [Root.GetFirstName].\n\nWe are glad to hear that you have published your teachings!\nSigned [From.GetSocietyRank] [From.GetFirstName];;;;;;;;;;;;x
+EVTOPT_monastic_order_neutic_writings_success;It was an enlightening experience.;;;;;;;;;;;;x
+
+

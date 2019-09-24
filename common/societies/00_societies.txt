@@ -2459,6 +2459,7 @@ monastic_order_cetic = {
 			learning = 3
 			build_cost_temple_modifier = -0.5
 			same_religion_opinion = 30
+			neutic_opinion = -15
 			cetic_opinion = 15
 			gaian_opinion = 15
 			shinto_opinion = 15

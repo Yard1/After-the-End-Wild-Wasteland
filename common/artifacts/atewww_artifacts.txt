@@ -5,7 +5,7 @@ atewww_pills = {
 	active = {
 		is_adult = yes
 		OR = {
-			NOT = { religion = gaian }
+			NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 			trait = cynical
 		}
 		OR = {

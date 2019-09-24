@@ -899,10 +899,9 @@ character_event = {
 	max_age = 50
 	capable_only = yes
 	prisoner = no
+	has_dlc = "The Old Gods"
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		
 		NOT = {
 			has_game_rule = {
 				name = adventurers
@@ -917,7 +916,7 @@ character_event = {
 			is_female = no
 			liege = { has_law = status_of_women_4 }
 			liege = { has_law = true_cognatic_succession }
-			has_feminist_religion_trigger = yes
+			gender_equality_trigger = yes
 			has_game_rule = {
 				name = gender
 				value = all
@@ -932,18 +931,6 @@ character_event = {
 		
 		NOT = { trait = content }
 		NOT = { trait = craven }
-		
-		OR = { # Only these for now
-			culture_group = plains
-			culture_group = subarctic
-			culture_group = mesoamerican
-			culture = haida
-			culture = northlander
-			culture = yooper
-			culture = dellsman
-			has_character_flag = demon_child_non_pagan
-			trait = changeling
-		}
 		
 		NOT = { # Somewhat clunky way of checking that the character does not stand to inherit any titles
 			any_heir_title = {
@@ -1008,6 +995,20 @@ character_event = {
 	
 	mean_time_to_happen = {
 		years = 100
+		modifier = {
+			factor = 2
+			NOT = {
+				culture_group = plains
+				culture_group = subarctic
+				culture_group = mesoamerican
+				culture = haida
+				culture = northlander
+				culture = yooper
+				culture = dellsman
+				has_character_flag = demon_child_non_pagan
+				trait = changeling
+			}
+		}
 		modifier = {
 			factor = 4
 			has_dlc = "Horse Lords"

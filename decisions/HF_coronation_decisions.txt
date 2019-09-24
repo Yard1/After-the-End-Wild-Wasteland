@@ -135,11 +135,7 @@ decisions = {
 					rightful_religious_head_scope = { 
 						is_alive = yes 
 						NOT = { block_general_event_trigger = yes }
-						OR = { 
-							has_landed_title = k_papal_state
-							has_landed_title = k_ursuline
-							has_landed_title = d_quorum_of_the_twelve
-						} 
+						is_pope = yes
 					} 
 				}
 				AND = {
@@ -161,26 +157,18 @@ decisions = {
 										has_minor_title = title_cardinal
 										has_minor_title = title_ursuline_cardinal
 										has_minor_title = title_mormon_cardinal
-										any_claim = { title = k_papal_state } #Antipope
-										any_claim = { title = k_ursuline } #Antipope
-										any_claim = { title = d_quorum_of_the_twelve } #Antipope
+										is_antipope = yes
 									}
-									NOT = { has_landed_title = k_papal_state }
-									NOT = { has_landed_title = k_ursuline }
-									NOT = { has_landed_title = d_quorum_of_the_twelve }
+									is_pope = no
 								}
 								AND = {
 									NOR = { 
-										has_landed_title = k_papal_state
-										has_landed_title = k_ursuline
-										has_landed_title = d_quorum_of_the_twelve
+										is_pope = yes
 										higher_real_tier_than = BARON 
 										has_minor_title = title_cardinal
 										has_minor_title = title_ursuline_cardinal
 										has_minor_title = title_mormon_cardinal
-										any_claim = { title = k_papal_state } #Antipope
-										any_claim = { title = k_ursuline } #Antipope
-										any_claim = { title = d_quorum_of_the_twelve } #Antipope
+										is_antipope = yes
 									}
 								}
 							}

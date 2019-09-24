@@ -3316,7 +3316,7 @@ blessed_ancestor = {
 zodiac_aquarius = {
 	potential = {
 		OR = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			religion = neomayan
 			has_religion_feature = religion_astrology
 			has_religion_feature = religion_feature_occultist
@@ -3344,7 +3344,7 @@ zodiac_aries = {
 	}
 	potential = {
 		OR = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			religion = neomayan
 			has_religion_feature = religion_astrology
 			has_religion_feature = religion_feature_occultist
@@ -3369,7 +3369,7 @@ zodiac_cancer = {
 	}
 	potential = {
 		OR = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			religion = neomayan
 			has_religion_feature = religion_astrology
 			has_religion_feature = religion_feature_occultist
@@ -3392,7 +3392,7 @@ zodiac_capricorn = {
 	}
 	potential = {
 		OR = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			religion = neomayan
 			has_religion_feature = religion_astrology
 			has_religion_feature = religion_feature_occultist
@@ -3415,7 +3415,7 @@ zodiac_gemini = {
 	}
 	potential = {
 		OR = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			religion = neomayan
 			has_religion_feature = religion_astrology
 			has_religion_feature = religion_feature_occultist
@@ -3439,7 +3439,7 @@ zodiac_leo = {
 	}
 	potential = {
 		OR = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			religion = neomayan
 			has_religion_feature = religion_astrology
 			has_religion_feature = religion_feature_occultist
@@ -3465,7 +3465,7 @@ zodiac_libra = {
 	}
 	potential = {
 		OR = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			religion = neomayan
 			has_religion_feature = religion_astrology
 			has_religion_feature = religion_feature_occultist
@@ -3489,7 +3489,7 @@ zodiac_pisces = {
 	}
 	potential = {
 		OR = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			religion = neomayan
 			has_religion_feature = religion_astrology
 			has_religion_feature = religion_feature_occultist
@@ -3513,7 +3513,7 @@ zodiac_sagittarius = {
 	}
 	potential = {
 		OR = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			religion = neomayan
 			has_religion_feature = religion_astrology
 			has_religion_feature = religion_feature_occultist
@@ -3537,7 +3537,7 @@ zodiac_scorpio = {
 	}
 	potential = {
 		OR = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			religion = neomayan
 			has_religion_feature = religion_astrology
 			has_religion_feature = religion_feature_occultist
@@ -3562,7 +3562,7 @@ zodiac_taurus = {
 	}
 	potential = {
 		OR = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			religion = neomayan
 			has_religion_feature = religion_astrology
 			has_religion_feature = religion_feature_occultist
@@ -3585,7 +3585,7 @@ zodiac_virgo = {
 	}
 	potential = {
 		OR = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 			religion = neomayan
 			has_religion_feature = religion_astrology
 			has_religion_feature = religion_feature_occultist

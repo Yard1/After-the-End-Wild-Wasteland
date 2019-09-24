@@ -566,6 +566,7 @@ christian = {
 		priests_can_inherit = no
 		priests_can_marry = no
 		allow_rivermovement = yes
+		rel_head_defense = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -639,11 +640,13 @@ christian = {
 		intermarry = moravian
 		
 		intermarry = cetic
+		intermarry = neutic
 		intermarry = gaian
 		intermarry = shinto
 
 		character_modifier = {
 			cetic_opinion = 5
+			neutic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -662,6 +665,7 @@ christian = {
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
 		allow_rivermovement = yes
+		priests_can_marry = no
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -708,6 +712,7 @@ christian = {
 		can_grant_invasion_cb = invasion
 		can_call_crusade = no
 		priests_can_inherit = no
+		priests_can_marry = no
 		allow_rivermovement = yes
 		can_retire_to_monastery = yes
 
@@ -779,6 +784,7 @@ christian = {
 		priests_can_marry = no
 		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
+		rel_head_defense = yes
 
 		religious_clothing_head = 12
 		religious_clothing_priest = 12
@@ -825,6 +831,7 @@ christian = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 		male_temple_holders = yes
+		allows_matrilineal_marriage = yes
 		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
 
@@ -889,8 +896,11 @@ christian = {
 		can_retire_to_monastery = yes
 		priests_can_inherit = yes
 		female_temple_holders = yes
+		male_temple_holders = yes
 		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
+		rel_head_defense = yes
+		priests_can_marry = no
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -944,10 +954,6 @@ christian = {
 		}
 		
 		pacifist = yes # Makes the AI less likely to start wars, plots and factions
-		can_excommunicate = yes
-		can_grant_divorce = yes
-		can_grant_invasion_cb = invasion
-		can_grant_claim = yes
 		can_call_crusade = no
 		allow_rivermovement = yes
 		priests_can_inherit = no
@@ -1008,6 +1014,7 @@ christian = {
 		max_consorts = 3 #can take concubines
 		allow_looting = yes	#will loot infidels
 		can_demand_religious_conversion = yes
+		can_retire_to_monastery = no
 		peace_piety_gain = 0
 
 		religious_clothing_head = 2
@@ -1116,6 +1123,8 @@ christian = {
 		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
 		allows_matrilineal_marriage = yes
 		allow_rivermovement = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 2
@@ -1169,6 +1178,8 @@ christian = {
 		can_retire_to_monastery = no
 		female_temple_holders = yes
 		allow_rivermovement = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
 
 		religious_clothing_head = 0
 		religious_clothing_priest = 2
@@ -1216,7 +1227,8 @@ christian = {
 		female_temple_holders = no #relatively recent innovation
 		allow_rivermovement = yes
 		can_grant_divorce = no
-		can_retire_to_monastery = no
+		priests_can_inherit = no
+		priests_can_marry = yes
 
 		religious_clothing_head = 0
 		religious_clothing_priest = 2
@@ -1269,6 +1281,7 @@ christian = {
 		priests_can_inherit = no
 		priests_can_marry = no
 		allow_rivermovement = yes
+		can_retire_to_monastery = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -1301,6 +1314,8 @@ christian = {
 		intermarry = gracia_divina
 
 		character_modifier = {
+			cult_of_saints_opinion = 5
+			apostolic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1325,8 +1340,11 @@ christian = {
 			THE_DEVIL SATAN LUCIFER GOD_THE_FALLEN_STAR
 		}
 
+		can_grant_divorce = yes
+		priests_can_inherit = no
 		priests_can_marry = yes
 		allow_rivermovement = yes
+		can_retire_to_monastery = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -1358,6 +1376,8 @@ christian = {
 		intermarry = gracia_divina
 
 		character_modifier = {
+			cult_of_saints_opinion = 5
+			apostolic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1394,7 +1414,9 @@ christian = {
 		can_call_crusade = no #yes
 		can_retire_to_monastery = yes
 		priests_can_inherit = no
+		priests_can_marry = no
 		allow_rivermovement = yes
+		rel_head_defense = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 1
@@ -1438,7 +1460,6 @@ christian = {
 		parent = high_church
 		
 		crusade_name = CRUSADE
-		can_grant_divorce = yes
 		can_retire_to_monastery = yes
 		female_temple_holders = yes
 		priests_can_marry = yes
@@ -1538,6 +1559,9 @@ christian = {
 		intermarry = candomble
 
 		character_modifier = {
+			cult_of_saints_opinion = 5
+			falling_star_opinion = 5
+			moravian_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1584,7 +1608,6 @@ cult_of_saints= {
 			THE_DEVIL SATAN LUCIFER
 		}
 	
-		can_grant_divorce = yes
 		priests_can_inherit = no
 		priests_can_marry = no
 		allow_rivermovement = yes
@@ -1606,6 +1629,9 @@ cult_of_saints= {
 		intermarry = moravian
 
 		character_modifier = {
+			falling_star_opinion = 5
+			moravian_opinion = 5
+			apostolic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1629,7 +1655,6 @@ cult_of_saints= {
 			THE_DEVIL SATAN LUCIFER
 		}
 		
-		can_grant_divorce = yes
 		priests_can_inherit = no
 		priests_can_marry = no
 		allow_rivermovement = yes
@@ -1651,6 +1676,9 @@ cult_of_saints= {
 		intermarry = moravian
 
 		character_modifier = {
+			falling_star_opinion = 5
+			moravian_opinion = 5
+			apostolic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1665,7 +1693,7 @@ pacific = {
 	hostile_within_group = yes
 	
 	ai_convert_same_group = 1 # try to convert if ai_zeal is high
-	ai_convert_other_group = 2 # always try to convert
+	ai_convert_other_group = 1 # try to convert if ai_zeal is high
 	
 	color = { 0.6 0.1 0.5 }
 
@@ -1676,7 +1704,7 @@ pacific = {
 		secondary_event_pictures = sunni
 
 		icon = 44
-		heresy_icon = 44
+		heresy_icon = 76
 		
 		color = { 0.7 0.52 0.90 }
 		
@@ -1697,6 +1725,7 @@ pacific = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 		allow_rivermovement = yes
+		rel_head_defense = yes
 		
 		religious_clothing_head = 10
 		religious_clothing_priest = 10
@@ -1706,6 +1735,8 @@ pacific = {
 		priest_title = GURU
 		piety_name = KARMA
 		
+		intermarry = neutic
+		intermarry = amazonian
 		intermarry = gaian
 		intermarry = shinto
 		intermarry = nousthreskeia
@@ -1716,10 +1747,55 @@ pacific = {
 		}
 	}
 	
+	neutic = {
+		graphical_culture = chinesegfx
+		secondary_event_pictures = sunni
+		
+		parent = cetic
+
+		icon = 44
+		heresy_icon = 76
+		
+		color = { 0.90 0.7 0.52 }
+		
+		interface_skin = { cetic_interface taoist_interface indian_interface muslim_interface }
+		
+		high_god_name = GOD_THE_GURUS
+		
+		god_names = {
+			GOD_THE_GURUS GOD_THE_FIRST_EMPEROR GOD_MOHAMMED GOD_BUDDHA GOD_CHRIST GOD_HUBBARD
+		}
+		
+		evil_god_names = {
+			THE_UNENLIGHTENED MOLOCH GOD_MAMMON
+		}
+		
+		character_modifier = {
+			learning = 2
+			neognostic_opinion = 5
+		}
+		allow_rivermovement = yes
+		can_retire_to_monastery = yes
+		
+		religious_clothing_head = 10
+		religious_clothing_priest = 10
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_WRITINGS
+		priest_title = GURU
+		piety_name = KARMA
+		
+		intermarry = cetic
+		intermarry = amazonian
+		intermarry = gaian
+		intermarry = shinto
+		intermarry = nousthreskeia
+		intermarry = neognostic
+	}
+
 	gaian = {
 		graphical_culture = buddhistgfx
 		secondary_event_pictures = sunni
-
 		icon = 15
 		heresy_icon = 45
 		
@@ -1741,14 +1817,13 @@ pacific = {
 		scripture_name = THE_BOOK_OF_SHADOWS
 		priest_title = DRUID
 		piety_name = PURITY
-		
+		pacifist = yes
 		peace_piety_gain = 1.0
-		aggression = 0.5
+		aggression = 0.25
 		hard_to_convert = yes
 		priests_can_marry = yes
 		allow_rivermovement = yes
 		female_temple_holders = yes
-		raised_vassal_opinion_loss = no
 		allows_matrilineal_marriage = yes
 		women_can_take_consorts = yes
 		defensive_attrition = yes
@@ -1759,10 +1834,72 @@ pacific = {
 		religious_clothing_head = 16
 		religious_clothing_priest = 16
 		
+		intermarry = neutic
+		intermarry = amazonian
 		intermarry = cetic
 		intermarry = shinto
 		intermarry = nousthreskeia
 		intermarry = neognostic
+
+		character_modifier = {
+			opinion_of_hidden_male_trait = -5
+			opinion_of_homosexual = 5
+		}
+	}
+
+	amazonian = {
+		graphical_culture = buddhistgfx
+		secondary_event_pictures = sunni
+		icon = 15
+		heresy_icon = 45
+
+		parent = gaian
+		
+		color = { 0.74 0.27 0.33 }
+		
+		interface_skin = { gaian_interface indian_interface muslim_interface }
+		
+		high_god_name = GOD_DIANA
+		
+		god_names = {
+			GOD_GAIA GOD_THE_GODDESS GOD_GAEA GOD_HARMONIA GOD_SOLANAS GOD_DIANA GOD_ARTEMIS
+		}
+		evil_god_names = {
+			GOD_THE_DARK_FATHER GOD_THE_PATRIARCHY GOD_HADES GOD_THE_PRIVILEGE
+		}
+		
+		feminist = yes
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_BOOK_OF_SHADOWS
+		priest_title = DRUID
+		piety_name = PURITY
+		pacifist = no
+		peace_piety_gain = 0
+		aggression = 2
+		raised_vassal_opinion_loss = no
+		allow_looting = yes
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		female_temple_holders = yes
+		allows_matrilineal_marriage = yes
+		women_can_take_consorts = yes
+		defensive_attrition = yes
+		max_consorts = 3 #can take concubines
+		men_can_take_consorts = no
+		male_temple_holders = no
+		peace_prestige_loss = yes
+
+		religious_clothing_head = 16
+		religious_clothing_priest = 16
+		
+		intermarry = neutic
+		intermarry = cetic
+		intermarry = neognostic
+
+		character_modifier = {
+			opinion_of_hidden_male_trait = -15
+			opinion_of_homosexual = 5
+		}
 	}
 	
 	shinto = {
@@ -1786,11 +1923,11 @@ pacific = {
 			GOD_THE_YOKAI
 		}
 		
-		can_grant_divorce = yes
 		priests_can_inherit = yes
 		priests_can_marry = yes
 		allow_rivermovement = yes
 		max_consorts = 3 #can take concubines
+		seafarer = yes
 
 		religious_clothing_head = 10
 		religious_clothing_priest = 10
@@ -1800,6 +1937,7 @@ pacific = {
 		priest_title = PRIEST
 		piety_name = PURITY
 		
+		intermarry = neutic
 		intermarry = gaian
 		intermarry = cetic
 		intermarry = nousthreskeia
@@ -1826,10 +1964,10 @@ pacific = {
 			DENEB THE_DARK_ONES MARKED_ONE
 		}
 		
-		can_grant_divorce = yes
 		priests_can_inherit = yes
 		priests_can_marry = yes
 		allow_rivermovement = yes
+		allow_looting = yes
 		max_consorts = 3 #can take concubines
 		
 		religious_clothing_head = 14
@@ -1840,6 +1978,7 @@ pacific = {
 		priest_title = PREACHER
 		piety_name = CONSCIOUSNESS
 		
+		intermarry = neutic
 		intermarry = gaian
 		intermarry = cetic
 		intermarry = shinto
@@ -1900,6 +2039,7 @@ latter_day_saints = {
 		priests_can_inherit = no
 		priests_can_marry = yes
 		allow_rivermovement = yes
+		rel_head_defense = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 2
@@ -1937,6 +2077,7 @@ latter_day_saints = {
 		priests_can_marry = yes
 		allow_rivermovement = yes
 		max_wives = 1
+		rel_head_defense = yes
 		
 		religious_clothing_head = 0
 		religious_clothing_priest = 2
@@ -2010,6 +2151,7 @@ latter_day_saints = {
 		allow_rivermovement = yes
 		max_wives = 4
 		can_demand_religious_conversion = no
+		rel_head_defense = yes
 		
 		crusade_name = EXPEDITION
 		
@@ -2086,6 +2228,7 @@ mesoamerican_gods = {
 		priests_can_inherit = no
 		priests_can_marry = no
 		allow_rivermovement = yes
+		allow_looting = yes
 		
 		crusade_name = CRUSADE
 		scripture_name = THE_LEGENDS
@@ -2172,7 +2315,33 @@ mesoamerican_gods = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 		allow_rivermovement = yes
+		allow_looting = yes
+		defensive_attrition = yes
+		dislike_tribal_organization = no
 		can_demand_religious_conversion = no
+		
+		unit_modifier = {		
+			garrison_size = 0.10
+			levy_size = 0.1
+			
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.6
+			light_infantry_defensive = 0.6
+			heavy_infantry_defensive = 0.6
+			pikemen_defensive = 0.6
+			light_cavalry_defensive = 0.6
+			knights_defensive = 0.6
+			archers_defensive = 0.6
+			horse_archers_defensive = 0.6
+			camel_cavalry_defensive = 0.6
+			war_elephants_defensive = 0.6
+			
+			garrison_size = 0.2
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
 		
 		crusade_name = CRUSADE
 		scripture_name = THE_POPOL_VUH
@@ -2320,9 +2489,7 @@ oldworld = {
 		intermarry = chrome_cultist
 
 		character_modifier = {
-			hamiltonian_opinion = 10
-			jeffersonian_opinion = 5
-			libertarian_opinion = 10
+			libertarian_opinion = 5
 		}
 	}
 
@@ -2370,6 +2537,7 @@ oldworld = {
 		feminist = yes
 		allows_matrilineal_marriage = yes
 		can_call_crusade = yes
+		rel_head_defense = yes
 		
 		priests_can_marry = yes
 
@@ -2385,9 +2553,7 @@ oldworld = {
 		intermarry = chrome_cultist
 
 		character_modifier = {
-			americanist_opinion = 10
-			jeffersonian_opinion = 5
-			libertarian_opinion = 10
+			libertarian_opinion = 5
 		}
 	}
 
@@ -2446,12 +2612,6 @@ oldworld = {
 		intermarry = americanist
 		intermarry = hamiltonian
 		intermarry = libertarian
-
-		character_modifier = {
-			americanist_opinion = 5
-			hamiltonian_opinion = 5
-			libertarian_opinion = 5
-		}
 	}
 
 	libertarian = {
@@ -2502,6 +2662,7 @@ oldworld = {
 		male_temple_holders = no
 		feminist = yes
 		allows_matrilineal_marriage = yes
+		rel_head_defense = yes
 		
 		priests_can_marry = no
 		priests_can_inherit = no
@@ -2524,9 +2685,8 @@ oldworld = {
 		character_modifier = {
 			vassal_opinion = 15
 			rel_head_opinion = 15
-			americanist_opinion = 10
-			hamiltonian_opinion = 10
-			jeffersonian_opinion = 5
+			americanist_opinion = 5
+			hamiltonian_opinion = 5
 		}
 	}
 
@@ -2564,6 +2724,7 @@ oldworld = {
 			COMMUNISM SOCIALISM MARX
 		}
 		
+		has_heir_designation = yes
 		can_grant_divorce = yes
 		allow_viking_invasion = yes
 		can_grant_invasion_cb = invasion
@@ -2615,6 +2776,7 @@ oldworld = {
 			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
 		}
 
+		has_heir_designation = yes
 		can_grant_divorce = yes
 		allow_viking_invasion = yes
 		can_grant_invasion_cb = invasion
@@ -2671,7 +2833,10 @@ oldworld = {
 		scripture_name = THE_LEGENDS
 		priest_title = PRIEST
 		priests_can_marry = yes
+		priests_can_inherit = yes
 		female_temple_holders = yes
+		allows_matrilineal_marriage = yes
+		feminist = yes
 		allow_rivermovement = yes
 		
 		can_grant_claim = yes
@@ -2722,12 +2887,16 @@ oldworld = {
 		evil_god_names = {
 			THE_DEMON_CORE THE_VOID GOD_FAT_MAN GOD_LITTLE_BOY GOD_TSAR_BOMBA
 		}
+
 		crusade_name = FIRST_STRIKE
-		#allow_viking_invasion = yes
+		can_call_crusade = yes #overlooked this somehow
 		scripture_name = THE_LEGENDS
 		priest_title = PRIEST
 		priests_can_marry = yes
+		priests_can_inherit = yes
 		female_temple_holders = yes
+		allows_matrilineal_marriage = yes
+		feminist = yes
 		allow_rivermovement = yes
 		
 		can_grant_claim = yes
@@ -2826,6 +2995,9 @@ oldworld = {
 		can_grant_claim = no
 		feminist = yes #taking it to the next level
 		allows_matrilineal_marriage = yes
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		priests_can_inherit = no
 				
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -3586,6 +3758,7 @@ indian_group = {
 			THE_VINAYAKAS KALI
 		}
 		
+		aggression = 0.75
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		priests_can_marry = yes

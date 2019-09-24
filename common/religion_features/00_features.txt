@@ -841,7 +841,10 @@ religion_doctrine = {
 			modifier = {
 				factor = 10
 				FROM = {
-					religion = gaian
+					OR = {
+						religion = gaian
+						religion = amazonian
+					}
 				}
 			}
 		}

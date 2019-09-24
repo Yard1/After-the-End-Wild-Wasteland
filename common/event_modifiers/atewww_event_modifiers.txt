@@ -117,3 +117,21 @@ upgraded_lady_liberty = {
 	icon = 17
 	libertarian_opinion = 10
 }
+
+secret_amazonian_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_amazonian
+	}
+}
+
+atom_bless_health_effect = {
+	health_penalty = -0.5
+	icon = 55
+}
+
+atom_curse_health_effect = {
+	health_penalty = -1
+	fertility = -0.2
+	icon = 55
+}

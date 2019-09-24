@@ -558,7 +558,7 @@ title_master_of_the_hunt = {
 		}
 		NOT = { has_character_flag = guru }
 		NOT = { trait = incapable }
-		NOT = { religion = gaian }
+		NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 	}
 	
 	allowed_to_grant = {
@@ -574,7 +574,7 @@ title_master_of_the_hunt = {
 			religion_group = jewish_group
 			has_dharmic_religion_trigger = yes
 		}
-		NOT = { religion = gaian }
+		NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 	}
 	
 	gain_effect = {

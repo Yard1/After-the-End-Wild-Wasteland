@@ -1807,9 +1807,12 @@ settlement_decisions = {
 			
 				if = {
 					limit = {
-						NOT = { religion = cetic }
+						OR = {
+							religion = cetic
+							religion = neutic
+						}
 						NAND = {
-							religion = gaian
+							religion_openly_gaian_or_heresy_trigger = yes
 							higher_tier_than = BARON
 						}
 					}
@@ -1828,7 +1831,10 @@ settlement_decisions = {
 				
 				if = {
 					limit = {
-						religion = cetic
+						OR = {
+							religion = cetic
+							religion = neutic
+						}
 					}
 					
 					if = {
@@ -1845,7 +1851,7 @@ settlement_decisions = {
 			
 				if = {
 					limit = {
-						religion = gaian
+						religion_openly_gaian_or_heresy_trigger = yes
 						higher_tier_than = BARON
 					}
 					

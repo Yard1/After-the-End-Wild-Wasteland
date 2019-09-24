@@ -236,6 +236,10 @@ religion_priests_cant_marry = {
 
 holy_order_is_celibate = {
 	holder_scope = {
-		religion_priests_cant_marry = yes
+		OR = {
+			religion = gaian
+			religion = amazonian
+			religion_priests_cant_marry = yes
+		}
 	}
 }

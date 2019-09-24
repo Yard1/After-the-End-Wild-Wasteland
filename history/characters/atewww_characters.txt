@@ -972,7 +972,6 @@
         wealth = 115
         prestige = 300
 		add_spouse = 1670004 
-		add_claim = d_chiapas
         effect = {
             spawn_unit = {
                 province = 3134 # Comitan

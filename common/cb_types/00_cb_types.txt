@@ -495,10 +495,7 @@ other_claim = {
 			# Anti-Popes take all the gold of the Vatican.
 			if = {
 				limit = {
-					OR = {
-						title = k_papal_state
-						title = k_ursuline
-					}
+					is_pope = yes
 				}
 				FROM = {
 					transfer_scaled_wealth = {
@@ -3421,6 +3418,15 @@ crusade = {
 	
 	can_use_gui = {
 		ROOT = {
+			custom_tooltip = {
+				text = CRUSADE_COOLDOWN
+				religion_scope = {
+					OR = {
+						NOT = { has_flag = crusade_fired }
+						had_flag = { flag = crusade_fired days = 3650 }
+					}
+				}
+			}
 			uses_new_crusade = no
 			has_called_crusade = no
 			religion_authority = 0.05
@@ -3593,6 +3599,20 @@ crusade = {
 						value = 6
 						title = PREV
 					}
+					AND = {
+						num_of_realm_counties = {
+							value = 3
+							title = PREV
+						}
+						PREV = {
+							any_realm_title = {
+								is_holy_site = ROOT
+								holder_scope = {
+									OR = { character = FROM any_liege = { character = FROM } }
+								}
+							}
+						}
+					}
 				}
 			}
 			AND = {
@@ -3681,7 +3701,15 @@ crusade = {
 	}
 
 	on_add = {
-		hidden_tooltip = { fire_haruspicy_event_effect = yes }
+		hidden_tooltip = { 
+			fire_haruspicy_event_effect = yes 
+			ROOT = {
+				religion_scope = {
+					clr_flag = crusade_fired
+					set_flag = crusade_fired
+				}
+			}
+		}
 		if = {
 			limit = { defender = { is_offmap_governor = offmap_china } }
 			attacker = {  
@@ -4246,6 +4274,15 @@ new_crusade = {
 
 	can_use_gui = {
 		ROOT = {
+			custom_tooltip = {
+				text = CRUSADE_COOLDOWN
+				religion_scope = {
+					OR = {
+						NOT = { has_flag = crusade_fired }
+						had_flag = { flag = crusade_fired days = 3650 }
+					}
+				}
+			}
 			uses_new_crusade = yes
 			has_called_crusade = no
 			religion_authority = 0.05
@@ -4359,6 +4396,20 @@ new_crusade = {
 					PREV = {
 						title = k_maritimes	
 					} 
+					AND = {
+						num_of_realm_counties = {
+							value = 3
+							title = PREV
+						}
+						PREV = {
+							any_realm_title = {
+								is_holy_site = ROOT
+								holder_scope = {
+									OR = { character = FROM any_liege = { character = FROM } }
+								}
+							}
+						}
+					}
 				}
 			}
 			AND = {
@@ -4412,7 +4463,15 @@ new_crusade = {
 	}
 
 	on_add = {
-		hidden_tooltip = { fire_haruspicy_event_effect = yes }
+		hidden_tooltip = {
+			fire_haruspicy_event_effect = yes
+			ROOT = {
+				religion_scope = {
+					clr_flag = crusade_fired
+					set_flag = crusade_fired
+				}
+			}
+		}
 		if = {
 			limit = { defender = { is_offmap_governor = offmap_china } }
 			attacker = {  
@@ -4533,10 +4592,7 @@ new_crusade = {
 					most_participating_crusader = {
 						holy_order = no
 						mercenary = no
-						NOR = {
-							has_landed_title = k_papal_state
-							has_landed_title = k_ursuline
-						}
+						is_pope = no
 						OR = {
 							AND = {
 								ai = yes
@@ -5766,7 +5822,16 @@ religious = {
 				NOT = { has_character_modifier = holy_war_cooldown }
 				has_game_rule = { name = holy_war_cooldown_rule value = off }
 			}
-			piety = 100
+			OR = { 
+				AND = {
+					piety = 100
+					NOT = { religion = neutic }
+				}
+				AND = {
+					piety = 200
+					religion = neutic
+				}
+			}
 		}
 	}
 	
@@ -5788,7 +5853,13 @@ religious = {
 					}
 				}
 			}
-			piety = -100
+			if = { 
+				limit = { religion = neutic }
+				piety = -200
+			}
+			else_if = { 
+				piety = -100
+			}
 		}
 		if = {
 			limit = { defender = { is_offmap_governor = offmap_china } }
@@ -5801,7 +5872,10 @@ religious = {
 
 	can_use = { #American Natives no longer have access to the Holy War CB, are given County Conquest CB instead.
 		ROOT = {
-			NOT = { religion = cetic }
+			NOR = { 
+				religion = cetic 
+				religion_openly_gaian_or_heresy_trigger = yes
+			}
 			is_nomadic = no
 			NOR = {
 				religion_group = pagan_group
@@ -6310,7 +6384,7 @@ religious = {
 			factor = 0.5
 			ROOT = {
 				OR = {
-					religion = gaian
+					religion_openly_gaian_or_heresy_trigger = yes
 					religion = atomicist
 				}
 			}

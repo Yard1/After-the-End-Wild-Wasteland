@@ -1,0 +1,497 @@
+###ÄNSI
+1667001 = {
+	name="Nootau"
+	dynasty=1491801
+	culture=cree
+	religion=peyotist
+	trait=intricate_webweaver
+	trait=mystic
+	2638.1.1={birth=yes}
+	2708.1.1={death=yes}
+}
+
+1667002 = {
+	name="Huritt"
+	dynasty=1491802
+	culture=cree
+	religion=peyotist
+	trait=thrifty_clerk
+	trait=temperate
+	2629.1.1={birth=yes}
+	2698.1.1={death=yes}
+}
+
+1667003 = {
+	name="Ahanu"
+	dynasty=2021005
+	culture=blackfoot
+	religion=peyotist
+	trait=lustful
+	trait=proud
+	2641.1.1={birth=yes}
+	2708.1.1={death=yes}
+}
+
+1667004 = {
+	name="Hassun"
+	dynasty=2021006
+	culture=blackfoot
+	religion=peyotist
+	trait=brilliant_strategist
+	trait=ambitious
+	2609.1.1={birth=yes}
+	2676.1.1={death=yes}
+}
+
+
+#deleted 1667005
+
+#deleted 1667006
+
+1667007 = {
+	name="Cha'lie"
+	dynasty=2027033
+	culture=ktunaxa
+	religion=peyotist
+	trait=temperate
+	trait=kind
+	2628.1.1={birth=yes}
+	2690.1.1={death=yes}
+}
+
+1667008 = {
+	name="Ka'son"
+	dynasty=2027033
+	culture=ktunaxa
+	religion=peyotist
+	trait=underhanded_rogue
+	trait=trusting
+	father=1667007
+	2650.1.1={birth=yes}
+	2710.1.1={death=yes}
+}
+
+1667009 = {
+	name="Powaw"
+	dynasty=2021001
+	culture=blackfoot
+	religion=peyotist
+	trait=honest
+	trait=cynical
+	2631.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1667010 = {
+	name="Ashenee"
+	female=yes
+	dynasty=2021001
+	culture=blackfoot
+	religion=peyotist
+	trait=diligent
+	trait=kind
+	father=1667009
+	2649.1.1={birth=yes}
+	2665.1.1={add_spouse=1667015}
+	2710.1.1={death=yes}
+}
+
+# deleted 1667011
+
+1667012 = {
+	name="Nootau"
+	dynasty=2021003
+	culture=blackfoot
+	religion=peyotist
+	trait=indulgent_wastrel
+	trait=content
+	2629.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+#deleted 1667013
+
+1667014 = {
+	name="Aakkaapeesh"
+	dynasty=2023005
+	culture=crow
+	religion=peyotist
+	2650.1.1={birth=yes}
+}
+
+1667015 = {
+	name="Howahkan"
+	dynasty=2023000
+	culture=crow
+	religion=peyotist
+	trait=tough_soldier
+	trait=hedonist
+	trait=deceitful
+	2640.1.1={birth=yes}
+	2665.1.1={add_spouse=1667010}
+	2700.1.1={death=yes}
+}
+
+1667016 = {
+	name="Hokama"
+	dynasty=1491809
+	culture=cree
+	religion=peyotist
+	trait=underhanded_rogue
+	trait=proud
+	2648.1.1={birth=yes}
+	2710.1.1={death=yes}
+}
+
+#deleted 1667017
+
+1667018 = {
+	name="Waapaca"
+	dynasty=1491505
+	culture=ojibwe
+	religion=norse_pagan
+	trait=charismatic_negotiator
+	trait=temperate
+	2649.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1667019 = {
+	name="Michael"
+	dynasty=1869027
+	culture=ontarian
+	religion=nonconformist
+	trait=drunkard
+	trait=flamboyant_schemer
+	trait=gregarious
+	2644.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1667020 = {
+	name="Xavier"
+	dynasty=1869008
+	culture=metis
+	religion=midewiwin
+	trait=skilled_tactician
+	trait=brave
+	trait=lustful
+	trait=gregarious
+	trait=slothful
+	trait=patient
+	2638.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1667021 = {
+	name="Jules"
+	dynasty=1869013
+	culture=metis
+	religion=peyotist
+	trait=quick
+	trait=twin
+	father=1667024
+	mother=1667023
+	2658.3.15={birth=yes} #get it?
+	2700.1.1={death=yes}
+}
+
+1667022 = {
+	name="Julia"
+	dynasty=1869013
+	female=yes
+	culture=metis
+	religion=peyotist
+	trait=quick
+	trait=twin
+	father=1667024
+	mother=1667023
+	2658.3.15={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1667023 = {
+	name="Therese"
+	dynasty=1869009
+	female=yes
+	culture=metis
+	religion=peyotist
+	trait=intricate_webweaver
+	trait=kind
+	trait=chaste
+	trait=paranoid
+	trait=ambitious
+	2639.1.1={birth=yes}
+	2657.1.1={add_spouse=1667024}
+	2700.1.1={death=yes}
+}
+
+1667024 = {
+	name="August"
+	dynasty=1869013
+	culture=metis
+	religion=peyotist
+	trait=midas_touched
+	trait=quick
+	trait=kind
+	trait=chaste
+	trait=paranoid
+	trait=zealous
+	2631.1.16={birth=yes}
+	2657.1.1={add_spouse=1667023}
+	2700.1.1={death=yes}
+}
+
+1667025 = {
+	name="Shamaga"
+	dynasty=1491501
+	culture=ojibwe
+	religion=midewiwin
+	trait=brilliant_strategist
+	trait=strong
+	trait=brave
+	trait=temperate
+	trait=winter_soldier
+	2643.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1667026 = {
+	name="Nagamo"
+	dynasty=2020011
+	culture=ojicree
+	religion=midewiwin
+	trait=charismatic_negotiator
+	trait=charitable
+	trait=chaste
+	trait=proud
+	trait=cynical
+	trait=paranoid
+	2634.12.14={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1667030 = {
+	name="Tamal"
+	female=yes
+	dynasty=1889007
+	culture=mountainer
+	religion=gaian
+	trait=skilled_tactician
+	trait=strong
+	trait=brave
+	trait=lustful
+	trait=cruel
+	trait=ambitious
+	give_nickname=nick_the_bold 
+	2643.4.3={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1667031 = {
+	name="Rufus"
+	dynasty=1889007
+	culture=mountainer
+	religion=gaian
+	trait=legit_bastard
+	mother=1667030
+	2661.3.30={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1667032 = {
+	name="Belva"
+	female=yes
+	dynasty=1889007
+	culture=mountainer
+	religion=gaian
+	trait=legit_bastard
+	mother=1667030
+	2664.4.14={birth=yes}
+	2700.1.1={death=yes}
+}
+
+#deleted 1667033
+
+1667034 = {
+	name="Papewes"
+	dynasty=1491807
+	culture=cree
+	religion=peyotist
+	2650.5.24={birth=yes}
+}
+
+1667035 = {
+	name="Maskwa"
+	dynasty=1491810 #Iron
+	culture=cree
+	religion=peyotist
+	martial=10
+	diplomacy=8
+	stewardship=6
+	intrigue=6
+	learning=7
+	trait=brilliant_strategist
+	trait=genius
+	trait=ambitious
+	trait=lustful
+	trait=proud
+	trait=brave
+	trait=just
+	give_nickname=nick_the_ironside
+	2632.11.16={birth=yes}
+}
+
+1667036 = {
+	name="Kahkewistahaw"
+	dynasty=1491803
+	culture=cree
+	religion=peyotist
+	martial=6
+	diplomacy=5
+	stewardship=3
+	intrigue=3
+	learning=8
+	trait=skilled_tactician
+	trait=charitable
+	trait=paranoid
+	trait=envious
+	trait=content
+	2640.6.12={birth=yes}
+}
+
+1667041 = {
+	name="Osborne"
+	culture=mountainer
+	religion=gaian
+	trait=fortune_builder
+	trait=fair
+	2639.5.13={birth=yes}
+	2659.1.1={add_spouse=1667040 }
+	2663.6.2={
+		death = {
+			death_reason = death_murder_unknown
+			killer = 1667040
+	}}
+}
+
+1667040 = {
+	name="Gretel"
+	female=yes
+	dynasty=1889008
+	culture=mountainer
+	religion=amazonian
+	trait=elusive_shadow
+	trait=impaler
+	trait=arbitrary
+	trait=patient
+	trait=cruel
+	trait=ambitious
+	trait=zealous
+	give_nickname=nick_the_cruel
+	2641.10.31={birth=yes}
+	2659.1.1 = { 
+		effect = {
+			set_character_flag = recieved_royal_marriage_aid_duty
+			spouse = {
+				set_character_flag = recieved_royal_marriage_aid_duty
+				remove_spouse = spouse
+				add_spouse_matrilineal = ROOT
+				clr_character_flag = recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag = recieved_royal_marriage_aid_duty
+		}
+	}
+	2663.6.3={add_trait = amazon_trait}
+	2700.1.1={death=yes}
+}
+
+1667042 = {
+	name="Juniper"
+	female=yes
+	dynasty=1889008
+	culture=mountainer
+	religion=amazonian
+	trait=fair
+	trait=twin
+	mother=1667040
+	father=1667041
+	2661.10.21={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1667043 = {
+	name="Flint"
+	dynasty=1889008
+	culture=mountainer
+	religion=amazonian
+	trait=fair
+	trait=twin
+	mother=1667040
+	father=1667041
+	2661.10.21={birth=yes}
+	2700.1.1={death=yes}
+}
+
+#1667044 = {
+#	name="Angus"
+#	dynasty=1889015
+#	culture=mountainer
+#	religion=revelationist
+#	2623.1.1={birth=yes}
+#	2659.1.1={add_spouse=1667045}
+#	2700.1.1={death=yes}
+#}
+
+#1667045 = {
+#	name="Jesseca"
+#	female=yes
+#	dynasty=1889011
+#	culture=mountainer
+#	religion=gaian
+#	trait=sympathy_pagans
+#	2643.1.1={birth=yes}
+#	2659.1.1={add_spouse=1667044}
+#	2700.1.1={death=yes}
+#}
+
+1667046 = {
+	name="Malcolm"
+	dynasty=1889010
+	culture=mountainer
+	religion=gaian
+	trait=mastermind_theologian
+	trait=quick
+	trait=scholar
+	trait=humble
+	trait=patient
+	trait=diligent
+	trait=honest
+	trait=just
+	give_nickname=nick_the_chronicler
+	2633.8.28={birth=yes}
+	2665.11.28={effect = {add_artifact = ate_typewriter} }
+	2700.1.1={death=yes}
+}
+
+1667047 = {
+	name="Louis"
+	dynasty=1869000 # Riel
+	culture=metis
+	occluded=yes
+	religion=catholic
+	trait=misguided_warrior
+	trait=legendary
+	trait=zealous
+	trait=brave
+	trait=possessed
+	trait=ambitious
+	trait=wroth
+	trait=cruel
+	1844.10.22={birth=yes}
+	1885.11.16={
+		death = {
+			death_reason = death_execution
+		}
+	}
+}

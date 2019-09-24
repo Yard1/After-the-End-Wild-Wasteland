@@ -186,7 +186,7 @@ freeland = { #Gaian lords
 	flags = { historical_bloodline }
 	active = {
 		culture = portlander
-		religion = gaian
+		religion_openly_gaian_or_heresy_trigger = yes
 	}
 }
 

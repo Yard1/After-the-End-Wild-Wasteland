@@ -83,6 +83,7 @@ decisions = {
 			is_landed = yes
 			holy_order = no
 			mercenary = no
+			is_playable = yes
 			OR = {
 				ai = no
 				independent = yes

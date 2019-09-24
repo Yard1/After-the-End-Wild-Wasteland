@@ -72,7 +72,7 @@ defined_text = {
 				religion_group = american_native
 				AND = {
 					religion_group = pacific
-					NOT = { religion = gaian }
+					NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 				}
 				religion_group = mesoamerican_gods
 				religion_group = pirate
@@ -87,7 +87,7 @@ defined_text = {
 	text = {
 		localisation_key = GetHouseOfWorship_Celtic
 		trigger = {
-			religion = gaian
+			religion_openly_gaian_or_heresy_trigger = yes
 		}
 	}
 	text = {
@@ -117,24 +117,8 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = string_Temple
-		trigger = { religion_group = pagan_group }
-	}
-	text = {
 		localisation_key = string_Synagogue_Cap
 		trigger = { religion_group = jewish_group }
-	}
-	text = {
-		localisation_key = string_Temple
-		trigger = { religion = hindu }
-	}
-	text = {
-		localisation_key = string_Temple
-		trigger = { religion = cetic }
-	}
-	text = {
-		localisation_key = string_Temple
-		trigger = { religion = gaian }
 	}
 	text = {
 		localisation_key = string_Court
@@ -336,6 +320,13 @@ defined_text = {
 			religion = gaian
 		}
 	}
+
+	text = {
+		localisation_key = String_Amazonian
+		trigger = {
+			religion = amazonian
+		}
+	}
 	
 	text = {
 		localisation_key = String_Cetic
@@ -343,6 +334,13 @@ defined_text = {
 			religion = cetic
 		}
 	}
+	
+	text = {
+		localisation_key = String_Neutic
+		trigger = {
+			religion = neutic
+		}
+	}	
 	
 	text = {
 		localisation_key = String_Rasta
@@ -529,11 +527,25 @@ defined_text = {
 			religion = gaian
 		}
 	}
+
+	text = {
+		localisation_key = String_Amazonian
+		trigger = {
+			religion = amazonian
+		}
+	}
 	
 	text = {
 		localisation_key = String_Cetic
 		trigger = {
 			religion = cetic
+		}
+	}
+	
+	text = {
+		localisation_key = String_Neutic
+		trigger = {
+			religion = neutic
 		}
 	}
 	
@@ -720,6 +732,13 @@ defined_text = {
 	}
 	
 	text = {
+		localisation_key = String_Neutics
+		trigger = {
+			true_religion_neutic_trigger = yes
+		}
+	}	
+	
+	text = {
 		localisation_key = String_Rastas
 		trigger = {
 			true_religion_rastafarian_trigger = yes
@@ -862,6 +881,13 @@ defined_text = {
 		localisation_key = String_Cetic
 		trigger = {
 			true_religion_cetic_trigger = yes
+		}
+	}
+	
+	text = {
+		localisation_key = String_Neutic
+		trigger = {
+			true_religion_neutic_trigger = yes
 		}
 	}
 	
@@ -1051,6 +1077,13 @@ defined_text = {
 	}
 	
 	text = {
+		localisation_key = String_Neutic
+		trigger = {
+			true_religion_neutic_trigger = yes
+		}
+	}
+	
+	text = {
 		localisation_key = String_Rasta
 		trigger = {
 			true_religion_rastafarian_trigger = yes
@@ -1233,6 +1266,11 @@ defined_text = {
 	text = { 
 		localisation_key = GOD_THE_EMPEROR
 		trigger = { true_religion_cetic_trigger = yes }
+	}
+	##NEUTIC##
+	text = { 
+		localisation_key = GOD_THE_GURUS
+		trigger = { true_religion_neutic_trigger = yes }
 	}
 	text = { 
 		localisation_key = GOD_THE_EMPEROR
@@ -1480,7 +1518,10 @@ defined_text = {
     text = { 
         localisation_key = String_Writings
         trigger = { 
-            true_religion_cetic_trigger = yes
+            OR = {
+				true_religion_cetic_trigger = yes
+				true_religion_neutic_trigger = yes
+			}
         }
     }
     text = { 
@@ -1627,6 +1668,13 @@ defined_text = {
 	}
 	
 	text = {
+		localisation_key = String_Neutic #Neutic
+		trigger = {
+			true_religion_neutic_trigger = yes
+		}
+	}	
+	
+	text = {
 		localisation_key = String_Rasta
 		trigger = {
 			true_religion_rastafarian_trigger = yes
@@ -1760,6 +1808,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				is_indian_secret_religious_society_member_trigger = yes 
+				society_member_of = secret_religious_society_neutic
 				#is_bon_secret_religious_society_member_trigger = yes
 				#is_apostolic_secret_religious_society_member_trigger = yes
 			}
@@ -1916,7 +1965,12 @@ defined_text = {
 	}
 	text = {
 		localisation_key = String_Shubhaste_panthanah_santu
-		trigger = { is_indian_secret_religious_society_member_trigger = yes }
+		trigger = { 
+			OR = { 
+				is_indian_secret_religious_society_member_trigger = yes 
+				society_member_of = secret_religious_society_neutic
+			}	
+		}
 	}
 	text = {
 		localisation_key = String_May_Yehovah_guide_you #What the fuck Paradox
@@ -2133,7 +2187,12 @@ defined_text = {
 	}
 	text = {
 		localisation_key = String_Yinyang_symbol
-		trigger = { true_religion_cetic_trigger = yes }
+		trigger = { 
+			OR = {
+				true_religion_cetic_trigger = yes 
+				true_religion_neutic_trigger = yes
+			}		
+		}
 	}
 	text = {
 		localisation_key = String_torii_symbol
@@ -3172,8 +3231,9 @@ defined_text = {
 		trigger = {
 			society_member_of = bohemian_grove
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = cetic
+				religion = neutic
 			}
 		}
 	}
@@ -3244,7 +3304,7 @@ defined_text = {
 		} 
 	}
 	text = {
-		localisation_key = String_seiï¿½r
+		localisation_key = String_seiðr
 		trigger = { society_member_of = the_trollcrafters }
 	}
 	text = {
@@ -3330,7 +3390,7 @@ defined_text = {
 			society_member_of = bohemian_grove
 			OR = {
 				religion = cetic
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 			}
 		}
 	}
@@ -3400,7 +3460,7 @@ defined_text = {
 		trigger = {
 			society_member_of = bohemian_grove
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = cetic
 			}
 		}
@@ -3445,14 +3505,14 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = String_seiï¿½kona
+		localisation_key = String_seiðkona
 		trigger = {
 			is_female = yes
 			society_member_of = the_trollcrafters
 		}
 	}
 	text = {
-		localisation_key = String_seiï¿½maï¿½r
+		localisation_key = String_seiðmaðr
 		trigger = {
 			is_female = no
 			society_member_of = the_trollcrafters
@@ -3532,14 +3592,14 @@ defined_text = {
 		}
 	}
 	text = {
-		localisation_key = String_seiï¿½konur
+		localisation_key = String_seiðkonur
 		trigger = {
 			is_female = yes
 			society_member_of = the_trollcrafters
 		}
 	}
 	text = {
-		localisation_key = String_seiï¿½menn
+		localisation_key = String_seiðmenn
 		trigger = {
 			is_female = no
 			society_member_of = the_trollcrafters
@@ -3674,8 +3734,9 @@ defined_text = {
 		trigger = {
 			society_member_of = bohemian_grove
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = cetic
+				religion = neutic
 			}
 		}
 	}
@@ -3768,7 +3829,8 @@ defined_text = {
 			society_member_of = bohemian_grove
 			OR = {
 				religion = cetic
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
+				religion = neutic
 			}
 		}
 		localisation_key = String_Rakshasa_Prince
@@ -4055,8 +4117,9 @@ defined_text = {
 		trigger = {
 			society_member_of = bohemian_grove
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = cetic
+				religion = neutic
 			}
 		}
 		localisation_key = String_Baphomet
@@ -4065,8 +4128,9 @@ defined_text = {
 		trigger = {
 			society_member_of = bohemian_grove
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = cetic
+				religion = neutic
 			}
 		}
 		localisation_key = String_Moloch
@@ -4486,7 +4550,10 @@ defined_text = {
 		localisation_key = String_Emperor_Elton
 		trigger = {
 			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
-			society_member_of = monastic_order_cetic
+			OR = { 
+				society_member_of = monastic_order_cetic
+				society_member_of = monastic_order_neutic
+			}
 		}
 	}
 	text = {
@@ -4529,7 +4596,10 @@ defined_text = {
 		localisation_key = String_temple
 		trigger = {
 			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
-			society_member_of = monastic_order_cetic
+			OR = {
+				society_member_of = monastic_order_cetic
+				society_member_of = monastic_order_neutic
+			}
 		}
 	}
 	text = {
@@ -4569,6 +4639,7 @@ defined_text = {
 			OR = {
 				society_member_of = monastic_order_hindu
 				society_member_of = monastic_order_cetic
+				society_member_of = monastic_order_neutic
 			}
 		}
 	}
@@ -4648,7 +4719,10 @@ defined_text = {
 		localisation_key = String_the_Meditations
 		trigger = {
 			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
-			society_member_of = monastic_order_cetic
+			OR = { 
+				society_member_of = monastic_order_cetic
+				society_member_of = monastic_order_neutic
+			}
 		}
 	}
 	text = {
@@ -4680,6 +4754,7 @@ defined_text = {
 			OR = {
 				is_dharmic_monastic_member_trigger = yes
 				society_member_of = monastic_order_cetic
+				society_member_of = monastic_order_neutic #Neutic
 			}
 		}
 	}
@@ -4724,6 +4799,13 @@ defined_text = {
 		trigger = {
 			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 			society_member_of = monastic_order_jewish
+		}
+	}
+	text = {
+		localisation_key = String_Namaste
+		trigger = {
+			NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+			society_member_of = monastic_order_neutic #Neutic
 		}
 	}
 	fallback_text = {
@@ -4854,9 +4936,21 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			religion = neutic
+		}
+		localisation_key = Holy_Order_Neutic
+	}
+	text = {
+		trigger = {
 			religion = gaian
 		}
 		localisation_key = Holy_Order_Gaian
+	}
+	text = {
+		trigger = {
+			religion = amazonian
+		}
+		localisation_key = Holy_Order_Amazonian
 	}
 	text = {
 		trigger = {
@@ -6163,6 +6257,27 @@ defined_text = {
 		localisation_key = secret_religious_society_REAL_cetic
 	}
 }
+
+##NEUTIC##
+
+defined_text = {
+	name = GetReligiousCommunityName_neutic
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_neutic
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_neutic
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_neutic
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_neutic
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_neutic
+	}
+}
 defined_text = {
 	name = GetReligiousCommunityName_jewish
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
@@ -7040,6 +7155,20 @@ defined_text = {
 	}
 }
 
+##NEUTIC##
+
+defined_text = {
+	name = GetReligiousSocietyDesc_neutic
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_neutic_desc_REAL
+	}
+}
+
 defined_text = {
 	name = GetReligiousSocietyDesc_nousthreskeia
 	text = {
@@ -7229,6 +7358,18 @@ defined_text = {
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_gaian_desc_REAL
+	}
+}
+
+defined_text = {
+	name = GetReligiousSocietyDesc_amazonian
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_amazonian_desc_REAL
 	}
 }
 
@@ -9030,6 +9171,28 @@ defined_text = {
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = monastic_order_cetic_desc_real
+	}
+}
+
+##NEUTIC##
+
+defined_text = {
+	name = GetNeuticSocietyName
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = monastic_order_neutic_random
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = monastic_order_neutic_real
+	}
+}
+
+defined_text = {
+	name = GetNeuticSocietyDesc
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = monastic_order_neutic_desc_random
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = monastic_order_neutic_desc_real
 	}
 }
 

@@ -4950,10 +4950,7 @@ character_event = {
 	desc = EVTDESCHF24052
 	picture = { 
 		trigger = { 
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -4966,7 +4963,6 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
 				has_religion_feature = religion_patriarchal
 				matriarchal_religion = yes
 			} 
@@ -5033,10 +5029,7 @@ character_event = {
 	desc = EVTDESCHF24053
 	picture = { 
 		trigger = { 
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -5049,7 +5042,6 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
 				has_religion_feature = religion_patriarchal
 				matriarchal_religion = yes
 			} 
@@ -5099,10 +5091,7 @@ character_event = {
 	desc = EVTDESCHF24054
 	picture = { 
 		trigger = { 
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -5115,7 +5104,6 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
 				has_religion_feature = religion_patriarchal
 				matriarchal_religion = yes
 			} 
@@ -5164,10 +5152,7 @@ character_event = {
 	desc = EVTDESCHF24055
 	picture = { 
 		trigger = { 
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -5180,7 +5165,6 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
 				has_religion_feature = religion_patriarchal
 				matriarchal_religion = yes
 			} 
@@ -5237,10 +5221,7 @@ character_event = {
 	desc = EVTDESCHF24056
 	picture = { 
 		trigger = { 
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -5253,7 +5234,6 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
 				has_religion_feature = religion_patriarchal
 				matriarchal_religion = yes
 			} 
@@ -5389,10 +5369,7 @@ character_event = {
 	desc = EVTDESCHF24057
 	picture = { 
 		trigger = { 
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -5405,7 +5382,6 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
 				has_religion_feature = religion_patriarchal
 				matriarchal_religion = yes
 			} 
@@ -5535,10 +5511,7 @@ narrative_event = {
 	desc = EVTDESCHF24058
 	picture = { 
 		trigger = { 
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -5551,7 +5524,6 @@ narrative_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
 				has_religion_feature = religion_patriarchal
 				matriarchal_religion = yes
 			} 
@@ -7185,10 +7157,7 @@ character_event = {
 	desc = EVTDESCHF24071
 	picture = { 
 		trigger = { 
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -7201,7 +7170,6 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
 				has_religion_feature = religion_patriarchal
 				matriarchal_religion = yes
 			} 
@@ -7336,10 +7304,7 @@ character_event = {
 	desc = EVTDESCHF24072
 	picture = { 
 		trigger = { 
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -7352,7 +7317,6 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
 				has_religion_feature = religion_patriarchal
 				matriarchal_religion = yes
 			} 
@@ -7486,10 +7450,7 @@ narrative_event = {
 	desc = EVTDESCAHF24073
 	picture = { 
 		trigger = { 
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -7502,7 +7463,6 @@ narrative_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
 				has_religion_feature = religion_patriarchal
 				matriarchal_religion = yes
 			} 
@@ -9786,10 +9746,7 @@ character_event = {
 	desc = EVTDESCAHF24138
 	picture = { 
 		trigger = { 
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -9802,10 +9759,9 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
-				matriarchal_religion = yes
 				has_religion_feature = religion_patriarchal
-			}
+				matriarchal_religion = yes
+			} 
 		} 
 		picture = GFX_evt_fancy_feast
 	}
@@ -10022,10 +9978,7 @@ character_event = {
 	}
 	picture = { 
 		trigger = { 
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -10038,10 +9991,9 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
-				matriarchal_religion = yes
 				has_religion_feature = religion_patriarchal
-			}
+				matriarchal_religion = yes
+			} 
 		} 
 		picture = GFX_evt_fancy_feast
 	}
@@ -10207,10 +10159,7 @@ character_event = {
 	desc = EVTDESCAHF24141
 	picture = { 
 		trigger = { 
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -10223,10 +10172,9 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
-				matriarchal_religion = yes
 				has_religion_feature = religion_patriarchal
-			}
+				matriarchal_religion = yes
+			} 
 		} 
 		picture = GFX_evt_fancy_feast
 	}
@@ -10291,10 +10239,7 @@ character_event = {
 	}
 	picture = { 
 		trigger = {
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -10307,10 +10252,9 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
-				matriarchal_religion = yes
 				has_religion_feature = religion_patriarchal
-			}
+				matriarchal_religion = yes
+			} 
 		} 
 		picture = GFX_evt_fancy_feast
 	}
@@ -10356,10 +10300,7 @@ character_event = {
 	}
 	picture = { 
 		trigger = { 
-			OR = {
-				religion = gaian
-				matriarchal_religion = yes
-			}
+			matriarchal_religion = yes
 		} 
 		picture = GFX_evt_matriarchy_throne_room
 	}
@@ -10372,10 +10313,9 @@ character_event = {
 	picture = { 
 		trigger = { 
 			NOR = {
-				religion = gaian
-				matriarchal_religion = yes
 				has_religion_feature = religion_patriarchal
-			}
+				matriarchal_religion = yes
+			} 
 		} 
 		picture = GFX_evt_fancy_feast
 	}

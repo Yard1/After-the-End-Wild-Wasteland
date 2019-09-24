@@ -4570,6 +4570,27 @@ faction_independence = {
 			factor = 0
 			war = yes
 		}
+
+		modifier = {
+			factor = 2
+			religion = amazonian
+			matriarchal_religion = yes
+			liege = { matriarchal_religion = no }
+		}
+
+		modifier = {
+			factor = 2
+			matriarchal_religion = yes
+			liege = {
+				is_female = no
+			}
+		}
+
+		modifier = {
+			factor = 2
+			has_religion_feature = religion_patriarchal
+			liege = { is_female = yes }
+		}
 		
 		modifier = {
 			factor = 0
@@ -5017,6 +5038,27 @@ faction_independence = {
 			is_merchant_republic = no
 		}
 		
+		modifier = {
+			factor = 2
+			religion = amazonian
+			matriarchal_religion = yes
+			liege = { matriarchal_religion = no }
+		}
+
+		modifier = {
+			factor = 2
+			matriarchal_religion = yes
+			liege = {
+				is_female = no
+			}
+		}
+
+		modifier = {
+			factor = 2
+			has_religion_feature = religion_patriarchal
+			liege = { is_female = yes }
+		}
+
 		modifier = {
 			factor = 0
 			OR = {
@@ -5602,11 +5644,7 @@ faction_claimant = {
 				has_claim = ROOT
 			}
 			
-			NOR = {
-				has_landed_title = k_papal_state
-				has_landed_title = k_ursuline
-				has_landed_title = d_quorum_of_the_twelve
-			}
+			is_pope = no
 
 			OR = {
 				is_ruler = no

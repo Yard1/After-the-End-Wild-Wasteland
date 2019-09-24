@@ -1071,6 +1071,7 @@ culture =
 {
 	religion = {
 		"cetic"
+		"neutic"
 	}
 
 	templates = { 
@@ -1559,6 +1560,7 @@ culture =
 culture = {
 	religion = {
 		"gaian"
+		"amazonian"
 		"celtic_pagan"
 		"celtic_pagan_reformed"
 	}

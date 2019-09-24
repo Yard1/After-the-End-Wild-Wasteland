@@ -102,10 +102,9 @@ character_event = {
 		has_landed_title = k_papal_state
 		has_global_flag = day_set
 	}
-	clr_global_flag = day_timer
-		
-			set_global_flag = day_timer
 	immediate = {
+		clr_global_flag = day_timer
+		set_global_flag = day_timer
 		if = {
 			limit = {
 				month = 0

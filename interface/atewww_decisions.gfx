@@ -159,4 +159,12 @@ spriteTypes = {
 		name = "GFX_vassalize_dead_sun"
 		texturefile = "gfx/interface/decision_icon_vassalize_holy_order.dds"
 	}
+	spriteType = {
+		name = "GFX_adoption_decision"
+		texturefile = "gfx/interface/decision_icon_legitimize_bastard.dds"
+	}
+	spriteType = {
+		name = "GFX_become_amazon"
+		texturefile = "gfx\\interface\\decision_icon_celibate_mom.dds"
+	}
 }

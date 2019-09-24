@@ -1,0 +1,45 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_neutic_writings"
+		texturefile = "gfx/interface/writing.dds"
+	}
+	spriteType = {
+		name = "GFX_neutic_writings_end"
+		texturefile = "gfx/interface/writing2.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_way_fist_neutic"
+		texturefile = "gfx/traits/way_fist.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_way_cowl_neutic"
+		texturefile = "gfx/traits/way_cowl.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_way_book_neutic"
+		texturefile = "gfx/traits/way_book.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_way_dove_neutic"
+		texturefile = "gfx/traits/way_dove.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_create_neutic_gurus"
+		texturefile = "gfx/interface/create_neutic_gurus.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+}

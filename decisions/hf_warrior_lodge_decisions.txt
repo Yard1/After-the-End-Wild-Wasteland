@@ -1463,7 +1463,7 @@ society_decisions = {
 					if = {
 						limit = {
 							OR = {
-								religion = gaian
+								religion_openly_gaian_or_heresy_trigger = yes
 								religion = neomayan
 								has_religion_feature = religion_astrology
 							}

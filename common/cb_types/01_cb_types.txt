@@ -459,7 +459,7 @@ force_vassalization = { # New2
 		}
 		ROOT = {
 			NOT = { trait = figurehead }
-			NOT = { religion = anabaptist }
+			pacifist = no
 		}
 	}
 	
@@ -674,7 +674,7 @@ great_realm_conflict = { # New3
 			prestige = 3000
 			piety = 1500
 			NOT = { trait = figurehead }
-			NOT = { religion = anabaptist }
+			pacifist = no
 		}
 		FROM = {
 			relative_power = {
@@ -2281,7 +2281,7 @@ unjust_conquest = { # New7
 				scaled_wealth = { value = 1.0 min = 400 }
 			}
 			NOT = { trait = figurehead }
-			NOT = { religion = anabaptist }
+			pacifist = no
 		}
 	}
 	
@@ -4704,13 +4704,16 @@ invasion_of_china_cb = {
 								#No temple names or anything
 								if = {
 									limit = {
-										religion = cetic
+										OR = {
+											religion = cetic
+											religion = neutic
+										}
 									}
 									set_government_type = bureaucratic_government
 								}
 								else_if = {
 									limit = {
-										religion = gaian
+										religion_openly_gaian_or_heresy_trigger = yes
 										higher_tier_than = BARON
 									}
 									set_government_type = theocratic_feudal_government
@@ -5987,14 +5990,12 @@ matriarchal_deposition_war = {
 		ROOT = {
 			higher_real_tier_than = DUKE
 			OR = {
+				religion = amazonian
 				has_religion_feature = religion_warlike
 				has_religion_feature = religion_feature_raven_tales_1
 			}
 			is_female = yes
-			OR = { #yep
-				matriarchal_religion = yes
-				religion = gaian
-			}
+			matriarchal_religion = yes
 			is_landed = yes
 			is_nomadic = no
 			mercenary = no
@@ -6002,16 +6003,24 @@ matriarchal_deposition_war = {
 			top_liege = {
 				religion = ROOT
 			}
-			any_neighbor_independent_ruler = {
-				character = FROM
-			}
 		}
 		FROM = {
 			is_nomadic = no
 			is_merchant_republic = no
 			is_theocracy = no
 			is_female = no 
+			matriarchal_religion = no
 			independent = yes
+			any_neighbor_independent_ruler = {
+				OR = {
+					character = ROOT
+					AND = {
+						religion_group = ROOT
+						matriarchal_religion = yes
+					}
+					is_tributary = { suzerain = ROOT }
+				}
+			}
 		}
 	}
 
@@ -6019,6 +6028,7 @@ matriarchal_deposition_war = {
 		ROOT = {
 			higher_real_tier_than = DUKE
 			OR = {
+				religion = amazonian
 				has_religion_feature = religion_warlike
 				has_religion_feature = religion_feature_raven_tales_1
 			}
@@ -6026,11 +6036,13 @@ matriarchal_deposition_war = {
 			matriarchal_religion = yes
 			FROM = { is_female = no independent = yes }
 			NOT = { same_realm = FROM }
+			is_within_diplo_range = FROM
 		}
 		FROM = {
 			is_nomadic = no
 			is_merchant_republic = no
 			is_theocracy = no
+			matriarchal_religion = no
 		}
 	}
 	
@@ -6072,6 +6084,21 @@ matriarchal_deposition_war = {
 		}
 		FROM = { piety = -100 }
 		FROM = { prestige = -50 }
+		FROM = {
+			show_scope_change = no
+			any_realm_province = {
+				any_province_holding = {
+					limit = {
+						is_holy_site = ROOT
+						holder_scope = { NOT = { religion = ROOT } }
+					}
+					ROOT = {
+						show_scope_change = no
+						usurp_title = { target = PREV type = invasion }
+					}
+				}
+			}
+		}
 		custom_tooltip = {
 			text = sex_deposition_cb_succ_tip
 			hidden_tooltip = {
@@ -6112,6 +6139,36 @@ matriarchal_deposition_war = {
 							preferred_limit = {
 								is_adult = yes
 								religion = ROOT
+							}
+							preferred_limit = {
+								is_child_of = PREV
+								is_adult = yes
+								religion_group = ROOT
+								matriarchal_religion = yes
+							}
+							preferred_limit = {
+								is_close_relative = PREV
+								is_adult = yes
+								religion_group = ROOT
+								matriarchal_religion = yes
+							}
+							preferred_limit = {
+								is_adult = yes
+								matriarchal_religion = yes
+							}
+							preferred_limit = {
+								is_child_of = PREV
+								is_adult = yes
+								matriarchal_religion = yes
+							}
+							preferred_limit = {
+								is_close_relative = PREV
+								is_adult = yes
+								matriarchal_religion = yes
+							}
+							preferred_limit = {
+								is_adult = yes
+								matriarchal_religion = yes
 							}
 							preferred_limit = {
 								is_close_relative = PREV
@@ -6222,37 +6279,6 @@ matriarchal_deposition_war = {
 						}
 					}
 
-					#Titles assigned, now onto laws.
-					if = {
-						limit = {
-							ROOT = {
-								matriarchal_religion = yes
-							}
-							event_target:new_swapped_ruler = {
-								NOR = {
-									has_religion_feature = religion_patriarchal
-									equal_religion = yes
-									has_religion_feature = religion_feature_midewiwin
-								}
-							}
-						}
-						event_target:new_swapped_ruler = {
-							any_demesne_title = { 
-								add_law = {
-									law = enatic_succession
-									cooldown = no
-									opinion_effect = no
-								}
-								add_law = {
-									law = status_of_women_4
-									cooldown = no
-									opinion_effect = no
-								}
-							} 
-							recalc_succession = yes
-						}
-					}
-
 					#Laws set, now onto pacts.
 					if = {
 						limit = {
@@ -6279,6 +6305,30 @@ matriarchal_deposition_war = {
 								years = 50
 								who = event_target:new_swapped_ruler
 							}
+						}
+					}
+
+					#Titles assigned, now onto laws.
+					if = {
+						limit = {
+							ROOT = {
+								matriarchal_religion = yes
+							}
+						}
+						event_target:new_swapped_ruler = {
+							any_demesne_title = { 
+								add_law = {
+									law = enatic_succession
+									cooldown = yes
+									opinion_effect = no
+								}
+								add_law = {
+									law = status_of_women_4
+									cooldown = yes
+									opinion_effect = no
+								}
+							} 
+							recalc_succession = yes
 						}
 					}
 				}
@@ -6482,14 +6532,22 @@ patriarchal_deposition_war = {
 			top_liege = {
 				religion = ROOT
 			}
-			any_neighbor_independent_ruler = {
-				character = FROM
-			}
+			is_within_diplo_range = FROM
 		}
 		FROM = {
 			is_nomadic = no
 			is_merchant_republic = no
 			is_theocracy = no
+			any_neighbor_independent_ruler = {
+				OR = {
+					character = ROOT
+					AND = {
+						religion_group = ROOT
+						has_religion_feature = religion_patriarchal
+					}
+					is_tributary = { suzerain = ROOT }
+				}
+			}
 		}
 	}
 
@@ -6510,6 +6568,7 @@ patriarchal_deposition_war = {
 			is_theocracy = no
 			is_female = yes 
 			independent = yes
+			NOT = { has_religion_feature = religion_patriarchal }
 		}
 	}
 	
@@ -6551,6 +6610,21 @@ patriarchal_deposition_war = {
 		}
 		FROM = { piety = -100 }
 		FROM = { prestige = -50 }
+		FROM = {
+			show_scope_change = no
+			any_realm_province = {
+				any_province_holding = {
+					limit = {
+						is_holy_site = ROOT
+						holder_scope = { NOT = { religion = ROOT } }
+					}
+					ROOT = {
+						show_scope_change = no
+						usurp_title = { target = PREV type = invasion }
+					}
+				}
+			}
+		}
 		custom_tooltip = {
 			text = sex_deposition_cb_succ_tip
 			hidden_tooltip = {
@@ -6591,6 +6665,36 @@ patriarchal_deposition_war = {
 							preferred_limit = {
 								is_adult = yes
 								religion = ROOT
+							}
+							preferred_limit = {
+								is_child_of = PREV
+								is_adult = yes
+								religion_group = ROOT
+								has_religion_feature = religion_patriarchal
+							}
+							preferred_limit = {
+								is_close_relative = PREV
+								is_adult = yes
+								religion_group = ROOT
+								has_religion_feature = religion_patriarchal
+							}
+							preferred_limit = {
+								is_adult = yes
+								has_religion_feature = religion_patriarchal
+							}
+							preferred_limit = {
+								is_child_of = PREV
+								is_adult = yes
+								has_religion_feature = religion_patriarchal
+							}
+							preferred_limit = {
+								is_close_relative = PREV
+								is_adult = yes
+								has_religion_feature = religion_patriarchal
+							}
+							preferred_limit = {
+								is_adult = yes
+								has_religion_feature = religion_patriarchal
 							}
 							preferred_limit = {
 								is_close_relative = PREV
@@ -6701,37 +6805,6 @@ patriarchal_deposition_war = {
 						}
 					}
 
-					#Titles assigned, now onto laws.
-					if = {
-						limit = {
-							ROOT = {
-								has_religion_feature = religion_patriarchal
-							}
-							event_target:new_swapped_ruler = {
-								NOR = {
-									matriarchal_religion = yes
-									equal_religion = yes
-									has_religion_feature = religion_feature_midewiwin
-								}
-							}
-						}
-						event_target:new_swapped_ruler = {
-							any_demesne_title = { 
-								add_law = {
-									law = agnatic_succession
-									cooldown = no
-									opinion_effect = no
-								}
-								add_law = {
-									law = status_of_women_0
-									cooldown = no
-									opinion_effect = no
-								}
-							} 
-							recalc_succession = yes
-						}
-					}
-
 					#Laws set, now onto pacts.
 					if = {
 						limit = {
@@ -6758,6 +6831,30 @@ patriarchal_deposition_war = {
 								years = 50
 								who = event_target:new_swapped_ruler
 							}
+						}
+					}
+
+					#Titles assigned, now onto laws.
+					if = {
+						limit = {
+							ROOT = {
+								has_religion_feature = religion_patriarchal
+							}
+						}
+						event_target:new_swapped_ruler = {
+							any_demesne_title = { 
+								add_law = {
+									law = agnatic_succession
+									cooldown = yes
+									opinion_effect = no
+								}
+								add_law = {
+									law = status_of_women_0
+									cooldown = yes
+									opinion_effect = no
+								}
+							} 
+							recalc_succession = yes
 						}
 					}
 				}
@@ -6945,22 +7042,11 @@ depose_impious_pope = {
 			}
 			hidden_tooltip = {
 				OR = {
-					AND = {
-						religion = catholic
-						has_landed_title = k_papal_state
-					}
-					AND = {
-						religion = ursuline
-						has_landed_title = k_ursuline
-					}
-					AND = {
-						religion = high_church
-						has_landed_title = d_high_church
-					}
-					AND = {
-						religion = mormon
-						has_landed_title = d_quorum_of_the_twelve
-					}
+					has_landed_title = k_papal_state
+					has_landed_title = d_confederated
+					has_landed_title = k_ursuline
+					has_landed_title = d_high_church
+					has_landed_title = d_quorum_of_the_twelve
 				}
 			}
 			independent = yes
@@ -7032,6 +7118,19 @@ depose_impious_pope = {
 					}
 				}
 				d_high_church = {
+					owner = {
+						save_event_target_as = current_pope
+						reverse_imprison = FROM
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FROM = {
+						has_landed_title = d_confederated
+					}
+				}
+				d_confederated = {
 					owner = {
 						save_event_target_as = current_pope
 						reverse_imprison = FROM

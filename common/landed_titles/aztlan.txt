@@ -468,6 +468,7 @@ e_aztlan = {
 				color={ 241 145 124 }
 				color2={ 255 255 255 }
 				holy_site = gaian
+				holy_site = amazonian
 				
 				b_mesquite_NV = {}
 				b_hoover_NV = {}
@@ -546,76 +547,6 @@ e_aztlan = {
 				b_riito_SO = {}
 			}
 		}
-		d_sinaloa = {
-			color={ 176 128 131 }
-			color2={ 255 255 255 }
-			
-			capital = 3005 # c_culiacan
-			
-			c_culiacan = { # 3005
-				color={ 146 128 106 }
-				color2={ 255 255 255 }
-				
-				b_culiacan_SI = {}
-				b_badiraguato_SI = {}
-				b_navalato_SI = {}
-				b_costa_rica_SI = {}
-				b_el_dorado_SI = {}
-				b_cosala_SI = {}
-				b_altata_SI = {}
-				b_el_comedero_SI = {}
-			}
-			c_los_mochis = { 
-				color={ 170 155 152 }
-				color2={ 255 255 255 }
-				
-				b_los_mochis_SI = {}
-				b_cerrillos_SI = {}
-				b_topolobampo_SI = {}
-				b_ahome_SI = {}
-				b_adolfo_ruiz_cortines_SI = {}
-				b_el_fuerte_SI = {}
-				b_choix_SI = {}
-				b_san_blas_SI = {}
-			}
-			c_guasave = { 
-				color={ 134 185 150 }
-				color2={ 255 255 255 }
-				
-				b_guasave_SI = {}
-				b_guamuchil_SI = {}
-				b_angostura_SI = {}
-				b_estacion_naranjo_SI = {}
-				b_sinaloa_de_leyva_SI = {}
-				b_surutato_SI = {}
-				b_bacubirito_SI = {}
-			}
-			c_mazatlan = { 
-				color={ 124 109 94 }
-				color2={ 255 255 255 }
-				
-				b_mazatlan_SI = {}
-				b_la_piedra_SI = {}
-				b_el_roble_SI = {}
-				b_chametla_SI = {}
-				b_rosario_SI = {}
-				b_escuinapa_SI = {}
-				b_la_cruz_SI = {}
-			}
-			c_concordia = { 
-				color={ 110 141 142 }
-				color2={ 255 255 255 }
-				
-				b_concordia_SI = {}
-				b_la_pitarrilla_SI = {}
-				b_mesillas_SI = {}
-				b_el_huajote_SI = {}
-				b_cacalotan_SI = {}
-				b_teodoro_beltran_SI = {}
-				b_copala_SI = {}
-				b_panuco_SI = {}
-			}
-		}
 		d_sonora = {
 			color={ 185 104 75 }
 			color2={ 255 255 255 }
@@ -681,6 +612,86 @@ e_aztlan = {
 				b_granados_SO = {}
 				b_moctezuma_SO = {}
 				b_san_pedro_de_la_cueva_SO = {}
+			}
+		}
+	}
+	
+	k_sinaloa = {
+		color={ 180 80 95 }
+		color2={ 255 255 255 }
+		
+		capital = 3005 # Culiacan
+		
+		atomicist = 300
+		
+		d_sinaloa = {
+			color={ 176 128 131 }
+			color2={ 255 255 255 }
+			
+			capital = 3005 # Culiacan
+			
+			c_culiacan = { # 3005
+				color={ 146 128 106 }
+				color2={ 255 255 255 }
+				
+				b_culiacan_SI = {}
+				b_badiraguato_SI = {}
+				b_navalato_SI = {}
+				b_costa_rica_SI = {}
+				b_el_dorado_SI = {}
+				b_cosala_SI = {}
+				b_altata_SI = {}
+				b_el_comedero_SI = {}
+			}
+			c_los_mochis = { 
+				color={ 170 155 152 }
+				color2={ 255 255 255 }
+				
+				b_los_mochis_SI = {}
+				b_cerrillos_SI = {}
+				b_topolobampo_SI = {}
+				b_ahome_SI = {}
+				b_adolfo_ruiz_cortines_SI = {}
+				b_el_fuerte_SI = {}
+				b_choix_SI = {}
+				b_san_blas_SI = {}
+			}
+			c_guasave = { 
+				color={ 134 185 150 }
+				color2={ 255 255 255 }
+				
+				b_guasave_SI = {}
+				b_guamuchil_SI = {}
+				b_angostura_SI = {}
+				b_estacion_naranjo_SI = {}
+				b_sinaloa_de_leyva_SI = {}
+				b_surutato_SI = {}
+				b_bacubirito_SI = {}
+			}
+			c_mazatlan = { 
+				color={ 124 109 94 }
+				color2={ 255 255 255 }
+				
+				b_mazatlan_SI = {}
+				b_la_piedra_SI = {}
+				b_el_roble_SI = {}
+				b_chametla_SI = {}
+				b_rosario_SI = {}
+				b_escuinapa_SI = {}
+				b_la_cruz_SI = {}
+			}
+			c_concordia = { 
+				color={ 110 141 142 }
+				color2={ 255 255 255 }
+				
+				b_concordia_SI = {}
+				b_la_pitarrilla_SI = {}
+				b_mesillas_SI = {}
+				b_el_huajote_SI = {}
+				b_cacalotan_SI = {}
+				b_teodoro_beltran_SI = {}
+				b_copala_SI = {}
+				b_panuco_SI = {}
 			}
 		}
 		d_yaqui = {

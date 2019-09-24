@@ -2669,7 +2669,7 @@ character_event = {
 	max_age = 45
 	only_capable = yes
 	prisoner = no
-	religion = cetic
+	religion_group = pacific
 	
 	trigger = {
 		is_ruler = no
@@ -2690,7 +2690,10 @@ character_event = {
 		
 		liege = {
 			holy_order = no
-            religion = cetic
+            OR = {
+				religion = cetic
+				religion = neutic
+			}
 			liege = {
 				holy_order = no
 			}
@@ -2949,7 +2952,7 @@ character_event = {
 	
 	min_age = 16
 	only_rulers = yes
-	religion = cetic
+	religion_group = pacific
 	
 	trigger = {
         d_golden_bears = {

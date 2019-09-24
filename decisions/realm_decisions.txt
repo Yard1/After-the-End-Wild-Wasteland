@@ -690,7 +690,7 @@ decisions = {
 			}	
 			NOR = {
 				religion_group = jewish_group
-				religion = anabaptist
+				pacifist = yes
 				has_character_modifier = expelled_jewish
 				is_nomadic = yes
 				secret_religion = jewish
@@ -1411,7 +1411,8 @@ decisions = {
 				limit = {
 					NOR = {
 						religion = cetic
-						religion = gaian
+						religion = neutic
+						religion_openly_gaian_or_heresy_trigger = yes
 					}
 				}
 				
@@ -1429,7 +1430,10 @@ decisions = {
 			
 			if = {
 				limit = {
-					religion = cetic
+					OR = {
+						religion = cetic
+						religion = neutic
+					}
 				}
 				
 				if = {
@@ -1446,7 +1450,7 @@ decisions = {
 			
 			if = {
 				limit = {
-					religion = gaian
+					religion_openly_gaian_or_heresy_trigger = yes
 					higher_tier_than = BARON
 				}
 				
@@ -1609,7 +1613,8 @@ decisions = {
 				limit = {
 					NOR = {
 						religion = cetic
-						religion = gaian
+						religion = neutic
+						religion_openly_gaian_or_heresy_trigger = yes
 					}
 				}
 				
@@ -1627,7 +1632,10 @@ decisions = {
 			
 			if = {
 				limit = {
-					religion = cetic
+					OR = {
+						religion = cetic
+						religion = neutic
+					}
 				}
 				
 				if = {
@@ -1644,7 +1652,7 @@ decisions = {
 			
 			if = {
 				limit = {
-					religion = gaian
+					religion_openly_gaian_or_heresy_trigger = yes
 					higher_tier_than = BARON
 				}
 				

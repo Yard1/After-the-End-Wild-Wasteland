@@ -448,9 +448,39 @@ letter_event = {
 		}
 		ai_chance = {
 			factor = 1
-			#Presidential bloodline.
+			#Crusader
 			additive_modifier = { 
 				value = 5
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				NOR = {
+					trait = cynical
+					trait = zealous
+				}
+				NOT = { character = event_target:c1 }
+				event_target:c1 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			additive_modifier = { 
+				value = 10
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				trait = zealous
+				NOT = { character = event_target:c1 }
+				event_target:c1 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			#Presidential bloodline.
+			additive_modifier = { 
+				value = 10
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c1 }
 				event_target:c1 = {
@@ -2634,8 +2664,38 @@ letter_event = {
 		}
 		ai_chance = {
             factor = 1
+			#Crusader
 			additive_modifier = { 
 				value = 5
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				NOR = {
+					trait = cynical
+					trait = zealous
+				}
+				NOT = { character = event_target:c2 }
+				event_target:c2 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			additive_modifier = { 
+				value = 10
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				trait = zealous
+				NOT = { character = event_target:c2 }
+				event_target:c2 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			additive_modifier = { 
+				value = 10
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c2 }
 				event_target:c2 = {
@@ -4819,8 +4879,38 @@ letter_event = {
 		}
 		ai_chance = {
             factor = 1
+			#Crusader
 			additive_modifier = { 
 				value = 5
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				NOR = {
+					trait = cynical
+					trait = zealous
+				}
+				NOT = { character = event_target:c3 }
+				event_target:c3 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			additive_modifier = { 
+				value = 10
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				trait = zealous
+				NOT = { character = event_target:c3 }
+				event_target:c3 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			additive_modifier = { 
+				value = 10
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c3 }
 				event_target:c3 = {
@@ -7004,8 +7094,38 @@ letter_event = {
 		}
 		ai_chance = {
             factor = 1
+			#Crusader
 			additive_modifier = { 
 				value = 5
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				NOR = {
+					trait = cynical
+					trait = zealous
+				}
+				NOT = { character = event_target:c4 }
+				event_target:c4 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			additive_modifier = { 
+				value = 10
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				trait = zealous
+				NOT = { character = event_target:c4 }
+				event_target:c4 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			additive_modifier = { 
+				value = 10
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c4 }
 				event_target:c4 = {
@@ -9822,9 +9942,39 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 1
-			#Presidential bloodline.
+			#Crusader
 			additive_modifier = { 
 				value = 5
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				NOR = {
+					trait = cynical
+					trait = zealous
+				}
+				NOT = { character = event_target:c1 }
+				event_target:c1 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			additive_modifier = { 
+				value = 10
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				trait = zealous
+				NOT = { character = event_target:c1 }
+				event_target:c1 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			#Presidential bloodline.
+			additive_modifier = { 
+				value = 10
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c1 }
 				event_target:c1 = {
@@ -12007,8 +12157,38 @@ character_event = {
 		}
 		ai_chance = {
             factor = 1
+			#Crusader
 			additive_modifier = { 
 				value = 5
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				NOR = {
+					trait = cynical
+					trait = zealous
+				}
+				NOT = { character = event_target:c2 }
+				event_target:c2 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			additive_modifier = { 
+				value = 10
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				trait = zealous
+				NOT = { character = event_target:c2 }
+				event_target:c2 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			additive_modifier = { 
+				value = 10
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c2 }
 				event_target:c2 = {
@@ -14191,8 +14371,38 @@ character_event = {
 		}
 		ai_chance = {
             factor = 1
+			#Crusader
 			additive_modifier = { 
 				value = 5
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				NOR = {
+					trait = cynical
+					trait = zealous
+				}
+				NOT = { character = event_target:c3 }
+				event_target:c3 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			additive_modifier = { 
+				value = 10
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				trait = zealous
+				NOT = { character = event_target:c3 }
+				event_target:c3 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			additive_modifier = { 
+				value = 10
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c3 }
 				event_target:c3 = {
@@ -16375,8 +16585,38 @@ character_event = {
 		}
 		ai_chance = {
             factor = 1
+			#Crusader
 			additive_modifier = { 
 				value = 5
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				NOR = {
+					trait = cynical
+					trait = zealous
+				}
+				NOT = { character = event_target:c4 }
+				event_target:c4 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			additive_modifier = { 
+				value = 10
+				localisation_key = tooltip_feudal_elector_vote_crusader
+				americanist = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+				trait = zealous
+				NOT = { character = event_target:c4 }
+				event_target:c4 = {
+					religion = ROOT
+					has_crusade_trait_trigger = yes
+				}
+			}
+			additive_modifier = { 
+				value = 10
 				localisation_key = tooltip_feudal_elector_vote
 				NOT = { character = event_target:c4 }
 				event_target:c4 = {

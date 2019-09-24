@@ -2,16 +2,11 @@ matriarchal_religion = {
 	OR = {
 		has_religion_feature = religion_matriarchal
 		religion = gaian
+		religion = amazonian
 	}
 }
 
 equal_religion = {
-	NOR = {
-		religion = jeffersonian
-		religion = rust_cultist
-		religion = consumerist
-		religion = monetarist
-	}
 	OR = {
 		has_religion_feature = religion_equal
 		religion = ursuline
@@ -25,7 +20,73 @@ equal_religion = {
 		religion = antinomian
 		religion = bickertonite
 		religion = strangite
-		religion_group = oldworld
+		religion = americanist
+		religion = hamiltonian
+		religion = libertarian
+		religion = atomicist
+		religion = aphite
+		religion = chrome_cultist
+	}
+}
+
+semi_equal_religion = {
+	OR = {
+		religion = jeffersonian
+		religion = rust_cultist
+		religion = consumerist
+		religion = monetarist
+	}
+}
+
+has_ancestor_veneration = {
+	OR = {
+		religion_group = american_native
+		religion = gracia_divina
+		has_religion_feature = religion_beatification
+		has_religion_feature = religion_feature_espiritista
+	}
+}
+
+religion_can_excommunicate = {
+	OR = {
+		religion = catholic
+		religion = nestorian
+		religion = evangelical
+		religion = mormon
+		religion = high_church
+		religion = ursuline
+		religion = confederated
+		religion = americanist
+		religion = apostolic
+		religion = hamiltonian
+		religion = jeffersonian
+		religion = libertarian
+		religion = brethren
+	}
+}
+
+has_monasticism = {
+	OR = {
+		has_religion_feature = religion_monastic
+		AND = {
+			#is_alternate_start = no
+			OR = {
+				religion = catholic
+				religion = neognostic
+				religion = sedevacantist
+				religion = nestorian
+				religion = ursuline
+				religion = confederated
+				religion = anabaptist
+				religion = evangelical
+				religion = falling_star
+				religion = moravian
+				religion = high_church
+				religion = nonconformist
+				religion = apostolic
+				religion = neutic
+			}
+		}
 	}
 }
 
@@ -112,12 +173,15 @@ can_have_pagan_religion_interpretation = {
 	NOT = { religion_head = { always = yes } } #check if there is no religious head
 	OR = {
 		religion = gaian
-		religion_group = pagan_group
-		has_religion_feature = religion_no_leader
+		AND = {
+			religion_group = pagan_group
+			has_religion_feature = religion_no_leader
+		}
 	}
 }
 
 has_religion_with_temporal_head = {
+	#is_alternate_start = no
 	OR = {
 		religion = americanist
 		religion = jeffersonian
@@ -132,6 +196,25 @@ has_religion_temporal_head = {
 	OR = {
 		has_religion_with_temporal_head = yes
 		has_religion_feature = religion_temporal_head
+	}
+}
+
+is_pope = {
+	has_religion_temporal_head = no
+	has_autocephaly = no
+	is_theocracy = yes
+	religious_head = { character = PREV }
+}
+
+is_antipope = {
+	any_claim = {
+		OR = {
+			title = k_papal_state
+			title = k_ursuline
+			title = d_high_church
+			title = d_confederated
+			title = d_quorum_of_the_twelve
+		}
 	}
 }
 
@@ -175,6 +258,81 @@ has_identified_medicine_to_take = {
 						trait = rabies
 						trait = ill
 					}
+				}
+			}
+		}
+	}
+}
+
+religion_openly_gaian_or_heresy_trigger = {
+	custom_tooltip = {
+		text = religion_openly_gaian_or_heresy_tooltip
+		hidden_trigger = {
+			OR = {
+				religion = gaian
+				religion = amazonian
+			}
+		}
+	}
+}
+
+does_not_care_about_homosexuality = {
+	is_female = yes
+	OR = {
+		religion = gaian
+		religion = amazonian
+	}
+}
+
+religion_supports_adoption = { #anyone can adopt, but those guys don't take penalties
+	OR = {
+		matriarchal_religion = yes
+		#add more
+	}
+}
+
+religion_supports_child_abduction = {
+	pacifist = no
+	religion_supports_adoption = yes
+	OR = {
+		AND = {
+			is_allowed_to_loot = yes
+			OR = {
+				AND = {
+					is_female = yes
+					matriarchal_religion = yes
+				}
+				AND = {
+					is_female = no
+					has_religion_feature = religion_patriarchal 
+				}
+			}
+		}
+	}
+}
+
+religion_supports_child_abduction_of_ROOT = { #hey there FBI
+	pacifist = no
+	religion_supports_adoption = yes
+	OR = {
+		AND = {
+			is_allowed_to_loot = yes
+			OR = {
+				AND = {
+					is_female = yes
+					matriarchal_religion = yes
+					ROOT = {
+						is_female = yes
+						matriarchal_religion = no
+					}
+				}
+				AND = {
+					is_female = no
+					has_religion_feature = religion_patriarchal 
+					ROOT = {
+						is_female = no
+						NOT = { has_religion_feature = religion_patriarchal }
+					} 
 				}
 			}
 		}

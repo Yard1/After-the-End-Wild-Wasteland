@@ -191,7 +191,10 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 				modifier = {
 					factor = 0
 					AND = {
-						religion = cetic
+						OR = {
+							religion = cetic
+							religion = neutic
+						}
 						has_artifact = maltese_falcon
 						has_artifact = emperors_sword
 					}
@@ -203,7 +206,7 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 				modifier = {
 					factor = 0
 					AND = {
-						religion = gaian
+						religion_openly_gaian_or_heresy_trigger = yes
 						has_artifact = core_of_methuselah
 						has_artifact = heart_of_the_oasis
 					}
@@ -326,7 +329,10 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 				modifier = {
 					factor = 0
 					AND = {
-						religion = cetic
+						OR = {
+							religion = cetic
+							religion = neutic
+						}
 						has_artifact = ruby_slipper
 						has_artifact = idol_of_america_kami
 					}
@@ -341,7 +347,7 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 				modifier = {
 					factor = 0
 					AND = {
-						religion = gaian
+						religion_openly_gaian_or_heresy_trigger = yes
 						has_artifact = everlasting_flower_wreath
 					}
 				}
@@ -555,6 +561,7 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 					AND = {
 						OR = {
 							religion = cetic
+							religion = neutic
 							religion = nousthreskeia
 						}
 						has_artifact = famous_head
@@ -569,7 +576,7 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 
 				modifier = {
 					factor = 0
-					religion = gaian
+					religion_openly_gaian_or_heresy_trigger = yes
 					has_artifact = famous_head
 					has_artifact = famous_tongue
 					has_artifact = infamous_tongue
@@ -1886,6 +1893,7 @@ character_event = {
 						factor = 0 
 						NOR = {
 							religion = cetic
+							religion = neutic
 							religion = consumerist
 							religion = monetarist
 							religion_group = pirate
@@ -1903,8 +1911,9 @@ character_event = {
 				10 = {
 					modifier = { 
 						factor = 0 
-						NOT = {
+						NOR = {
 							religion = cetic
+							religion = neutic
 						}
 					}
 					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_major } }
@@ -1921,6 +1930,7 @@ character_event = {
 						factor = 0 
 						NOR = {
 							religion = cetic
+							religion = neutic
 							religion = shinto
 						}
 					}
@@ -1939,6 +1949,7 @@ character_event = {
 						factor = 0 
 						NOT = {
 							religion = cetic
+							religion = neutic
 						}
 					}
 					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_medium } }
@@ -1955,7 +1966,7 @@ character_event = {
 					modifier = { 
 						factor = 0 
 						NOR = {
-							religion = gaian
+							religion_openly_gaian_or_heresy_trigger = yes
 							religion = nousthreskeia
 						}
 					}
@@ -1972,7 +1983,7 @@ character_event = {
 					modifier = { 
 						factor = 0 
 						NOT = {
-							religion = gaian
+							religion_openly_gaian_or_heresy_trigger = yes
 						}
 					}
 					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_major } }
@@ -1988,7 +1999,7 @@ character_event = {
 					modifier = { 
 						factor = 0 
 						NOT = {
-							religion = gaian
+							religion_openly_gaian_or_heresy_trigger = yes
 						}
 					}
 					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_medium } }
@@ -2005,7 +2016,7 @@ character_event = {
 					modifier = { 
 						factor = 0 
 						NOT = {
-							religion = gaian
+							religion_openly_gaian_or_heresy_trigger = yes
 						}
 					}
 					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_minor } }
@@ -2022,7 +2033,8 @@ character_event = {
 						factor = 0 
 						NOR = {
 							religion = cetic
-							religion = gaian
+							religion = neutic
+							religion_openly_gaian_or_heresy_trigger = yes
 							religion = nousthreskeia
 						}
 					}

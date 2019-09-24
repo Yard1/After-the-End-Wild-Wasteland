@@ -13,6 +13,14 @@ targetted_decisions = {
 			is_playable = yes
 			OR = {
 				religion = thelemic
+				AND = {
+					religion = amazonian
+					OR = {
+						trait = zealous
+						trait = cruel
+						trait = impaler
+					}
+				}
 				has_religion_feature = religion_ritual_sacrifice
 				has_religion_feature = religion_feature_thelemic
 			}
@@ -20,6 +28,10 @@ targetted_decisions = {
 	
 		potential = {
 			prisoner = yes
+			OR = {
+				is_female = no
+				NOT = { religion = amazonian }
+			}
 			host = { character = FROM }
 		}
 		
@@ -1184,7 +1196,7 @@ decisions = {
 				trait = zodiac_virgo
 			}
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = neomayan
 				has_religion_feature = religion_astrology 
 				has_religion_feature = religion_feature_occultist 

@@ -2316,6 +2316,36 @@ byzantine_elective = {
 			}
 		}
 
+		#Crusader
+		additive_modifier = { 
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			NOR = {
+				trait = cynical
+				trait = zealous
+			}
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
+		additive_modifier = { 
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			trait = zealous
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
 
 		#All the Traits
 		additive_modifier = {
@@ -2740,6 +2770,16 @@ byzantine_elective = {
 			is_feudal = yes
 			FROM = { 
 				trait = bastard
+			}
+		}
+		additive_modifier = {
+			value = -15
+			localisation_key = tooltip_feudal_elector_vote_adopted
+			NOT = { character = FROM } #Do not judge yourself.
+			is_feudal = yes
+			religion_supports_adoption = no
+			FROM = { 
+				trait = adopted
 			}
 		}
 		#additive_modifier = {
@@ -4740,7 +4780,9 @@ byzantine_elective = {
 			}
 			NOR = {
 				trait = cat
+				trait = dog
 				trait = disinherited
+				trait = atom_curse
 				trait = horse
 				trait = eunuch
 				trait = disfigured
@@ -4752,6 +4794,11 @@ byzantine_elective = {
 				trait = inbred
 				AND = { 
 					trait = bastard 
+					is_ruler = no
+				}
+				AND = { 
+					trait = adopted
+					religion_supports_adoption = no 
 					is_ruler = no
 				}
 				is_ascetic_trigger = yes
@@ -5747,6 +5794,37 @@ hre_feudal_elective = {
 			}
 		}
 
+		#Crusader
+		additive_modifier = { 
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			NOR = {
+				trait = cynical
+				trait = zealous
+			}
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
+		additive_modifier = { 
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_crusader
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
+			trait = zealous
+			NOT = { character = FROM }
+			FROM = {
+				religion = ROOT
+				has_crusade_trait_trigger = yes
+			}
+		}
+
 
 		#All the Traits
 		additive_modifier = {
@@ -6179,6 +6257,16 @@ hre_feudal_elective = {
 			is_feudal = yes
 			FROM = { 
 				trait = bastard
+			}
+		}
+		additive_modifier = {
+			value = -15
+			localisation_key = tooltip_feudal_elector_vote_adopted
+			NOT = { character = FROM } #Do not judge yourself.
+			is_feudal = yes
+			religion_supports_adoption = no
+			FROM = { 
+				trait = adopted
 			}
 		}
 		#additive_modifier = {
@@ -8224,12 +8312,19 @@ hre_feudal_elective = {
 					NOT = { is_married = ROOT }
 					parent_for_elective_succession_trigger = yes
 				}
+				trait = dog
 				trait = cat
 				trait = disinherited
+				trait = atom_curse
 				trait = horse
 				trait = eunuch
 				AND = { 
 					trait = bastard 
+					is_ruler = no
+				}
+				AND = { 
+					trait = adopted
+					religion_supports_adoption = no 
 					is_ruler = no
 				}
 				is_ascetic_trigger = yes

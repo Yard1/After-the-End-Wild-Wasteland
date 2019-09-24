@@ -244,8 +244,9 @@ character_event = {
 			factor = 3.0
 			has_job_action = action_inquisition
 			OR = {
-				religion = gaian
+				religion_openly_gaian_or_heresy_trigger = yes
 				religion = cetic
+				religion = neutic
 			}
 			location = {
 				NOR = {

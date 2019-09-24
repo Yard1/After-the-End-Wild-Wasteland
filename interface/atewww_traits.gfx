@@ -6,6 +6,12 @@ spriteTypes = {
 		norefcount = yes
 	}
 	spriteType = {
+		name = "GFX_secretly_amazonian"
+		texturefile = "gfx\\traits\\secret_religion_gaian.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
 		name = "GFX_trait_inaug_by_sjudge"
 		texturefile = "gfx/traits/inaug_by_sjudge.dds"
 		noOfFrames = 1
@@ -64,6 +70,20 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_trait_militarist_butler"
 		texturefile = "gfx/traits/militarist_butler.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_amazon_trait"
+		texturefile = "gfx/traits/amazon_trait.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_adopted"
+		texturefile = "gfx/traits/adopted.dds"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
