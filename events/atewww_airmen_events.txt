@@ -161,12 +161,32 @@ character_event = {
 
 	immediate = {
 		log = "ATE_WWWW_AIRMEN.4: ROOT:[Root.GetBestName]"
-		c_comal = { remove_claim = ROOT add_pressed_claim = ROOT }
-		c_bexar = { remove_claim = ROOT add_pressed_claim = ROOT }
-		c_duval = { remove_claim = ROOT add_pressed_claim = ROOT }
-		c_live_oak = { remove_claim = ROOT add_pressed_claim = ROOT }
-		c_nueces = { remove_claim = ROOT add_pressed_claim = ROOT }
-		c_goliad = { remove_claim = ROOT add_pressed_claim = ROOT }
+		any_claim = {
+			if = {
+				limit = { title = c_comal}
+				c_comal = { remove_claim = ROOT add_pressed_claim = ROOT }
+			}
+			if = {
+				limit = { title = c_bexar}
+				c_bexar = { remove_claim = ROOT add_pressed_claim = ROOT }
+			}
+			if = {
+				limit = { title = c_duval}
+				c_duval = { remove_claim = ROOT add_pressed_claim = ROOT }
+			}
+			if = {
+				limit = { title = c_live_oak}
+				c_live_oak = { remove_claim = ROOT add_pressed_claim = ROOT }
+			}
+			if = {
+				limit = { title = c_nueces}
+				c_nueces = { remove_claim = ROOT add_pressed_claim = ROOT }
+			}
+			if = {
+				limit = { title = c_goliad}
+				c_goliad = { remove_claim = ROOT add_pressed_claim = ROOT }
+			}
+		}
 
 		if = {
 			limit = {
