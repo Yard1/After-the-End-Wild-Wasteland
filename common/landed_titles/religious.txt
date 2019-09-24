@@ -199,6 +199,13 @@ d_high_church = {
 	primary = yes
 	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+
+	male_names = {
+		Thomas Rowan William John Matthew Charles Frederick Edward Randall Geoffrey Gilbert Richard Reginald Henry Roger Simon Walter Robert Stephen Theobald Dunstan Lanfranck
+	}
+	female_names = {
+		Elizabeth Anne Catherine Mary Jane Victoria Matilda Margaret Charlotte Adelaide Alexandra
+	}
 }
 
 d_norse_pagan_reformed = {
@@ -542,6 +549,13 @@ d_confederated = {
 
 	#caliphate = yes
 	dynasty_title_names = no
+
+	male_names = {
+		Macdonald Mackenzie Abbott Thompson Tupper Laurier Borden Meighen Bennett Laurent Diefenbaker Pearson Trudeau Clark Turner Mulroney Campbell Chretien Martin
+	}
+	female_names = {
+		Macdonald Mackenzie Abbott Thompson Tupper Laurier Borden Meighen Bennett Laurent Diefenbaker Pearson Trudeau Clark Turner Mulroney Campbell Chretien Martin
+	}
 }
 
 d_quorum_of_the_twelve = {

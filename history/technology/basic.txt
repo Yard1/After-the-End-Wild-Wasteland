@@ -87,7 +87,6 @@ technology = {
 	titles = {
 		d_talbot
 		d_huronia
-		d_home
 		d_quinte
 		d_ottawa
 		d_midland
@@ -122,6 +121,11 @@ technology = {
 		d_the_stampede
 		d_miquelon
 		d_peace
+		d_greater_toronto
+		d_gore
+		d_beauce_bois_francs
+		d_laurentides
+		d_south_shore
 	}
 
 	768 = {

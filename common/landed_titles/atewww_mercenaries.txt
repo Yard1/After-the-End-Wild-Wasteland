@@ -59,3 +59,28 @@ d_border_patrol = {
 
 	mercenary_type = d_tonkawa_scouts_composition
 }
+
+d_mounties = {
+	color = { 266 66 66 }
+	
+	capital = 1297 # Ottawa
+	
+	religion = high_church
+	culture = canadian
+
+	allow = {
+		has_landed_title = e_canada
+	}
+	
+	title = "COMMISSIONER"
+	title_female = "COMMISSIONER"
+	foa = "CAPTAIN_FOA"
+
+	mercenary = yes
+	landless = yes
+	primary = yes
+	independent = yes
+	strength_growth_per_century = 0.10
+	
+	mercenary_type = d_mounties_composition
+}

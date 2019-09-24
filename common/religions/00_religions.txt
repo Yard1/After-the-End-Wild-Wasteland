@@ -334,6 +334,8 @@ american_native = {
 		religious_clothing_priest = 15
 		intermarry = raven_tales
 		intermarry = midewiwin
+
+		intermarry = exovedate
 	}
 	
 	midewiwin_reformed = {
@@ -369,6 +371,7 @@ american_native = {
 		religious_clothing_head = 15
 		religious_clothing_priest = 15
 		intermarry = midewiwin
+		intermarry = exovedate
 	}
 	
 	midewiwin = {
@@ -431,6 +434,7 @@ american_native = {
 		religious_clothing_priest = 15
 		intermarry = raven_tales
 		intermarry = peyotist
+		intermarry = exovedate
 	}
 	
 	raven_tales_reformed = {
@@ -466,6 +470,7 @@ american_native = {
 		religious_clothing_head = 15
 		religious_clothing_priest = 15
 		intermarry = raven_tales
+		intermarry = exovedate
 	}
 	
 	raven_tales = {
@@ -505,6 +510,7 @@ american_native = {
 		religious_clothing_priest = 15
 		intermarry = peyotist
 		intermarry = midewiwin
+		intermarry = exovedate
 	}
 }
 
@@ -590,6 +596,8 @@ christian = {
 		intermarry = batenburger
 		intermarry = moravian
 
+		intermarry = exovedate
+
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
@@ -638,10 +646,13 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		intermarry = exovedate
 		
 		intermarry = cetic
 		intermarry = neutic
 		intermarry = gaian
+		intermarry = amazonian
 		intermarry = shinto
 
 		character_modifier = {
@@ -689,6 +700,8 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		intermarry = exovedate
 
 		character_modifier = {
 			thelemic_opinion = -15
@@ -738,6 +751,8 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		intermarry = exovedate
 
 		character_modifier = {
 			thelemic_opinion = -15
@@ -809,6 +824,8 @@ christian = {
 		intermarry = batenburger
 		intermarry = moravian
 
+		intermarry = exovedate
+
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
@@ -858,6 +875,8 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		intermarry = exovedate
 
 		character_modifier = {
 			thelemic_opinion = -15
@@ -925,6 +944,8 @@ christian = {
 		intermarry = batenburger
 		intermarry = moravian
 
+		intermarry = exovedate
+
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
@@ -987,6 +1008,8 @@ christian = {
 		intermarry = batenburger
 		intermarry = moravian
 
+		intermarry = exovedate
+
 		character_modifier = {
 			vassal_opinion = 15
 			rel_head_opinion = 15
@@ -1039,6 +1062,9 @@ christian = {
 		intermarry = nonconformist
 		#intermarry = batenburger
 		intermarry = moravian
+
+		intermarry = exovedate
+
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
@@ -1102,6 +1128,8 @@ christian = {
 		intermarry = batenburger
 		intermarry = moravian
 
+		intermarry = exovedate
+
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
@@ -1148,6 +1176,8 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		intermarry = exovedate
 
 		character_modifier = {
 			thelemic_opinion = -15
@@ -1207,6 +1237,8 @@ christian = {
 		intermarry = revelationist
 		intermarry = revelationist_reformed
 
+		intermarry = exovedate
+
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
@@ -1252,6 +1284,8 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		intermarry = exovedate
 
 		character_modifier = {
 			thelemic_opinion = -15
@@ -1312,6 +1346,8 @@ christian = {
 		
 		intermarry = sacred_heart
 		intermarry = gracia_divina
+
+		intermarry = exovedate
 
 		character_modifier = {
 			cult_of_saints_opinion = 5
@@ -1374,6 +1410,8 @@ christian = {
 		
 		intermarry = sacred_heart
 		intermarry = gracia_divina
+
+		intermarry = exovedate
 
 		character_modifier = {
 			cult_of_saints_opinion = 5
@@ -1441,6 +1479,8 @@ christian = {
 		intermarry = batenburger
 		intermarry = moravian
 
+		intermarry = exovedate
+
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
@@ -1490,6 +1530,8 @@ christian = {
 		#intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+
+		intermarry = exovedate
 
 		character_modifier = {
 			thelemic_opinion = -15
@@ -1558,6 +1600,8 @@ christian = {
 		intermarry = espiritista_reformed
 		intermarry = candomble
 
+		intermarry = exovedate
+
 		character_modifier = {
 			cult_of_saints_opinion = 5
 			falling_star_opinion = 5
@@ -1565,6 +1609,57 @@ christian = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
+	}
+
+	exovedate = {
+		graphical_culture = westerngfx
+
+		icon = 33
+		heresy_icon = 34
+		
+		color = { 0.96 0.66 0.60 }
+		parent = ursuline
+		
+		crusade_name = CRUSADE
+
+		can_retire_to_monastery = no
+		priests_can_inherit = no
+		female_temple_holders = no
+		feminist = no      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		allow_rivermovement = yes
+		priests_can_marry = yes
+		allow_looting = yes
+		max_consorts = 3
+
+
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+		
+		intermarry = catholic
+		intermarry = evangelical
+		intermarry = ursuline
+		intermarry = high_church
+		intermarry = anabaptist
+		intermarry = confederated
+		intermarry = falling_star
+		intermarry = apostolic
+		
+		intermarry = neognostic
+		intermarry = sedevacantist
+		intermarry = nestorian
+		intermarry = charismatic
+		intermarry = antinomian
+		intermarry = postadventist
+		#intermarry = angeline
+		intermarry = nonconformist
+		intermarry = batenburger
+		intermarry = moravian
+
+		intermarry = peyotist
+		intermarry = midewiwin
+		intermarry = midewiwin_reformed
+		intermarry = raven_tales
+		intermarry = raven_tales_reformed
 	}
 }
 
