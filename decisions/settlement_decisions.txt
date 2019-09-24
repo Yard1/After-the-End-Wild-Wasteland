@@ -1807,6 +1807,7 @@ settlement_decisions = {
 			
 				if = {
 					limit = {
+						OR = {
 							religion = cetic
 							religion = neutic
 						}

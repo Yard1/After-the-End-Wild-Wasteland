@@ -7164,6 +7164,10 @@ character_event = {
 	picture = GFX_evt_child_play
 	
 	is_triggered_only = yes
+
+	trigger = {
+		does_not_care_about_homosexuality = no
+	}
 	
 	option = {
 		name = EVTOPTA38234 #Make the child fast to atone for its sins
@@ -7221,6 +7225,17 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTC38234 #S/he will grow out of it
+		ai_chance = {
+			factor = 10
+			
+			modifier = {
+				factor = 9
+				OR = {
+					trait = kind
+					pacifist = yes
+				}
+			}
+		}
 		FROM = {
 			random = {
 				chance = 25

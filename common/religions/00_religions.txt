@@ -1843,6 +1843,7 @@ pacific = {
 
 		character_modifier = {
 			opinion_of_hidden_male_trait = -5
+			opinion_of_homosexual = 5
 		}
 	}
 
@@ -1897,6 +1898,7 @@ pacific = {
 
 		character_modifier = {
 			opinion_of_hidden_male_trait = -15
+			opinion_of_homosexual = 5
 		}
 	}
 	
@@ -2487,9 +2489,7 @@ oldworld = {
 		intermarry = chrome_cultist
 
 		character_modifier = {
-			hamiltonian_opinion = 10
-			jeffersonian_opinion = 5
-			libertarian_opinion = 10
+			libertarian_opinion = 5
 		}
 	}
 
@@ -2553,9 +2553,7 @@ oldworld = {
 		intermarry = chrome_cultist
 
 		character_modifier = {
-			americanist_opinion = 10
-			jeffersonian_opinion = 5
-			libertarian_opinion = 10
+			libertarian_opinion = 5
 		}
 	}
 
@@ -2614,12 +2612,6 @@ oldworld = {
 		intermarry = americanist
 		intermarry = hamiltonian
 		intermarry = libertarian
-
-		character_modifier = {
-			americanist_opinion = 5
-			hamiltonian_opinion = 5
-			libertarian_opinion = 5
-		}
 	}
 
 	libertarian = {
@@ -2693,9 +2685,8 @@ oldworld = {
 		character_modifier = {
 			vassal_opinion = 15
 			rel_head_opinion = 15
-			americanist_opinion = 10
-			hamiltonian_opinion = 10
-			jeffersonian_opinion = 5
+			americanist_opinion = 5
+			hamiltonian_opinion = 5
 		}
 	}
 

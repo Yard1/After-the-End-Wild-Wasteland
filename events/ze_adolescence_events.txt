@@ -5022,6 +5022,10 @@ character_event = {
 		name = EVTOPTA_ZE_13700	# Homosexual version
 		ai_chance = {
 			factor = 20
+			modifier = {
+				factor = 2
+				does_not_care_about_homosexuality = yes
+			}
 		}
 		hidden_tooltip = {
 			character_event = { id = ZE.13701 }
@@ -5118,6 +5122,10 @@ character_event = {
 		name = EVTOPTD_ZE_13701	# I'm corrupted
 		ai_chance = {
 			factor = 10
+			modifier = {
+				factor = 0
+				does_not_care_about_homosexuality = yes
+			}
 		}
 		prestige = -50
 	}
@@ -5284,6 +5292,10 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 22
+			modifier = {
+				factor = 2
+				does_not_care_about_homosexuality = yes
+			}
 		}
 		add_trait = homosexual
 		set_character_flag = ZE_13610_carpenter
@@ -5297,6 +5309,10 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 22
+			modifier = {
+				factor = 2
+				does_not_care_about_homosexuality = yes
+			}
 		}
 		add_trait = homosexual
 		set_character_flag = ZE_13610_farrier_male

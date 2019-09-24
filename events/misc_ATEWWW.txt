@@ -8,11 +8,6 @@ character_event = {
 	ai = yes
 
 	trigger = {
-		NOT = {
-			any_player = {
-				dynasty = PREV
-			}
-		}
 		FROMFROM = {
 			ai = yes
 			OR = {
@@ -46,7 +41,23 @@ character_event = {
 		log = "miscATEWW.1: [Root.GetBestName] in [FromFrom.GetBestName] ([FromFrom.Religion.GetName])"
 		if = {
 			limit = {
-				FROM = { character = no }
+				OR = {
+					is_unimportant_trigger = yes
+					FROM = { character = no }
+				}
+			}
+			if = {
+				limit = {
+					does_not_care_about_homosexuality = yes
+					NOR = {
+						trait = cynical
+						trait = homosexual
+					}
+				}
+				random = {
+					chance = 10
+					add_trait = homosexual
+				}
 			}
 			if = {
 				limit = {
@@ -201,13 +212,21 @@ character_event = {
 				primary_title = {
 					holy_order_is_celibate = yes
 				}
-				NOT = { trait = celibate }
 			}
 			spouse = {
 				remove_spouse = spouse
 				character_event = { id = SoA.2863 }
 			}
 			add_trait = celibate
+			if = {
+				limit = {
+					OR = {
+						religion = gaian
+						religion = amazonian
+					}
+				}
+				add_trait = amazon_trait
+			}
 		}
 		if = {
 			limit = {
@@ -216,7 +235,7 @@ character_event = {
 			}
 			add_trait = shieldmaiden
 		}
-		if = {
+		else_if = {
 			limit = { has_landed_title = d_men_in_black }
 			primary_title = {
 				if = {
@@ -290,7 +309,7 @@ character_event = {
 				}
 			}
 		}
-		if = {
+		else_if = {
 			limit = { has_landed_title = d_libertarian }
 			log = "miscATEWW.2: [Root.GetTitledName] in libertarian block"
 			primary_title = {
@@ -371,13 +390,21 @@ character_event = {
 							holy_order_is_celibate = yes
 						}
 					}
-					NOT = { trait = celibate }
 				}
 				spouse = {
 					remove_spouse = spouse
 					character_event = { id = SoA.2863 }
 				}
 				add_trait = celibate
+				if = {
+					limit = {
+						OR = {
+							religion = gaian
+							religion = amazonian
+						}
+					}
+					add_trait = amazon_trait
+				}
 			}
 			if = {
 				limit = {
@@ -531,7 +558,7 @@ character_event = {
 					}
 				}
 			}
-			else_if = {
+			if = {
 				limit = {
 					ROOT = { holy_order = yes }
 					NOT = { religion = ROOT }

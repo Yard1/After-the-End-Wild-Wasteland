@@ -10342,7 +10342,10 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			trait = celibate
+			OR = {
+				trait = celibate
+				trait = amazon_trait
+			}
 		}
 		modifier = {
 			factor = 0.5

@@ -31,6 +31,15 @@ ROOT_join_PREV_holy_order_holder = {
 			character_event = { id = SoA.2863 }
 		}
 		add_trait = celibate
+		if = {
+			limit = {
+				OR = {
+					religion = gaian
+					religion = amazonian
+				}
+			}
+			add_trait = amazon_trait
+		}
 	}
 	move_character = PREV
 	end_inaccessibility_effect = yes #removes in_hiding or in_seclusion

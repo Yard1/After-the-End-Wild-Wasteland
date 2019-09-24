@@ -27,7 +27,12 @@ obj_become_president = {
 		factor = 50
 		modifier = {
 			factor = 1.5
-			trait = president
+			OR = {
+				trait = president
+				any_owned_bloodline = {
+					has_bloodline_flag = prez_bloodline
+				}
+			}
 			NOT = { trait = content }
 		}
 		modifier = {

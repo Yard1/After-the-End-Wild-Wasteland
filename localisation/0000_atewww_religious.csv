@@ -387,7 +387,7 @@ start_wars_of_liberation;The Liberation Wars;;;;;;;;;;;;x
 start_wars_of_liberation_desc;The time has come for me, the President, to sign an Executive Order requiring all able-bodied citizens to fight for the restoration of America.;;;;;;;;;;;;x
 
 # Gaian
-gaian_FEATURES;§Y*§! Enatic law is enforced.\n§Y*§! Gaians gain 1.00 purity per month when at peace.\n§Y*§! Gaian faith prohibits eating, hunting or otherwise hurting animals.\n§Y*§! Are adherents of the ancient practice of Astrology.;;;;;;;;;;;;;x
+gaian_FEATURES;§Y*§! Enatic law is enforced.\n§Y*§! Gaians gain 1.00 purity per month when at peace.\n§Y*§! Gaian faith prohibits eating, hunting or otherwise hurting animals.\n§Y*§! No penalties for female homosexual rulers.\n§Y*§! Gaian females can take a vow to never marry a man, and choose to adopt a lowborn child as their heir.\n§Y*§! Are adherents of the ancient practice of Astrology.;;;;;;;;;;;;;x
 religion_openly_gaian_or_heresy_tooltip;Publicly follows the §Y[gaian.GetName]§! religion (or a heresy);;;;;;;;;;;;;x
 secret_religious_society_gaian_leader_desc;The High Priestess, leading the international effort of bringing more people into the fold.;Le grand prêtre dirige l'effort mondial visant à réunir davantage de personnes dans les rangs de sa société.;Der Hohepriester des $SOCIETY|Y$-Zirkels, der die internationalen Bemühungen leitet, mehr Menschen in den Schoß der Familie zu führen.;;El Sumo sacerdote, que dirige la misión a escala internacional para atraer a más fieles.;;;;;;;;;x
 
@@ -396,7 +396,7 @@ hidden_female_trait;Female;;;;;;;;;;;;x
 
 amazonian;Themyscirai;;;;;;;;;;;;x
 amazonian_DESC;Themysciraians are a sect of radical, strictly matriarchal Gaians. Believing that men are solely responsible for the ruination of Earth, the followers of Diana are determined to not only prevent that from ever happening again, but also to punish the man for all his sins - real or not. They consider themselves tools of their high god, Diana, who in turn has been created by the Earth Mother, Gaia, to avenge her. Mainstream Gaianism rejects Themysciraism for not only its bloodthirstiness, but also for forgoing the aspect of protection of nature for revenge against what men did in the past.;;;;;;;;;;;;;x
-amazonian_FEATURES;§Y*§! Enatic law is strictly enforced.\n§Y*§! Has access to §YMatriarchal Deposition War§! CB instead of §YHoly War§! CB.\n§Y*§! Are adherents of the ancient practice of Astrology.;;;;;;;;;;;;x
+amazonian_FEATURES;§Y*§! Enatic law is strictly enforced.\n§Y*§! Has access to §YMatriarchal Deposition War§! CB instead of §YHoly War§! CB.\n§Y*§! No penalties for female homosexual rulers.\n§Y*§! Themysciraian females can take a vow to never marry a man, and choose to adopt a lowborn child as their heir.\n§Y*§! Can forcefully adopt very young female prisoners of non-Matriarchal faiths.\n§Y*§! Are adherents of the ancient practice of Astrology.;;;;;;;;;;;;x
 amazonian_opinion;[amazonian.GetName] Opinion;;;;;;;;;;;;;x
 
 GOD_SOLANAS;Solanas;;;;;;;;;;;;x
@@ -408,6 +408,7 @@ GOD_DIANA;Diana;;;;;;;;;;;;x
 GOD_ARTEMIS;Artemis;;;;;;;;;;;;x
 
 opinion_of_hidden_male_trait;Opinion of Males;;;;;;;;;;;;x
+opinion_of_homosexual;Opinion of Homosexuals;;;;;;;;;;;;x
 
 secret_religious_society_amazonian;[GetReligiousCommunityName_amazonian];[GetReligiousCommunityName_amazonian];[GetReligiousCommunityName_amazonian];;[GetReligiousCommunityName_amazonian];;;;;;;;;x
 secret_religious_society_REAL_amazonian;The Daughters of Diana;;;;;;;;;;;;x
@@ -442,6 +443,47 @@ temple_duke_female_amazonian;Grand Druidess;;;;;;;;;;;;;x
 temple_duchy_of_amazonian;Forest of;;;;;;;;;;;;;x
 String_Amazonian;Themysciraian;;;;;;;;;;;;;x
 String_Amazonians;Themysciraians;;;;;;;;;;;;;x
+
+amazon_trait;Amazon;;;;;;;;;;;;;x
+amazon_trait_desc;This character has decided to reject men from her life, and took a vow to never marry one.;;;;;;;;;;;;;x
+
+become_amazon;Become an Amazon;;;;;;;;;;;;;x
+become_amazon_desc;Why should I marry a man? Is it not the will of [Root.Religion.GetHighGodName] for women to be free? I should renounce the institution of patriarchial marriage, and take a vow to never marry a man.;;;;;;;;;;;;;x
+
+EVTDESC_WOL_520_MAT;Recently, I have amused myself with seducing a handsome young guard. She follows me around like a puppy now... a very big, muscular puppy!;Je passe mes heures depuis peu à séduire un jeune garde avenant. Il me suit comme un chiot désormais... un chiot très musclé et imposant !;Vor Kurzem habe ich mir dadurch Vergnügen verschafft, indem ich einen hübschen jungen Wachsoldaten verführte. Jetzt folgt er mir überall hin, wie ein Hündchen... ein ziemlich großes und muskelbepacktes Hündchen!;;Recientemente, me he divertido seduciendo a un guapo guardia joven. Ahora me sigue como un cachorro.. ¡un gran y musculoso cachorro!;;;;;;;;;x
+EVTOPTA_WOL_520_MAT;Make her a squire and keep her as my lover...;En faire un écuyer et le garder comme amant...;Ich ernenne ihn zu einem Adeligen und behalte ihn als Liebhaber...;;Lo convertiré en escudero y lo guardaré como amante...;;;;;;;;;x
+EVTOPTB_WOL_520_MAT;Give her a tumble and I'll have the most loyal bodyguard ever!;Se livrer à des petites cabrioles, et en faire le garde le plus loyal qui existe !;Ich lasse ihn in mein Bett und verschaffe mir den treuesten Leibwächter überhaupt!;;¡Le daré un revolcón y tendré el más guardaespaldas más leal jamás habido!;;;;;;;;;x
+
+EVTDESC_ATE_WWW_RELIGION_29;After a long search, a young [adopted_child.GetBoyGirl] by the name of [adopted_child.GetFirstName] has been found who might make for an ideal candidate. Your councillors tell you [adopted_child.GetSheHe] comes from an orphanage in [adopted_province.GetName], [adopted_child.GetHerHis] parents both killed recently. Although a bit grimy and shy, you feel the child might make a good ruler one day, provided [adopted_child.GetSheHe] is cleaned up and raised properly.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_RELIGION_29;I suppose [adopted_child.GetSheHe] will do.;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_RELIGION_29;I have changed my mind.;;;;;;;;;;;;;x
+
+adoption_decision_unlock_tooltip;Allows to §YAdopt a Heir§! if there are no suitable children of your blood to inherit;;;;;;;;;;;;;x
+
+adoption_decision;Adopt a Heir;;;;;;;;;;;;;x
+adoption_decision_desc;Since I lack a suitable child, and are either unable or unlikely to become a parent of one, I may adopt an orphaned [Root.Religion.GetName] child and raise it as their own - an act of generosity, if you will, towards someone who in any other circumstance would have few chances at a meaningful life.;;;;;;;;;;;;;x
+SEARCH_ADOPTED_CHILD;Begin the search for a suitable child to adopt;;;;;;;;;;;;;x
+adopted;Adopted;;;;;;;;;;;;;x
+adopted_desc;This character was not born into their family, but adopted into it -- an uncommon practice, and thus making them, in the eyes of most, worse even than a bastard.;;;;;;;;;;;;;x
+tooltip_feudal_elector_vote_adopted;[From.GetSheHeCap] is §YAdopted§!;C'est un[From.Get_E] adopté[From.Get_E];[From.GetSheHeCap] ist §YAdoptiert§!;;Es §YAdoptad[From.GetOA]§!;;;;;;;;;x
+
+adopted_child;Adopted Child;;;;;;;;;;;;;x
+
+opinion_abducted_relative_child;Abducted Relative;Proche enlevé;Entführter Verwandter;;Pariente Secuestrado;;;;;;;;;x
+opinion_abducted_parent_child;Child Snatcher;Ravisseur d'épouse;Ehefrau-Entführer;;Secuestrador del Cónyuge;;;;;;;;;x
+
+abduct_child_targeted;Force Adoption;;;;;;;;;;;;;x
+abduct_child_targeted_desc;Make [Root.GetFullName] your adopted child and raise [Root.GetHerHim] as your own.;;;;;;;;;;;;;x
+abduct_child_targeted_tooltip;Become a parent of [Root.GetFullName].\nDue to [Root.GetFullName]'s age, they will not resist.\n§RParents of [Root.GetFullName] will become your enemies for life.\nAll close relatives of [Root.GetFullName] will be upset.§!;;;;;;;;;;;;;x
+
+EVTDESC661;[FromFrom.GetBestName] has forced my [GetFromRelation] [From.GetFullName] to become [FromFrom.GetHerHis] concubine!;[FromFrom.Get_only_Le_Title][FromFrom.GetBestName] a forcé ma [GetFromRelation], [From.Get_only_le_Title][From.GetBestName], à devenir sa concubine !;[FromFrom.GetBestName] hat [GetFromRelation] [From.GetBestName] dazu gezwungen, seine Konkubine zu werden!;;¡[FromFrom.GetBestName] ha forzado a mi [GetFromRelation] [From.GetBestName] a convertirse en su concubina!;;;;;;;;;x
+EVTDESC662;[FromFrom.GetBestName] has forced my wife [From.GetFullName] to become [FromFrom.GetHerHis] concubine!;[FromFrom.Get_only_Le_Title][FromFrom.GetBestName] a forcé ma [GetFromRelation], [From.Get_only_le_Title][From.GetBestName], à devenir sa concubine !;[FromFrom.GetBestName] hat [GetFromRelation] [From.GetBestName] dazu gezwungen, seine Konkubine zu werden!;;¡[FromFrom.GetBestName] ha forzado a mi [GetFromRelation] [From.GetBestName] a convertirse en su concubina!;;;;;;;;;x
+
+EVTDESC_ATE_WWW_RELIGION_33;[abductor.GetBestName] has forced my [GetFromRelation] [From.GetFullName] to become [abductor.GetHerHis] [From.GetSonDaughter], and is now raising them as [abductor.GetHerHis] own!;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_RELIGION_34;[abductor.GetBestName] has forced my [From.GetSonDaughter] [From.GetFullName] to become [abductor.GetHerHis] [From.GetSonDaughter], and is now raising them as [abductor.GetHerHis] own!;;;;;;;;;;;;;x
+
+EVTDESC_ATE_WWW_RELIGION_31;As I pick up the fragile, little body of [From.GetFirstName], I cannot help but wonder what sort of a [From.GetSonDaughter] [From.GetSheHe] will be, now that I will raise [From.GetHerHim] in accordance to the will of [Root.Religion.GetHighGodName], as I would have raised a [From.GetSonDaughter] of my own blood.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_RELIGION_31;Welcome, [From.GetSonDaughter].;;;;;;;;;;;;;x
 
 # Misc
 

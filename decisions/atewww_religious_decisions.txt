@@ -647,6 +647,345 @@ decisions = {
 			}
 		}
 	}
+
+	become_amazon = {
+		is_high_prio = yes
+		ai_check_interval = 6
+		potential = {
+			is_female = yes
+			OR = {
+				religion = gaian
+				religion = amazonian
+			}
+			is_married = no
+			can_marry = yes
+			NOT = { trait = amazon_trait }
+		}
+		allow = {
+			is_adult = yes
+			block_general_event_trigger = no
+			NOT = { trait = cynical }
+		}
+		effect = {
+			if = {
+				limit = {
+					trait = lustful
+					NOT = { trait = homosexual }
+				}
+				remove_trait = lustful
+			}
+			piety = 250
+			add_trait = amazon_trait
+			custom_tooltip = {
+				text = adoption_decision_unlock_tooltip
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.05
+			modifier = {
+				factor = 10
+				trait = homosexual
+			}
+			modifier = {
+				factor = 6
+				trait = celibate
+			}
+			modifier = {
+				factor = 6
+				religion = amazonian
+			}
+			modifier = {
+				factor = 4
+				trait = zealous
+			}
+			modifier = {
+				factor = 2
+				trait = chaste
+			}
+			modifier = {
+				factor = 0
+				NOR = {
+					trait = celibate
+					trait = homosexual
+				}
+				any_spouse_even_if_dead = {
+					always = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				trait = lustful
+				NOT = { trait = homosexual }
+				NAND = {
+					religion = amazonian
+					trait = zealous
+				}
+			}
+			modifier = {
+				factor = 0.25
+				OR = {
+					any_child = {
+						is_female = no
+						OR = {
+							is_friend = ROOT
+							potentially_platonically_interested_in_root_trigger = yes
+						}
+					}
+					any_sibling = {
+						is_female = no
+						OR = {
+							is_friend = ROOT
+							potentially_platonically_interested_in_root_trigger = yes
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.25
+				any_friend = {
+					is_female = no
+				}
+			}
+			modifier = {
+				factor = 0
+				any_lover = {
+					is_female = no
+				}
+			}
+		}
+	}
+
+	adoption_decision = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 12
+
+		potential = {
+			is_adult = yes
+			is_theocracy = no
+			holy_order = no
+			OR = {
+				is_republic = no
+				is_patrician = yes
+			}
+			primary_title = { mercenary = no }
+			temporary = no
+			NOT = { any_liege = { holy_order = yes } }
+			NOT = {
+				has_character_flag = searching_for_a_child
+			}
+			NOT = { dynasty = NONE }
+			primary_title = {
+				NOR = {
+					has_law = succ_papal_succession
+					has_law = succ_appointment
+					has_law = succ_open_elective
+					has_law = succ_catholic_bishopric
+					has_law = succ_patrician_elective
+					has_law = succ_nomad_succession
+					has_law = succ_offmap_succession
+				}
+			}
+			NOT = {
+				any_child = {
+					is_alive = yes
+					OR = {
+						AND = {
+							ROOT = { 
+								NOR = {
+									matriarchal_religion = yes
+									has_religion_feature = religion_patriarchal
+								}
+								primary_title = { has_law = agnatic_succession } 
+							}
+							is_female = no
+						}
+						AND = {
+							ROOT = { 
+								NOR = {
+									matriarchal_religion = yes
+									has_religion_feature = religion_patriarchal
+								}
+								primary_title = { has_law = enatic_succession } 
+							}
+							is_female = yes
+						}
+						AND = {
+							ROOT = { 
+								matriarchal_religion = yes
+							}
+							is_female = no
+						}
+						AND = {
+							ROOT = { 
+								has_religion_feature = religion_patriarchal
+							}
+							is_female = yes
+						}
+					}
+					NOR = {
+						has_inheritance_blocker = yes
+						is_consort = yes
+						is_theocracy = yes
+						is_offmap_ruler = yes
+						holy_order = yes
+						any_liege = { holy_order = yes }
+					}
+				}
+			}
+		}
+		allow = {
+			block_general_event_trigger = no
+			war = no
+			has_regent = no
+			any_realm_province = { religion = ROOT }
+			OR = {
+				practical_age >= 45
+				trait = celibate
+				trait = amazon_trait
+				fertility < 0.05
+			}
+			wealth = 50
+			conditional_tooltip = {
+				trigger = {
+					religion_supports_adoption = no
+					has_heir_designation = no #meritocracy reduces penalties
+				}
+				piety = 500
+			}
+			conditional_tooltip = {
+				trigger = {
+					religion_supports_adoption = no
+					has_heir_designation = no #meritocracy reduces penalties
+					lower_tier_than = DUKE
+				}
+				prestige = 500
+			}
+			conditional_tooltip = {
+				trigger = {
+					religion_supports_adoption = no
+					has_heir_designation = no #meritocracy reduces penalties
+					tier = DUKE
+				}
+				prestige = 2000
+			}
+			conditional_tooltip = {
+				trigger = {
+					religion_supports_adoption = no
+					has_heir_designation = no #meritocracy reduces penalties
+					tier = KING
+				}
+				prestige = 5000
+			}
+			conditional_tooltip = {
+				trigger = {
+					religion_supports_adoption = no
+					has_heir_designation = no #meritocracy reduces penalties
+					higher_tier_than = KING
+				}
+				prestige = 10000
+			}
+			conditional_tooltip = {
+				trigger = {
+					religion_supports_adoption = no
+					has_heir_designation = yes #meritocracy reduces penalties
+				}
+				piety = 300
+			}
+			conditional_tooltip = {
+				trigger = {
+					religion_supports_adoption = no
+					has_heir_designation = yes #meritocracy reduces penalties
+					lower_tier_than = DUKE
+				}
+				prestige = 250
+			}
+			conditional_tooltip = {
+				trigger = {
+					religion_supports_adoption = no
+					has_heir_designation = yes #meritocracy reduces penalties
+					tier = DUKE
+				}
+				prestige = 1000
+			}
+			conditional_tooltip = {
+				trigger = {
+					religion_supports_adoption = no
+					has_heir_designation = yes #meritocracy reduces penalties
+					tier = KING
+				}
+				prestige = 3000
+			}
+			conditional_tooltip = {
+				trigger = {
+					religion_supports_adoption = no
+					has_heir_designation = yes #meritocracy reduces penalties
+					higher_tier_than = KING
+				}
+				prestige = 7000
+			}
+		}
+		effect = {
+			wealth = -50
+			set_character_flag = searching_for_a_child
+			character_event = { id = ATE_WWW_RELIGION.29 tooltip = SEARCH_ADOPTED_CHILD days = 1 random = 12 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				current_heir = { dynasty = ROOT }
+			}
+			modifier = {
+				factor = 0
+				religion_supports_adoption = no
+				NOT = { trait = cynical }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					AND = { matriarchal_religion = yes is_female = no }
+					AND = { has_religion_feature = religion_patriarchal is_female = yes }
+				}
+			}
+			modifier = {
+				factor = 0.05
+				religion_supports_adoption = no
+			}
+			modifier = {
+				factor = 0.25
+				trait = proud
+				NOT = { trait = amazon_trait }
+			}
+			modifier = {
+				factor = 0.5
+				trait = content
+				NOT = { trait = amazon_trait }
+			}
+			modifier = {
+				factor = 1.5
+				trait = humble
+				NOT = { trait = amazon_trait }
+			}
+			modifier = {
+				factor = 1.1
+				trait = kind
+				NOT = { trait = amazon_trait }
+			}
+			modifier = {
+				factor = 0.03
+				trait = amazon_trait
+				num_of_consorts > 0
+				any_consort = {
+					fertility > 0.36
+					practical_age < 45
+				}
+			}
+		}
+	}
 }
 
 targeted_decisions = {
@@ -819,6 +1158,222 @@ targeted_decisions = {
 				factor = 2
 				FROM = {
 					NOT = { health = 2.5 }
+				}
+			}
+		}
+	}
+	abduct_child_targeted = {
+		is_high_prio = yes # Will show an alert if special action is available
+		only_playable = yes
+		filter = court
+		ai_target_filter = court
+		from_potential = {
+			religion_supports_child_abduction = yes
+			NOT = { has_character_flag = considering_child_abduction }
+		}
+		potential = {
+			ai = yes
+			prisoner = yes
+			NOT = { age = 3 }
+			NOT = {
+				dynasty = FROM
+				any_liege = {
+					is_liege_or_above = FROM
+				}
+			}
+			FROM = {
+				religion_supports_child_abduction_of_ROOT = yes
+			}
+		}
+		allow = {
+			NOT = { age = 3 }
+			FROM = {
+				block_general_event_trigger = no
+				NOR = {
+					trait = cynical
+					trait = kind
+				}
+			}
+			NOR = {
+				father = {
+					OR = {
+						has_non_aggression_pact_with = FROM
+						is_allied_with = FROM
+					}
+				}
+				mother = {
+					OR = {
+						has_non_aggression_pact_with = FROM
+						is_allied_with = FROM
+					}
+				}
+			}
+		}
+		
+		effect = {
+			FROM = {
+				custom_tooltip = {
+					text = abduct_child_targeted_tooltip
+				}
+				piety = 500
+				hidden_tooltip = {
+					character_event = { id = ATE_WWW_RELIGION.31 }
+				}
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.01
+			modifier = {
+				factor = 10
+				FROM = { trait = zealous }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = cruel }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = ambitious }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = content }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { 
+					NOT = { trait = zealous }
+					trait = proud 
+				}
+			}
+			modifier = {
+				factor = 1.3
+				culture = FROM
+			}
+			modifier = {
+				factor = 1.1
+				NOT = { culture = FROM }
+				culture_group = FROM
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					father = { is_rival = FROM }
+					mother = { is_rival = FROM }
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					father = { is_friend = FROM }
+					mother = { is_friend = FROM }
+					father = { is_lover = FROM }
+					mother = { is_lover = FROM }
+				}
+			}
+			modifier = {
+				factor = 2
+				trait = genius
+			}
+			modifier = {
+				factor = 1.5
+				trait = fair
+			}
+			modifier = {
+				factor = 1.5
+				trait = quick
+			}
+			modifier = {
+				factor = 1.5
+				trait = strong
+			}
+			modifier = {
+				factor = 0.5
+				trait = ugly
+			}
+			modifier = {
+				factor = 0.5
+				trait = slow
+			}
+			modifier = {
+				factor = 0.5
+				trait = weak
+			}
+			modifier = {
+				factor = 0.5
+				trait = stutter
+			}
+			modifier = {
+				factor = 0.5
+				trait = harelip
+			}
+			modifier = {
+				factor = 0.5
+				trait = clubfooted
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					trait = inbred
+					trait = dwarf
+					trait = giant
+					trait = hunchback
+					trait = imbecile
+				}
+			}
+			modifier = {
+				factor = 0.2
+				FROM = {
+					any_child = {
+						is_alive = yes
+						OR = {
+							AND = {
+								ROOT = { 
+									NOR = {
+										matriarchal_religion = yes
+										has_religion_feature = religion_patriarchal
+									}
+									primary_title = { has_law = agnatic_succession } 
+								}
+								is_female = no
+							}
+							AND = {
+								ROOT = { 
+									NOR = {
+										matriarchal_religion = yes
+										has_religion_feature = religion_patriarchal
+									}
+									primary_title = { has_law = enatic_succession } 
+								}
+								is_female = yes
+							}
+							AND = {
+								ROOT = { 
+									matriarchal_religion = yes
+								}
+								is_female = no
+							}
+							AND = {
+								ROOT = { 
+									has_religion_feature = religion_patriarchal
+								}
+								is_female = yes
+							}
+						}
+						NOR = {
+							has_inheritance_blocker = yes
+							is_consort = yes
+							is_theocracy = yes
+							is_offmap_ruler = yes
+							holy_order = yes
+							any_liege = { holy_order = yes }
+						}
+					}
 				}
 			}
 		}

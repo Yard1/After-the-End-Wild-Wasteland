@@ -815,7 +815,8 @@ kinslayer = {
 	female_insult = INSULT_KINSLAYER
 }
 homosexual = {
-	sex_appeal_opinion = 30 # Only to those of the same sex
+	sex_appeal_opinion = 25 # Only to those of the same sex
+	same_opinion = 5
 	vassal_opinion = -5
 	
 	fertility = -0.15

@@ -1055,6 +1055,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		does_not_care_about_homosexuality = no
 		OR = {
 			trait = ambitious
 			trait = diligent

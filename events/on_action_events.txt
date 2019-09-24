@@ -4218,16 +4218,7 @@ character_event = {
 			spouse = {
 				character_event = { id = 662 }
 			}
-			any_child = {
-				character_event = { id = 661 }
-			}
-			any_sibling = {
-				character_event = { id = 661 }
-			}
-			father = {
-				character_event = { id = 661 }
-			}
-			mother = {
+			any_close_relative = {
 				character_event = { id = 661 }
 			}
 		}	
@@ -4615,8 +4606,15 @@ narrative_event = {
 		}
 		if = {
 			limit = { #Switch to matriarchy.
-				ROOT = { 
+				ROOT = {
 					has_religion_feature = religion_matriarchal
+					any_demesne_title = {
+						OR = {
+							NOT = { has_law = enatic_succession }
+							NOT = { has_law = status_of_women_4 }
+							NOT = { has_law = succ_turkish_succession }
+						}
+					}
 				}
 			}
 			ROOT = { 
@@ -4649,6 +4647,12 @@ narrative_event = {
 			limit = { #Switch to equality.
 				ROOT = { 
 					has_religion_feature = religion_equal
+					any_demesne_title = {
+						OR = {
+							NOT = { has_law = true_cognatic_succession }
+							NOT = { has_law = status_of_women_4 }
+						}
+					}
 				}
 			}
 			ROOT = { 
@@ -4669,6 +4673,13 @@ narrative_event = {
 		if = {
 			limit = { #Switch to patriarchy.
 				ROOT = { has_religion_feature = religion_patriarchal }
+				any_demesne_title = {
+					OR = {
+						NOT = { has_law = agnatic_succession }
+						NOT = { has_law = status_of_women_0 }
+						NOT = { has_law = succ_turkish_succession }
+					}
+				}
 			}
 			ROOT = { 
 				any_demesne_title = { 
@@ -5012,7 +5023,15 @@ narrative_event = {
 		hidden_tooltip = {
 			if = {
 				limit = { 
-					ROOT = { matriarchal_religion = yes }
+					ROOT = {
+						matriarchal_religion = yes
+						any_demesne_title = {
+							OR = {
+								NOR = { has_law = enatic_succession }
+								NOT = { has_law = status_of_women_4 }
+							}
+						}
+					}
 				}
 				ROOT = { 
 					any_demesne_title = { 
@@ -5032,7 +5051,15 @@ narrative_event = {
 			}
 			if = {
 				limit = { 
-					ROOT = { has_religion_feature = religion_patriarchal }
+					ROOT = {
+						has_religion_feature = religion_patriarchal
+						any_demesne_title = {
+							OR = {
+								NOR = { has_law = agnatic_succession }
+								NOT = { has_law = status_of_women_0 }
+							}
+						}
+					}
 				}
 				ROOT = { 
 					any_demesne_title = { 
@@ -5056,6 +5083,12 @@ narrative_event = {
 						OR = {
 							equal_religion = yes 
 							has_religion_feature = religion_feature_midewiwin
+						}
+						any_demesne_title = {
+							OR = {
+								NOR = { has_law = true_cognatic_succession }
+								NOT = { has_law = status_of_women_4 }
+							}
 						}
 					}
 				}
@@ -5138,6 +5171,12 @@ narrative_event = {
 		if = {
 			limit = { #Offer chance to switch the vassals' succession laws.
 				ROOT = { matriarchal_religion = yes }
+				any_demesne_title = {
+					OR = {
+						NOR = { has_law = enatic_succession }
+						NOT = { has_law = status_of_women_4 }
+					}
+				}
 			}
 			custom_tooltip = { text = tooltip_HF23014_A }
 			hidden_tooltip = { 
@@ -5159,6 +5198,12 @@ narrative_event = {
 		if = {
 			limit = { #Offer chance to switch the vassals' succession laws.
 				ROOT = { has_religion_feature = religion_patriarchal }
+				any_demesne_title = {
+					OR = {
+						NOR = { has_law = agnatic_succession }
+						NOT = { has_law = status_of_women_0 }
+					}
+				}
 			}
 			custom_tooltip = { text = tooltip_HF23015_A }
 			hidden_tooltip = { 
@@ -5183,6 +5228,12 @@ narrative_event = {
 					OR = {
 						equal_religion = yes 
 						has_religion_feature = religion_feature_midewiwin
+					}
+				}
+				any_demesne_title = {
+					OR = {
+						NOR = { has_law = true_cognatic_succession }
+						NOT = { has_law = status_of_women_4 }
 					}
 				}
 			}

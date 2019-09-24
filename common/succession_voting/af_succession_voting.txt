@@ -1475,6 +1475,16 @@ constitutional_elective = {
 			}
 		}
 		additive_modifier = {
+			value = -15
+			localisation_key = tooltip_feudal_elector_vote_adopted
+			NOT = { character = FROM } #Do not judge yourself.
+			is_feudal = yes
+			religion_supports_adoption = no
+			FROM = { 
+				trait = adopted
+			}
+		}
+		additive_modifier = {
 			value = 25
 			localisation_key = tooltip_feudal_elector_vote_born_in_the_purple
 			NOT = { character = FROM } #Do not judge yourself.
@@ -3465,6 +3475,11 @@ constitutional_elective = {
 					trait = bastard 
 					is_ruler = no
 				}
+				AND = { 
+					trait = adopted
+					religion_supports_adoption = no 
+					is_ruler = no
+				}
 				is_ascetic_trigger = yes
 				is_theocracy = yes
 				is_republic = yes
@@ -4703,6 +4718,16 @@ popular_elective = {
 			is_feudal = yes
 			FROM = { 
 				trait = bastard
+			}
+		}
+		additive_modifier = {
+			value = -15
+			localisation_key = tooltip_feudal_elector_vote_adopted
+			NOT = { character = FROM } #Do not judge yourself.
+			is_feudal = yes
+			religion_supports_adoption = no
+			FROM = { 
+				trait = adopted
 			}
 		}
 		additive_modifier = {
@@ -6769,6 +6794,11 @@ popular_elective = {
 				trait = eunuch
 				AND = { 
 					trait = bastard 
+					is_ruler = no
+				}
+				AND = { 
+					trait = adopted
+					religion_supports_adoption = no 
 					is_ruler = no
 				}
 				is_ascetic_trigger = yes

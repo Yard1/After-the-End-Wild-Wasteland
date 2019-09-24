@@ -176,3 +176,39 @@ hidden_female_trait = {
 		is_female = yes
 	}
 }
+
+amazon_trait = {
+	potential = {
+		is_female = yes
+		OR = {
+			religion = gaian
+			religion = amazonian
+		}
+		NOT = { trait = cynical }
+		is_married = no
+	}
+	
+	gaian_opinion = 5
+	amazonian_opinion = 5
+	same_opinion = 15
+	monthly_character_piety = 0.5
+	
+	ai_zeal = 15
+	
+	religious = no # Cleared manually on religious conversion
+	cannot_marry = yes
+	customizer = no
+	random = yes
+}
+
+adopted = {
+	diplomacy = -2
+
+	customizer = no
+	random = no
+
+	male_insult = INSULT_PEASANT
+	male_insult_adj = INSULT_BASEBORN
+	female_insult = INSULT_PEASANT
+	female_insult_adj = INSULT_BASEBORN
+}

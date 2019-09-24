@@ -275,3 +275,66 @@ religion_openly_gaian_or_heresy_trigger = {
 		}
 	}
 }
+
+does_not_care_about_homosexuality = {
+	is_female = yes
+	OR = {
+		religion = gaian
+		religion = amazonian
+	}
+}
+
+religion_supports_adoption = { #anyone can adopt, but those guys don't take penalties
+	OR = {
+		matriarchal_religion = yes
+		#add more
+	}
+}
+
+religion_supports_child_abduction = {
+	pacifist = no
+	religion_supports_adoption = yes
+	OR = {
+		AND = {
+			is_allowed_to_loot = yes
+			OR = {
+				AND = {
+					is_female = yes
+					matriarchal_religion = yes
+				}
+				AND = {
+					is_female = no
+					has_religion_feature = religion_patriarchal 
+				}
+			}
+		}
+	}
+}
+
+religion_supports_child_abduction_of_ROOT = { #hey there FBI
+	pacifist = no
+	religion_supports_adoption = yes
+	OR = {
+		AND = {
+			is_allowed_to_loot = yes
+			OR = {
+				AND = {
+					is_female = yes
+					matriarchal_religion = yes
+					ROOT = {
+						is_female = yes
+						matriarchal_religion = no
+					}
+				}
+				AND = {
+					is_female = no
+					has_religion_feature = religion_patriarchal 
+					ROOT = {
+						is_female = no
+						NOT = { has_religion_feature = religion_patriarchal }
+					} 
+				}
+			}
+		}
+	}
+}

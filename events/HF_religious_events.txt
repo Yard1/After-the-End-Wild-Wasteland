@@ -3392,6 +3392,15 @@ character_event = {
 			limit = { 
 				ROOT = { 
 					religion = gaian
+					any_demesne_title = {
+						OR = {
+							NOR = { 
+								has_law = enatic_cognatic_succession
+								has_law = enatic_succession
+							}
+							NOT = { has_law = status_of_women_4 }
+						}
+					}
 				}
 			}
 			ROOT = { 
@@ -3462,6 +3471,12 @@ character_event = {
 			limit = { 
 				ROOT = { 
 					matriarchal_religion = yes 
+					any_demesne_title = {
+						OR = {
+							NOT = { has_law = enatic_succession }
+							NOT = { has_law = status_of_women_4 }
+						}
+					}
 				}
 			}
 			ROOT = { 
@@ -3479,7 +3494,10 @@ character_event = {
 					if = { 
 						limit = { 
 							ROOT = { 
-								NOT = { has_law = succ_byzantine_elective }
+								NOR = { 
+									has_law = succ_byzantine_elective 
+									has_law = succ_turkish_succession 
+								}
 								OR = { 
 									is_feudal = yes 
 									is_tribal = yes
@@ -3487,10 +3505,28 @@ character_event = {
 								}
 							}
 						}
-						add_law = {
-							law = succ_turkish_succession
-							cooldown = no
-							opinion_effect = no
+						if = {
+							limit = { is_law_potential = succ_eldership }
+							add_law = {
+								law = succ_eldership
+								cooldown = no
+								opinion_effect = no
+							}
+						}
+						else_if = {
+							limit = { is_law_potential = succ_tanistry }
+							add_law = {
+								law = succ_tanistry
+								cooldown = no
+								opinion_effect = no
+							}
+						}
+						else = {
+							add_law = {
+								law = succ_turkish_succession
+								cooldown = no
+								opinion_effect = no
+							}
 						}
 					}
 				} 
@@ -3499,7 +3535,15 @@ character_event = {
 		}
 		if = {
 			limit = { 
-				ROOT = { has_religion_feature = religion_patriarchal }
+				ROOT = {
+					has_religion_feature = religion_patriarchal
+					any_demesne_title = {
+						OR = {
+							NOT = {  has_law = agnatic_succession }
+							NOT = { has_law = status_of_women_0 }
+						}
+					}
+				}
 			}
 			ROOT = { 
 				any_demesne_title = { 
@@ -3538,6 +3582,12 @@ character_event = {
 			limit = { 
 				ROOT = {
 					equal_religion = yes 
+					any_demesne_title = {
+						OR = {
+							NOT = {  has_law = true_cognatic_succession }
+							NOT = { has_law = status_of_women_4 }
+						}
+					}
 				}
 			}
 			ROOT = { 
@@ -3757,6 +3807,15 @@ character_event = {
 			limit = { 
 				ROOT = { 
 					religion = gaian
+					any_demesne_title = {
+						OR = {
+							NOR = { 
+								has_law = enatic_cognatic_succession
+								has_law = enatic_succession
+							}
+							NOT = { has_law = status_of_women_4 }
+						}
+					}
 				}
 			}
 			ROOT = { 
@@ -3827,6 +3886,12 @@ character_event = {
 			limit = { 
 				ROOT = { 
 					matriarchal_religion = yes 
+					any_demesne_title = {
+						OR = {
+							NOT = {  has_law = enatic_succession }
+							NOT = { has_law = status_of_women_4 }
+						}
+					}
 				}
 			}
 			ROOT = { 
@@ -3844,7 +3909,10 @@ character_event = {
 					if = { 
 						limit = { 
 							ROOT = { 
-								NOT = { has_law = succ_byzantine_elective }
+								NOR = { 
+									has_law = succ_byzantine_elective 
+									has_law = succ_turkish_succession 
+								}
 								OR = { 
 									is_feudal = yes 
 									is_tribal = yes
@@ -3852,10 +3920,28 @@ character_event = {
 								}
 							}
 						}
-						add_law = {
-							law = succ_turkish_succession
-							cooldown = no
-							opinion_effect = no
+						if = {
+							limit = { is_law_potential = succ_eldership }
+							add_law = {
+								law = succ_eldership
+								cooldown = no
+								opinion_effect = no
+							}
+						}
+						else_if = {
+							limit = { is_law_potential = succ_tanistry }
+							add_law = {
+								law = succ_tanistry
+								cooldown = no
+								opinion_effect = no
+							}
+						}
+						else = {
+							add_law = {
+								law = succ_turkish_succession
+								cooldown = no
+								opinion_effect = no
+							}
 						}
 					}
 				} 
@@ -3864,7 +3950,15 @@ character_event = {
 		}
 		if = {
 			limit = { 
-				ROOT = { has_religion_feature = religion_patriarchal }
+				ROOT = {
+					has_religion_feature = religion_patriarchal 
+					any_demesne_title = {
+						OR = {
+							NOR = { has_law = agnatic_succession }
+							NOT = { has_law = status_of_women_0 }
+						}
+					}
+				}
 			}
 			ROOT = { 
 				any_demesne_title = { 
@@ -3874,7 +3968,7 @@ character_event = {
 						opinion_effect = no
 					}
 					add_law = {
-						law = cognatic_succession
+						law = agnatic_succession
 						cooldown = no
 						opinion_effect = no
 					}
@@ -3896,6 +3990,7 @@ character_event = {
 						}
 					}
 				}
+				recalc_succession = yes
 			} 
 		}
 		if = {
@@ -3904,6 +3999,12 @@ character_event = {
 					OR = { 
 						equal_religion = yes 
 						has_religion_feature = religion_feature_midewiwin
+					}
+					any_demesne_title = {
+						OR = {
+							NOR = { has_law = true_cognatic_succession }
+							NOT = { has_law = status_of_women_4 }
+						}
 					}
 				}
 			}
@@ -3920,6 +4021,7 @@ character_event = {
 						opinion_effect = no
 					}
 				} 
+				recalc_succession = yes
 			} 
 		}
 

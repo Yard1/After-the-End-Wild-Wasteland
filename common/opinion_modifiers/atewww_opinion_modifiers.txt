@@ -1,0 +1,14 @@
+adopted_child = {
+	opinion = -50
+	months = 240
+}
+
+opinion_abducted_parent_child = {
+	opinion = -100
+	duration = -1
+}
+
+opinion_abducted_relative_child = {
+	opinion = -40
+	months = 2400
+}
