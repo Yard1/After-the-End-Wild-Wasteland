@@ -1,0 +1,16 @@
+# Clearwater
+
+# County Title
+title = c_clearwater
+
+# Settlements
+max_settlements = 3
+
+b_rocky_mountain_house_AB = tribal
+#b_alexo_AB = city
+
+# Misc
+culture = prairielander
+religion = neognostic
+terrain = hills
+

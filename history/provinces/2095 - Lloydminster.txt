@@ -1,0 +1,14 @@
+# c_lloydminster
+
+# County Title
+title = c_lloydminster
+
+# Settlements
+max_settlements = 2
+b_lloydminster_AB = tribal
+
+# Misc
+culture = prairielander
+religion = neognostic
+terrain = plains
+
