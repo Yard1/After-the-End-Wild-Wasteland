@@ -18,6 +18,7 @@ feudal_governments = {
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			feudal_government
+			consumerist_government
 			bureaucratic_government
 			theocratic_feudal_government
 			tribal_government
@@ -99,6 +100,7 @@ feudal_governments = {
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
+			merchant_republic_government
 		}
 		potential = {
 			OR = {
@@ -126,6 +128,7 @@ feudal_governments = {
 		
 		dukes_called_kings = yes
 		barons_need_dynasty = yes
+		uses_bride_price = yes
 
 		can_build_tribal = no
 		
@@ -137,7 +140,6 @@ feudal_governments = {
 		## Modifiers
 		court_size_modifier = 10
 
-		can_imprison_without_reason = no
 		can_revoke_without_reason = no
 		can_demand_religious_conversion = no
 	}

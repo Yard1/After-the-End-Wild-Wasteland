@@ -534,9 +534,9 @@ GOD_RIEL;Riel;;;;;;;;;;;;;x
 exovedate_FEATURES;§Y*§! Rulers can gain Sympathy towards American Native, Judaist or Pagan religious group.;;;;;;;;;;;;;x
 
 # Consumerists
-consumerist_government;Corporate Feudalism;;;;;;;;;;;;;x
+consumerist_government;Corporate Feudal;;;;;;;;;;;;;x
 consumerist_government_desc;The Corporate Feudal government, much like the ordinary Feudal government, revolves around the oath between liege and vassal, and Corporate Feudal lords can only directly own so many Holdings before they must start to rely on vassals - whose loyalty may vary... The Corporate Feudal government is unique to the [consumerist.GetName] faith and its heresies, and allows holding Cities in addition to Castles.;;;;;;;;;;;;;x
-consumerist_government_features;§Y*§! Cannot use Gavelkind, Elective Gavelkind, Primogeniture or Ultimogeniture succession laws for Duchy, Kingdom and Empire titles;;;;;;;;;;;;;x
+consumerist_government_FEATURES;§Y*§! Cannot use Gavelkind, Elective Gavelkind, Primogeniture or Ultimogeniture succession laws for Duchy, Kingdom and Empire titles\n§Y*§! No wrong government penalty if liege or subject is a Republic;;;;;;;;;;;;;x
 
 
 # Misc
