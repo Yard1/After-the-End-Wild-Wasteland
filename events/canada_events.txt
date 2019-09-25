@@ -124,9 +124,6 @@ narrative_event = {
 						custom_created = yes
 						culture = event_target:old_bishop
 						holder = event_target:old_bishop
-						ruler = "ARCHBISHOP"
-						ruler_female = "ARCHBISHOP"
-						foa = "ECUMENICAL_PATRIARCH_FOA"
 						base_title = THIS
 						copy_title_laws = yes
 					}
