@@ -12676,7 +12676,6 @@ landless_pope_effect = {
 			character_event = { id = canada.28 }
 		}
 	}
-	#add k_confederated here
 }
 
 add_sympathy_for_religion_effect = {

@@ -2545,7 +2545,13 @@ d_abbey_guards = { #Le Vingt-Deuxième
 	allow = {
 		OR = {
 			has_landed_title = k_ursuline
-			has_landed_title = k_confederated
+			AND = {
+				has_landed_title = k_confederated
+				any_vassal = {
+					has_landed_title = k_ursuline
+				}
+			}
+			primary_title = { has_title_flag = ursuline_dynamic_title }
 		}
 	}
 

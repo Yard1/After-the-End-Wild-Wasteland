@@ -926,7 +926,10 @@ decisions = {
 		ai_check_interval = 120
 
 		potential = {
-			has_landed_title = k_ursuline
+			OR = {
+				has_landed_title = k_ursuline
+				primary_title = { has_title_flag = ursuline_dynamic_title }
+			}
 			NOT = {
 				is_title_active = d_abbey_guards
 			}
@@ -942,6 +945,7 @@ decisions = {
 			create_random_soldier = {
 				random_traits = yes
 				culture = quebecois
+				religion = ROOT
 				dynasty = random
 			}
 			new_character = {
