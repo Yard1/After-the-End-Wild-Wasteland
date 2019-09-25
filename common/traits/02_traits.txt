@@ -3656,6 +3656,8 @@ crowned_by_priest_rd = { #Only for Ruler Designer
 		OR = {
 			religion = catholic
 			religion = ursuline
+			religion = confederated
+			religion = high_church
 			religion = mormon
 		}
 	}
@@ -3675,6 +3677,8 @@ crowned_by_bishop_rd = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+			religion = confederated
+			religion = high_church
 			religion = mormon
 		}
 	}
@@ -3695,6 +3699,8 @@ crowned_by_pope_rd = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+			religion = confederated
+			religion = high_church
 			religion = mormon
 		}
 	}

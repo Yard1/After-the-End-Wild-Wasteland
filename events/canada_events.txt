@@ -11,37 +11,202 @@ narrative_event = {
 	
 	is_triggered_only = yes
 	
-	option = {
-		name = EVTOPTAcanada.1
-
-		set_parent_religion = { religion = high_church parent = confederated }
-		set_parent_religion = { religion = ursuline parent = confederated }
-		set_parent_religion = { religion = angeline parent = confederated }
-		set_parent_religion = { religion = nonconformist parent = confederated }
-		set_parent_religion = { religion = exovedate parent = confederated }
-
-		set_global_flag = canadian_church_unified
-		give_nickname = nick_the_saint
+	immediate = {
 		hidden_tooltip = {
-			d_confederated = { active = yes }
-			create_random_priest = {
-				random_traits = yes
-				learning = 8
-				religion = confederated
-				culture = ROOT
-				dynasty = random
-				age = 41
+			set_parent_religion = { religion = high_church parent = confederated }
+			set_parent_religion = { religion = ursuline parent = confederated }
+			set_parent_religion = { religion = angeline parent = confederated }
+			set_parent_religion = { religion = nonconformist parent = confederated }
+			set_parent_religion = { religion = exovedate parent = confederated }
+
+			set_global_flag = canadian_church_unified
+			k_confederated = { active = yes }
+			save_event_target_as = unifier
+			if = {
+				limit = {
+					any_vassal = {
+						OR = {
+							has_landed_title = d_high_church
+							has_landed_title = k_ursuline
+						}
+					}
+				}
+				random_vassal = {
+					limit = {
+						OR = {
+							has_landed_title = d_high_church
+							has_landed_title = k_ursuline
+						}
+					}
+					preferred_limit = {
+						has_landed_title = d_high_church
+						ROOT = {
+							has_character_flag = was_high_church
+						}
+					}
+					preferred_limit = {
+						has_landed_title = k_ursuline
+						ROOT = {
+							has_character_flag = was_ursuline
+						}
+					}
+					save_event_target_as = new_pope
+				}
 			}
-			new_character = {
-				succession = open_elective
-				character_event = { id = misc.3 } # Diversity
-				character_event = { id = misc.4 } # Physique
+			else = {
+				job_spiritual = {
+					save_event_target_as = new_pope
+				}
+			}
+			event_target:new_pope = {
+				any_vassal = {
+					set_character_flag = old_new_pope_vassal
+				}
+				any_demesne_title = {
+					limit = {
+						NOR = {
+							title = k_confederated
+							title = k_ursuline
+							title = d_high_church 
+						}
+					}
+					set_title_flag = old_new_pope_title
+				}
+				unsafe_religion = confederated
 				b_the_glebe_ON = { gain_title = PREV }
-				d_confederated = { gain_title = PREV }
-				set_defacto_liege = ROOT
+				k_confederated = { gain_title = PREV }
+				k_confederated = { add_law = succ_papal_succession }
+				set_name = ""
+				succession = papal_succession
+				set_defacto_liege = event_target:unifier
+				opinion = {
+					who = event_target:unifier
+					modifier = opinion_granted_kingdom
+				}
+				any_vassal = {
+					set_character_flag = old_new_pope_vassal
+				}
+				any_demesne_title = {
+					limit = {
+						NOR = {
+							title = k_confederated
+							title = k_ursuline
+							title = d_high_church 
+						}
+					}
+					set_title_flag = old_new_pope_title
+				}
+				character_event = { id = canada.999 }
 			}
-		}
-		hidden_tooltip = {
+			if = {
+				limit = {
+					d_high_church = {
+						holder_scope = {
+							is_liege_or_above = ROOT
+						}
+					}
+				}
+				d_high_church = {
+					holder_scope = {
+						save_event_target_as = old_bishop
+						any_vassal = {
+							set_character_flag = old_bishop_vassal
+						}
+						any_demesne_title = {
+							limit = { NOT = { title = d_high_church } }
+							set_title_flag = old_bishop_title
+						}
+					}
+					create_title = {
+						tier = DUKE
+						landless = yes
+						temporary = no
+						custom_created = yes
+						culture = event_target:old_bishop
+						holder = event_target:old_bishop
+						ruler = "ARCHBISHOP"
+						ruler_female = "ARCHBISHOP"
+						foa = "ECUMENICAL_PATRIARCH_FOA"
+						base_title = THIS
+						copy_title_laws = yes
+					}
+					new_title = {
+						copy_title_history = PREV
+						add_law = succ_open_elective
+					}
+					activate_title = { title = d_high_church status = no }
+					unsafe_destroy_landed_title = d_high_church
+				}
+				event_target:old_bishop = {
+					unsafe_religion = confederated
+					any_courtier = {
+						limit = { is_prisoner = no }
+						religion = confederated
+					}
+					capital_scope = {
+						show_scope_change = no
+						religion = confederated
+					}
+					character_event = { id = canada.999 }
+				}
+			}
+			if = {
+				limit = {
+					k_ursuline = {
+						holder_scope = {
+							is_liege_or_above = ROOT
+						}
+					}
+				}
+				k_ursuline = {
+					log = "ursuline"
+					holder_scope = {
+						save_event_target_as = old_pope
+						any_vassal = {
+							log = "[This.GetBestName] is vassal of [old_pope.GetBestName]"
+							set_character_flag = old_pope_vassal
+						}
+						any_demesne_title = {
+							limit = { NOT = { title = k_ursuline } }
+							log = "[This.GetName] is title of [old_pope.GetBestName]"
+							set_title_flag = old_pope_title
+						}
+					}
+					create_title = {
+						tier = DUKE
+						landless = yes
+						temporary = no
+						custom_created = yes
+						culture = event_target:old_pope
+						holder = event_target:old_pope
+						name = "new_ursuline_title"
+						ruler = "ARCHBISHOP"
+						ruler_female = "ARCHBISHOP"
+						foa = "ECUMENICAL_PATRIARCH_FOA"
+						base_title = THIS
+						copy_title_laws = yes
+					}
+					new_title = {
+						copy_title_history = PREV
+						set_title_flag = ursuline_dynamic_title
+						add_law = succ_open_elective
+					}
+					activate_title = { title = k_ursuline status = no }
+					unsafe_destroy_landed_title = k_ursuline
+				}
+				event_target:old_pope = {
+					unsafe_religion = confederated
+					any_courtier = {
+						limit = { is_prisoner = no }
+						religion = confederated
+					}
+					capital_scope = {
+						show_scope_change = no
+						religion = confederated
+					}
+					character_event = { id = canada.999 }
+				}
+			}
 			any_playable_ruler = {
 				limit = {
 					OR = {
@@ -53,8 +218,165 @@ narrative_event = {
 					}
 					controls_religion = no
 				}
-				narrative_event = { id = canada.2 }
+				narrative_event = { id = canada.2 days = 1 }
 			}
+
+			clr_character_flag = was_ursuline
+			clr_character_flag = was_high_church
+		}
+	}
+
+	major = yes
+
+	option = {
+		name = EVTOPTAcanada.1
+		trigger = {
+			new_character = { character = ROOT }
+		}
+		piety = 1000
+		give_nickname = nick_the_saint
+		any_courtier = {
+			limit = {
+				OR = {
+					religion = ursuline
+					religion = high_church
+					religion = angeline
+					religion = nonconformist
+					religion = exovedate
+				}
+				prisoner = no
+			}
+			religion = confederated
+		}
+		capital_scope = {
+			religion = confederated
+		}
+	}
+
+	option = {
+		name = EVTOPTC_general_of_army
+		trigger = {
+			new_character = { NOT = { character = ROOT } }
+		}
+	}
+}
+
+character_event = {
+	id = canada.999
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		unsafe_religion = confederated
+		if = {
+			limit = { character = event_target:old_bishop }
+			any_title = {
+				limit = {
+					has_title_flag = old_bishop_title
+				}
+				log = "[This.GetName] give to [Root.GetBestName]"
+				location = { religion = confederated }
+				if = {
+					limit = { lower_tier_than = DUKE }
+					gain_title = ROOT
+				}
+				else = {
+					gain_title = event_target:new_pope
+				}
+				clr_character_flag = old_bishop_title
+			}
+			any_character = {
+				limit = {
+					has_character_flag = old_bishop_vassal
+				}
+				log = "[This.GetBestName] make vassal of [new_pope.GetBestName]"
+				religion = confederated
+				if = {
+					limit = { lower_tier_than = DUKE }
+					log = "[This.GetBestName] make vassal of [Root.GetBestName]"
+					set_defacto_liege = ROOT
+				}
+				else = {
+					log = "[This.GetBestName] make vassal of [new_pope.GetBestName]"
+					set_defacto_liege = event_target:new_pope
+				}
+				clr_character_flag = old_bishop_vassal
+			}
+			activate_title = { title = d_high_church status = no }
+			unsafe_destroy_landed_title = d_high_church
+		}
+		else_if = {
+			limit = { character = event_target:old_pope }
+			any_title = {
+				limit = {
+					has_title_flag = old_pope_title
+				}
+				log = "[This.GetName] give to [Root.GetBestName]"
+				location = { religion = confederated }
+				if = {
+					limit = { lower_tier_than = DUKE }
+					gain_title = ROOT
+				}
+				else = {
+					gain_title = event_target:new_pope
+				}
+				clr_character_flag = old_pope_title
+			}
+			any_character = {
+				limit = {
+					has_character_flag = old_pope_vassal
+				}
+				religion = confederated
+				if = {
+					limit = { lower_tier_than = DUKE }
+					log = "[This.GetBestName] make vassal of [Root.GetBestName]"
+					set_defacto_liege = ROOT
+				}
+				else = {
+					log = "[This.GetBestName] make vassal of [new_pope.GetBestName]"
+					set_defacto_liege = event_target:new_pope
+				}
+				clr_character_flag = old_pope_vassal
+			}
+			activate_title = { title = k_ursuline status = no }
+			unsafe_destroy_landed_title = k_ursuline
+		}
+		else_if = {
+			limit = { character = event_target:new_pope }
+			any_title = {
+				limit = {
+					has_title_flag = old_new_pope_title
+				}
+				log = "[This.GetName] give to [Root.GetBestName]"
+				location = { religion = confederated }
+				gain_title = ROOT
+				clr_character_flag = old_new_pope_title
+			}
+			any_character = {
+				limit = {
+					has_character_flag = old_new_pope_vassal
+				}
+				religion = confederated
+				set_defacto_liege = ROOT
+				clr_character_flag = old_new_pope_vassal
+			}
+		}
+		any_realm_character = {
+			religion = confederated
+		}
+		set_defacto_liege = event_target:new_pope
+		if = {
+			limit = { controls_religion = no }
+			give_minor_title = title_confederated_cardinal
+		}
+		event_target:unifier = {
+			if = {
+				limit = { job_spiritual = { is_theocracy = yes } }
+				job_spiritual = { give_minor_title = title_confederated_cardinal }
+			}
+		}
+		event_target:new_pope = {
+			set_defacto_liege = event_target:unifier
+			capital = b_the_glebe_ON
 		}
 	}
 }
@@ -78,16 +400,31 @@ narrative_event = {
 				trait = zealous
 			}
 		}
-		religion = confederated
+		unsafe_religion = confederated
 		any_courtier = {
-			religion = confederated
+			limit = {
+				OR = {
+					religion = ursuline
+					religion = high_church
+					religion = angeline
+					religion = nonconformist
+					religion = exovedate
+				}
+				prisoner = no
+			}
+			show_scope_change = no
+			unsafe_religion = confederated
 		}
 		capital_scope = {
+			show_scope_change = no
 			religion = confederated
 		}
 	}
 	option = { # No
 		name = EVTOPTBcanada.2
+		trigger = {
+			holy_order = no
+		}
 		ai_chance = { 
 			factor = 25
 			modifier = {
@@ -202,6 +539,7 @@ narrative_event = {
 	
 	only_playable = yes
 	min_age = 16
+	religion = ursuline
 	
 	trigger = {
 		NOT = { #immersion-breaking
@@ -261,7 +599,8 @@ narrative_event = {
 	
 	only_playable = yes
 	min_age = 16
-	
+	religion = ursuline
+
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
@@ -323,7 +662,7 @@ narrative_event = {
 	
 	only_playable = yes
 	min_age = 16
-	
+	religion = ursuline
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
@@ -380,7 +719,7 @@ narrative_event = {
 	
 	only_playable = yes
 	min_age = 16
-	
+	religion = ursuline
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }

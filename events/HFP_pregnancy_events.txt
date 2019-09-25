@@ -383,6 +383,7 @@ character_event = {
 					OR = { 
 						religion = catholic
 						religion = ursuline
+						religion = confederated
 					}
 					is_married = yes
 					NOT = { num_of_children = 2 }
@@ -13335,6 +13336,7 @@ character_event = {
 		OR = { 
 			religion = catholic
 			religion = ursuline
+			religion = confederated
 		}
 		NOT = { trait = incapable }
 		NOT = { trait = troubled_pregnancy }

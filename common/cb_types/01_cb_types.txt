@@ -382,6 +382,8 @@ dejure_duchy_claim = { # New1
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -641,6 +643,8 @@ force_vassalization = { # New2
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -923,6 +927,8 @@ great_realm_conflict = { # New3
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -1196,6 +1202,8 @@ ducal_county_conquest = { # New4
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -2131,6 +2139,8 @@ liberate_religion = { # New6
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -2776,6 +2786,8 @@ unjust_conquest = { # New7
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -3180,6 +3192,8 @@ tributary_permanent_cb = { # New8
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -5468,6 +5482,8 @@ flower_war_cb = { #Given to Mictlantecs and Thelemics (if they have the feature)
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -6462,6 +6478,8 @@ matriarchal_deposition_war = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -6988,6 +7006,8 @@ patriarchal_deposition_war = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -7043,7 +7063,7 @@ depose_impious_pope = {
 			hidden_tooltip = {
 				OR = {
 					has_landed_title = k_papal_state
-					has_landed_title = d_confederated
+					has_landed_title = k_confederated
 					has_landed_title = k_ursuline
 					has_landed_title = d_high_church
 					has_landed_title = d_quorum_of_the_twelve
@@ -7127,10 +7147,10 @@ depose_impious_pope = {
 			else_if = {
 				limit = {
 					FROM = {
-						has_landed_title = d_confederated
+						has_landed_title = k_confederated
 					}
 				}
-				d_confederated = {
+				k_confederated = {
 					owner = {
 						save_event_target_as = current_pope
 						reverse_imprison = FROM

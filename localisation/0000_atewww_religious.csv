@@ -97,6 +97,7 @@ hamiltonian;Madisonian;;;;;;;;;;;;;x
 hamiltonian_DESC;Madisonians differ from mainstream Americanism in that they consider the judicary the supreme branch of the government. Legends of Justices of the Supreme Court fighting against tyrannical Presidents and Congressmen have filled them with a conviction that a Chief Justice of the Supreme Court is the superior authority on all matters spiritual and temporal.;;;;;;;;;;;;;x
 THE_CODE_OF_LAWS;The Code of Laws;;;;;;;;;;;;;x
 GOD_THE_JUSTICES;The Justices;;;;;;;;;;;;;x
+GOD_GARNER;Garner;;;;;;;;;;;;;x
 
 gov_supreme_court;Supreme Court;;;;;;;;;;;;;x
 
@@ -629,7 +630,29 @@ empire_monetarist;Conglomerate;;;;;;;;;;;;;x
 
 job_prime_minister_monetarist;Chief Operating Officer;;;;;;;;;;;;;x
 
-# Misc
+# Ursuline/Confederated
+
+k_confederated_adj;Confederated;;;;;;;;;;;;;x
+k_confederated;Confederated Church;;;;;;;;;;;;;x
+new_ursuline_title;[b_quebec_QC.GetName];;;;;;;;;;;;;x
+
+COLLEGE_OF_CARDINALS_CONFEDERATED;General Synod;;;;;;;;;;;;;x
+
+unify_canadian_church;Unify the Canadian Churches;;;;;;;;;;;;;x
+unify_canadian_church_desc;The Christian population of Canada is divided between the Anglican Church and the Ursuline See. If we control enough of the great cities of Canada, we can unify them into a single Confederated Church under our control.;;;;;;;;;;;;;x
+EVTNAMEcanada.1;Confederation of the Churches;;;;;;;;;;;;;x
+EVTDESCcanada.1;The Christians of Canada are no longer divided between the Anglican Church and the Ursuline See. Thanks to the efforts of [From.GetTitledFirstName], the churches have been unified into the Confederated Church of Canada, headed by the Archbishop in Ottawa, who will also serve as an advisor to the [From.GetTitle].;;;;;;;;;;;;;x
+
+confederated_FEATURES;§Y*§! The Archbishop is elected via the same mechanics as the Pope.;;;;;;;;;;;;;x
+
+PREFERATI_CONFEDERATED;Prolocutor;Preferatus;Preferatus;;Preferatus;;;;;;;;;x
+PREFERATI_CONFEDERATED_TOOLTIP;The Prolocutor is the Bishop expected to succeed the current Archbishop.;Le preferatus est le cardinal favori pour succéder au pape actuel.;Der Preferatus ist der Kardinal, dem die größten Chancen für die Wahl zum Papst eingeräumt werden.;;El Preferatus es el cardenal que se espera que suceda al Papa actual.;;;;;;;;;x
+
+title_confederated_cardinal;Synod Member;Cardinal;Kardinal;;Cardenal;;;;;;;;;x
+expected_next_title_confederated_cardinal;Expected Next Synod Member;Prochain cardinal prévu;Erwarteter neuer Kardinal;;Presunto próximo cardenal;;;;;;;;;x
+expected_next_title_confederated_cardinal_tooltip;This bishop is probably next in line for a Synod Membership when one becomes available.;Cet évêque sera probablement le prochain cardinal dès qu'une place se libérera.;Dieser Bischof wird wahrscheinlich als nächster zum Kardinal ernannt, wenn ein Sitz im Kollegium frei wird.;;Este obispo será, probablemente, el próximo Cardenal cuando haya una vacante.;;;;;;;;;x
+best_candidate_title_confederated_cardinal;My Best Synod Member Candidate;Mes meilleurs cardinaux potentiels;Mein bester Kardinalskandidat;;Mi mejor candidato a Cardenal;;;;;;;;;x
+best_candidate_title_confederated_cardinal_tooltip;Of all the bishops in my realm, this one is the likeliest to get appointed Synod Member by the Archbishop.;De tous les évêques de mon royaume, celui-ci est le plus susceptible d'être nommé cardinal par le pape.;Von allen Bischöfen in meinem Reich wird dieser wahrscheinlich am ehesten vom Papst zum Kardinal ernannt.;;De todos los obispos de mi Reino, este es el que tiene más probabilidades de que el Papa lo nombre Cardenal.;;;;;;;;;x
 
 title_ursuline_cardinal;Delegate;Cardinal;Kardinal;;Cardenal;;;;;;;;;x
 expected_next_title_ursuline_cardinal;Expected Next Delegate;Prochain cardinal prévu;Erwarteter neuer Kardinal;;Presunto próximo cardenal;;;;;;;;;x
@@ -638,6 +661,8 @@ best_candidate_title_ursuline_cardinal;My Best Delegate Candidate;Mes meilleurs 
 best_candidate_title_ursuline_cardinal_tooltip;Of all the bishops in my realm, this one is the likeliest to get appointed Delegate by the Abbess-General.;De tous les évêques de mon royaume, celui-ci est le plus susceptible d'être nommé cardinal par le pape.;Von allen Bischöfen in meinem Reich wird dieser wahrscheinlich am ehesten vom Papst zum Kardinal ernannt.;;De todos los obispos de mi Reino, este es el que tiene más probabilidades de que el Papa lo nombre Cardenal.;;;;;;;;;x
 COLLEGE_OF_CARDINALS_URSULINE;Convention of Delegates;;;;;;;;;;;;;x
 canada.12.desc;Quebec City, the very seat of the Abbess-General herself, has fallen to infidels. In response, the Abbess-in-exile, Her Holiness, [Root.GetTitledName], has declared her intention to forge a great alliance of Ursuline lords in order to reclaim the eternal city. This signals a new era of large scale Ursuline holy wars - the Crusades.;Rome, ville de saint Pierre et siège de la papauté, est tombée aux mains des infidèles. En réponse, le pape en exil, Sa Sainteté [Root.GetTitledName], a déclaré son intention de conclure une grande alliance de seigneurs chrétiens afin de reprendre la ville éternelle. Cette décision annonce une nouvelle ère de guerres chrétiennes à grande échelle : les Croisades.;Die Heilige Stadt Rom, Sitz des Papstes, ist von den Ungläubigen erobert worden. Als Antwort darauf hat der Exilpapst, seine Heiligkeit [Root.GetTitledName] seine Entschlossenheit zum Sschmieden eines großen Bündnisses christlicher Herrscher bekannt gegeben, um die Ewige Stadt zurückzuerobern. Dies ist der Beginn eines neuen Zeitalters großer christlicher Heiliger Kriege - der Kreuzzüge.;;Roma, ciudad de San Pedro y sede del mismísimo Papado, ha caído en manos de los infieles. En respuesta, el Papa exiliado, Su Santidad [Root.GetTitledName], ha declarado su intención de forjar una gran alianza de señores cristianos con el fin de recuperar la ciudad eterna. Este hecho marca el inicio de una nueva era de guerras santas cristianas de gran alcance: las Cruzadas.;;;;;;;;;x
+
+# Misc
 
 CRUSADE_COOLDOWN;A [Root.Religion.GetCrusadeName] for the [Root.Religion.GetName] faith has not been called in the last 10 years\n;;;;;;;;;x
 

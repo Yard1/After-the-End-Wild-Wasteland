@@ -545,9 +545,7 @@ narrative_event = {
 						NOT = { block_general_event_trigger = yes }
 						OR = { 
 							higher_tier_than = BARON  
-							has_minor_title = title_cardinal
-							has_minor_title = title_ursuline_cardinal
-							has_minor_title = title_mormon_cardinal
+							is_cardinal = yes
 							is_antipope = yes
 						}
 					}
@@ -563,9 +561,7 @@ narrative_event = {
 							NOT = { block_general_event_trigger = yes }
 							OR = { 
 								higher_tier_than = BARON  
-								has_minor_title = title_cardinal
-								has_minor_title = title_ursuline_cardinal
-								has_minor_title = title_mormon_cardinal
+								is_cardinal = yes
 								is_antipope = yes
 							}
 						}
@@ -583,6 +579,8 @@ narrative_event = {
 						OR = {
 							religion = catholic
 							religion = ursuline
+							religion = confederated
+							religion = high_church
 							religion = mormon
 						}
 					}
@@ -1388,6 +1386,14 @@ letter_event = {
 			modifier = {
 				factor = 0.75
 				event_target:sponsoring_king  = { religion = ursuline }
+			}
+			modifier = {
+				factor = 0.75
+				event_target:sponsoring_king  = { religion = confederated }
+			}
+			modifier = {
+				factor = 0.75
+				event_target:sponsoring_king  = { religion = high_church }
 			}
 			modifier = {
 				factor = 0.75
@@ -2484,9 +2490,7 @@ narrative_event = {
 						NOT = { block_general_event_trigger = yes }
 						OR = { 
 							higher_tier_than = BARON  
-							has_minor_title = title_cardinal
-							has_minor_title = title_ursuline_cardinal
-							has_minor_title = title_mormon_cardinal
+							is_cardinal = yes
 							is_antipope = yes
 						}
 					}
@@ -2502,9 +2506,7 @@ narrative_event = {
 							NOT = { block_general_event_trigger = yes }
 							OR = { 
 								higher_tier_than = BARON  
-								has_minor_title = title_cardinal
-								has_minor_title = title_ursuline_cardinal
-								has_minor_title = title_mormon_cardinal
+								is_cardinal = yes
 								is_antipope = yes
 							}
 						}
@@ -7727,9 +7729,7 @@ character_event = {
 					NOT = { block_general_event_trigger = yes }
 					OR = { 
 						higher_tier_than = BARON  
-						has_minor_title = title_cardinal
-						has_minor_title = title_ursuline_cardinal
-						has_minor_title = title_mormon_cardinal
+						is_cardinal = yes
 						is_antipope = yes
 					}
 					is_pope = no
@@ -7786,9 +7786,7 @@ character_event = {
 						NOT = { block_general_event_trigger = yes }
 						OR = { 
 							higher_tier_than = BARON  
-							has_minor_title = title_cardinal
-							has_minor_title = title_ursuline_cardinal
-							has_minor_title = title_mormon_cardinal
+							is_cardinal = yes
 							is_antipope = yes
 						}
 						is_pope = no
@@ -7802,9 +7800,7 @@ character_event = {
 						NOT = { block_general_event_trigger = yes }
 						OR = { 
 							higher_tier_than = BARON  
-							has_minor_title = title_cardinal
-							has_minor_title = title_ursuline_cardinal
-							has_minor_title = title_mormon_cardinal
+							is_cardinal = yes
 							is_antipope = yes
 						}
 						is_pope = no
@@ -7961,9 +7957,7 @@ character_event = {
 				NOT = { block_general_event_trigger = yes }
 				OR = { 
 					higher_tier_than = BARON  
-					has_minor_title = title_cardinal
-					has_minor_title = title_ursuline_cardinal
-					has_minor_title = title_mormon_cardinal
+					is_cardinal = yes
 					is_antipope = yes
 				}
 				is_pope = no
@@ -8969,6 +8963,8 @@ character_event = {
 					OR = {
 						religion = catholic
 						religion = ursuline
+						religion = confederated
+						religion = high_church
 						religion = mormon
 					}
 				}
@@ -9255,9 +9251,7 @@ character_event = {
 						NOT = { block_general_event_trigger = yes }
 						OR = { 
 							higher_tier_than = BARON  
-							has_minor_title = title_cardinal
-							has_minor_title = title_ursuline_cardinal
-							has_minor_title = title_mormon_cardinal
+							is_cardinal = yes
 							is_antipope = yes
 						}
 						is_pope = no
@@ -9271,9 +9265,7 @@ character_event = {
 						NOT = { block_general_event_trigger = yes }
 						OR = { 
 							higher_tier_than = BARON  
-							has_minor_title = title_cardinal
-							has_minor_title = title_ursuline_cardinal
-							has_minor_title = title_mormon_cardinal
+							is_cardinal = yes
 							is_antipope = yes
 						}
 						is_pope = no
@@ -9430,9 +9422,7 @@ character_event = {
 				NOT = { block_general_event_trigger = yes }
 				OR = { 
 					higher_tier_than = BARON  
-					has_minor_title = title_cardinal
-					has_minor_title = title_ursuline_cardinal
-					has_minor_title = title_mormon_cardinal
+					is_cardinal = yes
 					is_antipope = yes
 				}
 				is_pope = no

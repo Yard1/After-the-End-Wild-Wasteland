@@ -1,5 +1,9 @@
 spriteTypes = {
 	spriteType = {
+		name = "GFX_organize_secret_service"
+		texturefile = "gfx/interface/mib.dds"
+	}
+	spriteType = {
 		name = "GFX_expel_libertarian"
 		texturefile = "gfx\\interface\\decision_icon_expel_holy_order.dds"
 	}
@@ -170,5 +174,9 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_chrome_cultist_ulimate_sacrifice"
 		texturefile = "gfx/interface/sacrifice.dds"
+	}
+	spriteType= {
+		name = "GFX_recreate_dixieland"
+		texturefile = "gfx\\interface\\decision_icon_stem_duchy_of_georgia.dds"
 	}
 }

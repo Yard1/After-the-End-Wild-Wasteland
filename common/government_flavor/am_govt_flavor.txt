@@ -652,10 +652,30 @@ government_flavor = {
 
 government_flavor = {
 	name = gov_abbess_bad
-	graphics = GFX_evt_pope
+	graphics = GFX_evt_pope_feast
 	priority = 4
 	trigger = {
 		has_landed_title = k_ursuline
+		trait = bad_priest_christian
+	}
+}
+
+government_flavor = {
+	name = gov_confederated
+	graphics = GFX_evt_pope
+	priority = 4
+	trigger = {
+		has_landed_title = k_confederated
+		NOT = { trait = bad_priest_christian }
+	}
+}
+
+government_flavor = {
+	name = gov_confederated_bad
+	graphics = GFX_evt_pope_feast
+	priority = 4
+	trigger = {
+		has_landed_title = k_confederated
 		trait = bad_priest_christian
 	}
 }

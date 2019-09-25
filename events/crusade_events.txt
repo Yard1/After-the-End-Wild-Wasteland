@@ -932,6 +932,7 @@ character_event = {
 			OR = {
 				religion = catholic
 				religion = ursuline
+				religion = confederated
 			}
 			NOT = {
 				has_pledged_crusade_participation = yes
@@ -990,6 +991,7 @@ character_event = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
 				}
 				NOT = {
 					has_pledged_crusade_participation = yes
@@ -1256,6 +1258,7 @@ character_event = {
 			OR = {
 				religion = catholic
 				religion = ursuline
+				religion = confederated
 			}
 			prisoner = no
 			NOT = { trait = incapable }
@@ -1489,6 +1492,7 @@ character_event = {
 			OR = {
 				religion = catholic
 				religion = ursuline
+				religion = confederated
 			}
 			prisoner = no
 			NOT = { trait = incapable }
@@ -1721,6 +1725,7 @@ character_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+			religion = confederated
 		}
 		controls_religion = yes
 		is_preparing_crusade = yes
@@ -1731,6 +1736,7 @@ character_event = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
 				}
 				prisoner = no
 				NOT = {
@@ -1759,6 +1765,7 @@ character_event = {
 							NOR = {
 								religion = catholic
 								religion = ursuline
+								religion = confederated
 							} 
 						}
 					}
@@ -1768,12 +1775,14 @@ character_event = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
 				}
 				any_realm_lord = {
 					ai = no
 					OR = {
 						religion = catholic
 						religion = ursuline
+						religion = confederated
 					}
 					prisoner = no
 					NOT = {
@@ -1820,6 +1829,7 @@ character_event = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
 				}
 				prisoner = no
 				NOT = {
@@ -1857,6 +1867,7 @@ character_event = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
 				}
 			}
 			any_realm_lord = {
@@ -1865,6 +1876,7 @@ character_event = {
 					OR = {
 						religion = catholic
 						religion = ursuline
+						religion = confederated
 					}
 					prisoner = no
 					NOT = {
@@ -1943,6 +1955,7 @@ character_event = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
 				}
 				prisoner = no
 				has_pledged_crusade_participation = yes
@@ -1961,6 +1974,7 @@ character_event = {
 					OR = {
 						religion = catholic
 						religion = ursuline
+						religion = confederated
 					}
 					prisoner = no
 					has_pledged_crusade_participation = yes
@@ -1988,6 +2002,7 @@ character_event = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
 				}
 				prisoner = no
 				has_pledged_crusade_participation = yes
@@ -2006,6 +2021,7 @@ character_event = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
 				}
 			}
 			any_realm_lord = {
@@ -2014,6 +2030,7 @@ character_event = {
 					OR = {
 						religion = catholic
 						religion = ursuline
+						religion = confederated
 					}
 					prisoner = no
 					has_pledged_crusade_participation = yes

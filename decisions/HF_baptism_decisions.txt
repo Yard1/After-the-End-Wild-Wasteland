@@ -476,9 +476,7 @@ targetted_decisions = {
 									NOT = { block_general_event_trigger = yes }
 									OR = { 
 										higher_tier_than = BARON  
-										has_minor_title = title_cardinal
-										has_minor_title = title_ursuline_cardinal
-										has_minor_title = title_mormon_cardinal
+										is_cardinal = yes
 										is_antipope = yes
 									}
 									is_pope = no

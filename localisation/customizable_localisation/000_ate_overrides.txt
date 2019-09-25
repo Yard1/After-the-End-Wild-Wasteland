@@ -5139,6 +5139,15 @@ defined_text = { #for coronation events
 	}
 	text = {
 		trigger = {
+			OR = {
+				religion = confederated
+				religion = high_church
+			}
+		}
+		localisation_key = ARCHBISHOP
+	}
+	text = {
+		trigger = {
 			religion = libertarian
 		}
 		localisation_key = FIRST_LADY
@@ -5496,6 +5505,12 @@ defined_text = {
 			religion = mormon
 		}
 		localisation_key = COLLEGE_OF_CARDINALS_MORMON
+	}
+	text = {
+		trigger = {
+			religion = confederated
+		}
+		localisation_key = COLLEGE_OF_CARDINALS_CONFEDERATED
 	}
 	text = {
 		trigger = {

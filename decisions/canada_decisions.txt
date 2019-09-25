@@ -1,0 +1,71 @@
+decisions = {
+	unify_canadian_church = {
+		is_high_prio = yes
+		only_independent = yes
+		ai_check_interval = 12
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			is_ruler = yes
+			OR = {
+				religion = ursuline
+				religion = high_church
+				religion = angeline
+				religion = nonconformist
+				religion = exovedate
+			}
+			NOT = { has_global_flag = canadian_church_unified }
+		}
+		allow = {
+			tier = EMPEROR
+			OR = {
+				AND = {
+					any_vassal = {
+						religion = ursuline
+						controls_religion = yes
+					}
+					any_vassal = {
+						religion = high_church
+						controls_religion = yes
+					}
+				}
+				AND = {
+					hidden_tooltip = {
+						job_spiritual = { always = yes }
+					}
+					completely_controls = c_ottawa
+					completely_controls = c_toronto
+					completely_controls = c_hochelaga # Montreal
+					completely_controls = c_cap_diamant # Quebec
+					completely_controls = c_halifax # Halifax
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				if = {
+					limit = {
+						OR = {
+							religion = ursuline
+							religion = angeline
+						}
+					}
+					set_character_flag = was_ursuline
+				}
+				else = {
+					set_character_flag = was_high_church
+				}
+			}
+			religion = confederated
+			activate_title = { title = k_confederated status = yes }
+			narrative_event = { id = canada.1 }
+			#activate_title = { title = k_ursuline status = no }
+			#activate_title = { title = d_high_church status = no }
+			set_global_flag = canadian_church_unified
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -141,5 +141,6 @@ feudal_governments = {
 
 		can_revoke_without_reason = no
 		can_demand_religious_conversion = no
+		can_grant_kingdoms_and_empires_to_other_government = yes
 	}
 }

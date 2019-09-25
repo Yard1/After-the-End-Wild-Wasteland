@@ -16,6 +16,8 @@ decisions = {
 			OR = {
 				religion = catholic
 				religion = ursuline
+				religion = confederated
+				religion = high_church
 				religion = mormon
 			}
 			NOT = { trait = crowned_by_priest }
@@ -154,9 +156,7 @@ decisions = {
 								AND = {
 									OR = { 
 										higher_tier_than = BARON  
-										has_minor_title = title_cardinal
-										has_minor_title = title_ursuline_cardinal
-										has_minor_title = title_mormon_cardinal
+										is_cardinal = yes
 										is_antipope = yes
 									}
 									is_pope = no
@@ -165,9 +165,7 @@ decisions = {
 									NOR = { 
 										is_pope = yes
 										higher_real_tier_than = BARON 
-										has_minor_title = title_cardinal
-										has_minor_title = title_ursuline_cardinal
-										has_minor_title = title_mormon_cardinal
+										is_cardinal = yes
 										is_antipope = yes
 									}
 								}

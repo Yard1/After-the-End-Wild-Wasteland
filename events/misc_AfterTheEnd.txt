@@ -22118,7 +22118,7 @@ character_event = {
 	hide_window = yes
 	only_rulers = yes
 
-	option = {
+	immediate = {
 		if = {
 			limit = {
 				is_female = yes

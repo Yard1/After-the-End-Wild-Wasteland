@@ -353,6 +353,14 @@ ask_for_excommunication_chance = {
 		max = 45
 		value = num_vassals_with_minor_title
 		who = ROOT
+		key = title_confederated_cardinal
+	}
+	additive_exported_value_modifier = {
+		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS
+		factor = 2
+		max = 45
+		value = num_vassals_with_minor_title
+		who = ROOT
 		key = title_mormon_cardinal
 	}
 	
@@ -1222,6 +1230,15 @@ ask_for_excommunication_chance = {
 		min = -45
 		value = num_vassals_with_minor_title
 		who = FROMFROM
+		key = title_confederated_cardinal
+		FROM = { has_autocephaly = no } #Cardinals doesn't matter if you're orthodox
+	}
+	additive_exported_value_modifier = {
+		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS_TARGET
+		factor = -2
+		min = -45
+		value = num_vassals_with_minor_title
+		who = FROMFROM
 		key = title_mormon_cardinal
 		FROM = { has_autocephaly = no } #Cardinals doesn't matter if you're orthodox
 	}
@@ -1808,21 +1825,11 @@ ask_for_invasion_chance = {
 		value = 25
 		localisation_key = POPE_AIREASON_MODIFIER_RULER_PROTECTS_ANTIPOPE
 		FROM = {
-			NOR = {
-				has_claim = k_papal_state
-				has_claim = k_ursuline
-				has_claim = d_quorum_of_the_twelve
-				has_claim = d_supreme_court
-			}
+			is_antipope = no
 		}
 		FROMFROM = { 
 			rightful_religious_head_scope = {
-				OR = {
-					has_claim = k_papal_state
-					has_claim = k_ursuline
-					has_claim = d_quorum_of_the_twelve
-					has_claim = d_supreme_court
-				}
+				is_antipope = yes
 			}
 		}
 	}
@@ -2230,6 +2237,14 @@ ask_for_invasion_chance = {
 		value = num_vassals_with_minor_title
 		who = ROOT
 		key = title_ursuline_cardinal
+	}
+	additive_exported_value_modifier = {
+		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS
+		factor = 2
+		max = 45
+		value = num_vassals_with_minor_title
+		who = ROOT
+		key = title_confederated_cardinal
 	}
 	additive_exported_value_modifier = {
 		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS
@@ -3096,6 +3111,14 @@ ask_for_invasion_chance = {
 		value = num_vassals_with_minor_title
 		who = FROMFROM
 		key = title_ursuline_cardinal
+	}
+	additive_exported_value_modifier = {
+		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS_TARGET
+		factor = -2
+		min = -45
+		value = num_vassals_with_minor_title
+		who = FROMFROM
+		key = title_confederated_cardinal
 	}
 	additive_exported_value_modifier = {
 		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS_TARGET
@@ -4038,6 +4061,14 @@ ask_for_divorce_chance = {
 		max = 45
 		value = num_vassals_with_minor_title
 		who = ROOT
+		key = title_confederated_cardinal
+	}
+	additive_exported_value_modifier = {
+		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS
+		factor = 2
+		max = 45
+		value = num_vassals_with_minor_title
+		who = ROOT
 		key = title_mormon_cardinal
 	}
 	
@@ -4885,6 +4916,14 @@ ask_for_divorce_chance = {
 		value = num_vassals_with_minor_title
 		who = FROMFROM
 		key = title_ursuline_cardinal
+	}
+	additive_exported_value_modifier = {
+		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS_TARGET
+		factor = -2
+		min = -45
+		value = num_vassals_with_minor_title
+		who = FROMFROM
+		key = title_confederated_cardinal
 	}
 	additive_exported_value_modifier = {
 		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS_TARGET
@@ -5745,6 +5784,14 @@ ask_to_lift_excommunication_chance = {
 		value = num_vassals_with_minor_title
 		who = ROOT
 		key = title_ursuline_cardinal
+	}
+	additive_exported_value_modifier = {
+		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS
+		factor = 2
+		max = 45
+		value = num_vassals_with_minor_title
+		who = ROOT
+		key = title_confederated_cardinal
 	}
 	additive_exported_value_modifier = {
 		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS
@@ -7501,6 +7548,14 @@ ask_for_money_chance = {
 		max = 45
 		value = num_vassals_with_minor_title
 		who = ROOT
+		key = title_confederated_cardinal
+	}
+	additive_exported_value_modifier = {
+		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS
+		factor = 2
+		max = 45
+		value = num_vassals_with_minor_title
+		who = ROOT
 		key = title_mormon_cardinal
 	}
 	
@@ -8448,6 +8503,14 @@ ask_for_crusade_chance = {
 		value = num_vassals_with_minor_title
 		who = ROOT
 		key = title_ursuline_cardinal
+	}
+	additive_exported_value_modifier = {
+		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS
+		factor = 4
+		max = 80
+		value = num_vassals_with_minor_title
+		who = ROOT
+		key = title_confederated_cardinal
 	}
 	additive_exported_value_modifier = {
 		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS
@@ -9492,6 +9555,14 @@ ask_for_claim_chance = {
 		max = 45
 		value = num_vassals_with_minor_title
 		who = ROOT
+		key = title_confederated_cardinal
+	}
+	additive_exported_value_modifier = {
+		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS
+		factor = 2
+		max = 45
+		value = num_vassals_with_minor_title
+		who = ROOT
 		key = title_mormon_cardinal
 	}
 	
@@ -10351,6 +10422,14 @@ ask_for_claim_chance = {
 		value = num_vassals_with_minor_title
 		who = FROMFROM
 		key = title_ursuline_cardinal
+	}
+	additive_exported_value_modifier = {
+		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS_TARGET
+		factor = -2
+		min = -45
+		value = num_vassals_with_minor_title
+		who = FROMFROM
+		key = title_confederated_cardinal
 	}
 	additive_exported_value_modifier = {
 		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS_TARGET
@@ -11230,6 +11309,14 @@ nominate_bishop_chance = {
 		value = num_vassals_with_minor_title
 		who = ROOT
 		key = title_ursuline_cardinal
+	}
+	additive_exported_value_modifier = {
+		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS
+		factor = 2
+		max = 45
+		value = num_vassals_with_minor_title
+		who = ROOT
+		key = title_confederated_cardinal
 	}
 	additive_exported_value_modifier = {
 		localisation_key = POPE_AIREASON_MODIFIER_CONTROLLED_CARDINALS

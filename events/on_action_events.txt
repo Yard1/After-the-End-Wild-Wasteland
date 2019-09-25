@@ -4079,6 +4079,7 @@ narrative_event = {
 			NOR = {
 				religion = catholic
 				religion = ursuline
+				religion = confederated
 			}
 		}
 	}

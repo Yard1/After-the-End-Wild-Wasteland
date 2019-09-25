@@ -12676,6 +12676,7 @@ landless_pope_effect = {
 			character_event = { id = canada.28 }
 		}
 	}
+	#add k_confederated here
 }
 
 add_sympathy_for_religion_effect = {
@@ -14569,7 +14570,7 @@ randomize_religion_names_effect = {
 				is_name_randomized = yes
 			}
 		}
-		d_confederated = {
+		k_confederated = {
 			set_name="ALT_MONOTHELITE"
 			adjective="ALT_MONOTHELITE_ADJ"
 			ruler="POPE"

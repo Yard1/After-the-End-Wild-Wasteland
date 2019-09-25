@@ -951,4 +951,6 @@ decisions = {
 			}
 		}
 	}
+
+	#add stuff for k_confederated
 }

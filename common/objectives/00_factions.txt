@@ -5953,6 +5953,8 @@ faction_claimant = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				top_liege = {
@@ -5963,11 +5965,7 @@ faction_claimant = {
 					}
 					religion = FROM
 					rightful_religious_head_scope = {
-						OR = {
-							has_claim = k_papal_state
-							has_claim = k_ursuline
-							has_claim = d_quorum_of_the_twelve
-						}
+						is_antipope = yes
 					}
 					any_realm_lord = {
 						in_faction = faction_antiking
@@ -6494,6 +6492,8 @@ faction_claimant = {
 			OR = {
 				religion = catholic
 				religion = ursuline
+				religion = confederated
+				religion = high_church
 				religion = mormon
 			}
 			top_liege = {
@@ -6504,11 +6504,7 @@ faction_claimant = {
 				}
 				religion = ROOT
 				rightful_religious_head_scope = {
-					OR = {
-						has_claim = k_papal_state
-						has_claim = k_ursuline
-						has_claim = d_quorum_of_the_twelve
-					}
+					is_antipope = yes
 				}
 				any_realm_lord = {
 					in_faction = faction_antiking
@@ -6958,6 +6954,8 @@ faction_antiking = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+			religion = confederated
+			religion = high_church
 			religion = mormon
 		}
 		NOT = { is_incapable = yes }
@@ -6965,11 +6963,7 @@ faction_antiking = {
 		liege = {
 			religion = ROOT
 			rightful_religious_head_scope = {
-				OR = {
-					has_claim = k_papal_state
-					has_claim = k_ursuline
-					has_claim = d_quorum_of_the_twelve
-				}
+				is_antipope = yes
 			}
 			NOT = {
 				any_demesne_title = {

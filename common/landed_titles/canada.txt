@@ -35,6 +35,7 @@ e_canada = {
 		allow = {
 			OR = {
 				religion = ursuline
+				religion = confederated
 				is_heresy_of = ursuline
 			}
 			k_maritimes = {

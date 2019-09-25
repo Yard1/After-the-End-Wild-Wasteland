@@ -172,9 +172,7 @@ character_event = {
 				NOT = { block_general_event_trigger = yes }
 				OR = { 
 					higher_tier_than = BARON  
-					has_minor_title = title_cardinal
-					has_minor_title = title_ursuline_cardinal
-					has_minor_title = title_mormon_cardinal
+					is_cardinal = yes
 					is_antipope = yes
 				}
 				is_pope = no
@@ -210,9 +208,7 @@ character_event = {
 				NOT = { block_general_event_trigger = yes }
 				OR = { 
 					higher_tier_than = BARON  
-					has_minor_title = title_cardinal
-					has_minor_title = title_ursuline_cardinal
-					has_minor_title = title_mormon_cardinal
+					is_cardinal = yes
 					is_antipope = yes
 				}
 				is_pope = no
@@ -221,11 +217,7 @@ character_event = {
 				is_antipope = yes
 			}
 			preferred_limit = { 
-				OR = {
-					has_minor_title = title_cardinal
-					has_minor_title = title_ursuline_cardinal
-					has_minor_title = title_mormon_cardinal
-				}
+				is_cardinal = yes
 			}
 			hidden_tooltip = { letter_event = { id = HF.20201 days = 30 random = 5 } } 
 			break = yes
@@ -252,9 +244,7 @@ character_event = {
 				NOR = { 
 					is_pope = yes
 					higher_real_tier_than = BARON 
-					has_minor_title = title_cardinal
-					has_minor_title = title_ursuline_cardinal
-					has_minor_title = title_mormon_cardinal
+					is_cardinal = yes
 					is_antipope = yes
 				}
 			}
@@ -299,9 +289,7 @@ character_event = {
 					NOT = { block_general_event_trigger = yes }
 					OR = { 
 						higher_real_tier_than = BARON 
-						has_minor_title = title_cardinal
-						has_minor_title = title_ursuline_cardinal
-						has_minor_title = title_mormon_cardinal
+						is_cardinal = yes
 						is_antipope = yes
 					}
 					is_pope = no
@@ -317,9 +305,7 @@ character_event = {
 						NOT = { block_general_event_trigger = yes }
 						OR = { 
 							higher_real_tier_than = BARON 
-							has_minor_title = title_cardinal
-							has_minor_title = title_ursuline_cardinal
-							has_minor_title = title_mormon_cardinal
+							is_cardinal = yes
 							is_antipope = yes
 						}
 						is_pope = no
@@ -342,9 +328,7 @@ character_event = {
 				NOR = { 
 					is_pope = yes
 					higher_real_tier_than = BARON 
-					has_minor_title = title_cardinal
-					has_minor_title = title_ursuline_cardinal
-					has_minor_title = title_mormon_cardinal
+					is_cardinal = yes
 					is_antipope = yes
 				}
 			}
@@ -417,6 +401,8 @@ letter_event = {
 			OR = {
 				religion = catholic
 				religion = ursuline
+^				religion = confederated
+				religion = high_chruch
 				religion = mormon
 			}
 		}
@@ -428,9 +414,7 @@ letter_event = {
 			NOR = { 
 				is_pope = yes
 				higher_real_tier_than = BARON 
-				has_minor_title = title_cardinal
-				has_minor_title = title_ursuline_cardinal
-				has_minor_title = title_mormon_cardinal
+				is_cardinal = yes
 				is_antipope = yes
 			}
 		}
@@ -546,9 +530,7 @@ letter_event = {
 			is_pope = no
 			OR = { 
 				higher_real_tier_than = BARON 
-				has_minor_title = title_cardinal
-				has_minor_title = title_ursuline_cardinal
-				has_minor_title = title_mormon_cardinal
+				is_cardinal = yes
 				is_antipope = yes
 			}
 		}
@@ -1416,15 +1398,13 @@ letter_event = {
 							OR = {
 								religion = catholic
 								religion = ursuline
+^								religion = confederated
+								religion = high_chruch
 								religion = mormon
 							}
 							rightful_religious_head_scope = {
 								is_liege_or_above = PREV
-								OR = {
-									has_claim = k_papal_state
-									has_claim = k_ursuline
-									has_claim = d_quorum_of_the_twelve
-								}
+								is_antipope = yes
 							}
 						}
 					}
@@ -1649,6 +1629,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -1693,6 +1675,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -1738,6 +1722,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -1784,6 +1770,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -1829,6 +1817,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -2012,6 +2002,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -2094,6 +2086,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -2144,6 +2138,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -2187,6 +2183,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -2244,6 +2242,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -2643,6 +2643,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -2708,6 +2710,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -3195,6 +3199,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -3209,15 +3215,13 @@ letter_event = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+^					religion = confederated
+					religion = high_chruch
 					religion = mormon
 				}
 				rightful_religious_head_scope = {
 					is_liege_or_above = PREV
-					OR = {
-						has_claim = k_papal_state
-						has_claim = k_ursuline
-						has_claim = d_quorum_of_the_twelve
-					}
+					is_antipope = yes
 				}
 			}
 			preferred_limit = { 
@@ -3689,6 +3693,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -4466,7 +4472,9 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
+			religion = mormon
 		}
 	}
 	is_triggered_only = yes
@@ -5833,6 +5841,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -6153,7 +6163,7 @@ character_event = {
 			if = { 
 				limit = {
 					is_female = yes
-					NOT = { religion = ursuline }					
+					FROMFROMFROM = { is_female = no }
 					NOT = { age = 40 }
 					fertility = 0.4
 				}
@@ -6211,7 +6221,7 @@ character_event = {
 			if = { 
 				limit = {
 					is_female = no
-					religion = ursuline
+					FROMFROMFROM = { is_female = yes }
 					fertility = 0.4
 				}
 				random = { 
@@ -6354,6 +6364,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -6424,6 +6436,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -6532,6 +6546,8 @@ character_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}
@@ -6941,6 +6957,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 		OR = {
@@ -6966,6 +6984,8 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 		OR = {
@@ -7023,6 +7043,8 @@ character_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 		OR = {
@@ -10741,6 +10763,8 @@ character_event = {
 			OR = {
 				religion = catholic
 				religion = ursuline
+^				religion = confederated
+				religion = high_chruch
 				religion = mormon
 			}
 			OR = {
@@ -10944,6 +10968,8 @@ character_event = {
 			OR = {
 				religion = catholic
 				religion = ursuline
+^				religion = confederated
+				religion = high_chruch
 				religion = mormon
 			}
 			OR = {
@@ -11734,6 +11760,8 @@ character_event = {
 				OR = {
 					religion = catholic 
 					religion = ursuline 
+^					religion = confederated
+					religion = high_chruch
 					religion = mormon
 				}
 				is_feudal = yes
@@ -11785,9 +11813,28 @@ character_event = {
 							has_landed_title = k_louisiana
 						} 
 					}
+					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Abbess-General.
+						factor = 0.5
+						religion = confederated
+						NOR = {  
+							has_landed_title = k_ontario
+							has_landed_title = k_quebec
+							has_landed_title = k_aurora
+							has_landed_title = k_michigan
+							has_landed_title = k_cote_nord
+							has_landed_title = k_louisiana
+						} 
+					}
+					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Abbess-General.
+						factor = 0.5
+						religion = high_church
+						NOT = {  
+							has_landed_title = k_ontario
+						} 
+					}
 					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Pope.
 						factor = 0.5
-						religion = ursuline
+						religion = mormon
 						NOR = {  
 							has_landed_title = k_deseret
 							has_landed_title = k_arixo
@@ -11809,6 +11856,19 @@ character_event = {
 							has_landed_title = k_platte
 							has_landed_title = k_comancheria
 						} 
+					}
+					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Abbess-General.
+						factor = 10
+						religion = confederated
+						OR = {
+							has_landed_title = k_ontario
+							has_landed_title = k_quebec
+						}
+					}
+					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Abbess-General.
+						factor = 10
+						religion = high_church
+						has_landed_title = k_ontario
 					}
 					modifier = { #Historically more likely.
 						factor = 10
@@ -11844,9 +11904,7 @@ character_event = {
 								religion = ROOT
 								OR = { 
 									higher_real_tier_than = BARON 
-									has_minor_title = title_cardinal
-									has_minor_title = title_ursuline_cardinal
-									has_minor_title = title_mormon_cardinal
+									is_cardinal = yes
 									is_antipope = yes
 								}
 								is_pope = no
@@ -11872,9 +11930,7 @@ character_event = {
 							religion = ROOT
 							OR = { 
 								higher_real_tier_than = BARON 
-								has_minor_title = title_cardinal
-								has_minor_title = title_ursuline_cardinal
-								has_minor_title = title_mormon_cardinal
+								is_cardinal = yes
 								is_antipope = yes
 							}
 							is_pope = no
@@ -11930,18 +11986,14 @@ character_event = {
 	immediate = { 
 		random_realm_character = { 
 			limit = { 
-			is_theocracy = yes 
-			religion = ROOT
-			OR = { 
-				higher_real_tier_than = BARON 
-				has_minor_title = title_cardinal
-				has_minor_title = title_ursuline_cardinal
-				has_minor_title = title_mormon_cardinal
-				is_antipope = yes
-			}
-			NOT = { has_landed_title = k_papal_state }
-			NOT = { has_landed_title = k_ursuline }
-			NOT = { has_landed_title = d_quorum_of_the_twelve }
+				is_theocracy = yes 
+				religion = ROOT
+				OR = { 
+					higher_real_tier_than = BARON 
+					is_cardinal = yes
+					is_antipope = yes
+				}
+				is_pope = no
 			}
 			ROOT = { save_persistent_event_target = { name = coronation_priest_per scope = PREV } }
 		}
@@ -11963,6 +12015,8 @@ character_event = {
 		OR = { 
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 		NOR =  { 
@@ -11996,6 +12050,8 @@ character_event = {
 		OR = { 
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 		NOR =  { 
@@ -12039,6 +12095,8 @@ character_event = {
 						NOR = { 
 							religion = catholic
 							religion = ursuline
+^							religion = confederated
+							religion = high_chruch
 							religion = mormon
 						}
 					}
@@ -12206,6 +12264,8 @@ character_event = {
 		OR = { 
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 		capital_scope = { religion = ROOT }
@@ -12250,6 +12310,8 @@ character_event = {
 		OR = { 
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 		higher_real_tier_than = DUKE
@@ -12327,6 +12389,8 @@ character_event = {
 			OR = { 
 				religion = catholic
 				religion = ursuline
+^				religion = confederated
+				religion = high_chruch
 				religion = mormon
 			}
 			higher_real_tier_than = DUKE
@@ -12639,6 +12703,8 @@ character_event = {
 			OR = { 
 				religion = catholic
 				religion = ursuline
+^				religion = confederated
+				religion = high_chruch
 				religion = mormon
 			}
 			higher_real_tier_than = DUKE
@@ -12720,6 +12786,8 @@ character_event = {
 			OR = { 
 				religion = catholic
 				religion = ursuline
+^				religion = confederated
+				religion = high_chruch
 				religion = mormon
 			}
 			higher_real_tier_than = DUKE
@@ -13799,6 +13867,8 @@ character_event = {
 		OR = { 
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 		NOT = { check_variable = { which = uncrowned_count value = 30 } } #Stop at minus thirty.
@@ -14171,6 +14241,8 @@ character_event = {
 			NOR = { 
 				religion = ursuline
 				religion = mormon
+^				religion = confederated
+				religion = high_chruch
 				religion = catholic
 			}
 		}
@@ -14181,6 +14253,8 @@ character_event = {
 			OR = { 
 				religion = ursuline
 				religion = mormon
+^				religion = confederated
+				religion = high_chruch
 				religion = catholic
 			}
 		}
@@ -14210,6 +14284,8 @@ character_event = {
 			OR = {
 				religion = catholic
 				religion = ursuline
+^				religion = confederated
+				religion = high_chruch
 				religion = mormon
 			}
 		}
@@ -14231,6 +14307,8 @@ character_event = {
 				NOR = { 
 					religion = catholic
 					religion = ursuline
+^					religion = confederated
+					religion = high_chruch
 					religion = mormon
 				}
 			}
@@ -14241,6 +14319,8 @@ character_event = {
 				OR = { 
 					religion = catholic
 					religion = ursuline
+^					religion = confederated
+					religion = high_chruch
 					religion = mormon
 				}
 			}
@@ -15531,6 +15611,8 @@ character_event = {
 		NOR = {
 			religion = catholic
 			religion = ursuline
+^			religion = confederated
+			religion = high_chruch
 			religion = mormon
 		}
 	}

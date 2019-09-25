@@ -146,7 +146,6 @@ succession_laws = {
 				holder_scope = { is_tribal = yes }
 			}
 			is_primary_type_title = no
-			NOT = { has_landed_title = d_confederated }
 		}
 		allow = {
 			holder_scope = {
@@ -288,7 +287,6 @@ succession_laws = {
 				holder_scope = { is_tribal = yes }
 			}
 			is_primary_type_title = no
-			NOT = { has_landed_title = d_confederated }
 			NOT = { holder_scope = { government = military_governorate } }
 			#NOT = { holder_scope = { government = chinese_imperial_government } }
 		}
@@ -415,7 +413,6 @@ succession_laws = {
 				holder_scope = { is_tribal = yes }
 			}
 			is_primary_type_title = no
-			NOT = { has_landed_title = d_confederated }
 			NOT = { holder_scope = { government = military_governorate } }
 			#NOT = { holder_scope = { government = chinese_imperial_government } }
 		}
@@ -1562,7 +1559,6 @@ succession_laws = {
 					has_law = succ_hre_elective
 				}
 			}
-			NOT = { has_landed_title = d_confederated }
 			NOT = { holder_scope = { government = military_governorate } }
 		}
 		effect = {
@@ -1578,6 +1574,7 @@ succession_laws = {
 			OR = {
 				title = k_papal_state
 				title = k_ursuline
+				title = k_confederated
 				title = d_quorum_of_the_twelve
 				AND = {
 					title = d_celtic_pagan_reformed
@@ -1605,7 +1602,6 @@ succession_laws = {
 				}
 				is_merchant_republic = no
 			}
-			NOT = { has_landed_title = d_confederated }
 			NOT = { holder_scope = { government = military_governorate } }
 			NOT = { holder_scope = { government = chinese_imperial_government } }
 		}
@@ -1628,6 +1624,7 @@ succession_laws = {
 				title = d_libertarian
 				title = d_men_in_black
 				title = k_ursuline
+				title = k_confederated
 				title = d_quorum_of_the_twelve
 				title = d_celtic_pagan_reformed
 				title = e_redcoat_dominion
@@ -1663,10 +1660,11 @@ succession_laws = {
 			OR = {
 				is_landless_type_title = yes
 				holder_scope = { is_theocracy = no }
-				holder_scope = { 
+				holder_scope = {
 					NOR = { 
 						religion = catholic
 						religion = ursuline
+						religion = confederated
 						religion = high_church
 						religion = bickertonite
 						religion = strangite
@@ -1718,6 +1716,7 @@ succession_laws = {
 			}
 			
 			holder_scope = {
+				controls_religion = no
 				OR = {
 					religion = catholic
 					religion = ursuline
@@ -1740,7 +1739,6 @@ succession_laws = {
 				}
 			}
 			is_primary_type_title = no
-			NOT = { has_landed_title = d_confederated }
 			NOT = { holder_scope = { government = military_governorate } }
 			#NOT = { holder_scope = { government = chinese_imperial_government } }
 		}
@@ -1766,7 +1764,6 @@ succession_laws = {
 			holder_scope = {
 				is_merchant_republic = yes
 			}
-			NOT = { has_landed_title = d_confederated }
 			NOT = { holder_scope = { government = military_governorate } }
 		}
 		effect = {
@@ -1797,7 +1794,6 @@ succession_laws = {
 				top_liege = { is_offmap_governor = yes }
 				government = military_governorate # To use this with future offmap powers, use an OR clause here with the new government types
 			}
-			NOT = { has_landed_title = d_confederated }
 		}
 		effect = {
 			succession = offmap_succession

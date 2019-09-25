@@ -1805,6 +1805,7 @@ religion_leadership = {
 						OR = { 
 							religion = catholic
 							religion = ursuline
+							religion = confederated
 						} 
 					}
 					set_can_grant_claim = yes

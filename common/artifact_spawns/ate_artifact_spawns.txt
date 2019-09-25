@@ -361,7 +361,7 @@ st_stanleys_chalice = {
 			value = 100
 			higher_tier_than = DUKE
 			is_tribal = no
-			religion = ursuline
+			OR = { religion = ursuline religion = confederated }
 		}
 	}
 

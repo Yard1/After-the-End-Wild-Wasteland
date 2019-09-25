@@ -123,61 +123,20 @@ character_event = {
 	picture = GFX_evt_capitol_building
 	
 	is_triggered_only = yes
-	
-	trigger = {
-		any_child = {
-			is_alive = yes
-			OR = {
-				ROOT = { player_heir = { character = PREV } }
-				AND = {
-					ROOT = { 
-						NOR = {
-							matriarchal_religion = yes
-							has_religion_feature = religion_patriarchal
-						}
-						primary_title = { NOT = { has_law = enatic_succession } } 
-					}
-					is_female = no
-				}
-				AND = {
-					ROOT = { 
-						NOR = {
-							matriarchal_religion = yes
-							has_religion_feature = religion_patriarchal
-						}
-						primary_title = { NOT = { has_law = agnatic_succession } }
-					}
-					is_female = yes
-				}
-				AND = {
-					ROOT = { 
-						matriarchal_religion = yes
-					}
-					is_female = yes
-				}
-				AND = {
-					ROOT = { 
-						has_religion_feature = religion_patriarchal
-					}
-					is_female = no
-				}
-			}
-			NOR = {
-				has_inheritance_blocker = yes
-				is_consort = yes
-				is_theocracy = yes
-				is_offmap_ruler = yes
-				holy_order = yes
-				any_liege = { holy_order = yes }
-			}
+
+	option = {
+		name = "vassalize d_high_church"
+		d_high_church = {
+			holder_scope = { set_defacto_liege = ROOT }
 		}
 	}
 
 	option = {
-		name = "enable americanists ghws"
-		#capital_scope = { religion = amazonian }
+		name = "vassalize k_ursuline"
+		k_ursuline = {
+			holder_scope = { set_defacto_liege = ROOT }
+		}
 	}
-
 }
 
 character_event = {

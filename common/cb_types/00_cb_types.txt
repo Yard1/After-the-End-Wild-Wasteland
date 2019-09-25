@@ -513,6 +513,7 @@ other_claim = {
 					OR = {
 						religion = catholic
 						religion = ursuline
+						religion = confederated
 					}
 				}
 			}
@@ -536,6 +537,7 @@ other_claim = {
 							OR = {
 								religion = catholic 
 								religion = ursuline 
+								religion = confederated
 							}
 						}
 					}
@@ -2988,6 +2990,8 @@ invasion = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -3385,6 +3389,8 @@ tribal_invasion = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -6652,6 +6658,8 @@ religious = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -9782,6 +9790,8 @@ embargo_cb = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -9983,6 +9993,8 @@ seize_trade_post = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -10539,6 +10551,8 @@ pagan_subjugation = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -12677,6 +12691,8 @@ dejure_county_claim = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -13386,7 +13402,7 @@ depose_antipope = {
 			rightful_religious_head_scope = {
 				NOT = { has_claim = k_papal_state }
 				NOT = { has_claim = k_ursuline }
-				NOT = { has_claim = d_confederated }
+				NOT = { has_claim = k_confederated }
 				NOT = { has_claim = d_high_church }
 			}
 			mercenary = no
@@ -13397,7 +13413,7 @@ depose_antipope = {
 				OR = {
 					has_claim = k_papal_state
 					has_claim = k_ursuline
-					has_claim = d_confederated
+					has_claim = k_confederated
 					has_claim = d_high_church
 				}
 			}
@@ -13416,7 +13432,7 @@ depose_antipope = {
 			rightful_religious_head_scope = {
 				NOT = { has_claim = k_papal_state }
 				NOT = { has_claim = k_ursuline }
-				NOT = { has_claim = d_confederated }
+				NOT = { has_claim = k_confederated }
 				NOT = { has_claim = d_high_church }
 			}
 		}
@@ -13426,7 +13442,7 @@ depose_antipope = {
 				OR = {
 					has_claim = k_papal_state
 					has_claim = k_ursuline
-					has_claim = d_confederated
+					has_claim = k_confederated
 					has_claim = d_high_church
 				}
 			}
@@ -13509,7 +13525,7 @@ depose_antipope = {
 			rightful_religious_head_scope = {
 				remove_claim = k_papal_state
 				remove_claim = k_ursuline
-				remove_claim = d_confederated
+				remove_claim = k_confederated
 				remove_claim = d_high_church
 			}
 		}
@@ -13598,6 +13614,7 @@ cb_install_antiking = {
 			OR = {
 				religion = catholic
 				religion = ursuline
+				religion = confederated
 				religion = high_church
 			}
 		}
@@ -13616,6 +13633,7 @@ cb_install_antiking = {
 			OR = {
 				religion = catholic
 				religion = ursuline
+				religion = confederated
 				religion = high_church
 			}
 		}
@@ -13701,6 +13719,19 @@ cb_install_antiking = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					religion = confederated
+				}
+				k_confederated = {
+					holder_scope = {
+						opinion = {
+							who = ROOT
+							modifier = opinion_deposed_antipope
+						}
+					}
+				}
+			}
 		}
 		
 		FROM = { 
@@ -13711,6 +13742,7 @@ cb_install_antiking = {
 				rightful_religious_head_scope = {
 					remove_claim = k_papal_state
 					remove_claim = k_ursuline
+					remove_claim = k_confederated
 					remove_claim = d_high_church
 				}
 			}
@@ -14815,6 +14847,8 @@ tributary_cb = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -15213,6 +15247,8 @@ free_tributary_cb = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -15534,6 +15570,8 @@ nomad_dispute = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {
@@ -15771,6 +15809,8 @@ cb_liberate_nomad_duchy = {
 				OR = {
 					religion = catholic
 					religion = ursuline
+					religion = confederated
+					religion = high_church
 					religion = mormon
 				}
 				NOR = {

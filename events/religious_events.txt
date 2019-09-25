@@ -193,6 +193,7 @@ character_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+			religion = confederated
 			AND = {
 				religion = nestorian
 				is_heretic = no
@@ -291,6 +292,7 @@ character_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+			religion = confederated
 			AND = {
 				religion = nestorian
 				is_heretic = no
@@ -382,6 +384,7 @@ character_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+			religion = confederated
 			AND = {
 				religion = nestorian
 				is_heretic = no
@@ -1063,6 +1066,7 @@ character_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+			religion = confederated
 			religion = nestorian
 		}
 		
@@ -1185,6 +1189,7 @@ character_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+			religion = confederated
 			religion = nestorian
 		}
 		
@@ -1328,6 +1333,7 @@ character_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+			religion = confederated
 			religion = nestorian
 		}
 		prisoner = yes
@@ -1705,6 +1711,7 @@ character_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+			religion = confederated
 			religion = nestorian
 		}
 		
@@ -2518,6 +2525,7 @@ character_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+			religion = confederated
 			religion = nestorian
 		}
 	
@@ -2706,6 +2714,7 @@ character_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
+			religion = confederated
 			religion = nestorian
 		}
 	
@@ -4817,7 +4826,7 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		d_confederated = {
+		k_confederated = {
 			any_claimant = {
 				OR = {
 					NOT = { religion = confederated }
@@ -4832,7 +4841,7 @@ character_event = {
 	}
 	
 	immediate = {
-		d_confederated = {
+		k_confederated = {
 			any_claimant = {
 				limit = {
 					OR = {
@@ -4840,7 +4849,7 @@ character_event = {
 						any_liege = { NOT = { religion = confederated } }
 					}
 				}
-				remove_claim = d_confederated
+				remove_claim = k_confederated
 			}
 		}
 	}

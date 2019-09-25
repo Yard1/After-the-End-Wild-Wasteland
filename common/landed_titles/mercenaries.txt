@@ -2543,7 +2543,10 @@ d_abbey_guards = { #Le Vingt-Deuxième
 	foa = "CAPTAIN_FOA"
 
 	allow = {
-		has_landed_title = k_ursuline
+		OR = {
+			has_landed_title = k_ursuline
+			has_landed_title = k_confederated
+		}
 	}
 
 	# Always exists

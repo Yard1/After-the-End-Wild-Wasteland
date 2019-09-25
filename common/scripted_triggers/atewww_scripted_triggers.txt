@@ -315,7 +315,7 @@ is_antipope = {
 			title = k_papal_state
 			title = k_ursuline
 			title = d_high_church
-			title = d_confederated
+			title = k_confederated
 			title = d_quorum_of_the_twelve
 		}
 	}
@@ -439,5 +439,14 @@ religion_supports_child_abduction_of_ROOT = { #hey there FBI
 				}
 			}
 		}
+	}
+}
+
+is_cardinal = {
+	OR = {
+		has_minor_title = title_cardinal
+		has_minor_title = title_ursuline_cardinal
+		has_minor_title = title_mormon_cardinal
+		has_minor_title = title_hamiltonian_justice
 	}
 }

@@ -311,6 +311,14 @@ character_event = {
                     }
 				}
 			}
+			confederated = {
+				official_crusade_recipient = {
+                    character = ROOT
+                    NOT = {
+                        religion = confederated
+                    }
+				}
+			}
 		}
         NOT = {
             has_character_flag = fourth_crusade_recipient
@@ -322,6 +330,7 @@ character_event = {
     		on_trigger = religion
     		catholic = { k_papal_state = { owner = { character_event = { id = HFP.41000 days = 1 } } } }
     		ursuline = { k_ursuline = { owner = { character_event = { id = HFP.41000 days = 1 } } } }
+			confederated = { k_confederated = { owner = { character_event = { id = HFP.41000 days = 1 } } } }
     	}
     }
 }
@@ -6501,6 +6510,22 @@ province_event = {
                 }
             }
         }
+        if = {
+            limit = {
+                k_confederated = {
+                    owner = {
+                        any_war = {
+                            using_cb = new_crusade
+                        }
+                    }
+                }
+            }
+            k_confederated = {
+                owner = {
+                    character_event = { id = HFP.41143 }
+                }
+            }
+        }
         if = { #Delay event if the target is far far away
             limit = {
                 any_war = {
@@ -6667,6 +6692,22 @@ province_event = {
                 }
             }
             k_ursuline = {
+                owner = {
+                    character_event = { id = HFP.41146 }
+                }
+            }
+        }
+        if = {
+            limit = {
+                k_confederated = {
+                    owner = {
+                        any_war = {
+                            using_cb = new_crusade
+                        }
+                    }
+                }
+            }
+            k_confederated = {
                 owner = {
                     character_event = { id = HFP.41146 }
                 }

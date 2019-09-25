@@ -17,6 +17,10 @@ character_event = {
 		death_in_china_trigger = no
 		death_no_trace_trigger = no
 		NOR = {
+			religion = evangelical
+			religion = antinomian
+			religion = charismatic
+			religion = postadventist
 			trait = excommunicated
 			trait = drunkard
 			trait = hedonist
@@ -987,21 +991,6 @@ character_event = {
                         if = {
                             limit = {
                                 OR = {
-                                    religion = evangelical
-                                    religion = antinomian
-                                    religion = charismatic
-                                    religion = postadventist
-                                }
-                            }
-                            create_bloodline = {
-                                type = saintly_bloodline_evangelical_01
-                                religion = event_target:saint_person
-                                inheritance = patrilineal
-                            }
-                        }
-                        else_if = {
-                            limit = {
-                                OR = {
 									religion = ursuline
 									religion = angeline
 									religion = confederated
@@ -1328,22 +1317,7 @@ character_event = {
                         }
                     }
                     event_target:saint_person = {
-                         if = {
-                            limit = {
-                                OR = {
-                                    religion = evangelical
-                                    religion = antinomian
-                                    religion = charismatic
-                                    religion = postadventist
-                                }
-                            }
-                            create_bloodline = {
-                                type = saintly_bloodline_evangelical_02
-                                religion = event_target:saint_person
-                                inheritance = patrilineal
-                            }
-                        }
-                        else_if = {
+                        if = {
                             limit = {
                                 OR = {
 									religion = ursuline
@@ -1430,21 +1404,6 @@ character_event = {
                 5 = {
                     event_target:saint_person = {
                         if = {
-                            limit = {
-                                OR = {
-                                    religion = evangelical
-                                    religion = antinomian
-                                    religion = charismatic
-                                    religion = postadventist
-                                }
-                            }
-                            create_bloodline = {
-                                type = saintly_bloodline_evangelical_03
-                                religion = event_target:saint_person
-                                inheritance = patrilineal
-                            }
-                        }
-                        else_if = {
                             limit = {
                                 OR = {
 									religion = ursuline
@@ -1762,21 +1721,6 @@ character_event = {
                         if = {
                             limit = {
                                 OR = {
-                                    religion = evangelical
-                                    religion = antinomian
-                                    religion = charismatic
-                                    religion = postadventist
-                                }
-                            }
-                            create_bloodline = {
-                                type = saintly_bloodline_evangelical_04
-                                religion = event_target:saint_person
-                                inheritance = patrilineal
-                            }
-                        }
-                        else_if = {
-                            limit = {
-                                OR = {
 									religion = ursuline
 									religion = angeline
 									religion = confederated
@@ -2086,21 +2030,6 @@ character_event = {
                         if = {
                             limit = {
                                 OR = {
-                                    religion = evangelical
-                                    religion = antinomian
-                                    religion = charismatic
-                                    religion = postadventist
-                                }
-                            }
-                            create_bloodline = {
-                                type = saintly_bloodline_evangelical_05
-                                religion = event_target:saint_person
-                                inheritance = patrilineal
-                            }
-                        }
-                        else_if = {
-                            limit = {
-                                OR = {
 									religion = ursuline
 									religion = angeline
 									religion = confederated
@@ -2403,21 +2332,6 @@ character_event = {
                 5 = {
                     event_target:saint_person = {
                         if = {
-                            limit = {
-                                OR = {
-                                    religion = evangelical
-                                    religion = antinomian
-                                    religion = charismatic
-                                    religion = postadventist
-                                }
-                            }
-                            create_bloodline = {
-                                type = saintly_bloodline_evangelical_06
-                                religion = event_target:saint_person
-                                inheritance = patrilineal
-                            }
-                        }
-                        else_if = {
                             limit = {
                                 OR = {
 									religion = ursuline
@@ -2877,7 +2791,7 @@ character_event = {
 			}
 			AND = {
 				rightful_religious_head_scope = {
-					has_landed_title = d_confederated
+					has_landed_title = k_confederated
 				}
 				NOT = { has_global_flag = only_confed_saints }
 			}
@@ -3025,7 +2939,7 @@ character_event = {
 			}
 			AND = {
 				rightful_religious_head_scope = {
-					has_landed_title = d_confederated
+					has_landed_title = k_confederated
 				}
 				NOT = { has_global_flag = only_confed_saints }
 			}
@@ -3321,7 +3235,7 @@ province_event = {
 			limit = {
 				has_global_flag = bad_confed_saint
 			}
-			d_confederated = { 
+			k_confederated = { 
 				holder_scope = {
 					character_event = { id = HF.40058 }
 				}
@@ -3795,6 +3709,93 @@ character_event = {
 				}
 			}
 			AND = {
+				religion = confederated
+				k_confederated = {
+					holder_scope = {
+						trait = bad_priest_christian
+						independent = yes
+						opinion = {
+							who = ROOT
+							value = 50
+						}
+					}
+				}
+				OR = {
+					AND = {
+						trait = impaler
+						k_confederated = {
+							holder_scope = {
+								trait = impaler
+							}
+						}	
+					}
+					AND = {
+						trait = hedonist
+						k_confederated = {
+							holder_scope = {
+								trait = hedonist
+							}
+						}
+					}
+					AND = {
+						trait = cannibal_trait
+						k_confederated = {
+							holder_scope = {
+								trait = cannibal_trait
+							}
+						}
+					}
+					AND = {
+						trait = lunatic
+						k_confederated = {
+							holder_scope = {
+								trait = lunatic
+							}
+						}
+					}
+					AND = {
+						trait = drunkard
+						k_confederated = {
+							holder_scope = {
+							trait = drunkard
+							}
+						}
+					}
+					AND = {
+						trait = homosexual
+						k_confederated = {
+							holder_scope = {
+								trait = homosexual
+								is_lover = ROOT
+								trait = lustful
+							}
+						}
+					}
+					AND = {
+						trait = lustful
+						k_confederated = {
+							is_lover = ROOT
+							trait = lustful
+							NOT = {
+								trait = homosexual
+							}
+						}
+					}
+					AND = {
+						OR = {
+							trait = seducer
+							trait = seductress
+						}
+						k_confederated = {
+							holder_scope = {
+								trait = seductress
+							}
+						}
+					}
+					
+				}
+			}
+			AND = {
 				religion = high_church
 				d_high_church = {
 					holder_scope = {
@@ -3998,6 +3999,21 @@ character_event = {
 			random = {
 				chance = 20
 				k_ursuline = {
+					holder_scope = {
+						character_event = { id = HF.40091 }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				event_target:saint_person = {
+					religion = confederated
+				}
+			}
+			random = {
+				chance = 20
+				k_confederated = {
 					holder_scope = {
 						character_event = { id = HF.40091 }
 					}
@@ -4396,7 +4412,7 @@ narrative_event = {
         FROM = {
             OR = {
 				has_landed_title = k_papal_state
-				has_landed_title = d_confederated
+				has_landed_title = k_confederated
 				has_landed_title = k_ursuline
 				has_landed_title = d_high_church
 				has_landed_title = d_quorum_of_the_twelve
