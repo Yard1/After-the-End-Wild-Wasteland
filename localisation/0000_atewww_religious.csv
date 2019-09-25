@@ -490,6 +490,20 @@ EVTOPTA_ATE_WWW_RELIGION_31;Welcome, [From.GetSonDaughter].;;;;;;;;;;;;;x
 atom_bless_health_effect;The Price of Atom;;;;;;;;;;;;;x
 atom_curse_health_effect;The Price of Atom;;;;;;;;;;;;;x
 
+# Rust/Chrome Cultists
+chrome_cultist_FEATURES;§Y*§! May undertake journeys to seek & salvage old world technology.\n§Y*§! May take ambitions to remove irrational impulses.\n§Y*§! May choose to voluntarily replace their limbs with prosthetics.;;;;;;;;;;;;;x
+
+chrome_cultist_ulimate_sacrifice;Become One With the Metal;;;;;;;;;;;;;x
+chrome_cultist_ulimate_sacrifice_desc;With a suitable prosthetic in my possession, I can remove one of my flesh limbs so that it may be replaced by a superior chrome and metal.;;;;;;;;;;;;;x
+chrome_cultist_ulimate_sacrifice_tooltip;Choose a suitable limb to be removed, so that you may use the prosthetic in your treasury.;;;;;;;;;;;;;x
+
+EVTDESC_ATE_WWW_RELIGION_35;You lay down on the table, bracing yourself for the ritual. The [Root.Religion.GetPriestTitle] waits for you to point at which inferior, flesh part of your body you wish to discard, so that it may be replaced with holy chrome and metal.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_RELIGION_35;The leg.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_RELIGION_35;The arm.;;;;;;;;;;;;;x
+
+chrome_cultist_sacrifice;One With the Metal;;;;;;;;;;;;;x
+chrome_cultist_sacrifice_desc;This character has chose to voluntarily replace one of their limbs with a prosthetic, gaining them respect from all the Chrome Cultists.;;;;;;;;;;;;;x
+
 # Exovedate
 
 exovedate_opinion;[exovedate.GetName] Opinion;;;;;;;;;;;;;x
@@ -518,6 +532,12 @@ secret_religious_society_Exovedate_leader_desc;The High Priest, leading the inte
 GOD_RIEL;Riel;;;;;;;;;;;;;x
 
 exovedate_FEATURES;§Y*§! Rulers can gain Sympathy towards American Native, Judaist or Pagan religious group.;;;;;;;;;;;;;x
+
+# Consumerists
+consumerist_government;Corporate Feudalism;;;;;;;;;;;;;x
+consumerist_government_desc;The Corporate Feudal government, much like the ordinary Feudal government, revolves around the oath between liege and vassal, and Corporate Feudal lords can only directly own so many Holdings before they must start to rely on vassals - whose loyalty may vary... The Corporate Feudal government is unique to the [consumerist.GetName] faith and its heresies, and allows holding Cities in addition to Castles.;;;;;;;;;;;;;x
+consumerist_government_features;§Y*§! Cannot use Gavelkind, Elective Gavelkind, Primogeniture or Ultimogeniture succession laws for Duchy, Kingdom and Empire titles;;;;;;;;;;;;;x
+
 
 # Misc
 

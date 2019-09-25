@@ -98,6 +98,10 @@ succession_laws = {
 			holder_scope = {
 				NOT = { religion_group = american_native } #uses Eldership instead
 				NOT = { religion_group = pirate }
+				OR = {
+					NOT = { government = consumerist_government }
+					lower_tier_than = DUKE
+				}
 				NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 				OR = {
 					independent = yes
@@ -226,6 +230,10 @@ succession_laws = {
 			holder_scope = {
 				NOT = { religion_group = american_native } #uses Eldership instead
 				NOT = { religion_group = pirate }
+				OR = {
+					NOT = { government = consumerist_government }
+					lower_tier_than = DUKE
+				}
 				NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 				is_nomadic = no
 				OR = {
@@ -678,6 +686,10 @@ succession_laws = {
 				holder_scope = { NOT = { religion_group = pirate } }
 			}
 			holder_scope = {
+				OR = {
+					NOT = { government = consumerist_government }
+					lower_tier_than = DUKE
+				}
 				is_merchant_republic = no
 				is_patrician = no
 			}
@@ -1169,6 +1181,7 @@ succession_laws = {
 						}
 					}
 				}
+				NOT = { government = consumerist_government }
 				NOT = { religion_group = pirate }
 				is_merchant_republic = no
 				is_patrician = no
@@ -1321,6 +1334,10 @@ succession_laws = {
 				NOT = { religion = pagan }
 				NOT = { religion = celtic_pagan }
 				NOT = { religion = espiritista }
+				OR = {
+					NOT = { government = consumerist_government }
+					lower_tier_than = DUKE
+				}
 				
 				is_merchant_republic = no
 				is_patrician = no
@@ -1467,6 +1484,7 @@ succession_laws = {
 					has_religion_feature = religion_patriarchal
 					matriarchal_religion = yes
 				}
+				NOT = { government = consumerist_government }
 				is_republic = no
 				is_merchant_republic = no
 				is_nomadic = no
@@ -1764,6 +1782,7 @@ gender_laws = {
 					AND = {
 						is_theocracy = no
 						holy_order = no
+						primary_title = { mercenary = no }
 						OR = {
 							AND = {
 								gender_equality_trigger = no
@@ -1778,17 +1797,17 @@ gender_laws = {
 						}
 					}
 					AND = {
+						primary_title = { mercenary = yes }
+						can_mercenary_use_agnatic_succession = yes
+					}
+					AND = {
 						is_theocracy = yes
 						religion_allows_female_temple_holders = no
 						religion_allows_male_temple_holders = yes
 					}
 					AND = {
 						holy_order = yes
-						OR = {
-							females_can_hold_minor_commander_title_trigger = no
-							religion_allows_female_temple_holders = no
-						}
-						religion_allows_male_temple_holders = yes
+						can_holy_order_use_agnatic_succession = yes
 					}
 				}
 			}
@@ -1812,16 +1831,6 @@ gender_laws = {
 							is_female = no
 							NOT = { trait = zealous }
 						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0
-				holder_scope = {
-					OR = {
-						holy_order = yes
-						is_theocracy = yes
-						mercenary = yes
 					}
 				}
 			}
@@ -1900,6 +1909,7 @@ gender_laws = {
 				is_theocracy = no
 				holy_order = no
 				matriarchal_religion = no
+				primary_title = { mercenary = no }
 				OR = {
 					equal_religion = no
 					any_owned_bloodline = {
@@ -2012,22 +2022,16 @@ gender_laws = {
 					}
 					AND = {
 						holy_order = yes
-						females_can_hold_minor_commander_title_trigger = yes
-						religion_allows_female_temple_holders = yes
-						religion_allows_male_temple_holders = yes
+						can_holy_order_use_true_cognatic_succession = yes
 					}
 					AND = {
-						mercenary = yes
-						females_can_hold_minor_commander_title_trigger = yes
-						OR = {
-							gender_equality_trigger = yes
-							has_feminist_culture_trigger = yes
-						}
+						primary_title = { mercenary = yes }
+						can_mercenary_use_true_cognatic_succession = yes
 					}
 					AND = {
 						is_theocracy = no
 						holy_order = no
-						mercenary = no
+						primary_title = { mercenary = no }
 						NOR = {
 							matriarchal_religion = yes
 							has_religion_feature = religion_patriarchal
@@ -2203,6 +2207,7 @@ gender_laws = {
 						AND = {
 							is_theocracy = no
 							holy_order = no
+							primary_title = { mercenary = no }
 							NOT = { has_religion_feature = religion_patriarchal }
 							OR = {
 								matriarchal_religion = yes
@@ -2221,8 +2226,11 @@ gender_laws = {
 						}
 						AND = {
 							holy_order = yes
-							religion_allows_female_temple_holders = yes
-							religion_allows_male_temple_holders = no
+							can_holy_order_use_enatic_succession = yes
+						}
+						AND = {
+							primary_title = { mercenary = yes }
+							can_mercenary_use_enatic_succession = yes
 						}
 					}
 				}
@@ -2305,6 +2313,7 @@ gender_laws = {
 			holder_scope = {
 				is_theocracy = no
 				holy_order = no
+				primary_title = { mercenary = no }
 				NOT = { has_religion_feature = religion_patriarchal }
 				NOT = { religion = amazonian }
 				OR = {

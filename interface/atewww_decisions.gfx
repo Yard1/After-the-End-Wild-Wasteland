@@ -167,4 +167,8 @@ spriteTypes = {
 		name = "GFX_become_amazon"
 		texturefile = "gfx\\interface\\decision_icon_celibate_mom.dds"
 	}
+	spriteType = {
+		name = "GFX_chrome_cultist_ulimate_sacrifice"
+		texturefile = "gfx/interface/sacrifice.dds"
+	}
 }

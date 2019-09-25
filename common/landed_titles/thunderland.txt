@@ -474,6 +474,8 @@ e_thunderland = {
 			c_kenosee = {
 				color = { 0 56 168 }
 				color2 = { 252 209 23 }
+
+				holy_site = exovedate
 				
 				b_regina_SK = {}
 				b_emerald_park_SK = {}
@@ -581,6 +583,8 @@ e_thunderland = {
 			c_nipawin = {
 				color = { 100 15 152 }
 				color2 = { 255 232 0 }
+
+				holy_site = exovedate
 			
 				b_nipawin_SK = {}
 				b_tobin_SK = {}
@@ -897,6 +901,7 @@ e_thunderland = {
 				color2 = { 255 175 0 }
 				holy_site = midewiwin
 				holy_site = midewiwin_reformed
+				holy_site = exovedate
 				
 				b_winnipeg_MB = {}
 				b_whiteshell_MB = {} 
@@ -960,50 +965,53 @@ e_thunderland = {
 				color2 = { 117 35 114 }
 				
 				b_dryden_ON = {}
-				b_minaki_ON = {}
+				b_sioux_lookout_ON = {}
+				b_vermilion_bay_ON = {}
 				b_ignace_ON = {}
 				b_wabigoon_ON = {}
-				b_oxdrift_ON = {}
 				b_dinorwic_ON = {}
-				b_perrault_falls_ON = {}
-				b_goldpines_ON = {}
+				b_oxdrift_ON = {}
+				b_umfreville_ON = {}
 			}
 			c_quetico = {
 				color = { 104 120 30 }
 				color2 = { 255 255 255 }
 				
+				b_atikokan_ON = {}
 				b_shebandowan_ON = {}
 				b_kashabowie_ON = {}
-				b_flanders_ON = {}
-				b_huronian_ON = {}
-				b_mine_center_ON = {}
-				b_atikokan_ON = {}
+				b_upsala_ON = {}
+				b_raith_ON = {}
+				b_seine_river_ON = {}
 				b_shabaqua_ON = {}
 			}
 			c_lake_of_the_woods = {
 				color = { 55 121 25 }
 				color2 = { 117 35 114 }
+
+				quebecois = "Lac des Bois"
 				
 				b_kenora_ON = {}
-				b_sioux_narrows_ON = {}
 				b_pawitik_ON = {}
 				b_nestor_falls_ON = {}
-				b_caliper_lake_ON = {}
-				b_longbow_lake_ON = {}
-				b_hawk_lake_ON = {}
-				b_laclu_ON = {}
+				b_morson_ON = {}
+				b_redditt_ON = {}
+				b_kejick_ON = {}
+				b_sioux_narrows_ON = {}
+				b_minaki_ON = {}
 			}
 			c_wabakimi = {
 				color = { 255 246 153 }
 				color2 = { 167 145 100 }
 				
-				b_collins_ON = {}
+				b_armstrong_ON = {}
 				b_allanwater_bridge_ON = {}
+				b_collins_ON = {}
+				b_st_barnabas_ON = {}
+				b_seseganaga_ON = {}
+				b_mattice_ON = {}
 				b_brightsand_ON = {}
 				b_kopka_ON = {}
-				b_cache_lake_ON = {}
-				b_vivid_lake_ON = {}
-				b_gunter_ON = {}
 			}
 		}
 		
@@ -1014,10 +1022,18 @@ e_thunderland = {
 			culture = metis
 			
 			capital = 582 #Assiniboine
+
+			ojibwe = "Keeseekoowenin"
+			ojicree = "Keeseekoowenin"
+			algonquin = "Keeseekoowenin"
+			cree = "Waywayseecappo"
+			sioux = "Canupawakpa" 
 			
 			c_ochapowace = {
 				color = { 130 6 14 }
 				color2 = { 255 255 255 }
+
+				cree = "Ochapowace"
 				
 				b_melita_MB = {}
 				b_boissevain_MB = {}
@@ -1054,6 +1070,8 @@ e_thunderland = {
 			c_wuskwi_sipihk = {
 				color = { 153 12 192 }
 				color2 = { 63 77 160 }
+
+				cree = "Wuskwi Sipihk"
 				
 				b_wuskwi_sipihk_MB = {}
 				b_novra_MB = {}

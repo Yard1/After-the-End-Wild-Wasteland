@@ -10,7 +10,6 @@ character_event = {
 		religion_openly_americanist_or_heresy_trigger = no
 		NOT = { has_global_flag = d_order_airmen_activated }
 		FROMFROM = {
-			ai = yes
 			has_landed_title = d_airmen
 		}
 	}
@@ -33,7 +32,7 @@ character_event = {
 	religion = americanist
 		
 	trigger = {
-		is_ruler = no
+		is_playable = no
 		d_airmen = {
 			has_holder = no
 			any_previous_holder = {

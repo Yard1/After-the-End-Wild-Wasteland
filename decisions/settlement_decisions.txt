@@ -1805,67 +1805,7 @@ settlement_decisions = {
 					}
 				}
 			
-				if = {
-					limit = {
-						OR = {
-							religion = cetic
-							religion = neutic
-						}
-						NAND = {
-							religion_openly_gaian_or_heresy_trigger = yes
-							higher_tier_than = BARON
-						}
-					}
-					
-					if = {
-						limit = {
-							ai = no
-						}
-						chronicle = {
-							entry = CHRONICLE_NOMAD_ADOPTED_FEUDALISM
-							picture = GFX_evt_castle_construction
-						}
-					}
-					set_government_type = feudal_government
-				}
-				
-				if = {
-					limit = {
-						OR = {
-							religion = cetic
-							religion = neutic
-						}
-					}
-					
-					if = {
-						limit = {
-							ai = no
-						}
-						chronicle = {
-							entry = CHRONICLE_NOMAD_ADOPTED_IQTA
-							picture = GFX_evt_castle_construction
-						}
-					}
-					set_government_type = bureaucratic_government
-				}
-			
-				if = {
-					limit = {
-						religion_openly_gaian_or_heresy_trigger = yes
-						higher_tier_than = BARON
-					}
-					
-					if = {
-						limit = {
-							ai = no
-						}
-						chronicle = {
-							entry = CHRONICLE_ADOPTED_FEUDALISM
-							picture = GFX_evt_castle_construction
-						}
-					}
-					set_government_type = theocratic_feudal_government
-				}
+				set_government_type = feudal_government
 				
 				hidden_tooltip = {
 					if = {

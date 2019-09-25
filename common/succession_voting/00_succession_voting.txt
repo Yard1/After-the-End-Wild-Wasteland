@@ -170,10 +170,20 @@ feudal_elective = {
 		}
 		additive_modifier = {
 			value = -5
+			FROMFROM = {
+				holder_scope = {
+					NOT = { government = consumerist_government }
+				}
+			}
 			is_republic = yes
 		}
 		additive_modifier = {
 			value = -5
+			FROMFROM = {
+				holder_scope = {
+					NOT = { government = consumerist_government }
+				}
+			}
 			is_merchant_republic = yes
 		}
 		additive_modifier = {

@@ -12,6 +12,12 @@ spriteTypes = {
 		norefcount = yes
 	}
 	spriteType = {
+		name = "GFX_secretly_exovedate"
+		texturefile = "gfx\\traits\\secret_religion_ursuline.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
 		name = "GFX_trait_inaug_by_sjudge"
 		texturefile = "gfx/traits/inaug_by_sjudge.dds"
 		noOfFrames = 1
@@ -84,6 +90,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_trait_adopted"
 		texturefile = "gfx/traits/adopted.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_chrome_cultist_sacrifice"
+		texturefile = "gfx/traits/chrome_cultist_sacrifice.dds"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"

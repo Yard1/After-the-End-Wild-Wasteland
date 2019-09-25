@@ -124,9 +124,58 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	trigger = {
+		any_child = {
+			is_alive = yes
+			OR = {
+				ROOT = { player_heir = { character = PREV } }
+				AND = {
+					ROOT = { 
+						NOR = {
+							matriarchal_religion = yes
+							has_religion_feature = religion_patriarchal
+						}
+						primary_title = { NOT = { has_law = enatic_succession } } 
+					}
+					is_female = no
+				}
+				AND = {
+					ROOT = { 
+						NOR = {
+							matriarchal_religion = yes
+							has_religion_feature = religion_patriarchal
+						}
+						primary_title = { NOT = { has_law = agnatic_succession } }
+					}
+					is_female = yes
+				}
+				AND = {
+					ROOT = { 
+						matriarchal_religion = yes
+					}
+					is_female = yes
+				}
+				AND = {
+					ROOT = { 
+						has_religion_feature = religion_patriarchal
+					}
+					is_female = no
+				}
+			}
+			NOR = {
+				has_inheritance_blocker = yes
+				is_consort = yes
+				is_theocracy = yes
+				is_offmap_ruler = yes
+				holy_order = yes
+				any_liege = { holy_order = yes }
+			}
+		}
+	}
+
 	option = {
 		name = "enable americanists ghws"
-		set_global_flag = liberation_wars_unlocked
+		#capital_scope = { religion = amazonian }
 	}
 
 }

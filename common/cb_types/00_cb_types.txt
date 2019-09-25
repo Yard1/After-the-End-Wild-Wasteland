@@ -6180,7 +6180,10 @@ religious = {
 				religion = cetic 
 				religion = gaian
 				AND = {
-					religion = amazonian
+					OR = {
+						has_religion_feature = religion_patriarchal
+						religion = amazonian
+					}
 					FROM = { is_nomadic = no }
 				}
 			}
@@ -6396,7 +6399,10 @@ religious = {
 				religion = cetic 
 				religion = gaian
 				AND = {
-					religion = amazonian
+					OR = {
+						has_religion_feature = religion_patriarchal
+						religion = amazonian
+					}
 					FROM = { is_nomadic = no }
 				}
 			}
@@ -9443,6 +9449,8 @@ imperial_reconquest = {
 			de_jure_liege_or_above = k_appalachia
 			de_jure_liege_or_above = k_old_dominion
 			de_jure_liege_or_above = k_dixieland
+			de_jure_liege_or_above = k_alabama
+			de_jure_liege_or_above = k_georgia_kingdom
 			de_jure_liege_or_above = k_carolina
 			de_jure_liege_or_above = k_florida
 		}

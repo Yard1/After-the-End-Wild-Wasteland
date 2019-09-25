@@ -70,10 +70,13 @@ decisions = {
 		potential = {
 			is_ruler = yes
 			age = 16
-			prisoner = no
-			NOT = { trait = incapable }
-			religion = rust_cultist
+			block_general_event_trigger = no
+			OR = {
+				religion = rust_cultist
+				religion = chrome_cultist
+			}
 			NOT = { trait = on_pilgrimage }
+			NOT = { trait = travelling }
 			NOT = { has_character_modifier = recent_salvage }
 			NOT = { has_character_modifier = preparing_expedition }
 			NOT = { #immersion-breaking
@@ -83,14 +86,25 @@ decisions = {
 		allow = {
 			war = no
 			wealth = 25
+			conditional_tooltip = {
+				trigger = {
+					religion = chrome_cultist
+				}
+				piety = 250
+			}
 		}
 		effect = {
 			wealth = -25
+			if = {
+				limit = { religion = chrome_cultist }
+				piety = -250
+			}
 			add_character_modifier = { name = preparing_expedition duration = 365 }
 			hidden_tooltip = {
 				character_event = {
 					id = salvage.1
 				}
+				add_character_modifier = { name = recent_salvage duration = 720 }
 			}
 			if = {
 				limit = {
@@ -119,6 +133,7 @@ decisions = {
 			modifier = { factor = 0 trait = craven }
 			modifier = { factor = 0 trait = content }
 			modifier = { factor = 0 NOT = { wealth = 100 } }
+			modifier = { factor = 0.5 religion = chrome_cultist }
 		}
 	}
 	

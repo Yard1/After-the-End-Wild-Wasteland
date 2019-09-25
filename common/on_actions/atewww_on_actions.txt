@@ -120,6 +120,7 @@ on_birth = {
 on_create_title = {
 	events = {
 		ATE_WWW_RELIGION.9
+		ATE_WWW_TITLE.1
 	}
 }
 
@@ -131,6 +132,7 @@ on_new_holder = {
 		ATE_WWW_RELIGION.11
 		ATE_WWW_RELIGION.9
 		ATE_WWW_PIRATE.7
+		ATE_WWW_TITLE.1
 		miscATEWW.7
 	}
 }
@@ -152,6 +154,7 @@ on_new_holder_usurpation = {
 		ATE_WWWW_AIRMEN.1
 		ATE_WWW_RELIGION.11
 		ATE_WWW_RELIGION.9
+		ATE_WWW_TITLE.1
 		miscATEWW.7
 	}
 }

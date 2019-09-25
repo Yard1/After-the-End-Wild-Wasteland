@@ -21373,13 +21373,8 @@ character_event = {
 							mercenary = yes
 							holy_order = yes
 						}
-						primary_title = { has_law = true_cognatic_succession }
 					}
 					any_realm_character = {
-						limit = {
-							dynasty = NONE
-							is_female = no
-						}
 						character_event = { id = miscATEWW.5 }
 					}
 				}
@@ -21549,29 +21544,28 @@ character_event = {
 				holy_order = yes
 				OR = {
 					AND = {
-						religion_allows_female_temple_holders = yes
-						religion_allows_male_temple_holders = no
+						can_holy_order_use_enatic_succession = yes
 						OR = {
 							is_female = no
 							NOT = { has_law = enatic_succession }
 						}
 					}
 					AND = {
-						females_can_hold_minor_commander_title_trigger = yes
-						religion_allows_female_temple_holders = yes
-						religion_allows_male_temple_holders = yes
+						can_holy_order_use_true_cognatic_succession = yes
 						OR = {
-							is_female = no
+							AND = {
+								is_female = no
+								current_heir = { always = no }
+							}
 							NOT = { has_law = true_cognatic_succession }
 						}
 					}
 					AND = {
+						can_holy_order_use_agnatic_succession = yes
 						OR = {
-							females_can_hold_minor_commander_title_trigger = no
-							religion_allows_female_temple_holders = no
+							is_female = yes
+							NOT = { has_law = agnatic_succession }
 						}
-						religion_allows_male_temple_holders = yes
-						NOT = { has_law = agnatic_succession }
 					}
 				}
 			}
@@ -21590,14 +21584,20 @@ character_event = {
 						religion_allows_female_temple_holders = yes
 						religion_allows_male_temple_holders = yes
 						OR = {
-							is_female = no
+							AND = {
+								is_female = no
+								current_heir = { always = no }
+							}
 							NOT = { has_law = true_cognatic_succession }
 						}
 					}
 					AND = {
 						religion_allows_female_temple_holders = no
 						religion_allows_male_temple_holders = yes
-						NOT = { has_law = agnatic_succession }
+						OR = {
+							is_female = yes
+							NOT = { has_law = agnatic_succession }
+						}
 					}
 				}
 			}
@@ -21614,13 +21614,19 @@ character_event = {
 					AND = {
 						gender_equality_trigger = yes
 						OR = {
-							is_female = no
+							AND = {
+								is_female = no
+								current_heir = { always = no }
+							}
 							NOT = { has_law = true_cognatic_succession }
 						}
 					}
 					AND = {
 						gender_equality_trigger = no
-						NOT = { has_law = agnatic_succession }
+						OR = {
+							is_female = yes
+							NOT = { has_law = agnatic_succession }
+						}
 					}
 				}
 			}
@@ -21628,27 +21634,28 @@ character_event = {
 				mercenary = yes
 				OR = {
 					AND = {
-						OR = {
-							matriarchal_religion = yes
-							primary_title = { title = d_nancy_harts }
-						}
+						can_mercenary_use_enatic_succession = yes
 						OR = {
 							is_female = no
 							NOT = { has_law = enatic_succession }
 						}
 					}
 					AND = {
-						gender_equality_trigger = yes
-						NOT = { primary_title = { title = d_nancy_harts } }
+						can_mercenary_use_true_cognatic_succession = yes
 						OR = {
-							is_female = no
+							AND = {
+								is_female = no
+								current_heir = { always = no }
+							}
 							NOT = { has_law = true_cognatic_succession }
 						}
 					}
 					AND = {
-						gender_equality_trigger = no
-						NOT = { primary_title = { title = d_nancy_harts } }
-						NOT = { has_law = agnatic_succession }
+						can_mercenary_use_agnatic_succession = yes
+						OR = {
+							is_female = yes
+							NOT = { has_law = agnatic_succession }
+						}
 					}
 				}
 			}
@@ -21668,6 +21675,10 @@ character_event = {
 					religion_allows_male_temple_holders = no
 				}
 				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.6: set enatic_succession in [This.GetName]" }
+				if = {
+					limit = { primary_title = { has_law = succ_open_elective } }
+					recalc_succession = yes
+				}
 			}
 			else_if = {
 				limit = {
@@ -21675,9 +21686,17 @@ character_event = {
 					religion_allows_male_temple_holders = yes
 				}
 				primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } log = "misc.6: set true_cognatic_succession in [This.GetName]" }
+				if = {
+					limit = { primary_title = { has_law = succ_open_elective } }
+					recalc_succession = yes
+				}
 			}
 			else = {
 				primary_title = { add_law = { law = agnatic_succession cooldown = no opinion_effect = no } log = "misc.6: set agnatic_succession in [This.GetName]" }
+				if = {
+					limit = { primary_title = { has_law = succ_open_elective } }
+					recalc_succession = yes
+				}
 			}
 			if = {
 				limit = {
@@ -21764,21 +21783,30 @@ character_event = {
 			log = "misc.6: [Root.GetBestName], [Root.Religion.GetName], holy order"
 			if = {
 				limit = {
-					religion_allows_female_temple_holders = yes
-					religion_allows_male_temple_holders = no
+					can_holy_order_use_enatic_succession = yes
 				}
 				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.6: set enatic_succession in [This.GetName]" }
+				if = {
+					limit = { primary_title = { has_law = succ_open_elective } }
+					recalc_succession = yes
+				}
 			}
 			else_if = {
 				limit = {
-					females_can_hold_minor_commander_title_trigger = yes
-					religion_allows_female_temple_holders = yes
-					religion_allows_male_temple_holders = yes
+					can_holy_order_use_true_cognatic_succession = yes
 				}
 				primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } log = "misc.6: set true_cognatic_succession in [This.GetName]" }
+				if = {
+					limit = { primary_title = { has_law = succ_open_elective } }
+					recalc_succession = yes
+				}
 			}
 			else = {
 				primary_title = { add_law = { law = agnatic_succession cooldown = no opinion_effect = no } log = "misc.6: set agnatic_succession in [This.GetName]" }
+				if = {
+					limit = { primary_title = { has_law = succ_open_elective } }
+					recalc_succession = yes
+				}
 			}
 			if = {
 				limit = {
@@ -21809,6 +21837,7 @@ character_event = {
 					limit = {
 						primary_title = { has_law = true_cognatic_succession }
 						is_female = no
+						NOT = { current_heir = { always = yes } } # Preserve investiture if valid
 						NOT = {
 							any_player = {
 								dynasty = PREV
@@ -21839,16 +21868,13 @@ character_event = {
 			}
 			if = {
 				limit = {
-					religion_allows_female_temple_holders = yes
-					religion_allows_male_temple_holders = no
+					can_holy_order_use_enatic_succession = yes
 				}
 				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.6: set enatic_succession in [This.GetName]" }
 			}
 			else_if = {
 				limit = {
-					females_can_hold_minor_commander_title_trigger = yes
-					religion_allows_female_temple_holders = yes
-					religion_allows_male_temple_holders = yes
+					can_holy_order_use_true_cognatic_succession = yes
 				}
 				primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } log = "misc.6: set true_cognatic_succession in [This.GetName]" }
 			}
@@ -21864,22 +21890,30 @@ character_event = {
 			log = "misc.6: [Root.GetBestName], [Root.Religion.GetName], holy order"
 			if = {
 				limit = {
-					OR = {
-						matriarchal_religion = yes
-						primary_title = { title = d_nancy_harts }
-					}
+					can_mercenary_use_enatic_succession = yes
 				}
 				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.6: set enatic_succession in [This.GetName]" }
+				if = {
+					limit = { primary_title = { has_law = succ_open_elective } }
+					recalc_succession = yes
+				}
 			}
 			else_if = {
 				limit = {
-					females_can_hold_minor_commander_title_trigger = yes
-					gender_equality_trigger = yes
+					can_mercenary_use_true_cognatic_succession = yes
 				}
 				primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } log = "misc.6: set true_cognatic_succession in [This.GetName]" }
+				if = {
+					limit = { primary_title = { has_law = succ_open_elective } }
+					recalc_succession = yes
+				}
 			}
 			else = {
 				primary_title = { add_law = { law = agnatic_succession cooldown = no opinion_effect = no } log = "misc.6: set agnatic_succession in [This.GetName]" }
+				if = {
+					limit = { primary_title = { has_law = succ_open_elective } }
+					recalc_succession = yes
+				}
 			}
 			if = {
 				limit = {
@@ -21909,6 +21943,7 @@ character_event = {
 				else_if = {
 					limit = {
 						primary_title = { has_law = true_cognatic_succession }
+						NOT = { current_heir = { always = yes } } # Preserve investiture if valid
 						is_female = no
 						NOT = {
 							any_player = {
@@ -21940,17 +21975,13 @@ character_event = {
 			}
 			if = {
 				limit = {
-					OR = {
-						matriarchal_religion = yes
-						primary_title = { title = d_nancy_harts }
-					}
+					can_mercenary_use_enatic_succession = yes
 				}
 				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.6: set enatic_succession in [This.GetName]" }
 			}
 			else_if = {
 				limit = {
-					females_can_hold_minor_commander_title_trigger = yes
-					gender_equality_trigger = yes
+					can_mercenary_use_true_cognatic_succession = yes
 				}
 				primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } log = "misc.6: set true_cognatic_succession in [This.GetName]" }
 			}
@@ -21967,15 +21998,27 @@ character_event = {
 					matriarchal_religion = yes
 				}
 				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.6: set enatic_succession in [This.GetName]" }
+				if = {
+					limit = { primary_title = { has_law = succ_open_elective } }
+					recalc_succession = yes
+				}
 			}
 			else_if = {
 				limit = {
 					gender_equality_trigger = yes
 				}
 				primary_title = { add_law = { law = true_cognatic_succession cooldown = no opinion_effect = no } log = "misc.6: set true_cognatic_succession in [This.GetName]" }
+				if = {
+					limit = { primary_title = { has_law = succ_open_elective } }
+					recalc_succession = yes
+				}
 			}
 			else = {
 				primary_title = { add_law = { law = agnatic_succession cooldown = no opinion_effect = no } log = "misc.6: set agnatic_succession in [This.GetName]" }
+				if = {
+					limit = { primary_title = { has_law = succ_open_elective } }
+					recalc_succession = yes
+				}
 			}
 			if = {
 				limit = {
@@ -22006,6 +22049,7 @@ character_event = {
 					limit = {
 						primary_title = { has_law = true_cognatic_succession }
 						is_female = no
+						NOT = { current_heir = { always = yes } } # Preserve investiture if valid
 						NOT = {
 							any_player = {
 								dynasty = PREV

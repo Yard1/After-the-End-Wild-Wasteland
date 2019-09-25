@@ -1564,21 +1564,21 @@ character_event = {
 				religion_supports_adoption = no
 				has_heir_designation = no #meritocracy reduces penalties
 			}
-			piety = 500
+			piety = -500
 			if = {
 				limit = { tier = DUKE }
-				prestige = 2000
+				prestige = -2000
 			}
 			else_if = {
 				limit = { tier = KING }
-				prestige = 5000
+				prestige = -5000
 			}
 			else_if = {
 				limit = { higher_tier_than = KING }
-				prestige = 10000
+				prestige = -10000
 			}
 			else = {
-				prestige = 500
+				prestige = -500
 			}
 		}
 		else = {
@@ -1586,21 +1586,21 @@ character_event = {
 				religion_supports_adoption = no
 				has_heir_designation = no #meritocracy reduces penalties
 			}
-			piety = 300
+			piety = -300
 			if = {
 				limit = { tier = DUKE }
-				prestige = 1000
+				prestige = -1000
 			}
 			else_if = {
 				limit = { tier = KING }
-				prestige = 3000
+				prestige = -3000
 			}
 			else_if = {
 				limit = { higher_tier_than = KING }
-				prestige = 7000
+				prestige = -7000
 			}
 			else = {
-				prestige = 250
+				prestige = -250
 			}
 		}
 		spouse = {
@@ -1868,5 +1868,99 @@ character_event = {
 			years = 200
 		}
 		recalc_succession = yes
+	}
+}
+
+
+character_event = {
+	id = ATE_WWW_RELIGION.35
+	desc = EVTDESC_ATE_WWW_RELIGION_35
+	picture = GFX_evt_torture
+	
+	is_triggered_only = yes 
+
+	fail_trigger_effect = {
+		clr_character_flag = chrome_cultist_ulimate_sacrifice_flag
+	}
+	
+	trigger = {
+		religion = chrome_cultist
+	}
+
+	option = {
+		name = EVTOPTA_ATE_WWW_RELIGION_35
+		trigger = {
+			NOT = { trait = one_legged }
+			any_artifact = {
+				OR = {
+					artifact = prosthetic_leg_artifact
+					has_artifact_flag = prosthetic_leg
+				}
+			}
+		}
+		piety = 750
+		if = {
+			limit = { trait = craven }
+			random = {
+				chance = 40
+				remove_trait = craven
+			}
+		}
+		else_if = {
+			limit = { NOT = { trait = brave } }
+			random = {
+				chance = 40
+				add_trait = brave
+			}
+		}
+		if = {
+			limit = { trait = cynical }
+			remove_trait = cynical
+		}
+		else_if = {
+			limit = { NOT = { trait = zealous } }
+			add_trait = zealous
+		}
+		add_trait = one_legged 
+		add_trait = severely_injured
+		resolve_severely_injured_effect = yes
+		add_trait = chrome_cultist_sacrifice
+	}
+	option = {
+		name = EVTOPTB_ATE_WWW_RELIGION_35
+		trigger = {
+			NOT = { trait = one_handed }
+			any_artifact = {
+				OR = {
+					artifact = prosthetic_hand_metal
+					artifact = prosthetic_hand_gold
+					has_artifact_flag = prosthetic_hand
+				}
+			}
+		}
+		piety = 750
+		if = {
+			limit = { trait = craven }
+			remove_trait = craven
+		}
+		else_if = {
+			limit = { NOT = { trait = brave } }
+			add_trait = brave
+		}
+		if = {
+			limit = { trait = cynical }
+			remove_trait = cynical
+		}
+		else_if = {
+			limit = { NOT = { trait = zealous } }
+			add_trait = zealous
+		}
+		add_trait = one_handed
+		add_trait = severely_injured
+		resolve_severely_injured_effect = yes
+		add_trait = chrome_cultist_sacrifice
+	}
+	after = {
+		clr_character_flag = chrome_cultist_ulimate_sacrifice_flag
 	}
 }

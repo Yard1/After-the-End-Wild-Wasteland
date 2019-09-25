@@ -16,6 +16,7 @@ theocracy_governments = {
 		}
 		accepts_liege_governments = {
 			feudal_government
+			consumerist_government
 			bureaucratic_government
 			republic_government
 			merchant_republic_government

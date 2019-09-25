@@ -1,0 +1,165 @@
+obj_marry_lover = {
+	type = character
+	
+	potential = {
+		is_pope = no
+		is_married = no
+		is_consort = no
+		can_marry = yes
+		has_lover = yes
+		has_polygamy = no
+		any_lover = {
+			is_pope = no
+			is_married = no
+			is_consort = no
+			can_marry = yes
+			is_marriage_adult = yes
+			prisoner = no
+			religion = ROOT
+			is_opposite_sex = ROOT	
+		}
+	}
+	
+	allow = {
+		OR = {
+			NOT = { has_dlc = "Zeus" }
+			ai = yes
+		}
+		prisoner = no
+		is_marriage_adult = yes
+		NOT = { trait = celibate }
+		NOT = { is_incapable = yes }
+		NOT = { trait = eunuch }
+		NOT = { is_ascetic_trigger = yes }
+		OR = {
+			is_female = no
+			NOT = { age = 40 }
+		}
+		OR = {
+			is_ruler = no
+			is_feudal = yes
+			is_tribal = yes
+			is_nomadic = yes
+			is_patrician = yes
+		}
+	}
+	
+	chance = {
+		factor = 100
+		
+		modifier = {
+			factor = 0.2
+			trait = homosexual
+		}
+		modifier = {
+			factor = 0.2
+			is_female = yes
+			matriarchal_religion = yes
+		}
+		modifier = {
+			factor = 0.2
+			is_female = no
+			has_religion_feature = religion_patriarchal
+		}
+		modifier = {
+			factor = 0.5
+			trait = shy
+		}
+		modifier = {
+			factor = 2.0
+			trait = lustful
+		}
+		modifier = {
+			factor = 2.0
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2.0 
+			age = 25
+		}
+		modifier = {
+			factor = 5.0
+			age = 35
+		}
+		modifier = {
+			factor = 10.0
+			age = 40
+		}
+	}
+	success = {
+		any_lover = {
+			is_married = ROOT
+		}
+	}
+	abort = {
+		OR = {
+			has_polygamy = yes
+			has_lover = no
+			NOT = {
+				any_lover = {
+					is_pope = no
+					is_married = no
+					is_consort = no
+					can_marry = yes
+					is_marriage_adult = yes
+					prisoner = no
+					religion = ROOT
+					is_opposite_sex = ROOT	
+				}
+			}
+			AND = {
+				is_priest = yes
+				can_marry = no
+			}
+			AND = {
+				is_female = yes
+				is_ruler = no
+				age = 40
+			}
+			is_pope = yes
+			trait = celibate
+			is_incapable = yes
+			trait = eunuch
+			is_ascetic_trigger = yes
+		}
+	}
+	abort_effect = {
+		clr_character_flag = flag_promised_marriage
+		clr_character_flag = flag_denied_marriage
+		remove_character_modifier = promised_a_marriage
+	}
+	effect = {
+		piety = 10
+		if = {
+			limit = { is_ruler = no }
+			opinion = {
+				who = liege
+				modifier = opinion_fulfilled_marriage_wish
+				years = 5
+			}
+		}
+		spouse = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_marital_love
+			}
+			ROOT = {
+				show_scope_change = no
+				opinion = {
+					who = PREV
+					modifier = opinion_marital_love
+				}
+			}
+		}
+		change_diplomacy = 1
+		add_character_modifier = {
+			name = popular_modifier
+			years = 5
+		}
+		hidden_tooltip = {
+			clr_character_flag = flag_promised_marriage
+			clr_character_flag = flag_denied_marriage
+			remove_character_modifier = promised_a_marriage
+		}
+	}
+}

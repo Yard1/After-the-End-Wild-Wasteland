@@ -18,6 +18,7 @@ republic_governments = {
 			colonial_government
 			constitutional_rep
 			mconstitutional_rep
+			consumerist_government
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
@@ -118,6 +119,7 @@ republic_governments = {
 			colonial_government
 			constitutional_rep
 			mconstitutional_rep
+			consumerist_government
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
 			tribal_government
@@ -269,6 +271,7 @@ republic_governments = {
 		}
 		forced_contract = {
 			feudal_government
+			consumerist_government
 			muslim_government
 			theocratic_feudal_government
 			chinese_imperial_government

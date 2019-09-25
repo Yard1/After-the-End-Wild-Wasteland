@@ -12,7 +12,7 @@ faction_neutic_revolters = {
 		is_adult = yes
 		primary_title = { holy_order = no }
 		primary_title = { mercenary = no }
-		NOT = { trait = incapable }
+		NOT = { is_incapable = yes }
 		has_character_flag = flag_neutic_revolter
 		AND = { 
 			religion_group = pacific
@@ -36,7 +36,7 @@ faction_neutic_revolters = {
 		#	independent = no
 		#	is_landed = yes
 		#	is_adult = yes
-		#	NOT = { trait = incapable }
+		#	NOT = { is_incapable = yes }
 		#	prisoner = no
 			AND = { 
 				religion_group = pacific

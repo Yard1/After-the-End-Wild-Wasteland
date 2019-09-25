@@ -28,13 +28,16 @@ feudal_governments = {
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
 			}
-			NOR = {	
-				religion = cetic 
-				religion = neutic
-			}
 			OR = {
 				mercenary = yes
-				NOT = { religion = jeffersonian }
+				NOR = {	
+					religion = cetic 
+					religion = neutic
+					religion = consumertist
+					religion = monetarist
+					religion_openly_gaian_or_heresy_trigger = yes
+					religion = jeffersonian
+				}
 				AND = {
 					independent = no
 					liege = { NOT = { government = militarist_government } }
@@ -80,6 +83,7 @@ feudal_governments = {
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			feudal_government
+			consumerist_government
 			constitutional_rep
 			theocratic_feudal_government
 			#chinese_imperial_government
@@ -95,7 +99,6 @@ feudal_governments = {
 		potential = {
 			OR = {
 				controls_religion = no
-				religion = cetic
 				has_religion_temporal_head = yes
 				AND = {
 					has_religion_with_temporal_head = yes
@@ -153,6 +156,7 @@ feudal_governments = {
 			constitutional_rep
 			theocracy_government
 			feudal_government
+			consumerist_government
 			#chinese_imperial_government
 		}
 		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
@@ -208,6 +212,7 @@ feudal_governments = {
 		}
 		accepts_liege_governments = {
 			feudal_government
+			consumerist_government
 			bureaucratic_government
 			constitutional_rep
 			theocracy_government
@@ -318,6 +323,7 @@ feudal_governments = {
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
 			feudal_government
+			consumerist_government
 			republic_government
 			merchant_republic_government
 		}

@@ -9,6 +9,10 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\government_icon_militarist_government.dds"
 	}
 	spriteType = {
+		name = "GFX_icon_consumerist_government"
+		texturefile = "gfx\\interface\\government_icon_consumerist_government.dds"
+	}
+	spriteType = {
 		name = "GFX_trait_president"
 		texturefile = "gfx/traits/president.dds"
 		noOfFrames = 1
@@ -36,5 +40,12 @@ spriteTypes = {
 		name = "GFX_religion_icon_strip_big"
 		texturefile = "gfx\\interface\\religion_icon_strip_big.tga"
 		noOfFrames = 76
+	}
+	spriteType = {
+		name = "GFX_obj_marry_lover"
+		texturefile = "gfx/ambitions/obj_get_married.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
 }

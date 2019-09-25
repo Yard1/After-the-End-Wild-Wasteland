@@ -18,6 +18,7 @@ narrative_event = {
 		set_parent_religion = { religion = ursuline parent = confederated }
 		set_parent_religion = { religion = angeline parent = confederated }
 		set_parent_religion = { religion = nonconformist parent = confederated }
+		set_parent_religion = { religion = exovedate parent = confederated }
 
 		set_global_flag = canadian_church_unified
 		give_nickname = nick_the_saint
@@ -48,6 +49,7 @@ narrative_event = {
 						religion = ursuline
 						religion = angeline
 						religion = nonconformist
+						religion = exovedate
 					}
 					controls_religion = no
 				}
@@ -69,7 +71,13 @@ narrative_event = {
 	
 	option = { # Yes
 		name = EVTOPTAcanada.2
-		ai_chance = { factor = 75 }
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
 		religion = confederated
 		any_courtier = {
 			religion = confederated
@@ -80,7 +88,21 @@ narrative_event = {
 	}
 	option = { # No
 		name = EVTOPTBcanada.2
-		ai_chance = { factor = 25 }
+		ai_chance = { 
+			factor = 25
+			modifier = {
+				factor = 1.2
+				trait = content
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 0.5
+				trait = trusting
+			}
+		}
 	}
 }
 

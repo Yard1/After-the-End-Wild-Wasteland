@@ -67,8 +67,12 @@ decisions = {
 		potential = {
 			is_playable = yes
 			OR = { 
+				culturegroup = galloamerican 
 				culture = ontarian
-				culture = quebecois
+				culture = maritimer
+				culture = newfie
+				culture = prairielander
+				culture = canuck
 			}
 			has_dlc = "Holy Fury"
 			has_landed_title = e_canada

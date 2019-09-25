@@ -90,6 +90,56 @@ e_dixie = {
 		}
 	}
 
+	k_georgia_kingdom = {
+		color={ 226 86 46 }
+		color2={ 220 220 0 }
+
+		# Crusade target weight
+		catholic = 5
+		americanist = 5
+		jeffersonian = 100
+		hamiltonian = 5
+		libertarian = 5
+		revelationist_reformed = 100
+		rust_cultist = 5
+		thelemic_reformed = 5
+
+		culture = dixie
+		capital = 149 # Atlanta
+		
+		allow = {
+			war = no
+			NOT = { is_title_active = k_dixieland }
+			NOT = { has_landed_title = e_dixie }
+			NOT = { top_liege = { has_landed_title = e_dixie } }
+		}
+	}
+
+	k_alabama = {
+		color={ 177 0 33 }
+		color2={ 220 220 0 }
+
+		# Crusade target weight
+		catholic = 5
+		americanist = 5
+		jeffersonian = 100
+		hamiltonian = 5
+		libertarian = 5
+		revelationist_reformed = 100
+		rust_cultist = 5
+		thelemic_reformed = 5
+
+		culture = dixie
+		capital = 1039 # Montgomery
+		
+		allow = {
+			war = no
+			NOT = { is_title_active = k_dixieland }
+			NOT = { has_landed_title = e_dixie }
+			NOT = { top_liege = { has_landed_title = e_dixie } }
+		}
+	}
+
 
 	k_dixieland = {
 		color={ 195 205 185 }

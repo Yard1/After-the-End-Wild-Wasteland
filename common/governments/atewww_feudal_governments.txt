@@ -75,4 +75,70 @@ feudal_governments = {
 			key = "OFF_RELIGION"
 		}
 	}
+
+	consumerist_government = {
+		preferred_holdings = { CASTLE CITY }
+		allowed_holdings = { 
+			CASTLE 
+			CITY
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			constitutional_rep
+			mconstitutional_rep
+			feudal_government
+			bureaucratic_government
+			theocratic_feudal_government
+			merchant_republic_government
+			republic_government
+			#chinese_imperial_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		potential = {
+			OR = {
+				controls_religion = no
+				religion = consumerist 
+				religion = monetarist
+				has_religion_temporal_head = yes
+				AND = {
+					has_religion_with_temporal_head = yes
+					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
+				}
+			}
+			OR = {	
+				religion = consumerist 
+				religion = monetarist
+			}
+			is_patrician = no
+			NOT = { is_government_potential = colonial_government }
+			NOT = { is_government_potential = roman_imperial_government }
+			NOT = { is_government_potential = order_government }
+			NOT = { is_government_potential = military_governorate }
+		}
+		
+		color = { 115 154 90 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		capital_move_delay = 600
+		
+		## Modifiers
+		court_size_modifier = 10
+
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		can_demand_religious_conversion = no
+	}
 }

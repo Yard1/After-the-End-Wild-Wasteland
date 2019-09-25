@@ -160,6 +160,7 @@ narrative_event = {
 					id = salvage.10 days = 5 random = 5
 				}
 			}
+			character_event = { id = salvage.95 days = 365 } #so it doesn't lock up
 		}
 	}
 	
@@ -219,7 +220,7 @@ province_event = {
 		if = {			# same realm, same religion
 			limit = {
 				holder_scope = { same_realm = FROM }
-				religion = rust_cultist
+				religion = FROM
 			}
 			FROM = { character_event = { id = salvage.11 days = 5 } }
 		}
@@ -228,7 +229,7 @@ province_event = {
 			limit = {
 				holder_scope = { same_realm = FROM }
 				NOT = {
-					religion = rust_cultist
+					religion = FROM
 				}
 			}
 			random_list = {
@@ -240,7 +241,7 @@ province_event = {
 		if = {			# different realm, same religion
 			limit = {
 				holder_scope = { NOT = { same_realm = FROM } }
-				religion = rust_cultist
+				religion = FROM
 			}
 			random_list = {
 				50 = { FROM = { character_event = { id = salvage.11 days = 5 } } }
@@ -252,7 +253,7 @@ province_event = {
 			limit = {
 				holder_scope = { NOT = { same_realm = FROM } }
 				NOT = {
-					religion = rust_cultist
+					religion = FROM
 				}
 			}
 			random_list = {
@@ -472,6 +473,10 @@ narrative_event = {
 	is_triggered_only = yes
 	trigger = { trait = on_pilgrimage }
 
+	fail_trigger_effect = {
+		character_event = { id = salvage.95 }
+	}
+
 	option = {
 		name = EVTOPT_salvage_worthless
 		trigger = { NOT = { has_character_flag = salvage_compete } }
@@ -504,6 +509,10 @@ narrative_event = {
 	
 	is_triggered_only = yes
 	trigger = { trait = on_pilgrimage }
+
+	fail_trigger_effect = {
+		character_event = { id = salvage.95 }
+	}
 
 	option = {
 		name = EVTOPT_salvage_moderate
@@ -556,16 +565,26 @@ narrative_event = {
 		OR = {
 			AND = {
 				trait = on_pilgrimage
-				religion = rust_cultist
+				OR = {
+					religion = rust_cultist
+					religion = chrome_cultist
+				}
 			}
 			has_character_flag = discover_salvage
 		}
 		NAND = {
 			trait = on_pilgrimage
-			religion = rust_cultist
+			OR = {
+				religion = rust_cultist
+				religion = chrome_cultist
+			}
 		}
 		NOT = { trait = kow_tow_travels }
 		NOT = { trait = travelling }
+	}
+
+	fail_trigger_effect = {
+		character_event = { id = salvage.95 }
 	}
 	
 	immediate = { clr_character_flag = discover_salvage }
@@ -876,7 +895,12 @@ narrative_event = {
 	}
 	option = {
 		name = EVTOPT_salvage_safe_ledger_consumerist
-		trigger = { religion = consumerist }
+		trigger = { 
+			OR = {
+				religion = consumerist 
+				religion = monetarist
+			}
+		}
 		prestige = 20
 		piety = 20
 		add_artifact = old_world_money
@@ -1168,7 +1192,10 @@ narrative_event = {
 	option = {
 		name = EVTOPT_salvage_study_donate
 		trigger = {
-			religion = rust_cultist
+			OR = {
+				religion = rust_cultist
+				religion = chrome_cultist
+			}
 		}
 		piety = 50
 		religion_authority = { modifier = donated_tech_prize }
@@ -1190,8 +1217,15 @@ narrative_event = {
 	picture = GFX_evt_pilgrims_epic_journey
 	
 	trigger = {
-		religion = rust_cultist
+		OR = {
+			religion = rust_cultist
+			religion = chrome_cultist
+		}
 		trait = on_pilgrimage
+	}
+
+	fail_trigger_effect = {
+		character_event = { id = salvage.95 }
 	}
 
 	option = {
@@ -1208,8 +1242,15 @@ narrative_event = {
 	picture = GFX_evt_pilgrims_epic_journey
 
 	trigger = {
-		religion = rust_cultist
+		OR = {
+			religion = rust_cultist
+			religion = chrome_cultist
+		}
 		trait = on_pilgrimage
+	}
+
+	fail_trigger_effect = {
+		character_event = { id = salvage.95 }
 	}
 	
 	option = {
@@ -1247,8 +1288,15 @@ narrative_event = {
 	picture = GFX_evt_pilgrims_epic_journey
 
 	trigger = {
-		religion = rust_cultist
+		OR = {
+			religion = rust_cultist
+			religion = chrome_cultist
+		}
 		trait = on_pilgrimage
+	}
+
+	fail_trigger_effect = {
+		character_event = { id = salvage.95 }
 	}
 	
 	option = {
@@ -1319,8 +1367,15 @@ narrative_event = {
 	picture = GFX_evt_pilgrims_epic_journey
 
 	trigger = {
-		religion = rust_cultist
+		OR = {
+			religion = rust_cultist
+			religion = chrome_cultist
+		}
 		trait = on_pilgrimage
+	}
+
+	fail_trigger_effect = {
+		character_event = { id = salvage.95 }
 	}
 	
 	option = {
@@ -1349,25 +1404,6 @@ narrative_event = {
 		clr_character_flag = found_musicbox
 		clr_character_flag = found_shades
 		remove_trait = on_pilgrimage
-		add_character_modifier = { name = recent_salvage duration = 720 }
-	}
-	option = { # just in case
-		clr_character_flag = salvage_warband
-		clr_character_flag = salvage_research
-		clr_character_flag = salvage_envoys
-		clr_character_flag = salvage_compete
-		clr_character_flag = found_glass
-		clr_character_flag = found_engine
-		clr_character_flag = found_jewelry
-		clr_character_flag = found_money
-		clr_character_flag = found_musicbox
-		clr_character_flag = found_shades
-		remove_trait = on_pilgrimage
-		add_character_modifier = { name = recent_salvage duration = 720 }
-		
-		ai_chance = {
-			factor = 100
-		}
 	}
 }
 

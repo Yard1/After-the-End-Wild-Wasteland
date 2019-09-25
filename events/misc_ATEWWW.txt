@@ -16,24 +16,6 @@ character_event = {
 				mercenary = yes
 				primary_title = { is_landless_type_title = yes }
 			}
-			primary_title = { 
-				NOR = { 
-					has_law = agnatic_succession 
-					AND = {
-						is_theocracy = yes
-						religion_allows_female_temple_holders = no
-						religion_allows_male_temple_holders = yes
-					}
-					AND = {
-						holy_order = yes
-						OR = {
-							religion_allows_female_temple_holders = no
-							females_can_hold_minor_commander_title_trigger = no
-						}
-						religion_allows_male_temple_holders = yes
-					}
-				}
-			}
 		}
 	}
 	
@@ -62,6 +44,11 @@ character_event = {
 			if = {
 				limit = {
 					FROMFROM = { 
+						primary_title = { 
+							NOT = { 
+								has_law = agnatic_succession 
+							}
+						}
 						OR = {
 							holy_order = yes
 							mercenary = yes
@@ -377,6 +364,7 @@ character_event = {
 		any_realm_character = {
 			limit = {
 				prisoner = no
+				NOT = { character = ROOT }
 				OR = {
 					government = ROOT
 					host = { character = ROOT }
@@ -678,6 +666,26 @@ character_event = {
 					has_law = agnatic_succession
 				}
 			}
+			modifier = {
+				factor = 0
+				is_ruler = no
+				OR = {
+					AND = { 
+						is_priest = no
+						liege = {
+							OR = {
+								holy_order = yes
+								mercenary = yes
+							}
+							primary_title = { has_law = agnatic_succession }
+						}
+					}
+					AND = { 
+						is_priest = yes
+						religion_allows_female_temple_holders = no
+					}
+				}
+			}
 		}
 	}
 	option = {
@@ -693,6 +701,26 @@ character_event = {
 				primary_title = {
 					NOT = { title = d_order_airmen }
 					has_law = enatic_succession
+				}
+			}
+			modifier = {
+				factor = 0
+				is_ruler = no
+				OR = {
+					AND = { 
+						is_priest = no
+						liege = {
+							OR = {
+								holy_order = yes
+								mercenary = yes
+							}
+							primary_title = { has_law = enatic_succession }
+						}
+					}
+					AND = { 
+						is_priest = yes
+						religion_allows_male_temple_holders = no
+					}
 				}
 			}
 		}
@@ -720,16 +748,6 @@ character_event = {
 			holy_order = yes
 			is_republic = yes
 			mercenary = yes
-		}
-	}
-	option = {
-		give_ROOT_random_name = yes
-		ai_chance = {
-			factor = 25
-			modifier = {
-				factor = 0.5
-				NOT = { total_years_played = 5 }
-			}
 		}
 	}
 	option = { set_name = Justice ai_chance = { factor = 1 } }

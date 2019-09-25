@@ -1912,6 +1912,7 @@ e_great_lakes = {
 				holy_site = pagan
 				holy_site = norse_pagan
 				holy_site = norse_pagan_reformed
+				holy_site = exovedate
 
 				b_st_paul_MN = {
 					sioux = "I-mni-za Ska Dan"

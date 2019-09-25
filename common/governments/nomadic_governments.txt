@@ -11,6 +11,7 @@ nomadic_governments = {
 		}
 		forced_contract = {
 			feudal_government
+			consumerist_government
 			bureaucratic_government
 			theocracy_government
 			merchant_republic_government

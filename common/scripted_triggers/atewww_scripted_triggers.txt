@@ -38,6 +38,112 @@ semi_equal_religion = {
 	}
 }
 
+can_holy_order_use_true_cognatic_succession = {
+	holy_order = yes
+	OR = {
+		AND = {
+			females_can_hold_minor_commander_title_trigger = yes
+			religion_allows_female_temple_holders = yes
+			religion_allows_male_temple_holders = yes
+		}
+		AND = {
+			OR = {
+				females_can_hold_minor_commander_title_trigger = no
+				religion_allows_female_temple_holders = no
+			}
+			religion_allows_male_temple_holders = yes
+			religion_can_holy_order_advance_gender_laws = yes
+		}
+	}
+}
+
+can_holy_order_use_enatic_succession = {
+	holy_order = yes
+	religion_allows_female_temple_holders = yes
+	religion_allows_male_temple_holders = no
+}
+
+can_holy_order_use_agnatic_succession = {
+	holy_order = yes
+	OR = {
+		females_can_hold_minor_commander_title_trigger = no
+		religion_allows_female_temple_holders = no
+	}
+	religion_allows_male_temple_holders = yes
+	religion_can_holy_order_advance_gender_laws = no
+}
+
+can_mercenary_use_true_cognatic_succession = {
+	primary_title = { mercenary = yes }
+	NOT = { primary_title = { title = d_nancy_harts } }
+	OR = {
+		AND = {
+			gender_equality_trigger = yes
+			females_can_hold_minor_commander_title_trigger = yes
+		}
+		AND = {
+			OR = {
+				gender_equality_trigger = no
+				females_can_hold_minor_commander_title_trigger = no
+			}
+			religion_can_mercenary_advance_gender_laws = yes
+		}
+	}
+}
+
+can_mercenary_use_enatic_succession = {
+	primary_title = { mercenary = yes }
+	OR = {
+		matriarchal_religion = yes
+		primary_title = { title = d_nancy_harts }
+	}
+}
+
+can_mercenary_use_agnatic_succession = {
+	primary_title = { mercenary = yes }
+	NOT = { primary_title = { title = d_nancy_harts } }
+	OR = {
+		gender_equality_trigger = no
+		females_can_hold_minor_commander_title_trigger = no
+	}
+	religion_can_mercenary_advance_gender_laws = no
+}
+
+religion_can_holy_order_advance_gender_laws = {
+	OR = {
+		semi_equal_religion = yes
+		has_landed_title = d_salvation_army
+	}
+	any_independent_ruler = {
+		religion = ROOT
+		higher_real_tier_than = KING
+		primary_title = {
+			higher_real_tier_than = KING
+			has_law = status_of_women_4
+		}
+	}
+}
+
+religion_can_mercenary_advance_gender_laws = {
+	primary_title = {
+		mercenary = yes
+		has_law = agnatic_succession
+	}
+	capital_scope = {
+		duchy = {
+			holder_scope = {
+				religion = ROOT
+				culture_group = ROOT
+				gender_equality_trigger = yes
+				liege = {
+					always = yes
+					gender_equality_trigger = yes
+				}
+			}
+		}
+	}
+}
+
 has_ancestor_veneration = {
 	OR = {
 		religion_group = american_native

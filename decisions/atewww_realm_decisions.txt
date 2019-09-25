@@ -1,0 +1,118 @@
+decisions = {
+	
+	recreate_dixieland = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 24
+
+		potential = {
+			NOT = { has_landed_title = e_dixie }
+			NOT = { top_liege = { has_landed_title = e_dixie } }
+			OR = {
+				culture = dixie
+				culture = southron
+			}
+			NOT = {
+				is_title_active = k_dixieland
+			}
+		}
+		allow = {
+			war = no
+			has_landed_title = k_georgia_kingdom
+			has_landed_title = k_alabama
+			wealth = 400
+			piety = 200
+		}
+		effect = {
+			wealth = -400
+			piety = -200
+			prestige = 250
+			hidden_tooltip = {
+				if = {
+					limit = {
+						primary_title = { title = k_alabama }
+					}
+					k_alabama = {
+						k_dixieland = {
+							activate_title = { title = THIS status = yes }
+							copy_title_laws = PREV
+							copy_title_history = PREV
+						}
+					}
+				}
+				else = {
+					k_georgia_kingdom = {
+						k_dixieland = {
+							activate_title = { title = THIS status = yes }
+							copy_title_laws = PREV
+							copy_title_history = PREV
+						}
+					}
+				}
+				k_georgia_kingdom = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = k_dixieland
+					}
+				}
+				k_alabama = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = k_dixieland
+					}
+				}
+			}
+			k_dixieland = {
+				show_scope_change = no
+				gain_title = ROOT
+			}
+			hidden_tooltip = {
+				k_georgia_kingdom = {
+					any_claimant = {
+						if = {
+							limit = { has_weak_pressed_claim = k_georgia_kingdom }
+							add_weak_pressed_claim = k_dixieland
+						}
+						if = {
+							limit = { has_weak_claim = k_georgia_kingdom }
+							add_weak_claim = k_dixieland
+						}
+						if = {
+							limit = { has_strong_pressed_claim = k_georgia_kingdom }
+							add_pressed_claim = k_dixieland
+						}
+						if = {
+							limit = { has_strong_claim = k_georgia_kingdom }
+							add_claim = k_dixieland
+						}
+						remove_claim = k_georgia_kingdom
+					}
+					destroy_landed_title = THIS
+					activate_title = { title = THIS status = no }
+				}
+				k_alabama = {
+					any_claimant = {
+						if = {
+							limit = { has_weak_pressed_claim = k_alabama }
+							add_weak_pressed_claim = k_dixieland
+						}
+						if = {
+							limit = { has_weak_claim = k_alabama }
+							add_weak_claim = k_dixieland
+						}
+						if = {
+							limit = { has_strong_pressed_claim = k_alabama }
+							add_pressed_claim = k_dixieland
+						}
+						if = {
+							limit = { has_strong_claim = k_alabama }
+							add_claim = k_dixieland
+						}
+						remove_claim = k_alabama
+					}
+					destroy_landed_title = THIS
+					activate_title = { title = THIS status = no }
+				}
+				character_event = { id = ATE_WWW_TITLE.3 }
+			}
+		}
+	}
+}

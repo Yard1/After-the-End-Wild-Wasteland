@@ -1,0 +1,198 @@
+namespace = ATE_WWW_TITLE
+
+# Dixieland Split
+character_event = {
+	id = ATE_WWW_TITLE.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		FROM = { title = k_dixieland }
+		NOR = {
+			has_landed_title = e_dixie
+			culture_group = south_anglo
+			any_liege = {
+				OR = {
+					culture_group = south_anglo
+					has_landed_title = e_dixie
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		k_dixieland = {
+			k_georgia_kingdom = {
+				activate_title = { title = THIS status = yes }
+				copy_title_laws = PREV
+				copy_title_history = PREV
+			}
+			k_alabama = {
+				activate_title = { title = THIS status = yes }
+				copy_title_laws = PREV
+				copy_title_history = PREV
+			}
+			d_peachtree = {
+				de_jure_liege = k_georgia_kingdom
+			}
+			d_savannah = {
+				de_jure_liege = k_georgia_kingdom
+			}
+			d_altamaha = {
+				de_jure_liege = k_georgia_kingdom
+			}
+			d_sowega = {
+				de_jure_liege = k_georgia_kingdom
+			}
+			d_black_belt = {
+				de_jure_liege = k_alabama
+			}
+			d_birmingham = {
+				de_jure_liege = k_alabama
+			}
+			d_wiregrass = {
+				de_jure_liege = k_alabama
+			}
+			while = {
+				count = 20 
+				limit = {
+					any_direct_de_jure_vassal_title = { always = yes }
+				}
+				any_direct_de_jure_vassal_title = {
+					if = {
+						limit = {
+							any_realm_province = {
+								any_neighbor_province = {
+									de_jure_liege_or_above = k_georgia_kingdom
+								}
+							}
+						}
+						de_jure_liege = k_georgia_kingdom
+					}
+					else_if = {
+						limit = {
+							any_realm_province = {
+								any_neighbor_province = {
+									de_jure_liege_or_above = k_alabama
+								}
+							}
+						}
+						de_jure_liege = k_alabama
+					}
+				}
+			}
+			k_georgia_kingdom = {
+				gain_title = ROOT
+			}
+			k_alabama = {
+				gain_title = ROOT
+			}
+			any_claimant = {
+				if = {
+					limit = { has_weak_pressed_claim = k_dixieland }
+					add_weak_pressed_claim = k_alabama
+					add_weak_pressed_claim = k_georgia_kingdom
+				}
+				if = {
+					limit = { has_weak_claim = k_dixieland }
+					add_weak_claim = k_alabama
+					add_weak_claim = k_georgia_kingdom
+				}
+				if = {
+					limit = { has_strong_pressed_claim = k_dixieland }
+					add_pressed_claim = k_alabama
+					add_pressed_claim = k_georgia_kingdom
+				}
+				if = {
+					limit = { has_strong_claim = k_dixieland }
+					add_claim = k_alabama
+					add_claim = k_georgia_kingdom
+				}
+				remove_claim = k_dixieland
+			}
+			destroy_landed_title = THIS
+			activate_title = { title = THIS status = no }
+		}
+		character_event = { id = ATE_WWW_TITLE.2 }
+	}
+}
+
+character_event = {
+	id = ATE_WWW_TITLE.2
+	desc = EVTDESC_ATE_WWW_TITLE_2
+	picture = GFX_evt_culture_change
+	border = GFX_event_normal_frame_diplomacy
+	
+	major = yes
+
+	is_triggered_only = yes
+	major_trigger = {
+		OR = {
+			culture_group = south_anglo
+			character = ROOT
+			same_realm = ROOT
+			any_claim = {
+				OR = {
+					title = k_dixie
+					title = k_alabama
+					title = k_georgia_kingdom
+				}
+			}
+		}
+	}
+	
+	only_playable = yes
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_TITLE_2
+		trigger = {
+			character = ROOT
+		}
+	}
+	option = {
+		name = EVTOPTB_ATE_WWW_TITLE_2
+		trigger = {
+			NOT = { character = ROOT }
+		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_TITLE.3
+	desc = EVTDESC_ATE_WWW_TITLE_3
+	picture = GFX_evt_culture_change
+	border = GFX_event_normal_frame_diplomacy
+	
+	major = yes
+
+	is_triggered_only = yes
+	major_trigger = {
+		OR = {
+			culture_group = south_anglo
+			character = ROOT
+			same_realm = ROOT
+			any_claim = {
+				OR = {
+					title = k_dixie
+					title = k_alabama
+					title = k_georgia_kingdom
+				}
+			}
+		}
+	}
+	
+	only_playable = yes
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_TITLE_3
+		trigger = {
+			character = ROOT
+		}
+	}
+	option = {
+		name = EVTOPTB_ATE_WWW_TITLE_2
+		trigger = {
+			NOT = { character = ROOT }
+		}
+	}
+}

@@ -793,13 +793,14 @@ decisions = {
 				any_child = {
 					is_alive = yes
 					OR = {
+						ROOT = { player_heir = { character = PREVPREV } }
 						AND = {
 							ROOT = { 
 								NOR = {
 									matriarchal_religion = yes
 									has_religion_feature = religion_patriarchal
 								}
-								primary_title = { has_law = agnatic_succession } 
+								primary_title = { NOT = { has_law = enatic_succession } } 
 							}
 							is_female = no
 						}
@@ -809,7 +810,7 @@ decisions = {
 									matriarchal_religion = yes
 									has_religion_feature = religion_patriarchal
 								}
-								primary_title = { has_law = enatic_succession } 
+								primary_title = { NOT = { has_law = agnatic_succession } }
 							}
 							is_female = yes
 						}
@@ -817,13 +818,13 @@ decisions = {
 							ROOT = { 
 								matriarchal_religion = yes
 							}
-							is_female = no
+							is_female = yes
 						}
 						AND = {
 							ROOT = { 
 								has_religion_feature = religion_patriarchal
 							}
-							is_female = yes
+							is_female = no
 						}
 					}
 					NOR = {
@@ -983,6 +984,113 @@ decisions = {
 					fertility > 0.36
 					practical_age < 45
 				}
+			}
+		}
+	}
+
+	chrome_cultist_ulimate_sacrifice = {
+		only_playable = yes
+		ai_check_interval = 24
+
+		potential = {
+			has_dlc = "Reapers"
+			is_adult = yes
+			religion = chrome_cultist
+			any_artifact = {
+				OR = {
+					AND = { 
+						OR = {
+							artifact = prosthetic_hand_metal
+							artifact = prosthetic_hand_gold
+							has_artifact_flag = prosthetic_hand
+						}
+						ROOT = { NOT = { trait = one_handed } } 
+					}
+					AND = { 
+						OR = {
+							artifact = prosthetic_leg_artifact
+							has_artifact_flag = prosthetic_leg
+						}
+						ROOT = { NOT = { trait = one_legged } } 
+					}
+				}
+			}
+		}
+		allow = {
+			block_general_event_trigger = no
+			war = no
+			has_regent = no
+		}
+		effect = {
+			set_character_flag = chrome_cultist_ulimate_sacrifice_flag
+			character_event = { id = ATE_WWW_RELIGION.35 tooltip = chrome_cultist_ulimate_sacrifice_tooltip }
+		}
+		ai_will_do = {
+			factor = 0.05
+			
+			modifier = {
+				factor = 5
+				trait = zealous
+			}
+			
+			modifier = {
+				factor = 0
+				trait = chrome_cultist_sacrifice
+			}
+
+			modifier = {
+				factor = 0
+				NOR = {
+					trait = zealous
+					trait = lunatic
+					trait = possessed
+				}
+			}
+
+			modifier = {
+				factor = 0.01
+				trait = cynical
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 0.5
+				trait = proud
+				OR = {
+					trait = fair
+					trait = groomed
+				}
+			}
+
+			modifier = {
+				factor = 0.5
+				OR = {
+					trait = one_eyed
+					trait = blinded
+				}
+			}
+			modifier = {
+				factor = 0.5
+				trait = one_handed
+			}
+			modifier = {
+				factor = 0.5
+				trait = one_legged
+			}
+			modifier = {
+				factor = 0.01
+				trait = severely_injured
+			}
+			modifier = {
+				factor = 0.01
+				trait = maimed
+			}
+
+			modifier = {
+				factor = 0.01
+				NOT = { health = 2.5 }
 			}
 		}
 	}

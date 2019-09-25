@@ -36,6 +36,17 @@ k_sinaloa_adj;Sinaloan;;;;;;;;;;;;;x
 TERRITORY_OF;Territory of;;;;;;;;;;;;;x
 b_lone_prairie_BC;Lone Prairie;;;;;;;;;;;;;x
 b_groundbirch_BC;Groundbirch;;;;;;;;;;;;;x
+k_georgia_kingdom_adj;Georgian;;;;;;;;;;;;;x
+k_georgia_kingdom;Georgia;;;;;;;;;;;;;x
+k_alabama_adj;Alabamian;;;;;;;;;;;;;x
+k_alabama;Alabama;;;;;;;;;;;;;x
+
+EVTDESC_ATE_WWW_TITLE_2;Due to [Root.GetBestName]'s culture, the Kingdom of Dixieland has proven to be simply ungovernable. Therefore, it has been split into Alabama and Georgia - the old kingdoms that have held the land before the Collapse.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_TITLE_2;Damn it!;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_TITLE_2;I see.;;;;;;;;;;;;;x
+
+EVTDESC_ATE_WWW_TITLE_3;Thanks to [Root.GetBestName]'s heritage, [Root.GetSheHe] has managed to recreate the Kingdom of Dixieland by combining the kingdoms of Alabama and Georgia into one.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_TITLE_3;As [Root.Religion.GetHighGodName] intended.;;;;;;;;;;;;;x
 
 # Religious Features 
 
@@ -151,3 +162,6 @@ TOOLTIP_ALLOW_FEMALE_MARSHAL_ALL;Women are allowed to hold the office of [Root.H
 
 canadian_opinion;Canadian Opinion;;;;;;;;;;;;;x
 musician_opinion;Musician Opinion;;;;;;;;;;;;;x
+
+obj_marry_lover_title;Marry for Love;Se marier;Heiraten;;Casarse;;;;;;;;;x
+obj_marry_lover_desc;[This.GetTitledFirstName] desires to marry their lover.;[This.Get_Le_TitledFirstName] souhaite se marier.;[This.GetTitledFirstName] möchte heiraten.;;[This.GetTitledFirstName] quiere casarse.;;;;;;;;;x

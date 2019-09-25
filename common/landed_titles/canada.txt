@@ -743,6 +743,7 @@ e_canada = {
 				color2= { 255 255 20 }
 				holy_site = ursuline
 				holy_site = confederated
+				holy_site = exovedate
 
 				b_montreal_QC = {
 					quebecois = "Montréal"
@@ -1348,42 +1349,42 @@ e_canada = {
 				metis = "Saint-Jean"
 
 				b_st_john_NB = {acadien = "Sainte-Jean"}
-				b_simonds_NB = {}
-				b_carleton_WB = {}
-				b_parrtown_NB = {}
-				b_coldbrook_NB = {}
-				b_fairville_NB = {}
-				b_gaspereaux_NB = {}
 				b_quispamsis_NB = {}
+				b_rothesay_NB = {}
+				b_hampton_NB = {}
+				b_grand_bay_NB = {}
+				b_norton_NB = {}
+				b_nauwigewauk_NB = {}
 			}
 			c_aucpaque = {
 				color = { 248 196 39 }
 				color2= { 220 220 0 }
 				holy_site = high_church
 
+				mikmaq = "Aucpaque"
+				acadien = "Sainte-Anne"
+				quebecois = "Sainte-Anne"
+
 				b_fredericton_NB = {acadien = "Sainte-Anne"}
 				b_kingsclear_NB = {}
-				b_nashwaaksis_NB = {}
-				b_penniac_NB = {}
-				b_keswick_NB = {}
-				b_queensbury_NB = {}
-				b_zionville_NB = {}
 				b_oromocto_NB = {acadien = "Ramouctou"}
+				b_gagetown_NB = {}
+				b_new_maryland_NB = {}
+				b_nackawic_NB = {}
+				b_nashwaaksis_NB = {}
 			}
 			c_meduxnekeag = {
 				color = { 255 203 21 }
 				color2= { 220 220 0 }
 				holy_site = high_church
 
-				b_woodstock_NB = {acadien = "Medotec"}
+				b_woodstock_NB = {}
 				b_canterbury_NB = {}
-				b_houlton_ME = {}
-				b_grafton_NB = {}
-				b_greenville_NB = {}
-				b_jacksonville_NB = {}
-				b_benton_NB = {}
-				b_peel_NB = {}
-				b_lakeville_NB = {}
+				b_hartland_ME = {}
+				b_florenceville_NB = {}
+				b_centreville_NB = {}
+				b_meductic_NB = {}
+				b_knowlesville_NB = {}
 			}
 		}
 		d_petitcodiac = {
@@ -1391,6 +1392,8 @@ e_canada = {
 			color2= { 220 220 0 }
 
 			capital = 1165 # Moncton
+
+			mikmaq = "Petkookweak"
 
 			c_fundy = {
 				color = { 170 194 169 }
@@ -1408,7 +1411,7 @@ e_canada = {
 
 				b_sussex_NB = {}
 				b_petitcodiac_NB = {}
-				b_norton_NB = {}
+				b_salisbury_NB = {}
 				b_penobsquis_NB = {}
 				b_elgin_NB = {acadien = "Gaspareau"}
 				b_alma_NB = {}
@@ -1419,35 +1422,22 @@ e_canada = {
 				color = { 203 224 202 }
 				color2= { 220 220 0 }
 
+				quebecois = "Le Coude"
+				acadien = "Le Coude"
+
 				b_moncton_NB = {
-					cajun = "Le Coude"
+					quebecois = "Le Coude"
 					acadien = "Le Coude"
 				}
 				b_riverview_NB = {}
 				b_dieppe_NB = {acadien = "Ruisseau du Renard"}
 				b_dorchester_NB = {}
-				b_evangeline_NB = {}
-				b_ammon_NB = {}
+				b_shediac_NB = {}
+				b_sackville_NB = {}
 				b_irishtown_NB = {}
 				b_painsec_NB = {}
-				b_synton_NB = {}
 			}
-			c_cape_jourimain = {
-				color = { 170 207 169 }
-				color2= { 220 220 0 }
 
-				b_port_elgin_NB = {
-					quebecois = "Fort Gaspareaux"
-					cajun = "Fort Gaspareaux"
-					acadien = "Fort Gaspareaux"
-				}
-				b_cap_pele_NB = {}
-				b_memramcook_NB = {}
-				b_shediac_NB = {acadien = "Gédiac"}
-				b_sackville_NB = {acadien = "Prée des Bourgs"}
-				b_grand_barachois_NB = {}
-				b_haute_aboujagane_NB = {}
-			}
 		}
 		d_miramichi = {
 			color = { 202 49 16 }
@@ -1466,8 +1456,7 @@ e_canada = {
 				b_cocagne_NB = {acadien = "Côte d'Or"}
 				b_rogersville_NB = {}
 				b_saint_antoine_NB = {}
-				b_escuminac_NB = {}
-				b_ste_margarets_NB = {}
+				b_rexton_NB = {}
 				b_acadieville_NB = {}
 			}
 			c_miramichi = {
@@ -1477,7 +1466,7 @@ e_canada = {
 				acadien = "Ristigouchi"
 
 				b_miramichi_NB = {acadien = "Ristigouchi"}
-				b_newcastle_NB = {}
+				b_neguac_NB = {}
 				b_blackville_NB = {}
 				b_renous_NB = {}
 				b_red_bank_NB = {
@@ -1488,6 +1477,9 @@ e_canada = {
 			c_gloucester = {
 				color = { 191 46 15 }
 				color2= { 220 220 0 }
+
+				acadien = "Caraquet"
+				quebecois = "Caraquet" 
 
 				b_bathurst_NB = {acadien = "Nipisiguit"}
 				b_shippagan_NB = {}
@@ -1502,13 +1494,15 @@ e_canada = {
 				color = { 138 33 11 }
 				color2= { 220 220 0 }
 
+				acadien = "Grand-Sault"
+
 				b_st_quentin_NB = {}
-				b_grand_falls_NB = {acadien = "Grand Sault"}
+				b_grand_falls_NB = {acadien = "Grand-Sault"}
 				b_st_leonard_NB = {}
+				b_perth_andover_NB = {}
+				b_arthurette_NB = {}
 				b_plaster_rock_NB = {}
 				b_nictau_NB = {}
-				b_mt_carleton_NB = {}
-				b_riley_brook_NB = {}
 			}
 		}
 		d_restigouche = {
@@ -1645,6 +1639,10 @@ e_canada = {
 				color = { 170 207 169 }
 				color2= { 220 220 0 }
 
+				mikmaq = "Takumegoochk"
+				maritimer = "Phiogto"
+				newfie = "Phiogto"
+
 				b_tatamagouche_NS = {}
 				b_pugwash_NS = {}
 				b_wallace_NS = {}
@@ -1675,11 +1673,12 @@ e_canada = {
 				holy_site = high_church
 				holy_site = confederated
 				
-				mikmaq = "Chebucto"
-				acadien = "Chezzacook"
+				mikmaq = "Kjipuktuk"
+				acadien = "Chebucto"
+				quebecois = "Chebucto"
 				
 				b_fort_george_NS = {}
-				b_halifax_NS = {acadien = "Chezzacook"}
+				b_halifax_NS = {acadien = "Chebucto"}
 				b_dartmouth_NS = {}
 				b_lake_echo_NS = {}
 				b_enfield_NS = {}
@@ -1698,6 +1697,8 @@ e_canada = {
 			acadien = "Côte-Sud"
 			haitian = "Côte-Sud"
 			mikmaq = "Gespogoitnag"
+			newfie = "Cladach Theas"
+			maritimer = "Cladach Theas"
 
 			c_hants = {
 				color = { 206 65 157 }
@@ -1708,7 +1709,7 @@ e_canada = {
 				acadien = "Mirliguèche"
 				haitian = "Mirliguèche"
 				
-				b_lunenburg_NS = {acadien = "Mirliguesh"}
+				b_lunenburg_NS = {acadien = "Mirliguèche"}
 				b_bridgewater_NS = {}
 				b_windsor_NS = {acadien = "Paroisse L'Assomption"}
 				b_elmsdale_NS = {}
@@ -2082,6 +2083,8 @@ e_canada = {
 
 			capital = 330 # Lakehead, Thunder Bay
 
+			ojibwe = "Animbiigoong"
+
 			c_lakehead = {
 				color = { 230 213 172 }
 				color2= { 255 255 255 }
@@ -2099,64 +2102,60 @@ e_canada = {
 				b_fort_william_ON = {
 					used_for_dynasty_names = no
 				}
-				b_oliver_ON = {}
 				b_paipoonge_ON = {}
 				b_neebing_ON = {}
 				b_shuniah_ON = {}
 				b_conmee_ON = {}
-				b_gillies_ON = {}
 				b_rosslyn_ON = {}
+				b_oliver_ON = {}
 			}
 			c_nipigon = {
 				color = { 215 204 177 }
 				color2= { 255 255 255 }
 
+				ojibwe = "Zaaga'igan"
+
 				b_nipigon_ON = {}
-				b_kama_ON = {}
-				b_macdiarmid_ON = {}
 				b_beardmore_ON = {}
+				b_hurkett_ON = {}
+				b_auden_ON = {}
+				b_ferland_ON = {}
 				b_gull_bay_ON = {
 					ojibwe = "Gayaashki-zaagiing"
 					used_for_dynasty_names = no
 				}
-				b_armstrong_station_ON = {
-					used_for_dynasty_names = no
-				}
-				b_poplar_lodge_ON = {
-					used_for_dynasty_names = no
-				}
-				b_auden_ON = {}
+				b_red_rock_ON = {}
+				b_ombabika_ON = {}
 			}
 			c_greenstone = {
 				color = { 135 134 189 }
 				color2= { 255 255 255 }
 
+				ojibwe = "Waaskiinaysay"
+
 				b_geraldton_ON = {}
 				b_longlac_ON = {}
-				b_greenstone_ON = {}
-				b_nakina_moraine_ON = {}
+				b_nakina_ON = {}
+				b_nezah_ON = {}
 				b_jellicoe_ON = {}
-				b_pagwa_ON = {}
+				b_macdiarmid_ON = {}
 				b_caramat_ON = {}
 				b_macleod_ON = {}
-				b_hillsport_ON = {}
-				b_arms_ON = {}
-				b_nezah_ON = {}
 			}
 			c_schreiber = {
 				color = { 235 224 199 }
 				color2= { 255 255 255 }
+
+				ojibwe = "Bingwi Neyaashi"
 
 				b_schreiber_ON = {}
 				b_terrace_bay_ON = {
 					used_for_dynasty_names = no
 				}
 				b_rossport_ON = {}
-				b_pays_plat_ON = {
-					used_for_dynasty_names = no
-				}
-				b_cavers_ON = {}
+				b_pays_plat_ON = {}
 				b_jackfish_ON = {}
+				b_neys_ON = {}
 				b_rainbow_falls_ON = {}
 			}
 			c_pic = {
@@ -2169,11 +2168,11 @@ e_canada = {
 				b_heron_bay_ON = {
 					used_for_dynasty_names = no
 				}
-				b_angler_ON = {}
-				b_middleton_ON = {}
-				b_pringle_ON = {}
+				b_hemlo_ON = {}
+				b_pic_ON = {}
+				b_mobert_ON = {}
 				b_melgund_ON = {}
-				b_pic_island_ON = {}
+				b_white_river_ON = {}
 			}
 		}
 	}
