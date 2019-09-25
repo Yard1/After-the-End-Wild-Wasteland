@@ -49,10 +49,13 @@ defined_text = {
 	text = {
 		localisation_key = GetHouseOfWorship_Consumerist
 		trigger = {
-			OR = {
-				religion = consumerist
-				religion = monetarist
-			}
+			religion = consumerist
+		}
+	}
+	text = {
+		localisation_key = GetHouseOfWorship_Monetarist
+		trigger = {
+			religion = monetarist
 		}
 	}
 	text = {

@@ -1505,7 +1505,8 @@ charitable = {
 	
 	virtue = yes
 	brethren_opinion = -5
-	
+	consumerist_opinion = -5
+	monetarist_opinion = -5
 	diplomacy = 3
 	
 	church_opinion = 5

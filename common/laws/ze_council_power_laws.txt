@@ -148,7 +148,7 @@ laws = {
 					OR = {
 						religion_group = christian
 						religion_group = pacific
-						religion_openly_americanist_or_heresy_trigger = yes = yes
+						religion_openly_americanist_or_heresy_trigger = yes
 						religion = mormon
 						religion = sacred_heart
 					}
@@ -162,6 +162,10 @@ laws = {
 			additive_modifier = { 
 				value = 10			
 				title = e_usa
+			}
+			additive_modifier = { 
+				value = 10			
+				government = consumerist_government
 			}
 			additive_modifier = { 
 				value = 10			
@@ -349,7 +353,7 @@ laws = {
 						religion = evangelical
 						religion = cetic
 						religion = neutic
-						religion_openly_americanist_or_heresy_trigger = yes = yes
+						religion_openly_americanist_or_heresy_trigger = yes
 					}
 					is_feudal = yes
 				}	
@@ -357,6 +361,10 @@ laws = {
 			additive_modifier = { 
 				value = 10			
 				title = e_dixie
+			}
+			additive_modifier = { 
+				value = 10			
+				government = consumerist_government
 			}
 			additive_modifier = { 
 				value = 10			
@@ -528,7 +536,7 @@ laws = {
 						religion = catholic
 						religion = cetic
 						religion = neutic
-						religion_openly_americanist_or_heresy_trigger = yes = yes
+						religion_openly_americanist_or_heresy_trigger = yes
 					}
 					is_feudal = yes
 				}	
@@ -536,6 +544,10 @@ laws = {
 			additive_modifier = { 
 				value = 10			
 				title = e_dixie	
+			}
+			additive_modifier = { 
+				value = 10			
+				government = consumerist_government
 			}
 			additive_modifier = { 
 				value = 10			
@@ -703,7 +715,7 @@ laws = {
 						religion = catholic
 						religion = cetic
 						religion = neutic
-						religion_openly_americanist_or_heresy_trigger = yes = yes
+						religion_openly_americanist_or_heresy_trigger = yes
 					}
 					is_feudal = yes
 				}	
@@ -711,6 +723,10 @@ laws = {
 			additive_modifier = { 
 				value = 10			
 				title = e_dixie	
+			}
+			additive_modifier = { 
+				value = 10			
+				government = consumerist_government
 			}
 			additive_modifier = { 
 				value = 10			
@@ -877,7 +893,7 @@ laws = {
 						religion = catholic
 						religion = cetic
 						religion = neutic
-						religion_openly_americanist_or_heresy_trigger = yes = yes
+						religion_openly_americanist_or_heresy_trigger = yes
 					}
 					is_feudal = yes
 				}	
@@ -885,6 +901,10 @@ laws = {
 			additive_modifier = { 
 				value = 10			
 				title = e_dixie	
+			}
+			additive_modifier = { 
+				value = 10			
+				government = consumerist_government
 			}
 			additive_modifier = { 
 				value = 10			
@@ -1052,7 +1072,7 @@ laws = {
 						religion = catholic
 						religion = cetic
 						religion = neutic
-						religion_openly_americanist_or_heresy_trigger = yes = yes
+						religion_openly_americanist_or_heresy_trigger = yes
 					}
 					is_feudal = yes
 				}	
@@ -1060,6 +1080,10 @@ laws = {
 			additive_modifier = { 
 				value = 10			
 				title = e_dixie
+			}
+			additive_modifier = { 
+				value = 10			
+				government = consumerist_government
 			}
 			additive_modifier = { 
 				value = 10			
@@ -1226,7 +1250,7 @@ laws = {
 						religion = catholic
 						religion = cetic
 						religion = neutic
-						religion_openly_americanist_or_heresy_trigger = yes = yes
+						religion_openly_americanist_or_heresy_trigger = yes
 					}
 					is_feudal = yes
 				}	
@@ -1234,6 +1258,10 @@ laws = {
 			additive_modifier = { 
 				value = 10			
 				title = e_dixie
+			}
+			additive_modifier = { 
+				value = 10			
+				government = consumerist_government
 			}
 			additive_modifier = { 
 				value = 10			

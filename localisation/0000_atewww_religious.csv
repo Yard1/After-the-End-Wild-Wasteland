@@ -536,8 +536,98 @@ exovedate_FEATURES;§Y*§! Rulers can gain Sympathy towards American Native, Judai
 # Consumerists
 consumerist_government;Corporate Feudal;;;;;;;;;;;;;x
 consumerist_government_desc;The Corporate Feudal government, much like the ordinary Feudal government, revolves around the oath between liege and vassal, and Corporate Feudal lords can only directly own so many Holdings before they must start to rely on vassals - whose loyalty may vary... The Corporate Feudal government is unique to the [consumerist.GetName] faith and its heresies, and allows holding Cities in addition to Castles.;;;;;;;;;;;;;x
-consumerist_government_FEATURES;§Y*§! Cannot use Gavelkind, Elective Gavelkind, Primogeniture or Ultimogeniture succession laws for Duchy, Kingdom and Empire titles\n§Y*§! No wrong government penalty if liege or subject is a Republic;;;;;;;;;;;;;x
+consumerist_government_FEATURES;§Y*§! Cannot use Gavelkind, Elective Gavelkind, Primogeniture or Ultimogeniture succession laws if the Council is Empowered\n§Y*§! No wrong government penalty if liege or subject is a Republic;;;;;;;;;;;;;x
 
+city_duchy_consumerist;Retail Chain;;;;;;;;;;;;;x
+job_chancellor_consumerist;Chief Networking Officer;;;;;;;;;;;;;x
+job_treasurer_consumerist;Chief Financial Officer;;;;;;;;;;;;;x
+job_marshal_consumerist;Chief Security Officer;;;;;;;;;;;;;x
+job_spymaster_consumerist;Chief Risk Officer;;;;;;;;;;;;;x
+job_spiritual_consumerist;Chief Marketing Officer;;;;;;;;;;;;;x
+
+job_chancellor_monetarist;Chief Networking Officer;;;;;;;;;;;;;x
+job_treasurer_monetarist;Chief Financial Officer;;;;;;;;;;;;;x
+job_marshal_monetarist;Chief Security Officer;;;;;;;;;;;;;x
+job_spymaster_monetarist;Chief Risk Officer;;;;;;;;;;;;;x
+job_spiritual_monetarist;Chief Marketing Officer;;;;;;;;;;;;;x
+
+title_councilmember_king_consumerist;Board Member;Conseiller;Berater;;Consejero;;;;;;;;;x
+title_councilmember_emperor_consumerist;Board Member;Conseiller;Berater;;Consejero;;;;;;;;;x
+
+title_councilmember_king_consumerist;Board Member;Conseiller;Berater;;Consejero;;;;;;;;;x
+title_councilmember_emperor_consumerist;Board Member;Conseiller;Berater;;Consejero;;;;;;;;;x
+
+GetHouseOfWorship_Monetarist;Treasury;;;;;;;;;;;;;x
+
+gov_consumerist_government_autocracy;Private [PrimaryTitle.GetTier];;;;;;;;;;;;;x
+gov_consumerist_government_council;Corporate [PrimaryTitle.GetTier];;;;;;;;;;;;;x
+gov_consumerist_government_full_council;Joint Stock [PrimaryTitle.GetTier];;;;;;;;;;;;;x
+
+barony_of_monetarist;Office of;;;;;;;;;;;;;x
+baron_monetarist;Supervisor;;;;;;;;;;;;;x
+baron_female_monetarist;Supervisor;;;;;;;;;;;;;x
+county_of_monetarist;Directorate of;;;;;;;;;;;;;x
+count_monetarist;Director;;;;;;;;;;;;;x
+count_female_monetarist;Director;;;;;;;;;;;;;x
+duchy_of_monetarist;Managing Directorate of;;;;;;;;;;;;;x
+duke_monetarist;Managing Director;;;;;;;;;;;;;x
+duke_female_monetarist;Managing Director;;;;;;;;;;;;;x
+kingdom_of_monetarist;Corporation of;;;;;;;;;;;;;x
+king_monetarist;Executive Director;;;;;;;;;;;;;x
+king_female_monetarist;Executive Director;;;;;;;;;;;;;x
+empire_of_monetarist;Conglomerate of;;;;;;;;;;;;;x
+emperor_monetarist;Chairman;;;;;;;;;;;;;x
+emperor_female_monetarist;Chairwoman;;;;;;;;;;;;;x
+
+temple_barony_of_monetarist;Treasury of;;;;;;;;;;;;;x
+temple_baron_monetarist;Manager;;;;;;;;;;;;;x
+temple_baron_female_monetarist;Manager;;;;;;;;;;;;;x
+temple_baron_monetarists;Managers;;;;;;;;;;;;;x
+temple_county_of_monetarist;Bank of;;;;;;;;;;;;;x
+temple_count_monetarist;Director;;;;;;;;;;;;;x
+temple_count_female_monetarist;Director;;;;;;;;;;;;;x
+temple_duchy_of_monetarist;Depository of;;;;;;;;;;;;;x
+temple_duke_monetarist;Managing Director;;;;;;;;;;;;;x
+temple_duke_female_monetarist;Managing Director;;;;;;;;;;;;;x
+temple_kingdom_of_monetarist;State Reserve of;;;;;;;;;;;;;x
+temple_king_monetarist;Executive Director;;;;;;;;;;;;;x
+temple_king_female_monetarist;Executive Director;;;;;;;;;;;;;x
+temple_empire_of_monetarist;Federal Reserve of;;;;;;;;;;;;;x
+temple_emperor_monetarist;Chairman;;;;;;;;;;;;;x
+temple_emperor_female_monetarist;Chairwoman;;;;;;;;;;;;;x
+
+city_baron_monetarist;Manager;;;;;;;;;;;;;x
+city_baron_monetarist_female;Manager;;;;;;;;;;;;;x
+city_count_monetarist;Franchisee;;;;;;;;;;;;;x
+city_count_female_monetarist;Franchisee;;;;;;;;;;;;;x
+city_duke_monetarist;Stockholder;;;;;;;;;;;;;x
+city_duke_female_monetarist;Stockholder;;;;;;;;;;;;;x
+city_king_monetarist;Executive Director;;;;;;;;;;;;;x
+city_king_female_monetarist;Executive Director;;;;;;;;;;;;;x
+city_emperor_monetarist;Chairman;;;;;;;;;;;;;x
+city_emperor_female_monetarist;Chairwoman;;;;;;;;;;;;;x
+city_barony_of_monetarist;Store of;;;;;;;;;;;;;x
+city_county_of_monetarist;Franchise of;;;;;;;;;;;;;x
+city_duchy_of_monetarist;Retail Chain of;;;;;;;;;;;;;x
+city_kingdom_of_monetarist;Multinational of;;;;;;;;;;;;;x
+city_empire_of_monetarist;Monopoly of;;;;;;;;;;;;;x
+city_barony_monetarist;Store;;;;;;;;;;;;;x
+city_county_monetarist;Franchise;;;;;;;;;;;;;x
+city_duchy_consumerist;Retail Chain;;;;;;;;;;;;;x
+city_kingdom_monetarist;Multinational;;;;;;;;;;;;;x
+city_empire_monetarist;Monopoly;;;;;;;;;;;;;x
+temple_barony_monetarist;Market;;;;;;;;;;;;;x
+temple_county_monetarist;Mall;;;;;;;;;;;;;x
+temple_duchy_monetarist;Megamall;;;;;;;;;;;;;x
+temple_kingdom_monetarist;Megamall Complex;;;;;;;;;;;;;x
+temple_empire_monetarist;Megamall Conglomerate;;;;;;;;;;;;;x
+barony_monetarist;Office;;;;;;;;;;;;;x
+county_monetarist;Directorate;;;;;;;;;;;;;x
+duchy_monetarist;Managing Directorate;;;;;;;;;;;;;x
+kingdom_monetarist;Corporation;;;;;;;;;;;;;x
+empire_monetarist;Conglomerate;;;;;;;;;;;;;x
+
+job_prime_minister_monetarist;Chief Operating Officer;;;;;;;;;;;;;x
 
 # Misc
 

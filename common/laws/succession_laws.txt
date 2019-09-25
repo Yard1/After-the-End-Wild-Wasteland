@@ -98,9 +98,19 @@ succession_laws = {
 			holder_scope = {
 				NOT = { religion_group = american_native } #uses Eldership instead
 				NOT = { religion_group = pirate }
-				OR = {
-					NOT = { government = consumerist_government }
-					lower_tier_than = DUKE
+				NAND = {
+					government = consumerist_government
+					OR = {
+						lower_tier_than = COUNT
+						AND = {
+							has_dlc = "Zeus"
+							has_law = law_voting_power_1
+						}
+						AND = {
+							NOT = { has_dlc = "Zeus" }
+							NOT = { has_law = crown_authority_4 }
+						}
+					}
 				}
 				NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 				OR = {
@@ -230,9 +240,19 @@ succession_laws = {
 			holder_scope = {
 				NOT = { religion_group = american_native } #uses Eldership instead
 				NOT = { religion_group = pirate }
-				OR = {
-					NOT = { government = consumerist_government }
-					lower_tier_than = DUKE
+				NAND = {
+					government = consumerist_government
+					OR = {
+						lower_tier_than = COUNT
+						AND = {
+							has_dlc = "Zeus"
+							has_law = law_voting_power_1
+						}
+						AND = {
+							NOT = { has_dlc = "Zeus" }
+							NOT = { has_law = crown_authority_4 }
+						}
+					}
 				}
 				NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 				is_nomadic = no
@@ -686,9 +706,19 @@ succession_laws = {
 				holder_scope = { NOT = { religion_group = pirate } }
 			}
 			holder_scope = {
-				OR = {
-					NOT = { government = consumerist_government }
-					lower_tier_than = DUKE
+				NAND = {
+					government = consumerist_government
+					OR = {
+						lower_tier_than = COUNT
+						AND = {
+							has_dlc = "Zeus"
+							has_law = law_voting_power_1
+						}
+						AND = {
+							NOT = { has_dlc = "Zeus" }
+							NOT = { has_law = crown_authority_4 }
+						}
+					}
 				}
 				is_merchant_republic = no
 				is_patrician = no
@@ -1334,9 +1364,19 @@ succession_laws = {
 				NOT = { religion = pagan }
 				NOT = { religion = celtic_pagan }
 				NOT = { religion = espiritista }
-				OR = {
-					NOT = { government = consumerist_government }
-					lower_tier_than = DUKE
+				NAND = {
+					government = consumerist_government
+					OR = {
+						lower_tier_than = COUNT
+						AND = {
+							has_dlc = "Zeus"
+							has_law = law_voting_power_1
+						}
+						AND = {
+							NOT = { has_dlc = "Zeus" }
+							NOT = { has_law = crown_authority_4 }
+						}
+					}
 				}
 				
 				is_merchant_republic = no

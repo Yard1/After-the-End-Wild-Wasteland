@@ -50,3 +50,35 @@ government_flavor = {
 		}
 	}
 }
+
+government_flavor = {
+	name = gov_consumerist_government_autocracy
+	graphics = GFX_evt_throne_room
+	priority = 1
+	trigger = {
+		government = consumerist_government
+	}	
+}
+
+government_flavor = {
+	name = gov_consumerist_government_council
+	graphics = GFX_evt_found_hre
+	priority = 2
+	trigger = {
+		government = consumerist_government
+		OR = {
+			NOT = { has_dlc = "Conclave" }
+			has_law = law_voting_power_1
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_consumerist_government_full_council
+	graphics = GFX_evt_found_hre
+	priority = 3
+	trigger = {
+		government = consumerist_government
+		has_law = succession_voting_power_1
+	}
+}

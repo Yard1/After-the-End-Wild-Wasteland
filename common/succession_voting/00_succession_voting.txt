@@ -2142,7 +2142,11 @@ feudal_elective = {
 				religion_group = latter_day_saints
 				religion_group = jewish_group
 			}
-			NOT = { trait = greedy }
+			NOR = { 
+				trait = greedy 
+				religion = consumerist
+				religion = monetarist
+			}
 			FROM = { 
 				trait = charitable
 			}
@@ -2151,7 +2155,11 @@ feudal_elective = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_charitable_negative
 			NOT = { character = FROM } #Do not judge yourself.
-			trait = greedy
+			OR = {
+				trait = greedy
+				religion = consumerist
+				religion = monetarist
+			}
 			FROM = { 
 				trait = charitable
 			}
@@ -2340,6 +2348,8 @@ feudal_elective = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = {
 				religion_group = pirate
+				religion = consumerist
+				religion = monetarist
 				AND = { 
 					religion_group = pagan_group
 					NOT = { religion = revelationist }
@@ -5648,7 +5658,11 @@ tanistry = {
 				religion_group = latter_day_saints
 				religion_group = jewish_group
 			}
-			NOT = { trait = greedy }
+			NOR = { 
+				trait = greedy 
+				religion = consumerist
+				religion = monetarist
+			}
 			FROM = { 
 				trait = charitable
 			}
@@ -5657,7 +5671,11 @@ tanistry = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_charitable_negative
 			NOT = { character = FROM } #Do not judge yourself.
-			trait = greedy
+			OR = {
+				trait = greedy
+				religion = consumerist
+				religion = monetarist
+			}
 			FROM = { 
 				trait = charitable
 			}
@@ -5845,6 +5863,8 @@ tanistry = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = {
 				religion_group = pirate
+				religion = consumerist
+				religion = monetarist
 				AND = { 
 					religion_group = pagan_group
 					NOT = { religion = revelationist }
@@ -9122,7 +9142,11 @@ elective_gavelkind = {
 				religion_group = latter_day_saints
 				religion_group = jewish_group
 			}
-			NOT = { trait = greedy }
+			NOR = { 
+				trait = greedy 
+				religion = consumerist
+				religion = monetarist
+			}
 			FROM = { 
 				trait = charitable
 			}
@@ -9131,7 +9155,11 @@ elective_gavelkind = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_charitable_negative
 			NOT = { character = FROM } #Do not judge yourself.
-			trait = greedy
+			OR = {
+				trait = greedy
+				religion = consumerist
+				religion = monetarist
+			}
 			FROM = { 
 				trait = charitable
 			}
@@ -9318,6 +9346,8 @@ elective_gavelkind = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = { 
 				religion_group = pirate
+				religion = consumerist
+				religion = monetarist
 				AND = { 
 					religion_group = pagan_group
 					NOT = { religion = revelationist }
@@ -13330,24 +13360,26 @@ eldership_rules = {
 				religion_group = latter_day_saints
 				religion_group = jewish_group
 			}
-			NOT = { trait = greedy }
+			NOR = { 
+				trait = greedy 
+				religion = consumerist
+				religion = monetarist
+			}
 			FROM = { 
 				trait = charitable
-			}
-			FROMFROM = { 
-				holder_scope = { character = ROOT } 
 			}
 		}
 		additive_modifier = { #Shunned for being Charitable
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_charitable_negative
 			NOT = { character = FROM } #Do not judge yourself.
-			trait = greedy
+			OR = {
+				trait = greedy
+				religion = consumerist
+				religion = monetarist
+			}
 			FROM = { 
 				trait = charitable
-			}
-			FROMFROM = { 
-				holder_scope = { character = ROOT } 
 			}
 		}
 		additive_modifier = { #Praised for being Diligent
@@ -13564,6 +13596,8 @@ eldership_rules = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = {
 				religion_group = pirate
+				religion = consumerist
+				religion = monetarist
 				AND = { 
 					religion_group = pagan_group
 					NOT = { religion = revelationist }
@@ -16545,21 +16579,27 @@ eldership_rules = {
 				religion_group = latter_day_saints
 				religion_group = jewish_group
 			}
-			NOT = { trait = greedy }
+			NOR = { 
+				trait = greedy 
+				religion = consumerist
+				religion = monetarist
+			}
 			FROM = { 
 				trait = charitable
 			}
-			has_elector_stance = { stance = elder_pleased title = FROMFROM }
 		}
 		additive_modifier = { #Shunned for being Charitable
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_charitable_negative
 			NOT = { character = FROM } #Do not judge yourself.
-			trait = greedy
+			OR = {
+				trait = greedy
+				religion = consumerist
+				religion = monetarist
+			}
 			FROM = { 
 				trait = charitable
 			}
-			has_elector_stance = { stance = elder_pleased title = FROMFROM }
 		}
 		additive_modifier = { #Praised for being Diligent
 			value = 15
@@ -16751,6 +16791,8 @@ eldership_rules = {
 			NOT = { character = FROM } #Do not judge yourself.
 			OR = {
 				religion_group = pirate
+				religion = consumerist
+				religion = monetarist
 				AND = { 
 					religion_group = pagan_group
 					NOT = { religion = revelationist }
