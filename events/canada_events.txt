@@ -356,6 +356,11 @@ character_event = {
 				set_defacto_liege = ROOT
 				clr_character_flag = old_new_pope_vassal
 			}
+			d_abbey_guards = {
+				holder_scope = {
+					unsafe_religion = confederated
+				}
+			}
 		}
 		any_realm_character = {
 			religion = confederated
