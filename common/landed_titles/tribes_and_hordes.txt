@@ -366,3 +366,20 @@ d_blackfoot = {
 	#foa = "HIGH_CHIEF_FOA"
 	title_prefix = "TRIBE_OF"
 }
+
+d_groening = {
+	color = { 195 145 115 }
+	color2={ 220 220 20 }
+	
+	#tribe = yes
+	
+	allow = {
+		always = no
+	}
+	
+	capital = 718
+	culture = plautdietsch
+	#title = "HIGH_CHIEF"
+	#foa = "HIGH_CHIEF_FOA"
+	title_prefix = "TRIBE_OF"
+}

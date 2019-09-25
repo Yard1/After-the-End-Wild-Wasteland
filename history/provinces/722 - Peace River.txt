@@ -1,0 +1,15 @@
+# County Title
+title = c_peace_river
+
+# Settlements
+max_settlements = 3
+
+b_peace_river_AB = tribal
+#b_grimshaw_AB = city
+
+# Misc
+culture = plautdietsch
+religion = batenburger
+terrain = plains
+
+#History

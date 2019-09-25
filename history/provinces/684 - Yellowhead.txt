@@ -1,0 +1,14 @@
+# County Title
+title = c_yellowhead
+
+# Settlements
+max_settlements = 2
+
+b_hinton_AB = tribal
+
+# Misc
+culture = prairielander
+religion = neognostic
+terrain = hills
+
+#History
