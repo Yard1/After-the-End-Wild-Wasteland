@@ -378,7 +378,6 @@ character_event = {
 		}
 		event_target:new_pope = {
 			set_defacto_liege = event_target:unifier
-			capital = b_the_glebe_ON
 		}
 	}
 }
