@@ -2353,6 +2353,7 @@ gender_laws = {
 				NOT = { has_religion_feature = religion_patriarchal }
 				NOT = { religion = amazonian }
 				OR = {
+					religion = libertarian
 					matriarchal_religion = yes
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_enatic

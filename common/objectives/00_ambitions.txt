@@ -836,6 +836,7 @@ obj_get_married = {
 		prisoner = no
 		is_marriage_adult = yes
 		NOT = { trait = celibate }
+		NOT = { trait = amazon_trait }
 		NOT = { is_incapable = yes }
 		NOT = { trait = eunuch }
 		NOT = { is_ascetic_trigger = yes }
@@ -908,8 +909,10 @@ obj_get_married = {
 				is_ruler = no
 				age = 40
 			}
+			can_marry = no
 			is_pope = yes
 			trait = celibate
+			trait = amazon_trait
 			is_incapable = yes
 			trait = eunuch
 			is_ascetic_trigger = yes
@@ -967,6 +970,7 @@ obj_marry_ruler = {
 		prisoner = no
 		is_marriage_adult = yes
 		NOT = { trait = celibate }
+		NOT = { trait = amazon_trait }
 		NOT = { is_incapable = yes }
 		OR = {
 			AND = { 
@@ -1027,7 +1031,9 @@ obj_marry_ruler = {
 				is_ruler = no
 				age = 45
 			}
+			can_marry = no
 			trait = celibate
+			trait = amazon_trait
 			is_incapable = yes
 		}
 	}

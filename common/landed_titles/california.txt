@@ -447,6 +447,7 @@ e_california = {
 				holy_site = cetic
 				holy_site = shinto
 				holy_site = amazonian
+				holy_site = monetarist
 				
 				b_fort_point_CA = {}
 				b_alcatraz_CA = {}

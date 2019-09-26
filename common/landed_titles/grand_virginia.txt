@@ -191,7 +191,7 @@ e_grand_virginia = {
 
 				b_chattanooga_TN = {}
 				b_chickamauga_GA = {
-					cherokee = "Tsikama’gi"
+					cherokee = "Tsikamagi"
 				}
 				b_ooltewah_TN = {}
 				b_hixson_TN = {}
@@ -804,6 +804,7 @@ e_grand_virginia = {
 			c_louisville = {
 				color = { 20 148 209 }
 				color2={ 220 220 20 }
+				holy_site = monetarist #fort knox
 
 				b_louisville_KY = {}
 				b_jeffersontown_KY = {}

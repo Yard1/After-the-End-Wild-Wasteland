@@ -191,6 +191,7 @@ e_dixie = {
 				holy_site = evangelical
 				holy_site = revelationist
 				holy_site = revelationist_reformed
+				holy_site = monetarist
 				motowner = "Allah's Garden"
 				muscogee = "Standing Peachtree"
 				

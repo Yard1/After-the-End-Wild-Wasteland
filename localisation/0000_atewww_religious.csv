@@ -670,7 +670,7 @@ EVTOPTAHF20100_A;Only the [Root.RelHead.GetTitle] is fit to baptize [From.GetHer
 
 gracia_divina_FEATURES;§Y*§! Can venerate ancestors;;;;;;;;;;;;;x
 peyotist_FEATURES;§Y*§! Can venerate ancestors\n§Y*§! May go on vision quests with the aid of sacramental herbs.;;;;;;;;;;;;;x
-midewiwin_FEATURES;§Y*§! Can venerate ancestors\n§Y*§! May go on vision quests with the aid of sacramental herbs.\n§Y*§!;;;;;;;;;;;;;x
+midewiwin_FEATURES;§Y*§! Can venerate ancestors\n§Y*§! May go on vision quests with the aid of sacramental herbs.;;;;;;;;;;;;;x
 raven_tales_FEATURES;§Y*§! Can venerate ancestors\n§Y*§! May go on vision quests with the aid of sacramental herbs.;;;;;;;;;;;;;x
 
 tooltip_vote_strength_theocratic_feudal_government;[Root.GetFirstName] is a §Y[Root.GetPriest]§! under a §YMonastic Feudal§! government;;;;;;;;;x

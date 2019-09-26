@@ -191,6 +191,11 @@ focus_seduction = {
 			trait = chaste
 		}
 		modifier = {
+			factor = 0.25
+			trait = amazon_trait
+			NOT = { trait = homosexual }
+		}
+		modifier = {
 			factor = 0
 			has_game_rule = {
 				name = ai_seduction

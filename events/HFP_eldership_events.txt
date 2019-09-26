@@ -56,6 +56,7 @@ character_event = {
 			prisoner = yes
 		}
 		any_eldership_title = {
+			has_law = succ_eldership
 			ROOT = {
 				OR = {
 					has_elector_stance = { stance = elder_displeased title = PREV }
@@ -96,6 +97,7 @@ character_event = {
 			prisoner = yes
 		}
 		any_eldership_title = {
+			has_law = succ_eldership
 			ROOT = {
 				OR = {
 					has_elector_stance = { stance = elder_pleased title = PREV } 
@@ -109,6 +111,7 @@ character_event = {
 		}
 		NOT = { 
 			any_eldership_title = {
+				has_law = succ_eldership
 				ROOT = {
 					OR = {
 						has_elector_stance = { stance = elder_pleased title = PREV } 
@@ -125,6 +128,7 @@ character_event = {
 	immediate = {
 		random_eldership_title = {
 			limit = {
+				has_law = succ_eldership
 				ROOT = {
 					OR = {
 						has_elector_stance = { stance = elder_pleased title = PREV } 
@@ -256,6 +260,7 @@ character_event = {
 		is_married = no
 		is_consort = no 	
 		any_eldership_title = {
+			has_law = succ_eldership
 			ROOT = { has_elector_stance = { stance = elder_displeased title = PREV } }
 			holder_scope = { 
 				is_liege_of = ROOT 
@@ -275,6 +280,7 @@ character_event = {
 	immediate = {
 		random_eldership_title = {
 			limit = {
+				has_law = succ_eldership
 				ROOT = { has_elector_stance = { stance = elder_displeased title = PREV } }
 				holder_scope = { 
 					is_liege_of = ROOT
@@ -441,6 +447,7 @@ character_event = {
 	
 	trigger = {
 		any_eldership_title = {
+			has_law = succ_eldership
 			ROOT = {
 				OR = {
 					has_elector_stance = { stance = elder_pleased title = PREV }
@@ -479,6 +486,7 @@ character_event = {
 		hidden_effect = {
 			random_eldership_title = {
 				limit = {
+					has_law = succ_eldership
 					ROOT = {
 						OR = {
 							has_elector_stance = { stance = elder_pleased title = PREV } 	
@@ -1064,6 +1072,7 @@ character_event = {
 	
 	trigger = {
 		any_eldership_title = {
+			has_law = succ_eldership
 			ROOT = { has_elector_stance = { stance = elder_displeased title = PREV } }
 			holder_scope = { 
 				NOT = { has_character_modifier = elder_demand_cooldown } 
@@ -1097,6 +1106,7 @@ character_event = {
 		hidden_effect = {
 			random_eldership_title = {
 				limit = {
+					has_law = succ_eldership
 					ROOT = { has_elector_stance = { stance = elder_displeased title = PREV } }
 					holder_scope = { 
 						NOT = { has_character_modifier = elder_demand_cooldown } 
@@ -1666,6 +1676,7 @@ character_event = {
 		is_married = no
 		has_lover = no
 		any_eldership_title = {
+			has_law = succ_eldership
 			ROOT = {
 				has_elector_stance = { stance = elder_pleased title = PREV } 
 			}
@@ -1679,6 +1690,7 @@ character_event = {
 	immediate = {
 		random_eldership_title = {
 			limit = {
+				has_law = succ_eldership
 				ROOT = {
 					has_elector_stance = { stance = elder_pleased title = PREV }
 				}
@@ -1801,8 +1813,8 @@ character_event = {
 	option = { #Give spouse.
 		name = EVTOPTBHFP24015
 		trigger = {
-			event_target:scoped_suitor = { is_alive = yes is_married = no }
-			FROM = { is_married = no }
+			event_target:scoped_suitor = { is_alive = yes is_married = no can_marry = yes }
+			FROM = { is_married = no can_marry = yes }
 		}
 		show_portrait = event_target:scoped_suitor
 		event_target:scoped_suitor = { add_spouse = FROM }
@@ -1913,6 +1925,7 @@ character_event = {
 			prisoner = yes
 		}
 		any_eldership_title = {
+			has_law = succ_eldership
 			ROOT = {
 				has_elector_stance = { stance = elder_displeased title = PREV }
 			}
@@ -2040,6 +2053,7 @@ character_event = {
 	immediate = {
 		random_eldership_title = {
 			limit = {
+				has_law = succ_eldership
 				ROOT = {
 					has_elector_stance = { stance = elder_displeased title = PREV }
 				}
@@ -2246,6 +2260,7 @@ character_event = {
 			root_has_execution_reason_opinion_trigger = no
 			ROOT = { 
 				any_eldership_title = {
+					has_law = succ_eldership
 					holder_scope = { 
 						character = PREVPREVPREV # Ruler is the killer.
 					}
@@ -2285,6 +2300,7 @@ character_event = {
 			prisoner = yes
 		}
 		any_eldership_title = {
+			has_law = succ_eldership
 			ROOT = {
 				has_elector_stance = { stance = elder_ecstatic title = PREV }
 			}
@@ -2390,6 +2406,7 @@ character_event = {
 	immediate = {
 		random_eldership_title = {
 			limit = {
+				has_law = succ_eldership
 				ROOT = {
 					has_elector_stance = { stance = elder_ecstatic title = PREV }
 				}
@@ -2570,6 +2587,7 @@ character_event = {
 		learning = 10
 		stewardship = 10
 		any_eldership_title = {
+			has_law = succ_eldership
 			ROOT = {
 				has_elector_stance = { stance = elder_ecstatic title = PREV }
 			}
@@ -2659,6 +2677,7 @@ character_event = {
 	immediate = {
 		random_eldership_title = {
 			limit = {
+				has_law = succ_eldership
 				ROOT = {
 					has_elector_stance = { stance = elder_ecstatic title = PREV }
 				}
@@ -2778,6 +2797,7 @@ character_event = {
 			root_has_imprisonment_reason_opinion_trigger = no
 			ROOT = { 
 				any_eldership_title = {
+					has_law = succ_eldership
 					holder_scope = { 
 						character = PREVPREVPREV # Ruler is the jailer.
 					}

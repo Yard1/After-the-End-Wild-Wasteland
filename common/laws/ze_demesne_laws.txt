@@ -165,7 +165,7 @@ laws = {
 				}
 			}
 			conditional_tooltip = {
-				trigger = { semi_equal_religion = no }
+				trigger = { holder_scope = { semi_equal_religion = no } }
 				custom_tooltip = {
 					text = TT_HAS_TOLERANCE_3
 					holder_scope = { capital_scope = { TECH_CULTURE_FLEX = 3 } }
@@ -318,7 +318,7 @@ laws = {
 				holder_scope = { has_religion_feature = religion_patriarchal }
 			}
 			conditional_tooltip = {
-				trigger = { semi_equal_religion = no }
+				trigger = { holder_scope = { semi_equal_religion = no } }
 				custom_tooltip = {
 					text = TT_HAS_TOLERANCE_4
 					holder_scope = { capital_scope = { TECH_CULTURE_FLEX = 4 } }
@@ -475,7 +475,7 @@ laws = {
 				}
 			}
 			conditional_tooltip = {
-				trigger = { semi_equal_religion = no }
+				trigger = { holder_scope = { semi_equal_religion = no } }
 				custom_tooltip = {
 					text = TT_HAS_TOLERANCE_5
 					holder_scope = { capital_scope = { TECH_CULTURE_FLEX = 5 } }
@@ -629,7 +629,7 @@ laws = {
 						holder_scope = { has_religion_feature = religion_patriarchal }
 					}
 					conditional_tooltip = {
-						trigger = { semi_equal_religion = no }
+						trigger = { holder_scope = { semi_equal_religion = no } }
 						custom_tooltip = {
 							text = TT_HAS_TOLERANCE_6
 							holder_scope = { capital_scope = { TECH_CULTURE_FLEX = 6 } }

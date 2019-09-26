@@ -3208,7 +3208,7 @@ narrative_event = {
 					set_government_type = constitutional_rep
 					primary_title = {
 						e_usa = {
-							add_law = succ_constitutional_elective
+							add_law = { law = succ_constitutional_elective opinion_effect = no }
 						}
 					}
 				}

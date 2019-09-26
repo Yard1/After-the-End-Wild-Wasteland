@@ -417,6 +417,29 @@ de_jure_laws = {
 				revoke_law = crown_authority_2
 				revoke_law = crown_authority_3
 				revoke_law = crown_authority_4
+				if = {
+					limit = {
+						government = consumerist_government
+						ROOT = { 
+							OR = {
+								has_law = succ_gavelkind
+								has_law = succ_elective_gavelkind
+								has_law = succ_primogeniture
+								has_law = succ_ultimogeniture
+							}
+						}
+					}
+					ROOT = {
+						if = {
+							limit = { is_law_potential = succ_feudal_elective }
+							add_law = { law = succ_feudal_elective opinion_effect = no }
+						}
+						else_if = {
+							limit = { is_law_potential = succ_seniority }
+							add_law = { law = succ_seniority opinion_effect = no }
+						}
+					}
+				}
 			}
 			#set_appoint_generals = yes
 			#set_appoint_regents = yes

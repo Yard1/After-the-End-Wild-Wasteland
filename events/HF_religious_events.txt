@@ -651,13 +651,13 @@ character_event = {
 	
 	option = { #American Native
 		name = {
-			text = EVTOPTAHF23003
+			text = EVTOPTBHF23090
 			trigger = {
 				is_alternate_start = no
 			}
 		}
 		name = {
-			text = EVTOPTAHF23003_ALT
+			text = EVTOPTAHF23004_ALT
 			trigger = {
 				is_alternate_start = yes
 			}
@@ -667,13 +667,13 @@ character_event = {
 	}
 	option = { #Jews
 		name = {
-			text = EVTOPTBHF23003
+			text = EVTOPTCHF23003
 			trigger = {
 				is_alternate_start = no
 			}
 		}
 		name = {
-			text = EVTOPTBHF23003_ALT
+			text = EVTOPTCHF23003_ALT
 			trigger = {
 				is_alternate_start = yes
 			}

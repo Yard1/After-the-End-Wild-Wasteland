@@ -706,6 +706,13 @@ decisions = {
 				trait = chaste
 			}
 			modifier = {
+				factor = 0.5
+				is_ruler = no
+				liege = {
+					matriarchal_religion = no
+				}
+			}
+			modifier = {
 				factor = 0
 				NOR = {
 					trait = celibate

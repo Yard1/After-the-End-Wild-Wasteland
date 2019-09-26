@@ -410,7 +410,10 @@ letter_event = {
     
     #Agree to marriage
     option = {
-    	trigger = { event_target:marriage_child = { always = yes } }
+    	trigger = {
+			can_marry = yes
+			event_target:marriage_child = { always = yes }
+		}
         name = EVTOPTC_ADV_3
         custom_tooltip = { text = EVTOPTC_ADV_3_TT }
 

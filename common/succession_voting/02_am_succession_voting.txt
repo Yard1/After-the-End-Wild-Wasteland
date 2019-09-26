@@ -2545,9 +2545,9 @@ presidential_elective = {
 	candidate_trigger = { 
 		NOT = { character = ROOT } #Not the current ruler.
 		FROM = { #Basic Constitutional Requirements
-			religion = americanist #duh
 			age = 35 #duh
 			is_ruler = yes
+			block_general_event_trigger = no
 			NOR = {
 				trait = cat
 				trait = dog

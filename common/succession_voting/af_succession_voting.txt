@@ -1,37 +1,12 @@
 
 constitutional_elective = {
-	elector_selection = {
-		days = -5 		
-		additive_modifier = { #Emperor is always an Elector.
-			value = 30
-			FROMFROM = { 
-				holder_scope = { character = ROOT }
-			}
-		}
-		additive_modifier = { #Then the Councilors.
-			value = 6
-			vassal_of = FROMFROM 
-			OR = { 
-				has_job_title = job_chancellor
-				has_job_title = job_marshal
-				has_job_title = job_treasurer
-				has_job_title = job_spymaster
-				has_job_title = job_spiritual
-				higher_real_tier_than = BARON
-				has_minor_title = title_councilmember_king #Generic advisors
-				has_minor_title = title_councilmember_emperor
-			}
-		}
-	}
-	elector_vote_strength = { 
-		days = 1 
-	}
 	candidate_vote_score = {
 		days = 0
-		##########################   Elector voting himself   ##########################
+		#########################   Elector voting himself   ##########################
+		#Not much has changed, except for incorporating the Become President ambition into it.
 		additive_modifier = {
 			value = 15
-			localisation_key = tooltip_feudal_elector_vote_myself
+			localisation_key = tooltip_presidential_elector_vote_myself
 			character = FROM
 			NOR = {
 				trait = humble
@@ -42,6 +17,7 @@ constitutional_elective = {
 				trait = depressed
 				trait = ambitious
 			}
+			NOT = { has_ambition = obj_become_president }
 			NOT = { 
 				FROMFROM = { 
 					holder_scope = { 
@@ -52,9 +28,10 @@ constitutional_elective = {
 		}
 		additive_modifier = {
 			value = -25
-			localisation_key = tooltip_feudal_elector_vote_not_myself
+			localisation_key = tooltip_presidential_elector_vote_not_myself
 			character = FROM
 			NOT = { trait = ambitious }
+			NOT = { has_ambition = obj_become_president }
 			OR = {
 				trait = humble
 				trait = content
@@ -66,7 +43,7 @@ constitutional_elective = {
 		}
 		additive_modifier = {
 			value = 40
-			localisation_key = tooltip_feudal_elector_vote_myself_heir
+			localisation_key = tooltip_presidential_elector_vote_myself_heir
 			character = FROM
 			NOR = {
 				trait = humble
@@ -77,6 +54,7 @@ constitutional_elective = {
 				trait = depressed
 				trait = ambitious
 			}
+			NOT = { has_ambition = obj_become_president }
 			FROMFROM = { 
 				holder_scope = { 
 					is_parent_of = ROOT
@@ -84,15 +62,19 @@ constitutional_elective = {
 			}
 		}
 		additive_modifier = {
-			value = 400
-			localisation_key = tooltip_feudal_elector_vote_myself_ambitious
+			value = 40
+			localisation_key = tooltip_presidential_elector_vote_myself_ambitious
 			character = FROM
 			trait = ambitious
-			is_adult = yes
+			NOT = { has_ambition = obj_become_president }
 		}
-
-		##########################   Candidate's traits   ##########################
-
+		additive_modifier = {
+			value = 40
+			localisation_key = tooltip_presidential_elector_vote_myself_pres_ambition
+			character = FROM
+			has_ambition = obj_become_president
+		}
+		#########################  Candidate's traits   ##########################
 		#The heir
 		additive_modifier = { #Current ruler will always try to elect his player heir.
 			value = 50
@@ -108,20 +90,25 @@ constitutional_elective = {
 				NOT = {
 					is_rival = FROM #Unless is rival.
 				}
+				NOR = {
+					trait = just
+					trait = zealous
+				}
 			}
 		}
-
 		#Sexism
-		additive_modifier = { #Gender weights
-			value = -30
+		#Works similarly to vanilla, but cultures that allow absolute cognatic will not be affected (i.e., they will treat men and women equally.)
+		additive_modifier = { # Gender weights
+			value = -10
 			localisation_key = tooltip_feudal_elector_vote_agnatic_woman
 			FROMFROM = {
 				has_law = cognatic_succession
 			}
 			NOR = {
-				has_religion_feature = religion_matriarchal
-				has_religion_feature = religion_equal
-				has_religion_feature = religion_feature_bon
+				has_feminist_culture_trigger = yes
+				matriarchal_religion = yes
+				equal_religion = yes
+				has_religion_feature = religion_feature_midewiwin
 				has_game_rule = {
 					name = gender
 					value = all
@@ -132,15 +119,16 @@ constitutional_elective = {
 			}
 		}
 		additive_modifier = { #Gender weights
-			value = -30
+			value = -10
 			localisation_key = tooltip_feudal_elector_vote_enatic_man
 			FROMFROM = {
 				has_law = enatic_cognatic_succession
 			}
 			NOR = {
-				has_religion_feature = religion_patriarchal
-				has_religion_feature = religion_equal
-				has_religion_feature = religion_feature_bon
+				has_feminist_culture_trigger = yes
+				matriarchal_religion = yes
+				equal_religion = yes
+				has_religion_feature = religion_feature_midewiwin
 				has_game_rule = {
 					name = gender
 					value = all
@@ -150,17 +138,17 @@ constitutional_elective = {
 				is_female = no
 			}
 		}
-
 		additive_modifier = { #Gender weights
-			value = -50
+			value = -30
 			localisation_key = tooltip_feudal_elector_vote_sow
 			FROMFROM = {
 				has_law = status_of_women_0
 			}
 			NOR = {
-				has_religion_feature = religion_matriarchal
-				has_religion_feature = religion_equal
-				has_religion_feature = religion_feature_bon
+				has_feminist_culture_trigger = yes
+				matriarchal_religion = yes
+				equal_religion = yes
+				has_religion_feature = religion_feature_midewiwin
 				has_game_rule = {
 					name = gender
 					value = all
@@ -177,9 +165,10 @@ constitutional_elective = {
 				has_law = status_of_women_1
 			}
 			NOR = {
-				has_religion_feature = religion_matriarchal
-				has_religion_feature = religion_equal
-				has_religion_feature = religion_feature_bon
+				has_feminist_culture_trigger = yes
+				matriarchal_religion = yes
+				equal_religion = yes
+				has_religion_feature = religion_feature_midewiwin
 				has_game_rule = {
 					name = gender
 					value = all
@@ -190,15 +179,16 @@ constitutional_elective = {
 			}
 		}
 		additive_modifier = { #Gender weights
-			value = -20
+			value = -10
 			localisation_key = tooltip_feudal_elector_vote_sow
 			FROMFROM = {
 				has_law = status_of_women_2
 			}
 			NOR = {
-				has_religion_feature = religion_matriarchal
-				has_religion_feature = religion_equal
-				has_religion_feature = religion_feature_bon
+				has_feminist_culture_trigger = yes
+				matriarchal_religion = yes
+				equal_religion = yes
+				has_religion_feature = religion_feature_midewiwin
 				has_game_rule = {
 					name = gender
 					value = all
@@ -209,28 +199,11 @@ constitutional_elective = {
 			}
 		}
 		additive_modifier = { #Gender weights
-			value = -10
+			value = -5
 			localisation_key = tooltip_feudal_elector_vote_sow
 			FROMFROM = {
 				has_law = status_of_women_3
 			}
-			NOR = {
-				has_religion_feature = religion_matriarchal
-				has_religion_feature = religion_equal
-				has_religion_feature = religion_feature_bon
-				has_game_rule = {
-					name = gender
-					value = all
-				}
-			}
-			FROM = {
-				is_female = yes
-			}
-		}
-		additive_modifier = { #Gender weights
-			value = -75
-			localisation_key = tooltip_feudal_elector_vote_patriarchal
-			has_religion_feature = religion_patriarchal
 			NOT = {
 				has_game_rule = {
 					name = gender
@@ -241,158 +214,24 @@ constitutional_elective = {
 				is_female = yes
 			}
 		}
-		additive_modifier = { #Gender weights
-			value = -75
-			localisation_key = tooltip_feudal_elector_vote_matriarchal
-			has_religion_feature = religion_matriarchal
-			NOT = {
-				has_game_rule = {
-					name = gender
-					value = all
-				}
-			}
-			FROM = {
-				is_female = no
-			}
-		}
-
-		#Ageism
-		additive_modifier = { 
-			value = -1000
-			localisation_key = tooltip_feudal_elector_vote_rome_child
-			NOT = { character = FROM }
-			FROM = {
-				NOT = {
-					age = 6
-				}
-			}
-		}
-		additive_modifier = { 
-			value = -200
-			localisation_key = tooltip_feudal_elector_vote_rome_child
-			NOT = { character = FROM }
-			FROM = {
-				age = 6
-				NOT = {
-					age = 16
-				}
-			}
-		}
-		additive_modifier = { #Still too young for older rulers
-			value = -10
-			localisation_key = tooltip_feudal_elector_vote_youngster
-			NOT = { character = FROM }
-			age = 30
-			FROM = {
-				age = 16
-				NOT = {
-					age = 25
-				}
-			}
-		}
-		additive_modifier = { 
-			value = -10
-			localisation_key = tooltip_feudal_elector_vote_youngster
-			NOT = { character = FROM }
-			age = 40
-			FROM = {
-				age = 25
-				NOT = {
-					age = 35
-				}
-			}
-		}
-		additive_modifier = { #Or too old for younger rulers.
-			value = -10
-			localisation_key = tooltip_feudal_elector_vote_oldtimer
-			NOT = { character = FROM }
-			NOT = { age = 40 }
-			FROM = {
-				age = 40
-				NOT = { age = 50 }
-			}
-		}
-
-		additive_modifier = { #Or simply too old overall.
-			value = -15
-			localisation_key = tooltip_feudal_elector_vote_decrepit
-			NOT = { character = FROM }
-			FROM = { age = 50 }
-		}
-
-		#Culturism
-		additive_modifier = { 
-			value = 100
-			localisation_key = tooltip_feudal_elector_vote_fellow_culture
-			NOT = { character = FROM }
-			culture = FROM
-		}
-		additive_modifier = { 
-			value = -150
-			localisation_key = tooltip_feudal_elector_vote_stranger
-			FROMFROM = { holder_scope = { culture = ROOT } } #Only a concern if Elector and current ruler share culture.
-			NOT = { culture = FROM }
-		}
-		additive_modifier = { 
-			value = -300
-			localisation_key = tooltip_feudal_elector_vote_foreigner
-			FROMFROM = { holder_scope = { culture = ROOT } } #Only a concern if Elector and current ruler share culture.
-			NOT = { culture_group = FROM }
-		}
-		additive_modifier = { #Candidate is a foreigner's pet 
-			value = -100
-			localisation_key = tooltip_feudal_elector_vote_strangers_pet
-			FROM = { 
-				character = ROOT_FROMFROMFROM 
-				culture = ROOT
-			}
-			FROMFROM = { holder_scope = { NOT = { culture = ROOT_FROM } } }
-		}
-		additive_modifier = { #Candidate is a foreigner's pet 
-			value = -150
-			localisation_key = tooltip_feudal_elector_vote_foreigners_pet
-			FROM = { 
-				character = ROOT_FROMFROMFROM 
-				culture = ROOT
-			}
-			FROMFROM = { holder_scope = { NOT = { culture_group = ROOT_FROM } } }
-		}
-		additive_modifier = { #If candidate is elected, he will rule from a capital outside this dejure.
-			value = -150
-			localisation_key = tooltip_feudal_elector_vote_political_concerns
-			capital_scope = { de_jure_liege = FROMFROM }
-			FROM = {
-				is_ruler = yes 
-				vassal_of = FROMFROM
-				capital_scope = { NOT = { de_jure_liege = ROOT_FROMFROM } }
-			}
-		}
-		additive_modifier = { #Candidate is a foreign ruler.
-			value = -300
-			localisation_key = tooltip_feudal_elector_vote_encroaching_foreigner
-			capital_scope = { de_jure_liege = FROMFROM }
-			FROM = {
-				is_ruler = yes 
-				NOT = { is_vassal_or_below_of = ROOT_FROMFROM }
-			}
-		}
-		additive_modifier = { #Candidate is a foreign non-dejure ruler.
-			value = -500
-			localisation_key = tooltip_feudal_elector_vote_encroaching_foreigner
-			NOT = { capital_scope = { de_jure_liege = FROMFROM } }
-			FROM = {
-				is_ruler = yes 
-				NOT = { is_vassal_or_below_of = ROOT_FROMFROM }
-			}
-		}
-
 		#Faithism
+		additive_modifier = {
+			value = 5
+			#localisation_key = tooltip_feudal_elector_vote_infidel
+			religion = americanist
+			FROM = { 
+				religion = ROOT
+			}
+		}
 		additive_modifier = { #Infidel
-			value = -25
+			value = -10
 			localisation_key = tooltip_feudal_elector_vote_infidel
 			NOT = { has_religion_feature = religion_cosmopolitan }
+			NOT = { has_religion_feature = religion_feature_espiritista }
 			NOT = { has_religion_feature = religion_dogmatic }
 			NOT = { religion_group = indian_group }
+			NOT = { religion_group = pacific }
+			trait = zealous
 			FROM = { 
 				religion_group = ROOT
 				NOT = { religion = ROOT } 
@@ -400,27 +239,29 @@ constitutional_elective = {
 			}
 		}
 		additive_modifier = { #Heathen
-			value = -50
+			value = -25
 			localisation_key = tooltip_feudal_elector_vote_heathen
 			NOT = { has_religion_feature = religion_cosmopolitan }
+			NOT = { has_religion_feature = religion_feature_espiritista }
 			NOT = { has_religion_feature = religion_dogmatic }
 			NOT = { religion_group = indian_group }
+			NOT = { religion_group = pacific }
 			NOR = { 
 				AND = {  
 					trait = sympathy_christendom
 					FROM = { religion_group = christian } 
 				} 
 				AND = {  
-					trait = sympathy_islam
-					FROM = { religion_group = muslim } 
+					trait = sympathy_oldworld
+					FROM = { religion_group = oldworld } 
 				} 
 				AND = {  
 					trait = sympathy_pagans
 					FROM = { religion_group = pagan_group } 
 				} 
 				AND = {  
-					trait = sympathy_zoroastrianism
-					FROM = { religion_group = zoroastrian_group } 
+					trait = sympathy_cult_of_saints
+					FROM = { religion_group = cult_of_saints } 
 				} 
 				AND = {  
 					trait = sympathy_judaism
@@ -429,7 +270,7 @@ constitutional_elective = {
 				AND = {  
 					trait = sympathy_indian
 					FROM = { religion_group = indian_group } 
-				} 
+				}
 				AND = {  
 					trait = sympathy_afro_syncretic
 					FROM = { religion_group = afro_syncretic } 
@@ -437,10 +278,6 @@ constitutional_elective = {
 				AND = {  
 					trait = sympathy_american_native
 					FROM = { religion_group = american_native } 
-				}
-				AND = {  
-					trait = sympathy_cult_of_saints
-					FROM = { religion_group = cult_of_saints } 
 				}
 				AND = {  
 					trait = sympathy_pacific
@@ -455,34 +292,141 @@ constitutional_elective = {
 					FROM = { religion_group = mesoamerican_gods } 
 				}
 				AND = {  
-					trait = sympathy_oldworld
-					FROM = { religion_group = oldworld } 
-				}
-				AND = {  
 					trait = sympathy_pirate
 					FROM = { religion_group = pirate } 
-				}
+				} 
 			}
+			trait = zealous
 			FROM = { 
 				NOT = { religion_group = ROOT } 
 				NOT = { is_heresy_of = ROOT } 
 			}
 		}
 		additive_modifier = { #Heretic
-			value = -50
+			value = -25
 			localisation_key = tooltip_feudal_elector_vote_heretic
 			NOT = { has_religion_feature = religion_cosmopolitan }
+			NOT = { has_religion_feature = religion_feature_espiritista }
 			NOT = { has_religion_feature = religion_dogmatic }
 			NOT = { religion_group = indian_group }
+			NOT = { religion_group = pacific }
+			trait = zealous
 			FROM = { is_heresy_of = ROOT }
 		}
 		additive_modifier = { #Dogmatics will hardly ever pick an infidel.
 			value = -100
 			localisation_key = tooltip_feudal_elector_vote_heathen_dogmatic
 			has_religion_feature = religion_dogmatic
+			trait = zealous
 			FROM = { NOT = { religion = ROOT } }
 		}
-
+		##Ageism##
+		#Candidates will favor older candidates, barring exceptional circumstances. Note that, after a candidate reaches the age of 65, the value drops sharply.
+		additive_modifier = { #Even highly-qualified candidates will have a hard time before they turn 40.
+			value = -20
+			localisation_key = tooltip_presidential_elector_vote_young_adult
+			NOT = { character = FROM }
+			FROM = {
+				NOT = {
+					age = 40
+				}
+			}
+		}
+		additive_modifier = { #Candidates will be penalized unless they are geniuses or have a high diplomacy score.
+			value = -10
+			localisation_key = tooltip_feudal_elector_vote_older
+			NOT = { character = FROM }
+			FROM = {
+				age = 40
+				NOT = {
+					age = 45
+				}
+				NOR = {
+					trait = quick
+					trait = genius
+					diplomacy = 16
+					AND = {
+						trait = just
+						trait = erudite
+						OR = {
+							trait = kind
+							trait = diligent
+							trait = charitable
+							trait = zealous
+						}
+					}
+				}
+			}
+		}
+		#Candidates between 45 and 50 are rated as default.
+		additive_modifier = { 
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote
+			NOT = { character = FROM }
+			FROM = {
+				age = 50
+				NOT = {
+					age = 55
+				}
+			}
+		}
+		additive_modifier = { 
+			value = 15
+			localisation_key = tooltip_feudal_elector_vote
+			NOT = { character = FROM }
+			FROM = {
+				age = 55
+				NOT = {
+					age = 65
+				}
+			}
+		}
+		additive_modifier = { 
+			value = -25
+			localisation_key = tooltip_feudal_elector_vote
+			NOT = { character = FROM }
+			FROM = {
+				age = 65
+			}
+		}
+		#Culturism
+		#Works similarly to vanilla.
+		additive_modifier = { 
+			value = 10
+			localisation_key = tooltip_feudal_elector_vote_fellow_culture
+			NOT = { character = FROM }
+			culture = FROM
+		}
+		additive_modifier = { 
+			value = -15
+			localisation_key = tooltip_feudal_elector_vote_stranger
+			FROMFROM = { holder_scope = { culture = ROOT } } #Only a concern if Elector and current ruler share culture.
+			NOT = { culture = FROM }
+		}
+		additive_modifier = { 
+			value = -30
+			localisation_key = tooltip_feudal_elector_vote_foreigner
+			FROMFROM = { holder_scope = { culture = ROOT } } #Only a concern if Elector and current ruler share culture.
+			NOT = { culture_group = FROM }
+		}
+		additive_modifier = { #Candidate is a foreigner's pet 
+			value = -10
+			localisation_key = tooltip_feudal_elector_vote_strangers_pet
+			FROM = { 
+				character = ROOT_FROMFROMFROM 
+				culture = ROOT
+			}
+			FROMFROM = { holder_scope = { NOT = { culture = ROOT_FROM } } }
+		}
+		additive_modifier = { #Candidate is a foreigner's pet 
+			value = -15
+			localisation_key = tooltip_feudal_elector_vote_foreigners_pet
+			FROM = { 
+				character = ROOT_FROMFROMFROM 
+				culture = ROOT
+			}
+			FROMFROM = { holder_scope = { NOT = { culture_group = ROOT_FROM } } }
+		}
 		#Barbarism
 		additive_modifier = { 
 			value = -15
@@ -500,16 +444,8 @@ constitutional_elective = {
 				} 
 			}
 		}
-		additive_modifier = { 
-			value = -15
-			localisation_key = tooltip_feudal_elector_vote_settled
-			is_nomadic = yes
-			FROM = { 
-				is_nomadic = no
-			}
-		}
-
 		#Nepotism
+		#Note that nepotism goes against traditional Americanist values, and will be opposed by Just or Zealous rulers.
 		additive_modifier = { 
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_dynasty
@@ -520,6 +456,10 @@ constitutional_elective = {
 				dynasty = ROOT
 				NOT = { 
 					is_close_relative = ROOT
+				}
+				NOR = {
+					trait = just
+					trait = zealous
 				}
 			}
 		}
@@ -533,6 +473,10 @@ constitutional_elective = {
 				is_close_relative = ROOT
 				NOT = { 
 					is_child_of = ROOT
+				}
+				NOR = {
+					trait = just
+					trait = zealous
 				}
 			}
 		}
@@ -552,8 +496,12 @@ constitutional_elective = {
 					}
 				}
 			}
+			NOR = {
+				trait = just
+				trait = zealous
+			}
 		}
-		additive_modifier = { #Current Ruler should tend to often pick one of his own children as potential heirs.
+		additive_modifier = { #Current Ruler should tend to often pick one of his own children as potential heirs, unless Just or Zealous.
 			value = 60
 			localisation_key = tooltip_feudal_elector_vote_parent
 			NOT = { 
@@ -567,8 +515,11 @@ constitutional_elective = {
 					character = ROOT
 				}
 			}
+			NOR = {
+				trait = just
+				trait = zealous
+			}
 		}
-
 		#Prestige
 		additive_modifier = { 
 			value = -20
@@ -631,7 +582,7 @@ constitutional_elective = {
 			}
 			FROM = { prestige = 1000 }
 		}
-
+		
 		#Piety
 		additive_modifier = { 
 			value = -20
@@ -694,237 +645,18 @@ constitutional_elective = {
 			}
 			FROM = { piety = 500 }
 		}
-
-
-		#ROMAN ATTRIBUTES
-		additive_modifier = { # Roman Generals
-			value = 5
-			localisation_key = tooltip_feudal_elector_vote_commander_martial
-			FROM = { 
-				OR = { 
-					has_minor_title = title_commander
-					has_job_title = job_marshal
-				} 
-				martial = 10
-				NOT = { 
-					martial = 12
-				}
-			}
-		}
-		additive_modifier = { # Roman Generals
-			value = 10
-			localisation_key = tooltip_feudal_elector_vote_commander_martial
-			FROM = { 
-				OR = { 
-					has_minor_title = title_commander
-					has_job_title = job_marshal
-				} 
-				martial = 12
-				NOT = { 
-					martial = 16
-				}
-			}
-		}
-		additive_modifier = { # Roman Generals
-			value = 15
-			localisation_key = tooltip_feudal_elector_vote_commander_martial
-			FROM = { 
-				OR = { 
-					has_minor_title = title_commander
-					has_job_title = job_marshal
-				} 
-				martial = 16
-				NOT = { 
-					martial = 18
-				}
-			}
-		}
-		additive_modifier = { # Roman Generals
-			value = 20
-			localisation_key = tooltip_feudal_elector_vote_commander_martial
-			FROM = { 
-				OR = { 
-					has_minor_title = title_commander
-					has_job_title = job_marshal
-				} 
-				martial = 18
-				NOT = { 
-					martial = 20
-				}
-			}
-		}
-		additive_modifier = { # Roman Generals
-			value = 25
-			localisation_key = tooltip_feudal_elector_vote_commander_martial
-			FROM = { 
-				OR = { 
-					has_minor_title = title_commander
-					has_job_title = job_marshal
-				} 
-				martial = 20
-				NOT = { 
-					martial = 25
-				}
-			}
-		}
-		additive_modifier = { # Roman Generals
-			value = 30
-			localisation_key = tooltip_feudal_elector_vote_commander_martial
-			FROM = { 
-				OR = { 
-					has_minor_title = title_commander
-					has_job_title = job_marshal
-				} 
-				martial = 30
-			}
-		}
-
-		additive_modifier = { # Roman Orators
-			value = 5
-			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
-			culture = roman
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				diplomacy = 10
-				NOT = { 
-					diplomacy = 12
-				}
-			}
-		}
-		additive_modifier = { # Roman Orators
-			value = 10
-			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
-			culture = roman
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				diplomacy = 12
-				NOT = { 
-					diplomacy = 16
-				}
-			}
-		}
-		additive_modifier = { # Roman Orators
-			value = 15
-			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
-			culture = roman
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				diplomacy = 16
-				NOT = { 
-					diplomacy = 18
-				}
-			}
-		}
-		additive_modifier = { # Roman Orators
-			value = 20
-			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
-			culture = roman
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				diplomacy = 18
-				NOT = { 
-					diplomacy = 20
-				}
-			}
-		}
-		additive_modifier = { # Roman Orators
-			value = 25
-			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
-			culture = roman
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				diplomacy = 20
-				NOT = { 
-					diplomacy = 25
-				}
-			}
-		}
-		additive_modifier = { # Roman Orators
-			value = 30
-			localisation_key = tooltip_feudal_elector_vote_councilor_diplomacy
-			culture = roman
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				diplomacy = 30
-			}
-		}
-
-		additive_modifier = { # Sneaky Byzantines
-			value = 5
-			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
-			culture = greek
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				intrigue = 10
-				NOT = { 
-					intrigue = 12
-				}
-			}
-		}
-		additive_modifier = { # Sneaky Byzantines
-			value = 10
-			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
-			culture = greek
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				intrigue = 12
-				NOT = { 
-					intrigue = 16
-				}
-			}
-		}
-		additive_modifier = { # Sneaky Byzantines
-			value = 15
-			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
-			culture = greek
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				intrigue = 16
-				NOT = { 
-					intrigue = 18
-				}
-			}
-		}
-		additive_modifier = { # Sneaky Byzantines
-			value = 20
-			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
-			culture = greek
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				intrigue = 18
-				NOT = { 
-					intrigue = 20
-				}
-			}
-		}
-		additive_modifier = { # Sneaky Byzantines
-			value = 25
-			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
-			culture = greek
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				intrigue = 20
-				NOT = { 
-					intrigue = 25
-				}
-			}
-		}
-		additive_modifier = { # Sneaky Byzantines
-			value = 30
-			localisation_key = tooltip_feudal_elector_vote_councilor_intrigue
-			culture = greek
-			FROM = { 
-				ere_elective_politician_titles_trigger = yes
-				intrigue = 30
-			}
-		}
-
 		#Educational preferences
-		additive_modifier = { # Warrior culture prefers warriors
+		additive_modifier = { # If Americanism doesn't control at least 3 holy sites, Martial presidents will be favored.
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_martial_education
-			this_is_warrior_culture_trigger = yes
-			FROM = { 
+			OR = {
+				this_is_warrior_culture_trigger = yes
+				religion = FROM
+				religion_scope = {
+					NOT = { num_of_holy_sites = 3 }
+				}
+			}
+			FROM = {
 				martial = 10
 				OR = { 
 					has_education_martial_trigger = yes 
@@ -932,10 +664,15 @@ constitutional_elective = {
 				} 
 			}
 		}
-		additive_modifier = { # Diplomatic culture prefers stewards and diplomats
+		additive_modifier = { #Most rulers prefer diplomats and scholars
 			value = 15
-			localisation_key = tooltip_feudal_elector_vote_diplomatic_education
-			this_is_diplomatic_culture_trigger = yes
+			localisation_key = tooltip_presidential_elector_vote_diplomatic_education
+			this_is_warrior_culture_trigger = no
+			NOR = {
+				religion = consumerist
+				religion = monetarist
+				is_merchant_republic = yes
+			}
 			FROM = { 
 				OR = { 
 					AND = { 
@@ -946,134 +683,36 @@ constitutional_elective = {
 						}
 					}
 					AND = { 
-						stewardship = 10
+						learning = 10
 						OR = { 
-							has_education_stewardship_trigger = yes
-							has_lifestyle_stewardship_trigger = yes
+							has_education_learning_trigger = yes 
+							has_lifestyle_learning_trigger = yes
 						}
 					}
 				} 
 			}
 		}
-		additive_modifier = { # Spiritual culture prefers scholars
+		additive_modifier = { # Merchant Republics prefer those with high Stewardship
 			value = 15
-			localisation_key = tooltip_feudal_elector_vote_spiritual_education
-			this_is_spiritual_culture_trigger = yes
+			localisation_key = tooltip_presidential_elector_vote_stewardship_education
+			OR = {
+				religion = consumerist
+				religion = monetarist
+				is_merchant_republic = yes
+			}
 			FROM = { 
-				learning = 10
+				stewardship = 10
 				OR = { 
-					has_education_learning_trigger = yes 
-					has_lifestyle_learning_trigger = yes
+					has_education_stewardship_trigger = yes 
+					has_lifestyle_stewardship_trigger = yes
 				} 
 			}
 		}
-
-		#Claims
-		additive_modifier = {
-			value = 30
-			localisation_key = tooltip_feudal_elector_vote_strong_claimant
-			FROM = { 
-				has_claim = FROMFROM
-			}
-		}
-		additive_modifier = {
-			value = 15
-			localisation_key = tooltip_feudal_elector_vote_weak_claimant
-			FROM = { 
-				has_weak_claim = FROMFROM
-			}
-		}
-
-		#Crusader
-		additive_modifier = { 
-			value = 5
-			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_scope = {
-				NOT = { num_of_holy_sites = 3 }
-			}
-			NOR = {
-				trait = cynical
-				trait = zealous
-			}
-			NOT = { character = FROM }
-			FROM = {
-				religion = ROOT
-				has_crusade_trait_trigger = yes
-			}
-		}
-		additive_modifier = { 
-			value = 10
-			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_scope = {
-				NOT = { num_of_holy_sites = 3 }
-			}
-			trait = zealous
-			NOT = { character = FROM }
-			FROM = {
-				religion = ROOT
-				has_crusade_trait_trigger = yes
-			}
-		}
-
 		#All the Traits
-		additive_modifier = {
-			value = 5
-			localisation_key = tooltip_feudal_elector_vote_playful
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
-			FROM = { 
-				trait = playful
-			}
-		}
-		additive_modifier = {
-			value = 5
-			localisation_key = tooltip_feudal_elector_vote_rowdy
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
-			FROM = { 
-				trait = rowdy
-			}
-		}
-		additive_modifier = {
-			value = 5
-			localisation_key = tooltip_feudal_elector_vote_haughty
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_diplomatic_culture_trigger = yes
-			FROM = { 
-				trait = haughty
-			}
-		}
-		additive_modifier = {
-			value = 5
-			localisation_key = tooltip_feudal_elector_vote_conscientious
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_diplomatic_culture_trigger = yes
-			FROM = { 
-				trait = conscientious
-			}
-		}
-		additive_modifier = {
-			value = 5
-			localisation_key = tooltip_feudal_elector_vote_curious
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_spiritual_culture_trigger = yes
-			FROM = { 
-				trait = curious
-			}
-		}
-		additive_modifier = {
-			value = 5
-			localisation_key = tooltip_feudal_elector_vote_idolizer
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_spiritual_culture_trigger = yes
-			FROM = { 
-				trait = idolizer
-			}
-		}
 		additive_modifier = {
 			value = -25
 			localisation_key = tooltip_feudal_elector_vote_depressed
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = depressed
 			}
@@ -1081,19 +720,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_drunkard
-			NOT = { character = FROM } #Do not judge yourself.
-			NOT = { 
-				religion_group = muslim
-			}
-			FROM = { 
-				trait = drunkard
-			}
-		}
-		additive_modifier = {
-			value = -15
-			localisation_key = tooltip_feudal_elector_vote_drunkard_muslim
-			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = muslim
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = drunkard
 			}
@@ -1101,43 +728,23 @@ constitutional_elective = {
 		additive_modifier = { 	#Would mean the end of Elections
 			value = -35	
 			localisation_key = tooltip_feudal_elector_vote_immortal
-			NOT = { character = FROM } #Do not judge yourself.	
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = immortal
 			}
 		}
 		additive_modifier = {
-			value = -35
-			localisation_key = tooltip_feudal_elector_vote_incapable
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
-			FROM = { 
-				trait = incapable
-			}
-		}
-		additive_modifier = {
 			value = -50
-			localisation_key = tooltip_feudal_elector_vote_incapable_warrior
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			localisation_key = tooltip_feudal_elector_vote_incapable
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = incapable
-			}
-		}
-		additive_modifier = {
-			value = -15
-			localisation_key = tooltip_feudal_elector_vote_infirm
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_diplomatic_culture_trigger = no
-			FROM = { 
-				trait = infirm
 			}
 		}
 		additive_modifier = {
 			value = -30
-			localisation_key = tooltip_feudal_elector_vote_infirm_diplomat
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_diplomatic_culture_trigger = yes
+			localisation_key = tooltip_feudal_elector_vote_infirm
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = infirm
 			}
@@ -1145,11 +752,10 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -30
 			localisation_key = tooltip_feudal_elector_vote_lunatic
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			NOR = { 
 				trait = zealous 
 				is_tribal = yes
-				is_nomadic = yes
 			}
 			FROM = { 
 				trait = lunatic
@@ -1158,17 +764,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_maimed
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
-			FROM = { 
-				trait = maimed
-			}
-		}
-		additive_modifier = {
-			value = -15
-			localisation_key = tooltip_feudal_elector_vote_maimed_warrior
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = maimed
 			}
@@ -1176,12 +772,8 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -35
 			localisation_key = tooltip_feudal_elector_vote_possessed
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			NOT = { trait = zealous }
-			NOR = { 
-				is_tribal = yes
-				is_nomadic = yes
-			}
 			FROM = { 
 				trait = possessed
 			}
@@ -1189,7 +781,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -60
 			localisation_key = tooltip_feudal_elector_vote_possessed_vs_zealous
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			trait = zealous
 			NOR = { 
 				is_tribal = yes
@@ -1202,8 +794,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_physician
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_spiritual_culture_trigger = yes
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = physician
 			}
@@ -1211,8 +802,13 @@ constitutional_elective = {
 		additive_modifier = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_scarred
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			NOT = { character = FROM } 
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
 			FROM = { 
 				trait = scarred
 			}
@@ -1220,8 +816,11 @@ constitutional_elective = {
 		additive_modifier = {
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_scarred_mid
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			NOT = { character = FROM } 
+			religion = FROM
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
 			FROM = { 
 				trait = scarred_mid
 			}
@@ -1229,8 +828,13 @@ constitutional_elective = {
 		additive_modifier = {
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_scarred_high
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			NOT = { character = FROM } 
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
 			FROM = { 
 				trait = scarred_high
 			}
@@ -1238,7 +842,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_stressed
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = stressed
 			}
@@ -1391,30 +995,42 @@ constitutional_elective = {
 			}
 		}
 		additive_modifier = {
-			value = -75
+			value = -15
 			localisation_key = tooltip_feudal_elector_vote_disfigured
-			this_is_warrior_culture_trigger = no
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
 			NOT = { 
-				culture_group = byzantine
+				culture_group = south_anglo
 			}
-			FROM = { 
-				trait = disfigured
-			}
-		}
-		additive_modifier = {
-			value = -100
-			localisation_key = tooltip_feudal_elector_vote_disfigured_byzantine
-			culture_group = byzantine
 			FROM = { 
 				trait = disfigured
 			}
 		}
 		additive_modifier = {
 			value = -50
-			localisation_key = tooltip_feudal_elector_vote_disfigured_warrior
-			this_is_warrior_culture_trigger = yes
-			NOT = { 
-				culture_group = byzantine
+			localisation_key = tooltip_feudal_elector_vote_disfigured_byzantine
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
+			culture_group = south_anglo
+			FROM = { 
+				trait = disfigured
+			}
+		}
+
+		additive_modifier = {
+			value = -5
+			localisation_key = tooltip_feudal_elector_vote_disfigured_americanist_crisis
+			religion = FROM
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
 			}
 			FROM = { 
 				trait = disfigured
@@ -1423,15 +1039,23 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_mangled
-			this_is_warrior_culture_trigger = no
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
 			FROM = { 
 				trait = mangled
 			}
 		}
 		additive_modifier = {
 			value = -15
-			localisation_key = tooltip_feudal_elector_vote_mangled_warrior
-			this_is_warrior_culture_trigger = yes
+			localisation_key = tooltip_feudal_elector_vote_mangled_americanist_crisis
+			religion = FROM
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
 			FROM = { 
 				trait = mangled
 			}
@@ -1460,7 +1084,12 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_severely_injured
-			this_is_warrior_culture_trigger = no
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
 			FROM = { 
 				trait = severely_injured
 			}
@@ -1468,46 +1097,25 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_bastard
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			is_feudal = yes
 			FROM = { 
 				trait = bastard
 			}
 		}
-		additive_modifier = {
-			value = -15
-			localisation_key = tooltip_feudal_elector_vote_adopted
-			NOT = { character = FROM } #Do not judge yourself.
-			is_feudal = yes
-			religion_supports_adoption = no
-			FROM = { 
-				trait = adopted
-			}
-		}
-		additive_modifier = {
-			value = 25
-			localisation_key = tooltip_feudal_elector_vote_born_in_the_purple
-			NOT = { character = FROM } #Do not judge yourself.
-			FROMFROM = { title = e_usa }
-			culture_group = byzantine
-			FROM = { 
-				trait = born_in_the_purple
-				NOT = { has_minor_title = title_despot } #Override
-			}
-		}
-		additive_modifier = {
-			value = 25
-			localisation_key = tooltip_feudal_elector_vote_despot
-			NOT = { character = FROM } #Do not judge yourself.
-			culture_group = byzantine
-			FROM = { 
-				has_minor_title = title_despot
-			}
-		}
+		#additive_modifier = {
+		#	value = 10
+		#	localisation_key = tooltip_feudal_elector_vote_born_in_the_purple
+		#	NOT = { character = FROM } #
+		#	culture_group = byzantine
+		#	FROM = { 
+		#		trait = born_in_the_purple
+		#	}
+		#}
 		additive_modifier = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_child_of_consort
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			is_feudal = yes
 			FROM = {
 				OR = { 
@@ -1520,15 +1128,9 @@ constitutional_elective = {
 		additive_modifier = { #Attraction bonus
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_attractive
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			is_adult = yes
-			OR = { 
-				NOT = { is_close_relative = FROM }
-				religion = zoroastrian
-				religion = messalian
-				has_religion_feature = religion_holy_family 
-				has_religion_feature = religion_feature_zun
-			} 
+			NOT = { is_close_relative = FROM }
 			OR = { 
 				AND = { 
 					prefers_men_trigger = yes
@@ -1567,15 +1169,9 @@ constitutional_elective = {
 		additive_modifier = { #Ugliness bonus
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_ugly
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			is_adult = yes
-			OR = { 
-				NOT = { is_close_relative = FROM }
-				religion = zoroastrian
-				religion = messalian
-				has_religion_feature = religion_holy_family 
-				has_religion_feature = religion_feature_zun
-			} 
+			NOT = { is_close_relative = FROM }
 			OR = { 
 				AND = { 
 					prefers_men_trigger = yes
@@ -1614,23 +1210,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = 20
 			localisation_key = tooltip_feudal_elector_vote_genius_diplomat
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				this_is_diplomatic_culture_trigger = yes
-				this_is_spiritual_culture_trigger = yes
-			}
-			FROM = { 
-				trait = genius
-			}
-		}
-		additive_modifier = {
-			value = 10
-			localisation_key = tooltip_feudal_elector_vote_genius
-			NOT = { character = FROM } #Do not judge yourself.
-			NOR = { 
-				this_is_diplomatic_culture_trigger = yes
-				this_is_spiritual_culture_trigger = yes
-			}
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = genius
 			}
@@ -1638,11 +1218,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_quick_diplomat
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				this_is_diplomatic_culture_trigger = yes
-				this_is_spiritual_culture_trigger = yes
-			}
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = quick
 			}
@@ -1650,11 +1226,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_quick
-			NOT = { character = FROM } #Do not judge yourself.
-			NOR = { 
-				this_is_diplomatic_culture_trigger = yes
-				this_is_spiritual_culture_trigger = yes
-			}
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = quick
 			}
@@ -1662,129 +1234,97 @@ constitutional_elective = {
 		additive_modifier = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_strong
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
+			NOT = { character = FROM } 
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
 			FROM = { 
 				trait = strong
 			}
 		}
 		additive_modifier = {
 			value = 10
-			localisation_key = tooltip_feudal_elector_vote_strong_warrior
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			localisation_key = tooltip_feudal_elector_vote_strong_americanist_crisis
+			NOT = { character = FROM } 
+			religion = FROM
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3NOT = { 
+			}
 			FROM = { 
 				trait = strong
 			}
 		}
 		additive_modifier = {
-			value = -15
+			value = -5
 			localisation_key = tooltip_feudal_elector_vote_clubfooted
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = clubfooted
 			}
 		}
 		additive_modifier = {
-			value = -35
+			value = -15
 			localisation_key = tooltip_feudal_elector_vote_dwarf
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = dwarf
 			}
 		}
 		additive_modifier = {
-			value = -50
-			localisation_key = tooltip_feudal_elector_vote_dwarf_warrior
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
-			FROM = { 
-				trait = dwarf
-			}
-		}
-		additive_modifier = {
-			value = -25
+			value = -5
 			localisation_key = tooltip_feudal_elector_vote_harelip
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = harelip
 			}
 		}
 		additive_modifier = {
-			value = -45
-			localisation_key = tooltip_feudal_elector_vote_hunchback
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
+			value = -30
+			localisation_key = tooltip_feudal_elector_vote_hunchback_americanist_crisis
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = hunchback
-			}
-		}
-		additive_modifier = {
-			value = -60
-			localisation_key = tooltip_feudal_elector_vote_hunchback_warrior
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
-			FROM = { 
-				trait = hunchback
-			}
-		}
-		additive_modifier = {
-			value = -10
-			localisation_key = tooltip_feudal_elector_vote_imbecile
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_diplomatic_culture_trigger = no
-			FROM = { 
-				trait = imbecile
 			}
 		}
 		additive_modifier = {
 			value = -20
-			localisation_key = tooltip_feudal_elector_vote_imbecile_diplomat
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_diplomatic_culture_trigger = yes
+			localisation_key = tooltip_feudal_elector_vote_imbecile
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = imbecile
 			}
 		}
 		additive_modifier = {
-			value = -75
+			value = -15
 			localisation_key = tooltip_feudal_elector_vote_inbred
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = inbred
 			}
 		}
 		additive_modifier = {
-			value = -25
+			value = -5
 			localisation_key = tooltip_feudal_elector_vote_lisp
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = lisp
 			}
 		}
 		additive_modifier = {
-			value = -5
-			localisation_key = tooltip_feudal_elector_vote_slow
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_diplomatic_culture_trigger = no
-			FROM = { 
-				trait = slow
-			}
-		}
-		additive_modifier = {
 			value = -10
-			localisation_key = tooltip_feudal_elector_vote_slow_diplomat
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_diplomatic_culture_trigger = yes
+			localisation_key = tooltip_feudal_elector_vote_slow
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = slow
 			}
 		}
 		additive_modifier = {
-			value = -15
+			value = -5
 			localisation_key = tooltip_feudal_elector_vote_stutter
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = stutter
 			}
@@ -1792,17 +1332,25 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_weak
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
+			NOT = { character = FROM } 
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
 			FROM = { 
 				trait = weak
 			}
 		}
 		additive_modifier = {
 			value = -10
-			localisation_key = tooltip_feudal_elector_vote_weak_warrior
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			localisation_key = tooltip_feudal_elector_vote_weak_americanist_crisis
+			NOT = { character = FROM } 
+			religion = FROM
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
 			FROM = { 
 				trait = weak
 			}
@@ -1810,41 +1358,33 @@ constitutional_elective = {
 		additive_modifier = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_robust
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
+			NOT = { character = FROM } 
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
 			FROM = { 
 				trait = robust
 			}
 		}
 		additive_modifier = {
 			value = 10
-			localisation_key = tooltip_feudal_elector_vote_robust_warrior
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			localisation_key = tooltip_feudal_elector_vote_robust_americanist_crisis
+			NOT = { character = FROM } 
+			religion = FROM
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
 			FROM = { 
 				trait = robust
 			}
 		}
 		additive_modifier = {
 			value = -10
-			localisation_key = tooltip_feudal_elector_vote_dull_diplomat
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				this_is_diplomatic_culture_trigger = yes
-				this_is_spiritual_culture_trigger = yes
-			}
-			FROM = { 
-				trait = dull
-			}
-		}
-		additive_modifier = {
-			value = -5
 			localisation_key = tooltip_feudal_elector_vote_dull
-			NOT = { character = FROM } #Do not judge yourself.
-			NOR = { 
-				this_is_diplomatic_culture_trigger = yes
-				this_is_spiritual_culture_trigger = yes
-			}
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = dull
 			}
@@ -1852,48 +1392,72 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_feeble
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
+			NOT = { character = FROM } 
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
 			FROM = { 
 				trait = feeble
 			}
 		}
 		additive_modifier = {
 			value = -10
-			localisation_key = tooltip_feudal_elector_vote_feeble_warrior
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			localisation_key = tooltip_feudal_elector_vote_feeble_americanist_crisis
+			NOT = { character = FROM } 
+			religion = FROM
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
 			FROM = { 
 				trait = feeble
 			}
 		}
 
 		#The Seven Sins/Virtues
-		additive_modifier = { #Praised for being Chaste
-			value = 15
+		additive_modifier = { #Praised for being Chaste. Americanists don't take chastity as seriously as other virtues.
+			value = 5
 			localisation_key = tooltip_feudal_elector_vote_chaste_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = christian
+			NOT = { character = FROM } 
 			NOT = { trait = lustful }
 			FROM = { 
 				trait = chaste
 			}
 		}
-		additive_modifier = { #Praised for being Temperate
-			value = 15
-			localisation_key = tooltip_feudal_elector_vote_temperate_positive
-			NOT = { character = FROM } #Do not judge yourself.
+		additive_modifier = { #Shunned for being Chaste. Again, Americanists don't particularly care.
+			value = -5
+			localisation_key = tooltip_feudal_elector_vote_chaste_negative
+			NOT = { character = FROM } 
 			OR = { 
-				religion_group = christian 
-				religion_group = muslim
-				religion_group = jewish_group
-				religion_group = indian_group
-				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed
-				religion = bon
-				religion = bon_reformed
+				trait = lustful 
+				trait = hedonist
 			}
+			NOT = { trait = chaste }
+			FROM = { 
+				trait = chaste
+			}
+		}
+		additive_modifier = { #Praised for being Temperate. (Americans don't take temperance as seriously as other virtues.)
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_temperate_positive
+			NOT = { character = FROM } 
 			NOT = { trait = gluttonous }
+			FROM = { 
+				trait = temperate
+			}
+		}
+		additive_modifier = { #Shunned for being Temperate. (Again, Americanists  as much about this.)
+			value = -5
+			localisation_key = tooltip_feudal_elector_vote_temperate_negative
+			NOT = { character = FROM } 
+			OR = { 
+				trait = gluttonous
+				trait = drunkard
+				trait = hedonist
+			}
+			NOT = { trait = temperate }
 			FROM = { 
 				trait = temperate
 			}
@@ -1901,12 +1465,9 @@ constitutional_elective = {
 		additive_modifier = { #Praised for being Charitable
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_charitable_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				religion_group = christian 
-				religion_group = muslim
-			}
+			NOT = { character = FROM } 
 			NOT = { trait = greedy }
+			NOT = { is_merchant_republic = yes } # They don't hate charity, they simply  about it much.
 			FROM = { 
 				trait = charitable
 			}
@@ -1914,25 +1475,32 @@ constitutional_elective = {
 		additive_modifier = { #Shunned for being Charitable
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_charitable_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			trait = greedy
+			NOT = { character = FROM } 
+			OR = {
+				trait = greedy
+				AND = { #Zealous and insane rulers may mistake charity for Communism.
+					trait = zealous
+					trait = lunatic
+					trait = possessed
+				}
+			}
 			FROM = { 
 				trait = charitable
 			}
 		}
-		additive_modifier = { #Praised for being Diligent
-			value = 15
+		additive_modifier = { #Praised for being Diligent. (Diligence is valued very highly among Americanists.)
+			value = 25
 			localisation_key = tooltip_feudal_elector_vote_diligent_positive
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			NOT = { trait = slothful }
 			FROM = { 
 				trait = diligent
 			}
 		}
 		additive_modifier = { #Shunned for being Diligent
-			value = -15
+			value = -25
 			localisation_key = tooltip_feudal_elector_vote_diligent_negative
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			trait = slothful
 			FROM = { 
 				trait = diligent
@@ -1941,10 +1509,17 @@ constitutional_elective = {
 		additive_modifier = { #Praised for being Patient
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_patient_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			NOR = { 
-				trait = wroth
-				this_is_warrior_culture_trigger = yes
+			NOT = { character = FROM } 
+			OR = {
+				NOT = { 
+					trait = wroth
+				}
+				OR = {
+					NOT = { religion = FROM }
+					religion_scope = {
+						num_of_holy_sites = 3
+					}
+				}
 			}
 			FROM = { 
 				trait = patient
@@ -1953,45 +1528,34 @@ constitutional_elective = {
 		additive_modifier = { #Shunned for being Patient
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_patient_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				trait = wroth
-				this_is_warrior_culture_trigger = yes
-			}
+			NOT = { character = FROM } 
+			trait = wroth
 			FROM = { 
 				trait = patient
 			}
 		}
-		additive_modifier = { #Praised for being Kind
-			value = 25
+		additive_modifier = { #Praised for being Kind. (Americanists care less about kindness and more about being an effective leader.)
+			value = 15
 			localisation_key = tooltip_feudal_elector_vote_kind_positive
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			is_benevolent_trigger = yes
 			FROM = { 
 				is_benevolent_trigger = yes
 			}
 		}
 		additive_modifier = { #Shunned for being Kind
-			value = -25
+			value = -15
 			localisation_key = tooltip_feudal_elector_vote_kind_negative
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			is_evil_trigger = yes
 			FROM = { 
 				is_benevolent_trigger = yes
 			}
 		}
-		additive_modifier = { #Praised for being Humble
-			value = 15
+		additive_modifier = { #Praised for being Humble. (Americans don't value humility quite as highly as other virtues, although bragging too much is seen as unseemly.)
+			value = 10
 			localisation_key = tooltip_feudal_elector_vote_humble_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				religion_group = christian
-				religion_group = muslim
-				religion_group = jewish_group
-				religion_group = indian_group
-				religion = bon
-				religion = bon_reformed
-			}
+			NOT = { character = FROM } 
 			NOR = { 
 				trait = proud 
 				trait = envious
@@ -2003,15 +1567,8 @@ constitutional_elective = {
 		additive_modifier = { #Shunned for being Humble
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_humble_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				AND = { 
-					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
-					NOT = { religion = hellenic_pagan }
-					NOT = { religion = hellenic_pagan_reformed }
-				}
+			NOT = { character = FROM } 
+			OR = {
 				trait = proud
 				trait = envious
 			}
@@ -2020,17 +1577,10 @@ constitutional_elective = {
 			}
 		}
 		additive_modifier = { #Praised for being Lustful
-			value = 15
+			value = 5
 			localisation_key = tooltip_feudal_elector_vote_lustful_positive
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			OR = { 
-				AND = { 
-					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
-					NOT = { religion = hellenic_pagan }
-					NOT = { religion = hellenic_pagan_reformed }
-				}
 				trait = lustful
 				trait = hedonist
 			}
@@ -2039,16 +1589,11 @@ constitutional_elective = {
 			}
 		}
 		additive_modifier = { #Shunned for being Lustful - Male
-			value = -15
+			value = -5
 			localisation_key = tooltip_feudal_elector_vote_lustful_negative
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			OR = { 
-				religion_group = christian
-				religion_group = muslim
-				religion_group = jewish_group
-			}
-			OR = { 
-				trait = arbitrary #No need for consistency
+				trait = arbitrary #
 				NOR = { 
 					trait = lustful
 					trait = hedonist
@@ -2058,17 +1603,24 @@ constitutional_elective = {
 				trait = lustful
 			}
 		}
-		additive_modifier = { #Shunned for being Gluttonous
-			value = -15
-			localisation_key = tooltip_feudal_elector_vote_gluttonous_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				religion_group = christian
-				religion_group = muslim
-				religion_group = jewish_group
+		additive_modifier = { #Praised for being Gluttonous
+			value = 5
+			localisation_key = tooltip_feudal_elector_vote_gluttonous_positive
+			NOT = { character = FROM } 
+			OR = {
+				trait = gluttonous
+				trait = hedonist
 			}
+			FROM = { 
+				trait = gluttonous
+			}
+		}
+		additive_modifier = { #Shunned for being Gluttonous
+			value = -5
+			localisation_key = tooltip_feudal_elector_vote_gluttonous_negative
+			NOT = { character = FROM } 
 			OR = { 
-				trait = arbitrary #No need for consistency
+				trait = arbitrary #
 				NOR = { 
 					trait = gluttonous
 					trait = hedonist
@@ -2081,30 +1633,19 @@ constitutional_elective = {
 		additive_modifier = { #Praised for being Greedy
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_greedy_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				AND = { 
-					religion_group = pagan_group
-					NOT = { religion = bon }
-					NOT = { religion = bon_reformed }
-				}
-				trait = greedy
-			}
+			NOT = { character = FROM } 
+			trait = greedy
 			FROM = { 
 				trait = greedy
 			}
 		}
-		additive_modifier = { #Shunned for being Greedy
+		additive_modifier = { #Shunned for being Greedy. (Again, Merchant Republics won't care much.
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_greedy_negative
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
+			NOT = { is_merchant_republic = yes }
 			OR = { 
-				religion_group = christian
-				religion_group = muslim
-				religion_group = indian_group
-			}
-			OR = { 
-				trait = arbitrary #No need for consistency
+				trait = arbitrary #
 				NOT = { trait = greedy }
 			}
 			FROM = { 
@@ -2114,7 +1655,7 @@ constitutional_elective = {
 		additive_modifier = { #Praised for being Slothful
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_slothful_positive
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			trait = slothful
 			FROM = { 
 				trait = slothful
@@ -2123,9 +1664,9 @@ constitutional_elective = {
 		additive_modifier = { #Shunned for being Slothful
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_slothful_negative
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			OR = { 
-				trait = arbitrary #No need for consistency
+				trait = arbitrary #
 				NOT = { trait = slothful }
 			}
 			FROM = { 
@@ -2135,8 +1676,8 @@ constitutional_elective = {
 		additive_modifier = { #Praised for being Wroth
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_wroth_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			NOT = { character = FROM } 
+			trait = wroth
 			FROM = { 
 				trait = wroth
 			}
@@ -2144,8 +1685,13 @@ constitutional_elective = {
 		additive_modifier = { #Shunned for being Wroth
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_wroth_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
+			NOT = { character = FROM } 
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
 			FROM = { 
 				trait = wroth
 			}
@@ -2153,9 +1699,9 @@ constitutional_elective = {
 		additive_modifier = { #Shunned for being Evil
 			value = -25
 			localisation_key = tooltip_feudal_elector_vote_evil_negative
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			OR = { 
-				trait = arbitrary #No need for consistency
+				trait = arbitrary #
 				NOT = { is_evil_trigger = yes }
 			}
 			FROM = { 
@@ -2163,31 +1709,20 @@ constitutional_elective = {
 			}
 		}
 		additive_modifier = { #Praised for being Proud
-			value = 15
+			value = 10
 			localisation_key = tooltip_feudal_elector_vote_proud_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = pagan_group
-			NOR = { 
-				religion = bon
-				religion = bon_reformed
-				trait = humble
-			}
+			NOT = { character = FROM } 
+			trait = proud
 			FROM = { 
 				trait = proud
 			}
 		}
 		additive_modifier = { #Shunned for being Proud
-			value = -15
+			value = -10
 			localisation_key = tooltip_feudal_elector_vote_proud_negative
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			OR = { 
-				religion_group = christian
-				religion_group = muslim
-				religion_group = indian_group
-				religion_group = jewish_group
-			}
-			OR = { 
-				trait = arbitrary #No need for consistency
+				trait = arbitrary #
 				trait = humble
 				AND = { 
 					is_theocracy = yes 
@@ -2198,14 +1733,11 @@ constitutional_elective = {
 				trait = proud
 			}
 		}
-		additive_modifier = { #Praised for being Ambitious
-			value = 5
+		additive_modifier = { #Praised for being Ambitious. (Americanists value ambitious Presidents.)
+			value = 15
 			localisation_key = tooltip_feudal_elector_vote_ambitious_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = pagan_group
-			NOR = { 
-				religion = bon
-				religion = bon_reformed
+			NOT = { character = FROM } 
+			NOT = {
 				trait = content
 			}
 			FROM = { 
@@ -2215,27 +1747,16 @@ constitutional_elective = {
 		additive_modifier = { #Shunned for being Ambitious
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_ambitious_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				religion_group = christian
-				religion_group = muslim
-				religion_group = jewish_group
-				religion_group = indian_group
-				religion = bon
-				religion = bon_reformed
-			}
-			OR = { 
-				trait = arbitrary #No need for consistency
-				NOT = { trait = ambitious }
-			}
+			NOT = { character = FROM } 
+			trait = content
 			FROM = { 
 				trait = ambitious
 			}
 		}
-		additive_modifier = { #Shunned for being Arbitrary
-			value = -10
+		additive_modifier = { #Shunned for being Arbitrary. (Americanists absolutely despise arbitrary presidents.)
+			value = -25
 			localisation_key = tooltip_feudal_elector_vote_arbitrary_negative
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			OR = { 
 				trait = just
 				trait = arbitrary #Arbitraception
@@ -2247,11 +1768,16 @@ constitutional_elective = {
 		additive_modifier = { #Praised for being Brave
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_brave_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
+			NOT = { character = FROM } 
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
 			NOR = { 
 				trait = envious
-				trait = arbitrary #No need for consistency
+				trait = arbitrary #
 			}
 			FROM = { 
 				trait = brave
@@ -2259,12 +1785,15 @@ constitutional_elective = {
 		}
 		additive_modifier = { #Praised for being Brave
 			value = 10
-			localisation_key = tooltip_feudal_elector_vote_brave_positive_warrior
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			localisation_key = tooltip_feudal_elector_vote_brave_positive_americanist_crisis
+			NOT = { character = FROM } 
+			 religion = FROM
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
 			NOR = { 
 				trait = envious
-				trait = arbitrary #No need for consistency
+				trait = arbitrary #
 			}
 			FROM = { 
 				trait = brave
@@ -2273,11 +1802,16 @@ constitutional_elective = {
 		additive_modifier = { #Shunned for being Brave
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_brave_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
+			NOT = { character = FROM } 
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
 			OR = { 
 				trait = envious
-				trait = arbitrary #No need for consistency
+				trait = arbitrary #
 			}
 			FROM = { 
 				trait = brave
@@ -2286,26 +1820,19 @@ constitutional_elective = {
 		additive_modifier = { #Praised for being Content
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_content_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				religion = buddhist
-				religion = jain
-				religion = bon
-				pacifist = yes
-			}
+			NOT = { character = FROM } 
+			trait = content
 			FROM = { 
 				trait = content
 			}
 		}
 		additive_modifier = { #Shunned for being Content
-			value = -5
+			value = -15
 			localisation_key = tooltip_feudal_elector_vote_content_negative
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			religion_group = pagan_group
-			NOR = { 
+			NOT = { 
 				trait = content
-				religion = bon
-				religion = bon_reformed
 			}
 			FROM = { 
 				trait = content
@@ -2314,17 +1841,25 @@ constitutional_elective = {
 		additive_modifier = { #Shunned for being Craven
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_craven_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
+			NOT = { character = FROM } 
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
 			FROM = { 
 				trait = craven
 			}
 		}
 		additive_modifier = { #Shunned for being Craven
 			value = -25
-			localisation_key = tooltip_feudal_elector_vote_craven_negative_warrior
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			localisation_key = tooltip_feudal_elector_vote_craven_negative_americanist_crisis
+			NOT = { character = FROM } 
+			religion = FROM 
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
 			FROM = { 
 				trait = craven
 			}
@@ -2332,16 +1867,8 @@ constitutional_elective = {
 		additive_modifier = { #Praised for being Cynical
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_cynical_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			religion = FROM
-			OR = { 
-				has_religion_feature = religion_cosmopolitan
-				religion = hellenic_pagan
-				trait = cynical
-			}
-			NOT = { 
-				trait = zealous
-			}
+			NOT = { character = FROM } 
+			trait = cynical
 			FROM = { 
 				trait = cynical
 			}
@@ -2349,17 +1876,10 @@ constitutional_elective = {
 		additive_modifier = { #Shunned for being Cynical
 			value = -20
 			localisation_key = tooltip_feudal_elector_vote_cynical_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			NOT = { has_religion_feature = religion_dogmatic }
-			religion = FROM
+			NOT = { character = FROM } 
 			NOR = { 
-				has_religion_feature = religion_cosmopolitan
-				religion = hellenic_pagan
 				trait = cynical
-			}
-			OR = { 
-				is_reformed_religion = yes
-				NOT = { religion_group = pagan_group }
+				trait = zealous
 			}
 			FROM = { 
 				trait = cynical
@@ -2367,46 +1887,51 @@ constitutional_elective = {
 		}
 		additive_modifier = { #Shunned for being Cynical
 			value = -50
-			localisation_key = tooltip_feudal_elector_vote_cynical_negative_dogmatic
-			NOT = { character = FROM } #Do not judge yourself.
+			localisation_key = tooltip_presidential_elector_vote_cynical_negative_zealous
+			NOT = { character = FROM } 
 			has_religion_feature = religion_dogmatic
 			religion = FROM
-			OR = { 
-				trait = arbitrary #No need for consistency
-				NOT = { trait = cynical }
-			}
+			trait = zealous
 			FROM = { 
 				trait = cynical
 			}
 		}
-		additive_modifier = { #Shunned for being Deceitful
-			value = -10
+		additive_modifier = { #Shunned for being Deceitful. (Americanists dislike two-faced Presidents.)
+			value = -20
 			localisation_key = tooltip_feudal_elector_vote_deceitful_negative
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			OR = { 
-				trait = arbitrary #No need for consistency
+				trait = arbitrary 
 				trait = honest
 			}
 			FROM = { 
 				trait = deceitful
 			}
 		}
-		additive_modifier = { #Praised for being Erudite
-			value = 10
-			localisation_key = tooltip_feudal_elector_vote_erudite_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				this_is_diplomatic_culture_trigger = yes
-				this_is_spiritual_culture_trigger = yes
+		additive_modifier = { #Praised for being Honest. (Americanists like honest Presidents.)
+			value = 20
+			localisation_key = tooltip_presidential_elector_vote_honest_positive
+			NOT = { character = FROM } 
+			NOR = {
+				trait = deceitful
+				trait = schemer
 			}
+			FROM = { 
+				trait = honest
+			}
+		}
+		additive_modifier = { #Praised for being Erudite. (Americanists value public speaking skills.)
+			value = 20
+			localisation_key = tooltip_feudal_elector_vote_erudite_positive
+			NOT = { character = FROM } 
 			FROM = { 
 				trait = erudite
 			}
 		}
-		additive_modifier = { #Praised for being Just
-			value = 15
+		additive_modifier = { #Praised for being Just. (Americanists love Just Presidents.)
+			value = 25
 			localisation_key = tooltip_feudal_elector_vote_just_positive
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			NOR = { 
 				trait = deceitful
 				trait = arbitrary
@@ -2418,7 +1943,13 @@ constitutional_elective = {
 		additive_modifier = { #Shunned for being Paranoid
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_paranoid_negative
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
+			}
 			NOR = { 
 				trait = deceitful
 				trait = arbitrary
@@ -2431,7 +1962,7 @@ constitutional_elective = {
 		additive_modifier = { #Shunned for being Paranoid by Paranoid
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_paranoid_negative_paranoid
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			trait = paranoid
 			NOR = { 
 				trait = deceitful
@@ -2441,40 +1972,32 @@ constitutional_elective = {
 				trait = paranoid
 			}
 		}
-		additive_modifier = { #Shunned for being Shy
-			value = -10
+		additive_modifier = { #Shunned for being Shy. (Americanists dislike Shy presidents.)
+			value = -15
 			localisation_key = tooltip_feudal_elector_vote_shy_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				this_is_diplomatic_culture_trigger = yes
-				this_is_warrior_culture_trigger = yes
-			}
-			FROM = { 
+			NOT = { character = FROM } 
+			NOT = { trait = shy }
+			FROM = {
 				trait = shy
 			}
 		}
 		additive_modifier = { #Praised for being Stubborn
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_stubborn_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			NOT = { character = FROM } 
+			religion = FROM
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
 			FROM = { 
 				trait = stubborn
 			}
 		}
-		additive_modifier = { #Shunned for being Stubborn
-			value = -10
-			localisation_key = tooltip_feudal_elector_vote_stubborn_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_spiritual_culture_trigger = yes
-			FROM = { 
-				trait = stubborn
-			}
-		}
-		additive_modifier = { #Praised for being Trusting
-			value = 25
+		#Americanists don't see stubborness as a bad thing.
+		additive_modifier = { #Praised for being Trusting. (Americanists  too much about this.)
+			value = 5
 			localisation_key = tooltip_feudal_elector_vote_trusting_positive
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			OR = { 
 				trait = deceitful
 				trait = schemer
@@ -2484,14 +2007,12 @@ constitutional_elective = {
 				trait = trusting
 			}
 		}
-		additive_modifier = { #Praised for being Zealous
-			value = 10
+		additive_modifier = { #Praised for being Zealous. (Although not the be-all and end-all, Americanists will obviously want their head of religion to be Zealous if possible.)
+			value = 20
 			localisation_key = tooltip_feudal_elector_vote_zealous_positive
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			religion = FROM
-			NOR = { 
-				has_religion_feature = religion_cosmopolitan
-				pacifist = yes
+			NOT = { 
 				trait = cynical
 			}
 			FROM = { 
@@ -2499,233 +2020,71 @@ constitutional_elective = {
 			}
 		}
 		additive_modifier = { #Shunned for being Zealous
-			value = -20
+			value = -10
 			localisation_key = tooltip_feudal_elector_vote_zealous_negative
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			religion = FROM
-			OR = { 
-				has_religion_feature = religion_cosmopolitan
-				pacifist = yes
-				trait = cynical
-			}
+			trait = cynical
 			FROM = { 
 				trait = zealous
 			}
 		}
-		additive_modifier = { #Praised for being Pilgrim
-			value = 10
+		additive_modifier = { #Praised for being Pilgrim. (Americanists like Presidents who have been on Pilgrimage.)
+			value = 15
 			localisation_key = tooltip_feudal_elector_vote_pilgrim_positive
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			religion = FROM
 			trait = zealous
 			FROM = { 
-				OR = { 
-					trait = pilgrim
-					trait = indian_pilgrim
-					trait = hajjaj
-				}
-			}
-		}
-		additive_modifier = { #Praised for being Seaking/Sea_queen
-			value = 15
-			localisation_key = tooltip_feudal_elector_vote_seaking_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				this_is_warrior_culture_trigger = yes
-				has_religion_feature = religion_seafaring
-			}
-			FROM = { 
-				OR = { 
-					trait = seaking
-					trait = sea_queen
-				}
-			}
-		}
-		additive_modifier = { #Shunned for being Seaking/Sea_queen
-			value = -15
-			localisation_key = tooltip_feudal_elector_vote_seaking_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			NOR = { 
-				this_is_warrior_culture_trigger = yes
-				has_religion_feature = religion_seafaring
-			}
-			FROM = { 
-				OR = { 
-					trait = seaking
-					trait = sea_queen
-				}
-			}
-		}
-		additive_modifier = { #Praised for being Shieldmaiden
-			value = 10
-			localisation_key = tooltip_feudal_elector_vote_shieldmaiden_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
-			NOT = { has_religion_feature = religion_patriarchal }
-			FROM = { 
-				trait = shieldmaiden
-			}
-		}
-		additive_modifier = { #Shunned for being Shieldmaiden
-			value = -10
-			localisation_key = tooltip_feudal_elector_vote_shieldmaiden_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
-			NOT = { has_religion_feature = religion_patriarchal }
-			FROM = { 
-				trait = shieldmaiden
-			}
-		}
-		additive_modifier = { #Shunned for being Shieldmaiden
-			value = -40
-			localisation_key = tooltip_feudal_elector_vote_shieldmaiden_negative_patriarchal
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
-			has_religion_feature = religion_patriarchal
-			FROM = { 
-				trait = shieldmaiden
-			}
-		}
-		additive_modifier = { #Praised for being a saoshyant_descendant 
-			value = 10
-			localisation_key = tooltip_feudal_elector_vote_saoshyant_descendant_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = zoroastrian_group
-			FROM = { 
-				trait = saoshyant_descendant 
+				trait = pilgrim
 			}
 		}
 		additive_modifier = { #Praised for being Adventurer
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_adventurer_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			NOT = { character = FROM } 
+			religion = FROM
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
 			FROM = { 
 				trait = adventurer
 			}
 		}
-		additive_modifier = { #Shunned for being Adventurer
+		additive_modifier = { #Shunned for being blind
 			value = -10
-			localisation_key = tooltip_feudal_elector_vote_adventurer_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
-			FROM = { 
-				trait = adventurer
-			}
-		}
-		additive_modifier = { #Praised for being Berserker
-			value = 5
-			localisation_key = tooltip_feudal_elector_vote_berserker_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
-			FROM = { 
-				trait = berserker
-			}
-		}
-		additive_modifier = { #Shunned for being Berserker
-			value = -20
-			localisation_key = tooltip_feudal_elector_vote_berserker_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
-			FROM = { 
-				trait = berserker
-			}
-		}
-		additive_modifier = { #Shunned for being blind
-			value = -50
 			localisation_key = tooltip_feudal_elector_vote_blinded_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
-			NOT = { 
-				culture_group = byzantine
+			NOT = { character = FROM } 
+			OR = {
+				NOT = { religion = FROM }
+				religion_scope = {
+					num_of_holy_sites = 3
+				}
 			}
 			FROM = { 
 				trait = blinded
 			}
 		}
 		additive_modifier = { #Shunned for being blind
-			value = -80
-			localisation_key = tooltip_feudal_elector_vote_blinded_negative_warrior
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
-			NOT = { 
-				culture_group = byzantine
+			value = -20
+			localisation_key = tooltip_feudal_elector_vote_blinded_negative_americanist_crisis
+			NOT = { character = FROM } 
+			religion = FROM
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
 			}
 			FROM = { 
 				trait = blinded
 			}
 		}
-		additive_modifier = { #Shunned for being blind
-			value = -150
-			localisation_key = tooltip_feudal_elector_vote_blinded_negative_byzantine
-			NOT = { character = FROM } #Do not judge yourself.
-			culture_group = byzantine
-			FROM = { 
-				trait = blinded
-			}
-		}
-		additive_modifier = { #Shunned for being eunuch
-			value = -50
-			localisation_key = tooltip_feudal_elector_vote_eunuch_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
-			NOR = { 
-				culture_group = byzantine
-				religion_group = muslim
-			}
-			FROM = { 
-				trait = eunuch
-			}
-		}
-		additive_modifier = { #Shunned for being eunuch
-			value = -75
-			localisation_key = tooltip_feudal_elector_vote_eunuch_negative_warrior
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
-			NOR = { 
-				culture_group = byzantine
-				religion_group = muslim
-			}
-			FROM = { 
-				trait = eunuch
-			}
-		}
-		additive_modifier = { #Shunned for being eunuch
-			value = -150
-			localisation_key = tooltip_feudal_elector_vote_eunuch_negative_byzantine
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				culture_group = byzantine
-				religion_group = muslim
-			}
-			FROM = { 
-				trait = eunuch
-			}
-		}
-		additive_modifier = { #Shunned for being excommunicated
-			value = -25
+		#Americanists  if their President is a eunuch.
+		additive_modifier = { #Shunned for being excommunicated. (It is almost impossible to become President if you are excommunicated.)
+			value = -100
 			localisation_key = tooltip_feudal_elector_vote_excommunicated_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			NOR = { 
-				trait = zealous
-				trait = cynical
-			}
+			NOT = { character = FROM } 
 			OR = { 
 				NOT = { trait = excommunicated }
-				trait = arbitrary #No need for consistency
-			}
-			FROM = { 
-				excommunicated_for = ROOT
-			}
-		}
-		additive_modifier = { #Shunned for being excommunicated
-			value = -75
-			localisation_key = tooltip_feudal_elector_vote_excommunicated_negative_zealous
-			NOT = { character = FROM } #Do not judge yourself.
-			trait = zealous
-			OR = { 
-				NOT = { trait = excommunicated }
-				trait = arbitrary #No need for consistency
+				trait = arbitrary 
 			}
 			FROM = { 
 				excommunicated_for = ROOT
@@ -2735,7 +2094,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_kinslayer_1_stranger
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			NOT = { dynasty = FROM }
 			OR = { 
 				NOR = { 
@@ -2743,7 +2102,7 @@ constitutional_elective = {
 					trait = familial_kinslayer
 					trait = kinslayer
 				}
-				trait = arbitrary #No need for consistency
+				trait = arbitrary 
 			}
 			FROM = { 
 				trait = dynastic_kinslayer
@@ -2752,7 +2111,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_kinslayer_2_stranger
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			NOT = { dynasty = FROM }
 			OR = { 
 				NOR = { 
@@ -2760,7 +2119,7 @@ constitutional_elective = {
 					trait = familial_kinslayer
 					trait = kinslayer
 				}
-				trait = arbitrary #No need for consistency
+				trait = arbitrary 
 			}
 			FROM = { 
 				trait = familial_kinslayer
@@ -2769,7 +2128,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -20
 			localisation_key = tooltip_feudal_elector_vote_kinslayer_3_stranger
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			NOT = { dynasty = FROM }
 			OR = { 
 				NOR = { 
@@ -2777,7 +2136,7 @@ constitutional_elective = {
 					trait = familial_kinslayer
 					trait = kinslayer
 				}
-				trait = arbitrary #No need for consistency
+				trait = arbitrary 
 			}
 			FROM = { 
 				trait = kinslayer
@@ -2787,7 +2146,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_kinslayer_1_dynast
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			NOT = { is_close_relative = FROM }
 			dynasty = FROM
 			OR = { 
@@ -2796,7 +2155,7 @@ constitutional_elective = {
 					trait = familial_kinslayer
 					trait = kinslayer
 				}
-				trait = arbitrary #No need for consistency
+				trait = arbitrary 
 			}
 			FROM = { 
 				trait = dynastic_kinslayer
@@ -2805,7 +2164,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -20
 			localisation_key = tooltip_feudal_elector_vote_kinslayer_2_dynast
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			NOT = { is_close_relative = FROM }
 			dynasty = FROM
 			OR = { 
@@ -2814,7 +2173,7 @@ constitutional_elective = {
 					trait = familial_kinslayer
 					trait = kinslayer
 				}
-				trait = arbitrary #No need for consistency
+				trait = arbitrary 
 			}
 			FROM = { 
 				trait = familial_kinslayer
@@ -2823,7 +2182,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -25
 			localisation_key = tooltip_feudal_elector_vote_kinslayer_3_dynast
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			NOT = { is_close_relative = FROM }
 			dynasty = FROM
 			OR = { 
@@ -2832,7 +2191,7 @@ constitutional_elective = {
 					trait = familial_kinslayer
 					trait = kinslayer
 				}
-				trait = arbitrary #No need for consistency
+				trait = arbitrary 
 			}
 			FROM = { 
 				trait = kinslayer
@@ -2842,7 +2201,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -20
 			localisation_key = tooltip_feudal_elector_vote_kinslayer_1_dynast
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			is_close_relative = FROM 
 			OR = { 
 				NOR = { 
@@ -2850,7 +2209,7 @@ constitutional_elective = {
 					trait = familial_kinslayer
 					trait = kinslayer
 				}
-				trait = arbitrary #No need for consistency
+				trait = arbitrary 
 			}
 			FROM = { 
 				trait = dynastic_kinslayer
@@ -2859,7 +2218,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -25
 			localisation_key = tooltip_feudal_elector_vote_kinslayer_2_dynast
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			is_close_relative = FROM 
 			dynasty = FROM
 			OR = { 
@@ -2868,7 +2227,7 @@ constitutional_elective = {
 					trait = familial_kinslayer
 					trait = kinslayer
 				}
-				trait = arbitrary #No need for consistency
+				trait = arbitrary 
 			}
 			FROM = { 
 				trait = familial_kinslayer
@@ -2877,7 +2236,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -30
 			localisation_key = tooltip_feudal_elector_vote_kinslayer_3_dynast
-			NOT = { character = FROM } #Do not judge yourself.
+			NOT = { character = FROM } 
 			is_close_relative = FROM 
 			dynasty = FROM
 			OR = { 
@@ -2886,203 +2245,44 @@ constitutional_elective = {
 					trait = familial_kinslayer
 					trait = kinslayer
 				}
-				trait = arbitrary #No need for consistency
+				trait = arbitrary 
 			}
 			FROM = { 
 				trait = kinslayer
 			}
 		}
-		additive_modifier = { #Shunned for loving the heathens
+		additive_modifier = { #Shunned for loving the heathens. (As the religious head, people will just hate you in general unless they themselves are also sympathetic.
 			value = -25
 			localisation_key = tooltip_feudal_elector_vote_sympathy_heathens
-			NOT = { character = FROM } #Do not judge yourself.
-			religion = FROM
-			NOT = { has_religion_feature = religion_cosmopolitan }
-			NOT = { religion_group = indian_group }
-			NOT = { religion = bon }
-			OR = { 
-				AND = { 
-					NOT = { has_dlc = "Holy Fury"}
-					religion = bon_reformed
-				}
-				pacifist = yes
-			}
-			OR = { 
-				trait = zealous
-				has_religion_feature = religion_dogmatic
-			}
-			OR = { 
-				trait = zealous
-				trait = arbitrary #No need for consistency
-			}
+			NOT = { character = FROM } 
+			NOT = { has_sympathy_trait_trigger = yes }
 			FROM = { 
-				OR = { 
-					trait = sympathy_christendom
-					trait = sympathy_islam
-					trait = sympathy_judaism
-					trait = sympathy_zoroastrianism
-					trait = sympathy_pagans
-					trait = sympathy_indian
-				}
+				has_sympathy_trait_trigger = yes
 			}
 		}
 		additive_modifier = { #Praised for being Giant
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_giant_positive
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
+			NOT = { character = FROM } 
+			religion = FROM
+			religion_scope = {
+				NOT = { num_of_holy_sites = 3 }
+			}
 			FROM = { 
 				trait = giant
 			}
 		}
-		additive_modifier = { #Shunned for being Giant
-			value = -10
-			localisation_key = tooltip_feudal_elector_vote_giant_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = no
-			FROM = { 
-				trait = giant
-			}
-		}
-		additive_modifier = { #Shunned for being Lefthanded
-			value = -10
-			localisation_key = tooltip_feudal_elector_vote_lefthanded_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				religion_group = christian
-				religion_group = muslim
-			}
-			FROM = { 
-				trait = lefthanded
-			}
-		}
-		additive_modifier = { #Shunned for being out of shape
-			value = -10
-			localisation_key = tooltip_feudal_elector_vote_shape_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			this_is_warrior_culture_trigger = yes
-			FROM = { 
-				OR = { 
-					trait = is_fat
-					trait = is_malnourished
-				}
-			}
-		}
-		additive_modifier = { #Praised for being baptized by Bishop
-			value = 5
-			localisation_key = tooltip_feudal_elector_vote_baptized_by_bishop
-			NOT = { character = FROM } #Do not judge yourself.
-			religion_group = christian
-			FROM = { 
-				trait = baptized_by_bishop
-			}
-		}
-		additive_modifier = { #Praised for being baptized by Pope
-			value = 10
-			localisation_key = tooltip_feudal_elector_vote_baptized_by_pope
-			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				religion = catholic 
-				religion = fraticelli
-			} 
-			religion = FROM
-			FROM = { 
-				trait = baptized_by_pope
-			}
-		}
-		additive_modifier = { #Praised for being baptized by Patriarch
-			value = 10
-			localisation_key = tooltip_feudal_elector_vote_baptized_by_patriarch
-			NOT = { character = FROM } #Do not judge yourself.
-			religion = orthodox
-			religion = FROM
-			FROM = { 
-				trait = baptized_by_patriarch
-			}
-		}
-		additive_modifier = { #Shunned for being of opposite pagan branch.
-			value = -25
-			localisation_key = tooltip_feudal_elector_vote_pagan_branch_negative
-			NOT = { character = FROM } #Do not judge yourself.
-			religion = FROM #Will care only if of same religion.
-			OR = { 
-				AND = { 
-					trait = pagan_branch_1 	
-					FROM = { 
-						OR = { 
-							trait = pagan_branch_2
-							trait = pagan_branch_3
-							trait = pagan_branch_4
-						}
-					}
-				}
-				AND = { 
-					trait = pagan_branch_2 	
-					FROM = { 
-						OR = { 
-							trait = pagan_branch_1
-							trait = pagan_branch_3
-							trait = pagan_branch_4
-						}
-					}
-				}
-				AND = { 
-					trait = pagan_branch_3 	
-					FROM = { 
-						OR = { 
-							trait = pagan_branch_2
-							trait = pagan_branch_1
-							trait = pagan_branch_4
-						}
-					}
-				}
-				AND = { 
-					trait = pagan_branch_4 	
-					FROM = { 
-						OR = { 
-							trait = pagan_branch_2
-							trait = pagan_branch_3
-							trait = pagan_branch_1
-						}
-					}
-				}
-			}
-		}
-		additive_modifier = { #Shunned for being unproved courtier in the shadow of the ruler.
-			value = -10
-			localisation_key = tooltip_feudal_elector_vote_spoiled_courtier
-			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } #Do not judge yourself.
-			FROM = { 
-				NOR = { 
-					is_ruler = yes
-					has_job_title = job_marshal
-					has_job_title = job_chancellor
-					has_job_title = job_treasurer
-					has_job_title = job_spiritual
-					has_job_title = job_spymaster
-				}
-				OR = { 
-					trait = decadent
-					trait = slothful
-					trait = hedonist
-					trait = is_fat
-					trait = shy
-				}
-			}
-		}
-
-		##########################   Ruler's traits   ##########################
+		########################  Ruler's traits   ##########################
 		#Ruler is lunatic, vote against his pick
 		additive_modifier = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_anti_vote_ruler_lunatic
 			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } #But not if it's me.
+			NOT = { character = FROM } #
 			NOR = {
-				trait = lunatic #Don't care
-				trait = possessed #Don't care
-				trait = arbitrary #Don't care
+				trait = lunatic 
+				trait = possessed 
+				trait = arbitrary 
 				trait = zealous #Might be the gods speaking
 			}
 			FROMFROM = { 
@@ -3096,12 +2296,12 @@ constitutional_elective = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_anti_vote_ruler_possessed
 			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } #But not if it's me.
+			NOT = { character = FROM } 
 			trait = zealous
 			NOR = {
-				trait = lunatic #Don't care
-				trait = possessed #Don't care
-				trait = arbitrary #Don't care
+				trait = lunatic 
+				trait = possessed 
+				trait = arbitrary 
 			}
 			FROMFROM = { 
 				holder_scope = {
@@ -3115,10 +2315,10 @@ constitutional_elective = {
 			value = 25
 			localisation_key = tooltip_feudal_elector_pro_vote_ruler_just
 			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } #But not if it's me.
+			NOT = { character = FROM } 
 			NOR = {
-				trait = lunatic #Don't care
-				trait = possessed #Don't care
+				trait = lunatic 
+				trait = possessed 
 				trait = arbitrary #Don't like it
 			}
 			FROMFROM = { 
@@ -3132,11 +2332,11 @@ constitutional_elective = {
 			value = -25
 			localisation_key = tooltip_feudal_elector_anti_vote_ruler_tyrant
 			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } #But not if it's me.
+			NOT = { character = FROM } 
 			NOR = {
-				trait = lunatic #Don't care
-				trait = possessed #Don't care
-				trait = arbitrary #Don't care
+				trait = lunatic 
+				trait = possessed 
+				trait = arbitrary 
 			}
 			FROMFROM = { 
 				holder_scope = {
@@ -3149,20 +2349,18 @@ constitutional_elective = {
 				} 
 			}
 		}
-
-
-		##########################   Raw Opinion bonus towards Candidate   ##########################
+		########################  Raw Opinion bonus towards Candidate   ##########################
 		additive_modifier = {
 			value = -150
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
-			NOT = { character = FROM } #But not if it's me.
+			NOT = { character = FROM } 
 			is_rival = FROM
 		}
 		additive_modifier = {
 			value = -100
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			NOT = {
 				opinion = {
 					who = FROM
@@ -3173,8 +2371,8 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			NOT = {
 				opinion = {
 					who = FROM
@@ -3189,8 +2387,8 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -30
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			NOT = {
 				opinion = {
 					who = FROM
@@ -3205,8 +2403,8 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_opinion_negative
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			NOT = {
 				opinion = {
 					who = FROM
@@ -3221,8 +2419,8 @@ constitutional_elective = {
 		additive_modifier = {
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_opinion_positive
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			opinion = {
 				who = FROM
 				value = 0
@@ -3237,8 +2435,8 @@ constitutional_elective = {
 		additive_modifier = {
 			value = 30
 			localisation_key = tooltip_feudal_elector_vote_opinion_positive
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			opinion = {
 				who = FROM
 				value = 25
@@ -3253,8 +2451,8 @@ constitutional_elective = {
 		additive_modifier = {
 			value = 50
 			localisation_key = tooltip_feudal_elector_vote_opinion_positive
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			opinion = {
 				who = FROM
 				value = 50
@@ -3269,23 +2467,22 @@ constitutional_elective = {
 		additive_modifier = {
 			value = 70
 			localisation_key = tooltip_feudal_elector_vote_opinion_positive
-			NOT = { character = FROM } #But not if it's me.
-			NOT = { is_rival = FROM } #Special case
+			NOT = { character = FROM } 
+			NOT = { is_rival = FROM } 
 			opinion = {
 				who = FROM
 				value = 75
 			}
 		}
-
-		##########################   Raw Opinion bonus towards Ruler   ##########################
+		#########################  Raw Opinion bonus towards Ruler   ##########################
 		additive_modifier = { #Vassal hates ruler, therefore votes against the ruler's candidate (FROMFROMFROM)
 			value = -30
 			localisation_key = tooltip_feudal_elector_anti_vote_ruler_opinion_negative
 			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } #But not if it's me.
+			NOT = { character = FROM } 
 			FROMFROM = { 
 				holder_scope = {
-					NOT = { character = ROOT } #Of course you trust your own opinion of your candidate...
+					NOT = { character = ROOT } #
 					NOT = { 
 						reverse_opinion = { who = ROOT value = -75 } 
 					} 
@@ -3296,10 +2493,10 @@ constitutional_elective = {
 			value = -20
 			localisation_key = tooltip_feudal_elector_anti_vote_ruler_opinion_negative
 			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } #But not if it's me.
+			NOT = { character = FROM } 
 			FROMFROM = { 
 				holder_scope = {
-					NOT = { character = ROOT } #Of course you trust your own opinion of your candidate...
+					NOT = { character = ROOT } #
 					NOT = { 
 						reverse_opinion = { who = ROOT value = -50 } 
 					} 
@@ -3311,10 +2508,10 @@ constitutional_elective = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_anti_vote_ruler_opinion_negative
 			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } #But not if it's me.
+			NOT = { character = FROM } 
 			FROMFROM = { 
 				holder_scope = {
-					NOT = { character = ROOT } #Of course you trust your own opinion of your candidate...
+					NOT = { character = ROOT } 
 					NOT = { 
 						reverse_opinion = { who = ROOT value = -25 } 
 					} 
@@ -3326,10 +2523,10 @@ constitutional_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_anti_vote_ruler_opinion_negative
 			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } #But not if it's me.
+			NOT = { character = FROM } 
 			FROMFROM = { 
 				holder_scope = {
-					NOT = { character = ROOT } #Of course you trust your own opinion of your candidate...
+					NOT = { character = ROOT } 
 					NOT = { 
 						reverse_opinion = { who = ROOT value = 0 } 
 					} 
@@ -3338,13 +2535,13 @@ constitutional_elective = {
 			}
 		}
 		additive_modifier = { #Vassal loves ruler, therefore votes for the ruler's candidate (FROMFROMFROM)
-			value = 5
+			value = 10
 			localisation_key = tooltip_feudal_elector_pro_vote_ruler_opinion_positive
 			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } #But not if it's me.
+			NOT = { character = FROM } 
 			FROMFROM = { 
 				holder_scope = {
-					NOT = { character = ROOT } #Of course you trust your own opinion of your candidate...
+					NOT = { character = ROOT } 
 					reverse_opinion = { who = ROOT value = 0 } 
 					NOT = { 
 						reverse_opinion = { who = ROOT value = 25 } 
@@ -3356,10 +2553,10 @@ constitutional_elective = {
 			value = 20
 			localisation_key = tooltip_feudal_elector_pro_vote_ruler_opinion_positive
 			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } #But not if it's me.
+			NOT = { character = FROM } 
 			FROMFROM = { 
 				holder_scope = {
-					NOT = { character = ROOT } #Of course you trust your own opinion of your candidate...
+					NOT = { character = ROOT } 
 					reverse_opinion = { who = ROOT value = 25 } 
 					NOT = { 
 						reverse_opinion = { who = ROOT value = 50 } 
@@ -3371,10 +2568,10 @@ constitutional_elective = {
 			value = 40
 			localisation_key = tooltip_feudal_elector_pro_vote_ruler_opinion_positive
 			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } #But not if it's me.
+			NOT = { character = FROM } 
 			FROMFROM = { 
 				holder_scope = {
-					NOT = { character = ROOT } #Of course you trust your own opinion of your candidate...
+					NOT = { character = ROOT } 
 					reverse_opinion = { who = ROOT value = 50 } 
 					NOT = { 
 						reverse_opinion = { who = ROOT value = 75 } 
@@ -3386,51 +2583,94 @@ constitutional_elective = {
 			value = 60
 			localisation_key = tooltip_feudal_elector_pro_vote_ruler_opinion_positive
 			FROM = { character = ROOT_FROMFROMFROM }
-			NOT = { character = FROM } #But not if it's me.
+			NOT = { character = FROM } 
 			FROMFROM = { 
 				holder_scope = {
-					NOT = { character = ROOT } #Of course you trust your own opinion of your candidate...
+					NOT = { character = ROOT } 
 					reverse_opinion = { who = ROOT value = 75 } 
 				} 
 			}
 		}
 	}
-	#ROOT = Current Title holder, FROM = Candidate, FROMFROM = Title, FROMFROMFROM = Null
-	candidate_trigger = { #Close relatives, claimants, marshals. No mutilations (if byzantine)
-		NOT = { character = FROM } #Not the current ruler.
-		FROM = { 
-			NOR = { 
-				trait = crusader_king 
-				trait = crusader_queen
-			} 
-		} 
-		FROM = { #Either the candidate is in the realm, or is landless, or the title is independent, or the realm of the title does NOT have protected inheritance.
+	elector_selection = {
+		max_amount = 69 #number of EC votes during first Presidential election
+		days = -50
+		additive_modifier = { #Non-Americanists and those under 18 titles can never vote.
+			value = 51
+			age = 18
+			is_vassal_or_below_of = FROMFROM
+			is_ruler = yes
+		}
+		additive_modifier = { #Default - all Americanist rulers over 18 have potential
+			value = 1
+			age = 18
+			religion = americanist
+		}
+		additive_modifier = { #Current President is always an elector.
+			value = 10
+			FROMFROM = {
+				holder_scope = {
+					character = PREVPREV
+				}
+			}
+		}
+		additive_modifier = { #Council is always electors.
+			value = 10
+			age = 18
+			vassal_of = FROMFROM 
 			OR = { 
-				any_liege = { 
-					character = ROOT
-				} 
-				is_ruler = no
-				ROOT_FROMFROM = { holder_scope = { independent = yes } }
-				NOR = { 
-					ROOT_FROMFROM = { has_law = out_of_realm_inheritance_law_1 } 
-					ROOT_FROMFROM = { has_law = crown_authority_3 } 
-					ROOT_FROMFROM = { has_law = crown_authority_4 } 
-				} 
-			} 
-		}
-		OR = {
-			FROM = { any_claim = { title = ROOT_FROMFROM } }
-			ROOT = { is_close_relative = FROM }
-			FROM = { 
+				has_job_title = job_chancellor
 				has_job_title = job_marshal
-				vassal_of = ROOT_FROMFROM 
-			}
-			FROM = { 
-				has_minor_title = title_commander
-				vassal_of = ROOT_FROMFROM 
+				has_job_title = job_treasurer
+				has_job_title = job_spymaster
+				has_job_title = job_spiritual
+				has_minor_title = title_councilmember_king #Generic advisors
+				has_minor_title = title_councilmember_emperor
 			}
 		}
-		FROM = {
+		additive_modifier = { #Independent rulers who control holy sites always get a vote.
+			value = 10
+			age = 18
+			FROMFROM = {
+				holder_scope = {
+					ROOT = {
+						religion = PREV
+						any_realm_title = {
+							is_holy_site = PREVPREV
+						}
+					}
+				}
+			}
+		}
+		additive_modifier = { #Independent Counts get a value of 2 by default, prioritizing them in the vote.
+			value = 2
+			higher_tier_than = BARON
+		}
+		additive_modifier = { #Independent Dukes get a value of 3 by default, prioritizing them in the vote.
+			value = 3
+			higher_tier_than = COUNT
+		}
+		additive_modifier = { #Kings get a value of 5 by default, even if they aren't independent.
+			value = 5
+			higher_tier_than = DUKE
+		}
+		additive_modifier = { #Emperors always get a vote.
+			value = 10
+			higher_tier_than = KING
+		}
+	}
+	elector_vote_strength = { #bruh moment
+		days = 1 #1 elector = 1 vote, no exceptions.
+	}
+	#Elector Stances won't apply here - that approaches having political parties, which we should not do
+	candidate_trigger = { 
+		NOT = { character = FROM } #Not the current ruler.
+		FROM = { #Basic Constitutional Requirements
+			age = 35 #duh
+			any_liege = { 
+				character = ROOT
+			} 
+			is_ruler = yes
 			OR = { #Candidate should not be a landless Courtier that is about to inherit a Theocracy or Republic
 				AND = {
 					is_ruler = yes
@@ -3460,19 +2700,12 @@ constitutional_elective = {
 				religion = ROOT
 			}
 			NOR = {
+				block_general_event_trigger = yes
 				trait = cat
 				trait = dog
 				trait = disinherited
-				trait = atom_curse
 				trait = horse
 				trait = eunuch
-				trait = disfigured
-				trait = blinded
-				trait = eunuch
-				trait = dwarf
-				trait = clubfooted
-				trait = harelip
-				trait = inbred
 				AND = { 
 					trait = bastard 
 					is_ruler = no
@@ -6793,7 +6026,6 @@ popular_elective = {
 				trait = cat
 				trait = dog
 				trait = disinherited
-				trait = atom_curse
 				trait = horse
 				trait = eunuch
 				AND = { 

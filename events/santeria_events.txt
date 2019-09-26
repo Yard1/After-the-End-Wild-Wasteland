@@ -38,7 +38,8 @@ character_event = {
 			OR = {
 				trait = syphilitic
 				trait = leper
-				trait = atom_curse
+				has_character_modifier = atom_bless_health_effect
+				has_character_modifier = atom_curse_health_effect
 				trait = possessed
 			}
 		}
@@ -216,11 +217,15 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_santeria_healing
-		trigger = { trait = atom_curse }
+		trigger = { OR = {
+			has_character_modifier = atom_bless_health_effect
+			has_character_modifier = atom_curse_health_effect
+		} }
 		random_list = { 
 			1 = {
 				hidden_tooltip = { character_event = { id = santeria.3 } }
-				remove_trait = atom_curse
+				remove_character_modifier = atom_bless_health_effect
+				remove_character_modifier = atom_curse_health_effect
 			}
 			99 = { hidden_tooltip = { character_event = { id = santeria.4 } } }
 		}
