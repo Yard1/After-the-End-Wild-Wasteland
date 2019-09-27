@@ -19,8 +19,8 @@ methodist_in_charge = {
 }
 
 pacifist_realm_prospering = {
-	authority = 3
-	years = 30
+	authority = 2
+	years = 35
 }
 
 religion_peaceful = {
