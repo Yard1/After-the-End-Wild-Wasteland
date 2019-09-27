@@ -6219,6 +6219,7 @@ religious = {
 				religion = brethren
 				religion = anabaptist
 				religion = espiritista
+				religion = uahomche
 			}
 			OR = {
 				pacifist = no
@@ -11724,6 +11725,7 @@ pagan_holy_war = { #
 				religion = uahomche_reformed
 				religion = midewiwin_reformed
 				religion = raven_tales_reformed
+				religion = uahomche_reformed
 			}
 			NOT = { has_religion_feature = religion_peaceful }
 			NOT = { same_realm = FROM }
