@@ -122,12 +122,6 @@ religion_same_as_bloodline_founder_trigger = { #WHY PARADOX
 	}
 	trigger_if = {
 		limit = {
-			FROM = { has_bloodline_flag = requires_candomble_religion }
-		}
-		ROOT = { show_scope_change = no religion = candomble }
-	}
-	trigger_if = {
-		limit = {
 			FROM = { has_bloodline_flag = requires_espiritista_religion }
 		}
 		ROOT = { show_scope_change = no religion_openly_espiritista_or_reformed_trigger = yes }
@@ -365,6 +359,12 @@ religion_same_as_bloodline_founder_trigger = { #WHY PARADOX
 			FROM = { has_bloodline_flag = requires_uahomche_religion }
 		}
 		ROOT = { show_scope_change = no religion = uahomche }
+	}
+	trigger_if = {
+		limit = {
+			FROM = { has_bloodline_flag = requires_uahomche_reformed_religion }
+		}
+		ROOT = { show_scope_change = no religion = uahomche_reformed }
 	}
 	trigger_if = {
 		limit = {

@@ -888,7 +888,6 @@ upgrade_giant_cross = {
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
-			religion_group = latter_day_saints
 		}
 	}
 	allow = {
@@ -897,13 +896,11 @@ upgrade_giant_cross = {
 				NOR = {
 					religion_group = christian
 					religion_group = cult_of_saints
-					religion_group = latter_day_saints
 				}
 			}
 			OR = {
 				religion_group = christian
 				religion_group = cult_of_saints
-				religion_group = latter_day_saints
 			}
 		}
 	}
@@ -911,7 +908,6 @@ upgrade_giant_cross = {
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
-			religion_group = latter_day_saints
 		}
 	}
 

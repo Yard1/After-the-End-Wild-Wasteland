@@ -1542,7 +1542,10 @@ defined_text = {
     text = { 
         localisation_key = String_Popol_Vuh
         trigger = { 
-            true_religion_uahomche_trigger = yes
+			OR = {
+				true_religion_uahomche_reformed_trigger = yes 
+				true_religion_uahomche_trigger = yes
+			}
         }
     }
     text = { 
@@ -5419,6 +5422,14 @@ defined_text = {
 		}
 		localisation_key = string_reformed_religion_espiritista
 	}
+	text = {
+		trigger = { 
+			ROOT = { 
+				religion = uahomche_reformed
+			} 
+		}
+		localisation_key = string_reformed_religion_uahomche
+	}
 }
 
 defined_text = {
@@ -5895,6 +5906,15 @@ defined_text = {
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_REAL_espiritista_reformed
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_uahomche_reformed
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_uahomche_reformed
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_uahomche_reformed
 	}
 }
 defined_text = {
@@ -7541,6 +7561,18 @@ defined_text = {
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_espiritista_reformed_desc_REAL
+	}
+}
+
+defined_text = {
+	name = GetReligiousSocietyDesc_uahomche_reformed
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_uahomche_reformed_desc_REAL
 	}
 }
 

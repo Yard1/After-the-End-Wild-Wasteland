@@ -2749,6 +2749,10 @@ obj_see_the_realm_prosper = {
 			has_focus = focus_rulership
 		}
 		modifier = {
+			factor = 1.5
+			pacifist = yes
+		}
+		modifier = {
 			factor = 3.0
 			OR = {
 				trait = indulgent_wastrel
@@ -2845,6 +2849,12 @@ obj_see_the_realm_prosper = {
 		   modifier = prosper_ambition_timer
 		   years = 25
 		   hidden = yes
+		}
+		if = {
+			limit = { pacifist = yes }
+			religion_authority = {
+				modifier = pacifist_realm_prospering
+			}
 		}
 	}
 }

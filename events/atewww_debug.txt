@@ -126,11 +126,8 @@ character_event = {
 
 	option = {
 		name = "vassalize d_high_church"
-		religious_head_scope = {
-			log = "religious head: [This.GetBestName]"
-		}
-		rightful_religious_head_scope = {
-			log = "rightful religious head: [This.GetBestName]"
+		capital_scope = {
+			religion = gaian
 		}
 	}
 

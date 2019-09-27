@@ -13952,6 +13952,15 @@ character_event = {
 				} 
 			}
 			AND =  { 
+				has_landed_title = d_uahomche_reformed 
+				any_artifact = { artifact_type = crown_uahomche_fylkir }
+				d_uahomche_reformed = { 
+					current_heir = { 
+						NOT = { dynasty = ROOT }
+					} 
+				} 
+			}
+			AND =  { 
 				has_landed_title = d_revelationist_reformed 
 				any_artifact = { artifact_type = crown_revelationist_fylkir }
 				d_revelationist_reformed = { 
@@ -14072,6 +14081,21 @@ character_event = {
 			any_artifact = { 
 				limit = { artifact_type = crown_espiritista_fylkir }
 				save_event_target_as = inheriting_artifact_espiritistacrown
+			}
+			current_heir = { character_event = { id = HF.20407 days = 1 } }
+		}
+		if = { 
+			limit = { 
+				has_landed_title = d_uahomche_reformed
+				any_artifact = { artifact_type = crown_uahomche_fylkir }
+			}
+			d_uahomche_reformed = { 
+				current_heir = { save_event_target_as = worthy_uahomche_fylkir_crown }
+			}
+			player_heir = { save_event_target_as = unworthy_uahomche_fylkir_crown }
+			any_artifact = { 
+				limit = { artifact_type = crown_uahomche_fylkir }
+				save_event_target_as = inheriting_artifact_uahomchecrown
 			}
 			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
@@ -15227,6 +15251,10 @@ character_event = {
 				FROMFROM = { any_artifact = { artifact_type = crown_espiritista_fylkir } } 
 			} 
 			AND = {
+				FROM = { title = d_uahomche_reformed } 
+				FROMFROM = { any_artifact = { artifact_type = crown_uahomche_fylkir } } 
+			} 
+			AND = {
 				FROM = { title = d_revelationist_reformed } 
 				FROMFROM = { any_artifact = { artifact_type = crown_revelationist_fylkir } } 
 			} 
@@ -15339,6 +15367,18 @@ character_event = {
 		}
 		if = {
 			limit = {
+				FROM = { title = d_uahomche_reformed } 
+				FROMFROM = { any_artifact = { artifact_type = crown_uahomche_fylkir } } 
+			} 
+			FROMFROM = { 
+				any_artifact = { 
+					limit = { artifact_type = crown_uahomche_fylkir }
+					save_event_target_as = inheriting_artifact_uahomchecrown
+				}
+			}
+		}
+		if = {
+			limit = {
 				FROM = { title = d_revelationist_reformed } 
 				FROMFROM = { any_artifact = { artifact_type = crown_revelationist_fylkir } } 
 			} 
@@ -15421,6 +15461,12 @@ character_event = {
 				to = ROOT
  			} 
  		}
+		event_target:inheriting_artifact_uahomchecrown = {
+			transfer_artifact = {
+				from = FROMFROM
+				to = ROOT
+ 			} 
+ 		}
 		event_target:inheriting_artifact_revelationistcrown = {
 			transfer_artifact = {
 				from = FROMFROM
@@ -15477,6 +15523,10 @@ character_event = {
 			AND =  { 
 				has_landed_title = d_espiritista_reformed 
 				any_artifact = { artifact_type = crown_espiritista_fylkir }
+			}
+			AND =  { 
+				has_landed_title = d_uahomche_reformed 
+				any_artifact = { artifact_type = crown_uahomche_fylkir }
 			}
 			AND =  { 
 				has_landed_title = d_revelationist_reformed 
@@ -15547,6 +15597,13 @@ character_event = {
 				any_artifact = { artifact_type = crown_espiritista_fylkir }
 			}
 			add_trait = dead_crown_espiritista_fylkir
+		}
+		if =  { 
+			limit =  { 
+				has_landed_title = d_uahomche_reformed 
+				any_artifact = { artifact_type = crown_uahomche_fylkir }
+			}
+			add_trait = dead_crown_uahomche_fylkir
 		}
 		if =  { 
 			limit =  { 

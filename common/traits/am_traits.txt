@@ -306,6 +306,7 @@ way_book = {
 		way_fist
 		way_dove
 	}
+	same_opinion = 5
 	opposite_opinion = -5
 	learning = 2
 	intrigue = -1
@@ -332,6 +333,7 @@ way_fist = {
 		way_book
 		way_dove
 	}
+	same_opinion = 5
 	opposite_opinion = -5
 	martial = 1
 	diplomacy = -1
@@ -358,6 +360,7 @@ way_cowl = {
 		way_book
 		way_dove
 	}
+	same_opinion = 5
 	opposite_opinion = -10
 	intrigue = 2
 	learning = -1
@@ -386,6 +389,7 @@ way_dove = {
 		way_fist
 	}
 	same_opinion = 5
+	opposite_opinion = -5
 	diplomacy = 2
 	martial = -1
 	potential = { religion = cetic }
@@ -394,6 +398,7 @@ way_dove = {
 	religious = yes
 	ruler_designer_cost = 0
 	ai_honor = 10
+	ai_ambition = -10
 	
 	male_compliment_adj = COMPL_AFFABLE
 	female_compliment_adj = COMPL_AFFABLE
@@ -1122,6 +1127,7 @@ secretly_rastafarian = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -1215,6 +1221,7 @@ secretly_voodoo = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -1306,6 +1313,7 @@ secretly_santeria = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -1397,6 +1405,7 @@ secretly_candomble = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -1488,6 +1497,7 @@ secretly_espiritista = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -1580,6 +1590,7 @@ secretly_espiritista_reformed = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -1673,6 +1684,7 @@ secretly_peyotist = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -1767,6 +1779,7 @@ secretly_midewiwin = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -1862,6 +1875,7 @@ secretly_midewiwin_reformed = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -1956,6 +1970,7 @@ secretly_raven_tales = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -2049,6 +2064,7 @@ secretly_raven_tales_reformed = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -2141,6 +2157,7 @@ secretly_catholic = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -2232,6 +2249,7 @@ secretly_neognostic = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -2324,6 +2342,7 @@ secretly_sedevacantist = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -2416,6 +2435,7 @@ secretly_nestorian = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -2508,6 +2528,7 @@ secretly_ursuline = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -2599,6 +2620,7 @@ secretly_angeline = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -2690,6 +2712,7 @@ secretly_exovedate = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -2781,6 +2804,7 @@ secretly_confederated = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -2874,6 +2898,7 @@ secretly_anabaptist = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -2967,6 +2992,7 @@ secretly_batenburger = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -3060,6 +3086,7 @@ secretly_evangelical = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -3152,6 +3179,7 @@ secretly_antinomian = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -3245,6 +3273,7 @@ secretly_charismatic = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -3339,6 +3368,7 @@ secretly_postadventist = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -3433,6 +3463,7 @@ secretly_falling_star = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -3526,6 +3557,7 @@ secretly_moravian = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -3618,6 +3650,7 @@ secretly_high_church = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -3710,6 +3743,7 @@ secretly_nonconformist = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -3802,6 +3836,7 @@ secretly_apostolic = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -3894,6 +3929,7 @@ secretly_sacred_heart = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -3986,6 +4022,7 @@ secretly_gracia_divina = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -4078,6 +4115,7 @@ secretly_cetic = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -4169,6 +4207,7 @@ secretly_gaian = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -4260,6 +4299,7 @@ secretly_amazonian = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -4351,6 +4391,7 @@ secretly_shinto = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -4443,6 +4484,7 @@ secretly_nousthreskeia = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -4535,6 +4577,7 @@ secretly_mormon = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -4627,6 +4670,7 @@ secretly_bickertonite = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -4719,6 +4763,7 @@ secretly_woolleyite = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -4811,6 +4856,7 @@ secretly_strangite = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -4903,6 +4949,7 @@ secretly_sol_invicta = {
 		secretly_strangite
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -4995,6 +5042,7 @@ secretly_mictlantec = {
 		secretly_strangite
 		secretly_sol_invicta
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -5048,6 +5096,7 @@ secretly_uahomche = {
 	}
 	
 	opposites = {
+		secretly_uahomche_reformed
 		secretly_rastafarian
 		secretly_voodoo
 		secretly_santeria
@@ -5120,6 +5169,99 @@ secretly_uahomche = {
 			AND = {
 				is_close_relative = FROM
 				trait = secretly_uahomche
+			}
+		}
+	}
+
+	same_opinion = 15
+	
+	random = no
+	customizer = no
+	ai_zeal = -50
+}
+#Uahomche Reformed
+secretly_uahomche_reformed = {
+
+	potential = {
+		NOT = {
+			religion = uahomche_reformed
+		}
+	}
+	
+	opposites = {
+		secretly_uahomche
+		secretly_rastafarian
+		secretly_voodoo
+		secretly_santeria
+		secretly_candomble
+		secretly_espiritista
+		secretly_espiritista_reformed
+		secretly_peyotist   secretly_midewiwin   secretly_midewiwin_reformed
+		secretly_raven_tales   secretly_raven_tales_reformed
+		secretly_catholic
+		secretly_neognostic
+		secretly_sedevacantist
+		secretly_nestorian
+		secretly_ursuline
+		secretly_angeline
+		secretly_confederated
+		secretly_exovedate
+		secretly_anabaptist   secretly_batenburger
+		secretly_evangelical
+		secretly_antinomian
+		secretly_charismatic   secretly_postadventist
+		secretly_falling_star   secretly_moravian
+		secretly_high_church
+		
+		secretly_nonconformist
+		secretly_apostolic
+		
+		secretly_sacred_heart
+		secretly_gracia_divina
+		secretly_cetic
+		secretly_gaian
+		secretly_shinto
+		secretly_amazonian
+		secretly_nousthreskeia
+		secretly_mormon
+		secretly_bickertonite
+		secretly_woolleyite
+		secretly_strangite
+		secretly_sol_invicta
+		secretly_mictlantec
+		secretly_neomayan
+		secretly_hamiltonian
+		secretly_americanist
+		secretly_jeffersonian
+		secretly_libertarian
+		secretly_consumerist secretly_monetarist
+		secretly_atomicist
+		secretly_pagan
+		secretly_revelationist_reformed
+		secretly_revelationist
+		secretly_chrome_cultist
+		secretly_rust_cultist
+		secretly_occultist_reformed
+		secretly_occultist
+		secretly_thelemic_reformed
+		secretly_thelemic
+		secretly_norse_pagan_reformed
+		secretly_norse_pagan
+		secretly_celtic_pagan
+		secretly_celtic_pagan_reformed		
+		secretly_brethren
+		secretly_jewish
+		secretly_reform   secretly_meshichist
+		secretly_hindu
+	}
+
+	is_visible = {
+		OR = {
+			character = FROM
+			society_member_of = secret_religious_society_uahomche_reformed
+			AND = {
+				is_close_relative = FROM
+				trait = secretly_uahomche_reformed
 			}
 		}
 	}
@@ -5272,6 +5414,7 @@ secretly_americanist = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_jeffersonian
@@ -5364,6 +5507,7 @@ secretly_hamiltonian = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_jeffersonian
@@ -5456,6 +5600,7 @@ secretly_jeffersonian = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -5548,6 +5693,7 @@ secretly_libertarian = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -5640,6 +5786,7 @@ secretly_consumerist = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -5732,6 +5879,7 @@ secretly_monetarist = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -5824,6 +5972,7 @@ secretly_atomicist = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -5916,6 +6065,7 @@ secretly_aphite = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -6008,6 +6158,7 @@ secretly_pagan = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -6100,6 +6251,7 @@ secretly_revelationist_reformed = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -6192,6 +6344,7 @@ secretly_revelationist = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -6284,6 +6437,7 @@ secretly_chrome_cultist = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -6376,6 +6530,7 @@ secretly_rust_cultist = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -6468,6 +6623,7 @@ secretly_occultist_reformed = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -6560,6 +6716,7 @@ secretly_occultist = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -6652,6 +6809,7 @@ secretly_thelemic_reformed = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -6744,6 +6902,7 @@ secretly_thelemic = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -6836,6 +6995,7 @@ secretly_norse_pagan_reformed = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -6928,6 +7088,7 @@ secretly_norse_pagan = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -7020,6 +7181,7 @@ secretly_celtic_pagan = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -7112,6 +7274,7 @@ secretly_celtic_pagan_reformed = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -7204,6 +7367,7 @@ secretly_brethren = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist
@@ -7294,6 +7458,7 @@ secretly_jewish = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -7385,6 +7550,7 @@ secretly_reform = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -7476,6 +7642,7 @@ secretly_meshichist = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_americanist
 		secretly_hamiltonian
@@ -7569,6 +7736,7 @@ secretly_hindu = {
 		secretly_sol_invicta
 		secretly_mictlantec
 		secretly_uahomche
+		secretly_uahomche_reformed
 		secretly_neomayan
 		secretly_hamiltonian
 		secretly_americanist

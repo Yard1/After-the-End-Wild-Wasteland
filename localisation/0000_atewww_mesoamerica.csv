@@ -8,5 +8,41 @@ sol_invicta_FEATURES;§Y*§! May go on vision quests with the aid of sacramental h
 
 # Uahomche
 uahomche;Uahomche;;;;;;;;;;;;;x
-uahomche_DESC;Uahomche blends aspects of both Christianity and the traditional Mayan faith. Adherents believe that the Event was the end of the 5th world cycle, which was caused by both a lack of sacrifices and the conversion of Mayan believers to monotheism. Gods in the Uahomche pantheon are referred to as ‘angels’, but most of these ‘angels’ are simply pre-Christian Maya deities under a different name.;;;;;;;;;;;;;x
+uahomche_DESC;Uahomche blends aspects of both Christianity and the traditional Mayan faith. Adherents believe that the Event was the end of the 5th world cycle, which was caused by both a lack of sacrifices and the conversion of Mayan believers to monotheism. Gods in the Uahomche pantheon are referred to as "angels", but most of these "angels" are simply pre-Christian Maya deities under a different name.;;;;;;;;;;;;;x
 uahomche_FEATURES;§Y*§! May go on vision quests with the aid of sacramental herbs\n§Y*§! Rulers may sacrifice prisoners to their gods;;;;;;;;;;;;;x
+
+uahomche_reformed;Uahomche;;;;;;;;;;;;;x
+uahomche_reformed_DESC;Uahomche blends aspects of both Christianity and the traditional Mayan faith. Adherents believe that the Event was the end of the 5th world cycle, which was caused by both a lack of sacrifices and the conversion of Mayan believers to monotheism. Gods in the Uahomche pantheon are referred to as "angels", but most of these "angels" are simply pre-Christian Maya deities under a different name.;;;;;;;;;;;;;x
+
+d_uahomche_reformed_adj;Uahomche;;;;;;;;;;;;;x
+d_uahomche_reformed;Sovereign Altar;;;;;;;;;;;;;x
+
+uahomche_reformed_opinion;[uahomche_reformed.GetName] Opinion;;;;;;;;;;;;;x
+religion_openly_uahomche_or_reformed_trigger;Publicly follows the §Y[uahomche_reformed.GetName]§! religion;;;;;;;;;;;;;x
+
+secret_religious_society_uahomche_reformed;[GetReligiousCommunityName_uahomche_reformed];[GetReligiousCommunityName_uahomche_reformed];[GetReligiousCommunityName_uahomche_reformed];;[GetReligiousCommunityName_uahomche_reformed];;;;;;;;;x
+secret_religious_society_REAL_uahomche_reformed;The Incense Burners;;;;;;;;;;;;x
+alt_start_community_name_uahomche_reformed;The [uahomche_reformed.GetName] Faithful;;;;;;;;;;;;;x
+secret_religious_society_uahomche_reformed_desc;[GetReligiousSocietyDesc_uahomche_reformed];[GetReligiousSocietyDesc_uahomche_reformed];[GetReligiousSocietyDesc_uahomche_reformed];;[GetReligiousSocietyDesc_uahomche_reformed];;;;;;;;;x
+secret_religious_society_uahomche_reformed_desc_REAL;The faithful followers of the high God Kukulkan continue to renew their covenants with him and the other deities in secret, despite being surrounded by colonists on all side. If they stay true and continue to send Kukulkan offerings, he will lead the Maya to a new dawn.;;;;;;;;;x
+secretly_convert_to_uahomche_reformed_holy_site;Secretly Convert to Uahomche;;;;;;;;;;;;;x
+secretly_convert_to_uahomche_reformed_holy_site_desc;The §YUahomche§! pilgrims that flock to the holy site in §Y[Root.Location.GetName]§! impress me with the depth and passion of their faith. I am tempted to convert in secrecy...;;;;;;;;;;;;;x
+secret_religious_society_uahomche_reformed_currency;Devotion;Dévotion;Hingabe;;Devoción;;;;;;;;;x
+secret_religious_society_uahomche_reformed_rank_1_female;Faithful;Fidèle;Getreue;;Fiel;;;;x
+secret_religious_society_uahomche_reformed_rank_2_female;Adherent;Adhérente;Anhängerin;;Seguidora;;;;x
+secret_religious_society_uahomche_reformed_rank_3_female;Preacher;Prêcheuse;Predigerin;;Predicadora;;;;x
+secret_religious_society_uahomche_reformed_rank_4_female;Herald;Messagère;Herold;;Mensajera;;;;x
+secret_religious_society_uahomche_reformed_rank_1_male;Faithful;Fidèle;Getreuer;;Fiel;;;;x
+secret_religious_society_uahomche_reformed_rank_2_male;Adherent;Adhérent;Anhänger;;Seguidor;;;;x
+secret_religious_society_uahomche_reformed_rank_3_male;Preacher;Prêcheur;Prediger;;Predicador;;;;x
+secret_religious_society_uahomche_reformed_rank_4_male;Herald;Messager;Herold;;Mensajero;;;;x
+secret_religious_community_uahomche_reformed;Secret Uahomche Community;;;;;;;;;;;;;x
+secret_uahomche_reformed_community;Secret Uahomche Community;;;;;;;;;;;;;x
+secret_uahomche_reformed_community_desc;In secret, Uahomche faithful have organized themselves as a community in this province. From there it converts others, grows, and protects their own.;En secret, les fidèles se sont organisés en tant que communauté dans cette province. De là, la commaunauté convertit d'autres personnes, grandit et protège les siens.;;;;;;;;;;;;x
+secret_religious_society_uahomche_reformed_leader_desc;The High Priest, leading the international effort of bringing more people into the fold.;Le grand prêtre dirige l'effort mondial visant à réunir davantage de personnes dans les rangs de sa société.;Der Hohepriester des $SOCIETY|Y$-Zirkels, der die internationalen Bemühungen leitet, mehr Menschen in den Schoß der Familie zu führen.;;El Sumo sacerdote, que dirige la misión a escala internacional para atraer a más fieles.;;;;;;;;;x
+
+ALT_UAHOMCHE;The [uahomche_reformed.GetName] Pontificate;Pontificat [uahomche_reformed.GetName];Das [uahomche_reformed.GetName]e Pontifikat;;El pontificado [uahomche_reformed.GetName];;;;;;;;;x
+ALT_UAHOMCHE_ADJ;[uahomche_reformed.GetName] Pontificate;Pontificat [uahomche_reformed.GetName];[uahomche_reformed.GetName]e Tempel;;temple[uahomche_reformed.GetName];;;;;;;;;x
+
+crown_uahomche_fylkir;Tlatoanic Crown;Couronne tlatoanique;Tlatoanische Krone;;Corona del tlatoani;;;;;;;;x
+crown_uahomche_fylkir_desc;The sacred feathered headdress worn by the divine emperor of the [uahomche_reformed.GetHighGodName] faithful.;La coiffure sacrée à plumes portée par l'empereur divin des adeptes de [uahomche_reformed.GetHighGodName].;Dieser heilige Federkopfschmuck wird von göttlichen Kaiser derer getragen, die an [uahomche_reformed.GetHighGodName] glauben. ;;La diadema emplumada sagrada que lleva el emperador divino de los fieles a [uahomche_reformed.GetHighGodName].;;;;;;;;x

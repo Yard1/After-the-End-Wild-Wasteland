@@ -3303,6 +3303,10 @@ offmap_decisions = {
 							artifact_type = crown_espiritista_fylkir
 						}
 						AND = {
+							FROM = { NOT = { has_landed_title = d_uahomche_reformed } }
+							artifact_type = crown_uahomche_fylkir
+						}
+						AND = {
 							FROM = { NOT = { has_landed_title = d_revelationist_reformed } }
 							artifact_type = crown_revelationist_fylkir
 						}

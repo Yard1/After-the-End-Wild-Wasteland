@@ -1663,6 +1663,19 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
+	min_age = 16
+
+	trigger = {
+		NOR = { #still use existing branch traits
+			religion = occultist
+			religion = occultist_reformed
+		}
+		NOT = { trait = pagan_branch_1 }
+		NOT = { trait = pagan_branch_2 }
+		NOT = { trait = pagan_branch_3 }
+		NOT = { trait = pagan_branch_4 }
+		can_have_pagan_religion_interpretation = yes
+	}
 
 	trigger = { 
 		can_have_pagan_religion_interpretation = yes
@@ -4635,6 +4648,22 @@ character_event = {
 				limit = { religion = hindu }
 				apply_dogmatic_on_start_effect = yes
 			}
+		}
+		any_playable_ruler = {
+			limit = {
+				pacifist = yes
+			}
+			if = {
+				limit = { religion_scope = { NOT = { has_flag = peaceful_applied } } }
+				apply_peaceful_on_start_effect = yes
+				religion_scope = { 
+					set_flag = peaceful_applied
+					log = "Set [This.GetName] as a peaceful religion"
+				}
+			}
+		}
+		any_province = {
+			province_event = { id = ATE_WWW_RELIGION.38 }
 		}
 	}
 }

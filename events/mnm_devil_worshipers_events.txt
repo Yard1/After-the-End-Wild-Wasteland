@@ -884,6 +884,22 @@ character_event = {
 				society_rank >= 3
 				same_society_as = event_target:satanists_recruiter
 			}
+			preferred_limit = {
+				NOT = {
+					ROOT = { character_knows_prev_trigger = yes }
+					culture = ROOT
+				}
+			}
+			preferred_limit = {
+				NOT = {
+					ROOT = { character_knows_prev_trigger = yes }
+				}
+			}
+			preferred_limit = {
+				NOT = {
+					culture = ROOT
+				}
+			}
 			save_event_target_as = satanists_inductor 
 		}
 	}
@@ -1165,6 +1181,22 @@ character_event = {
 					society_rank >= 3
 					same_society_as = event_target:satanists_recruiter
 					prisoner = no
+				}
+				preferred_limit = {
+					NOT = {
+						ROOT = { character_knows_prev_trigger = yes }
+						culture = ROOT
+					}
+				}
+				preferred_limit = {
+					NOT = {
+						ROOT = { character_knows_prev_trigger = yes }
+					}
+				}
+				preferred_limit = {
+					NOT = {
+						culture = ROOT
+					}
 				}
 				save_event_target_as = satanists_inductor 
 			}

@@ -1265,6 +1265,27 @@ character_event = {
                                 }
                             }
                         }
+                        else_if = {
+                            limit = {
+                                religion = uahomche_reformed
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_uahomche_01
+                                    religion = uahomche_reformed
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_uahomche_01
+                                    religion = uahomche_reformed
+                                }
+                            }
+                        }
                         else = {
                             create_bloodline = {
                                 type = saintly_bloodline_catholic_01
@@ -1702,6 +1723,27 @@ character_event = {
                                 }
                             }
                         }
+                        else_if = {
+                            limit = {
+                                religion = uahomche_reformed
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_uahomche_03
+                                    religion = uahomche_reformed
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_uahomche_03
+                                    religion = uahomche_reformed
+                                }
+                            }
+                        }
                         else = {
                             create_bloodline = {
                                 type = saintly_bloodline_catholic_03
@@ -2028,6 +2070,27 @@ character_event = {
                                 }
                             }
                         }
+                        else_if = {
+                            limit = {
+                                religion = uahomche_reformed
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_uahomche_04
+                                    religion = uahomche_reformed
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_uahomche_04
+                                    religion = uahomche_reformed
+                                }
+                            }
+                        }
                         else = {
                             create_bloodline = {
                                 type = saintly_bloodline_catholic_04
@@ -2348,6 +2411,27 @@ character_event = {
                                 }
                             }
                         }
+                        else_if = {
+                            limit = {
+                                religion = uahomche_reformed
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_uahomche_05
+                                    religion = uahomche_reformed
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_uahomche_05
+                                    religion = uahomche_reformed
+                                }
+                            }
+                        }
                         else = {
                             create_bloodline = {
                                 type = saintly_bloodline_catholic_05
@@ -2660,6 +2744,27 @@ character_event = {
                                 create_bloodline = {
                                     type = saintly_bloodline_espiritista_06
                                     religion = espiritista_reformed
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                religion = uahomche_reformed
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_uahomche_06
+                                    religion = uahomche_reformed
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_uahomche_06
+                                    religion = uahomche_reformed
                                 }
                             }
                         }

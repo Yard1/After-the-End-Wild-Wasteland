@@ -275,14 +275,6 @@ is_landless = {
 	is_landed = no
 }
 
-can_have_pagan_religion_interpretation = {
-	NOT = { religion_head = { always = yes } } #check if there is no religious head
-	OR = {
-		religion = gaian
-		has_religion_feature = religion_no_leader
-	}
-}
-
 has_religion_with_temporal_head = {
 	#is_alternate_start = no
 	OR = {
@@ -486,5 +478,64 @@ evangelical_can_have_saints = {
 				trait = lutheran
 			}
 		}
+	}
+}
+
+can_have_pagan_religion_interpretation = {
+	NOT = { religion_head = { always = yes } } #check if there is no religious head
+	OR = {
+		religion = gaian
+		has_religion_feature = religion_no_leader
+		religion = peyotist
+		religion = exovedate
+		religion = sol_invicta
+		religion = mictlantec
+		religion = neomayan
+	}
+}
+
+has_no_religious_head = {
+	OR = {
+		has_religion_feature = religion_no_leader
+		religion = rastafarian
+		religion = santeria
+		religion = candomble
+		religion = peyotist
+		religion = neognostic
+		religion = sedevacantist
+		religion = angeline
+		religion = anabaptist
+		religion = batenburger
+		religion = antinomian
+		religion = charismatic
+		religion = postadventist
+		religion = falling_star
+		religion = moravian
+		religion = nonconformist
+		religion = exovedate
+		religion = sacred_heart
+		religion = gracia_divina
+		religion = neutic
+		religion = gaian
+		religion = amazonian
+		religion = shinto
+		religion = nousthreskeia
+		religion = sol_invicta
+		religion = mictlantec
+		religion = neomayan
+		religion = aphite
+		religion = chrome_cultist
+		religion = reform
+		religion = meshichist
+		religion = hindu
+	}
+}
+
+is_pacifist_religion = {
+	OR = {
+		has_religion_feature = religion_peaceful
+		religion = anabaptist
+		religion = gaian
+		religion = libertarian
 	}
 }

@@ -6,6 +6,8 @@ religion_nature = {
 		effect = {
 			custom_tooltip = { text = tooltip_religion_feature_pacifist }
 			custom_tooltip = { text = tooltip_religion_feature_peace_piety }
+			custom_tooltip = { text = tooltip_religion_feature_peaceful_1 }
+			custom_tooltip = { text = tooltip_religion_feature_peaceful_2 }
 			custom_tooltip = { text = tooltip_religion_feature_no_looting }
 			custom_tooltip = { text = tooltip_religion_feature_no_crusade }
 			hidden_tooltip = { 

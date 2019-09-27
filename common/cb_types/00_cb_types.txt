@@ -3474,6 +3474,7 @@ crusade = {
 						OR = {
 							religion_group = pagan_group
 							religion = espiritista_reformed
+							religion = uahomche_reformed
 							religion = midewiwin_reformed
 							religion = raven_tales_reformed
 						}
@@ -6127,19 +6128,31 @@ religious = {
 	
 	can_use_gui = {
 		ROOT = {
-			NOT = { religion = cetic }
 			OR = {
 				NOT = { has_character_modifier = holy_war_cooldown }
 				has_game_rule = { name = holy_war_cooldown_rule value = off }
 			}
 			OR = { 
-				AND = {
+				conditional_tooltip = {
+					trigger = {
+						NOR = { religion = neutic religion = gaian }
+					}
 					piety = 100
-					NOT = { religion = neutic }
 				}
-				AND = {
+				conditional_tooltip = {
+					trigger = {
+						religion = neutic
+					}
 					piety = 200
-					religion = neutic
+				}
+				conditional_tooltip = {
+					trigger = {
+						religion = gaian
+					}
+					AND = {
+						trait = pagan_branch_3
+						piety = 500
+					}
 				}
 			}
 		}
@@ -6168,6 +6181,10 @@ religious = {
 				piety = -200
 			}
 			else_if = { 
+				limit = { religion = gaian }
+				piety = -500
+			}
+			else = { 
 				piety = -100
 			}
 		}
@@ -6184,7 +6201,6 @@ religious = {
 		ROOT = {
 			NOR = { 
 				religion = cetic 
-				religion = gaian
 				AND = {
 					OR = {
 						has_religion_feature = religion_patriarchal
@@ -6204,7 +6220,10 @@ religious = {
 				religion = anabaptist
 				religion = espiritista
 			}
-			NOT = { pacifist = yes }
+			OR = {
+				pacifist = no
+				religion = gaian
+			}
 			NAND = { #Reserved for Ursulines
 				OR = {
 					has_landed_title = k_ursuline_state
@@ -6232,8 +6251,14 @@ religious = {
 			NOT = { same_realm = FROM }
 			OR = {
 				NOT = { religion_group = FROM }
-				is_heresy_of = FROM
-				is_parent_religion = FROM
+				AND = {
+					religion_openly_gaian_or_heresy_trigger = no
+					is_heresy_of = FROM
+				}
+				AND = {
+					religion_openly_gaian_or_heresy_trigger = no
+					is_parent_religion = FROM
+				}
 				AND = {
 					religion_group = mesoamerican_gods
 					NOT = { religion = FROM }
@@ -6403,7 +6428,6 @@ religious = {
 		ROOT = {
 			NOR = { 
 				religion = cetic 
-				religion = gaian
 				AND = {
 					OR = {
 						has_religion_feature = religion_patriarchal
@@ -6420,12 +6444,21 @@ religious = {
 				religion = anabaptist
 				religion = espiritista
 			}
-			NOT = { pacifist = yes }
+			OR = {
+				pacifist = no
+				religion = gaian
+			}
 			NOT = { same_realm = FROM }
 			OR = {
 				NOT = { religion_group = FROM }
-				is_heresy_of = FROM
-				is_parent_religion = FROM
+				AND = {
+					religion_openly_gaian_or_heresy_trigger = no
+					is_heresy_of = FROM
+				}
+				AND = {
+					religion_openly_gaian_or_heresy_trigger = no
+					is_parent_religion = FROM
+				}
 				AND = {
 					religion_group = FROM
 					FROM = {
@@ -6500,9 +6533,12 @@ religious = {
 				}
 				participation_scaled_decadence = -10
 			}
-			religion_authority = {
-				modifier = won_holy_war
-				years = 20
+			if = {
+				limit = { pacifist = no }
+				religion_authority = {
+					modifier = won_holy_war
+					years = 20
+				}
 			}
 			hidden_tooltip = {
 				if = {
@@ -11657,6 +11693,7 @@ pagan_holy_war = { #
 				religion = thelemic_reformed
 				religion = celtic_pagan_reformed
 				religion = espiritista_reformed
+				religion = uahomche_reformed
 				religion = midewiwin_reformed
 				religion = raven_tales_reformed
 			}
@@ -11735,6 +11772,7 @@ pagan_holy_war = { #
 				religion = thelemic_reformed
 				religion = celtic_pagan_reformed #update to celtic_pagan_reformed
 				religion = espiritista_reformed 
+				religion = uahomche_reformed
 				religion = midewiwin_reformed
 				religion = raven_tales_reformed
 			}

@@ -244,7 +244,7 @@ lutheran = {
 		is_priest = yes
 	}
 	religious = yes
-	learning = 1
+	learning = 2
 	same_opinion = 5
 	opposite_opinion = -5
 	random = no
@@ -261,7 +261,7 @@ baptist = {
 		is_priest = yes
 	}
 	religious = yes
-	diplomacy = 1
+	diplomacy = 2
 	same_opinion = 5
 	opposite_opinion = -5
 	random = no
@@ -278,7 +278,7 @@ methodist = {
 		is_priest = yes
 	}
 	religious = yes
-	martial = 1
+	martial = 2
 	same_opinion = 5
 	opposite_opinion = -5
 	random = no

@@ -557,6 +557,22 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
     				NOT = {
 						has_character_was_religion_flag_trigger = yes
     				}
+    				religion = uahomche_reformed
+    			}
+    			has_character_flag = character_was_uahomche_reformed
+			}
+    	}
+    	set_secret_religion = uahomche_reformed
+    	clr_character_flag = character_was_uahomche_reformed
+		break = yes
+    }
+	if = {
+    	limit = {
+    		OR = {
+    			AND = {
+    				NOT = {
+						has_character_was_religion_flag_trigger = yes
+    				}
     				religion = peyotist
     			}
     			has_character_flag = character_was_peyotist
@@ -1634,6 +1650,10 @@ add_religion_char_flag_effect = {
     	set_character_flag = character_was_espiritista_reformed
     }
 	else_if = {
+    	limit = { religion = uahomche_reformed }
+    	set_character_flag = character_was_uahomche_reformed
+    }
+	else_if = {
     	limit = { religion = peyotist }
     	set_character_flag = character_was_peyotist
     }
@@ -1906,6 +1926,7 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_candomble
 	clr_character_flag = character_was_espiritista
 	clr_character_flag = character_was_espiritista_reformed
+	clr_character_flag = character_was_uahomche_reformed
 	clr_character_flag = character_was_peyotist
 	clr_character_flag = character_was_midewiwin
 	clr_character_flag = character_was_midewiwin_reformed
@@ -2013,6 +2034,13 @@ event_target_old_religion_from_flag_effect = {
     	limit = { has_character_flag = character_was_espiritista_reformed }
     	random_character = {
     		limit = { religion = espiritista_reformed }
+    		save_event_target_as = old_religion
+    	}
+    }
+	else_if = {
+    	limit = { has_character_flag = character_was_uahomche_reformed }
+    	random_character = {
+    		limit = { religion = uahomche_reformed }
     		save_event_target_as = old_religion
     	}
     }
@@ -2553,6 +2581,17 @@ flip_secret_religious_community_provinces = {
 					}
 					religion = espiritista_reformed
 					remove_province_modifier = secret_espiritista_reformed_community
+				}
+			}
+		}
+		secret_religious_society_uahomche_reformed = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_uahomche_reformed_community
+					}
+					religion = uahomche_reformed
+					remove_province_modifier = secret_uahomche_reformed_community
 				}
 			}
 		}
@@ -3720,6 +3759,17 @@ root_secret_religion_provinces_convert_effect = {
 						}
 						religion = espiritista_reformed
 						remove_province_modifier = secret_espiritista_reformed_community
+					}
+				}
+			}
+			secret_religious_society_uahomche_reformed = {
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_uahomche_reformed_community
+						}
+						religion = uahomche_reformed
+						remove_province_modifier = secret_uahomche_reformed_community
 					}
 				}
 			}
@@ -6023,6 +6073,20 @@ transfer_crown_on_abdication_effect = {
 	}
 	if = {
 		limit = { 
+			has_landed_title = d_uahomche_reformed
+			any_artifact = { artifact_type = crown_uahomche_fylkir }
+		}
+			current_heir = { save_event_target_as = crown_uahomche_fylkir_heir }
+			any_artifact = { 
+				limit = { artifact_type = crown_uahomche_fylkir }
+				transfer_artifact = {
+					from = PREV
+					to = event_target:crown_uahomche_fylkir_heir
+				} 
+			}
+	}
+	if = {
+		limit = { 
 			has_landed_title = d_revelationist_reformed
 			any_artifact = { artifact_type = crown_revelationist_fylkir }
 		}
@@ -6089,6 +6153,7 @@ transfer_crown_on_abdication_effect = {
 				artifact_type = crown_thelemic_fylkir
 				artifact_type = crown_celtic_fylkir
 				artifact_type = crown_espiritista_fylkir
+				artifact_type = crown_uahomche_fylkir
 				artifact_type = crown_revelationist_fylkir
 				artifact_type = crown_occultist_fylkir
 				artifact_type = scepter_midewiwin_fylkir 
@@ -9308,11 +9373,90 @@ fire_haruspicy_event_effect = { #Used for Mesoamerican Religions
 	}
 }
 
+apply_peaceful_on_start_effect = {
+	religion_authority = {
+		modifier = religion_peaceful
+		years = 1000
+	}
+}
+
 apply_dogmatic_on_start_effect = {
 	religion_authority = {
 		modifier = religion_dogmatic
 		years = 1000
 	}
+	remove_intermarry = rastafarian
+	remove_intermarry = voodoo
+	remove_intermarry = santeria
+	remove_intermarry = candomble
+	remove_intermarry = uahomche_reformed
+	remove_intermarry = espiritista_reformed
+	remove_intermarry = espiritista
+	remove_intermarry = peyotist
+	remove_intermarry = midewiwin
+	remove_intermarry = midewiwin_reformed
+	remove_intermarry = raven_tales
+	remove_intermarry = raven_tales_reformed
+	remove_intermarry = catholic
+	remove_intermarry = neognostic
+	remove_intermarry = sedevacantist
+	remove_intermarry = nestorian
+	remove_intermarry = ursuline
+	remove_intermarry = angeline
+	remove_intermarry = exovedate
+	remove_intermarry = confederated
+	remove_intermarry = anabaptist
+	remove_intermarry = batenburger
+	remove_intermarry = evangelical
+	remove_intermarry = antinomian
+	remove_intermarry = charismatic
+	remove_intermarry = postadventist
+	remove_intermarry = falling_star
+	remove_intermarry = moravian
+	remove_intermarry = high_church
+	remove_intermarry = nonconformist
+	remove_intermarry = apostolic
+	remove_intermarry = sacred_heart
+	remove_intermarry = gracia_divina
+	remove_intermarry = cetic
+	remove_intermarry = neutic
+	remove_intermarry = gaian
+	remove_intermarry = amazonian
+	remove_intermarry = shinto
+	remove_intermarry = nousthreskeia
+	remove_intermarry = mormon
+	remove_intermarry = bickertonite
+	remove_intermarry = woolleyite
+	remove_intermarry = strangite
+	remove_intermarry = sol_invicta
+	remove_intermarry = mictlantec
+	remove_intermarry = uahomche
+	remove_intermarry = neomayan
+	remove_intermarry = americanist
+	remove_intermarry = hamiltonian
+	remove_intermarry = jeffersonian
+	remove_intermarry = libertarian
+	remove_intermarry = consumerist
+	remove_intermarry = atomicist
+	remove_intermarry = aphite
+	remove_intermarry = pagan
+	remove_intermarry = revelationist_reformed
+	remove_intermarry = revelationist
+	remove_intermarry = rust_cultist
+	remove_intermarry = chrome_cultist
+	remove_intermarry = occultist_reformed
+	remove_intermarry = occultist
+	remove_intermarry = thelemic_reformed
+	remove_intermarry = thelemic
+	remove_intermarry = norse_pagan_reformed
+	remove_intermarry = norse_pagan
+	remove_intermarry = celtic_pagan_reformed
+	remove_intermarry = celtic_pagan
+	remove_intermarry = brethren
+	remove_intermarry = jewish
+	remove_intermarry = reform
+	remove_intermarry = meshichist
+	remove_intermarry = hindu
 	remove_intermarry = afro_syncretic
 	remove_intermarry = american_native
 	remove_intermarry = christian
@@ -9321,9 +9465,10 @@ apply_dogmatic_on_start_effect = {
 	remove_intermarry = latter_day_saints
 	remove_intermarry = mesoamerican_gods
 	remove_intermarry = oldworld
+	remove_intermarry = pagan_group
 	remove_intermarry = pirate
-	remove_intermarry = indian_group
 	remove_intermarry = jewish_group
+	remove_intermarry = indian_group
 }
 
 add_random_tattoo_effect = { #Tied to religion, used only for special events.
@@ -10520,8 +10665,12 @@ set_bloodline_founder_religion_flag_effect = {
 		new_bloodline = { set_bloodline_flag = requires_mictlantec_religion }
 	}
 	else_if = {
-		limit = { religion = uahomche }
+		limit = { religion = uhaomche }
 		new_bloodline = { set_bloodline_flag = requires_uahomche_religion }
+	}
+	else_if = {
+		limit = { religion = uhaomche_reformed }
+		new_bloodline = { set_bloodline_flag = requires_uahomche_reformed_religion }
 	}
 	else_if = {
 		limit = { religion = neomayan }
@@ -14740,6 +14889,20 @@ randomize_religion_names_effect = {
 		d_espiritista_reformed = {
 			set_name="ALT_ESPIRITISTA"
 			adjective="ALT_ESPIRITISTA_ADJ"
+			title = "PONTIFEX_MAXIMUS"
+			title_female = "PONTIFEX_MAXIMA"
+			foa = "POPE_FOA"
+		}
+	}
+	if = {
+		limit = {
+			uahomche_reformed = {
+				is_name_randomized = yes
+			}
+		}
+		d_uahomche_reformed = {
+			set_name="ALT_UAHOMCHE"
+			adjective="ALT_UAHOMCHE_ADJ"
 			title = "PONTIFEX_MAXIMUS"
 			title_female = "PONTIFEX_MAXIMA"
 			foa = "POPE_FOA"

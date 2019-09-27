@@ -14,6 +14,7 @@ on_startup = {
 		ATE_WWWW_AIRMEN.3
 		ATE_WWW_DEBUG.6
 		ATE_WWW_RELIGION.28
+		ATE_WWW_RELIGION.39
 	}
 }
 
@@ -29,6 +30,7 @@ on_host_change = {
 		ATE_WWW_RELIGION.16
 		ATE_WWW_RELIGION.28
 		ATE_WWW_RELIGION.36
+		HF.23016
 	}
 }
 
@@ -183,4 +185,11 @@ on_crusade_creation = {
 	events = {
 		ATE_WWW_RELIGION.17
  	}
+}
+
+# When the religion changes in a county, ROOT is province. FROM has the old religion.
+on_county_religion_change = {
+	events = {
+		ATE_WWW_RELIGION.38
+	}
 }

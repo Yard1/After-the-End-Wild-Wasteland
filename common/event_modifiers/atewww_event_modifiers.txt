@@ -142,3 +142,15 @@ atom_curse_health_effect = {
 	fertility = -0.2
 	icon = 55
 }
+
+secret_uahomche_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_uahomche_reformed
+	}
+}
+
+pacifist_religion = {
+	local_revolt_risk = -0.04
+	icon = 8	
+}

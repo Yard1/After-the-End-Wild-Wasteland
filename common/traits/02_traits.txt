@@ -172,6 +172,9 @@ heresiarch = {
 	
 	same_religion_opinion = 25
 	combat_rating = 3 #new value!
+	martial = 1
+
+	ai_zeal = 50
 	
 	rebel_inherited = yes
 	customizer = no
@@ -3642,6 +3645,12 @@ dead_scepter_midewiwin_fylkir = {
 }
 
 dead_crown_aztec_fylkir = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
+dead_crown_uahomche_fylkir = {
 	hidden = yes
 	random = no
 	customizer = no

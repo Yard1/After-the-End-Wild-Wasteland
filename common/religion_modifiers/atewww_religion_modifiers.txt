@@ -17,3 +17,13 @@ methodist_in_charge = {
 	authority = 5
 	years = 1
 }
+
+pacifist_realm_prospering = {
+	authority = 3
+	years = 30
+}
+
+religion_peaceful = {
+	authority = 5
+	years = 1000
+}

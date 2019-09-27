@@ -1,4 +1,4 @@
-# Religion-specific opinion can be added to modifiers (E.G., norse_pagan_opinion = 5), but the modifier *has* to be defined in 00_modifier_definitions.txt as well. It also needs localisation. Works for groups as well
+# Religion-specific opinion can be added to modifiers (E.G., norse_pagan_opinion = 5), but the character_modifier *has* to be defined in 00_modifier_definitions.txt as well. It also needs localisation. Works for groups as well
 
 # join_crusade_if_bordering_hostile = yes # The AI won't refrain from joining a crusade simply because it borders a heathen/heretic realm
 
@@ -60,6 +60,10 @@ afro_syncretic = {
 		intermarry = espiritista_reformed
 
 		intermarry = brethren
+
+		character_modifier = {
+			diplomacy = 2
+		}
 	}
 	
 	voodoo = {
@@ -166,6 +170,10 @@ afro_syncretic = {
 		intermarry = candomble
 		intermarry = espiritista
 		intermarry = espiritista_reformed
+
+		character_modifier = {
+			diplomacy = 2
+		}
 	}
 	candomble = { # Bahian religion
 		graphical_culture = africangfx
@@ -208,6 +216,10 @@ afro_syncretic = {
 		intermarry = espiritista_reformed
 		intermarry = hindu
 		intermarry = apostolic
+
+		character_modifier = {
+			diplomacy = 2
+		}
 	}
 	espiritista_reformed = {
 		graphical_culture = africangfx
@@ -338,6 +350,8 @@ american_native = {
 		intermarry = exovedate
 
 		character_modifier = {
+			stewardship = 1
+			diplomacy = 1
 			exovedate_opinion = 5
 		}
 	}
@@ -641,7 +655,7 @@ christian = {
 
 		can_retire_to_monastery = yes
 		female_temple_holders = yes
-		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		feminist = yes      # Nullifies the negative opinion character_modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
 		
 		religious_clothing_head = 0
@@ -676,6 +690,7 @@ christian = {
 		intermarry = shinto
 
 		character_modifier = {
+			learning = 1
 			cetic_opinion = 5
 			neutic_opinion = 5
 			thelemic_opinion = -15
@@ -724,6 +739,7 @@ christian = {
 		intermarry = exovedate
 
 		character_modifier = {
+			monthly_character_piety = 0.5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -817,7 +833,7 @@ christian = {
 		male_temple_holders = no
 		priests_can_inherit = no
 		priests_can_marry = no
-		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		feminist = yes      # Nullifies the negative opinion character_modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
 		rel_head_defense = yes
 
@@ -869,7 +885,7 @@ christian = {
 		female_temple_holders = yes
 		male_temple_holders = yes
 		allows_matrilineal_marriage = yes
-		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		feminist = yes      # Nullifies the negative opinion character_modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
 
 
@@ -899,6 +915,7 @@ christian = {
 		intermarry = exovedate
 
 		character_modifier = {
+			same_religion_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -939,7 +956,7 @@ christian = {
 		priests_can_inherit = yes
 		female_temple_holders = yes
 		male_temple_holders = yes
-		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		feminist = yes      # Nullifies the negative opinion character_modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
 		rel_head_defense = yes
 		priests_can_marry = no
@@ -1007,6 +1024,7 @@ christian = {
 		
 		can_retire_to_monastery = yes
 		can_demand_religious_conversion = no
+		hard_to_convert = yes
 
 		religious_clothing_head = 2
 		religious_clothing_priest = 2
@@ -1034,6 +1052,8 @@ christian = {
 		intermarry = exovedate
 
 		character_modifier = {
+			diplomacy = 1
+			stewardship = 1
 			vassal_opinion = 15
 			rel_head_opinion = 15
 			thelemic_opinion = -15
@@ -1089,6 +1109,7 @@ christian = {
 		intermarry = exovedate
 
 		character_modifier = {
+			martial = 1
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1171,7 +1192,7 @@ christian = {
 		crusade_name = CRUSADE
 		can_retire_to_monastery = no
 		female_temple_holders = yes
-		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		feminist = yes      # Nullifies the negative opinion character_modifier that vassals normally get if ruler is female or has female heir
 		allows_matrilineal_marriage = yes
 		allow_rivermovement = yes
 		priests_can_inherit = no
@@ -1203,6 +1224,8 @@ christian = {
 		intermarry = exovedate
 
 		character_modifier = {
+			learning = 1
+			diplomacy = 1
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1263,6 +1286,7 @@ christian = {
 		intermarry = exovedate
 
 		character_modifier = {
+			diplomacy = 2
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1284,6 +1308,7 @@ christian = {
 		can_grant_divorce = no
 		priests_can_inherit = no
 		priests_can_marry = yes
+		hard_to_convert = yes
 
 		religious_clothing_head = 0
 		religious_clothing_priest = 2
@@ -1311,6 +1336,7 @@ christian = {
 		intermarry = exovedate
 
 		character_modifier = {
+			martial = 1
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1373,6 +1399,8 @@ christian = {
 		intermarry = exovedate
 
 		character_modifier = {
+			diplomacy = 1
+			stewardship = 1
 			cult_of_saints_opinion = 5
 			apostolic_opinion = 5
 			thelemic_opinion = -15
@@ -1437,6 +1465,7 @@ christian = {
 		intermarry = exovedate
 
 		character_modifier = {
+			monthly_character_piety = 0.5
 			cult_of_saints_opinion = 5
 			apostolic_opinion = 5
 			thelemic_opinion = -15
@@ -1557,6 +1586,7 @@ christian = {
 		intermarry = exovedate
 
 		character_modifier = {
+			same_religion_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
@@ -1657,7 +1687,7 @@ christian = {
 		can_retire_to_monastery = no
 		priests_can_inherit = yes
 		female_temple_holders = no
-		feminist = no      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		feminist = no      # Nullifies the negative opinion character_modifier that vassals normally get if ruler is female or has female heir
 		allow_rivermovement = yes
 		priests_can_marry = yes
 		allow_looting = yes
@@ -1694,6 +1724,7 @@ christian = {
 		intermarry = raven_tales_reformed
 
 		character_modifier = {
+			intrigue = 1
 			american_native_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
@@ -1757,11 +1788,13 @@ cult_of_saints= {
 		intermarry = neomayan
 		intermarry = sol_invicta
 		intermarry = uahomche
+		intermarry = uahomche_reformed
 		intermarry = apostolic
 		intermarry = falling_star
 		intermarry = moravian
 
 		character_modifier = {
+			stewardship = 1
 			falling_star_opinion = 5
 			moravian_opinion = 5
 			apostolic_opinion = 5
@@ -1804,11 +1837,13 @@ cult_of_saints= {
 		intermarry = neomayan
 		intermarry = sol_invicta
 		intermarry = uahomche
+		intermarry = uahomche_reformed
 		intermarry = apostolic
 		intermarry = falling_star
 		intermarry = moravian
 
 		character_modifier = {
+			stewardship = 1
 			falling_star_opinion = 5
 			moravian_opinion = 5
 			apostolic_opinion = 5
@@ -1975,6 +2010,8 @@ pacific = {
 		intermarry = neognostic
 
 		character_modifier = {
+			stewardship = 1
+			learning = 1
 			opinion_of_hidden_male_trait = -5
 			opinion_of_homosexual = 5
 		}
@@ -2030,6 +2067,7 @@ pacific = {
 		intermarry = neognostic
 
 		character_modifier = {
+			martial = 1
 			opinion_of_hidden_male_trait = -15
 			opinion_of_enuch = 10
 			opinion_of_homosexual = 5
@@ -2075,6 +2113,10 @@ pacific = {
 		intermarry = gaian
 		intermarry = cetic
 		intermarry = nousthreskeia
+
+		character_modifier = {
+			martial = 2
+		}
 	}
 	
 	nousthreskeia = {
@@ -2116,6 +2158,11 @@ pacific = {
 		intermarry = gaian
 		intermarry = cetic
 		intermarry = shinto
+
+		character_modifier = {
+			martial = 1
+			learning = 1
+		}
 	}
 }
 
@@ -2280,7 +2327,7 @@ latter_day_saints = {
 		investiture = yes
 		priests_can_marry = yes
 		female_temple_holders = yes
-		feminist = yes      # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		feminist = yes      # Nullifies the negative opinion character_modifier that vassals normally get if ruler is female or has female heir
 		allows_matrilineal_marriage = yes
 		allow_rivermovement = yes
 		max_wives = 4
@@ -2375,9 +2422,15 @@ mesoamerican_gods = {
 		intermarry = mictlantec
 		intermarry = neomayan
 		intermarry = uahomche
+		intermarry = uahomche_reformed
 		
 		intermarry = sacred_heart
 		intermarry = falling_star
+
+		character_modifier = {
+			martial = 1
+			intrigue = 1
+		}
 	}
 	
 	mictlantec = {
@@ -2419,11 +2472,62 @@ mesoamerican_gods = {
 		intermarry = sol_invicta
 		intermarry = neomayan
 		intermarry = uahomche
+		intermarry = uahomche_reformed
 		
 		intermarry = sacred_heart
 		intermarry = falling_star
+
+		character_modifier = {
+			martial = 2
+		}
 	}
 	
+	uahomche_reformed = {
+		graphical_culture = mesoamericangfx
+		
+		secondary_event_pictures = mesoamerican
+		#saint/god traits: Votan, Cruzob, Yaxche, Hero Twins
+		icon = 37
+		heresy_icon = 37
+		
+		color = { 0.2 0.5 0.2 }
+		
+		high_god_name = GOD_AJAW_NAHUAL
+		
+		god_names = {
+			GOD_JESUCRISTO_NAHUAL GOD_KUKULKAN GOD_IXMUCANE GOD_MAXIMON
+		}
+		
+		evil_god_names = {
+			GOD_XIBALBA GOD_KABRAKAN
+		}
+
+		can_grant_divorce = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
+		female_temple_holders = yes
+		allow_rivermovement = yes
+		allow_looting = yes
+		dislike_tribal_organization = no
+		#can_demand_religious_conversion = no
+		
+		crusade_name = CRUSADE
+		scripture_name = THE_POPOL_VUH
+		priest_title = PRIEST
+		
+		religious_clothing_head = 13
+		religious_clothing_priest = 13
+		
+		intermarry = mictlantec
+		intermarry = neomayan
+		intermarry = sol_invicta
+		
+		intermarry = sacred_heart
+		intermarry = falling_star
+
+		intermarry = uahomche
+	}
+
 	uahomche = {
 		graphical_culture = mesoamericangfx
 		
@@ -2453,6 +2557,7 @@ mesoamerican_gods = {
 		defensive_attrition = yes
 		dislike_tribal_organization = no
 		can_demand_religious_conversion = no
+		reformed = uahomche_reformed
 		
 		unit_modifier = {		
 			garrison_size = 0.10
@@ -2490,6 +2595,8 @@ mesoamerican_gods = {
 		
 		intermarry = sacred_heart
 		intermarry = falling_star
+
+		intermarry = uahomche_reformed
 	}
 	
 	neomayan = {
@@ -2533,9 +2640,15 @@ mesoamerican_gods = {
 		intermarry = mictlantec
 		intermarry = sol_invicta
 		intermarry = uahomche
+		intermarry = uahomche_reformed
 		
 		intermarry = sacred_heart
 		intermarry = falling_star
+
+		character_modifier = {
+			martial = 1
+			learning = 1
+		}
 	}
 }
 
@@ -3046,6 +3159,11 @@ oldworld = {
 		intermarry = atomicist
 		intermarry = rust_cultist
 		intermarry = chrome_cultist
+
+		character_modifier = {
+			learning = 1
+			monthly_character_piety = 0.25
+		}
 	}
 	
 	rust_cultist = { # now in the OWC group!!
@@ -3140,6 +3258,11 @@ oldworld = {
 		intermarry = atomicist
 		intermarry = aphite
 		intermarry = rust_cultist
+
+		character_modifier = {
+			intrigue = 1
+			learning = 1
+		}
 	}
 }
 
@@ -3722,6 +3845,10 @@ pirate = {
 			archers_defensive = 0.8
 			key = "DEF_RELIGION_HOME_TERRITORY"
 		}
+
+		character_modifier = {
+			martial = 1
+		}
 		
 		religious_clothing_head = 17
 		religious_clothing_priest = 17
@@ -3780,6 +3907,7 @@ jewish_group = {
 		allow_rivermovement = yes
 		priests_can_marry = yes
 		priests_can_inherit = yes
+		hard_to_convert = yes
 		
 		religious_clothing_head = 7
 		religious_clothing_priest = 7
@@ -3788,6 +3916,10 @@ jewish_group = {
 		
 		intermarry = reform
 		intermarry = meshichist
+
+		character_modifier = {
+			stewardship = 2
+		}
 	}
 	reform = {
 		graphical_culture = jewishgfx
@@ -3819,6 +3951,10 @@ jewish_group = {
 		
 		intermarry = jewish
 		intermarry = meshichist
+
+		character_modifier = {
+			stewardship = 2
+		}
 	}
 	meshichist = {
 		graphical_culture = jewishgfx
@@ -3843,6 +3979,7 @@ jewish_group = {
 		allow_rivermovement = yes
 		priests_can_marry = yes
 		priests_can_inherit = yes
+		hard_to_convert = yes
 
 		religious_clothing_head = 7
 		religious_clothing_priest = 7
@@ -3851,6 +3988,10 @@ jewish_group = {
 		
 		intermarry = jewish
 		intermarry = reform
+
+		character_modifier = {
+			stewardship = 2
+		}
 	}
 }
 
@@ -3912,5 +4053,10 @@ indian_group = {
 		intermarry = espiritista
 		intermarry = espiritista_reformed
 		intermarry = candomble
+
+		character_modifier = {
+			learning = 1
+			monthly_character_piety = 0.25
+		}
 	}
 }

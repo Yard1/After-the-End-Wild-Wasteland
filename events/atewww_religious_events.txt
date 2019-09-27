@@ -1983,7 +1983,7 @@ character_event = {
 	option = {
 		add_trait = lutheran
 		ai_chance = {
-			factor = 1
+			factor = 1.1
 			modifier = {
 				factor = 2
 				trait = mystic
@@ -2025,7 +2025,7 @@ character_event = {
 	option = {
 		add_trait = baptist
 		ai_chance = {
-			factor = 1
+			factor = 1.1
 			modifier = {
 				factor = 2
 				trait = gregarious
@@ -2037,6 +2037,14 @@ character_event = {
 			modifier = {
 				factor = 2
 				trait = honest
+			}
+			modifier = {
+				factor = 0.5
+				trait = deceitful
+			}
+			modifier = {
+				factor = 0.5
+				trait = wroth
 			}
 			modifier = {
 				factor = 0
@@ -2085,6 +2093,14 @@ character_event = {
 				trait = proud
 			}
 			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 0.5
+				trait = trusting
+			}
+			modifier = {
 				factor = 4
 				trait = crusader
 			}
@@ -2119,15 +2135,78 @@ character_event = {
 	religion = evangelical
 	only_men = yes
 	trigger = {
-		trait = methodist
 		has_landed_title = k_evangelical
 	}
 
 	immediate = {
-		religion_authority = {
-			modifier = methodist_in_charge
-			years = 1
+		if = {
+			limit = {
+				trait = methodist 
+				evangelical = {
+					OR = {
+						NOT = { has_flag = evangelical_methodist_applied }
+						had_flag = { flag = evangelical_methodist_applied days = 364 }
+					}
+				}
+			}
+			evangelical = {
+				clr_flag = evangelical_methodist_applied
+				set_flag = evangelical_methodist_applied
+			}
+			religion_authority = {
+				modifier = methodist_in_charge
+				years = 1
+			}
 		}
 		character_event = { id = ATE_WWW_RELIGION.37 days = 365 }
+	}
+}
+
+province_event = {
+	id = ATE_WWW_RELIGION.38
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			AND = {
+				religion_scope = { is_pacifist_religion = yes }
+				NOT = { has_province_modifier = pacifist_religion }
+			}
+			AND = {
+				religion_scope = { is_pacifist_religion = no }
+				has_province_modifier = pacifist_religion
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				religion_scope = { is_pacifist_religion = yes }
+				NOT = { has_province_modifier = pacifist_religion }
+			}
+			log = "Set province [This.GetName] as pacifist"
+			add_province_modifier = { name = pacifist_religion duration = -1 }
+		}
+		else = {
+			log = "Remove province [This.GetName] as pacifist"
+			remove_province_modifier = pacifist_religion
+		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.39
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		controls_religion = yes
+		religion = catholic # only for the Pope
+	}
+
+	immediate = {
+		any_province = {
+			province_event = { id = ATE_WWW_RELIGION.38 }
+		}
 	}
 }

@@ -4647,6 +4647,7 @@
 				trait = augustus # Laurels
 				trait = dead_crown_judah
 				trait = dead_crown_espiritista_fylkir
+				trait = dead_crown_uahomche_fylkir
 				trait = dead_scepter_midewiwin_fylkir
 			}
 		}
@@ -4822,6 +4823,7 @@
 				trait = augustus # Laurels
 				trait = dead_crown_judah
 				trait = dead_crown_espiritista_fylkir
+				trait = dead_crown_uahomche_fylkir
 				trait = dead_scepter_midewiwin_fylkir
 			}
 		}

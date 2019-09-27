@@ -18,6 +18,12 @@ spriteTypes = {
 		norefcount = yes
 	}
 	spriteType = {
+		name = "GFX_secretly_uahomche_reformed"
+		texturefile = "gfx\\traits\\secret_religion_uahomche.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	spriteType = {
 		name = "GFX_trait_inaug_by_sjudge"
 		texturefile = "gfx/traits/inaug_by_sjudge.dds"
 		noOfFrames = 1

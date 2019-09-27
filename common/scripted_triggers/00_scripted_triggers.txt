@@ -1969,6 +1969,9 @@ true_religion_espiritista_trigger = {
 true_religion_espiritista_reformed_trigger = {
 	true_religion = espiritista_reformed
 }
+true_religion_uahomche_reformed_trigger = {
+	true_religion = uahomche_reformed
+}
 true_religion_peyotist_trigger = {
 	true_religion = peyotist
 }
@@ -3135,6 +3138,10 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_espiritista_reformed }
 		}
 		AND = {
+			society_member_of = secret_religious_society_uahomche
+			PREV = { interested_in_society = secret_religious_society_uahomche }
+		}
+		AND = {
 			society_member_of = secret_religious_society_peyotist
 			PREV = { interested_in_society = secret_religious_society_peyotist }
 		}
@@ -3451,6 +3458,12 @@ has_any_char_old_religion = {
 			has_character_flag = character_was_espiritista_reformed
 	    	any_character = {
 	    		religion = espiritista_reformed
+	    	}
+	    }
+		AND = {
+			has_character_flag = character_was_uahomche_reformed
+	    	any_character = {
+	    		religion = uahomche_reformed
 	    	}
 	    }
 		AND = {
@@ -4099,6 +4112,13 @@ looting_artifact_event_religious_artifacts_trigger = {
 				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = candomble
 				ROOT = { religion = candomble }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = uahomche
+				ROOT = { religion = uahomche }
 			}
 		}
 		NAND = {
@@ -9072,6 +9092,18 @@ religion_openly_espiritista_or_reformed_trigger = {
 			OR = {
 				religion = espiritista
 				religion = espiritista_reformed
+			}
+		}
+	}
+}
+
+religion_openly_uahomche_or_reformed_trigger = {
+	custom_tooltip = {
+		text = religion_openly_uahomche_or_reformed_tooltip
+		hidden_trigger = {
+			OR = {
+				religion = uahomche
+				religion = uahomche_reformed
 			}
 		}
 	}

@@ -492,6 +492,10 @@ obj_build_a_war_chest = {
 		}
 		modifier = {
 			factor = 0.5
+			pacifist = yes
+		}
+		modifier = {
+			factor = 0.5
 			tier = count
 			independent = no
 		}

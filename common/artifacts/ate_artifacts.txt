@@ -2187,7 +2187,25 @@ crown_thelemic_fylkir = {
 		always = no
 	}
 }
-
+crown_uahomche_fylkir = { 
+	monthly_character_prestige = 0.4
+	monthly_character_piety = 0.7
+	stewardship = 2
+	intrigue = 2
+	tribal_opinion = 10
+	quality = 4
+	active = { 
+		has_landed_title = d_uahomche_reformed
+	}
+	flags = { religious unique crown jewelry crown_jewel }
+	stacking = no
+	picture = "GFX_crown_aztec_fylkir"
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
 #Raven Tales totems#
 carved_totem_raven_tales_1 = { #Mid tier Totem - Trickster
 	monthly_character_prestige = 0.15

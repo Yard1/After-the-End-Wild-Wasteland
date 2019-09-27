@@ -21464,6 +21464,24 @@ character_event = {
 				character_event = { id = ATE_WWW_RELIGION.28 }
 				character_event = { id = ATE_WWW_RELIGION.36 }
 
+				if = {
+					limit = {
+						is_adult = yes
+						NOR = { #still use existing branch traits
+							religion = occultist
+							religion = occultist_reformed
+						}
+						NOT = { trait = pagan_branch_1 }
+						NOT = { trait = pagan_branch_2 }
+						NOT = { trait = pagan_branch_3 }
+						NOT = { trait = pagan_branch_4 }
+						NOT = { has_character_flag = flag_picking_branch }
+						can_have_pagan_religion_interpretation = yes
+						ai = yes
+					}
+					character_event = { id = HF.23016 }
+				}
+
 				set_character_flag = historical_character
 			}
 

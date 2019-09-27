@@ -977,6 +977,7 @@ decisions = {
 			OR = {
 				religion = neomayan
 				religion = uahomche
+				religion = uahomche_reformed
 			}
 			is_playable = yes
 			NOT = {
