@@ -42,6 +42,12 @@ k_alabama_adj;Alabamian;;;;;;;;;;;;;x
 k_alabama;Alabama;;;;;;;;;;;;;x
 d_groening;Schwieethorchen;;;;;;;;;;;;;x
 d_groening_adj;Schwieethorchen;;;;;;;;;;;;;x
+d_sable_island;Sable;;;;;;;;;;;;;x
+d_sable_island_adj;Sable;;;;;;;;;;;;;x
+c_sable;Sable Island;;;;;;;;;;;;;x
+c_sable_adj;Sable;;;;;;;;;;;;;x
+b_sable;Sable;;;;;;;;;;;;;x
+b_sable_adj;Sable;;;;;;;;;;;;;x
 
 EVTDESC_ATE_WWW_TITLE_2;Due to [Root.GetBestName]'s culture, the Kingdom of Dixieland has proven to be simply ungovernable. Therefore, it has been split into Alabama and Georgia - the old kingdoms that have held the land before the Collapse.;;;;;;;;;;;;;x
 EVTOPTA_ATE_WWW_TITLE_2;Damn it!;;;;;;;;;;;;;x

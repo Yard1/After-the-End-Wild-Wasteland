@@ -130,7 +130,7 @@ k_voodoo = {
 }
 
 d_uahomche_reformed = {
-	color={ 60 120 100 }
+	color={ 102 128 0 }
 	color2={ 220 220 0 }
 	
 	capital = 3237 # Caracas

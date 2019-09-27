@@ -1559,6 +1559,26 @@ e_canada = {
 				b_grosse_ile_QC = {}
 			}
 		}
+
+		d_sable_island = {
+			color = { 244 164 96 }
+			color2= { 255 255 20 }
+			capital = 610
+
+			c_sable = {
+				color = { 194 178 128 }
+				color2= { 255 255 20 }
+
+				quebecois = "Île de Sable"
+				cajun = "Île de Sable"
+				acadien = "Île de Sable"
+				haitian = "Île de Sable"
+				creole = "Île de Sable"
+				horse = "Stable Island"
+				
+				b_sable = {}
+			}
+		}
 		
 		d_prince_edward_island = {
 			color = { 34 177 76 }

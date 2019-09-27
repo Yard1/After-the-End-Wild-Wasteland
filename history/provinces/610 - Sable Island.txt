@@ -1,0 +1,12 @@
+# 610 Sable Island
+
+# County Title
+title = c_sable
+
+# Settlements
+max_settlements = 1
+b_sable = castle
+
+# Misc
+culture = acadien
+religion = brethren

@@ -2026,6 +2026,7 @@ obj_buddhist_reject_empty_pleasures = {
 	type = character
 	
 	potential = {
+		NOT = { religion = amazonian }
 		OR = {
 			religion_group = pacific
 			religion = neognostic
@@ -2130,6 +2131,7 @@ obj_buddhist_reject_cruelty = {
 	type = character
 	
 	potential = {
+		NOT = { religion = amazonian }
 		OR = {
 			religion_group = pacific
 			religion = neognostic
@@ -2238,6 +2240,7 @@ obj_buddhist_reject_greed = {
 	type = character
 	
 	potential = {
+		NOT = { religion = amazonian }
 		OR = {
 			religion_group = pacific
 			religion = neognostic
@@ -2290,6 +2293,7 @@ obj_buddhist_reject_envy = {
 	type = character
 	
 	potential = {
+		NOT = { religion = amazonian }
 		OR = {
 			religion_group = pacific
 			religion = neognostic
@@ -2343,6 +2347,7 @@ obj_buddhist_reject_hate = {
 	type = character
 	
 	potential = {
+		NOT = { religion = amazonian }
 		OR = {
 			religion_group = pacific
 			religion = neognostic
@@ -2395,6 +2400,7 @@ obj_buddhist_reject_pride = {
 	type = character
 	
 	potential = {
+		NOT = { religion = amazonian }
 		OR = {
 			religion_group = pacific
 			religion = neognostic
@@ -2749,7 +2755,7 @@ obj_see_the_realm_prosper = {
 			has_focus = focus_rulership
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.66
 			pacifist = yes
 		}
 		modifier = {

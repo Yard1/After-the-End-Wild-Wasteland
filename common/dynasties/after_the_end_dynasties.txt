@@ -10410,3 +10410,5 @@
 6666168 = { name="Konantz" culture=canadian }
 6666169 = { name="Caouette" culture=canadian }
 6666170 = { name="de La Vérendrye" culture=canadian }
+
+6666171 = { name ="de Sable" culture=acadien }

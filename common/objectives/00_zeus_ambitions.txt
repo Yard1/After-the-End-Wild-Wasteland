@@ -400,6 +400,10 @@ obj_build_a_war_chest = {
 	}
 	
 	allow = {
+		OR = {
+			pacifist = no
+			trait = pagan_branch_3
+		}
 		is_adult = yes
 		is_ruler = yes
 		war = no
@@ -491,7 +495,7 @@ obj_build_a_war_chest = {
 			government = theocracy_government
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			pacifist = yes
 		}
 		modifier = {

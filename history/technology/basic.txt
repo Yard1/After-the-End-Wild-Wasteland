@@ -306,6 +306,7 @@ technology = {
 		d_piedmont
 		d_tidewater
 		d_madeleine_islands
+		d_sable_island
 		d_bermuda
 	}
 

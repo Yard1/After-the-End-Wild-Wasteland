@@ -1024,3 +1024,21 @@
 		}
     }
 }
+
+1670005 = {
+	name = "Thomas"
+	dynasty = 6666171 #Breeze
+	culture = acadien
+	religion = brethren
+	martial = 5
+	diplomacy = 1
+	stewardship = 7
+	intrigue = 7
+	learning = 8
+	2639.11.7 = {
+	    birth = yes
+		effect = { 
+		    set_character_flag = historical_character 
+		}
+	}
+}
