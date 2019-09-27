@@ -2936,7 +2936,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				FROM = { religion_group = pacific }
-				trait = sympathy_pacific
+				OR = {
+					trait = sympathy_pacific
+					trait = sympathy_pacific_neognostic
+				}
 			}
 			modifier = {
 				factor = 0
@@ -3260,7 +3263,10 @@ character_event = {
 			modifier = {
 				factor = 3
 				FROM = { religion_group = pacific }
-				trait = sympathy_pacific
+				OR = {
+					trait = sympathy_pacific
+					trait = sympathy_pacific_neognostic
+				}
 			}
 			modifier = {
 				factor = 3
@@ -4677,6 +4683,7 @@ character_event = {
 		if = {
 			limit = {
 				religion_group = pacific
+				NOT = { trait = sympathy_pacific_neognostic }
 			}
 			add_trait = sympathy_pacific
 		}

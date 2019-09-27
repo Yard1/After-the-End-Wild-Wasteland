@@ -366,6 +366,7 @@ character_event = {
 		}
 		trigger = {
 			NOT = { religion_group = pacific } #Random World safety check.
+			NOT = { trait = sympathy_pacific_neognostic }
 		}
 		add_trait = sympathy_pacific
 		clr_character_flag = flag_picking_sympathy

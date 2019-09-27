@@ -1766,7 +1766,7 @@ byzantine_elective = {
 					FROM = { religion_group = latter_day_saints } 
 				} 
 				AND = {  
-					trait = sympathy_pacific
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
 					FROM = { religion_group = pacific } 
 				} 
 				AND = {  
@@ -4217,7 +4217,6 @@ byzantine_elective = {
 			NOT = { has_religion_feature = religion_feature_espiritista }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
-			pacifist = yes
 			OR = { 
 				trait = zealous
 				has_religion_feature = religion_dogmatic
@@ -5490,7 +5489,7 @@ hre_feudal_elective = {
 					FROM = { religion_group = latter_day_saints } 
 				} 
 				AND = {  
-					trait = sympathy_pacific
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
 					FROM = { religion_group = pacific } 
 				} 
 				AND = {  
@@ -7688,7 +7687,6 @@ hre_feudal_elective = {
 			NOT = { has_religion_feature = religion_feature_espiritista }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
-			pacifist = yes
 			OR = { 
 				trait = zealous
 				has_religion_feature = religion_dogmatic

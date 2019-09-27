@@ -5,6 +5,7 @@ on_yearly_pulse = {
 		ATE_WWW_RELIGION.28
 		ATE_WWW_RELIGION.30
 		ATE_WWW_RELIGION.36
+		ATE_WWW_RELIGION.40
 	}
 }
 
@@ -15,6 +16,7 @@ on_startup = {
 		ATE_WWW_DEBUG.6
 		ATE_WWW_RELIGION.28
 		ATE_WWW_RELIGION.39
+		ATE_WWW_RELIGION.40
 	}
 }
 
@@ -31,6 +33,7 @@ on_host_change = {
 		ATE_WWW_RELIGION.28
 		ATE_WWW_RELIGION.36
 		HF.23016
+		ATE_WWW_RELIGION.40
 	}
 }
 
@@ -59,6 +62,7 @@ on_character_convert_religion = {
 
 		ATE_WWW_RELIGION.30
 		ATE_WWW_RELIGION.36
+		ATE_WWW_RELIGION.40
 	}
 }
 
@@ -118,6 +122,7 @@ on_birth = {
 	events = {
 		misc.41
 		ATE_WWW_RELIGION.28
+		ATE_WWW_RELIGION.40
 	}
 }
 
@@ -132,6 +137,7 @@ on_create_title = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder = {
 	events = {
+		misc.40
 		ATE_WWWW_AIRMEN.1
 		ATE_WWW_RELIGION.16
 		ATE_WWW_RELIGION.11
@@ -147,6 +153,7 @@ on_new_holder = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder_inheritance = {
 	events = {
+		misc.40
 		ATE_WWWW_AIRMEN.3
 		ATE_WWW_RELIGION.11
 		ATE_WWW_RELIGION.9
@@ -160,6 +167,7 @@ on_new_holder_inheritance = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder_usurpation = {
 	events = {
+		misc.40
 		ATE_WWWW_AIRMEN.1
 		ATE_WWW_RELIGION.11
 		ATE_WWW_RELIGION.9

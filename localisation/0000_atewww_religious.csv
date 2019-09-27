@@ -704,3 +704,5 @@ REL_PACIFIST_DESC;Much lower chance of provincial revolts\n§Y*§! Large bonuses t
 pagan_branch_decision;Determine Religion Branch;Déterminer la branche païenne;Heidenzweig bestimmten;;Decide rama pagana;;;;;;;;;x
 change_pagan_branch_decision;Change Religion Branch;Changer la branche païenne;Heidenzweig wechseln;;Cambio de rama pagana;;;;;;;;;x
 pacifist_realm_prospering;A Realm Prospers;Déterminer la branche païenne;Heidenzweig bestimmten;;Decide rama pagana;;;;;;;;;x
+
+neognostic_FEATURES;§Y*§! Are considered a Catholic heresy owing to their agreement with the Catholic understanding of God and the Saints, while dismissing the teachings of most Cetic Gurus.\n§Y*§! Tolerate, and are tolerated by §YPacific§! religions\n§Y*§! May have ambitions to remove vices.;;;;;;;;;;;;;x

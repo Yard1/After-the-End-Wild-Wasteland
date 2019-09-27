@@ -1252,8 +1252,9 @@ character_event = {
 	        				event_target:current_location = {
 	        					religion_group = pacific
 	        				}
-	        				NOT = {
+	        				NOR = {
 	        					trait = sympathy_pacific
+								trait = sympathy_pacific_neognostic
 	        				}
 	        			}
 						AND = {
@@ -1395,6 +1396,7 @@ character_event = {
 								}
 								NOT = {
 									trait = sympathy_pacific
+									trait = sympathy_pacific_neognostic
 								}
 							}
 							AND = {
@@ -1510,8 +1512,9 @@ character_event = {
         				event_target:current_location = {
         					religion_group = pacific
         				}
-        				NOT = {
+        				NOR = {
         					trait = sympathy_pacific
+							trait = sympathy_pacific_neognostic
         				}
         			}
         			add_trait = sympathy_pacific
@@ -2539,8 +2542,9 @@ character_event = {
     				event_target:current_location = {
     					religion_group = pacific
     				}
-    				NOT = {
+    				NOR = {
     					trait = sympathy_pacific
+						trait = sympathy_pacific_neognostic
     				}
     			}
     			add_trait = sympathy_pacific

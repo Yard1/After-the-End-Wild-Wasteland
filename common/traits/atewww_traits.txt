@@ -286,3 +286,16 @@ methodist = {
 
 	ai_zeal = 5
 }
+
+sympathy_pacific_neognostic = {
+	potential = {
+		religion = neognostic
+	}
+
+	tolerates_pacific = yes		# Tolerates and is tolerated by Pacific
+	
+	customizer = no
+	random = no
+	hidden = yes
+	religious = yes
+}

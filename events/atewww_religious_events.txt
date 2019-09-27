@@ -2210,3 +2210,18 @@ character_event = {
 		}
 	}
 }
+
+character_event = {
+	id = ATE_WWW_RELIGION.40
+	hide_window = yes
+	is_triggered_only = yes
+	religion = neognostic
+	trigger = {
+		NOT = {
+			trait = sympathy_pacific_neognostic
+		}
+	}
+	immediate = {
+		add_trait = sympathy_pacific_neognostic
+	}
+}

@@ -727,7 +727,7 @@ feudal_elective = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					trait = sympathy_pacific
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  
@@ -3180,10 +3180,6 @@ feudal_elective = {
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			OR = { 
-				religion = anabaptist
-				pacifist = yes
-			}
-			OR = { 
 				trait = zealous
 				has_religion_feature = religion_dogmatic
 			}
@@ -4354,7 +4350,7 @@ tanistry = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					trait = sympathy_pacific
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  
@@ -6693,10 +6689,6 @@ tanistry = {
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			OR = { 
-				religion = anabaptist
-				pacifist = yes
-			}
-			OR = { 
 				trait = zealous
 				has_religion_feature = religion_dogmatic
 			}
@@ -7795,7 +7787,7 @@ elective_gavelkind = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					trait = sympathy_pacific
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  
@@ -10180,10 +10172,6 @@ elective_gavelkind = {
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			OR = { 
-				religion = anabaptist
-				pacifist = yes
-			}
-			OR = { 
 				trait = zealous
 				has_religion_feature = religion_dogmatic
 			}
@@ -11721,7 +11709,7 @@ eldership_rules = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					trait = sympathy_pacific
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  
@@ -11829,7 +11817,7 @@ eldership_rules = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					trait = sympathy_pacific
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  
@@ -14614,10 +14602,6 @@ eldership_rules = {
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			OR = { 
-				religion = anabaptist
-				pacifist = yes
-			}
-			OR = { 
 				trait = zealous
 				has_religion_feature = religion_dogmatic
 			}
@@ -15374,7 +15358,7 @@ eldership_rules = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					trait = sympathy_pacific
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  
@@ -17690,10 +17674,6 @@ eldership_rules = {
 			NOT = { has_religion_feature = religion_feature_espiritista }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
-			OR = { 
-				religion = anabaptist
-				pacifist = yes
-			}
 			OR = { 
 				trait = zealous
 				has_religion_feature = religion_dogmatic

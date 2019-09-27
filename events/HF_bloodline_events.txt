@@ -408,6 +408,7 @@ character_event = { # Sympathy for founder group
 							NOR = {
 								religion_group = pacific
 								trait = sympathy_pacific
+								trait = sympathy_pacific_neognostic
 							}
 						}
 					}
@@ -530,6 +531,7 @@ character_event = { # Sympathy for founder group
 								NOR = {
 									religion_group = pacific
 									trait = sympathy_pacific
+									trait = sympathy_pacific_neognostic
 								}
 							}
 						}

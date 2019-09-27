@@ -280,7 +280,7 @@ constitutional_elective = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					trait = sympathy_pacific
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  
@@ -5427,13 +5427,6 @@ popular_elective = {
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { religion_group = indian_group }
 			NOT = { religion = bon }
-			OR = { 
-				AND = { 
-					NOT = { has_dlc = "Holy Fury"}
-					religion = bon_reformed
-				}
-				pacifist = yes
-			}
 			OR = { 
 				trait = zealous
 				has_religion_feature = religion_dogmatic

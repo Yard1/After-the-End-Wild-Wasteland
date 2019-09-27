@@ -3820,6 +3820,10 @@ character_event = {
 					}
 					modifier = {
 						factor = 0
+						trait = sympathy_pacific_neognostic
+					}
+					modifier = {
+						factor = 0
 						NOR = {
 							educator = { religion_group = pacific }
 							location = { religion_group = pacific } 

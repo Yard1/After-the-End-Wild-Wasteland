@@ -21282,7 +21282,16 @@ character_event = {
 	hide_window = yes
 
 	trigger = {
-		FROM = { character = no }
+		OR = {
+			FROM = { character = no }
+			AND = {
+				ai = yes
+				NOT = { father_even_if_dead = { always = yes } }
+				NOT = { mother_even_if_dead = { always = yes } }
+				NOT = { spouse_even_if_dead = { always = yes } }
+				NOT = { any_child = { always = yes } }
+			}
+		}
 	}
 	
 	option = {

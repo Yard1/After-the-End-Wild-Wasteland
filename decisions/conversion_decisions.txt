@@ -585,7 +585,7 @@ targetted_decisions = {
 			if = {
 				limit = {
 					religion_group = pacific
-					NOT = { trait = sympathy_pacific }
+					NOT = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
 					capital_scope = {
 						NOT = { religion_group = ROOT }
 					}

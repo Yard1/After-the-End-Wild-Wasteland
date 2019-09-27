@@ -1909,10 +1909,6 @@ pacific = {
 		intermarry = shinto
 		intermarry = nousthreskeia
 		intermarry = neognostic
-
-		character_modifier = {
-			neognostic_opinion = 5
-		}
 	}
 	
 	neutic = {
@@ -1940,7 +1936,6 @@ pacific = {
 		
 		character_modifier = {
 			learning = 2
-			neognostic_opinion = 5
 		}
 		allow_rivermovement = yes
 		can_retire_to_monastery = yes

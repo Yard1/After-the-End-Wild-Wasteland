@@ -520,6 +520,7 @@ sympathy_pacific = {
 	
 	potential = {
 		NOT = { religion_group = pacific }
+		NOT = { religion = neognostic }
 	}
 
 	tolerates_pacific = yes		# Tolerates and is tolerated by Pacific

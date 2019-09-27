@@ -2934,7 +2934,7 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			PREV = { true_religion_group_cult_of_saints_trigger = yes }
 		}
 		AND = {
-			trait = sympathy_pacific
+			OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
 			PREV = { true_religion_group_pacific_trigger = yes }
 		}
 		AND = {
@@ -2987,7 +2987,7 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			ROOT = { true_religion_group_cult_of_saints_trigger = yes }
 		}
 		AND = {
-			trait = sympathy_pacific
+			OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
 			ROOT = { true_religion_group_pacific_trigger = yes }
 		}
 		AND = {
@@ -3058,7 +3058,7 @@ ok_sr_sympathy_mission_target_trigger = {
 			}
 			AND = {
 				true_religion_group = pacific
-				PREV = { trait = sympathy_pacific }
+				PREV = { OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic } }
 			}
 			AND = {
 				true_religion_group = latter_day_saints

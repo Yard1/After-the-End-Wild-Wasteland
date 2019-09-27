@@ -997,6 +997,10 @@ decisions = {
 								factor = 0
 								religion = exovedate
 							}
+							modifier = {
+								factor = 0
+								religion = neognostic
+							}
 							modifier = { # Prioritize getting a sympathy trait that is useful
 								factor = 100
 								OR = {
