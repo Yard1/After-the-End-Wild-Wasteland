@@ -17,6 +17,9 @@ uahomche_reformed_DESC;Uahomche blends aspects of both Christianity and the trad
 d_uahomche_reformed_adj;Uahomche;;;;;;;;;;;;;x
 d_uahomche_reformed;Sovereign Altar;;;;;;;;;;;;;x
 
+JAGUAR;Chilaaj Balam;;;;;;;;;;;;;x
+JAGUAR_FOA;Your Excellency;;;;;;;;;;;;;x
+
 uahomche_reformed_opinion;[uahomche_reformed.GetName] Opinion;;;;;;;;;;;;;x
 religion_openly_uahomche_or_reformed_trigger;Publicly follows the §Y[uahomche_reformed.GetName]§! religion;;;;;;;;;;;;;x
 
