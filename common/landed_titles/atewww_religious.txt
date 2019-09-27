@@ -135,9 +135,9 @@ d_uahomche_reformed = {
 	
 	capital = 3237 # Caracas
 	
-	title = "POTENCIA"
-	title_female = "POTENCIA"
-	foa = "POTENCIA_FOA"
+	title = "JAGUAR"
+	title_female = "JAGUAR"
+	foa = "JAGUAR_FOA"
 	
 	creation_requires_capital = no
 	
