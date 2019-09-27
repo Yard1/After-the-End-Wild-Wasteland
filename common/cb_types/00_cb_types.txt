@@ -10343,6 +10343,12 @@ pagan_subjugation = {
 					}
 					is_tribal = yes
 				}
+				AND = {
+					OR = {
+						religion = uahomche
+					}
+					is_tribal = yes
+				}
 			}
 			NOT = { same_realm = FROM }
 			NOT = { is_liege_or_above = FROM }
@@ -10423,6 +10429,28 @@ pagan_subjugation = {
 							religion = midewiwin
 							religion = raven_tales
 						}
+						is_tribal = yes
+					}
+					NOT = {
+						any_war = {
+							defender = { character = PREVPREV }
+							OR = {
+								using_cb = pagan_subjugation
+								using_cb = nomad_subjugation
+							}
+						}
+					}
+				}
+			}
+			AND = {
+				ROOT = {
+					religion = uahomche
+				}
+				FROM = {
+					in_revolt = no
+					is_nomadic = no
+					AND = {
+						religion = uahomche
 						is_tribal = yes
 					}
 					NOT = {
@@ -12005,6 +12033,7 @@ pagan_county_conquest = {
 						}
 						religion = brethren
 						religion = espiritista
+						religion = uahomche
 						AND = {
 							religion = espiritista_reformed
 							has_religion_feature = religion_seafaring
