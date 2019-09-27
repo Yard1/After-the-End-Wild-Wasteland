@@ -2755,7 +2755,7 @@ obj_see_the_realm_prosper = {
 			has_focus = focus_rulership
 		}
 		modifier = {
-			factor = 1.66
+			factor = 1.5
 			pacifist = yes
 		}
 		modifier = {
