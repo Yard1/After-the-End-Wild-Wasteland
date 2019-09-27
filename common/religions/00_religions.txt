@@ -691,8 +691,6 @@ christian = {
 
 		character_modifier = {
 			learning = 1
-			cetic_opinion = 5
-			neutic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
 		}
