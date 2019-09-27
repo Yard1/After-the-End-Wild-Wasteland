@@ -51,8 +51,9 @@ deciding_upon_saint_effect = {
 					event_target:saint_person = {
                         OR = {
 							religion_group = catholic
+							NOT = { religion = evangelical }
+							evangelical_can_have_saints = yes
 							NOR = {
-								religion = evangelical
 								religion = antinomian
 								religion = charismatic
 								religion = postadventist

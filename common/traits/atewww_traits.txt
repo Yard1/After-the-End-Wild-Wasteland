@@ -233,3 +233,56 @@ chrome_cultist_sacrifice = {
 	female_compliment_adj = COMPL_RIGHTEOUS
 	child_compliment_adj = COMPL_GOOD
 }
+
+lutheran = {
+	opposites = {
+		baptist
+		methodist
+	}
+	potential = {
+		religion = evangelical
+		is_priest = yes
+	}
+	religious = yes
+	learning = 1
+	same_opinion = 5
+	opposite_opinion = -5
+	random = no
+	customizer = no
+}
+
+baptist = {
+	opposites = {
+		lutheran
+		methodist
+	}
+	potential = {
+		religion = evangelical
+		is_priest = yes
+	}
+	religious = yes
+	diplomacy = 1
+	same_opinion = 5
+	opposite_opinion = -5
+	random = no
+	customizer = no
+}
+
+methodist = {
+	opposites = {
+		lutheran
+		baptist
+	}
+	potential = {
+		religion = evangelical
+		is_priest = yes
+	}
+	religious = yes
+	martial = 1
+	same_opinion = 5
+	opposite_opinion = -5
+	random = no
+	customizer = no
+
+	ai_zeal = 5
+}

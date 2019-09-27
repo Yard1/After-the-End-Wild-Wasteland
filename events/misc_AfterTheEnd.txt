@@ -151,6 +151,7 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = diversity
+		character_event = { id = ATE_WWW_RELIGION.36 }
 	}
 	
 	option = {
@@ -21461,6 +21462,7 @@ character_event = {
 				character_event = { id = ATE_WWW_RELIGION.10 }
 				character_event = { id = ATE_WWW_RELIGION.15 }
 				character_event = { id = ATE_WWW_RELIGION.28 }
+				character_event = { id = ATE_WWW_RELIGION.36 }
 
 				set_character_flag = historical_character
 			}
@@ -21494,6 +21496,9 @@ character_event = {
 					gain_title = PREV
 				}
 			}
+		}
+		k_evangelical = {
+			holder_scope = { character_event = { id = ATE_WWW_RELIGION.37 } }
 		}
 		b_washington_DC = {
 			set_flag = flag_dedicated_to_washington

@@ -1964,3 +1964,170 @@ character_event = {
 		clr_character_flag = chrome_cultist_ulimate_sacrifice_flag
 	}
 }
+
+character_event = {
+	id = ATE_WWW_RELIGION.36
+	hide_window = yes
+	is_triggered_only = yes
+	religion = evangelical
+	only_men = yes
+	trigger = {
+		is_priest = yes
+		NOR = {
+			trait = lutheran
+			trait = baptist
+			trait = methodist
+		}
+	}
+
+	option = {
+		add_trait = lutheran
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				trait = mystic
+			}
+			modifier = {
+				factor = 2
+				trait = scholar
+			}
+			modifier = {
+				factor = 2
+				trait = theologian
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 1.1
+				learning = 8
+			}
+			modifier = {
+				factor = 1.1
+				learning = 10
+			}
+			modifier = {
+				factor = 1.1
+				learning = 12
+			}
+			modifier = {
+				factor = 1.1
+				learning = 14
+			}
+			modifier = {
+				factor = 1.1
+				learning = 16
+			}
+		}
+	}
+	option = {
+		add_trait = baptist
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				trait = gregarious
+			}
+			modifier = {
+				factor = 2
+				trait = erudite
+			}
+			modifier = {
+				factor = 2
+				trait = honest
+			}
+			modifier = {
+				factor = 0
+				trait = crusader
+			}
+			modifier = {
+				factor = 1.1
+				diplomacy = 8
+			}
+			modifier = {
+				factor = 1.1
+				diplomacy = 10
+			}
+			modifier = {
+				factor = 1.1
+				diplomacy = 12
+			}
+			modifier = {
+				factor = 1.1
+				diplomacy = 14
+			}
+			modifier = {
+				factor = 1.1
+				diplomacy = 16
+			}
+			modifier = {
+				factor = 0.5
+				trait = drunkard
+			}
+		}
+	}
+	option = {
+		add_trait = methodist
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+			modifier = {
+				factor = 2
+				trait = stubborn
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 4
+				trait = crusader
+			}
+			modifier = {
+				factor = 1.1
+				martial = 8
+			}
+			modifier = {
+				factor = 1.1
+				martial = 10
+			}
+			modifier = {
+				factor = 1.1
+				martial = 12
+			}
+			modifier = {
+				factor = 1.1
+				martial = 14
+			}
+			modifier = {
+				factor = 1.1
+				martial = 16
+			}
+		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.37
+	hide_window = yes
+	is_triggered_only = yes
+	religion = evangelical
+	only_men = yes
+	trigger = {
+		trait = methodist
+		has_landed_title = k_evangelical
+	}
+
+	immediate = {
+		religion_authority = {
+			modifier = methodist_in_charge
+			years = 1
+		}
+		character_event = { id = ATE_WWW_RELIGION.37 days = 365 }
+	}
+}

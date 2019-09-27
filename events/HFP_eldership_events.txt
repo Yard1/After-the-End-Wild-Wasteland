@@ -2836,28 +2836,66 @@ character_event = {
 		is_save_game = no
 		is_tribal = yes #Can be used by feudals, but only tribals should start with it.
 		is_landed = yes
-		primary_title = {
-			is_law_potential = succ_eldership
+		OR = {
+			primary_title = {
+				is_law_potential = succ_eldership
+			}
+			AND = {
+				ROOT = {
+					OR = {
+						culture = yankee
+						culture = maritimer
+						culture = newfie
+						culture = carpetbagger
+					}
+				}
+				is_law_potential = succ_tanistry
+			}
 		}
 	}
 
 	immediate = {
 		ROOT = { 
 			any_demesne_title = { #First apply law.
-				limit = { is_law_potential = succ_eldership }
-				add_law = {
-					law = succ_eldership
-					cooldown = no
-					opinion_effect = no
+				if = {
+					limit = {
+						holder_scope = {
+							OR = {
+								culture = yankee
+								culture = maritimer
+								culture = newfie
+								culture = carpetbagger
+							}
+						}
+						is_law_potential = succ_tanistry
+					}
+					add_law = {
+						law = succ_tanistry
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+				else_if = {
+					limit = { is_law_potential = succ_eldership }
+					add_law = {
+						law = succ_eldership
+						cooldown = no
+						opinion_effect = no
+					}
+					ROOT = { set_character_flag = eldership_set }
 				}
 			}
-			#Then create grumpy Elder characters, so you are not without electors on start.
-			spawn_elder_effect = yes
-			spawn_elder_effect = yes
-			spawn_elder_effect = yes
-			spawn_elder_effect = yes
-			spawn_elder_effect = yes
-			spawn_elder_effect = yes
+			if = {
+				limit = { ROOT = { has_character_flag = eldership_set } }
+				#Then create grumpy Elder characters, so you are not without electors on start.
+				spawn_elder_effect = yes
+				spawn_elder_effect = yes
+				spawn_elder_effect = yes
+				spawn_elder_effect = yes
+				spawn_elder_effect = yes
+				spawn_elder_effect = yes
+			}
+			ROOT = { clr_character_flag = eldership_set }
 		}
 	}
 }

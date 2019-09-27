@@ -632,7 +632,9 @@ laws = {
 						trigger = { holder_scope = { semi_equal_religion = no } }
 						custom_tooltip = {
 							text = TT_HAS_TOLERANCE_6
-							holder_scope = { capital_scope = { TECH_CULTURE_FLEX = 6 } }
+							hidden_tooltip = {
+								holder_scope = { capital_scope = { TECH_CULTURE_FLEX = 6 } }
+							}
 						}
 					}
 				}

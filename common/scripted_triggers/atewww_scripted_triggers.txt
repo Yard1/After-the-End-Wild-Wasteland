@@ -292,6 +292,7 @@ has_religion_with_temporal_head = {
 		religion = monetarist
 		religion = rust_cultist
 		religion = brethren
+		religion = cetic
 	}
 }
 
@@ -306,7 +307,17 @@ is_pope = {
 	has_religion_temporal_head = no
 	has_autocephaly = no
 	is_theocracy = yes
-	religious_head = { character = PREV }
+	OR = {
+		has_landed_title = k_papal_state
+		has_landed_title = k_ursuline
+		has_landed_title = d_high_church
+		has_landed_title = k_confederated
+		has_landed_title = d_quorum_of_the_twelve
+		AND = {
+			is_antipope = no
+			rightful_religious_head_scope = { character = PREV }
+		}
+	}
 }
 
 is_antipope = {
@@ -448,5 +459,32 @@ is_cardinal = {
 		has_minor_title = title_ursuline_cardinal
 		has_minor_title = title_mormon_cardinal
 		has_minor_title = title_hamiltonian_justice
+	}
+}
+
+evangelical_can_have_saints = {
+	OR = {
+		AND = {
+			k_evangelical = {
+				holder_scope = {
+					religion = evangelical
+					trait = lutheran
+				}
+			}
+		}
+		AND = {
+			NOT = {
+				k_evangelical = {
+					holder_scope = {
+						religion = evangelical
+						trait = lutheran
+					}
+				}
+			}
+			rightful_religious_head_scope = {
+				religion = evangelical
+				trait = lutheran
+			}
+		}
 	}
 }

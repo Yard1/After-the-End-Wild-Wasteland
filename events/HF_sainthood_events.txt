@@ -16,8 +16,11 @@ character_event = {
 	trigger = {
 		death_in_china_trigger = no
 		death_no_trace_trigger = no
+		OR = {
+			NOT = { religion = evangelical }
+			evangelical_can_have_saints = yes
+		}
 		NOR = {
-			religion = evangelical
 			religion = antinomian
 			religion = charismatic
 			religion = postadventist
@@ -990,6 +993,17 @@ character_event = {
                     event_target:saint_person = {
                         if = {
                             limit = {
+								religion = evangelical
+								evangelical_can_have_saints = yes
+                            }
+                            create_bloodline = {
+                                type = saintly_bloodline_evangelical_01
+                                religion = event_target:saint_person
+                                inheritance = patrilineal
+                            }
+                        }
+                        else_if = {
+                            limit = {
                                 OR = {
 									religion = ursuline
 									religion = angeline
@@ -1317,7 +1331,18 @@ character_event = {
                         }
                     }
                     event_target:saint_person = {
-                        if = {
+                         if = {
+                            limit = {
+								religion = evangelical
+								evangelical_can_have_saints = yes
+                            }
+                            create_bloodline = {
+                                type = saintly_bloodline_evangelical_02
+                                religion = event_target:saint_person
+                                inheritance = patrilineal
+                            }
+                        }
+                        else_if = {
                             limit = {
                                 OR = {
 									religion = ursuline
@@ -1404,6 +1429,17 @@ character_event = {
                 5 = {
                     event_target:saint_person = {
                         if = {
+                            limit = {
+								religion = evangelical
+								evangelical_can_have_saints = yes
+                            }
+                            create_bloodline = {
+                                type = saintly_bloodline_evangelical_03
+                                religion = event_target:saint_person
+                                inheritance = patrilineal
+                            }
+                        }
+                        else_if = {
                             limit = {
                                 OR = {
 									religion = ursuline
@@ -1720,6 +1756,17 @@ character_event = {
                     event_target:saint_person = {
                         if = {
                             limit = {
+								religion = evangelical
+								evangelical_can_have_saints = yes
+                            }
+                            create_bloodline = {
+                                type = saintly_bloodline_evangelical_04
+                                religion = event_target:saint_person
+                                inheritance = patrilineal
+                            }
+                        }
+                        else_if = {
+                            limit = {
                                 OR = {
 									religion = ursuline
 									religion = angeline
@@ -2029,6 +2076,17 @@ character_event = {
                     event_target:saint_person = {
                         if = {
                             limit = {
+								religion = evangelical
+								evangelical_can_have_saints = yes
+                            }
+                            create_bloodline = {
+                                type = saintly_bloodline_evangelical_05
+                                religion = event_target:saint_person
+                                inheritance = patrilineal
+                            }
+                        }
+                        else_if = {
+                            limit = {
                                 OR = {
 									religion = ursuline
 									religion = angeline
@@ -2332,6 +2390,17 @@ character_event = {
                 5 = {
                     event_target:saint_person = {
                         if = {
+                            limit = {
+								religion = evangelical
+								evangelical_can_have_saints = yes
+                            }
+                            create_bloodline = {
+                                type = saintly_bloodline_evangelical_06
+                                religion = event_target:saint_person
+                                inheritance = patrilineal
+                            }
+                        }
+                        else_if = {
                             limit = {
                                 OR = {
 									religion = ursuline

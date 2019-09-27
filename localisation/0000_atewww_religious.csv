@@ -662,6 +662,18 @@ best_candidate_title_ursuline_cardinal_tooltip;Of all the bishops in my realm, t
 COLLEGE_OF_CARDINALS_URSULINE;Convention of Delegates;;;;;;;;;;;;;x
 canada.12.desc;Quebec City, the very seat of the Abbess-General herself, has fallen to infidels. In response, the Abbess-in-exile, Her Holiness, [Root.GetTitledName], has declared her intention to forge a great alliance of Ursuline lords in order to reclaim the eternal city. This signals a new era of large scale Ursuline holy wars - the Crusades.;Rome, ville de saint Pierre et siège de la papauté, est tombée aux mains des infidèles. En réponse, le pape en exil, Sa Sainteté [Root.GetTitledName], a déclaré son intention de conclure une grande alliance de seigneurs chrétiens afin de reprendre la ville éternelle. Cette décision annonce une nouvelle ère de guerres chrétiennes à grande échelle : les Croisades.;Die Heilige Stadt Rom, Sitz des Papstes, ist von den Ungläubigen erobert worden. Als Antwort darauf hat der Exilpapst, seine Heiligkeit [Root.GetTitledName] seine Entschlossenheit zum Sschmieden eines großen Bündnisses christlicher Herrscher bekannt gegeben, um die Ewige Stadt zurückzuerobern. Dies ist der Beginn eines neuen Zeitalters großer christlicher Heiliger Kriege - der Kreuzzüge.;;Roma, ciudad de San Pedro y sede del mismísimo Papado, ha caído en manos de los infieles. En respuesta, el Papa exiliado, Su Santidad [Root.GetTitledName], ha declarado su intención de forjar una gran alianza de señores cristianos con el fin de recuperar la ciudad eterna. Este hecho marca el inicio de una nueva era de guerras santas cristianas de gran alcance: las Cruzadas.;;;;;;;;;x
 
+# Evangelical
+
+lutheran;Lutheran;;;;;;;;;;;;;x
+lutheran_desc;This priest follows the Lutheran school of thought, focusing on learning and the acceptation of sainthood.;;;;;;;;;;;;;x
+baptist;Baptist;;;;;;;;;;;;;x
+baptist_desc;This priest follows the Baptist school of thought, focusing on proselytizing and missionary work.;;;;;;;;;;;;;x
+methodist;Methodist;;;;;;;;;;;;;x
+methodist_desc;This priest follows the Baptist school of thought, focusing on rigorous execution of the Church dogma.;;;;;;;;;;;;;x
+
+methodist_in_charge;Methodist Council President;;;;;;;;;;;;;x
+evangelical_FEATURES;§Y*§! Priests belong to one of three main denominations - Lutheran, Baptist and Methodist.\n§Y*§! A Lutheran Council President allows canonization of saints.\n§Y*§! A Baptist Council President allows faster province convertion.\n§Y*§! A Metodist Council President increases Moral Authority.;;;;;;;;;;;;;x
+
 # Misc
 
 CRUSADE_COOLDOWN;A [Root.Religion.GetCrusadeName] for the [Root.Religion.GetName] faith has not been called in the last 10 years\n;;;;;;;;;x

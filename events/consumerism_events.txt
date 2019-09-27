@@ -821,6 +821,7 @@ narrative_event = {
 	major_trigger = {
 		capital_scope = { region = custom_usa }
 	}
+	only_playable = yes
 	
 	trigger = {
 		has_global_flag = monetarist_grumbles

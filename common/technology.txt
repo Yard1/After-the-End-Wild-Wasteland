@@ -59,6 +59,12 @@ TECH_GROUP_MILITARY = {
 			#regiment_reinforcement_speed = 1.0
 			land_organisation = 1.0
 		}
+		1 = {}
+		2 = {}
+		3 = {}
+		4 = { add_decision = military_professionalism_1 }
+		5 = {}
+		6 = { add_decision = military_professionalism_2 }
 	}
 }
 

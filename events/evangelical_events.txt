@@ -1,0 +1,3876 @@
+#######################################
+#
+# Evangelical Religion Events
+#
+# Event ID eva.1-eva.9999 reserved
+#
+#######################################
+
+namespace = eva
+
+#Beginning Events
+#1		[hidden] Reformation begins; fires for patriarch only to lower the amount of characters it fires for
+#2 		Westphalia treatise is published; text for non-Emperor players
+#3		Emperor is informed of the Treatise and chooses how to respond
+#4		Emperor has the monk executed; ends or worsens the Reformation
+#5		Through Martial prowess, the Emperor ends the Reformation
+#6		[hidden] Decide outcome of Option A; Nobility Annoyed or Reformation Ends
+#7		[hidden] Decide outcome of Option B; Martyr or Reformation Ends
+#8		Option A Succeeds; MA boost, General Opinion Boost
+#9		Option A Fails; MA hit, Nobility Furious at Tyranny
+#10		Option B Succeeds; MA boost, Revolt Risk Reduced
+#11		Option B Fails; MA hit, Heretic Rebellions
+#12		Vassals informed of Emperor's success [martial skill]
+#13		Vassals informed of Emperor's failure [martial skill]
+#14		The Council of Augusta is held; Emperor chooses approach
+#15		Through Diplomatic prowess, the Emperor ends the Reformation
+#16 	Through Learning prowess, the Emperor ends the Reformation
+#17		Through Intrigue prowess, the Emperor ends the Reformation
+#18		[hidden] Decide outcome of the Council of Augusta
+#19 	The Council succeeds at ending the Reformation
+#20		The Council is a mixed event; the Reformation goes underground
+#21 	The Council is a disaster; the Reformation is at full strength
+#22		Vassals informed of a successful council
+#23		Vassals informed of a divided council
+#24		Vassals informed of an unsuccessful council
+#25		Vassals informed of Emperor's decision to ignore the monk
+#26		[hidden] Decide whether talk of heresy has died out or worsened
+#27 	Emperor informed that the monk's words have been forgotten
+#28 	Emperor informed that the monk's words have spread like wildfire; Reformation at full force
+#29		Vassals told of an ended reformation
+#30		Vassals told of the reformation strengthening
+#31		Nobles convert to heresy ( commented out, replaced with revival events )
+#32		Wildfire heresy quietly ends
+#33		"Default" ending, Reformation ends by itself
+
+#101	Convention of Atlanta restored
+#102	Convention of Chapel Hill restored
+#103	Convention of Chicago restored
+#104	Convention of St Louis restored
+#105	Convention of Washington restored
+
+# Antinomian events
+#201	Antinomian Revival Begins in Random Province
+#202	Ruler/Chaplain investigates the revival
+#203	Decides outcome of revival
+#204 	Revival has ended
+#205 	Revival has converted province to Antinomian faith
+#206 	Ruler/Chaplain converts to Antinomian faith
+#207	Liege is informed of Chaplain's conversion
+#208	Liege is informed of Vassal Non-Chaplain's conversion
+#209 	Liege is informed of Chaplain success at ending revival
+#210 	Liege is informed of Chaplains failure to end the revival
+#211 	Liege converts to Antinomian faith
+#212	Liege refuses to convert
+
+# Charismatic events
+#301-312	see above
+
+# Postadventist events
+#401-412	see above
+
+# Revelationist events
+#501-512	see above
+
+# Mormon events
+#601-612	see above
+
+# Americanist events
+#701-712	see above
+
+
+#	augusta council event; fires for patriarch; ma authority occurs here
+#	council of augusta; text for players
+#	first conversion decision; sets the HCC into chaos with heresiarchs throughout the empire
+#	reserved
+#	antinomian
+#	charismatic
+#	mormon
+#	americanist
+#	consumerist (forgot this one, w/e)
+#	revelationist
+#	occultist
+#	high church
+#	Imperial Church is established; 
+#	NOT = { has_global_flag = imperial_church_established }
+#	NOT = { has_global_flag = authority_maintained }
+#	NOT = { has_global_flag = underground_heresy }
+#	NOT = { has_global_flag = evangelical_reformation }
+
+#Initial start to reformation-ONLY FOR PATRIARCH
+character_event = {
+	id = eva.1
+	desc = EVTDESC_bounce
+	hide_window = yes
+	religion = evangelical
+	
+	trigger = {
+		year = 2667
+		controls_religion = yes
+		
+		e_dixie = {
+			has_holder = yes
+			holder_scope = { religion = evangelical }
+		}
+		
+		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+		
+		NOT = { has_global_flag = evangelical_reformation }
+		NOT = { has_global_flag = westphalian_treatise }
+		#NOT = { has_global_flag = imperial_church_established }
+		NOT = { has_global_flag = authority_maintained }
+		NOT = { has_global_flag = underground_heresy }
+	}
+	
+	mean_time_to_happen = {
+		years = 50
+	}
+	
+	immediate = { set_global_flag = westphalian_treatise }
+	
+	option = {
+		name = EVTOPTA_eva.1
+		any_playable_ruler = {
+			limit = { ai = no }
+			narrative_event = { id = eva.2 days = 5 random = 20 }
+		}
+		
+		any_playable_ruler = {
+			limit = { has_landed_title = e_dixie }
+			narrative_event = { id = eva.3 days = 25 random = 30 }
+		}
+	}
+}
+
+#Monk writes treatise on Westphalian religious rights
+narrative_event = {
+	id = eva.2
+	title = EVTNAME_eva.2
+	desc = EVTDESC_eva.2
+	
+	picture = GFX_evt_monk
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	ai = no
+	
+	option = {
+		name = EVTOPTA_eva.2
+		trigger = {
+			religion_group = christian 
+			NOT = { religion = evangelical }
+			NOT = { is_heresy_of = evangelical }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.2
+		trigger = {
+			religion = evangelical
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.2
+		trigger = {
+			is_heretic = yes
+			is_heresy_of = evangelical
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_eva.2
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+}
+
+#Monk's Treatise; Emperor responds
+narrative_event = {
+	id = eva.3
+	title = EVTNAME_eva.3
+	desc = EVTDESC_eva.3
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.3
+		set_global_flag = monk_ignored
+		religion_authority = { modifier = heresy_ignored }
+		
+		prestige = -50
+		piety = -50
+		
+		any_vassal = {
+			limit = {
+				religion = evangelical
+				OR = {
+					is_theocracy = yes
+					trait = zealous
+				}
+			}
+			opinion = { modifier = westphalia_monk_displeased who = ROOT years = 5}
+		}
+	
+		any_vassal = {
+			limit = {
+				OR = {
+					is_feudal = yes
+					is_republic = yes
+					is_tribal = yes
+					is_nomadic = yes
+				}
+				NAND = {
+					religion = evangelical
+					trait = zealous
+				}
+			}
+			opinion = { modifier = westphalia_monk_pleased who = ROOT years = 5}
+		}
+	
+		any_playable_ruler = {
+			limit = {
+				religion_group = christian
+				ai = no
+				NOT = { has_landed_title = e_dixie }
+			}
+			character_event = { id = eva.25 days = 20 random = 40 }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 trait = slothful }
+			modifier = { factor = 2 trait = craven }
+			modifier = { factor = 2 trait = shy }
+			modifier = { factor = 2 trait = cynical }
+			modifier = { 
+				factor = 1.2
+				rightful_religious_head_scope = { trait = lutheran }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.3
+		narrative_event = { id = eva.14 days = 8 random = 16 }
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 3 diplomacy = 18 }
+			modifier = { factor = 3 learning = 18 }
+			modifier = { factor = 3 intrigue = 18 }
+			modifier = { factor = 2 trait = just }
+			modifier = { factor = 2 trait = scholar }
+			modifier = { factor = 2 trait = theologian }
+			modifier = { factor = 2 trait = mastermind_theologian }
+			modifier = { 
+				factor = 1.2
+				rightful_religious_head_scope = { trait = baptist }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.3
+
+		any_vassal = {
+			limit = {
+				religion = evangelical
+				OR = {
+					is_theocracy = yes
+					trait = zealous
+				}
+			}
+			opinion = { modifier = westphalia_monk_pleased who = ROOT years = 5 }
+		}
+		
+		any_vassal = {
+			limit = {
+				OR = {
+					is_feudal = yes
+					is_republic = yes
+					is_tribal = yes
+					is_nomadic = yes
+				}
+				NAND = {
+					religion = evangelical
+					trait = zealous
+				}
+			}
+			opinion = { modifier = westphalia_monk_displeased who = ROOT years = 5 }
+		}
+		
+		narrative_event =  { id = eva.4 days = 8 random = 16 }
+		
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 3 martial = 18 }
+			modifier = { factor = 2 trait = cruel }
+			modifier = { factor = 2 trait = arbitrary }
+			modifier = { factor = 2 trait = wroth }
+			modifier = { 
+				factor = 1.2
+				rightful_religious_head_scope = { trait = methodist }
+			}
+		}
+	}
+}
+
+#Monk Executed
+narrative_event = {
+	id = eva.4
+	title = EVTNAME_eva.4
+	desc = EVTDESC_eva.4
+	picture = GFX_evt_beheading
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.4
+		character_event = { id = eva.6 }
+		ai_chance = { factor = 50 }
+	}
+	
+	option = {
+		name = EVTOPTB_eva.4
+		character_event = { id = eva.7 }
+		ai_chance = { factor = 50 }
+	}
+	
+	option = {
+		name = EVTOPTC_eva.4
+		trigger = { martial = 18 }
+		tooltip_info = martial
+		ai_chance = { factor = 500 }
+		character_event = { id = eva.5 }
+	}
+}
+
+#Reformation Ended through Martial Skill
+character_event = {
+	id = eva.5 
+	desc = EVTDESC_eva.5
+	picture = GFX_evt_holy_emperor
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.5
+		prestige = 200
+		piety = 200
+		
+		random = { chance = 30 add_trait = zealous }
+		
+		any_playable_ruler = {
+			limit = {
+				religion_group = christian
+				NOT = { has_landed_title = e_dixie }
+			}
+			narrative_event = { id = eva.12 days = 5 random = 10}	
+		}
+	}
+}
+
+character_event = {
+	id = eva.6
+	hide_window = yes
+	desc = EVTDESC_bounce
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			70 = { set_global_flag = reformation_bad }
+			30 = { set_global_flag = reformation_good }
+		}
+	
+		if = {
+			limit =	{ has_global_flag = reformation_good
+				has_landed_title = e_dixie }
+			narrative_event = { id = eva.8 days = 2 random = 6 }
+		}
+	
+		if = {
+			limit = { has_global_flag = reformation_bad
+				has_landed_title = e_dixie }
+			narrative_event = { id = eva.9 days = 2 random = 6 }
+		}
+	}
+	option = { }
+}
+
+character_event = {
+	id = eva.7
+	desc = EVTDESC_bounce
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			75 = { set_global_flag = reformation_bad }
+			25 = { set_global_flag = reformation_good }
+		}
+	
+		if = {
+			limit =	{ 
+			has_global_flag = reformation_good
+			has_landed_title = e_dixie }
+			narrative_event = { id = eva.10 days = 2 random = 6 }
+		}
+	
+		if = {
+			limit = { has_global_flag = reformation_bad 
+				has_landed_title = e_dixie }
+			narrative_event = { id = eva.11 days = 2 random = 6 }
+		}
+	}
+	option = { }
+}
+
+# Nobility Intimidated
+narrative_event = {
+	id = eva.8
+	desc = EVTDESC_eva.8
+	title = EVTNAME_eva.8
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_global_flag = reformation_good 
+		any_realm_character = {
+			limit = { is_landed = yes }
+			remove_opinion = { who = THIS modifier = westphalia_monk_displeased }
+			opinion = {
+				modifier = opinion_defeated_rebels
+				who = ROOT
+				years = 5
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTA_eva.8
+		piety = 100
+		prestige = 250
+		random = { chance = 30 add_trait = zealous }
+		any_playable_ruler = {
+			limit = {
+				religion_group = christian
+				ai = no
+				NOT = { has_landed_title = e_dixie }
+			}
+			narrative_event = { id = eva.12 days = 10 random = 15}
+		}
+	}
+}
+
+#Nobility Furious
+narrative_event = {
+	id = eva.9
+	desc = EVTDESC_eva.9
+	title = EVTNAME_eva.9
+	picture = GFX_evt_shadowy_cabal
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_global_flag = reformation_bad
+		any_realm_character = {
+			limit = {
+				is_landed = yes
+				is_feudal = yes
+			}
+			remove_opinion = { who = PREV modifier = westphalia_monk_displeased }
+			opinion = {
+				modifier = westphalian_tyranny
+				who = ROOT
+				months = 30
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_eva.9
+		religion_authority = { modifier = evangelical_reformation }
+		piety = 100
+		prestige = -100
+		any_playable_ruler = {
+			limit = {
+				religion_group = christian
+				ai = no
+				NOT = { has_landed_title = e_dixie }
+			}
+			narrative_event = { id = eva.13 days = 10 random = 15}
+		}
+	}
+}
+
+#Revolt Risk Reduction
+narrative_event = {
+	id = eva.10
+	desc = EVTDESC_eva.10
+	title = EVTNAME_eva.10
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_global_flag = reformation_good }
+	
+	option = {
+		name = EVTOPTA_eva.10 
+		add_character_modifier = {
+			name = crushed_major_revolt
+			months = 60 
+		}
+		any_realm_character = {
+			limit = {
+				is_landed = yes
+				has_opinion_modifier = { who = ROOT modifier = westphalia_monk_displeased }
+			}
+			remove_opinion = { who = THIS modifier = westphalia_monk_displeased }
+		}
+		any_playable_ruler = {
+			limit = {
+				religion_group = christian
+				ai = no
+				NOT = { has_landed_title = e_dixie }
+			}
+			narrative_event = { id = eva.12 days = 10 random = 15}
+		}
+	}
+}
+
+#Heretic Rebellions
+narrative_event = {
+	id = eva.11
+	desc = EVTDESC_eva.11
+	title = EVTNAME_eva.11
+	picture = GFX_evt_peasants
+	
+	is_triggered_only = yes
+
+	immediate = { clr_global_flag = reformation_bad }
+	
+	option = {
+		name = EVTOPTA_eva.11
+		religion_authority = { modifier = evangelical_reformation }
+		add_character_modifier = {
+			name = inspirational_martyr 
+			months = 24 
+		}
+		any_playable_ruler = {
+			limit = {
+				religion_group = christian
+				ai = no
+				NOT = { has_landed_title = e_dixie }
+			}
+			narrative_event = { id = eva.13 days = 10 random = 15 }
+		}
+	}
+}
+
+#Vassals informed of Success-Execution
+narrative_event = {
+	id = eva.12
+	title = EVTNAME_eva.12
+	desc = EVTDESC_eva.12
+	picture = GFX_evt_holy_emperor
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	ai = no
+	only_rulers = yes
+	trigger = { religion_group = christian }
+	
+	immediate = {
+		set_global_flag = authority_maintained
+		religion_authority = { modifier = evangelical_authority_maintained }
+	}
+
+	option = {
+		name = EVTOPTA_eva.12
+		trigger = {
+			NOT = { religion = evangelical }
+			NOT = { is_heresy_of = evangelical }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.12
+		trigger = {
+			religion = evangelical
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.12
+		trigger = {
+			is_heretic = yes
+			is_heresy_of = evangelical
+		}
+	}
+}
+
+#Vassals informed of Failure-Execution
+narrative_event = {
+	id = eva.13
+	title = EVTNAME_eva.13
+	desc = EVTDESC_eva.13
+	picture = GFX_evt_heretic
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	ai = no
+	only_rulers = yes
+	trigger = { religion_group = christian }
+	
+	option = {
+		name = EVTOPTA_eva.13
+		trigger = {
+			NOT = { religion = evangelical }
+			NOT = { is_heresy_of = evangelical }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.13
+		trigger = {
+			religion = evangelical
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.13
+		trigger = {
+			is_heretic = yes
+			is_heresy_of = evangelical
+		}
+	}
+}
+
+#Council of Augusta occurs
+narrative_event = {
+	id = eva.14
+	title = EVTNAME_eva.14
+	desc = EVTDESC_eva.14
+	
+	border = GFX_event_narrative_frame_religion
+	picture = GFX_evt_church_council
+	
+	is_triggered_only = yes
+	only_rulers = yes
+	
+	option = {
+		name = EVTOPTA_eva.14
+		trigger = { diplomacy = 18 }
+		tooltip_info = diplomacy
+		ROOT = {
+			narrative_event = { id = eva.15 days = 10 random = 20 }
+		}
+		ai_chance = { factor = 500 }	
+	}
+	
+	option = {
+		name = EVTOPTB_eva.14
+		trigger = { learning = 18 }
+		tooltip_info = learning
+		narrative_event = { id = eva.16 days = 10 random = 20 }
+		ai_chance = { factor = 500 }
+	}
+	
+	option = {
+		name = EVTOPTC_eva.14
+		trigger = {	intrigue = 18 }
+		tooltip_info = intrigue
+		narrative_event = { id = eva.17 days = 10 random = 20 }
+		ai_chance = { factor = 500 }
+	}
+	
+	option = {
+		name = EVTOPTD_eva.14
+		character_event = { id = eva.18 days = 10 random = 20 }
+		ai_chance = { factor = 5 }
+	}
+}
+
+narrative_event = {
+	id = eva.15 # Diplomatic resolution 
+	desc = EVTDESC_eva.15
+	title = EVTNAME_eva.15
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.15
+		prestige = 200
+		piety = 200
+		
+		random = { chance = 45 add_trait = zealous }
+		random = { chance = 45 add_trait = just }
+		random = { chance = 10 add_trait = diligent }
+		
+		any_realm_character = {
+			limit = { is_ruler = yes }
+			opinion = {
+				modifier = opinion_defeated_rebels
+				who = ROOT
+				years = 5 
+			}
+		}
+		any_playable_ruler = {
+			limit = {
+				religion_group = christian
+				NOT = { has_landed_title = e_dixie }
+			}
+			narrative_event = { id = eva.22 days = 5 random = 15 }	
+		}
+	}
+}
+
+narrative_event = {
+	id = eva.16 # Learning resolution 
+	desc = EVTDESC_eva.16
+	title = EVTNAME_eva.16
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.16
+		prestige = 200
+		piety = 300
+		
+		random = { chance = 70 add_trait = zealous }
+		if = {
+			limit = { NOT = { lifestyle_traits = 1 } }
+			add_trait = theologian
+		}
+		
+		any_playable_ruler = {
+			limit = {
+				religion_group = christian
+				NOT = { has_landed_title = e_dixie }
+			}
+			narrative_event = { id = eva.22 days = 5 random = 15 }	
+		}
+	}
+}
+
+narrative_event = {
+	id = eva.17 # Intrigue resolution 
+	title = EVTNAME_eva.17
+	desc = EVTDESC_eva.17
+	picture = GFX_evt_shadowy_cabal
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_eva.17
+		prestige = 300
+		piety = -50
+		
+		random = { chance = 30 add_trait = zealous }
+		if = {
+			limit = { NOT = { lifestyle_traits = 1 } }
+			add_trait = schemer
+		}
+		
+		any_playable_ruler = {
+			limit = {
+				religion_group = christian
+				NOT = { has_landed_title = e_dixie }
+			}
+			narrative_event = { id = eva.22 days = 5 random = 15 }	
+		}
+	}
+}
+
+character_event = {
+	id = eva.18 #decide on outcome of Council of Augusta
+	desc = EVTDESC_bounce
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			15 = { set_variable = { which = "aug_council" value = 0 } }
+			20 = { set_variable = { which = "aug_council" value = 1 } }
+			30 = { set_variable = { which = "aug_council" value = 2 } }
+			20 = { set_variable = { which = "aug_council" value = 3 } }
+			15 = { set_variable = { which = "aug_council" value = 4 } }
+		}
+		if = {
+			limit = { trait = detached_priest }
+			change_variable = { which = "aug_council" value = -1 }
+		}
+		if = {
+			limit = { trait = martial_cleric }
+			change_variable = { which = "aug_council" value = 1 }
+		}
+		if = {
+			limit = { trait = scholarly_theologian }
+			change_variable = { which = "aug_council" value = 2 }
+		}
+		if = {
+			limit = { trait = mastermind_theologian }
+			change_variable = { which = "aug_council" value = 3 }
+		}
+		if = {
+			limit = { trait = quick }
+			change_variable = { which = "aug_council" value = 1 }
+		}
+		if = {
+			limit = { trait = genius }
+			change_variable = { which = "aug_council" value = 2 }
+		}
+		if = {
+			limit = { trait = slow }
+			change_variable = { which = "aug_council" value = -1 }
+		}
+		if = {
+			limit = { trait = imbecile }
+			change_variable = { which = "aug_council" value = -3 }
+		}
+		if = {
+			limit = { trait = inbred }
+			change_variable = { which = "aug_council" value = -5 }
+		}
+		if = {
+			limit = { trait = scholar }
+			change_variable = { which = "aug_council" value = 2 }
+		}
+		if = {
+			limit = { trait = theologian }
+			change_variable = { which = "aug_council" value = 3 }
+		}
+		if = {
+			limit = { trait = mystic }
+			change_variable = { which = "aug_council" value = -2 }
+		}
+		if = {
+			limit = { trait = just }
+			change_variable = { which = "aug_council" value = 2 }
+		}
+		if = {
+			limit = { learning = 12 }
+			change_variable = { which = "aug_council" value = 1 }
+		}
+		if = {
+			limit = { learning = 16 }
+			change_variable = { which = "aug_council" value = 1 }
+		}
+		if = {
+			limit = { NOT = { learning = 8 } }
+			change_variable = { which = "aug_council" value = -1 }
+		}
+		if = {
+			limit = { NOT = { learning = 4 } }
+			change_variable = { which = "aug_council" value = -1 }
+		}
+		if = {
+			limit = { diplomacy = 12 }
+			change_variable = { which = "aug_council" value = 1 }
+		}
+		if = {
+			limit = { intrigue = 12 }
+			change_variable = { which = "aug_council" value = 1 }
+		}
+		
+		if = {
+			limit = { check_variable = { which = "aug_council" value = 11 } }
+			narrative_event = { id = eva.19 days = 5 random = 15 }
+		}
+		
+		if = {
+			limit = { check_variable = { which = "aug_council" value = 6 } 
+			NOT = { check_variable = { which = "aug_council" value = 11 } } }
+			narrative_event = { id = eva.20 days = 5 random = 15 }
+		}
+		
+		if = {
+			limit = { NOT = { check_variable = { which = "aug_council" value = 6 } } }
+			narrative_event = { id = eva.21 days = 5 random = 15 }
+		}
+	}
+
+	option = { }
+}
+
+narrative_event = { #Council Ends the Reformation
+	id = eva.19
+	desc = EVTDESC_eva.19
+	title = EVTNAME_eva.19
+	picture = GFX_evt_holy_emperor
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.19
+		prestige = 250
+		piety = 250
+		
+		random = { chance = 30 add_trait = zealous }
+		
+		religion_authority = { modifier = evangelical_authority_maintained }
+		set_global_flag = authority_maintained
+		any_playable_ruler = {
+			limit = {
+				religion_group = christian
+				NOT = { has_landed_title = e_dixie }
+			}
+			narrative_event = { id = eva.22 days = 5 random = 15 }
+		}
+	}
+}
+
+narrative_event = { #The Reformation at half-strength
+	id = eva.20
+	desc = EVTDESC_eva.20
+	title = EVTNAME_eva.20
+	picture = GFX_evt_shadowy_cabal
+	border = GFX_event_narrative_frame_religion
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.20
+		prestige = 50
+		piety = 50
+		
+		religion_authority = { modifier = underground_heresy }
+		set_global_flag = underground_heresy
+		any_playable_ruler = {
+			limit = {
+				religion_group = christian
+				NOT = { has_landed_title = e_dixie }
+			}
+			narrative_event = { id = eva.23 days = 5 random = 15 }
+		}
+	}
+}
+
+#The Reformation at full-strength
+narrative_event = {
+	id = eva.21
+	desc = EVTDESC_eva.21
+	title = EVTNAME_eva.21
+	picture = GFX_evt_scandal
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.21
+		prestige = -100
+		piety = -100
+		set_global_flag = evangelical_reformation
+		
+		religion_authority = { modifier = evangelical_reformation }
+		any_playable_ruler = {
+			limit = {
+				religion_group = christian
+				NOT = { has_landed_title = e_dixie }
+			}
+			narrative_event = { id = eva.24 }
+		}
+	}
+}
+
+#Council of Augusta succeeds
+narrative_event = {
+	id = eva.22 
+	desc = EVTDESC_eva.22
+	title = EVTNAME_eva.22
+	picture = GFX_evt_cathedral
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	ai = no
+	trigger = { religion_group = christian }
+	
+	option = {
+		name = EVTOPTA_eva.22
+		trigger = {
+			NOT = { religion = evangelical }
+			NOT = { is_heresy_of = evangelical }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.22
+		trigger = {
+			religion = evangelical
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.22
+		trigger = {
+			is_heretic = yes
+			is_heresy_of = evangelical
+		}
+	}
+}
+
+narrative_event = { #Council of Augusta sends heresy underground
+	id = eva.23 
+	desc = EVTDESC_eva.23
+	title = EVTNAME_eva.23
+	picture = GFX_evt_shadowy_cabal
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	ai = no
+	trigger = { religion_group = christian }
+	
+	option = {
+		name = EVTOPTA_eva.23
+		trigger = {
+			NOT = { religion = evangelical }
+			NOT = { is_heresy_of = evangelical }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.23
+		trigger = {
+			religion = evangelical
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.23
+		trigger = {
+			is_heretic = yes
+			is_heresy_of = evangelical
+		}
+	}
+}
+
+narrative_event = { #Council of Augusta fails
+	id = eva.24 
+	desc = EVTDESC_eva.24
+	title = EVTNAME_eva.24
+	picture = GFX_evt_church_council
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	ai = no
+	trigger = { religion_group = christian }
+	
+	option = {
+		name = EVTOPTA_eva.24
+		trigger = {
+			NOT = { religion = evangelical }
+			NOT = { is_heresy_of = evangelical }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.24
+		trigger = {
+			religion = evangelical
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.24
+		trigger = {
+			is_heretic = yes
+			is_heresy_of = evangelical
+		}
+	}
+}
+
+character_event = { #Vassals informed of Emperor's decision to ignore the monk
+	id = eva.25 
+	desc = EVTDESC_eva.25
+	picture = GFX_evt_pope_feast
+	
+	is_triggered_only = yes
+	ai = no
+	trigger = { religion_group = christian }
+	
+	option = {
+		name = EVTOPTA_eva.25
+		trigger = {
+			NOT = { religion = evangelical }
+			NOT = { is_heresy_of = evangelical }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.25
+		trigger = {
+			religion = evangelical
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.25
+		trigger = {
+			is_heretic = yes
+			is_heresy_of = evangelical
+		}
+	}
+}
+
+character_event = { #Decide Ignoring the Monk Outcome
+	id = eva.26
+	desc = EVTDESC_bounce
+	hide_window = yes
+	religion = evangelical
+
+	trigger = {
+		has_global_flag = monk_ignored
+		NOT = { has_global_flag = monk_ignored_outcome }
+	
+		controls_religion = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 18 
+	}
+	
+	immediate = {
+		set_global_flag = monk_ignored_outcome
+	
+		random_list = {
+			80 = { set_global_flag = reformation_bad  }
+			20 = { set_global_flag = reformation_good  }
+		}
+	
+		if = {
+			limit =	{ has_global_flag = reformation_good }
+			any_playable_ruler = {
+				limit = {
+					has_landed_title = e_dixie
+				}
+				narrative_event = { id = eva.27 days = 5 random = 15 }
+			}
+		}
+	
+		if = {
+			limit = { has_global_flag = reformation_bad }
+			any_playable_ruler = {
+				limit = {
+					has_landed_title = e_dixie
+				}
+				narrative_event = { id = eva.28 days = 5 random = 15 }
+			}
+		}
+	}
+	
+	option = {}
+}
+
+narrative_event = {
+	id = eva.27
+	desc = EVTDESC_eva.27
+	title = EVTNAME_eva.27
+	picture = GFX_evt_drunk
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		prestige = 50
+		piety = 50
+		name = EVTOPTA_eva.27
+		
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					religion_group = christian
+					NOT = { has_landed_title = e_dixie }
+				}
+				narrative_event = { id = eva.29 days = 5 random = 15 }
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = eva.28
+	desc = EVTDESC_eva.28
+	title = EVTNAME_eva.28
+	picture = GFX_evt_heretic
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.28
+		prestige = -100
+		piety = -100
+		
+		random = { chance = 50 add_trait = slothful }
+		
+		set_global_flag = evangelical_reformation
+		religion_authority = { modifier = evangelical_reformation }
+		
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					religion_group = christian
+					NOT = { has_landed_title = e_dixie }
+				}
+				narrative_event = { id = eva.30 days = 5 random = 15 }
+			}
+		}
+	}	
+}
+
+narrative_event = { #Monks Ideas Fail
+	id = eva.29 
+	desc = EVTDESC_eva.29
+	title = EVTNAME_eva.29
+	picture = GFX_evt_drunk
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	ai = no
+	trigger = { religion_group = christian }
+	
+	option = {
+		name = EVTOPTA_eva.29
+		trigger = {
+			NOT = { religion = evangelical }
+			NOT = { is_heresy_of = evangelical }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.29
+		trigger = {
+			religion = evangelical
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.29
+		trigger = {
+			is_heretic = yes
+			is_heresy_of = evangelical
+		}
+	}
+}
+
+narrative_event = {
+	id = eva.30 
+	desc = EVTDESC_eva.30
+	title = EVTNAME_eva.30
+	picture = GFX_evt_heretic
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	ai = no
+	trigger = {
+		religion_group = christian
+	}
+	
+	option = {
+		name = EVTOPTA_eva.30
+		trigger = {
+			NOT = { religion = evangelical }
+			NOT = { is_heresy_of = evangelical }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.30
+		trigger = {
+			religion = evangelical
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.30
+		trigger = {
+			is_heretic = yes
+			is_heresy_of = evangelical
+		}
+	}
+}
+
+#Ruler converts to heresy after the Council of Augusta
+#character_event = {
+#	id = eva.31
+#	desc = { text = EVTDESC_eva.31A trigger = { NOT = { has_global_flag = monk_ignored } } }
+#	desc = { text = EVTDESC_eva.31B trigger = { has_global_flag = monk_ignored } }
+#	picture = GFX_evt_heretic
+#	border = GFX_event_normal_frame_religion
+#	
+#	only_rulers = yes
+#	religion = evangelical
+#	min_age = 16
+#	prisoner = no
+#	
+#	trigger = {
+#		religion = evangelical
+#		#vassal_of = e_dixie	# vassal_of requires a character, not a title
+#		
+#		has_global_flag = westphalian_treatise
+#		has_global_flag = evangelical_reformation
+#		NOT = { has_global_flag = end_wildfire_reformation }
+#		
+#		NOT = { has_global_flag = imperial_church_established }
+#		NOT = { has_character_flag = remain_evangelical }
+#		NOT = { has_landed_title = e_dixie }
+#		NOT = { has_landed_title = k_evangelical }
+#		NOT = { holy_order = yes }
+#	}
+#	
+#	mean_time_to_happen = {
+#		months = 6
+#	}
+#	
+#	option = {
+#		name = EVTOPTA_eva.31
+#		ai_chance = {
+#			factor = 20
+#			modifier = { factor = 2 trait = cynical }
+#			modifier = { factor = 2 trait = ambitious }
+#		}
+#		religion = charismatic
+#		add_trait = heresiarch
+#		capital_scope = {
+#			religion = charismatic
+#		}
+#		any_courtier = {
+#			limit = { is_landed = no }
+#			religion = charismatic
+#		}
+#	}
+#	
+#	option = {
+#		name = EVTOPTB_eva.31
+#		ai_chance = {
+#			factor = 20
+#			modifier = { factor = 2 trait = cynical }
+#			modifier = { factor = 2 trait = ambitious }
+#		}
+#		religion = antinomian
+#		add_trait = heresiarch
+#		capital_scope = {
+#			religion = antinomian
+#		}
+#		any_courtier = {
+#			limit = { is_landed = no }
+#			religion = antinomian
+#		}
+#	}
+#	
+#	option = {
+#		name = EVTOPTC_eva.31
+#		ai_chance = {
+#			factor = 20
+#			modifier = { factor = 2 trait = cynical }
+#			modifier = { factor = 2 trait = ambitious }
+#		}
+#		religion = postadventist
+#		add_trait = heresiarch
+#		capital_scope = {
+#			religion = postadventist
+#		}
+#		any_courtier = {
+#			limit = { is_landed = no }
+#			religion = postadventist
+#		}
+#	}
+#	
+#	option = {
+#		name = EVTOPTD_eva.31
+#		set_character_flag = remain_evangelical
+#		ai_chance = {
+#			factor = 60 
+#			modifier = { factor = 2 trait = humble }
+#			modifier = { factor = 2 trait = content }
+#			modifier = { factor = 2 trait = craven }
+#			modifier = { factor = 5 trait = zealous }
+#		}
+#		random = { chance = 50 add_trait = zealous }
+#		piety = 25
+#	}
+#}
+
+character_event = {
+	id = eva.32
+	desc = EVTDESC_bounce
+	hide_window = yes
+	religion = evangelical
+	
+	trigger = {
+		controls_religion = yes
+		has_global_flag = westphalian_treatise
+		has_global_flag = evangelical_reformation
+		NOT = { has_global_flag = end_wildfire_reformation }
+	}
+	
+	mean_time_to_happen = {
+		years = 30
+	}
+	
+	immediate = { set_global_flag = end_wildfire_reformation }
+	
+	option = {
+		name = "OK"
+		narrative_event = { id = eva.33 }
+	}
+}
+
+narrative_event = {	#Wildfire Conversions end
+	id = eva.33
+	title = EVTNAME_eva.33
+	desc = EVTDESC_eva.33
+	
+	picture = GFX_evt_monk
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	ai = no
+	
+	option = {
+		name = EVTOPTA_eva.33
+		trigger = {
+			has_landed_title = e_dixie
+			religion = evangelical
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.33
+		trigger = {
+			NOT = { has_landed_title = e_dixie }
+			religion = evangelical
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.33
+		trigger = {
+			OR = {
+				religion = charismatic
+				religion = antinomian
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_eva.33
+		trigger = {
+			NOR = {
+				religion = evangelical
+				religion = charismatic
+				religion = antinomian
+			}
+		}
+	}
+}
+
+#Ecumenical Seat of Atlanta
+character_event = {
+	id = eva.101
+	desc = EVTDESC_eva.101
+	picture = GFX_evt_bishop_byzantine
+	religion = evangelical
+	
+	trigger = {
+		always = no		# just until events to set/clear the flag when lost or gained
+		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+		NOT = { has_global_flag = pat_atlanta }
+		has_landed_title = e_dixie
+		completely_controls = c_atlanta
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTA_eva.101
+		set_global_flag = pat_atlanta
+		piety = 100
+	}
+}
+
+#Ecumenical Seat of Chapel Hill
+character_event = {
+	id = eva.102
+	desc = EVTDESC_eva.102
+	picture = GFX_evt_bishop_byzantine
+	religion = evangelical
+
+	trigger = {
+		always = no		# just until events to set/clear the flag when lost or gained
+		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+		NOT = { has_global_flag = pat_chapel_hill }
+		has_landed_title = e_dixie
+		completely_controls = c_chapel_hill
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTA_eva.102
+		set_global_flag = pat_chapel_hill
+		piety = 100
+	}
+}
+
+#Ecumenical Seat of Chicago
+character_event = {
+	id = eva.103
+	desc = EVTDESC_eva.103
+	picture = GFX_evt_bishop_byzantine
+	religion = evangelical
+
+	trigger = {
+		NOT = { has_global_flag = pat_chicago }
+		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+		has_landed_title = e_dixie
+		completely_controls = c_chicago
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTA_eva.103
+		set_global_flag = pat_chicago
+		piety = 100
+	}
+}
+
+#Ecumenical Seat of St Louis
+character_event = {
+	id = eva.104
+	desc = EVTDESC_eva.104
+	picture = GFX_evt_bishop_byzantine
+	religion = evangelical
+
+	trigger = {
+		NOT = { has_global_flag = pat_st_louis }
+		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+		has_landed_title = e_dixie
+		completely_controls = c_st_louis
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTA_eva.104
+		set_global_flag = pat_st_louis
+		piety = 100
+	}
+}
+
+#Ecumenical Seat of Washington
+character_event = {
+	id = eva.105
+	desc = EVTDESC_eva.105
+	religion = evangelical
+
+	picture = GFX_evt_bishop_byzantine
+	
+	trigger = {
+		NOT = { has_global_flag = pat_washington }
+		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+		has_landed_title = e_dixie
+		completely_controls = c_washington
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTA_eva.105
+		set_global_flag = pat_washington
+		piety = 100
+	}
+}
+
+#Antinomian Revival
+province_event = {
+	id = eva.201
+	desc = EVTDESC_eva.201
+	picture = GFX_evt_heretic
+	
+	trigger = {
+		NOT = { has_province_modifier = antinomian_revival }
+		NOT = { has_province_modifier = charismatic_revival }
+		NOT = { has_province_modifier = postadventist_revival }
+		NOT = { has_province_modifier = revelationist_revival }
+		NOT = { has_province_modifier = mormon_revival }
+		NOT = { has_province_modifier = americanist_revival }
+		NOT = { has_province_modifier = religious_unrest }
+		NOT = { has_province_modifier = resist_revival }
+		NOT = { has_province_modifier = burned_over }
+		NOT = { has_global_flag = end_wildfire_reformation }
+		has_global_flag = evangelical_reformation
+		holder_scope = {
+			religion = evangelical
+			NOT = { religion_authority = 0.8 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 90
+		
+		modifier = { factor = 0.8 trait = lustful }
+		modifier = { factor = 0.8 trait = gluttonous }
+		modifier = { factor = 0.8 trait = greedy }
+		modifier = { factor = 0.8 trait = slothful }
+		modifier = { factor = 0.8 trait = envious }
+		modifier = { factor = 0.8 trait = wroth }
+		modifier = { factor = 0.8 trait = proud	}
+	}
+	
+	immediate = {
+		add_province_modifier = {
+			name = antinomian_revival
+			duration = 1460
+		}
+		add_province_modifier = {
+			name = religious_tension
+			duration = 90
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_eva.201 #liege examines the revival
+		holder_scope = { character_event = { id = eva.202 days = 3 } }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPTB_eva.201 #send the lord spiritual
+		holder_scope = { job_spiritual = { character_event = { id = eva.202 days = 3 } } }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPTC_eva.201 #allow it to take its course
+		religion = antinomian
+		add_province_modifier = { name = burned_over duration = 912 }
+		piety = -25
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = EVTOPTD_eva.201 #suppress the revival violently
+		remove_province_modifier = religious_tension
+		remove_province_modifier = antinomian_revival
+		add_province_modifier = {
+			name = religious_unrest
+			duration = 60 
+		}
+		ai_chance = { factor = 5 }
+	}
+}
+
+character_event = {
+	id = eva.202
+	desc = EVTDESC_eva.202
+	picture = GFX_evt_heretic
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { religion = antinomian }
+	}
+	
+		
+	option = { #convert
+		name = EVTOPTA_eva.202
+		FROM = { religion = antinomian }
+		FROM = { add_province_modifier = { name = burned_over duration = 912 } }
+		custom_tooltip = { text = TXT_antinomian_revival_convert }
+		hidden_tooltip = { character_event = { id = eva.206 } }
+			ai_chance = {
+			factor = 10
+			modifier = { factor = 2 NOT = { religion_authority = 0.5 } }
+			modifier = { factor = 2 NOT = { religion_authority = 0.4 } }
+			modifier = { factor = 2 NOT = { religion_authority = 0.3 } }
+			modifier = { factor = 0 trait = zealous }
+		}
+	}
+	
+	option = { #resist
+		name = EVTOPTB_eva.202
+		hidden_tooltip = { FROM = { holder_scope = { character_event = { id = eva.203 days = 6 } } } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 religion_authority = 0.8 }
+			modifier = { factor = 2 religion_authority = 0.7 }
+			modifier = { factor = 2 religion_authority = 0.6 }
+		}
+	}
+	
+	option = { #reconvert
+		name = EVTOPC_eva.202
+		trigger = { learning = 12 }
+		tooltip_info = learning
+		ai_chance = { factor = 100 }
+		character_event = { id = eva.213 days = 5 }
+	}
+	
+}
+
+province_event = {
+	id = eva.203
+	hide_window = yes
+	desc = EVTDESC_bounce
+	
+	is_triggered_only = yes
+	
+	immediate = { 
+	
+		random_list = {
+			35 = { set_province_flag = revival_ends }
+			65 = { set_province_flag = revival_succeeds }
+		}
+	
+		if = {
+			limit = { has_province_flag = revival_ends }
+			FROM = { character_event = { id = eva.204 days = 5 random = 8} }
+		}
+		
+		if = {
+			limit = { has_province_flag = revival_succeeds }
+			FROM = { character_event = { id = eva.205 days = 5 random = 8} }
+		}
+	}
+	
+	option = { }
+}
+
+character_event = {
+	id = eva.204
+	desc = EVTDESC_eva.204
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_ends }
+	
+	option = { 
+		name = EVTOPTA_eva.204 
+		FROMFROMFROM = { add_province_modifier = { name = resist_revival duration = 720 } }
+		piety = 25
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.209 }
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = eva.205
+	desc = EVTDESC_eva.205
+	picture = GFX_evt_bad_news
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_succeeds }
+	
+	option = { 
+		name = EVTOPTA_eva.205 
+		FROMFROMFROM = { add_province_modifier = { name = burned_over duration = 720 } }
+		FROMFROMFROM = { religion = antinomian }
+		piety = -5
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.210 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { 
+	id = eva.206
+	desc = EVTDESC_eva.206
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = EVTOPTA_eva.206
+		trigger = { has_job_title = job_spiritual }
+		religion = antinomian
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.207 }
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = EVTOPTB_eva.206
+		trigger = { NOT = { has_job_title = job_spiritual } }
+		religion = antinomian
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.208 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.206
+		hidden_tooltip = {
+			set_secret_religion = antinomian
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.210 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { 
+	id = eva.207
+	desc = EVTDESC_eva.207
+	picture = GFX_evt_heretic
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.207
+		religion = antinomian
+		FROM = { character_event = { id = eva.211 } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.207 
+		FROM = { character_event = { id = eva.212 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+character_event = {
+	id = eva.208 
+	desc = EVTDESC_eva.208
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.208
+	}
+}
+
+character_event = {
+	id = eva.209
+	desc = EVTDESC_eva.209
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.209
+	}
+}
+
+character_event = {
+	id = eva.210
+	desc = EVTDESC_eva.210
+	picture = GFX_evt_bad_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.210
+	}
+}
+
+character_event = {
+	id = eva.211
+	desc = EVTDESC_eva.211
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.211
+	}
+
+}
+
+character_event = {
+	id = eva.212
+	desc = EVTDESC_eva.212
+	picture = GFX_evt_scandal
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.212
+	}
+
+}
+
+character_event = {
+	id = eva.213
+	desc = EVTDESC_eva.204
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_ends }
+	
+	option = { 
+		name = EVTOPTA_eva.204 
+		FROMFROM = { add_province_modifier = { name = resist_revival duration = 720 } }
+		piety = 25
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.209 }
+				}
+			}
+		}
+	}
+}
+
+#Charismatic Revival
+province_event = {
+	id = eva.301
+	desc = EVTDESC_eva.301
+	picture = GFX_evt_heretic
+	
+	trigger = {
+		NOT = { has_province_modifier = charismatic_revival }
+		NOT = { has_province_modifier = antinomian_revival }
+		NOT = { has_province_modifier = postadventist_revival }
+		NOT = { has_province_modifier = revelationist_revival }
+		NOT = { has_province_modifier = mormon_revival }
+		NOT = { has_province_modifier = americanist_revival }
+		NOT = { has_province_modifier = religious_unrest }
+		NOT = { has_province_modifier = resist_revival }
+		NOT = { has_province_modifier = burned_over }
+		NOT = { has_global_flag = end_wildfire_reformation }
+		has_global_flag = evangelical_reformation
+		holder_scope = {
+			religion = evangelical
+			NOT = { religion_authority = 0.8 }
+		}	
+	}
+
+	mean_time_to_happen = {
+		months = 90
+		
+		modifier = { factor = 0.8 trait = lustful }
+		modifier = { factor = 0.8 trait = gluttonous }
+		modifier = { factor = 0.8 trait = greedy }
+		modifier = { factor = 0.8 trait = slothful }
+		modifier = { factor = 0.8 trait = envious }
+		modifier = { factor = 0.8 trait = wroth }
+		modifier = { factor = 0.8 trait = proud	}
+	}
+	
+	immediate = {
+		add_province_modifier = {
+			name = charismatic_revival
+			duration = 1460
+		}
+		add_province_modifier = {
+			name = religious_tension
+			duration = 90
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_eva.301 #liege examines the revival
+		holder_scope = { character_event = { id = eva.302 days = 3 } }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPTB_eva.301 #send the lord spiritual
+		holder_scope = { job_spiritual = { character_event = { id = eva.302 days = 3 } } }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPTC_eva.301 #allow it to take its course
+		religion = charismatic
+		add_province_modifier = { name = burned_over duration = 912 }
+		piety = -25
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = EVTOPTD_eva.301 #suppress the revival violently
+		remove_province_modifier = religious_tension
+		remove_province_modifier = charismatic_revival
+		add_province_modifier = {
+			name = religious_unrest
+			duration = 60 
+		}
+		ai_chance = { factor = 5 }
+	}
+}
+
+character_event = {
+	id = eva.302
+	desc = EVTDESC_eva.302
+	picture = GFX_evt_heretic
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { religion = charismatic }
+	}
+		
+	option = { #convert
+		name = EVTOPTA_eva.302
+		FROM = { religion = charismatic }
+		FROM = { add_province_modifier = { name = burned_over duration = 912 } }
+		custom_tooltip = { text = TXT_charismatic_revival_convert }
+		hidden_tooltip = { character_event = { id = eva.306 } }
+			ai_chance = {
+			factor = 10
+			modifier = { factor = 2 NOT = { religion_authority = 0.5 } }
+			modifier = { factor = 2 NOT = { religion_authority = 0.4 } }
+			modifier = { factor = 2 NOT = { religion_authority = 0.3 } }
+			modifier = { factor = 0 trait = zealous }
+		}
+	}
+	
+	option = { #resist
+		name = EVTOPTB_eva.302
+		hidden_tooltip = { FROM = { holder_scope = { character_event = { id = eva.203 days = 6 } } } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 religion_authority = 0.8 }
+			modifier = { factor = 2 religion_authority = 0.7 }
+			modifier = { factor = 2 religion_authority = 0.6 }
+		}
+	}
+	
+	option = { #reconvert
+		name = EVTOPC_eva.302
+		trigger = { learning = 12 }
+		tooltip_info = learning
+		ai_chance = { factor = 100 }
+		character_event = { id = eva.313 days = 5 }
+	}
+	
+}
+
+province_event = {
+	id = eva.303
+	hide_window = yes
+	desc = EVTDESC_bounce
+	
+	is_triggered_only = yes
+	
+	immediate = { 
+	
+		random_list = {
+			35 = { set_province_flag = revival_ends }
+			65 = { set_province_flag = revival_succeeds }
+		}
+	
+		if = {
+			limit = { has_province_flag = revival_ends }
+			FROM = { character_event = { id = eva.304 days = 5 random = 8} }
+		}
+		
+		if = {
+			limit = { has_province_flag = revival_succeeds }
+			FROM = { character_event = { id = eva.305 days = 5 random = 8} }
+		}
+	}
+	
+	option = { }
+}
+
+character_event = {
+	id = eva.304
+	desc = EVTDESC_eva.304
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_ends }
+	
+	option = { 
+		name = EVTOPTA_eva.304 
+		FROMFROMFROM = { add_province_modifier = { name = resist_revival duration = 720 } }
+		piety = 25
+		hidden_tooltip = { liege = { character_event = { id = eva.309 } } }
+	}
+}
+
+character_event = {
+	id = eva.305
+	desc = EVTDESC_eva.305
+	picture = GFX_evt_bad_news
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_succeeds }
+	
+	option = { 
+		name = EVTOPTA_eva.305 
+		FROMFROMFROM = { add_province_modifier = { name = burned_over duration = 720 } }
+		FROMFROMFROM = { religion = charismatic }
+		piety = -5
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.310 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { 
+	id = eva.306
+	desc = EVTDESC_eva.306
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.306
+		trigger = { has_job_title = job_spiritual }
+		religion = charismatic
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.307 }
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = EVTOPTB_eva.306
+		trigger = { NOT = { has_job_title = job_spiritual } }
+		religion = charismatic
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.308 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.306
+		hidden_tooltip = {
+			set_secret_religion = charismatic
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.310 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { 
+	id = eva.307
+	desc = EVTDESC_eva.307
+	picture = GFX_evt_heretic
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.307
+		religion = charismatic
+		FROM = { character_event = { id = eva.311 } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.307 
+		FROM = { character_event = { id = eva.312 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+character_event = {
+	id = eva.308 
+	desc = EVTDESC_eva.308
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.308
+	}
+}
+
+character_event = {
+	id = eva.309
+	desc = EVTDESC_eva.309
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.309
+	}
+}
+
+character_event = {
+	id = eva.310
+	desc = EVTDESC_eva.310
+	picture = GFX_evt_bad_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.310
+	}
+}
+
+character_event = {
+	id = eva.311
+	desc = EVTDESC_eva.311
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.311
+	}
+
+}
+
+character_event = {
+	id = eva.312
+	desc = EVTDESC_eva.312
+	picture = GFX_evt_scandal
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.312
+	}
+
+}
+
+character_event = {
+	id = eva.313
+	desc = EVTDESC_eva.304
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_ends }
+	
+	option = { 
+		name = EVTOPTA_eva.304 
+		FROMFROM = { add_province_modifier = { name = resist_revival duration = 720 } }
+		piety = 25
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.310 }
+				}
+			}
+		}
+	}
+}
+
+#Postadventist Revival
+province_event = {
+	id = eva.401
+	desc = EVTDESC_eva.401
+	picture = GFX_evt_heretic
+	
+	trigger = {
+		NOT = { has_province_modifier = postadventist_revival }
+		NOT = { has_province_modifier = antinomian_revival }
+		NOT = { has_province_modifier = charismatic_revival }
+		NOT = { has_province_modifier = revelationist_revival }
+		NOT = { has_province_modifier = mormon_revival }
+		NOT = { has_province_modifier = americanist_revival }
+		NOT = { has_province_modifier = religious_unrest }
+		NOT = { has_province_modifier = resist_revival }
+		NOT = { has_province_modifier = burned_over }
+		NOT = { has_global_flag = end_wildfire_reformation }
+		has_global_flag = evangelical_reformation
+		holder_scope = {
+			religion = evangelical
+			NOT = { religion_authority = 0.8 }
+		}	
+	}
+
+	mean_time_to_happen = {
+		months = 90
+		
+		modifier = { factor = 0.8 trait = lustful }
+		modifier = { factor = 0.8 trait = gluttonous }
+		modifier = { factor = 0.8 trait = greedy }
+		modifier = { factor = 0.8 trait = slothful }
+		modifier = { factor = 0.8 trait = envious }
+		modifier = { factor = 0.8 trait = wroth }
+		modifier = { factor = 0.8 trait = proud	}
+	}
+	
+	immediate = {
+		add_province_modifier = {
+			name = postadventist_revival
+			duration = 1460
+		}
+		add_province_modifier = {
+			name = religious_tension
+			duration = 90
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_eva.401 #liege examines the revival
+		holder_scope = { character_event = { id = eva.402 days = 3 } }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPTB_eva.401 #send the lord spiritual
+		holder_scope = { job_spiritual = { character_event = { id = eva.402 days = 3 } } }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPTC_eva.401 #allow it to take its course
+		religion = postadventist
+		add_province_modifier = { name = burned_over duration = 912 }
+		piety = -25
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = EVTOPTD_eva.401 #suppress the revival violently
+		remove_province_modifier = religious_tension
+		remove_province_modifier = postadventist_revival
+		add_province_modifier = {
+			name = religious_unrest
+			duration = 60 
+		}
+		ai_chance = { factor = 5 }
+	}
+}
+
+character_event = {
+	id = eva.402
+	desc = EVTDESC_eva.402
+	picture = GFX_evt_heretic
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { religion = postadventist }
+	}
+		
+	option = { #convert
+		name = EVTOPTA_eva.402
+		FROM = { religion = postadventist }
+		FROM = { add_province_modifier = { name = burned_over duration = 912 } }
+		custom_tooltip = { text = TXT_postadventist_revival_convert }
+		hidden_tooltip = { character_event = { id = eva.406 } }
+			ai_chance = {
+			factor = 10
+			modifier = { factor = 2 NOT = { religion_authority = 0.5 } }
+			modifier = { factor = 2 NOT = { religion_authority = 0.4 } }
+			modifier = { factor = 2 NOT = { religion_authority = 0.3 } }
+			modifier = { factor = 0 trait = zealous }
+		}
+	}
+	
+	option = { #resist
+		name = EVTOPTB_eva.402
+		hidden_tooltip = { FROM = { holder_scope = { character_event = { id = eva.403 days = 6 } } } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 religion_authority = 0.8 }
+			modifier = { factor = 2 religion_authority = 0.7 }
+			modifier = { factor = 2 religion_authority = 0.6 }
+		}
+	}
+	
+	option = { #reconvert
+		name = EVTOPC_eva.402
+		trigger = { learning = 12 }
+		tooltip_info = learning
+		ai_chance = { factor = 100 }
+		character_event = { id = eva.413 days = 5 }
+	}
+	
+}
+
+province_event = {
+	id = eva.403
+	hide_window = yes
+	desc = EVTDESC_bounce
+	
+	is_triggered_only = yes
+	
+	immediate = { 
+	
+		random_list = {
+			35 = { set_province_flag = revival_ends }
+			65 = { set_province_flag = revival_succeeds }
+		}
+	
+		if = {
+			limit = { has_province_flag = revival_ends }
+			FROM = { character_event = { id = eva.404 days = 5 random = 8} }
+		}
+		
+		if = {
+			limit = { has_province_flag = revival_succeeds }
+			FROM = { character_event = { id = eva.405 days = 5 random = 8} }
+		}
+	}
+	
+	option = { }
+}
+
+character_event = {
+	id = eva.404
+	desc = EVTDESC_eva.404
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_ends }
+	
+	option = { 
+		name = EVTOPTA_eva.404 
+		FROMFROMFROM = { add_province_modifier = { name = resist_revival duration = 720 } }
+		piety = 25
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.409 }
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = eva.405
+	desc = EVTDESC_eva.405
+	picture = GFX_evt_bad_news
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_succeeds }
+	
+	option = { 
+		name = EVTOPTA_eva.405 
+		FROMFROMFROM = { add_province_modifier = { name = burned_over duration = 720 } }
+		FROMFROMFROM = { religion = postadventist }
+		piety = -5
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.410 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { 
+	id = eva.406
+	desc = EVTDESC_eva.406
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.406
+		trigger = { has_job_title = job_spiritual }
+		religion = postadventist
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.407 }
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = EVTOPTB_eva.406
+		trigger = { NOT = { has_job_title = job_spiritual } }
+		religion = postadventist
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.408 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.406
+		hidden_tooltip = {
+			set_secret_religion = postadventist
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.410 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { 
+	id = eva.407
+	desc = EVTDESC_eva.407
+	picture = GFX_evt_heretic
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.407
+		religion = postadventist
+		FROM = { character_event = { id = eva.411 } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.407 
+		FROM = { character_event = { id = eva.412 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+character_event = {
+	id = eva.408 
+	desc = EVTDESC_eva.408
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.408
+	}
+}
+
+character_event = {
+	id = eva.409
+	desc = EVTDESC_eva.409
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.409
+	}
+}
+
+character_event = {
+	id = eva.410
+	desc = EVTDESC_eva.410
+	picture = GFX_evt_bad_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.410
+	}
+}
+
+character_event = {
+	id = eva.411
+	desc = EVTDESC_eva.411
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.411
+	}
+
+}
+
+character_event = {
+	id = eva.412
+	desc = EVTDESC_eva.412
+	picture = GFX_evt_scandal
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.412
+	}
+
+}
+
+character_event = {
+	id = eva.413
+	desc = EVTDESC_eva.404
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_ends }
+	
+	option = { 
+		name = EVTOPTA_eva.404 
+		FROMFROM = { add_province_modifier = { name = resist_revival duration = 720 } }
+		piety = 25
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.409 }
+				}
+			}
+		}
+	}
+}
+
+#Revelationist Revival
+province_event = {
+	id = eva.501
+	desc = EVTDESC_eva.501
+	picture = GFX_evt_heretic
+	
+	trigger = {
+		NOT = { has_province_modifier = revelationist_revival }
+		NOT = { has_province_modifier = antinomian_revival }
+		NOT = { has_province_modifier = charismatic_revival }
+		NOT = { has_province_modifier = postadventist_revival }
+		NOT = { has_province_modifier = mormon_revival }
+		NOT = { has_province_modifier = americanist_revival }
+		NOT = { has_province_modifier = religious_unrest }
+		NOT = { has_province_modifier = resist_revival }
+		NOT = { has_province_modifier = burned_over }
+		NOT = { has_global_flag = end_wildfire_reformation }
+		NOT = { has_global_flag = revelationist_reformation }
+		has_global_flag = evangelical_reformation
+		holder_scope = {
+			religion = evangelical
+			NOT = { religion_authority = 0.8 }
+		}	
+	}
+
+	mean_time_to_happen = {
+		months = 150
+		
+		modifier = { factor = 0.8 trait = lustful }
+		modifier = { factor = 0.8 trait = gluttonous }
+		modifier = { factor = 0.8 trait = greedy }
+		modifier = { factor = 0.8 trait = slothful }
+		modifier = { factor = 0.8 trait = envious }
+		modifier = { factor = 0.8 trait = wroth }
+		modifier = { factor = 0.8 trait = proud	}
+	}
+	
+	immediate = {
+		add_province_modifier = {
+			name = revelationist_revival
+			duration = 1460
+		}
+		add_province_modifier = {
+			name = religious_tension
+			duration = 90
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_eva.501 #liege examines the revival
+		holder_scope = { character_event = { id = eva.502 days = 3 } }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPTB_eva.501 #send the lord spiritual
+		holder_scope = { job_spiritual = { character_event = { id = eva.502 days = 3 } } }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPTC_eva.501 #allow it to take its course
+		religion = revelationist
+		add_province_modifier = { name = burned_over duration = 912 }
+		piety = -25
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = EVTOPTD_eva.501 #suppress the revival violently
+		remove_province_modifier = religious_tension
+		remove_province_modifier = revelationist_revival
+		add_province_modifier = {
+			name = religious_unrest
+			duration = 60 
+		}
+		ai_chance = { factor = 5 }
+	}
+}
+
+character_event = {
+	id = eva.502
+	desc = EVTDESC_eva.502
+	picture = GFX_evt_heretic
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { religion = revelationist }
+	}
+		
+	option = { #convert
+		name = EVTOPTA_eva.502
+		FROM = { religion = revelationist }
+		FROM = { add_province_modifier = { name = burned_over duration = 912 } }
+		custom_tooltip = { text = TXT_revelationist_revival_convert }
+		hidden_tooltip = { character_event = { id = eva.506 } }
+			ai_chance = {
+			factor = 10
+			modifier = { factor = 2 NOT = { religion_authority = 0.5 } }
+			modifier = { factor = 2 NOT = { religion_authority = 0.4 } }
+			modifier = { factor = 2 NOT = { religion_authority = 0.3 } }
+			modifier = { factor = 0 trait = zealous }
+		}
+	}
+	
+	option = { #resist
+		name = EVTOPTB_eva.502
+		hidden_tooltip = { FROM = { holder_scope = { character_event = { id = eva.503 days = 6 } } } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 religion_authority = 0.8 }
+			modifier = { factor = 2 religion_authority = 0.7 }
+			modifier = { factor = 2 religion_authority = 0.6 }
+		}
+	}
+	
+	option = { #reconvert
+		name = EVTOPC_eva.502
+		trigger = { learning = 12 }
+		tooltip_info = learning
+		ai_chance = { factor = 100 }
+		character_event = { id = eva.513 days = 5 }
+	}
+	
+}
+
+province_event = {
+	id = eva.503
+	hide_window = yes
+	desc = EVTDESC_bounce
+	
+	is_triggered_only = yes
+	
+	immediate = { 
+	
+		random_list = {
+			35 = { set_province_flag = revival_ends }
+			65 = { set_province_flag = revival_succeeds }
+		}
+	
+		if = {
+			limit = { has_province_flag = revival_ends }
+			FROM = { character_event = { id = eva.504 days = 5 random = 8} }
+		}
+		
+		if = {
+			limit = { has_province_flag = revival_succeeds }
+			FROM = { character_event = { id = eva.505 days = 5 random = 8} }
+		}
+	}
+	
+	option = { }
+}
+
+character_event = {
+	id = eva.504
+	desc = EVTDESC_eva.504
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_ends }
+	
+	option = { 
+		name = EVTOPTA_eva.504 
+		FROMFROMFROM = { add_province_modifier = { name = resist_revival duration = 720 } }
+		piety = 25
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.509 }
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = eva.505
+	desc = EVTDESC_eva.505
+	picture = GFX_evt_bad_news
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_succeeds }
+	
+	option = { 
+		name = EVTOPTA_eva.505 
+		FROMFROMFROM = { add_province_modifier = { name = burned_over duration = 720 } }
+		FROMFROMFROM = { religion = revelationist }
+		piety = -5
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.510 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { 
+	id = eva.506
+	desc = EVTDESC_eva.506
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_eva.506
+		trigger = { has_job_title = job_spiritual }
+		religion = revelationist
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.507 }
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = EVTOPTB_eva.506
+		trigger = { NOT = { has_job_title = job_spiritual } }
+		religion = revelationist
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.508 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.506
+		hidden_tooltip = {
+			set_secret_religion = revelationist
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.510 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { 
+	id = eva.507
+	desc = EVTDESC_eva.507
+	picture = GFX_evt_heretic
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.507
+		religion = revelationist
+		FROM = { character_event = { id = eva.511 } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.507 
+		FROM = { character_event = { id = eva.512 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+character_event = {
+	id = eva.508 
+	desc = EVTDESC_eva.508
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.508
+	}
+}
+
+character_event = {
+	id = eva.509
+	desc = EVTDESC_eva.509
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.509
+	}
+}
+
+character_event = {
+	id = eva.510
+	desc = EVTDESC_eva.510
+	picture = GFX_evt_bad_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.510
+	}
+}
+
+character_event = {
+	id = eva.511
+	desc = EVTDESC_eva.511
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.511
+	}
+
+}
+
+character_event = {
+	id = eva.512
+	desc = EVTDESC_eva.512
+	picture = GFX_evt_scandal
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.512
+	}
+
+}
+
+character_event = {
+	id = eva.513
+	desc = EVTDESC_eva.504
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_ends }
+	
+	option = { 
+		name = EVTOPTA_eva.504 
+		FROMFROM = { add_province_modifier = { name = resist_revival duration = 720 } }
+		piety = 25
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.509 }
+				}
+			}
+		}
+	}
+}
+
+#Mormon Revival
+province_event = {
+	id = eva.601
+	desc = EVTDESC_eva.601
+	picture = GFX_evt_heretic
+	
+	trigger = {
+		NOT = { has_province_modifier = mormon_revival }
+		NOT = { has_province_modifier = antinomian_revival }
+		NOT = { has_province_modifier = charismatic_revival }
+		NOT = { has_province_modifier = postadventist_revival }
+		NOT = { has_province_modifier = revelationist_revival }
+		NOT = { has_province_modifier = americanist_revival }
+		NOT = { has_province_modifier = religious_unrest }
+		NOT = { has_province_modifier = resist_revival }
+		NOT = { has_province_modifier = burned_over }
+		NOT = { has_global_flag = end_wildfire_reformation }
+		has_global_flag = evangelical_reformation
+		holder_scope = {
+			religion = evangelical
+			NOT = { religion_authority = 0.8 }
+		}	
+	}
+
+	mean_time_to_happen = {
+		months = 150
+		
+		modifier = { factor = 0.8 trait = lustful }
+		modifier = { factor = 0.8 trait = gluttonous }
+		modifier = { factor = 0.8 trait = greedy }
+		modifier = { factor = 0.8 trait = slothful }
+		modifier = { factor = 0.8 trait = envious }
+		modifier = { factor = 0.8 trait = wroth }
+		modifier = { factor = 0.8 trait = proud	}
+	}
+	
+	immediate = {
+		add_province_modifier = {
+			name = mormon_revival
+			duration = 1460
+		}
+		add_province_modifier = {
+			name = religious_tension
+			duration = 90
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_eva.601 #liege examines the revival
+		holder_scope = { character_event = { id = eva.602 days = 3 } }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPTB_eva.601 #send the lord spiritual
+		holder_scope = { job_spiritual = { character_event = { id = eva.602 days = 3 } } }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPTC_eva.601 #allow it to take its course
+		add_province_modifier = { name = burned_over duration = 912 }
+		piety = -25
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = EVTOPTD_eva.601 #suppress the revival violently
+		remove_province_modifier = religious_tension
+		remove_province_modifier = mormon_revival
+		add_province_modifier = {
+			name = religious_unrest
+			duration = 60 
+		}
+		ai_chance = { factor = 5 }
+	}
+}
+
+character_event = {
+	id = eva.602
+	desc = EVTDESC_eva.602
+	picture = GFX_evt_heretic
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { religion = mormon }
+	}
+		
+	option = { #convert
+		name = EVTOPTA_eva.602
+		FROM = { religion = mormon }
+		FROM = { add_province_modifier = { name = burned_over duration = 912 } }
+		custom_tooltip = { text = TXT_mormon_revival_convert }
+		hidden_tooltip = { character_event = { id = eva.606 } }
+			ai_chance = {
+			factor = 10
+			modifier = { factor = 2 NOT = { religion_authority = 0.5 } }
+			modifier = { factor = 2 NOT = { religion_authority = 0.4 } }
+			modifier = { factor = 2 NOT = { religion_authority = 0.3 } }
+			modifier = { factor = 0 trait = zealous }
+		}
+	}
+	
+	option = { #resist
+		name = EVTOPTB_eva.602
+		hidden_tooltip = { FROM = { holder_scope = { character_event = { id = eva.603 days = 6 } } } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 religion_authority = 0.8 }
+			modifier = { factor = 2 religion_authority = 0.7 }
+			modifier = { factor = 2 religion_authority = 0.6 }
+		}
+	}
+	
+	option = { #reconvert
+		name = EVTOPC_eva.602
+		trigger = { learning = 12 }
+		tooltip_info = learning
+		ai_chance = { factor = 100 }
+		character_event = { id = eva.613 days = 5 }
+	}
+	
+}
+
+province_event = {
+	id = eva.603
+	hide_window = yes
+	desc = EVTDESC_bounce
+	
+	is_triggered_only = yes
+	
+	immediate = { 
+	
+		random_list = {
+			35 = { set_province_flag = revival_ends }
+			65 = { set_province_flag = revival_succeeds }
+		}
+	
+		if = {
+			limit = { has_province_flag = revival_ends }
+			FROM = { character_event = { id = eva.604 days = 5 random = 8} }
+		}
+		
+		if = {
+			limit = { has_province_flag = revival_succeeds }
+			FROM = { character_event = { id = eva.605 days = 5 random = 8} }
+		}
+	}
+	
+	option = { }
+}
+
+character_event = {
+	id = eva.604
+	desc = EVTDESC_eva.604
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_ends }
+	
+	option = { 
+		name = EVTOPTA_eva.604 
+		FROMFROMFROM = { add_province_modifier = { name = resist_revival duration = 720 } }
+		piety = 25
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.609 }
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = eva.605
+	desc = EVTDESC_eva.605
+	picture = GFX_evt_bad_news
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_succeeds }
+	
+	option = { 
+		name = EVTOPTA_eva.605 
+		FROMFROMFROM = { add_province_modifier = { name = burned_over duration = 720 } }
+		FROMFROMFROM = { religion = mormon }
+		piety = -5
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.610 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { 
+	id = eva.606
+	desc = EVTDESC_eva.606
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_eva.606
+		trigger = { has_job_title = job_spiritual }
+		religion = mormon
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.607 }
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = EVTOPTB_eva.606
+		trigger = { NOT = { has_job_title = job_spiritual } }
+		religion = mormon
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.608 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.606
+		hidden_tooltip = {
+			set_secret_religion = mormon
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.610 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { 
+	id = eva.607
+	desc = EVTDESC_eva.607
+	picture = GFX_evt_heretic
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.607
+		religion = mormon
+		FROM = { character_event = { id = eva.611 } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}		
+	}
+	
+	option = {
+		name = EVTOPTB_eva.607 
+		FROM = { character_event = { id = eva.612 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+character_event = {
+	id = eva.608 
+	desc = EVTDESC_eva.608
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.608
+	}
+}
+
+character_event = {
+	id = eva.609
+	desc = EVTDESC_eva.609
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.609
+	}
+}
+
+character_event = {
+	id = eva.610
+	desc = EVTDESC_eva.610
+	picture = GFX_evt_bad_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.610
+	}
+}
+
+character_event = {
+	id = eva.611
+	desc = EVTDESC_eva.611
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.611
+	}
+
+}
+
+character_event = {
+	id = eva.612
+	desc = EVTDESC_eva.612
+	picture = GFX_evt_scandal
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.612
+	}
+
+}
+
+character_event = {
+	id = eva.613
+	desc = EVTDESC_eva.604
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_ends }
+	
+	option = { 
+		name = EVTOPTA_eva.604 
+		FROMFROM = { add_province_modifier = { name = resist_revival duration = 720 } }
+		piety = 25
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.609 }
+				}
+			}
+		}
+	}
+}
+
+#Americanist Revival
+province_event = {
+	id = eva.701
+	desc = EVTDESC_eva.701
+	picture = GFX_evt_heretic
+	
+	trigger = {
+		NOT = { has_province_modifier = americanist_revival }
+		NOT = { has_province_modifier = antinomian_revival }
+		NOT = { has_province_modifier = charismatic_revival }
+		NOT = { has_province_modifier = postadventist_revival }
+		NOT = { has_province_modifier = revelationist_revival }
+		NOT = { has_province_modifier = mormon_revival }
+		NOT = { has_province_modifier = religious_unrest }
+		NOT = { has_province_modifier = resist_revival }
+		NOT = { has_province_modifier = burned_over }
+		NOT = { has_global_flag = end_wildfire_reformation }
+		has_global_flag = evangelical_reformation
+		holder_scope = {
+			religion = evangelical
+			NOT = { religion_authority = 0.8 }
+		}	
+	}
+
+	mean_time_to_happen = {
+		months = 150
+		
+		modifier = { factor = 0.8 trait = lustful }
+		modifier = { factor = 0.8 trait = gluttonous }
+		modifier = { factor = 0.8 trait = greedy }
+		modifier = { factor = 0.8 trait = slothful }
+		modifier = { factor = 0.8 trait = envious }
+		modifier = { factor = 0.8 trait = wroth }
+		modifier = { factor = 0.8 trait = proud	}
+	}
+	
+	immediate = {
+		add_province_modifier = {
+			name = americanist_revival
+			duration = 1460
+		}
+		add_province_modifier = {
+			name = religious_tension
+			duration = 90
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_eva.701 #liege examines the revival
+		holder_scope = { character_event = { id = eva.702 days = 3 } }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPTB_eva.701 #send the lord spiritual
+		holder_scope = { job_spiritual = { character_event = { id = eva.702 days = 3 } } }
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = EVTOPTC_eva.701 #allow it to take its course
+		add_province_modifier = { name = burned_over duration = 912 }
+		piety = -25
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		name = EVTOPTD_eva.701 #suppress the revival violently
+		remove_province_modifier = religious_tension
+		remove_province_modifier = americanist_revival
+		add_province_modifier = {
+			name = religious_unrest
+			duration = 60 
+		}
+		ai_chance = { factor = 5 }
+	}
+}
+
+character_event = {
+	id = eva.702
+	desc = EVTDESC_eva.702
+	picture = GFX_evt_heretic
+	
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { religion = americanist }
+	}
+		
+	option = { #convert
+		name = EVTOPTA_eva.702
+		FROM = { religion = americanist }
+		FROM = { add_province_modifier = { name = burned_over duration = 912 } }
+		custom_tooltip = { text = TXT_americanist_revival_convert }
+		hidden_tooltip = { character_event = { id = eva.706 } }
+			ai_chance = {
+			factor = 10
+			modifier = { factor = 2 NOT = { religion_authority = 0.5 } }
+			modifier = { factor = 2 NOT = { religion_authority = 0.4 } }
+			modifier = { factor = 2 NOT = { religion_authority = 0.3 } }
+			modifier = { factor = 0 trait = zealous }
+		}
+	}
+	
+	option = { #resist
+		name = EVTOPTB_eva.702
+		hidden_tooltip = { FROM = { holder_scope = { character_event = { id = eva.703 days = 6 } } } }
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 religion_authority = 0.8 }
+			modifier = { factor = 2 religion_authority = 0.7 }
+			modifier = { factor = 2 religion_authority = 0.6 }
+		}
+	}
+	
+	option = { #reconvert
+		name = EVTOPC_eva.702
+		trigger = { learning = 12 }
+		tooltip_info = learning
+		ai_chance = { factor = 100 }
+		character_event = { id = eva.713 days = 5 }
+	}
+	
+}
+
+province_event = {
+	id = eva.703
+	hide_window = yes
+	desc = EVTDESC_bounce
+	
+	is_triggered_only = yes
+	
+	immediate = { 
+	
+		random_list = {
+			35 = { set_province_flag = revival_ends }
+			65 = { set_province_flag = revival_succeeds }
+		}
+	
+		if = {
+			limit = { has_province_flag = revival_ends }
+			FROM = { character_event = { id = eva.704 days = 5 random = 8} }
+		}
+		
+		if = {
+			limit = { has_province_flag = revival_succeeds }
+			FROM = { character_event = { id = eva.705 days = 5 random = 8} }
+		}
+	}
+	
+	option = { }
+}
+
+character_event = {
+	id = eva.704
+	desc = EVTDESC_eva.704
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_ends }
+	
+	option = { 
+		name = EVTOPTA_eva.704 
+		FROMFROMFROM = { add_province_modifier = { name = resist_revival duration = 720 } }
+		piety = 25
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.709 }
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = eva.705
+	desc = EVTDESC_eva.705
+	picture = GFX_evt_bad_news
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_succeeds }
+	
+	option = { 
+		name = EVTOPTA_eva.705 
+		FROMFROMFROM = { add_province_modifier = { name = burned_over duration = 720 } }
+		FROMFROMFROM = { religion = americanist }
+		piety = -5
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.710 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { 
+	id = eva.706
+	desc = EVTDESC_eva.706
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = EVTOPTA_eva.706
+		trigger = { has_job_title = job_spiritual }
+		religion = americanist
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.707 }
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = EVTOPTB_eva.706
+		trigger = { NOT = { has_job_title = job_spiritual } }
+		religion = americanist
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.708 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_eva.706
+		hidden_tooltip = {
+			set_secret_religion = americanist
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.710 }
+				}
+			}
+		}
+	}
+}
+
+character_event = { 
+	id = eva.707
+	desc = EVTDESC_eva.707
+	picture = GFX_evt_heretic
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.707
+		religion = americanist
+		FROM = { character_event = { id = eva.711 } }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_eva.707 
+		FROM = { character_event = { id = eva.712 } }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+character_event = {
+	id = eva.708 
+	desc = EVTDESC_eva.708
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.708
+	}
+}
+
+character_event = {
+	id = eva.709
+	desc = EVTDESC_eva.709
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.709
+	}
+}
+
+character_event = {
+	id = eva.710
+	desc = EVTDESC_eva.710
+	picture = GFX_evt_bad_news
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.710
+	}
+}
+
+character_event = {
+	id = eva.711
+	desc = EVTDESC_eva.711
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.711
+	}
+}
+
+character_event = {
+	id = eva.712
+	desc = EVTDESC_eva.712
+	picture = GFX_evt_scandal
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_eva.712
+	}
+
+}
+
+character_event = {
+	id = eva.713
+	desc = EVTDESC_eva.704
+	picture = GFX_evt_stone_church
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_province_flag = revival_ends }
+	
+	option = { 
+		name = EVTOPTA_eva.704 
+		FROMFROM = { add_province_modifier = { name = resist_revival duration = 720 } }
+		piety = 25
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { has_landed_title = e_dixie }
+				}
+				liege = {
+					character_event = { id = eva.709 }
+				}
+			}
+		}
+	}
+}

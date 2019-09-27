@@ -58,6 +58,34 @@ character_event = {
 			}
 		}
 		modifier = {
+			factor = 0.85
+			religion = evangelical
+			OR = {
+				AND = {
+					k_evangelical = {
+						holder_scope = {
+							religion = evangelical
+							trait = baptist
+						}
+					}
+				}
+				AND = {
+					NOT = {
+						k_evangelical = {
+							holder_scope = {
+								religion = evangelical
+								trait = baptist
+							}
+						}
+					}
+					rightful_religious_head_scope = {
+						religion = evangelical
+						trait = baptist
+					}
+				}
+			}
+		}
+		modifier = {
 			factor = 0.6
 			has_religion_feature = religion_proselytizing
 		}
@@ -236,7 +264,7 @@ character_event = {
 				religion = gracia_divinia
 			}
 			location = {
-				religion_group = cult_of_saints
+				NOT = { religion_group = cult_of_saints }
 			}
 		}
 		# Gaians and Cetics have trouble converting most religious groups
@@ -250,6 +278,9 @@ character_event = {
 			}
 			location = {
 				NOR = {
+					religion_openly_gaian_or_heresy_trigger = yes
+					religion = cetic
+					religion = neutic
 					religion_group = pagan_group
 					religion_group = american_native
 					religion_group = pirate

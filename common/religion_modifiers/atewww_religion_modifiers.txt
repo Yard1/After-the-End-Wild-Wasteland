@@ -12,3 +12,8 @@ statue_of_liberty_looted = {
 	authority = -3
 	years = 20
 }
+
+methodist_in_charge = {
+	authority = 5
+	years = 1
+}
