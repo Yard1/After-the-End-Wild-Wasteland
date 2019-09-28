@@ -449,6 +449,17 @@ letter_event = {
 		ai_chance = {
 			factor = 1
 			additive_modifier = { 
+				value = 25
+				NOT = {
+					trait = arbitrary
+				}
+				trait = bad_priest_americanist
+				NOT = { character = event_target:c1 }
+				event_target:c1 = {
+					trait = bad_priest_americanist
+				}
+			}
+			additive_modifier = { 
 				value = -50
 				NOR = {
 					trait = cynical
@@ -2688,6 +2699,17 @@ letter_event = {
             factor = 1
 			#Wicked Judge
 			additive_modifier = { 
+				value = 25
+				NOT = {
+					trait = arbitrary
+				}
+				trait = bad_priest_americanist
+				NOT = { character = event_target:c2 }
+				event_target:c2 = {
+					trait = bad_priest_americanist
+				}
+			}
+			additive_modifier = { 
 				value = -50
 				NOR = {
 					trait = cynical
@@ -2700,7 +2722,6 @@ letter_event = {
 					trait = bad_priest_americanist
 				}
 			}
-			#Wicked Judge
 			additive_modifier = { 
 				value = -100
 				trait = zealous
@@ -4924,6 +4945,18 @@ letter_event = {
 		}
 		ai_chance = {
             factor = 1
+			#Wicked Judge
+			additive_modifier = { 
+				value = 25
+				NOT = {
+					trait = arbitrary
+				}
+				trait = bad_priest_americanist
+				NOT = { character = event_target:c3 }
+				event_target:c3 = {
+					trait = bad_priest_americanist
+				}
+			}
 			additive_modifier = { 
 				value = -50
 				NOR = {
@@ -4933,11 +4966,10 @@ letter_event = {
 					trait = bad_priest_americanist
 				}
 				NOT = { character = event_target:c3 }
-				event_target:c23 = {
+				event_target:c3 = {
 					trait = bad_priest_americanist
 				}
 			}
-			#Wicked Judge
 			additive_modifier = { 
 				value = -100
 				trait = zealous
@@ -7161,6 +7193,18 @@ letter_event = {
 		}
 		ai_chance = {
             factor = 1
+			#Wicked Judge
+			additive_modifier = { 
+				value = 25
+				NOT = {
+					trait = arbitrary
+				}
+				trait = bad_priest_americanist
+				NOT = { character = event_target:c4 }
+				event_target:c4 = {
+					trait = bad_priest_americanist
+				}
+			}
 			additive_modifier = { 
 				value = -50
 				NOR = {
@@ -7174,7 +7218,6 @@ letter_event = {
 					trait = bad_priest_americanist
 				}
 			}
-			#Wicked Judge
 			additive_modifier = { 
 				value = -100
 				trait = zealous
@@ -10031,6 +10074,18 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 1
+			#Wicked Judge
+			additive_modifier = { 
+				value = 25
+				NOT = {
+					trait = arbitrary
+				}
+				trait = bad_priest_americanist
+				NOT = { character = event_target:c1 }
+				event_target:c1 = {
+					trait = bad_priest_americanist
+				}
+			}
 			additive_modifier = { 
 				value = -50
 				NOR = {
@@ -10044,7 +10099,6 @@ character_event = {
 					trait = bad_priest_americanist
 				}
 			}
-			#Wicked Judge
 			additive_modifier = { 
 				value = -100
 				trait = zealous
@@ -12268,6 +12322,18 @@ character_event = {
 		}
 		ai_chance = {
             factor = 1
+			#Wicked Judge
+			additive_modifier = { 
+				value = 25
+				NOT = {
+					trait = arbitrary
+				}
+				trait = bad_priest_americanist
+				NOT = { character = event_target:c2 }
+				event_target:c2 = {
+					trait = bad_priest_americanist
+				}
+			}
 			additive_modifier = { 
 				value = -50
 				NOR = {
@@ -12281,7 +12347,6 @@ character_event = {
 					trait = bad_priest_americanist
 				}
 			}
-			#Wicked Judge
 			additive_modifier = { 
 				value = -100
 				trait = zealous
@@ -14504,6 +14569,18 @@ character_event = {
 		}
 		ai_chance = {
             factor = 1
+			#Wicked Judge
+			additive_modifier = { 
+				value = 25
+				NOT = {
+					trait = arbitrary
+				}
+				trait = bad_priest_americanist
+				NOT = { character = event_target:c3 }
+				event_target:c3 = {
+					trait = bad_priest_americanist
+				}
+			}
 			additive_modifier = { 
 				value = -50
 				NOR = {
@@ -14517,7 +14594,6 @@ character_event = {
 					trait = bad_priest_americanist
 				}
 			}
-			#Wicked Judge
 			additive_modifier = { 
 				value = -100
 				trait = zealous
@@ -16740,6 +16816,18 @@ character_event = {
 		}
 		ai_chance = {
             factor = 1
+			#Wicked Judge
+			additive_modifier = { 
+				value = 25
+				NOT = {
+					trait = arbitrary
+				}
+				trait = bad_priest_americanist
+				NOT = { character = event_target:c4 }
+				event_target:c4 = {
+					trait = bad_priest_americanist
+				}
+			}
 			additive_modifier = { 
 				value = -50
 				NOR = {
@@ -16753,7 +16841,6 @@ character_event = {
 					trait = bad_priest_americanist
 				}
 			}
-			#Wicked Judge
 			additive_modifier = { 
 				value = -100
 				trait = zealous
