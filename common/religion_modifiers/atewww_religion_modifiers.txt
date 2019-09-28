@@ -19,7 +19,7 @@ methodist_in_charge = {
 }
 
 pacifist_realm_prospering = {
-	authority = 2
+	authority = 4
 	years = 35
 }
 

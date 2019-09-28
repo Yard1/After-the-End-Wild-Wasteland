@@ -2454,6 +2454,12 @@ calculate_candidate_score = {
 	}
 	else = {
 		random_list = {
+			10 = {
+				change_variable = { which = newCandidate value = 10 }
+			}
+			10 = {
+				change_variable = { which = newCandidate value = -10 }
+			}
 			20 = {
 				change_variable = { which = newCandidate value = 25 }
 			}
@@ -2466,7 +2472,7 @@ calculate_candidate_score = {
 			10 = {
 				change_variable = { which = newCandidate value = -50 }
 			}
-			40 = {}
+			20 = {}
 		}
 	}
 	if = {

@@ -481,14 +481,26 @@ letter_event = {
 		clr_character_flag = evaluated_candidate_c2
 		clr_character_flag = evaluated_candidate_c3
 		clr_character_flag = evaluated_candidate_c4
+		clr_character_flag = evaluated_candidate_c5
+		clr_character_flag = evaluated_candidate_c6
+		clr_character_flag = evaluated_candidate_c7
+		clr_character_flag = evaluated_candidate_c8
 		clr_character_flag = current_candidate_c1
 		clr_character_flag = current_candidate_c2
 		clr_character_flag = current_candidate_c3
 		clr_character_flag = current_candidate_c4
+		clr_character_flag = current_candidate_c5
+		clr_character_flag = current_candidate_c6
+		clr_character_flag = current_candidate_c7
+		clr_character_flag = current_candidate_c8
 		clr_character_flag = best_candidate_c1
 		clr_character_flag = best_candidate_c2
 		clr_character_flag = best_candidate_c3
 		clr_character_flag = best_candidate_c4
+		clr_character_flag = best_candidate_c5
+		clr_character_flag = best_candidate_c6
+		clr_character_flag = best_candidate_c7
+		clr_character_flag = best_candidate_c8
 		if = {
 			limit = { NOT = { event_target:c1 = { always = yes } } }
 			set_character_flag = evaluated_candidate_c1
@@ -505,6 +517,10 @@ letter_event = {
 			limit = { NOT = { event_target:c4 = { always = yes } } }
 			set_character_flag = evaluated_candidate_c4
 		}
+		set_character_flag = evaluated_candidate_c5
+		set_character_flag = evaluated_candidate_c6
+		set_character_flag = evaluated_candidate_c7
+		set_character_flag = evaluated_candidate_c8
 		if = {
 			limit = { NOT = { has_character_flag = evaluated_candidate_c1 } }
 			event_target:c1 = { save_event_target_as = new_candidate }
