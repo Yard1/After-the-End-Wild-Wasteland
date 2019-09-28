@@ -110,6 +110,8 @@ on_campaign_speaker = {
 	customizer = no
 	random = no
 	cached = yes
+
+	same_opinion = -15
 }
 
 tyrant = {

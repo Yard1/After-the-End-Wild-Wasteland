@@ -1251,7 +1251,7 @@ constitutional_elective = {
 			NOT = { character = FROM } 
 			religion = FROM
 			religion_scope = {
-				NOT = { num_of_holy_sites = 3NOT = { 
+				NOT = { num_of_holy_sites = 3 }
 			}
 			FROM = { 
 				trait = strong

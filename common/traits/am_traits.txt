@@ -4,6 +4,9 @@ on_campaign = {
 	customizer = no
 	random = no
 	cached = yes
+
+	same_opinion = -15
+	monthly_character_wealth = -2
 }
 president = {
 	monthly_character_prestige = 0.2

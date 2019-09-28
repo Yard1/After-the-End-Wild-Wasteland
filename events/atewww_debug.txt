@@ -173,28 +173,53 @@ character_event = {
 	picture = GFX_evt_capitol_building
 	
 	is_triggered_only = yes
+	#hide_window = yes
+	
+	option = {
+		set_variable = { which = optA value = 0 }
+		set_variable = { which = optB value = 0 }
+		any_playable_ruler = {
+			character_event = { id = ATE_WWW_DEBUG.40 }
+		}
+	}
+	after = {
+		character_event = { id = ATE_WWW_DEBUG.41 days = 1 }
+	}
+}
+
+character_event = {
+	id = ATE_WWW_DEBUG.40
+	desc = "DEBUG"
+	picture = GFX_evt_capitol_building
+	
+	is_triggered_only = yes
 	hide_window = yes
 	
 	option = {
-		log = "ATE_WWW_DEBUG.4: [Root.GetBestName]"
-		log = "ATE_WWW_DEBUG.4: [Root.GetBestName] try father:"
-		father_even_if_dead = { log = "ATE_WWW_DEBUG.4: [Root.GetBestName] father: [This.GetBestName]" }
-		log = "ATE_WWW_DEBUG.4: [Root.GetBestName] try mother:"
-		mother_even_if_dead = { log = "ATE_WWW_DEBUG.4: [Root.GetBestName] mother: [This.GetBestName]" }
-		if = {
-			limit = { father_even_if_dead = { always = yes } }
-			father_even_if_dead = { log = "ATE_WWW_DEBUG.4: [Root.GetBestName] father: always = yes" }
-		}
-		if = {
-			limit = { mother_even_if_dead = { always = yes } }
-			mother_even_if_dead = { log = "ATE_WWW_DEBUG.4: [Root.GetBestName] mother: always = yes" }
-		}
-		if = {
-			limit = { mother_even_if_dead = { is_parent_of = ROOT } }
-			mother_even_if_dead = { log = "ATE_WWW_DEBUG.4: [Root.GetBestName] mother: is_parent_of = ROOT" }
+		FROM = { change_variable = { which = optA value = 1 } }
+		ai_chance = {
+			factor = -100
 		}
 	}
+	option = {
+		FROM = { change_variable = { which = optB value = 1 } }
+		ai_chance = {
+			factor = -1
+		}
+	}
+}
 
+character_event = {
+	id = ATE_WWW_DEBUG.41
+	desc = "DEBUG"
+	picture = GFX_evt_capitol_building
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	option = {
+		log = "OptA: [Root.optA.GetValue] OptB: [Root.optB.GetValue]"
+	}
 }
 
 character_event = {

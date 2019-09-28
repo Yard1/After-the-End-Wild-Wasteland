@@ -79,6 +79,7 @@ decisions = {
 		}
 		allow = {
 			age = 35
+			wealth = 50
 			block_general_event_trigger = no
 			is_landed = yes
 			holy_order = no
@@ -100,6 +101,7 @@ decisions = {
 			} }
 		}
 		effect = {
+			wealth = -50
 			add_trait = on_campaign
 			set_character_flag = pres_candidate
 			hidden_tooltip = {
@@ -125,6 +127,10 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { monthly_income = 2.5 }
+			}
 			modifier = {
 				factor = 0.2
 			}
@@ -264,6 +270,7 @@ decisions = {
 		is_high_prio = yes
 		ai = no
 		potential = {
+			always = no
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
