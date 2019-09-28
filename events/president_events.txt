@@ -65,33 +65,29 @@ character_event = {
 			NOT = { is_title_active = d_americanist }
 			d_americanist = { has_holder = no }
 		}
+		NOT = {
+			e_usa = { holder_scope = { always = yes } }
+		}
+		NOT = { has_global_flag = pres_election }
 	}
 	
 	option = {
 		name = DEBUG
-		if = {
-			limit = {
-				NOT = {
-					e_usa = { holder_scope = { always = yes } }
-				}
-				NOT = { has_global_flag = pres_election }
+		set_global_flag = pres_election
+		set_global_flag = declare_candidacy
+		any_playable_ruler = { # Inform players
+			limit = { religion = americanist }
+			character_event = { id = prez.3 }
+		}
+		k_papal_state = {
+			holder_scope = {
+				set_variable = { which = num_candidates value = 0 }
+				character_event = { id = prez.7 days = 30 } # End candidate declaration period
 			}
-			set_global_flag = pres_election
-			set_global_flag = declare_candidacy
-			any_playable_ruler = { # Inform players
-				limit = { religion = americanist }
-				character_event = { id = prez.3 }
-			}
-			k_papal_state = {
-				holder_scope = {
-					set_variable = { which = num_candidates value = 0 }
-					character_event = { id = prez.7 days = 30 } # End candidate declaration period
-				}
-			}
-			d_americanist = {
-				activate_title = { title = THIS status = no }
-				unsafe_destroy_landed_title = THIS
-			}
+		}
+		d_americanist = {
+			activate_title = { title = THIS status = no }
+			unsafe_destroy_landed_title = THIS
 		}
 	}
 }
@@ -227,16 +223,6 @@ character_event = {
 		}
 		set_character_flag = dropped_out
 		clr_character_flag = pres_candidate
-		any_independent_ruler = {
-			any_realm_character = {
-				limit = {
-					trait = on_campaign
-					has_character_flag = pres_candidate
-				}
-				remove_opinion = { modifier = opposing_candidate who = ROOT }
-				reverse_remove_opinion = { modifier = opposing_candidate who = ROOT }
-			}
-		}
 	}
 	
 	option = {
@@ -504,19 +490,19 @@ letter_event = {
 		clr_character_flag = best_candidate_c3
 		clr_character_flag = best_candidate_c4
 		if = {
-			limit = { event_target:c1 = { always = no } }
+			limit = { NOT = { event_target:c1 = { always = yes } } }
 			set_character_flag = evaluated_candidate_c1
 		}
 		if = {
-			limit = { event_target:c2 = { always = no } }
+			limit = { NOT = { event_target:c2 = { always = yes } } }
 			set_character_flag = evaluated_candidate_c2
 		}
 		if = {
-			limit = { event_target:c3 = { always = no } }
+			limit = { NOT = { event_target:c3 = { always = yes } } }
 			set_character_flag = evaluated_candidate_c3
 		}
 		if = {
-			limit = { event_target:c4 = { always = no } }
+			limit = { NOT = { event_target:c4 = { always = yes } } }
 			set_character_flag = evaluated_candidate_c4
 		}
 		if = {

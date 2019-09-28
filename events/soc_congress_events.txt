@@ -405,14 +405,6 @@ character_event = {
 		}
 		set_character_flag = dropped_out
 		clr_character_flag = speaker_candidate
-		any_character = {
-			limit = {
-				trait = on_campaign_speaker
-				has_character_flag = speaker_candidate
-			}
-			remove_opinion = { modifier = opposing_candidate who = ROOT }
-			reverse_remove_opinion = { modifier = opposing_candidate who = ROOT }
-		}
 	}
 	
 	option = {

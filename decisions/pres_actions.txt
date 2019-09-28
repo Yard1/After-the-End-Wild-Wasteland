@@ -94,8 +94,11 @@ decisions = {
 			hidden_tooltip = { OR = {
 				ai = no
 				diplomacy = 10
+				stewardship = 10
+				martial = 10
 				learning = 10
 				intrigue = 10
+				monthly_income = 15
 				trait = ambitious
 				has_ambition = obj_become_president
 			} }
@@ -110,16 +113,6 @@ decisions = {
 					character_event = { id = prez.4 }
 				}
 				k_papal_state = { holder_scope = { change_variable = { which = num_candidates value = 1 } } }
-				any_independent_ruler = {
-					any_realm_character = {
-						limit = {
-							trait = on_campaign
-							has_character_flag = pres_candidate
-						}
-						opinion = { modifier = opposing_candidate who = ROOT }
-						reverse_opinion = { modifier = opposing_candidate who = ROOT }
-					}
-				}
 			}
 		}
 		revoke_allowed = {

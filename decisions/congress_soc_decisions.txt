@@ -257,14 +257,6 @@ decisions = {
 					character_event = { id = SC.7 }
 				}
 				k_papal_state = { holder_scope = { change_variable = { which = s_num_candidates value = 1 } } }
-				any_character = {
-					limit = {
-						trait = on_campaign_speaker
-						has_character_flag = speaker_candidate
-					}
-					opinion = { modifier = opposing_candidate who = ROOT }
-					reverse_opinion = { modifier = opposing_candidate who = ROOT }
-				}
 			}
 		}
 		revoke_allowed = {
