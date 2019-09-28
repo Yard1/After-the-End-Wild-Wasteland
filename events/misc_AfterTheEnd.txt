@@ -21534,6 +21534,20 @@ character_event = {
 		c_sable = {
 			holder_scope = { character_event = { id = ATE_WWW_DEBUG.3 days = 1 } }
 		}
+		c_1788025 = {
+			if = {
+				limit = { ai = no can_join_society = the_satanists }
+				join_society = the_satanists
+				society_rank_up = {
+					rank = 3
+					society = the_assassins
+				}
+				if = {
+					limit = { is_society_grandmaster = no }
+					set_society_grandmaster = yes
+				}
+			}
+		}
 	}
 
 	after = {
