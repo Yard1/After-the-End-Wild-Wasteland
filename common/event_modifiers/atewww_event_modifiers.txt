@@ -154,3 +154,10 @@ pacifist_religion = {
 	local_revolt_risk = -0.04
 	icon = 8	
 }
+
+secret_rust_cultist_reformed_community = {
+	icon = 18
+	is_visible = {
+		society_member_of = secret_religious_society_rust_cultist_reformed
+	}
+}

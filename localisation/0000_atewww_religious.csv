@@ -509,6 +509,8 @@ rust_cultist_reformed;Rust Cultist;;;;;;;;;;;;;x
 rust_cultist_reformed_DESC;When the first of the Rust Cult stumbled upon an abandoned factory of the old world, what he saw seemed to be the handiwork of the gods. The cult quickly spread through the former Rust Belt, worshiping these houses of the divine and the technological marvels wrought within, which they are willing to defend with their lives. Rust Cultists dedicate much of their time to recovering and revering any old world technology they can find. Due to their age however, opportunities to find operational relics are few and far between.;;;;;;;;;;;;;x
 rust_cultist_reformed_FEATURES;§Y*§! May undertake journeys to seek & salvage old world technology.;;;;;;;;;;;;;x
 
+rust_cultist_reformed_opinion;[rust_cultist_reformed.GetName] Opinion;;;;;;;;;;;;;x
+
 secret_religious_society_rust_cultist_reformed;[GetReligiousCommunityName_rust_cultist_reformed];[GetReligiousCommunityName_rust_cultist_reformed];[GetReligiousCommunityName_rust_cultist_reformed];;[GetReligiousCommunityName_rust_cultist_reformed];;;;;;;;;x
 secret_religious_society_REAL_rust_cultist_reformed;The Forgotten Generation;;;;;;;;;;;;;x
 alt_start_community_name_rust_cultist_reformed;The [rust_cultist_reformed.GetName] Faithful;;;;;;;;;;;;;x
