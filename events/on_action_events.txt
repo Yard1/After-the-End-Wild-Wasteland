@@ -4434,6 +4434,7 @@ narrative_event = {
 					NOR = { 
 						religion = thelemic_reformed
 						religion = espiritista_reformed
+						religion = uahomche_reformed
 					} 
 				}
 			}
