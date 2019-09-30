@@ -2868,7 +2868,7 @@ oldworld = {
 		
 		color = { 0.4 0.4 0.4 }
 		
-		interface_skin = { americanist_interface }
+		interface_skin = { americanist_interface hellenic_interface }
 
 		male_names = {
 			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Theodore George John Thomas James Benjamin Andrew Franklin
@@ -3322,6 +3322,86 @@ oldworld = {
 			intrigue = 1
 			learning = 1
 		}
+	}
+
+	cult_of_marx = { #here we go
+		graphical_culture = muslimgfx
+		
+		interface_skin = { cult_of_marx_interface }
+		
+		icon = 76
+		color = { 175 40 40 }
+		
+		crusade_name = GREAT_PATRIOTIC_WAR
+		scripture_name = THE_MANIFESTO
+		priest_title = PARTY_SECRETARY
+		piety_name = LOYALTY
+		
+		high_god_name = GOD_THE_PARTY
+		
+		god_names = {
+			GOD_MARX GOD_ENGELS GOD_THE_REVOLUTION GOD_THE_DIALECTIC GOD_HISTORY
+		}
+		evil_god_names = {
+			THE_CAPITALIST THE_REACTIONARY THE_FASCIST THE_PRIEST
+		}
+		
+		autocephaly = yes
+		can_excommunicate = yes
+		can_demand_religious_conversion = yes
+		attacking_same_religion_piety_loss = yes
+		priests_can_marry = yes
+		priests_can_inherit = no
+		female_temple_holders = yes
+		feminist = yes
+		defensive_attrition = yes
+		hard_to_convert = yes
+		raised_vassal_opinion_loss = no
+
+		can_call_crusade = no #they have their own stuff
+		allow_in_ruler_designer = no
+
+		aggression = 2
+		unit_modifier = {		
+			garrison_size = 0.3
+			levy_size = 0.4
+			
+			key = "DEF_RELIGION"
+		}
+		unit_home_modifier = {
+			land_morale = 0.8
+			light_infantry_defensive = 0.8
+			heavy_infantry_defensive = 0.8
+			pikemen_defensive = 0.8
+			light_cavalry_defensive = 0.8
+			knights_defensive = 0.8
+			archers_defensive = 0.8
+			horse_archers_defensive = 0.8
+			camel_cavalry_defensive = 0.8
+			war_elephants_defensive = 0.8
+			
+			garrison_size = 0.4
+			
+			key = "DEF_RELIGION_HOME_TERRITORY"
+		}
+		
+		character_modifier = {
+			infidel_opinion = -50
+			americanist_opinion = -100
+			hamiltonian_opinion = -100
+			jeffersonian_opinion = -100
+			libertarian_opinion = -100
+			consumerist_opinion = -100
+			monetarist_opinion = -100
+			rust_cultist_opinion = -75
+			rust_cultist_reformed_opinion = -70
+			chrome_cultist_opinion = -75
+			atomicist_opinion = -75
+			aphite_opinion = -75
+		}
+
+		religious_clothing_head = 18
+		religious_clothing_priest = 18
 	}
 }
 

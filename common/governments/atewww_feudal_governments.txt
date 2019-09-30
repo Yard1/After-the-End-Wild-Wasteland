@@ -37,6 +37,7 @@ feudal_governments = {
 				independent = yes
 				liege = { government = militarist_government }
 			}
+			NOT = { is_government_potential = communist_republic }
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = constitutional_rep }
@@ -117,6 +118,7 @@ feudal_governments = {
 				religion = monetarist
 			}
 			is_patrician = no
+			NOT = { is_government_potential = communist_republic }
 			NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }

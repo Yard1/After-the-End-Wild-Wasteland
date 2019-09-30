@@ -35,6 +35,7 @@ republic_governments = {
 				}
 			}
 			NOT = { is_government_potential = colonial_government }
+			NOT = { is_government_potential = communist_republic }
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = mconstitutional_rep }
 			#is_female = no
@@ -135,6 +136,7 @@ republic_governments = {
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
 			}
+			NOT = { is_government_potential = communist_republic }
 			NOT = { is_government_potential = merchant_republic_government }
 			NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
@@ -273,12 +275,16 @@ republic_governments = {
 			feudal_government
 			consumerist_government
 			muslim_government
+			mconstitutional_rep
+			constitutional_rep
 			theocratic_feudal_government
 			chinese_imperial_government
 			theocracy_government
 			tribal_government
 			merchant_republic_government
 			republic_government
+			bureaucratic_government
+			roman_imperial_government
 		}
 		gets_religion_opinion_penalties = no
 		vassal_government_opinion_penalties = no
@@ -306,6 +312,78 @@ republic_governments = {
 		can_create_empires = no
 		can_demand_religious_conversion = no
 		can_inherit = no
+		
+		## Modifiers
+		court_size_modifier = 10
+	}
+
+	communist_republic = {
+		preferred_holdings = { CASTLE CITY }
+		allowed_holdings = {
+			CASTLE
+			CITY
+			TEMPLE
+			FORT
+			HOSPITAL
+		}
+		forced_contract = {
+			feudal_government
+			consumerist_government
+			muslim_government
+			theocratic_feudal_government
+			chinese_imperial_government
+			mconstitutional_rep
+			constitutional_rep
+			theocracy_government
+			tribal_government
+			merchant_republic_government
+			republic_government
+			order_government
+			bureaucratic_government
+			roman_imperial_government
+		}
+		free_revoke_on_governments_religion = {
+			feudal_government
+			consumerist_government
+			muslim_government
+			theocratic_feudal_government
+			chinese_imperial_government
+			theocracy_government
+			mconstitutional_rep
+			constitutional_rep
+			tribal_government
+			merchant_republic_government
+			republic_government
+			order_government
+			bureaucratic_government
+			roman_imperial_government
+		}
+		frame_suffix = "_republic"
+		title_prefix = "city_"
+		potential = {
+			religion = cult_of_marx
+		}
+		
+		color = { 175 40 40 }
+		
+		can_imprison_without_reason = yes
+		can_revoke_without_reason = yes
+		
+		can_build_tribal = no
+		
+		capital_move_delay = 600
+		
+		commander_limit = 15
+		
+		can_demand_religious_conversion = yes
+		have_gender_laws = yes
+		ignores_de_jure_laws = yes
+		barons_need_dynasty = no
+		free_retract_vassalage = yes
+		free_levies_in_offensive_war = yes
+
+		can_grant_kingdoms_and_empires_to_other_government = no
+		can_be_granted_kingdoms_and_empires_by_other_government = no
 		
 		## Modifiers
 		court_size_modifier = 10

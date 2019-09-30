@@ -47,6 +47,7 @@ feudal_governments = {
 					liege = { NOT = { government = militarist_government } }
 				}
 			}
+			NOT = { is_government_potential = communist_republic }
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = constitutional_rep }
@@ -110,6 +111,7 @@ feudal_governments = {
 				religion = neutic
 			}
 			is_patrician = no
+			NOT = { is_government_potential = communist_republic }
 			NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
@@ -176,6 +178,7 @@ feudal_governments = {
 				religion_openly_gaian_or_heresy_trigger = yes
 				higher_tier_than = BARON
 			}
+			NOT = { is_government_potential = communist_republic }
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = colonial_government }
