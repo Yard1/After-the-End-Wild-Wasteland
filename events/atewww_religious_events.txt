@@ -721,6 +721,10 @@ character_event = {
 			any_demesne_title = {
 				limit = {
 					higher_tier_than = BARON
+					OR = {
+						NOT = { has_law = succ_seniority }
+						holder_scope = { has_landed_title = d_forscom }
+					}
 					NOT = { has_law = succ_feudal_elective }
 					is_law_potential = succ_feudal_elective
 				}
