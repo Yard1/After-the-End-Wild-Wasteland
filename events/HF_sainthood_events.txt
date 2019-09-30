@@ -1120,6 +1120,48 @@ character_event = {
                         }
                         else_if = {
                             limit = {
+                                religion = chrome_cultist
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_01
+                                    religion = chrome_cultist
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_01
+                                    religion = chrome_cultist
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                religion = rust_cultist_reformed
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_01
+                                    religion = rust_cultist_reformed
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_01
+                                    religion = rust_cultist_reformed
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
                                 religion = occultist_reformed
                             }
                             if = {
@@ -1578,6 +1620,48 @@ character_event = {
                         }
                         else_if = {
                             limit = {
+                                religion = chrome_cultist
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_03
+                                    religion = chrome_cultist
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_03
+                                    religion = chrome_cultist
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                religion = rust_cultist_reformed
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_03
+                                    religion = rust_cultist_reformed
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_03
+                                    religion = rust_cultist_reformed
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
                                 religion = occultist_reformed
                             }
                             if = {
@@ -1925,6 +2009,48 @@ character_event = {
                         }
                         else_if = {
                             limit = {
+                                religion = chrome_cultist
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_04
+                                    religion = chrome_cultist
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_04
+                                    religion = chrome_cultist
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                religion = rust_cultist_reformed
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_04
+                                    religion = rust_cultist_reformed
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_04
+                                    religion = rust_cultist_reformed
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
                                 religion = occultist_reformed
                             }
                             if = {
@@ -2266,6 +2392,48 @@ character_event = {
                         }
                         else_if = {
                             limit = {
+                                religion = chrome_cultist
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_05
+                                    religion = chrome_cultist
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_05
+                                    religion = chrome_cultist
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                religion = rust_cultist_reformed
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_03
+                                    religion = rust_cultist_reformed
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_05
+                                    religion = rust_cultist_reformed
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
                                 religion = occultist_reformed
                             }
                             if = {
@@ -2597,6 +2765,48 @@ character_event = {
                                 create_bloodline = {
                                     type = saintly_bloodline_rust_cultist_06
                                     religion = rust_cultist
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                religion = chrome_cultist
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_06
+                                    religion = chrome_cultist
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_06
+                                    religion = chrome_cultist
+                                }
+                            }
+                        }
+                        else_if = {
+                            limit = {
+                                religion = rust_cultist_reformed
+                            }
+                            if = {
+                                limit = {
+                                    is_female = yes
+                                }
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_06
+                                    religion = rust_cultist_reformed
+                                    inheritance = matrilineal
+                                }
+                            }
+                            else = {
+                                create_bloodline = {
+                                    type = saintly_bloodline_rust_cultist_06
+                                    religion = rust_cultist_reformed
                                 }
                             }
                         }

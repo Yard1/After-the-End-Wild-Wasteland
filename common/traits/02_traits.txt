@@ -3644,6 +3644,12 @@ dead_scepter_midewiwin_fylkir = {
 	customizer = no
 }
 
+dead_scepter_rust_cultist_fylkir = {
+	hidden = yes
+	random = no
+	customizer = no
+}
+
 dead_crown_aztec_fylkir = {
 	hidden = yes
 	random = no

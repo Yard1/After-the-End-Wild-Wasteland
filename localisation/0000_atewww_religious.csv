@@ -505,6 +505,80 @@ EVTOPTA_ATE_WWW_RELIGION_35;The arm.;;;;;;;;;;;;;x
 chrome_cultist_sacrifice;One With the Metal;;;;;;;;;;;;;x
 chrome_cultist_sacrifice_desc;This character has chose to voluntarily replace one of their limbs with a prosthetic, gaining them respect from all the Chrome Cultists.;;;;;;;;;;;;;x
 
+rust_cultist_reformed;Rust Cultist;;;;;;;;;;;;;x
+rust_cultist_reformed_DESC;When the first of the Rust Cult stumbled upon an abandoned factory of the old world, what he saw seemed to be the handiwork of the gods. The cult quickly spread through the former Rust Belt, worshiping these houses of the divine and the technological marvels wrought within, which they are willing to defend with their lives. Rust Cultists dedicate much of their time to recovering and revering any old world technology they can find. Due to their age however, opportunities to find operational relics are few and far between.;;;;;;;;;;;;;x
+rust_cultist_reformed_FEATURES;§Y*§! May undertake journeys to seek & salvage old world technology.;;;;;;;;;;;;;x
+
+secret_religious_society_rust_cultist_reformed;[GetReligiousCommunityName_rust_cultist_reformed];[GetReligiousCommunityName_rust_cultist_reformed];[GetReligiousCommunityName_rust_cultist_reformed];;[GetReligiousCommunityName_rust_cultist_reformed];;;;;;;;;x
+secret_religious_society_REAL_rust_cultist_reformed;The Forgotten Generation;;;;;;;;;;;;;x
+alt_start_community_name_rust_cultist_reformed;The [rust_cultist_reformed.GetName] Faithful;;;;;;;;;;;;;x
+secret_religious_society_rust_cultist_reformed_desc;[GetReligiousSocietyDesc_rust_cultist_reformed];[GetReligiousSocietyDesc_rust_cultist_reformed];[GetReligiousSocietyDesc_rust_cultist_reformed];;[GetReligiousSocietyDesc_rust_cultist_reformed];;;;;;;;;x
+secret_religious_society_rust_cultist_reformed_desc_REAL;The factories of the ancients sprawl endlessly, attesting the great might of Vulcan and his servants. Yet even so, rust cultists suffer oppression from those who see the artifacts of Ford and Vulcan as mere tools, as if they could be compared to items of mere human manufacture. The Forgotten keep their faith to themselves, but share it only with those of their own faith, though they look forward to a time when the machine spirits will revive the works of the ancients and they can break free from the creeping destruction of the Consuming Tarnish which envelops this world.;;;;;;;;x
+secretly_convert_to_rust_cultist_reformed_holy_site;Secretly Convert to Rust Cultist;;;;;;;;;;;;;x
+secretly_convert_to_rust_cultist_reformed_holy_site_desc;The §YRust Cultist§! pilgrims that flock to the holy site in §Y[Root.Location.GetName]§! impress me with the depth and passion of their faith. I am tempted to convert in secrecy...;;;;;;;;;;;;;x
+secret_religious_society_rust_cultist_reformed_currency;Devotion;Dévotion;Hingabe;;Devoción;;;;;;;;;x
+secret_religious_society_rust_cultist_reformed_rank_1_female;Faithful;Fidèle;Getreue;;Fiel;;;;x
+secret_religious_society_rust_cultist_reformed_rank_2_female;Adherent;Adhérente;Anhängerin;;Seguidora;;;;x
+secret_religious_society_rust_cultist_reformed_rank_3_female;Preacher;Prêcheuse;Predigerin;;Predicadora;;;;x
+secret_religious_society_rust_cultist_reformed_rank_4_female;Herald;Messagère;Herold;;Mensajera;;;;x
+secret_religious_society_rust_cultist_reformed_rank_1_male;Faithful;Fidèle;Getreuer;;Fiel;;;;x
+secret_religious_society_rust_cultist_reformed_rank_2_male;Adherent;Adhérent;Anhänger;;Seguidor;;;;x
+secret_religious_society_rust_cultist_reformed_rank_3_male;Preacher;Prêcheur;Prediger;;Predicador;;;;x
+secret_religious_society_rust_cultist_reformed_rank_4_male;Herald;Messager;Herold;;Mensajero;;;;x
+secret_religious_community_rust_cultist_reformed;Secret Rust Cultist Community;;;;;;;;;;;;;x
+secret_rust_cultist_reformed_community;Secret Rust Cultist Community;;;;;;;;;;;;;x
+secret_rust_cultist_reformed_community_desc;In secret, Rust Cultist mechanists have organized themselves as a community in this province. From there it converts others, grows, and protects their own.;En secret, les fidèles se sont organisés en tant que communauté dans cette province. De là, la commaunauté convertit d'autres personnes, grandit et protège les siens.;;;;;;;;;;;;x
+secret_religious_society_rust_cultist_reformed_leader_desc;The Prime Mechanus, leading the international effort of bringing more people into the fold.;Le grand prêtre dirige l'effort mondial visant à réunir davantage de personnes dans les rangs de sa société.;Der Hohepriester des $SOCIETY|Y$-Zirkels, der die internationalen Bemühungen leitet, mehr Menschen in den Schoß der Familie zu führen.;;El Sumo sacerdote, que dirige la misión a escala internacional para atraer a más fieles.;;;;;;;;;x
+
+city_baron_rust_cultist_reformed;Machinist;;;;;;;;;;;;;x
+city_baron_female_rust_cultist_reformed;Machinist;;;;;;;;;;;;;x
+city_barony_of_rust_cultist_reformed;Machinery of;;;;;;;;;;;;;x
+city_count_rust_cultist_reformed;Foreman;;;;;;;;;;;;;x
+city_count_female_rust_cultist_reformed;Foreman;;;;;;;;;;;;;x
+city_county_of_rust_cultist_reformed;Shop of;;;;;;;;;;;;;x
+city_duke_rust_cultist_reformed;Overseer;;;;;;;;;;;;;x
+city_duke_female_rust_cultist_reformed;Overseer;;;;;;;;;;;;;x
+city_duchy_of_rust_cultist_reformed;Factory of;;;;;;;;;;;;;x
+city_king_rust_cultist_reformed;Organizer;;;;;;;;;;;;;x
+city_king_female_rust_cultist_reformed;Organizer;;;;;;;;;;;;;x
+city_kingdom_of_rust_cultist_reformed;Union of;;;;;;;;;;;;;x
+city_emperor_rust_cultist_reformed;Union President;;;;;;;;;;;;;x
+city_emperor_female_rust_cultist_reformed;Union President;;;;;;;;;;;;;x
+city_empire_of_rust_cultist_reformed;Federated Unions of;;;;;;;;;;;;;x
+temple_baron_rust_cultist_reformed;Stationmaster;;;;;;;;;;;;;x
+temple_baron_rust_cultist_reformeds;Stationmasters;;;;;;;;;;;;;x
+temple_baron_female_rust_cultist_reformed;Stationmaster;;;;;;;;;;;;;x
+temple_barony_of_rust_cultist_reformed;Station of;;;;;;;;;;;;;x
+temple_count_rust_cultist_reformed;Conductor;;;;;;;;;;;;;x
+temple_count_female_rust_cultist_reformed;Conductor;;;;;;;;;;;;;x
+temple_county_of_rust_cultist_reformed;Conductorship of;;;;;;;;;;;;;x
+temple_duke_rust_cultist_reformed;Inspector;;;;;;;;;;;;;x
+temple_duke_female_rust_cultist_reformed;Inspector;;;;;;;;;;;;;x
+temple_duchy_of_rust_cultist_reformed;Inspectorate of;;;;;;;;;;;;;x
+temple_king_rust_cultist_reformed;Engineer;;;;;;;;;;;;;x
+temple_king_female_rust_cultist_reformed;Engineer;;;;;;;;;;;;;x
+temple_kingdom_of_rust_cultist_reformed;Railroad of;;;;;;;;;;;;;x
+temple_emperor_rust_cultist_reformed;High Engineer;;;;;;;;;;;;;x
+temple_emperor_female_rust_cultist_reformed;High Engineer;;;;;;;;;;;;;x
+temple_empire_of_rust_cultist_reformed;System of;;;;;;;;;;;;;x
+count_rust_cultist_reformed;Magnate;;;;;;;;;;;;;x
+count_female_rust_cultist_reformed;Magnate;;;;;;;;;;;;;x
+county_of_rust_cultist_reformed;Enterprise of;;;;;;;;;;;;;x
+county_rust_cultist_reformed;Enterprise;;;;;;;;;;;;;x
+duke_rust_cultist_reformed;Oligarch;;;;;;;;;;;;;x
+duke_female_rust_cultist_reformed;Oligarch;;;;;;;;;;;;;x
+duchy_of_rust_cultist_reformed;Oligarchate of;;;;;;;;;;;;;x
+duchy_rust_cultist_reformed;Oligarchate;;;;;;;;;;;;;x
+king_rust_cultist_reformed;Tycoon;;;;;;;;;;;;;x
+king_female_rust_cultist_reformed;Tycoon;;;;;;;;;;;;;x
+kingdom_of_rust_cultist_reformed;Tycoonship of;;;;;;;;;;;;;x
+kingdom_rust_cultist_reformed;Tycoonship;;;;;;;;;;;;;x
+emperor_rust_cultist_reformed;Autarch;;;;;;;;;;;;;x
+emperor_female_rust_cultist_reformed;Autarch;;;;;;;;;;;;;x
+empire_of_rust_cultist_reformed;Autarchy of;;;;;;;;;;;;;x
+empire_rust_cultist_reformed;Autarchy;;;;;;;;;;;;;x
+
+
 # Exovedate
 
 exovedate_opinion;[exovedate.GetName] Opinion;;;;;;;;;;;;;x

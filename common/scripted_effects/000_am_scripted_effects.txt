@@ -65,6 +65,7 @@ add_am_crusade_trait_effect = {
 		limit = {
 			OR = {
 				religion = rust_cultist
+				religion = rust_cultist_reformed
 				religion = chrome_cultist
 			}
 		}
@@ -1421,6 +1422,22 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
     				NOT = {
 						has_character_was_religion_flag_trigger = yes
     				}
+    				religion = rust_cultist_reformed
+    			}
+    			has_character_flag = character_was_rust_cultist_reformed
+			}
+    	}
+    	set_secret_religion = rust_cultist_reformed
+    	clr_character_flag = character_was_rust_cultist_reformed
+		break = yes
+    }
+	if = {
+    	limit = {
+    		OR = {
+    			AND = {
+    				NOT = {
+						has_character_was_religion_flag_trigger = yes
+    				}
     				religion = occultist_reformed
     			}
     			has_character_flag = character_was_occultist_reformed
@@ -1866,6 +1883,10 @@ add_religion_char_flag_effect = {
     	set_character_flag = character_was_rust_cultist
     }
 	else_if = {
+    	limit = { religion = rust_cultist_reformed }
+    	set_character_flag = character_was_rust_cultist_reformed
+    }
+	else_if = {
     	limit = { religion = occultist_reformed }
     	set_character_flag = character_was_occultist_reformed
     }
@@ -1979,6 +2000,7 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_revelationist
 	clr_character_flag = character_was_chrome_cultist
 	clr_character_flag = character_was_rust_cultist
+	clr_character_flag = character_was_rust_cultist_reformed
 	clr_character_flag = character_was_occultist_reformed
 	clr_character_flag = character_was_occultist
 	clr_character_flag = character_was_thelemic_reformed
@@ -2419,6 +2441,13 @@ event_target_old_religion_from_flag_effect = {
     	limit = { has_character_flag = character_was_rust_cultist }
     	random_character = {
     		limit = { religion = rust_cultist }
+    		save_event_target_as = old_religion
+    	}
+    }
+	else_if = {
+    	limit = { has_character_flag = character_was_rust_cultist_reformed }
+    	random_character = {
+    		limit = { religion = rust_cultist_reformed }
     		save_event_target_as = old_religion
     	}
     }
@@ -3176,6 +3205,17 @@ flip_secret_religious_community_provinces = {
 					}
 					religion = rust_cultist
 					remove_province_modifier = secret_rust_cultist_community
+				}
+			}
+		}
+		secret_religious_society_rust_cultist_reformed = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_rust_cultist_reformed_community
+					}
+					religion = rust_cultist_reformed
+					remove_province_modifier = secret_rust_cultist_reformed_community
 				}
 			}
 		}
@@ -4342,6 +4382,17 @@ root_secret_religion_provinces_convert_effect = {
 						}
 						religion = rust_cultist
 						remove_province_modifier = secret_rust_cultist_community
+					}
+				}
+			}
+			secret_religious_society_rust_cultist_reformed = { 
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_rust_cultist_reformed_community
+						}
+						religion = rust_cultist_reformed
+						remove_province_modifier = secret_rust_cultist_reformed_community
 					}
 				}
 			}
@@ -6129,6 +6180,20 @@ transfer_crown_on_abdication_effect = {
 	}
 	if = {
 		limit = { 
+			has_landed_title = d_rust_cultist
+			any_artifact = { artifact_type = scepter_rust_cultist_fylkir }
+		}
+			current_heir = { save_event_target_as = scepter_rust_cultist_fylkir }
+			any_artifact = { 
+				limit = { artifact_type = scepter_rust_cultist_fylkir }
+				transfer_artifact = {
+					from = PREV
+					to = event_target:scepter_rust_cultist_fylkir_heir
+				} 
+			}
+	}
+	if = {
+		limit = { 
 			has_landed_title = d_raven_tales_reformed
 			any_artifact = { artifact_type = crown_raven_tales_fylkir }
 		}
@@ -7514,6 +7579,13 @@ give_this_warrior_lodge_religion_effect_ate = { #Mostly for spawned characters.
 			NOT = { has_global_flag = rust_cultist_reformation }
 		}
 		religion = rust_cultist
+	}
+	if = {
+		limit = { 
+			society_member_of = warrior_lodge_rust_cultist
+			has_global_flag = rust_cultist_reformation
+		}
+		religion = rust_cultist_reformed
 	}
 }
 
@@ -9382,7 +9454,7 @@ apply_peaceful_on_start_effect = {
 
 apply_dogmatic_on_start_effect = {
 	religion_authority = {
-		modifier = religion_dogmatic
+		modifier = dogmatic_religion
 		years = 1000
 	}
 	remove_intermarry = rastafarian
@@ -9443,6 +9515,7 @@ apply_dogmatic_on_start_effect = {
 	remove_intermarry = revelationist_reformed
 	remove_intermarry = revelationist
 	remove_intermarry = rust_cultist
+	remove_intermarry = rust_cultist_reformed
 	remove_intermarry = chrome_cultist
 	remove_intermarry = occultist_reformed
 	remove_intermarry = occultist
@@ -14840,7 +14913,7 @@ randomize_religion_names_effect = {
 	}
 	if = {
 		limit = {
-			rust_cultist = {
+			rust_cultist_reformed = {
 				is_name_randomized = yes
 			}
 		}

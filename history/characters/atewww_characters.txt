@@ -1042,3 +1042,26 @@
 		}
 	}
 }
+
+1670006 = {
+	name = "Eleanor"
+	dynasty = no
+	culture = beltway
+	religion = americanist
+	female = yes
+	martial = 3
+	diplomacy = 4
+	stewardship = 3
+	intrigue = 4
+	learning = 2
+	trait = underhanded_rogue
+	trait = kind
+	trait = gregarious
+	trait = poet
+	2646.7.12 = {
+	    birth=yes
+	}
+	2663.5.9 = {
+	    add_spouse = 1789001 
+	}
+}

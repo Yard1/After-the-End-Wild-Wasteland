@@ -220,6 +220,7 @@ calculate_candidate_score = {
 		NOT = { has_religion_feature = religion_cosmopolitan }
 		NOT = { has_religion_feature = religion_feature_espiritista }
 		NOT = { has_religion_feature = religion_dogmatic }
+		NOT = { has_religion_feature = religion_feature_rust_cultist }
 		NOT = { religion_group = indian_group }
 		NOT = { religion_group = pacific }
 		event_target:new_candidate = { 
@@ -236,6 +237,7 @@ calculate_candidate_score = {
 		NOT = { has_religion_feature = religion_cosmopolitan }
 		NOT = { has_religion_feature = religion_feature_espiritista }
 		NOT = { has_religion_feature = religion_dogmatic }
+		NOT = { has_religion_feature = religion_feature_rust_cultist }
 		NOT = { religion_group = indian_group }
 		NOT = { religion_group = pacific }
 		NOR = { 
@@ -301,6 +303,7 @@ calculate_candidate_score = {
 		NOT = { has_religion_feature = religion_cosmopolitan }
 		NOT = { has_religion_feature = religion_feature_espiritista }
 		NOT = { has_religion_feature = religion_dogmatic }
+		NOT = { has_religion_feature = religion_feature_rust_cultist }
 		NOT = { religion_group = indian_group }
 		NOT = { religion_group = pacific }
 		event_target:new_candidate = { is_heresy_of = ROOT }
@@ -310,7 +313,7 @@ calculate_candidate_score = {
 		limit = {
 		trait = zealous
 		
-		has_religion_feature = religion_dogmatic
+		OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 		event_target:new_candidate = { NOT = { religion = ROOT } }
 		} change_variable = { which = newCandidate value = -100 } }
 	##Ageism##
@@ -1894,7 +1897,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		has_religion_feature = religion_dogmatic
+		OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 		religion = event_target:new_candidate
 		trait = zealous
 		event_target:new_candidate = { 

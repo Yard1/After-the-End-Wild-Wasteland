@@ -142,10 +142,7 @@ narrative_event = {
 	desc = {
 		trigger = {
 			event_target:sponsoring_king = {
-				OR = {
-					religion = rust_cultist
-					religion = chrome_cultist
-				}
+				religion_openly_rust_cultist_or_heresy_trigger = yes
 			}
 		}
 		text = EVTDESCHFE20003
@@ -710,10 +707,7 @@ narrative_event = {
 	}
 	desc = {
 		trigger = {
-			OR = {
-				religion = rust_cultist
-				religion = chrome_cultist
-			}
+			religion_openly_rust_cultist_or_heresy_trigger = yes
 		}
 		text = EVTDESCHFE20004
 	}
@@ -878,11 +872,7 @@ narrative_event = {
 		if = { 
 			limit = { 
 				NOT = { has_nickname = yes }
-				OR = {
-					religion = rust_cultist
-					religion = chrome_cultist
-					religion = atomicist
-				}
+				religion_openly_rust_cultist_or_heresy_trigger = yes
 			}
 			ROOT = { give_nickname = nick_the_educator }
 		}
@@ -1611,10 +1601,7 @@ narrative_event = {
 		trigger = {
 			NOT  = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = {
-				OR = {
-					religion = rust_cultist
-					religion = chrome_cultist
-				}
+				religion_openly_rust_cultist_or_heresy_trigger = yes
 			}
 		}
 		text = EVTDESCHFE20008
@@ -1726,10 +1713,7 @@ narrative_event = {
 		trigger = {
 			has_character_flag = ai_flag_refuse_conversion
 			event_target:sponsoring_king = {
-				OR = {
-					religion = rust_cultist
-					religion = chrome_cultist
-				}
+				religion_openly_rust_cultist_or_heresy_trigger = yes
 			}
 		}
 		text = EVTDESCHFS20008

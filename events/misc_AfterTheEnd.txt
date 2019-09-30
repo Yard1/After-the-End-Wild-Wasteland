@@ -142,7 +142,6 @@ character_event = {
 	desc = "Change graphical culture"
 	is_triggered_only = yes
 	hide_window = yes
-	min_age = 16
 	
 	trigger = {
 		NOT = { has_character_flag = historical_character }
@@ -20957,7 +20956,6 @@ character_event = {
 	desc = "Set physique"
 	is_triggered_only = yes
 	hide_window = yes
-	min_age = 16
 	
 	trigger = {
 		NOT = { has_character_flag = historical_character }
@@ -21282,16 +21280,11 @@ character_event = {
 	hide_window = yes
 
 	trigger = {
-		OR = {
-			FROM = { character = no }
-			AND = {
-				ai = yes
-				NOT = { father_even_if_dead = { always = yes } }
-				NOT = { mother_even_if_dead = { always = yes } }
-				NOT = { spouse_even_if_dead = { always = yes } }
-				NOT = { any_child = { always = yes } }
-			}
-		}
+		ai = yes
+		NOT = { father_even_if_dead = { always = yes } }
+		NOT = { mother_even_if_dead = { always = yes } }
+		NOT = { spouse_even_if_dead = { always = yes } }
+		NOT = { any_child = { always = yes } }
 	}
 	
 	option = {
@@ -21299,6 +21292,28 @@ character_event = {
 		character_event = { id = misc.4 }
 	}
 }
+
+character_event = {
+	id = misc.42
+	desc = "Race & physique for all new chars"
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		FROM = { character = no }
+		ai = yes
+		NOT = { father_even_if_dead = { always = yes } }
+		NOT = { mother_even_if_dead = { always = yes } }
+		NOT = { spouse_even_if_dead = { always = yes } }
+		NOT = { any_child = { always = yes } }
+	}
+	
+	option = {
+		character_event = { id = misc.3 }
+		character_event = { id = misc.4 }
+	}
+}
+
 
 character_event = {
 	id = misc.41
@@ -21448,6 +21463,10 @@ character_event = {
 					limit = {
 						# This should figure out which characters have been randomly generated and haven't been around for long
 						#is_ruler = no # uncomment this once we have the map filled out
+						OR = {
+							controls_religion = no
+							religion = americanist
+						}
 						ai = yes
 						NOT = { father_even_if_dead = { always = yes } }
 						NOT = { mother_even_if_dead = { always = yes } }

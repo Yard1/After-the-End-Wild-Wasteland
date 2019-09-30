@@ -198,10 +198,7 @@ defined_text = {
 	}
 	text = {
 		trigger = { 
-			OR = {
-				religion = rust_cultist
-				religion = chrome_cultist
-			}
+			religion_openly_rust_cultist_or_heresy_trigger = yes
 		}
 		localisation_key = TECHPRIEST
 	}

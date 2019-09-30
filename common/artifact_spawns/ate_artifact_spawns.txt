@@ -583,6 +583,7 @@ old_world_engine = {
 			OR = {
 				religion = atomicist
 				religion = rust_cultist
+				religion = rust_cultist_reformed
 			}
 		}
 	}

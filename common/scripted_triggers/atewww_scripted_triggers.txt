@@ -33,6 +33,14 @@ semi_equal_religion = {
 	OR = {
 		religion = jeffersonian
 		religion = rust_cultist
+		AND = {
+			religion = rust_cultist_reformed
+			NOR = {
+				has_religion_feature = religion_patriarchal
+				has_religion_feature = religion_matriarchal
+				has_religion_feature = religion_equal
+			}
+		}
 		religion = consumerist
 		religion = monetarist
 	}
@@ -282,7 +290,7 @@ has_religion_with_temporal_head = {
 		religion = jeffersonian
 		religion = consumerist
 		religion = monetarist
-		religion = rust_cultist
+		religion = rust_cultist_reformed
 		religion = brethren
 		religion = cetic
 	}

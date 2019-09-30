@@ -9532,10 +9532,7 @@ character_event = {
 		
 		liege = {
 			holy_order = no
-			OR = {
-				religion = rust_cultist
-				religion = chrome_cultist
-			}
+			religion_openly_rust_cultist_or_heresy_trigger = yes
 			liege = {
 				holy_order = no
 			}
@@ -9585,10 +9582,6 @@ character_event = {
 		modifier = {
 			factor = 0.5
 			trait = celibate
-		}
-		modifier = {
-			factor = 0.5
-			trait = homosexual
 		}
 		modifier = {
 			factor = 0.7

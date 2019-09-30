@@ -2726,6 +2726,7 @@ oldworld = {
 		intermarry = consumerist
 		intermarry = monetarist
 		intermarry = rust_cultist
+		intermarry = rust_cultist_reformed
 		intermarry = chrome_cultist
 
 		character_modifier = {
@@ -2790,6 +2791,7 @@ oldworld = {
 		intermarry = consumerist
 		intermarry = monetarist
 		intermarry = rust_cultist
+		intermarry = rust_cultist_reformed
 		intermarry = chrome_cultist
 
 		character_modifier = {
@@ -2917,6 +2919,7 @@ oldworld = {
 		intermarry = consumerist
 		intermarry = monetarist
 		intermarry = rust_cultist
+		intermarry = rust_cultist_reformed
 		intermarry = chrome_cultist
 		
 		religious_clothing_head = 11
@@ -2984,6 +2987,7 @@ oldworld = {
 		intermarry = atomicist
 		intermarry = aphite
 		intermarry = rust_cultist
+		intermarry = rust_cultist_reformed
 		intermarry = chrome_cultist
 		intermarry = monetarist
 	}
@@ -3033,6 +3037,7 @@ oldworld = {
 		intermarry = atomicist
 		intermarry = aphite
 		intermarry = rust_cultist
+		intermarry = rust_cultist_reformed
 		intermarry = chrome_cultist
 		intermarry = consumerist
 	}
@@ -3092,6 +3097,7 @@ oldworld = {
 		intermarry = monetarist
 		intermarry = aphite
 		intermarry = rust_cultist
+		intermarry = rust_cultist_reformed
 		intermarry = chrome_cultist
 	}
 
@@ -3151,6 +3157,7 @@ oldworld = {
 		intermarry = consumerist
 		intermarry = atomicist
 		intermarry = rust_cultist
+		intermarry = rust_cultist_reformed
 		intermarry = chrome_cultist
 
 		character_modifier = {
@@ -3159,7 +3166,7 @@ oldworld = {
 		}
 	}
 	
-	rust_cultist = { # now in the OWC group!!
+	rust_cultist_reformed = { # now in the OWC group!!
 		graphical_culture = muslimgfx
 
 		icon = 19
@@ -3194,7 +3201,7 @@ oldworld = {
 		allow_rivermovement = yes
 		can_grant_claim = yes
 		can_grant_divorce = yes
-		defensive_attrition = yes
+		allow_in_ruler_designer = no
 				
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -3208,12 +3215,67 @@ oldworld = {
 		intermarry = atomicist
 		intermarry = aphite
 		intermarry = chrome_cultist
+		intermarry = rust_cultist
+		intermarry = rust_cultist_reformed
+	}
+
+	rust_cultist = { # now in the OWC group!!
+		graphical_culture = muslimgfx
+
+		icon = 19
+		heresy_icon = 13
+		
+		color = { 0.7 0.35 0.2 }
+		interface_skin = { rust_cultist_interface hellenic_interface }
+
+		high_god_name = GOD_FATHER_FORD #removed this blatant 40k reference
+
+		male_names = {
+			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Henry
+		}
+		female_names = {
+			Justice Columbia Benefactia Emancipata Eleutheria Industria Interdicta Libertas Liberalitas Majority Nullabona Nongrata Precedenta Respublia Subpoena Vindicta Stahlhilda
+		}
+
+		god_names = {
+			GOD_FATHER_FORD GOD_THE_MACHINE_SPIRITS GOD_VULCAN GOD_FATHER_BESSEMER
+		}
+		evil_god_names = {
+			THE_LORD_OF_RUST THE_DARK_VIRUS THE_CONSUMING_TARNISH HE_WHO_RUSTS
+		}
+		crusade_name = INDUSTRIAL_ACTION
+		scripture_name = THE_BOOK_OF_RUST
+		priest_title = TECHPRIEST
+		
+		can_call_crusade = no
+		priests_can_marry = yes
+		priests_can_inherit = no
+		female_temple_holders = yes #I want to make the High Fabricator decision gender-neutral
+		allow_rivermovement = yes
+		can_grant_claim = yes
+		can_grant_divorce = yes
+		defensive_attrition = yes
+		reformed = rust_cultist_reformed
+				
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		intermarry = americanist
+		intermarry = hamiltonian
+		intermarry = jeffersonian
+		intermarry = libertarian
+		
+		intermarry = consumerist
+		intermarry = monetarist
+		intermarry = atomicist
+		intermarry = aphite
+		intermarry = chrome_cultist
+		intermarry = rust_cultist_reformed
 	}
 	
 	chrome_cultist = { # new heresy!
 		graphical_culture = muslimgfx
 		
-		parent = rust_cultist
+		parent = rust_cultist_reformed
 
 		male_names = {
 			Filibuster Preamble Habeas Benzene Bessemer Stahlrich Henry
@@ -3239,8 +3301,8 @@ oldworld = {
 		allow_rivermovement = yes
 		priests_can_marry = yes
 		priests_can_inherit = no
-		defensive_attrition = yes
 		has_heir_designation = yes
+		allow_in_ruler_designer = no
 				
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -3254,6 +3316,7 @@ oldworld = {
 		intermarry = atomicist
 		intermarry = aphite
 		intermarry = rust_cultist
+		intermarry = rust_cultist_reformed
 
 		character_modifier = {
 			intrigue = 1

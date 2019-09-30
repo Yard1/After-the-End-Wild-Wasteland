@@ -1918,6 +1918,7 @@ obj_become_king = {
 			factor = 0.01
 			OR = {
 				religion = rust_cultist
+				religion = rust_cultist_reformed
 				religion = revelationist
 			}
 		}

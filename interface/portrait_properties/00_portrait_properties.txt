@@ -3100,10 +3100,7 @@
 		modifier = {
 			factor = 0
 			NOT = {
-				OR = {
-					religion = rust_cultist
-					religion = chrome_cultist
-				}
+				religion_openly_rust_cultist_or_heresy_trigger = yes
 			}
 		}
 		modifier = {
@@ -3129,8 +3126,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = rust_cultist }
-			NOT = { religion = chrome_cultist }
+			religion_openly_rust_cultist_or_heresy_trigger = no
 		}
 		modifier = {
 			factor = 0
@@ -3155,8 +3151,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = rust_cultist }
-			NOT = { religion = chrome_cultist }
+			religion_openly_rust_cultist_or_heresy_trigger = no
 		}
 		modifier = {
 			factor = 0
@@ -3181,8 +3176,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = rust_cultist }
-			NOT = { religion = chrome_cultist }
+			religion_openly_rust_cultist_or_heresy_trigger = no
 		}
 		modifier = {
 			factor = 0
@@ -3209,8 +3203,7 @@
 		}
 		modifier = {
 			factor = 0
-			NOT = { religion = rust_cultist }
-			NOT = { religion = chrome_cultist }
+			religion_openly_rust_cultist_or_heresy_trigger = no
 		}
 		modifier = {
 			factor = 0
@@ -4644,11 +4637,13 @@
 				trait = dead_crown_celtic_fylkir
 				trait = dead_crown_aztec_fylkir #used for Aztec emperors of Mexico
 				trait = dead_crown_raven_tales_fylkir
+				trait = dead_crown_uahomche_fylkir
 				trait = augustus # Laurels
 				trait = dead_crown_judah
 				trait = dead_crown_espiritista_fylkir
 				trait = dead_crown_uahomche_fylkir
 				trait = dead_scepter_midewiwin_fylkir
+				trait = dead_scepter_rust_cultist_fylkir
 			}
 		}
 		modifier = {
@@ -4671,9 +4666,11 @@
 					artifact_type = crown_celtic_fylkir
 					artifact_type = crown_lion_judah #will use west african crown sprite
 					artifact_type = crown_raven_tales_fylkir
+					artifact_type = crown_uahomche_fylkir
 					artifact_type = cursed_diamond_crown
 					artifact_type = crown_espiritista_fylkir
 					artifact_type = scepter_midewiwin_fylkir
+					artifact_type = scepter_rust_cultist_fylkir
 				}
 				is_artifact_equipped = yes 
 			}
@@ -4820,11 +4817,13 @@
 				trait = dead_crown_celtic_fylkir
 				trait = dead_crown_aztec_fylkir #used for Aztec emperors of Mexico
 				trait = dead_crown_raven_tales_fylkir
+				trait = dead_crown_uahomche_fylkir
 				trait = augustus # Laurels
 				trait = dead_crown_judah
 				trait = dead_crown_espiritista_fylkir
 				trait = dead_crown_uahomche_fylkir
 				trait = dead_scepter_midewiwin_fylkir
+				trait = dead_scepter_rust_cultist_fylkir
 			}
 		}
 		modifier = {
@@ -4847,9 +4846,11 @@
 					artifact_type = crown_celtic_fylkir
 					artifact_type = crown_lion_judah #will use west african crown sprite
 					artifact_type = crown_raven_tales_fylkir
+					artifact_type = crown_uahomche_fylkir
 					artifact_type = cursed_diamond_crown
 					artifact_type = crown_espiritista_fylkir
 					artifact_type = scepter_midewiwin_fylkir
+					artifact_type = scepter_rust_cultist_fylkir
 				}
 				is_artifact_equipped = yes 
 			}
@@ -5127,10 +5128,10 @@
 			factor = 0
 			NOR = { 
 				any_artifact = {
-					artifact_type = crown_aztec_fylkir
+					artifact_type = crown_uahomche_fylkir
 					is_artifact_equipped = yes 
 				}
-				trait = dead_crown_aztec_fylkir
+				trait = dead_crown_uahomche_fylkir
 			}
 		}
 	}
@@ -7315,7 +7316,10 @@
 		factor = 100
 		modifier = {
 			factor = 0
-			trait = dead_scepter_midewiwin_fylkir
+			OR = {
+				trait = dead_scepter_midewiwin_fylkir
+				trait = dead_scepter_rust_cultist_fylkir
+			}
 		}
 		modifier = {
 			factor = 0
@@ -7327,7 +7331,10 @@
 				}
 			}
 			any_artifact = {
-				artifact_type = scepter_midewiwin_fylkir
+				OR = {
+					artifact_type = scepter_midewiwin_fylkir
+					artifact_type = scepter_rust_cultist_fylkir
+				}
 				is_artifact_equipped = yes 
 			}
 		}
@@ -7369,10 +7376,16 @@
 			factor = 0
 			NOR = { 
 				any_artifact = {
-					artifact_type = scepter_midewiwin_fylkir
+					OR = {
+						artifact_type = scepter_midewiwin_fylkir
+						artifact_type = scepter_rust_cultist_fylkir
+					}
 					is_artifact_equipped = yes 
 				}
-				trait = dead_scepter_midewiwin_fylkir
+				OR = {
+					trait = dead_scepter_midewiwin_fylkir
+					trait = dead_scepter_rust_cultist_fylkir
+				}
 			}
 		}
 	}

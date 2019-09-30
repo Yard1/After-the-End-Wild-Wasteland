@@ -3467,7 +3467,7 @@ crusade = {
 						religion = consumerist
 						has_global_flag = consumerist_prophet_dead
 					}
-					religion = rust_cultist
+					religion = rust_cultist_reformed
 					religion = atomicist
 					religion_group = jewish_group
 					AND = {
@@ -3573,6 +3573,14 @@ crusade = {
 					OR = {
 						religion_group = pagan_group
 						religion_group = mesoamerican_gods
+						AND = {
+							religion = rust_cultist_reformed
+							OR = {
+								has_religion_feature = religion_warlike
+								has_religion_feature = religion_dogmatic
+								has_religion_feature = religion_feature_rust_cultust
+							}
+						}
 					}
 					NOT = { religion = ROOT }
 				}
@@ -3688,6 +3696,14 @@ crusade = {
 					OR = {
 						religion_group = pagan_group
 						religion_group = mesoamerican_gods
+						AND = {
+							religion = rust_cultist_reformed
+							OR = {
+								has_religion_feature = religion_warlike
+								has_religion_feature = religion_dogmatic
+								has_religion_feature = religion_feature_rust_cultust
+							}
+						}
 					}
 					NOT = { religion = ROOT }
 				}
@@ -4675,6 +4691,14 @@ new_crusade = {
 					OR = {
 						religion_group = pagan_group
 						religion_group = mesoamerican_gods
+						AND = {
+							religion = rust_cultist_reformed
+							OR = {
+								has_religion_feature = religion_warlike
+								has_religion_feature = religion_dogmatic
+								has_religion_feature = religion_feature_rust_cultust
+							}
+						}
 					}
 					NOT = { religion = ROOT }
 				}
@@ -4758,6 +4782,14 @@ new_crusade = {
 					OR = {
 						religion_group = pagan_group
 						religion_group = mesoamerican_gods
+						AND = {
+							religion = rust_cultist_reformed
+							OR = {
+								has_religion_feature = religion_warlike
+								has_religion_feature = religion_dogmatic
+								has_religion_feature = religion_feature_rust_cultust
+							}
+						}
 					}
 					NOT = { religion = ROOT }
 				}
@@ -5752,8 +5784,9 @@ new_crusade = {
 			# Special bloodline for the recipient of the first Crusade
 			if = {
 				limit = {
+					religion_group = christian
 					NOT = {
-						has_global_flag = first_crusade_complete
+						religion_scope = { has_flag = first_crusade_won }
 					}
 					most_participating_crusader = {
 						NOT = {
@@ -5803,6 +5836,13 @@ new_crusade = {
 					}
 				}
 				set_global_flag = first_crusade_complete
+			}
+
+			if = {
+				limit = {
+					NOT = { religion_scope = { has_flag = first_crusade_won } }
+				}
+				religion_scope = { set_flag = first_crusade_won }
 			}
 
 			# Adds a negative opinion modifier for selfish Crusaders

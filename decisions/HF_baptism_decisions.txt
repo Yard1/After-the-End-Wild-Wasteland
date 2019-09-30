@@ -1059,9 +1059,11 @@ decisions = {
 					is_nomadic = no
 					higher_real_tier_than = DUKE
 					is_within_diplo_range = ROOT
-					religion_group = pagan_group
 					is_reformed_religion = yes
-					has_religion_feature = religion_proselytizing
+					OR = {
+						has_religion_feature = religion_proselytizing
+						religion_scope = { has_flag = religion_proselytizing }
+					}
 					NOT = { lower_tier_than = ROOT } 
 				}
 			}

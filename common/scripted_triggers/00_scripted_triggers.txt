@@ -745,6 +745,7 @@ has_crusade_trait_trigger = {
 		AND = {
 			OR = {
 				religion = rust_cultist
+				religion = rust_cultist_reformed
 				religion = chrome_cultist
 			}
 			trait = fords_striker
@@ -2128,6 +2129,9 @@ true_religion_chrome_cultist_trigger = {
 true_religion_rust_cultist_trigger = {
 	true_religion = rust_cultist
 }
+true_religion_rust_cultist_reformed_trigger = {
+	true_religion = rust_cultist_reformed
+}
 true_religion_occultist_reformed_trigger = {
 	true_religion = occultist_reformed
 }
@@ -2857,6 +2861,7 @@ is_rust_cultist_secret_religious_society_member_trigger = {
 	OR = {
 		society_member_of = secret_religious_society_chrome_cultist
 		society_member_of = secret_religious_society_rust_cultist
+		society_member_of = secret_religious_society_rust_cultist_reformed
 	}
 }
 
@@ -3338,6 +3343,10 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_rust_cultist }
 		}
 		AND = {
+			society_member_of = secret_religious_society_rust_cultist_reformed
+			PREV = { interested_in_society = secret_religious_society_rust_cultist_reformed }
+		}
+		AND = {
 			society_member_of = secret_religious_society_occultist_reformed
 			PREV = { interested_in_society = secret_religious_society_occultist_reformed }
 		}
@@ -3776,6 +3785,12 @@ has_any_char_old_religion = {
 	    	has_character_flag = character_was_rust_cultist
 	    	any_character = {
 	    		religion = rust_cultist
+	    	}
+	    }
+		AND = { 
+	    	has_character_flag = character_was_rust_cultist_reformed
+	    	any_character = {
+	    		religion = rust_cultist_reformed
 	    	}
 	    }
 		AND = { 
@@ -4490,6 +4505,13 @@ looting_artifact_event_religious_artifacts_trigger = {
 				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = rust_cultist
 				ROOT = { religion = rust_cultist }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = rust_cultist_reformed
+				ROOT = { religion = rust_cultist_reformed }
 			}
 		}
 		NAND = {
@@ -5287,6 +5309,7 @@ has_unsafe_secret_religion = {
 				secret_religion = revelationist
 				secret_religion = revelationist_reformed
 				secret_religion = rust_cultist
+				secret_religion = rust_cultist_reformed
 				secret_religion = chrome_cultist
 				secret_religion = occultist
 				secret_religion = occultist_reformed
@@ -6123,6 +6146,7 @@ has_unsafe_religion = {
 				religion = aztec_reformed
 				religion = revelationist
 				religion = revelationist_reformed
+				relgion = rust_cultist_reformed
 				religion = rust_cultist
 				religion = chrome_cultist
 				religion = occultist
@@ -6191,11 +6215,15 @@ proselytize_convert_independent_trigger = {
 					religion_group = afro_syncretic
 				}
 			} 
-			FROM = { has_religion_feature = religion_proselytizing }
+			FROM = { 
+				OR = {
+					has_religion_feature = religion_proselytizing 
+					religion_scope = { has_flag = religion_proselytizing }
+				}
+			}
 		}
 		independent = yes
 		NOT = { religion = FROM }
-		religion_group = pagan_group
 		#OR = {
 		#	NOT = { religion = aztec }
 		#	year = 1350
@@ -7235,6 +7263,7 @@ this_is_warrior_culture_trigger = { #Not really about culture - Used in AI votin
 		religion = jeffersonian
 		OR = {
 			has_religion_feature = religion_warlike
+			has_religion_feature = religion_defensive
 			has_religion_feature = religion_feature_raven_tales_1
 		}
 		is_tribal = yes
@@ -7267,7 +7296,10 @@ this_is_diplomatic_culture_trigger = { #Not really about culture - Used in AI vo
 		religion_group = jewish_group
 		AND = { 
 			religion_group = oldworld
-			NOT = { religion = jeffersonian }
+			NOR = {
+				religion = jeffersonian
+				religion = rust_cultist_reformed
+			}
 		}
 		has_religion_feature = religion_cosmopolitan
 		has_religion_feature = religion_feature_espiritista
@@ -7283,6 +7315,8 @@ this_is_spiritual_culture_trigger = { #Not really about culture - Used in AI vot
 		religion_group = indian_group
 		religion_group = pacific
 		has_religion_feature = religion_peaceful
+		has_religion_feature = religion_dogmatic
+		has_religion_feature = religion_proselytizing
 		pacifist = yes
 		#AND = { 
 		#	NOT = { has_dlc = "Holy Fury"}
@@ -8856,6 +8890,7 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_revelationist
 		has_character_flag = character_was_chrome_cultist
 		has_character_flag = character_was_rust_cultist
+		has_character_flag = character_was_rust_cultist_reformed
 		has_character_flag = character_was_occultist_reformed
 		has_character_flag = character_was_occultist
 		has_character_flag = character_was_thelemic_reformed
@@ -9067,6 +9102,7 @@ religion_openly_rust_cultist_or_heresy_trigger = {
 		hidden_trigger = {
 			OR = {
 				religion = rust_cultist
+				religion = rust_cultist_reformed
 				religion = chrome_cultist
 			}
 		}

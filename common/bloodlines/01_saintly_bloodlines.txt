@@ -1141,10 +1141,13 @@ saintly_bloodline_germanic_05 = {
 	flags = { ancestor_worship_bloodline jewish_saintly_bloodline }
 	picture = GFX_bloodlines_symbol_norse
 	active = {
-		OR = {
-			religion_group = christian
-			religion_group = cult_of_saints
-			religion_group = latter_day_saints
+		custom_tooltip = {
+			text = saintly_bloodline_same_religion_TT
+			FROM = {
+				founder = {
+					religion_group = ROOT
+				}
+			}
 		}
 	}
 }
@@ -1240,10 +1243,13 @@ saintly_bloodline_revelationist_05 = {
 	flags = { ancestor_worship_bloodline jewish_saintly_bloodline }
 	picture = GFX_bloodlines_symbol_midgard
 	active = {
-		OR = {
-			religion_group = christian
-			religion_group = cult_of_saints
-			religion_group = latter_day_saints
+		custom_tooltip = {
+			text = saintly_bloodline_same_religion_TT
+			FROM = {
+				founder = {
+					religion_group = ROOT
+				}
+			}
 		}
 	}
 }
@@ -1339,10 +1345,13 @@ saintly_bloodline_rust_cultist_05 = {
 	flags = { ancestor_worship_bloodline jewish_saintly_bloodline }
 	picture = GFX_bloodlines_symbol_technology
 	active = {
-		OR = {
-			religion_group = christian
-			religion_group = cult_of_saints
-			religion_group = latter_day_saints
+		custom_tooltip = {
+			text = saintly_bloodline_same_religion_TT
+			FROM = {
+				founder = {
+					religion_group = ROOT
+				}
+			}
 		}
 	}
 }
@@ -1438,10 +1447,13 @@ saintly_bloodline_occultist_05 = {
 	flags = { ancestor_worship_bloodline jewish_saintly_bloodline }
 	picture = GFX_bloodlines_symbol_generic_pagan
 	active = {
-		OR = {
-			religion_group = christian
-			religion_group = cult_of_saints
-			religion_group = latter_day_saints
+		custom_tooltip = {
+			text = saintly_bloodline_same_religion_TT
+			FROM = {
+				founder = {
+					religion_group = ROOT
+				}
+			}
 		}
 	}
 }
@@ -1537,10 +1549,13 @@ saintly_bloodline_celtic_05 = {
 	flags = { ancestor_worship_bloodline jewish_saintly_bloodline }
 	picture = GFX_bloodlines_symbol_bull
 	active = {
-		OR = {
-			religion_group = christian
-			religion_group = cult_of_saints
-			religion_group = latter_day_saints
+		custom_tooltip = {
+			text = saintly_bloodline_same_religion_TT
+			FROM = {
+				founder = {
+					religion_group = ROOT
+				}
+			}
 		}
 	}
 }
@@ -1636,10 +1651,13 @@ saintly_bloodline_thelemic_05 = {
 	flags = { ancestor_worship_bloodline jewish_saintly_bloodline }
 	picture = GFX_bloodlines_symbol_bloodthirsty
 	active = {
-		OR = {
-			religion_group = christian
-			religion_group = cult_of_saints
-			religion_group = latter_day_saints
+		custom_tooltip = {
+			text = saintly_bloodline_same_religion_TT
+			FROM = {
+				founder = {
+					religion_group = ROOT
+				}
+			}
 		}
 	}
 }
@@ -1735,10 +1753,13 @@ saintly_bloodline_espiritista_05 = {
 	flags = { ancestor_worship_bloodline jewish_saintly_bloodline }
 	picture = GFX_bloodlines_symbol_african
 	active = {
-		OR = {
-			religion_group = christian
-			religion_group = cult_of_saints
-			religion_group = latter_day_saints
+		custom_tooltip = {
+			text = saintly_bloodline_same_religion_TT
+			FROM = {
+				founder = {
+					religion_group = ROOT
+				}
+			}
 		}
 	}
 }

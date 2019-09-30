@@ -1694,7 +1694,7 @@ character_event = {
 		name = EVTOPTAHF23016
 		trigger = { 
 			NOT = { 
-				has_religion_feature = religion_dogmatic 
+				OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } 
 			} 
 		}
 		add_trait = pagan_branch_1
@@ -3009,7 +3009,7 @@ character_event = {
 		name = EVTOPTAHF23016
 		trigger = { 
 			NOT = { 
-				has_religion_feature = religion_dogmatic 
+				OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } 
 			} 
 		}
 		add_trait = pagan_branch_1
@@ -4140,6 +4140,13 @@ character_event = {
 			}
 		}
 		if = {
+			limit = { rust_cultist_reformed = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			random_playable_ruler = {
+				limit = { religion = rust_cultist_reformed }
+				apply_cosmopolian_on_start_effect = yes
+			}
+		}
+		if = {
 			limit = { occultist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
 			random_playable_ruler = {
 				limit = { religion = occultist }
@@ -4203,448 +4210,455 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { rastafarian = { has_religion_feature = religion_dogmatic } }
+			limit = { rastafarian = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = rastafarian }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { voodoo = { has_religion_feature = religion_dogmatic } }
+			limit = { voodoo = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = voodoo }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { santeria = { has_religion_feature = religion_dogmatic } }
+			limit = { santeria = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = santeria }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { candomble = { has_religion_feature = religion_dogmatic } }
+			limit = { candomble = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = candomble }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { espiritista = { has_religion_feature = religion_dogmatic } }
+			limit = { espiritista = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = espiritista }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { peyotist = { has_religion_feature = religion_dogmatic } }
+			limit = { peyotist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = peyotist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { midewiwin = { has_religion_feature = religion_dogmatic } }
+			limit = { midewiwin = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = midewiwin }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { midewiwin_reformed = { has_religion_feature = religion_dogmatic } }
+			limit = { midewiwin_reformed = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = midewiwin_reformed }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { raven_tales = { has_religion_feature = religion_dogmatic } }
+			limit = { raven_tales = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = raven_tales }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { raven_tales_reformed = { has_religion_feature = religion_dogmatic } }
+			limit = { raven_tales_reformed = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = raven_tales_reformed }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { catholic = { has_religion_feature = religion_dogmatic } }
+			limit = { catholic = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = catholic }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { neognostic = { has_religion_feature = religion_dogmatic } }
+			limit = { neognostic = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = neognostic }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { sedevacantist = { has_religion_feature = religion_dogmatic } }
+			limit = { sedevacantist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = sedevacantist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { nestorian = { has_religion_feature = religion_dogmatic } }
+			limit = { nestorian = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = nestorian }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { ursuline = { has_religion_feature = religion_dogmatic } }
+			limit = { ursuline = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = ursuline }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { angeline = { has_religion_feature = religion_dogmatic } }
+			limit = { angeline = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = angeline }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { exovedate = { has_religion_feature = religion_dogmatic } }
+			limit = { exovedate = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = exovedate }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { confederated = { has_religion_feature = religion_dogmatic } }
+			limit = { confederated = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = confederated }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { anabaptist = { has_religion_feature = religion_dogmatic } }
+			limit = { anabaptist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = anabaptist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { batenburger = { has_religion_feature = religion_dogmatic } }
+			limit = { batenburger = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = batenburger }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { evangelical = { has_religion_feature = religion_dogmatic } }
+			limit = { evangelical = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = evangelical }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { antinomian = { has_religion_feature = religion_dogmatic } }
+			limit = { antinomian = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = antinomian }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { charismatic = { has_religion_feature = religion_dogmatic } }
+			limit = { charismatic = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = charismatic }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { postadventist = { has_religion_feature = religion_dogmatic } }
+			limit = { postadventist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = postadventist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { falling_star = { has_religion_feature = religion_dogmatic } }
+			limit = { falling_star = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = falling_star }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { moravian = { has_religion_feature = religion_dogmatic } }
+			limit = { moravian = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = moravian }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { high_church = { has_religion_feature = religion_dogmatic } }
+			limit = { high_church = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = high_church }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { nonconformist = { has_religion_feature = religion_dogmatic } }
+			limit = { nonconformist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = nonconformist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { apostolic = { has_religion_feature = religion_dogmatic } }
+			limit = { apostolic = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = apostolic }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { sacred_heart = { has_religion_feature = religion_dogmatic } }
+			limit = { sacred_heart = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = sacred_heart }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { gracia_divina = { has_religion_feature = religion_dogmatic } }
+			limit = { gracia_divina = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = gracia_divina }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { cetic = { has_religion_feature = religion_dogmatic } }
+			limit = { cetic = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = cetic }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { neutic = { has_religion_feature = religion_dogmatic } }
+			limit = { neutic = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = neutic }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { gaian = { has_religion_feature = religion_dogmatic } }
+			limit = { gaian = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = gaian }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { amazonian = { has_religion_feature = religion_dogmatic } }
+			limit = { amazonian = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = amazonian }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { shinto = { has_religion_feature = religion_dogmatic } }
+			limit = { shinto = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = shinto }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { nousthreskeia = { has_religion_feature = religion_dogmatic } }
+			limit = { nousthreskeia = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = nousthreskeia }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { mormon = { has_religion_feature = religion_dogmatic } }
+			limit = { mormon = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = mormon }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { bickertonite = { has_religion_feature = religion_dogmatic } }
+			limit = { bickertonite = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = bickertonite }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { woolleyite = { has_religion_feature = religion_dogmatic } }
+			limit = { woolleyite = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = woolleyite }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { strangite = { has_religion_feature = religion_dogmatic } }
+			limit = { strangite = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = strangite }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { sol_invicta = { has_religion_feature = religion_dogmatic } }
+			limit = { sol_invicta = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = sol_invicta }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { mictlantec = { has_religion_feature = religion_dogmatic } }
+			limit = { mictlantec = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = mictlantec }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { uahomche = { has_religion_feature = religion_dogmatic } }
+			limit = { uahomche = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = uahomche }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { neomayan = { has_religion_feature = religion_dogmatic } }
+			limit = { neomayan = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = neomayan }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { americanist = { has_religion_feature = religion_dogmatic } }
+			limit = { americanist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = americanist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { hamiltonian = { has_religion_feature = religion_dogmatic } }
+			limit = { hamiltonian = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = hamiltonian }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { jeffersonian = { has_religion_feature = religion_dogmatic } }
+			limit = { jeffersonian = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = jeffersonian }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { libertarian = { has_religion_feature = religion_dogmatic } }
+			limit = { libertarian = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = libertarian }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { consumerist = { has_religion_feature = religion_dogmatic } }
+			limit = { consumerist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = consumerist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { monetarist = { has_religion_feature = religion_dogmatic } }
+			limit = { monetarist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = monetarist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { atomicist = { has_religion_feature = religion_dogmatic } }
+			limit = { atomicist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = atomicist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { aphite = { has_religion_feature = religion_dogmatic } }
+			limit = { aphite = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = aphite }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { revelationist = { has_religion_feature = religion_dogmatic } }
+			limit = { revelationist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = revelationist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { rust_cultist = { has_religion_feature = religion_dogmatic } }
+			limit = { rust_cultist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			random_playable_ruler = {
 				limit = { religion = rust_cultist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { occultist = { has_religion_feature = religion_dogmatic } }
+			limit = { rust_cultist_reformed = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
+			random_playable_ruler = {
+				limit = { religion = rust_cultist_reformed }
+				apply_dogmatic_on_start_effect = yes
+			}
+		}
+		if = {
+			limit = { occultist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = occultist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { thelemic = { has_religion_feature = religion_dogmatic } }
+			limit = { thelemic = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = thelemic }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { norse_pagan = { has_religion_feature = religion_dogmatic } }
+			limit = { norse_pagan = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = norse_pagan }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { celtic_pagan = { has_religion_feature = religion_dogmatic } }
+			limit = { celtic_pagan = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = celtic_pagan }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { brethren = { has_religion_feature = religion_dogmatic } }
+			limit = { brethren = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = brethren }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { jewish = { has_religion_feature = religion_dogmatic } }
+			limit = { jewish = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = jewish }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { reform = { has_religion_feature = religion_dogmatic } }
+			limit = { reform = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = reform }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { meshichist = { has_religion_feature = religion_dogmatic } }
+			limit = { meshichist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = meshichist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { hindu = { has_religion_feature = religion_dogmatic } }
+			limit = { hindu = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = hindu }
 				apply_dogmatic_on_start_effect = yes
@@ -11103,7 +11117,7 @@ character_event = {
 		name = EVTOPTAHF23473 
 		custom_tooltip = { text = tooltip_destroy_great_pillar }
 		if = {
-			limit = { has_religion_feature = religion_dogmatic }
+			limit = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			tiered_piety_reward_effect = yes
 		}
 		if = {
@@ -14765,7 +14779,7 @@ character_event = {
 			has_religion_feature = religion_holy_family 
 			#has_religion_feature = religion_feature_zun
 		}
-		has_religion_feature = religion_dogmatic
+		OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 		has_religion_feature = religion_temporal_head
 
 		controls_religion = yes
@@ -14789,7 +14803,7 @@ character_event = {
 			has_religion_feature = religion_holy_family 
 			#has_religion_feature = religion_feature_zun
 		}
-		has_religion_feature = religion_dogmatic
+		OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 		has_religion_feature = religion_temporal_head
 		#religion = FROMFROM
 		controls_religion = yes

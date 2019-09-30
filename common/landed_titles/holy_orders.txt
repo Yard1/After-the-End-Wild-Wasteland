@@ -203,7 +203,7 @@ d_midwestern_brotherhood = {
 	title_female = "SUPREME_KNIGHT"
 	foa = "SIR_KNIGHT_FOA"
 
-	religion = rust_cultist
+	religion = rust_cultist_reformed
 	culture = chicagoan
 
 	holy_order = yes

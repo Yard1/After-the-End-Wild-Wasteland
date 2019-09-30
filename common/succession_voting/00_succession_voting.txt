@@ -676,7 +676,7 @@ feudal_elective = {
 			localisation_key = tooltip_feudal_elector_vote_infidel
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			FROM = { 
@@ -690,7 +690,7 @@ feudal_elective = {
 			localisation_key = tooltip_feudal_elector_vote_heathen
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			NOR = { 
@@ -753,7 +753,7 @@ feudal_elective = {
 			localisation_key = tooltip_feudal_elector_vote_heretic
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			FROM = { is_heresy_of = ROOT }
@@ -761,7 +761,7 @@ feudal_elective = {
 		additive_modifier = { #Dogmatics will hardly ever pick an infidel.
 			value = -100
 			localisation_key = tooltip_feudal_elector_vote_heathen_dogmatic
-			has_religion_feature = religion_dogmatic
+			OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			FROM = { NOT = { religion = ROOT } }
 		}
 
@@ -2624,7 +2624,7 @@ feudal_elective = {
 			value = -20
 			localisation_key = tooltip_feudal_elector_vote_cynical_negative
 			NOT = { character = FROM } #Do not judge yourself.
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			religion = FROM
 			NOR = { 
 				has_religion_feature = religion_cosmopolitan
@@ -2643,7 +2643,7 @@ feudal_elective = {
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_cynical_negative_dogmatic
 			NOT = { character = FROM } #Do not judge yourself.
-			has_religion_feature = religion_dogmatic
+			OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			religion = FROM
 			OR = { 
 				trait = arbitrary #No need for consistency
@@ -3181,7 +3181,7 @@ feudal_elective = {
 			NOT = { religion_group = pacific }
 			OR = { 
 				trait = zealous
-				has_religion_feature = religion_dogmatic
+				OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			}
 			OR = { 
 				trait = zealous
@@ -4299,7 +4299,7 @@ tanistry = {
 			localisation_key = tooltip_feudal_elector_vote_infidel
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			FROM = { 
@@ -4313,7 +4313,7 @@ tanistry = {
 			localisation_key = tooltip_feudal_elector_vote_heathen
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			NOR = { 
@@ -4376,7 +4376,7 @@ tanistry = {
 			localisation_key = tooltip_feudal_elector_vote_heretic
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			FROM = { is_heresy_of = ROOT }
@@ -4384,7 +4384,7 @@ tanistry = {
 		additive_modifier = { #Dogmatics will hardly ever pick an infidel.
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_heathen_dogmatic
-			has_religion_feature = religion_dogmatic
+			OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			FROM = { NOT = { religion = ROOT } }
 		}
 
@@ -6133,7 +6133,7 @@ tanistry = {
 			value = -20
 			localisation_key = tooltip_feudal_elector_vote_cynical_negative
 			NOT = { character = FROM } #Do not judge yourself.
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			religion = FROM
 			NOR = { 
 				has_religion_feature = religion_cosmopolitan
@@ -6152,7 +6152,7 @@ tanistry = {
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_cynical_negative_dogmatic
 			NOT = { character = FROM } #Do not judge yourself.
-			has_religion_feature = religion_dogmatic
+			OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			religion = FROM
 			OR = { 
 				trait = arbitrary #No need for consistency
@@ -6690,7 +6690,7 @@ tanistry = {
 			NOT = { religion_group = pacific }
 			OR = { 
 				trait = zealous
-				has_religion_feature = religion_dogmatic
+				OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			}
 			OR = { 
 				trait = zealous
@@ -7736,7 +7736,7 @@ elective_gavelkind = {
 			localisation_key = tooltip_feudal_elector_vote_infidel
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			FROM = { 
@@ -7750,7 +7750,7 @@ elective_gavelkind = {
 			localisation_key = tooltip_feudal_elector_vote_heathen
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			NOR = { 
@@ -7813,7 +7813,7 @@ elective_gavelkind = {
 			localisation_key = tooltip_feudal_elector_vote_heretic
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			FROM = { is_heresy_of = ROOT }
@@ -7821,7 +7821,7 @@ elective_gavelkind = {
 		additive_modifier = { #Dogmatics will hardly ever pick an infidel.
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_heathen_dogmatic
-			has_religion_feature = religion_dogmatic
+			OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			FROM = { NOT = { religion = ROOT } }
 		}
 
@@ -9616,7 +9616,7 @@ elective_gavelkind = {
 			value = -20
 			localisation_key = tooltip_feudal_elector_vote_cynical_negative
 			NOT = { character = FROM } #Do not judge yourself.
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			religion = FROM
 			NOR = { 
 				has_religion_feature = religion_cosmopolitan
@@ -9635,7 +9635,7 @@ elective_gavelkind = {
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_cynical_negative_dogmatic
 			NOT = { character = FROM } #Do not judge yourself.
-			has_religion_feature = religion_dogmatic
+			OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			religion = FROM
 			OR = { 
 				trait = arbitrary #No need for consistency
@@ -10173,7 +10173,7 @@ elective_gavelkind = {
 			NOT = { religion_group = pacific }
 			OR = { 
 				trait = zealous
-				has_religion_feature = religion_dogmatic
+				OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			}
 			OR = { 
 				trait = zealous
@@ -11651,7 +11651,7 @@ eldership_rules = {
 			}
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			FROM = { 
@@ -11672,7 +11672,7 @@ eldership_rules = {
 			}
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			NOR = { 
@@ -11742,7 +11742,7 @@ eldership_rules = {
 			}
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			FROM = { is_heresy_of = ROOT }
@@ -11753,7 +11753,7 @@ eldership_rules = {
 		additive_modifier = { #Dogmatics will hardly ever pick an infidel.
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_heathen_dogmatic
-			has_religion_feature = religion_dogmatic
+			OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			FROM = { NOT = { religion = ROOT } }
 			FROMFROM = { 
 				holder_scope = { character = ROOT } 
@@ -11766,7 +11766,7 @@ eldership_rules = {
 			localisation_key = tooltip_feudal_elector_vote_infidel
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
 			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			FROM = { 
@@ -11780,7 +11780,7 @@ eldership_rules = {
 			localisation_key = tooltip_feudal_elector_vote_heathen
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
 			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			NOR = { 
@@ -11843,7 +11843,7 @@ eldership_rules = {
 			localisation_key = tooltip_feudal_elector_vote_heretic
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			religion_openly_gaian_or_heresy_trigger = yes #Gaians don't care that much about age
 			FROMFROM = { holder_scope = { religion_openly_gaian_or_heresy_trigger = yes } }
 			FROM = { is_heresy_of = ROOT }
@@ -13923,7 +13923,7 @@ eldership_rules = {
 			value = -20
 			localisation_key = tooltip_feudal_elector_vote_cynical_negative
 			NOT = { character = FROM } #Do not judge yourself.
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			religion = FROM
 			NOR = { 
 				has_religion_feature = religion_cosmopolitan
@@ -13945,7 +13945,7 @@ eldership_rules = {
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_cynical_negative_dogmatic
 			NOT = { character = FROM } #Do not judge yourself.
-			has_religion_feature = religion_dogmatic
+			OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			religion = FROM
 			OR = { 
 				trait = arbitrary #No need for consistency
@@ -14603,7 +14603,7 @@ eldership_rules = {
 			NOT = { religion_group = pacific }
 			OR = { 
 				trait = zealous
-				has_religion_feature = religion_dogmatic
+				OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			}
 			OR = { 
 				trait = zealous
@@ -15306,7 +15306,7 @@ eldership_rules = {
 			localisation_key = tooltip_feudal_elector_vote_infidel
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			FROM = { 
@@ -15321,7 +15321,7 @@ eldership_rules = {
 			localisation_key = tooltip_feudal_elector_vote_heathen
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			NOR = { 
@@ -15385,7 +15385,7 @@ eldership_rules = {
 			localisation_key = tooltip_feudal_elector_vote_heretic
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			NOT = { religion_group = pacific }
 			FROM = { is_heresy_of = ROOT }
@@ -15394,7 +15394,7 @@ eldership_rules = {
 		additive_modifier = { #Dogmatics will hardly ever pick an infidel.
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_heathen_dogmatic
-			has_religion_feature = religion_dogmatic
+			OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			FROM = { NOT = { religion = ROOT } }
 			has_elector_stance = { stance = elder_pleased title = FROMFROM }
 		}
@@ -17078,7 +17078,7 @@ eldership_rules = {
 			value = -20
 			localisation_key = tooltip_feudal_elector_vote_cynical_negative
 			NOT = { character = FROM } #Do not judge yourself.
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			religion = FROM
 			NOR = { 
 				has_religion_feature = religion_cosmopolitan
@@ -17098,7 +17098,7 @@ eldership_rules = {
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_cynical_negative_dogmatic
 			NOT = { character = FROM } #Do not judge yourself.
-			has_religion_feature = religion_dogmatic
+			OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			religion = FROM
 			OR = { 
 				trait = arbitrary #No need for consistency
@@ -17676,7 +17676,7 @@ eldership_rules = {
 			NOT = { religion_group = pacific }
 			OR = { 
 				trait = zealous
-				has_religion_feature = religion_dogmatic
+				OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			}
 			OR = { 
 				trait = zealous

@@ -10736,7 +10736,7 @@ warrior_lodge_revelationist = {
 				has_religion_matching_available_warrior_lodge_trigger = yes
 			}
 			#Always show if: You are already a member. Duh.
-			society_member_of = warrior_lodge_zun
+			society_member_of = warrior_lodge_revelationist
 		}
 	}
 
@@ -11312,7 +11312,7 @@ warrior_lodge_rust_cultist = {
 				has_religion_matching_available_warrior_lodge_trigger = yes
 			}
 			#Always show if: You are already a member. Duh.
-			society_member_of = warrior_lodge_bon
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 

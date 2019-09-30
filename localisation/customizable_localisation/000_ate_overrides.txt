@@ -372,10 +372,7 @@ defined_text = {
 	text = { #this will likely stop being relevant
 		localisation_key = String_Rust_Cultist
 		trigger = {
-			OR = {
-				religion = rust_cultist
-				religion = chrome_cultist
-			}
+			religion_openly_rust_cultist_or_heresy_trigger = yes
 		}
 	}
 	
@@ -579,10 +576,7 @@ defined_text = {
 	text = {
 		localisation_key = String_Rust_Cultist
 		trigger = {
-			OR = {
-				religion = rust_cultist
-				religion = chrome_cultist
-			}
+			religion_openly_rust_cultist_or_heresy_trigger = yes
 		}
 	}
 	
@@ -923,6 +917,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				true_religion_rust_cultist_trigger = yes
+				true_religion_rust_cultist_reformed_trigger = yes
 				true_religion_chrome_cultist_trigger = yes
 			}
 		}
@@ -1115,6 +1110,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				true_religion_rust_cultist_trigger = yes
+				true_religion_rust_cultist_reformed_trigger = yes
 				true_religion_chrome_cultist_trigger = yes
 			}
 		}
@@ -1359,6 +1355,7 @@ defined_text = {
 		trigger = { 
 			OR = {
 				true_religion_rust_cultist_trigger = yes
+				true_religion_rust_cultist_reformed_trigger = yes
 				true_religion_chrome_cultist_trigger = yes 
 			}
 		}
@@ -1709,6 +1706,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				true_religion_rust_cultist_trigger = yes
+				true_religion_rust_cultist_reformed_trigger = yes
 				true_religion_chrome_cultist_trigger = yes
 			}
 		}
@@ -5029,10 +5027,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			OR = {
-				religion = rust_cultist
-				religion = chrome_cultist
-			}
+			religion_openly_rust_cultist_or_heresy_trigger = yes
 		}
 		localisation_key = Holy_Order_Rust_Cultist
 	}
@@ -5382,10 +5377,7 @@ defined_text = {
 	text = {
 		trigger = { 
 			ROOT = { 
-				OR = {
-					religion = rust_cultist
-					religion = chrome_cultist
-				}
+				religion_openly_rust_cultist_or_heresy_trigger = yes
 			} 
 		}
 		localisation_key = string_reformed_religion_rust_cultist
@@ -6122,6 +6114,15 @@ defined_text = {
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_REAL_rust_cultist
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_rust_cultist_reformed
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_rust_cultist_reformed
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_rust_cultist_reformed
 	}
 }
 defined_text = {
@@ -7790,6 +7791,18 @@ defined_text = {
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_rust_cultist_desc_REAL
+	}
+}
+
+defined_text = {
+	name = GetReligiousSocietyDesc_rust_cultist_reformed
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_rust_cultist_reformed_desc_REAL
 	}
 }
 

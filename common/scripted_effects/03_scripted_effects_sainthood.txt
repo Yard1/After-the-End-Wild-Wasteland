@@ -863,22 +863,34 @@ check_if_ancestor_worship_worthy_effect = {
         # Positive
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             trait = paranoid
         }
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             trait = zealous
         }
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             trait = cruel
         }
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             OR = {
                 trait = brilliant_strategist
                 trait = mastermind_theologian
@@ -886,7 +898,10 @@ check_if_ancestor_worship_worthy_effect = {
         }
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             OR = {
                 trait = theologian
                 trait = scholar
@@ -895,43 +910,67 @@ check_if_ancestor_worship_worthy_effect = {
         }
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             martial = 15
         }
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             learning = 15
         }
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             has_crusade_trait_trigger = yes
         }
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             trait = pilgrim
         }
         # Negative
         modifier = {
             factor = 0.65
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             trait = trusting
         }
         modifier = {
             factor = 0.65
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             trait = cynical
         }
         modifier = {
             factor = 0.65
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             trait = kind
         }
         modifier = {
             factor = 0.65
-            has_religion_feature = religion_dogmatic 
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             NOR = {
                 has_education_martial_trigger = yes
                 has_education_learning_trigger = yes
@@ -939,21 +978,30 @@ check_if_ancestor_worship_worthy_effect = {
         }
         modifier = {
             factor = 0.65
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             NOT = {
                 martial = 10
             }
         }
         modifier = {
             factor = 0.65
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             NOT = {
                 learning = 10
             }
         }
         modifier = {
             factor = 0.65
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             NOT = {
                 has_crusade_trait_trigger = yes
             }
@@ -961,7 +1009,10 @@ check_if_ancestor_worship_worthy_effect = {
         }
         modifier = {
             factor = 0.65
-            has_religion_feature = religion_dogmatic
+            OR = {
+                has_religion_feature = religion_dogmatic
+                has_religion_feature = religion_feature_rust_cultist
+            }
             NOT = {
                 trait = pilgrim
             }

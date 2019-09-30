@@ -1913,7 +1913,7 @@ character_event = { # Alternate Start general maintenance
 		}
 		if = {
 			limit = {
-				rust_cultist = {
+				rust_cultist_reformed = {
 					is_name_randomized = yes
 				}
 			}

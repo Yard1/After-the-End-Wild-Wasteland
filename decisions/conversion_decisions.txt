@@ -1119,6 +1119,7 @@ targetted_decisions = {
 				religion = celtic_pagan
 				religion = espiritista
 				religion = uahomche
+				religion = rust_cultist
 			}
 		}
 		allow = {
@@ -1155,7 +1156,11 @@ targetted_decisions = {
 				limit = { religion = uahomche }
 				religion = uahomche_reformed
 			}
-			
+			else_if = {
+				limit = { religion = rust_cultist }
+				religion = rust_cultist_reformed
+			}
+
 			hidden_tooltip = {
 				any_courtier = {
 					limit = {
@@ -1258,6 +1263,10 @@ targetted_decisions = {
 					AND = {
 						religion = uahomche
 						uahomche_reformed = { has_religion_feature = religion_proselytizing }
+					}
+					AND = {
+						religion = rust_cultist
+						rust_cultist_reformed = { has_religion_feature = religion_proselytizing }
 					}
 				}
 			}

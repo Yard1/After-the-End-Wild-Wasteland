@@ -5502,7 +5502,7 @@ brethren_elective = {
 			localisation_key = tooltip_feudal_elector_vote_heretic
 			NOT = { has_religion_feature = religion_cosmopolitan }
 			NOT = { has_religion_feature = religion_feature_espiritista }
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			NOT = { religion_group = indian_group }
 			FROM = { is_heresy_of = ROOT }
 		}
@@ -7178,7 +7178,7 @@ brethren_elective = {
 			value = -20
 			localisation_key = tooltip_feudal_elector_vote_cynical_negative
 			NOT = { character = FROM } #Do not judge yourself.
-			NOT = { has_religion_feature = religion_dogmatic }
+			NOT = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
 			religion = FROM
 			NOR = { 
 				has_religion_feature = religion_cosmopolitan
@@ -7197,7 +7197,7 @@ brethren_elective = {
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_cynical_negative_dogmatic
 			NOT = { character = FROM } #Do not judge yourself.
-			has_religion_feature = religion_dogmatic
+			OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			religion = FROM
 			OR = { 
 				trait = arbitrary #No need for consistency
@@ -7622,7 +7622,7 @@ brethren_elective = {
 			NOT = { religion_group = pacific }
 			OR = { 
 				trait = zealous
-				has_religion_feature = religion_dogmatic
+				OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			}
 			OR = { 
 				trait = zealous
@@ -10035,7 +10035,7 @@ militarist_appointment = {
 			value = -50
 			localisation_key = tooltip_presidential_elector_vote_cynical_negative_zealous
 			NOT = { character = FROM } 
-			has_religion_feature = religion_dogmatic
+			OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
 			religion = FROM
 			trait = zealous
 			FROM = { 

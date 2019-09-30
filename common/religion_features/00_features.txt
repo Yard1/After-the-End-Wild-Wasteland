@@ -333,6 +333,7 @@ religion_nature = {
 			NOR = {
 				has_selected_religion_feature = religion_syncretic
 				has_selected_religion_feature = religion_no_leader
+				has_selected_religion_feature = religion_feature_rust_cultist
 			}
 		}
 		effect = {
@@ -557,6 +558,7 @@ religion_doctrine = {
 				has_selected_religion_feature = religion_feature_celtic # Incompatible
 				has_selected_religion_feature = religion_patriarchal # Incompatible
 				has_selected_religion_feature = religion_matriarchal # Incompatible
+				has_selected_religion_feature = religion_feature_rust_cultist
 			}
 		}
 		effect = {
@@ -600,6 +602,7 @@ religion_doctrine = {
 		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_syncretic
+				has_selected_religion_feature = religion_feature_rust_cultist
 			}
 		}
 		effect = {
@@ -1135,6 +1138,35 @@ religion_doctrine = {
 			factor = 50
 		}
 	}
+	religion_feature_rust_cultist = { #Combines Dogmatic, Meritocratic and Jizya
+		picture = GFX_religion_feature_dogmatic
+		potential = {
+			has_game_started = yes
+			religion = rust_cultist_reformed
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		trigger = {
+			religion = rust_cultist_reformed
+			NOR = { 
+				has_selected_religion_feature = religion_syncretic
+				has_selected_religion_feature = religion_no_leader
+				has_selected_religion_feature = religion_dogmatic
+				has_selected_religion_feature = religion_meritocratic
+				has_selected_religion_feature = religion_jizya
+			}
+		}
+		effect = {
+			custom_tooltip = { text = tooltip_religion_feature_dogmatic_1 }
+			custom_tooltip = { text = tooltip_religion_feature_dogmatic_2 }
+			custom_tooltip = { text = tooltip_religion_feature_meritocratic }
+			custom_tooltip = { text = tooltip_religion_feature_jizya }
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
 	religion_feature_occultist = { #Combination of Haruspicy and Astrology. (Also retains access to Eldership succession)
 		picture = GFX_religion_feature_slavic
 		potential = {
@@ -1487,6 +1519,12 @@ religion_leadership = {
 				factor = 0
 				FROM = {
 					religion_group = american_native
+				}
+			}
+			modifier = {
+				factor = 100
+				FROM = {
+					religion_group = oldworld
 				}
 			}
 		}

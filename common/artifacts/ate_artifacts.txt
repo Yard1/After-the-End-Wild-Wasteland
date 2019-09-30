@@ -347,6 +347,7 @@ old_world_engine = {
 			religion = atomicist
 			religion = rust_cultist 
 			religion = chrome_cultist
+			religion = rust_cultist_reformed
 		}
 	}
 	allowed_gift = {
@@ -354,6 +355,7 @@ old_world_engine = {
 			religion = atomicist
 			religion = rust_cultist 
 			religion = chrome_cultist
+			religion = rust_cultist_reformed
 		}
 	}
 	quality = 2

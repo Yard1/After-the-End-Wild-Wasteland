@@ -62,10 +62,7 @@ atom_deny = {
 }
 tech_scavenger = {
 	potential = {
-		OR = {
-			religion = rust_cultist 
-			religion = chrome_cultist
-		}
+		religion_openly_rust_cultist_or_heresy_trigger = yes
 	}
 	learning = 1
 	church_opinion = 10
@@ -1144,7 +1141,7 @@ secretly_rastafarian = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -1237,7 +1234,7 @@ secretly_voodoo = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -1329,7 +1326,7 @@ secretly_santeria = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -1421,7 +1418,7 @@ secretly_candomble = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -1513,7 +1510,7 @@ secretly_espiritista = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -1606,7 +1603,7 @@ secretly_espiritista_reformed = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -1700,7 +1697,7 @@ secretly_peyotist = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -1795,7 +1792,7 @@ secretly_midewiwin = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -1891,7 +1888,7 @@ secretly_midewiwin_reformed = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -1986,7 +1983,7 @@ secretly_raven_tales = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -2080,7 +2077,7 @@ secretly_raven_tales_reformed = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -2173,7 +2170,7 @@ secretly_catholic = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -2265,7 +2262,7 @@ secretly_neognostic = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -2358,7 +2355,7 @@ secretly_sedevacantist = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -2451,7 +2448,7 @@ secretly_nestorian = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -2544,7 +2541,7 @@ secretly_ursuline = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -2636,7 +2633,7 @@ secretly_angeline = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -2728,7 +2725,7 @@ secretly_exovedate = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -2820,7 +2817,7 @@ secretly_confederated = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -2914,7 +2911,7 @@ secretly_anabaptist = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -3008,7 +3005,7 @@ secretly_batenburger = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -3102,7 +3099,7 @@ secretly_evangelical = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -3195,7 +3192,7 @@ secretly_antinomian = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -3290,7 +3287,7 @@ secretly_charismatic = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -3385,7 +3382,7 @@ secretly_postadventist = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -3479,7 +3476,7 @@ secretly_falling_star = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -3573,7 +3570,7 @@ secretly_moravian = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -3666,7 +3663,7 @@ secretly_high_church = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -3759,7 +3756,7 @@ secretly_nonconformist = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -3852,7 +3849,7 @@ secretly_apostolic = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -3945,7 +3942,7 @@ secretly_sacred_heart = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -4038,7 +4035,7 @@ secretly_gracia_divina = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -4131,7 +4128,7 @@ secretly_cetic = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -4223,7 +4220,7 @@ secretly_gaian = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -4315,7 +4312,7 @@ secretly_amazonian = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -4407,7 +4404,7 @@ secretly_shinto = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -4500,7 +4497,7 @@ secretly_nousthreskeia = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -4593,7 +4590,7 @@ secretly_mormon = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -4686,7 +4683,7 @@ secretly_bickertonite = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -4779,7 +4776,7 @@ secretly_woolleyite = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -4872,7 +4869,7 @@ secretly_strangite = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -4965,7 +4962,7 @@ secretly_sol_invicta = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -5058,7 +5055,7 @@ secretly_mictlantec = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -5151,7 +5148,7 @@ secretly_uahomche = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -5244,7 +5241,7 @@ secretly_uahomche_reformed = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -5336,7 +5333,7 @@ secretly_neomayan = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -5429,7 +5426,7 @@ secretly_americanist = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -5522,7 +5519,7 @@ secretly_hamiltonian = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -5615,7 +5612,7 @@ secretly_jeffersonian = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -5708,7 +5705,7 @@ secretly_libertarian = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -5801,7 +5798,7 @@ secretly_consumerist = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -5894,7 +5891,7 @@ secretly_monetarist = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -5987,7 +5984,7 @@ secretly_atomicist = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -6080,7 +6077,7 @@ secretly_aphite = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -6173,7 +6170,7 @@ secretly_pagan = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -6266,7 +6263,7 @@ secretly_revelationist_reformed = {
 		secretly_pagan
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -6359,7 +6356,7 @@ secretly_revelationist = {
 		secretly_pagan
 		secretly_revelationist_reformed
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -6452,7 +6449,7 @@ secretly_chrome_cultist = {
 		secretly_pagan
 		secretly_revelationist_reformed
 		secretly_revelationist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -6494,6 +6491,7 @@ secretly_rust_cultist = {
 	}
 	
 	opposites = {
+		secretly_rust_cultist_reformed
 		secretly_rastafarian
 		secretly_voodoo
 		secretly_santeria
@@ -6577,6 +6575,100 @@ secretly_rust_cultist = {
 	customizer = no
 	ai_zeal = -50
 }
+#Rust Cultist
+secretly_rust_cultist_reformed = {
+
+	potential = {
+		NOT = {
+			religion = rust_cultist_reformed
+		}
+	}
+	
+	opposites = {
+		secretly_rust_cultist
+		secretly_rastafarian
+		secretly_voodoo
+		secretly_santeria
+		secretly_candomble
+		secretly_espiritista
+		secretly_espiritista_reformed
+		secretly_peyotist   secretly_midewiwin   secretly_midewiwin_reformed
+		secretly_raven_tales   secretly_raven_tales_reformed
+		secretly_catholic
+		secretly_neognostic
+		secretly_sedevacantist
+		secretly_nestorian
+		secretly_ursuline
+		secretly_angeline
+		secretly_confederated
+		secretly_exovedate
+		secretly_anabaptist   secretly_batenburger
+		secretly_evangelical
+		secretly_antinomian
+		secretly_charismatic   secretly_postadventist
+		secretly_falling_star   secretly_moravian
+		secretly_high_church
+		
+		secretly_nonconformist
+		secretly_apostolic
+		
+		secretly_sacred_heart
+		secretly_gracia_divina
+		secretly_cetic
+		secretly_gaian
+		secretly_shinto
+		secretly_amazonian
+		secretly_nousthreskeia
+		secretly_mormon
+		secretly_bickertonite
+		secretly_woolleyite
+		secretly_strangite
+		secretly_sol_invicta
+		secretly_mictlantec
+		secretly_uahomche
+		secretly_uahomche_reformed
+		secretly_neomayan
+		secretly_hamiltonian
+		secretly_americanist
+		secretly_jeffersonian
+		secretly_libertarian
+		secretly_consumerist secretly_monetarist
+		secretly_atomicist
+		secretly_pagan
+		secretly_revelationist_reformed
+		secretly_revelationist
+		secretly_chrome_cultist
+		secretly_occultist_reformed
+		secretly_occultist
+		secretly_thelemic_reformed
+		secretly_thelemic
+		secretly_norse_pagan_reformed
+		secretly_norse_pagan
+		secretly_celtic_pagan
+		secretly_celtic_pagan_reformed		
+		secretly_brethren
+		secretly_jewish
+		secretly_reform   secretly_meshichist
+		secretly_hindu
+	}
+
+	is_visible = {
+		OR = {
+			character = FROM
+			society_member_of = secret_religious_society_rust_cultist_reformed
+			AND = {
+				is_close_relative = FROM
+				trait = secretly_rust_cultist_reformed
+			}
+		}
+	}
+
+	same_opinion = 15
+	
+	random = no
+	customizer = no
+	ai_zeal = -50
+}
 #Occultist (Reformed)
 secretly_occultist_reformed = {
 
@@ -6639,7 +6731,7 @@ secretly_occultist_reformed = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
 		secretly_thelemic
@@ -6732,7 +6824,7 @@ secretly_occultist = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_thelemic_reformed
 		secretly_thelemic
@@ -6825,7 +6917,7 @@ secretly_thelemic_reformed = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic
@@ -6918,7 +7010,7 @@ secretly_thelemic = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -7011,7 +7103,7 @@ secretly_norse_pagan_reformed = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -7104,7 +7196,7 @@ secretly_norse_pagan = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -7197,7 +7289,7 @@ secretly_celtic_pagan = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -7290,7 +7382,7 @@ secretly_celtic_pagan_reformed = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -7383,7 +7475,7 @@ secretly_brethren = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -7474,7 +7566,7 @@ secretly_jewish = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -7566,7 +7658,7 @@ secretly_reform = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -7658,7 +7750,7 @@ secretly_meshichist = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed
@@ -7752,7 +7844,7 @@ secretly_hindu = {
 		secretly_revelationist_reformed
 		secretly_revelationist
 		secretly_chrome_cultist
-		secretly_rust_cultist
+		secretly_rust_cultist secretly_rust_cultist_reformed
 		secretly_occultist_reformed
 		secretly_occultist
 		secretly_thelemic_reformed

@@ -4458,16 +4458,16 @@ narrative_event = {
 					}
 				}
 			}
-			#if = { 
-			#	limit = { ROOT = { NOT = { religion = rust_cultist_reformed } } }
-			#	random_playable_ruler = { 
-			#		limit = { religion = rust_cultist }	
-			#		religion_authority = {
-			#			modifier = pagan_revival
-			#			years = 20
-			#		}
-			#	}
-			#}
+			if = { 
+				limit = { ROOT = { NOT = { religion = rust_cultist_reformed } } }
+				random_playable_ruler = { 
+					limit = { religion = rust_cultist }	
+					religion_authority = {
+						modifier = pagan_revival
+						years = 20
+					}
+				}
+			}
 			if = { 
 				limit = { ROOT = { NOT = { religion = occultist_reformed } } }
 				random_playable_ruler = { 
@@ -4485,6 +4485,106 @@ narrative_event = {
 					religion_authority = {
 						modifier = pagan_revival
 						years = 20
+					}
+				}
+			}
+		}
+		hidden_tooltip = {
+			if = {
+				limit = {
+					ROOT = { religion = rust_cultist_reformed }
+				}
+				if = {
+					limit = { ROOT = { has_religion_feature = religion_peaceful } }
+					chrome_cultist = {
+						set_allow_looting = no
+						set_can_call_crusade = no
+						set_hard_to_convert = no
+						set_pacifist = yes
+						set_raised_vassal_opinion_loss = yes
+						set_peace_prestige_loss = no
+						set_piety_loss_for_attacking_same_religion = no
+						set_peace_piety_gain = 1
+						set_convert_other_groups = 0
+						set_convert_same_group = 0
+						set_ai_aggression = 0.1
+					}
+					random_playable_ruler = {
+						limit = { NOT = { is_within_diplo_range = ROOT } }
+						create_random_soldier = {
+							religion = chrome_cultist
+						}
+						new_character = {
+							religion_authority = {
+								modifier = religion_peaceful
+								years = 1000
+							}
+							death = yes
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							ROOT = { has_religion_feature = religion_warlike }
+							ROOT = { has_religion_feature = religion_defensive }
+						}
+					}
+					chrome_cultist = {
+						set_pacifist = no
+						set_peace_piety_gain = 0
+						set_raised_vassal_opinion_loss = yes
+						set_piety_loss_for_attacking_same_religion = no
+						set_peace_prestige_loss = no
+						set_allow_looting = yes
+						set_hard_to_convert = yes
+						set_convert_other_groups = 1
+						set_convert_same_group = 1
+						set_ai_aggression = 0.5
+						set_unit_modifier = {		
+							garrison_size = 0.3
+							levy_size = 0.2
+							
+							key = "DEF_RELIGION"
+						}
+						set_unit_home_modifier = {
+							land_morale = 0.8
+							light_infantry_defensive = 0.8
+							heavy_infantry_defensive = 0.8
+							pikemen_defensive = 0.8
+							light_cavalry_defensive = 0.8
+							knights_defensive = 0.8
+							archers_defensive = 0.8
+							horse_archers_defensive = 0.8
+							camel_cavalry_defensive = 0.8
+							war_elephants_defensive = 0.8
+							
+							garrison_size = 0.4
+							
+							key = "DEF_RELIGION_HOME_TERRITORY"
+						}
+					}
+				}
+				else = {
+					chrome_cultist = {
+						set_pacifist = no
+						set_peace_piety_gain = 0
+						set_raised_vassal_opinion_loss = yes
+						set_peace_prestige_loss = no
+						set_allow_looting = yes
+						set_hard_to_convert = no
+						set_piety_loss_for_attacking_same_religion = yes
+						set_convert_other_groups = 2
+						set_convert_same_group = 2
+						set_ai_aggression = 1.0
+						set_flag = religion_proselytizing
+					}
+				}
+				if = {
+					limit = { ROOT = { has_religion_feature = religion_feature_rust_cultist } }
+					chrome_cultist = {
+						set_raised_vassal_opinion_loss = no
+						set_jizya_tax = yes
 					}
 				}
 			}
@@ -4535,7 +4635,10 @@ narrative_event = {
 		if = {
 			limit = { #Modifier not applied correctly by pagan reformation screen.
 				ROOT = {
-					has_religion_feature = religion_dogmatic
+					OR = {
+						has_religion_feature = religion_dogmatic
+						has_religion_feature = religion_feature_rust_cultist
+					}
 				}
 			}
 			ROOT = { 	
@@ -4602,6 +4705,7 @@ narrative_event = {
 				remove_intermarry = revelationist_reformed
 				remove_intermarry = revelationist
 				remove_intermarry = rust_cultist
+				remove_intermarry = rust_cultist_reformed
 				remove_intermarry = chrome_cultist
 				remove_intermarry = occultist_reformed
 				remove_intermarry = occultist
@@ -4994,6 +5098,14 @@ narrative_event = {
 			}
 			add_artifact = scepter_midewiwin_fylkir
 		}
+		if = {
+			limit = { 
+				has_religion_feature = religion_temporal_head 
+				religion = rust_cultist_reformed 
+		
+			}
+			add_artifact = scepter_rust_cultist_fylkir
+		}
 		#hidden_effect = { reformation_god_names_changes_effect = yes }
 		#Opinion boost to new religious head (if any) and Reformer.
 		if = {
@@ -5045,6 +5157,10 @@ narrative_event = {
 		if = {
 			limit = { religion = raven_tales_reformed }
 			set_global_flag = raven_tales_reformation
+		}
+		if = {
+			limit = { religion = rust_cultist_reformed }
+			set_global_flag = rust_cultist_reformation
 		}
 	}
 	}

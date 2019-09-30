@@ -1768,7 +1768,6 @@ presidential_elective = {
 			value = -50
 			localisation_key = tooltip_presidential_elector_vote_cynical_negative_zealous
 			NOT = { character = FROM } 
-			has_religion_feature = religion_dogmatic
 			religion = FROM
 			trait = zealous
 			FROM = { 
