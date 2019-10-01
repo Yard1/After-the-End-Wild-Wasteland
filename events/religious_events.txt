@@ -2904,6 +2904,7 @@ character_event = {
 	
 	is_triggered_only = yes
 	trigger = {
+		FROM = { NOT = { religion = cult_of_marx } }
 		NOT = { has_character_flag = flag_converting_baptism }
 		NOT = { has_character_modifier = baptism_request_cooldown }
 		OR = {
@@ -3221,6 +3222,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
  	trigger = {
+		FROM = { NOT = { religion = cult_of_marx } }
 		OR = {
 			ai = yes
 			FROMs_religion_is_playable_trigger = yes

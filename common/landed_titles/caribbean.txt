@@ -118,6 +118,7 @@ e_caribbean = {
 			c_santa_clara = {
 				color={ 201 157 220 }
 				color2={ 220 220 0 }
+				holy_site = cult_of_marx
 
 				b_santa_clara_CUB = {}
 				b_sagua_la_grande_CUB = {}

@@ -362,6 +362,7 @@ republic_governments = {
 		title_prefix = "city_"
 		potential = {
 			religion = cult_of_marx
+			#NOT = { is_government_potential = theocracy_government }
 		}
 		
 		color = { 175 40 40 }
@@ -372,9 +373,7 @@ republic_governments = {
 		can_build_tribal = no
 		
 		capital_move_delay = 600
-		
-		commander_limit = 15
-		
+				
 		can_demand_religious_conversion = yes
 		have_gender_laws = yes
 		ignores_de_jure_laws = yes

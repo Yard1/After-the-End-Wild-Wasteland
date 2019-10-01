@@ -26,6 +26,7 @@ equal_religion = {
 		religion = atomicist
 		religion = aphite
 		religion = chrome_cultist
+		religion = cult_of_marx
 	}
 }
 
@@ -163,6 +164,10 @@ has_ancestor_veneration = {
 
 religion_can_excommunicate = {
 	OR = {
+		AND = {
+			is_reformed_religion = yes
+			NOT = { has_religion_feature = religion_no_leader }
+		}
 		religion = catholic
 		religion = nestorian
 		religion = evangelical
@@ -176,6 +181,7 @@ religion_can_excommunicate = {
 		religion = jeffersonian
 		religion = libertarian
 		religion = brethren
+		religion = cult_of_marx
 	}
 }
 

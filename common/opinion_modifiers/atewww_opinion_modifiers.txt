@@ -12,3 +12,10 @@ opinion_abducted_relative_child = {
 	opinion = -40
 	months = 2400
 }
+
+opinion_commie_traitor = {
+	prison_reason = yes
+	revoke_reason = yes
+	execute_reason = yes
+	banish_reason = yes
+}

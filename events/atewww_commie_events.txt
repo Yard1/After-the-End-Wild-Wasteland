@@ -1,0 +1,608 @@
+namespace = ATE_WWW_COMMIES
+
+# Religion convert sanity check
+character_event = {
+	id = ATE_WWW_COMMIES.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			religion = cult_of_marx
+			FROM = { religion = cult_of_marx }
+		}
+	}
+	immediate = {
+		if = {
+			limit = { religion = cult_of_marx }
+			if = {
+				limit = {  #only lowborn allowed
+					OR = {
+						ai = no
+						NOT = { dynasty = none }
+					}
+				}
+				religion = FROM
+			}
+			else = {
+				any_character = {
+					if = {
+						limit = { NOT = { religion = cult_of_marx } }
+						opinion = {
+							modifier = opinion_commie_traitor
+							who = ROOT
+							years = 1000
+						}
+						ROOT = {
+							opinion = {
+								modifier = opinion_commie_traitor
+								who = PREV
+								years = 1000
+							}
+						}
+					}
+					else_if = {
+						limit = { has_opinion_modifier = { who = ROOT modifier = opinion_commie_traitor } }
+						remove_opinion = {
+							modifier = opinion_commie_traitor
+							who = ROOT
+						}
+						ROOT = {
+							remove_opinion = {
+								modifier = opinion_commie_traitor
+								who = PREV
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { FROM = { religion = cult_of_marx } }
+			any_character = {
+				if = {
+					limit = { religion = cult_of_marx }
+					opinion = {
+						modifier = opinion_commie_traitor
+						who = ROOT
+						years = 1000
+					}
+					ROOT = {
+						opinion = {
+							modifier = opinion_commie_traitor
+							who = PREV
+							years = 1000
+						}
+					}
+				}
+				else_if = {
+					limit = { has_opinion_modifier = { who = ROOT modifier = opinion_commie_traitor } }
+					remove_opinion = {
+						modifier = opinion_commie_traitor
+						who = ROOT
+					}
+					ROOT = {
+						remove_opinion = {
+							modifier = opinion_commie_traitor
+							who = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Religion convert sanity check
+character_event = {
+	id = ATE_WWW_COMMIES.2
+	hide_window = yes
+	is_triggered_only = yes
+	religion = cult_of_marx
+	immediate = {
+		any_character = {
+			if = {
+				limit = { NOT = { religion = cult_of_marx } }
+				opinion = {
+					modifier = opinion_commie_traitor
+					who = ROOT
+					years = 1000
+				}
+				ROOT = {
+					opinion = {
+						modifier = opinion_commie_traitor
+						who = PREV
+						years = 1000
+					}
+				}
+			}
+			else_if = {
+				limit = { has_opinion_modifier = { who = ROOT modifier = opinion_commie_traitor } }
+				remove_opinion = {
+					modifier = opinion_commie_traitor
+					who = ROOT
+				}
+				ROOT = {
+					remove_opinion = {
+						modifier = opinion_commie_traitor
+						who = PREV
+					}
+				}
+			}
+		}
+	}
+}
+
+# Religion convert sanity check
+character_event = {
+	id = ATE_WWW_COMMIES.3
+	hide_window = yes
+	is_triggered_only = yes
+	religion = cult_of_marx
+	immediate = {
+		dynasty = none
+	}
+}
+
+character_event = {
+	id = ATE_WWW_COMMIES.4
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = { religion = cult_of_marx }
+	}
+	immediate = {
+		any_character = {
+			if = {
+				limit = { religion = cult_of_marx }
+				opinion = {
+					modifier = opinion_commie_traitor
+					who = ROOT
+					years = 1000
+				}
+				ROOT = {
+					opinion = {
+						modifier = opinion_commie_traitor
+						who = PREV
+						years = 1000
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_COMMIES.5
+	hide_window = yes
+	is_triggered_only = yes
+	religion = cult_of_marx
+	immediate = {
+		any_realm_province = {
+			remove_province_modifier = commie_cell
+		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_COMMIES.6
+	desc = EVTDESC_ATE_WWW_COMMIES_6
+	picture = GFX_evt_heretic
+	border = GFX_event_normal_frame_religion
+
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	has_job_title = yes
+	
+	trigger = {
+		has_job_action = action_hunt_heretics
+		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
+		NOT = { religion = cult_of_marx }
+		any_realm_province = {
+			NOT = { religion = cult_of_marx }
+			has_province_modifier = commie_cell
+		}
+	}
+
+	immediate = {
+		random_realm_province = {
+			limit = {
+				NOT = { religion = cult_of_marx }
+				has_province_modifier = commie_cell
+			}
+			preferred_limit = {
+				owner = {
+					OR = { 
+						same_liege = ROOT 
+						ROOT = {
+							liege = { character = PREVPREV }
+						}
+					}
+				}
+			}
+			preferred_limit = { culture = ROOT }
+			preferred_limit = { culture_group = ROOT }
+			save_event_target_as = targeted_location
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+		
+		modifier = {
+			factor = 0.75
+			any_realm_province = {
+				NOT = { religion = cult_of_marx }
+				has_province_modifier = commie_cell
+				culture_group = ROOT
+			}
+		}
+		modifier = {
+			factor = 0.75
+			any_realm_province = {
+				NOT = { religion = cult_of_marx }
+				has_province_modifier = commie_cell
+				culture = ROOT
+			}
+		}
+		
+		job_event_mtth_modifier_learning_score = yes
+		job_event_mtth_modifier_intrigue_score = yes
+		
+		modifier = {
+			factor = 2
+			any_realm_province = {
+				NOT = { religion = cult_of_marx }
+				has_province_modifier = commie_cell
+				owner = {
+					NOR = { 
+						same_liege = ROOT 
+						ROOT = {
+							liege = { character = PREVPREV }
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 3.0
+			NOT = { religion_authority = 0.1 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religion_authority = 0.2 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religion_authority = 0.3 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religion_authority = 0.4 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { religion_authority = 0.5 }
+		}
+		modifier = {
+			factor = 0.75
+			religion_authority = 0.6
+		}
+		modifier = {
+			factor = 0.75
+			religion_authority = 0.7
+		}
+		modifier = {
+			factor = 0.75
+			religion_authority = 0.8
+		}
+		modifier = {
+			factor = 0.75
+			religion_authority = 0.9
+		}
+		modifier = {
+			factor = 0.75
+			society_member_of = monastic_order_dominican
+		}
+
+	}
+
+	option = {
+		name = "EVTOPTA900"
+		piety = 10
+		event_target:targeted_location = {
+			remove_province_modifier = commie_cell
+		}
+		liege = {
+			letter_event = { id = ATE_WWW_COMMIES.7 tooltip = EVTTOOLTIP20000 }
+			hidden_tooltip = {
+				top_liege = { character_event = { id = ATE_WWW_COMMIES.8 } }
+			}
+		}
+	}
+}
+
+# 20000: The Lord Spiritual informs his liege of the conversion
+letter_event = {
+	id = ATE_WWW_COMMIES.7
+	desc = "EVTDESC20000"
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA20000"
+		piety = 15
+		hidden_tooltip = {
+			if = {
+				limit = {
+					has_ambition = obj_strengthen_religion
+				}
+				change_variable = { which = strengthen_religion value = 1 }
+			}
+		}
+		if = {
+			limit = {
+				rightful_religious_head_scope = {
+					ROOT = {
+						NOT = { excommunicated_for = PREV }
+					}
+				}
+			}
+			religion_head = {
+				opinion = {
+					modifier = opinion_converted_province
+					who = ROOT
+					months = 24
+				}
+			}
+		}
+	}
+}
+
+# 20001: Informs top liege
+character_event = {
+	id = ATE_WWW_COMMIES.8
+	desc = EVTDESC20001
+	picture = GFX_evt_heretic
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	notification = yes
+
+	option = {
+		name = "EXCELLENT"
+	}
+}
+
+#Spymaster
+character_event = {
+	id = ATE_WWW_COMMIES.9
+	hide_window = yes
+	religion = cult_of_marx
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	has_job_title = yes
+	
+	trigger = {
+		has_job_title = job_spymaster
+		liege = {
+			independent = yes
+		}
+		liege = {
+			any_neighbor_independent_ruler = {
+				NOT = { religion = cult_of_marx }
+				NOT = { war_with = PREV }
+				NOT = {
+					any_war = {
+						using_cb = religious_revolt
+						attacker = { religion = cult_of_marx }
+					}
+				}
+				any_realm_province = {
+					NOT = { has_province_modifier = commie_cell }
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+		job_event_mtth_modifier_intrigue_score = yes
+	}
+	
+	option = {
+		name = EXCELLENT
+		liege = {
+			any_neighbor_independent_ruler = {
+				limit = {
+					NOT = { religion = cult_of_marx }
+					NOT = { war_with = PREV }
+					NOT = {
+						any_war = {
+							using_cb = religious_revolt
+							attacker = { religion = cult_of_marx }
+						}
+					}
+					any_realm_province = {
+						NOR = { religion = cult_of_marx has_province_modifier = commie_cell }
+					}
+				}
+				score_value = {
+		            value = 20
+		            NOT = { has_truce = PREV }
+		        }
+				score_value = {
+		            value = 20
+		            NOT = { has_non_aggression_pact_with = PREV }
+		        }
+				score_value = {
+		            value = 40
+		            NOT = { is_allied_with = PREV }
+		        }
+				score_value = {
+		            value = 5
+					any_realm_province = {
+						culture_group = ROOT
+					}
+		        }
+				score_value = {
+		            value = 10
+					any_realm_province = {
+						has_province_modifier = commie_cell
+					}
+		        }
+				score_value = {
+		            value = 10
+					any_realm_province = {
+						count = 3
+						has_province_modifier = commie_cell
+					}
+		        }
+				score_value = {
+		            value = -100
+					any_realm_province = {
+						count = 6
+						has_province_modifier = commie_cell
+					}
+		        }
+				score_value = {
+		            value = 10
+					any_realm_province = {
+						revolt_risk = 0.06
+					}
+		        }
+				score_value = {
+		            value = 10
+					is_evil_trigger = yes
+		        }
+				random_realm_province = {
+					limit = {
+						NOR = { religion = cult_of_marx has_province_modifier = commie_cell }
+					}
+					preferred_limit = {
+						any_neighbor_province = {
+							owner = { same_realm = ROOT }
+						}
+						revolt_risk = 0.06
+						owner = { is_evil_trigger = yes }
+					}
+					preferred_limit = {
+						any_neighbor_province = {
+							has_province_modifier = commie_cell
+						}
+						revolt_risk = 0.06
+						owner = { is_evil_trigger = yes }
+					}
+					preferred_limit = {
+						any_neighbor_province = {
+							any_neighbor_province = { owner = { same_realm = ROOT } }
+						}
+						revolt_risk = 0.06
+						owner = { is_evil_trigger = yes }
+					}
+					preferred_limit = {
+						any_neighbor_province = {
+							owner = { same_realm = ROOT }
+						}
+						revolt_risk = 0.06
+					}
+					preferred_limit = {
+						any_neighbor_province = {
+							has_province_modifier = commie_cell
+						}
+						revolt_risk = 0.06
+					}
+					preferred_limit = {
+						any_neighbor_province = {
+							any_neighbor_province = { owner = { same_realm = ROOT } }
+						}
+						revolt_risk = 0.06
+					}
+					preferred_limit = {
+						any_neighbor_province = {
+							owner = { same_realm = ROOT }
+						}
+						owner = { is_evil_trigger = yes }
+					}
+					preferred_limit = {
+						any_neighbor_province = {
+							has_province_modifier = commie_cell
+						}
+						owner = { is_evil_trigger = yes }
+					}
+					preferred_limit = {
+						any_neighbor_province = {
+							any_neighbor_province = { owner = { same_realm = ROOT } }
+						}
+						owner = { is_evil_trigger = yes }
+					}
+					preferred_limit = {
+						any_neighbor_province = {
+							owner = { same_realm = ROOT }
+						}
+					}
+					preferred_limit = {
+						any_neighbor_province = {
+							has_province_modifier = commie_cell
+						}
+					}
+					preferred_limit = {
+						any_neighbor_province = {
+							any_neighbor_province = { owner = { same_realm = ROOT } }
+						}
+					}
+					add_province_modifier = {
+						modifier = commie_cell
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_COMMIES.10
+	hide_window = yes
+	is_triggered_only = yes
+	religion = cult_of_marx
+	trigger = {
+		FROM = {
+			always = yes
+			location = {
+				NOR = {
+					has_province_modifier = commie_cell
+					religion = cult_of_marx
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random = {
+			chance = 7
+			modifier = {
+				factor = 1.2
+				intrigue = 12
+			}
+			modifier = {
+				factor = 1.2
+				intrigue = 16
+			}
+			FROM = {
+				location = {
+					add_province_modifier = {
+						modifier = commie_cell
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	
+}

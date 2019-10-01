@@ -18,6 +18,7 @@ province_event = {
 	desc = EVTDESC_TOG_1000
 	picture = GFX_evt_peasants
 	border = GFX_event_normal_frame_war
+	hide_window = yes
 	
 	is_triggered_only = yes
 
@@ -26,6 +27,8 @@ province_event = {
 			has_dlc = "The Old Gods"
 			has_province_flag = force_peasant_revolt
 		}
+
+		NOT = { has_province_modifier = commie_cell }
 		
 		# Will get clan rebels instead
 		NAND = {
@@ -135,6 +138,73 @@ province_event = {
 	immediate = {
 		remove_province_modifier = rumors_of_witchcraft
 		
+		random_list = {
+			20 = {
+				trigger = {
+					NOT = { has_province_flag = force_peasant_revolt }
+					any_neighbor_independent_ruler = { religion = cult_of_marx }
+					any_neighbor_province = {
+						OR = {
+							AND = { religion = cult_of_marx top_liege = { religion = cult_of_marx } }
+							any_neighbor_province = {
+								OR = {
+									AND = { religion = cult_of_marx top_liege = { religion = cult_of_marx } }
+									any_neighbor_province = {
+										AND = { religion = cult_of_marx top_liege = { religion = cult_of_marx } }
+									}
+								}
+							}
+						}
+					}
+				}
+				modifier = {
+					factor = 1.75
+					any_neighbor_province = {
+						AND = { religion = cult_of_marx top_liege = { religion = cult_of_marx } }
+					}
+				}
+				modifier = {
+					factor = 1.5
+					any_neighbor_province = {
+						any_neighbor_province = {
+							AND = { religion = cult_of_marx top_liege = { religion = cult_of_marx } }
+						}
+					}
+				}
+				modifier = {
+					factor = 1.25
+					any_neighbor_province = {
+						any_neighbor_province = {
+							any_neighbor_province = {
+								AND = { religion = cult_of_marx top_liege = { religion = cult_of_marx } }
+							}
+						}
+					}
+				}
+				add_province_modifier = {
+					name = commie_cell
+					duration = -1
+				}
+				province_event = { id = TOG.1060 }
+			}
+			80 = {
+				province_event = { id = TOG.1052 }
+			}
+		}
+	}
+}
+
+province_event = {
+	id = TOG.1052
+	desc = EVTDESC_TOG_1000
+	picture = GFX_evt_peasants
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+
+	immediate = {
+		remove_province_modifier = rumors_of_witchcraft
+
 		if = {
 			limit = {
 				ROOT = { matriarchal_religion = yes }
@@ -249,7 +319,7 @@ province_event = {
 			ROOT = {
 				owner = {
 					top_liege = {
-#						set_defacto_vassal = PREVPREVPREV
+						#set_defacto_vassal = PREVPREVPREV
 						reverse_war = {
 							target = PREVPREVPREV
 							casus_belli = peasant_revolt
@@ -449,6 +519,8 @@ province_event = {
 
 	trigger = {
 		has_dlc = "The Old Gods"
+
+		NOT = { has_province_modifier = commie_cell }
 		
 		is_heretic = yes
 		
@@ -830,6 +902,8 @@ province_event = {
 
 	trigger = {
 		has_dlc = "The Old Gods"
+
+		NOT = { has_province_modifier = commie_cell }
 
 		any_province_holding = {
 			NOT = { holding_type = nomad }
@@ -1278,15 +1352,20 @@ province_event = {
 	trigger = {
 		has_dlc = "The Old Gods"
 		
-		is_heretic = no
 
 		any_province_holding = {
 			NOT = { holding_type = nomad }
 		}
 		
-		owner = {
-			top_liege = {
-				NOT = { religion_group = ROOT }
+		OR = {
+			has_province_modifier = commie_cell
+			AND = {
+				is_heretic = no
+				owner = {
+					top_liege = {
+						NOT = { religion_group = ROOT }
+					}
+				}
 			}
 		}
 		
@@ -1320,6 +1399,7 @@ province_event = {
 				}
 			}
 			has_province_flag = force_peasant_revolt
+			has_province_modifier = commie_cell
 		}
 		
 		NOT = { # Not if there is already an ongoing revolt
@@ -1351,32 +1431,154 @@ province_event = {
 	immediate = {
 		if = {
 			limit = {
-				ROOT = { matriarchal_religion = yes }
-			}
-			create_character = {
-				random_traits = yes
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				female = yes
-				age = 32
-				attributes = {
-					martial = 7
-					learning = 7
+				NOR = {
+					religion = cult_of_marx
+					has_province_modifier = commie_cell	
 				}
-				trait = zealous
-				trait = scholar
-				trait = skilled_tactician
+			}
+			if = {
+				limit = {
+					ROOT = { matriarchal_religion = yes }
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = ROOT
+					culture = ROOT
+					female = yes
+					age = 32
+					attributes = {
+						martial = 7
+						learning = 7
+					}
+					trait = zealous
+					trait = scholar
+					trait = skilled_tactician
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = { equal_religion = yes }
+				}
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = ROOT
+					culture = ROOT
+					female = 50
+					flag = keep_male
+					age = 32
+					attributes = {
+						martial = 7
+						learning = 7
+					}
+					trait = zealous
+					trait = scholar
+					trait = skilled_tactician
+				}
+			}
+			else = {
+				create_character = {
+					random_traits = yes
+					dynasty = none
+					religion = ROOT
+					culture = ROOT
+					female = no
+					flag = keep_male
+					age = 32
+					attributes = {
+						martial = 7
+						learning = 7
+					}
+					trait = zealous
+					trait = scholar
+					trait = skilled_tactician
+				}
+			}
+			
+			new_character = {
+				character_event = { id = misc.3 }
+				character_event = { id = misc.4 }
+				set_character_flag = religious_revolter
+				
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "HERETIC_REVOLT"
+					holder = THIS
+				}
+				
+				wealth = 100
+				
+				spawn_religious_army_effect = yes
+				
+				if = {
+					limit = {
+						has_game_rule = {
+							name = provincial_revolt_strength
+							value = powerful
+						}
+					}
+					spawn_religious_army_effect = yes
+					wealth = 150
+				}
+				
+				if = {
+					limit = {
+						has_game_rule = {
+							name = provincial_revolt_strength
+							value = very_powerful
+						}
+					}
+					spawn_religious_army_effect = yes
+					spawn_religious_army_effect = yes
+					spawn_religious_army_effect = yes
+					wealth = 250
+				}
+				
+				if = {
+					limit = {
+						has_game_rule = {
+							name = provincial_revolt_strength
+							value = extremely_powerful
+						}
+					}
+					spawn_religious_army_effect = yes
+					spawn_religious_army_effect = yes
+					spawn_religious_army_effect = yes
+					spawn_religious_army_effect = yes
+					spawn_religious_army_effect = yes
+					wealth = 350
+				}
+				
+				# DoW on the province top liege
+				ROOT = {
+					owner = {
+						top_liege = {
+							reverse_war = {
+								target = PREVPREVPREV
+								casus_belli = religious_revolt
+								thirdparty_title = ROOT # The county...
+								tier = DUKE # ... but really the de jure duchy
+							}
+							reverse_opinion = {
+								who = PREVPREVPREV
+								modifier = opinion_evil_tyrant
+							}
+						}
+					}
+				}
 			}
 		}
-		else_if = {
-			limit = {
-				ROOT = { equal_religion = yes }
-			}
+		else = {
+			religion = cult_of_marx
 			create_character = {
 				random_traits = yes
 				dynasty = none
-				religion = ROOT
+				religion = cult_of_marx
 				culture = ROOT
 				female = 50
 				flag = keep_male
@@ -1389,97 +1591,82 @@ province_event = {
 				trait = scholar
 				trait = skilled_tactician
 			}
-		}
-		else = {
-			create_character = {
-				random_traits = yes
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				female = no
-				flag = keep_male
-				age = 32
-				attributes = {
-					martial = 7
-					learning = 7
+			
+			new_character = {
+				character_event = { id = misc.3 }
+				character_event = { id = misc.4 }
+				set_character_flag = religious_revolter
+				
+				create_title = {
+					tier = DUKE
+					landless = yes
+					temporary = yes
+					rebel = yes
+					culture = ROOT
+					name = "HERETIC_REVOLT"
+					holder = THIS
 				}
-				trait = zealous
-				trait = scholar
-				trait = skilled_tactician
-			}
-		}
-		
-		new_character = {
-			character_event = { id = misc.3 }
-			character_event = { id = misc.4 }
-			set_character_flag = religious_revolter
-			
-			create_title = {
-				tier = DUKE
-				landless = yes
-				temporary = yes
-				rebel = yes
-				culture = ROOT
-				name = "HERETIC_REVOLT"
-				holder = THIS
-			}
-			
-			wealth = 100
-			
-			spawn_religious_army_effect = yes
-			
-			if = {
-				limit = {
-					has_game_rule = {
-						name = provincial_revolt_strength
-						value = powerful
-					}
-				}
-				spawn_religious_army_effect = yes
-				wealth = 150
-			}
-			
-			if = {
-				limit = {
-					has_game_rule = {
-						name = provincial_revolt_strength
-						value = very_powerful
-					}
-				}
-				spawn_religious_army_effect = yes
-				spawn_religious_army_effect = yes
-				spawn_religious_army_effect = yes
-				wealth = 250
-			}
-			
-			if = {
-				limit = {
-					has_game_rule = {
-						name = provincial_revolt_strength
-						value = extremely_powerful
-					}
-				}
+				
+				wealth = 300
+				
 				spawn_religious_army_effect = yes
 				spawn_religious_army_effect = yes
 				spawn_religious_army_effect = yes
 				spawn_religious_army_effect = yes
-				spawn_religious_army_effect = yes
-				wealth = 350
-			}
-			
-			# DoW on the province top liege
-			ROOT = {
-				owner = {
-					top_liege = {
-						reverse_war = {
-							target = PREVPREVPREV
-							casus_belli = religious_revolt
-							thirdparty_title = ROOT # The county...
-							tier = DUKE # ... but really the de jure duchy
+				
+				if = {
+					limit = {
+						has_game_rule = {
+							name = provincial_revolt_strength
+							value = powerful
 						}
-						reverse_opinion = {
-							who = PREVPREVPREV
-							modifier = opinion_evil_tyrant
+					}
+					spawn_religious_army_effect = yes
+					wealth = 150
+				}
+				
+				if = {
+					limit = {
+						has_game_rule = {
+							name = provincial_revolt_strength
+							value = very_powerful
+						}
+					}
+					spawn_religious_army_effect = yes
+					spawn_religious_army_effect = yes
+					spawn_religious_army_effect = yes
+					wealth = 250
+				}
+				
+				if = {
+					limit = {
+						has_game_rule = {
+							name = provincial_revolt_strength
+							value = extremely_powerful
+						}
+					}
+					spawn_religious_army_effect = yes
+					spawn_religious_army_effect = yes
+					spawn_religious_army_effect = yes
+					spawn_religious_army_effect = yes
+					spawn_religious_army_effect = yes
+					wealth = 350
+				}
+				
+				# DoW on the province top liege
+				ROOT = {
+					owner = {
+						top_liege = {
+							reverse_war = {
+								target = PREVPREVPREV
+								casus_belli = religious_revolt
+								thirdparty_title = ROOT # The county...
+								tier = DUKE # ... but really the de jure duchy
+							}
+							reverse_opinion = {
+								who = PREVPREVPREV
+								modifier = opinion_evil_tyrant
+							}
 						}
 					}
 				}
@@ -1552,9 +1739,37 @@ character_event = {
 					limit = {
 						NOT = { religion = ROOT }
 					}
-					random = {
-						chance = 5
-						religion = ROOT
+					if = {
+						limit = {
+							ROOT = { religion = cult_of_marx }
+						}
+						if = {
+							limit = {
+								NOT = { has_province_modifier = commie_cell }
+							}
+							random = {
+								chance = 25
+								religion = ROOT
+								random = {
+									chance = 66
+									spawn_religious_reinforcements_province_effect = yes
+								}
+							}
+						}
+						else = {
+							remove_province_modifier = commie_cell
+							random = {
+								chance = 75
+								religion = ROOT
+							}
+							spawn_religious_reinforcements_province_effect = yes
+						}
+					}
+					else = {
+						random = {
+							chance = 5
+							religion = ROOT
+						}
 					}
 				}
 				if = {
@@ -1584,15 +1799,19 @@ province_event = {
 	trigger = {
 		has_dlc = "The Old Gods"
 		
-		is_heretic = no
-
 		any_province_holding = {
 			NOT = { holding_type = nomad }
 		}
 		
-		owner = {
-			top_liege = {
-				NOT = { religion_group = ROOT }
+		OR = {
+			has_province_modifier = commie_cell
+			AND = {
+				is_heretic = no
+				owner = {
+					top_liege = {
+						NOT = { religion_group = ROOT }
+					}
+				}
 			}
 		}
 		
@@ -1625,6 +1844,12 @@ province_event = {
 					}
 					attacker = {
 						spawn_religious_reinforcements_effect = yes
+						if = {
+							limit = { religion = cult_of_marx }
+							ROOT = { religion = cult_of_marx }
+							spawn_religious_reinforcements_effect = yes
+							spawn_religious_reinforcements_effect = yes
+						}
 						
 						if = {
 							limit = {

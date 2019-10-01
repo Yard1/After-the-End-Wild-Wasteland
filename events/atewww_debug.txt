@@ -176,14 +176,16 @@ character_event = {
 	#hide_window = yes
 	
 	option = {
-		set_variable = { which = optA value = 0 }
-		set_variable = { which = optB value = 0 }
-		any_playable_ruler = {
-			character_event = { id = ATE_WWW_DEBUG.40 }
+		random_demesne_province = {
+			add_province_modifier = { name = commie_cell duration = -1 }
 		}
 	}
-	after = {
-		character_event = { id = ATE_WWW_DEBUG.41 days = 1 }
+
+	option = {
+		random_demesne_province = {
+			add_province_modifier = { name = commie_cell duration = -1 }
+			province_event = { id = TOG.1060 }
+		}
 	}
 }
 

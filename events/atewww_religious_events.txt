@@ -2180,6 +2180,19 @@ province_event = {
 				religion_scope = { is_pacifist_religion = no }
 				has_province_modifier = pacifist_religion
 			}
+			AND = {
+				religion = cult_of_marx
+				owner = {
+					top_liege = { NOT = { religion = commie_cell } }
+				}
+				NOT = { has_province_modifier = cult_of_marx }
+			}
+			AND = {
+				has_province_modifier = commie_cell
+				owner = {
+					top_liege = { religion = cult_of_marx }
+				}
+			}
 		}
 	}
 
@@ -2195,6 +2208,26 @@ province_event = {
 		else = {
 			log = "Remove province [This.GetName] as pacifist"
 			remove_province_modifier = pacifist_religion
+		}
+
+		if = {
+			limit = {
+				religion = cult_of_marx
+				owner = {
+					top_liege = { NOT = { religion = cult_of_marx } }
+				}
+				NOT = { has_province_modifier = commie_cell }
+			}
+			add_province_modifier = { name = commie_cell duration = -1 }
+		}
+		else_if = {
+			limit = {
+				owner = {
+					top_liege = { religion = cult_of_marx }
+				}
+				has_province_modifier = commie_cell 
+			}
+			remove_province_modifier = commie_cell
 		}
 	}
 }

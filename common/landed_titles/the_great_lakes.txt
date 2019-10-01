@@ -58,6 +58,7 @@ e_great_lakes = {
 				motowner = "D-Mecca"
 				
 				holy_site = rust_cultist
+				holy_site = rust_cultist_reformed
 				holy_site = pagan
 				holy_site = norse_pagan
 				holy_site = norse_pagan_reformed
@@ -522,6 +523,7 @@ e_great_lakes = {
 				color={ 165 95 60 }
 				color2={ 220 220 0 }
 				holy_site = rust_cultist #the boys are back in town
+				holy_site = rust_cultist_reformed
 
 				b_cleveland_OH = {}
 				b_elyria_OH = {}
@@ -781,11 +783,13 @@ e_great_lakes = {
 				motowner = "C-Medina"
 				holy_site = atomicist
 				holy_site = rust_cultist
+				holy_site = rust_cultist_reformed
 				holy_site = pagan
 				holy_site = norse_pagan
 				holy_site = norse_pagan_reformed
 				holy_site = catholic
 				holy_site = consumerist
+				holy_site = cult_of_marx
 
 				b_chicago_IL = { #Added Norse-like as well as Yiddish name to this county
 					northlander = "Vindgarðr"
@@ -2131,6 +2135,7 @@ e_great_lakes = {
 				color={ 225 195 65 }
 				color2={ 220 220 0 }
 				holy_site = rust_cultist
+				holy_site = rust_cultist_reformed
 				holy_site = anabaptist
 				
 				deitsch = "Yohogen"

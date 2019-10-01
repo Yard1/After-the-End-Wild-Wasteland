@@ -154,3 +154,8 @@ pacifist_religion = {
 	local_revolt_risk = -0.04
 	icon = 8	
 }
+
+commie_cell = {
+	local_revolt_risk = 0.1
+	icon = 8 #change
+}

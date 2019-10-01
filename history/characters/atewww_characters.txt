@@ -1045,7 +1045,7 @@
 
 1670006 = {
 	name = "Eleanor"
-	dynasty = no
+	dynasty = none
 	culture = beltway
 	religion = americanist
 	female = yes

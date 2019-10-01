@@ -63,6 +63,7 @@ afro_syncretic = {
 
 		character_modifier = {
 			diplomacy = 2
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -131,6 +132,10 @@ afro_syncretic = {
 		intermarry = espiritista
 		intermarry = espiritista_reformed
 		intermarry = brethren
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 	santeria = {
 		graphical_culture = africangfx
@@ -173,6 +178,7 @@ afro_syncretic = {
 
 		character_modifier = {
 			diplomacy = 2
+			cult_of_marx_opinion = -75
 		}
 	}
 	candomble = { # Bahian religion
@@ -219,6 +225,7 @@ afro_syncretic = {
 
 		character_modifier = {
 			diplomacy = 2
+			cult_of_marx_opinion = -75
 		}
 	}
 	espiritista_reformed = {
@@ -257,6 +264,10 @@ afro_syncretic = {
 		intermarry = santeria
 		intermarry = candomble
 		intermarry = hindu
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 	espiritista = {
 		graphical_culture = africangfx
@@ -296,6 +307,10 @@ afro_syncretic = {
 		intermarry = santeria
 		intermarry = candomble
 		intermarry = hindu
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 }
 
@@ -353,6 +368,7 @@ american_native = {
 			stewardship = 1
 			diplomacy = 1
 			exovedate_opinion = 5
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -393,6 +409,7 @@ american_native = {
 
 		character_modifier = {
 			exovedate_opinion = 5
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -460,6 +477,7 @@ american_native = {
 
 		character_modifier = {
 			exovedate_opinion = 5
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -500,6 +518,7 @@ american_native = {
 
 		character_modifier = {
 			exovedate_opinion = 5
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -544,6 +563,7 @@ american_native = {
 
 		character_modifier = {
 			exovedate_opinion = 5
+			cult_of_marx_opinion = -75
 		}
 	}
 }
@@ -635,6 +655,7 @@ christian = {
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 	neognostic = {
@@ -693,6 +714,7 @@ christian = {
 			learning = 1
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 	sedevacantist = {
@@ -740,6 +762,7 @@ christian = {
 			monthly_character_piety = 0.5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 	nestorian = {
@@ -791,6 +814,7 @@ christian = {
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 	ursuline = {
@@ -863,6 +887,7 @@ christian = {
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -916,6 +941,7 @@ christian = {
 			same_religion_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -987,6 +1013,7 @@ christian = {
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 
@@ -1056,6 +1083,7 @@ christian = {
 			rel_head_opinion = 15
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -1110,6 +1138,7 @@ christian = {
 			martial = 1
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 
@@ -1175,6 +1204,7 @@ christian = {
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 
@@ -1226,6 +1256,7 @@ christian = {
 			diplomacy = 1
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 
@@ -1287,6 +1318,7 @@ christian = {
 			diplomacy = 2
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -1337,6 +1369,7 @@ christian = {
 			martial = 1
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -1403,6 +1436,7 @@ christian = {
 			apostolic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -1468,6 +1502,7 @@ christian = {
 			apostolic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -1534,6 +1569,7 @@ christian = {
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -1587,6 +1623,7 @@ christian = {
 			same_religion_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -1659,6 +1696,7 @@ christian = {
 			moravian_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 
@@ -1726,6 +1764,7 @@ christian = {
 			american_native_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 }
@@ -1798,6 +1837,7 @@ cult_of_saints= {
 			apostolic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -1847,6 +1887,7 @@ cult_of_saints= {
 			apostolic_opinion = 5
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 }
@@ -1907,6 +1948,10 @@ pacific = {
 		intermarry = shinto
 		intermarry = nousthreskeia
 		intermarry = neognostic
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 	
 	neutic = {
@@ -1934,7 +1979,9 @@ pacific = {
 		
 		character_modifier = {
 			learning = 2
+			cult_of_marx_opinion = -75
 		}
+
 		allow_rivermovement = yes
 		can_retire_to_monastery = yes
 		
@@ -2007,6 +2054,7 @@ pacific = {
 			learning = 1
 			opinion_of_hidden_male_trait = -5
 			opinion_of_homosexual = 5
+			cult_of_marx_opinion = -75
 		}
 	}
 
@@ -2064,6 +2112,7 @@ pacific = {
 			opinion_of_hidden_male_trait = -15
 			opinion_of_enuch = 10
 			opinion_of_homosexual = 5
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -2109,6 +2158,7 @@ pacific = {
 
 		character_modifier = {
 			martial = 2
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -2155,6 +2205,7 @@ pacific = {
 		character_modifier = {
 			martial = 1
 			learning = 1
+			cult_of_marx_opinion = -50
 		}
 	}
 }
@@ -2225,6 +2276,7 @@ latter_day_saints = {
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 
@@ -2263,6 +2315,7 @@ latter_day_saints = {
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 
@@ -2299,6 +2352,7 @@ latter_day_saints = {
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 
@@ -2339,6 +2393,7 @@ latter_day_saints = {
 		character_modifier = {
 			thelemic_opinion = -15
 			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}
 }
@@ -2423,6 +2478,7 @@ mesoamerican_gods = {
 		character_modifier = {
 			martial = 1
 			intrigue = 1
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -2472,6 +2528,7 @@ mesoamerican_gods = {
 
 		character_modifier = {
 			martial = 2
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -2519,6 +2576,10 @@ mesoamerican_gods = {
 		intermarry = falling_star
 
 		intermarry = uahomche
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 
 	uahomche = {
@@ -2590,6 +2651,10 @@ mesoamerican_gods = {
 		intermarry = falling_star
 
 		intermarry = uahomche_reformed
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 	
 	neomayan = {
@@ -2641,6 +2706,7 @@ mesoamerican_gods = {
 		character_modifier = {
 			martial = 1
 			learning = 1
+			cult_of_marx_opinion = -75
 		}
 	}
 }
@@ -2731,6 +2797,7 @@ oldworld = {
 
 		character_modifier = {
 			libertarian_opinion = 5
+			cult_of_marx_opinion = -100
 		}
 	}
 
@@ -2796,6 +2863,7 @@ oldworld = {
 
 		character_modifier = {
 			libertarian_opinion = 5
+			cult_of_marx_opinion = -100
 		}
 	}
 
@@ -2854,6 +2922,10 @@ oldworld = {
 		intermarry = americanist
 		intermarry = hamiltonian
 		intermarry = libertarian
+
+		character_modifier = {
+			cult_of_marx_opinion = -100
+		}
 	}
 
 	libertarian = {
@@ -2930,6 +3002,7 @@ oldworld = {
 			rel_head_opinion = 15
 			americanist_opinion = 5
 			hamiltonian_opinion = 5
+			cult_of_marx_opinion = -100
 		}
 	}
 
@@ -2990,6 +3063,10 @@ oldworld = {
 		intermarry = rust_cultist_reformed
 		intermarry = chrome_cultist
 		intermarry = monetarist
+
+		character_modifier = {
+			cult_of_marx_opinion = -100
+		}
 	}
 	
 	monetarist = { #...
@@ -3040,6 +3117,10 @@ oldworld = {
 		intermarry = rust_cultist_reformed
 		intermarry = chrome_cultist
 		intermarry = consumerist
+
+		character_modifier = {
+			cult_of_marx_opinion = -100
+		}
 	}
 
 	atomicist = { #
@@ -3099,6 +3180,10 @@ oldworld = {
 		intermarry = rust_cultist
 		intermarry = rust_cultist_reformed
 		intermarry = chrome_cultist
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 
 	aphite = { #This Is Not A Place Of Honor
@@ -3163,6 +3248,7 @@ oldworld = {
 		character_modifier = {
 			learning = 1
 			monthly_character_piety = 0.25
+			cult_of_marx_opinion = -75
 		}
 	}
 	
@@ -3202,6 +3288,7 @@ oldworld = {
 		can_grant_claim = yes
 		can_grant_divorce = yes
 		allow_in_ruler_designer = no
+		reformer_head_of_religion = yes
 				
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -3216,7 +3303,10 @@ oldworld = {
 		intermarry = aphite
 		intermarry = chrome_cultist
 		intermarry = rust_cultist
-		intermarry = rust_cultist_reformed
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 
 	rust_cultist = { # now in the OWC group!!
@@ -3270,6 +3360,10 @@ oldworld = {
 		intermarry = aphite
 		intermarry = chrome_cultist
 		intermarry = rust_cultist_reformed
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 	
 	chrome_cultist = { # new heresy!
@@ -3321,6 +3415,7 @@ oldworld = {
 		character_modifier = {
 			intrigue = 1
 			learning = 1
+			cult_of_marx_opinion = -75
 		}
 	}
 
@@ -3340,10 +3435,10 @@ oldworld = {
 		high_god_name = GOD_THE_PARTY
 		
 		god_names = {
-			GOD_MARX GOD_ENGELS GOD_THE_REVOLUTION GOD_THE_DIALECTIC GOD_HISTORY
+			GOD_MARX GOD_ENGELS GOD_LENIN GOD_REED GOD_CHE GOD_CASTRO GOD_THE_REVOLUTION GOD_THE_DIALECTIC GOD_HISTORY
 		}
 		evil_god_names = {
-			THE_CAPITALIST THE_REACTIONARY THE_FASCIST THE_PRIEST
+			THE_CAPITALIST THE_REACTIONARY THE_NOBLE THE_FASCIST THE_PRIEST THE_BOURGEOISIE
 		}
 		
 		autocephaly = yes
@@ -3351,12 +3446,13 @@ oldworld = {
 		can_demand_religious_conversion = yes
 		attacking_same_religion_piety_loss = yes
 		priests_can_marry = yes
-		priests_can_inherit = no
+		priests_can_inherit = yes
 		female_temple_holders = yes
 		feminist = yes
-		defensive_attrition = yes
 		hard_to_convert = yes
 		raised_vassal_opinion_loss = no
+		has_coa_on_barony_only = no
+		allow_looting = yes
 
 		can_call_crusade = no #they have their own stuff
 		allow_in_ruler_designer = no
@@ -3369,24 +3465,25 @@ oldworld = {
 			key = "DEF_RELIGION"
 		}
 		unit_home_modifier = {
-			land_morale = 0.8
-			light_infantry_defensive = 0.8
-			heavy_infantry_defensive = 0.8
-			pikemen_defensive = 0.8
-			light_cavalry_defensive = 0.8
-			knights_defensive = 0.8
-			archers_defensive = 0.8
-			horse_archers_defensive = 0.8
-			camel_cavalry_defensive = 0.8
-			war_elephants_defensive = 0.8
+			land_morale = 0.4
+			light_infantry_defensive = 0.4
+			heavy_infantry_defensive = 0.4
+			pikemen_defensive = 0.4
+			light_cavalry_defensive = 0.4
+			knights_defensive = 0.4
+			archers_defensive = 0.4
+			horse_archers_defensive = 0.4
+			camel_cavalry_defensive = 0.4
+			war_elephants_defensive = 0.4
 			
-			garrison_size = 0.4
+			garrison_size = 0.2
 			
 			key = "DEF_RELIGION_HOME_TERRITORY"
 		}
 		
 		character_modifier = {
-			infidel_opinion = -50
+			same_religion_opinion = 10
+			infidel_opinion = -75
 			americanist_opinion = -100
 			hamiltonian_opinion = -100
 			jeffersonian_opinion = -100
@@ -3394,7 +3491,7 @@ oldworld = {
 			consumerist_opinion = -100
 			monetarist_opinion = -100
 			rust_cultist_opinion = -75
-			rust_cultist_reformed_opinion = -70
+			rust_cultist_reformed_opinion = -75
 			chrome_cultist_opinion = -75
 			atomicist_opinion = -75
 			aphite_opinion = -75
@@ -3446,6 +3543,10 @@ pagan_group = {
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 
 	revelationist_reformed = { 
@@ -3477,6 +3578,10 @@ pagan_group = {
 		religious_clothing_head = 3
 		religious_clothing_priest = 2
 		intermarry = revelationist
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 
 	revelationist = { 
@@ -3534,6 +3639,10 @@ pagan_group = {
 		religious_clothing_head = 3
 		religious_clothing_priest = 2
 		intermarry = revelationist_reformed
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 
 	occultist_reformed = {
@@ -3572,6 +3681,10 @@ pagan_group = {
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
 		intermarry = occultist
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}	
 	
 	occultist = { # 2spooky4u
@@ -3610,6 +3723,10 @@ pagan_group = {
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
 		intermarry = occultist_reformed
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 
 	thelemic_reformed = {
@@ -3653,6 +3770,7 @@ pagan_group = {
 		character_modifier = {
 			christian_opinion = -10
 			latter_day_saints_opinion = -10
+			cult_of_marx_opinion = -75
 		}
 	}	
 	
@@ -3698,6 +3816,7 @@ pagan_group = {
 		character_modifier = {
 			christian_opinion = -15
 			latter_day_saints_opinion = -15
+			cult_of_marx_opinion = -75
 		}
 	}
 
@@ -3751,6 +3870,10 @@ pagan_group = {
 		religious_clothing_priest = 3
 		
 		intermarry = norse_pagan
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 	
 	norse_pagan = {
@@ -3804,6 +3927,10 @@ pagan_group = {
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
 		intermarry = norse_pagan_reformed
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 
 	celtic_pagan_reformed = {
@@ -3855,6 +3982,10 @@ pagan_group = {
 		religious_clothing_priest = 3
 		
 		intermarry = celtic_pagan
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 
 	celtic_pagan = {
@@ -3923,6 +4054,10 @@ pagan_group = {
 		religious_clothing_priest = 3
 		
 		intermarry = celtic_pagan_reformed
+
+		character_modifier = {
+			cult_of_marx_opinion = -75
+		}
 	}
 }
 
@@ -3988,6 +4123,7 @@ pirate = {
 
 		character_modifier = {
 			martial = 1
+			cult_of_marx_opinion = -75
 		}
 		
 		religious_clothing_head = 17
@@ -4059,6 +4195,7 @@ jewish_group = {
 
 		character_modifier = {
 			stewardship = 2
+			cult_of_marx_opinion = -75
 		}
 	}
 	reform = {
@@ -4094,6 +4231,7 @@ jewish_group = {
 
 		character_modifier = {
 			stewardship = 2
+			cult_of_marx_opinion = -75
 		}
 	}
 	meshichist = {
@@ -4131,6 +4269,7 @@ jewish_group = {
 
 		character_modifier = {
 			stewardship = 2
+			cult_of_marx_opinion = -75
 		}
 	}
 }
@@ -4197,6 +4336,7 @@ indian_group = {
 		character_modifier = {
 			learning = 1
 			monthly_character_piety = 0.25
+			cult_of_marx_opinion = -75
 		}
 	}
 }

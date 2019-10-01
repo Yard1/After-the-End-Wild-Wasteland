@@ -56,6 +56,8 @@ EVTOPTB_ATE_WWW_TITLE_2;I see.;;;;;;;;;;;;;x
 EVTDESC_ATE_WWW_TITLE_3;Thanks to [Root.GetBestName]'s heritage, [Root.GetSheHe] has managed to recreate the Kingdom of Dixieland by combining the kingdoms of Alabama and Georgia into one.;;;;;;;;;;;;;x
 EVTOPTA_ATE_WWW_TITLE_3;As [Root.Religion.GetHighGodName] intended.;;;;;;;;;;;;;x
 
+chinese_grace_become_tributary_allow_india_tt;Has a coastal realm county in South America\n;;;;;;;;;;;;;x
+
 # Religious Features 
 
 DONA;Dona;;;;;;;;;;;;;x

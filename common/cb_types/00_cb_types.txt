@@ -775,7 +775,7 @@ claim_on_liege = {
 
 	press_claim = yes
 	can_call_vassals = no
-#	attacker_can_call_allies = no
+	#attacker_can_call_allies = no
 	major_revolt = yes
 
 	allowed_to_target_tributaries = no
@@ -1450,7 +1450,7 @@ other_claim_on_liege = {
 
 	press_claim = yes
 	can_call_vassals = no
-#	attacker_can_call_allies = no
+	#attacker_can_call_allies = no
 	major_revolt = yes
 	
 	allowed_to_target_tributaries = no
@@ -3530,9 +3530,25 @@ crusade = {
 	can_use = {
 		ROOT = {
 			uses_new_crusade = no
-			can_call_crusade = yes
-			conditional_tooltip = {
-				trigger = { religion = americanist }
+			OR = {
+				AND = {
+					NOT = { religion = cult_of_marx }
+					can_call_crusade = yes
+				}
+				AND = {
+					religion = cult_of_marx
+					NOT = {
+						any_independent_ruler = {
+							any_war = {
+								attacker = { religion = cult_of_marx }
+								using_cb = crusade
+							}
+						}
+					}
+				}
+			}
+			trigger_if = {
+				limit = { religion = americanist }
 				NOT = {
 					any_independent_ruler = {
 						any_war = {
@@ -3571,6 +3587,7 @@ crusade = {
 				}
 				AND = {
 					OR = {
+						religion = cult_of_marx
 						religion_group = pagan_group
 						religion_group = mesoamerican_gods
 						AND = {
@@ -3665,6 +3682,7 @@ crusade = {
 			OR = {
 				can_call_crusade = yes
 				religion = americanist
+				religion = cult_of_marx
 			}
 		}
 		FROM = {
@@ -3694,6 +3712,7 @@ crusade = {
 				}
 				AND = {
 					OR = {
+						religion = cult_of_marx
 						religion_group = pagan_group
 						religion_group = mesoamerican_gods
 						AND = {
@@ -3740,6 +3759,21 @@ crusade = {
 				detract_grace_super_huge_effect = yes 
 			}
 		}
+		if = {
+			limit = { ROOT = { religion = cult_of_marx } }
+			FROM = {
+				any_realm_province = {
+					limit = { has_province_modifier = commie_cell }
+					remove_province_modifier = commie_cell
+					random = {
+						chance = 25
+						religion = ROOT
+						spawn_religious_reinforcements_province_effect = yes
+					}
+					spawn_religious_reinforcements_province_effect = yes
+				}
+			}
+		}
 	}
 
 	on_add_title = {
@@ -3755,6 +3789,18 @@ crusade = {
 				}
 			}
 			join_defender_wars = FROM
+			if = {
+				limit = { ROOT = { religion = cult_of_marx } }
+				any_realm_province = {
+					limit = { has_province_modifier = commie_cell }
+					remove_province_modifier = commie_cell
+					random = {
+						chance = 25
+						religion = ROOT
+					}
+					spawn_religious_reinforcements_province_effect = yes
+				}
+			}
 		}
 	}
 
@@ -6237,6 +6283,23 @@ religious = {
 		}
 	}
 
+	on_add_title = {
+		if = {
+			limit = { ROOT = { religion = cult_of_marx } }
+			FROM = {
+				any_realm_province = {
+					limit = { has_province_modifier = commie_cell }
+					remove_province_modifier = commie_cell
+					random = {
+						chance = 25
+						religion = ROOT
+					}
+					spawn_religious_reinforcements_province_effect = yes
+				}
+			}
+		}
+	}
+
 	can_use = { #American Natives no longer have access to the Holy War CB, are given County Conquest CB instead.
 		ROOT = {
 			NOR = { 
@@ -6747,7 +6810,31 @@ religious = {
 				}
 			}
 		}
-	
+		modifier = {
+			factor = 2.5
+			ROOT = {
+				religion = cult_of_marx
+			}
+		}
+		modifier = {
+			factor = 1.5
+			ROOT = {
+				religion = cult_of_marx
+			}
+			any_realm_province = {
+				has_province_modifier = commie_cell
+			}
+		}
+		modifier = {
+			factor = 1.5
+			ROOT = {
+				religion = cult_of_marx
+			}
+			any_realm_province = {
+				has_province_modifier = commie_cell
+				count = 2
+			}
+		}
 		modifier = {
 			factor = 10
 			FROM = { has_character_flag = the_prophet } # so Consumerists will expand more
@@ -11000,6 +11087,22 @@ religious_revolt = {
 				detract_grace_super_huge_effect = yes 
 			}
 		}
+		attacker = { 
+			if = {
+				limit = { religion = cult_of_marx }
+				any_playable_ruler = {
+					limit = {
+						religion = cult_of_marx
+						is_within_diplo_range = PREV
+					}
+					opinion = { 
+						modifier = in_non_aggression_pact
+						years = 10
+						who = PREV
+					}
+				}
+			}
+		}
 	}
  
 	on_success = {
@@ -11053,6 +11156,97 @@ religious_revolt = {
 			check_if_reconquista_finished_effect = yes
 			FROM = {
 				landless_pope_effect = yes
+			}
+		}
+	}
+
+	on_success_posttitle = {
+		ROOT = {
+			if = {
+				limit = { religion = cult_of_marx }
+				if = {
+					limit = {
+						any_independent_ruler = {
+							religion = cult_of_marx
+							NOT = { distance_from_realm = { who = FROM value = 350 } }
+						}
+					}
+					random_independent_ruler = {
+						limit = {
+							religion = cult_of_marx
+							higher_tier_than = ROOT
+							NOT = { distance_from_realm = { who = FROM value = 350 } }
+						}
+						save_event_target_as = new_overlord
+					}
+					any_independent_ruler = {
+						limit = {
+							religion = cult_of_marx
+							lower_tier_than = ROOT
+							NOT = { distance_from_realm = { who = FROM value = 350 } }
+						}
+						set_defacto_liege = ROOT
+					}
+					if = {
+						limit = { event_target:new_overlord = { always = yes } }
+						set_defacto_liege = event_target:new_overlord
+					}
+					else = {
+						random_independent_ruler = {
+							limit = {
+								religion = cult_of_marx
+								tier = ROOT
+								NOT = { distance_from_realm = { who = FROM value = 350 } }
+							}
+							preferred_limit = {
+								culture_group = ROOT
+								NOT = { distance_from_realm = { who = FROM value = 50 } }
+							}
+							preferred_limit = {
+								culture_group = ROOT
+								NOT = { distance_from_realm = { who = FROM value = 150 } }
+							}
+							preferred_limit = {
+								culture_group = ROOT
+								NOT = { distance_from_realm = { who = FROM value = 250 } }
+							}
+							preferred_limit = {
+								culture_group = ROOT
+								NOT = { distance_from_realm = { who = FROM value = 350 } }
+							}
+							preferred_limit = {
+								NOT = { distance_from_realm = { who = FROM value = 50 } }
+							}
+							preferred_limit = {
+								NOT = { distance_from_realm = { who = FROM value = 150 } }
+							}
+							preferred_limit = {
+								NOT = { distance_from_realm = { who = FROM value = 250 } }
+							}
+							preferred_limit = {
+								NOT = { distance_from_realm = { who = FROM value = 350 } }
+							}
+							primary_title = {
+								dejure_liege_title = {
+									create_title = {
+										tier = KING
+										landless = no
+										temporary = no
+										name = "fourth_crusade_greek_kingdom_name" #this
+										holder = PREVPREV
+										culture = PREVPREV
+										custom_created = yes
+										base_title = PREV
+										copy_title_laws = yes
+									}
+								}
+							}
+							ROOT = {
+								set_defacto_liege = PREV
+							}
+						}
+					}
+				}
 			}
 		}
 	}
@@ -14571,6 +14765,7 @@ tributary_cb = {
 		ROOT = {
 			mercenary = no
 			NOT = { religion_group = pirate }
+			NOT = { religion = cult_of_marx }
 			OR = {
 				is_tributary = no
 				is_tributary = {

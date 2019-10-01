@@ -16,7 +16,7 @@ targetted_decisions = {
 			}
 			OR = {
 				liege = { NOT = { religion = cult_of_marx } }
-				dynasty = no
+				dynasty = none
 			}
 			controls_religion = no
 		}
@@ -150,7 +150,7 @@ targetted_decisions = {
 			religion_group = FROM
 			OR = {
 				NOT = { religion = cult_of_marx }
-				FROM = { dynasty = no }
+				FROM = { dynasty = none }
 			}
 		}
 		
@@ -496,7 +496,7 @@ targetted_decisions = {
 			}
 			OR = {
 				capital_scope = { NOT = { religion = cult_of_marx } }
-				dynasty = no
+				dynasty = none
 			}
 			
 			controls_religion = no
@@ -1323,7 +1323,7 @@ targetted_decisions = {
 			}
 			OR = {
 				NOT = { religion = cult_of_marx }
-				FROM = { dynasty = no }
+				FROM = { dynasty = none }
 			}
 			is_alive = yes
 		}

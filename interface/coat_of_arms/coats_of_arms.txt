@@ -1227,6 +1227,7 @@ culture =
 {
 	religion = {
 		"nousthreskeia"
+		"cult_of_marx"
 	}
 
 	templates = { 

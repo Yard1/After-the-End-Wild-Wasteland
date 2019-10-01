@@ -34,6 +34,9 @@ on_host_change = {
 		ATE_WWW_RELIGION.36
 		HF.23016
 		ATE_WWW_RELIGION.40
+		ATE_WWW_COMMIES.2
+		ATE_WWW_COMMIES.3
+		ATE_WWW_COMMIES.4
 	}
 }
 
@@ -63,6 +66,8 @@ on_character_convert_religion = {
 		ATE_WWW_RELIGION.30
 		ATE_WWW_RELIGION.36
 		ATE_WWW_RELIGION.40
+		ATE_WWW_COMMIES.1
+		ATE_WWW_COMMIES.3
 	}
 }
 
@@ -123,6 +128,9 @@ on_birth = {
 		misc.41
 		ATE_WWW_RELIGION.28
 		ATE_WWW_RELIGION.40
+		ATE_WWW_COMMIES.2
+		ATE_WWW_COMMIES.3
+		ATE_WWW_COMMIES.4
 	}
 }
 
@@ -147,6 +155,9 @@ on_new_holder = {
 		miscATEWW.7
 		ATE_WWW_RELIGION.36
 		ATE_WWW_RELIGION.37
+		ATE_WWW_COMMIES.3
+		ATE_WWW_COMMIES.4
+		ATE_WWW_COMMIES.5
 	}
 }
 
@@ -161,6 +172,8 @@ on_new_holder_inheritance = {
 		miscATEWW.7
 		ATE_WWW_RELIGION.36
 		ATE_WWW_RELIGION.37
+		ATE_WWW_COMMIES.3
+		ATE_WWW_COMMIES.4
 	}
 }
 
@@ -175,6 +188,9 @@ on_new_holder_usurpation = {
 		miscATEWW.7
 		ATE_WWW_RELIGION.36
 		ATE_WWW_RELIGION.37
+		ATE_WWW_COMMIES.3
+		ATE_WWW_COMMIES.4
+		ATE_WWW_COMMIES.5
 	}
 }
 
@@ -199,5 +215,11 @@ on_crusade_creation = {
 on_county_religion_change = {
 	events = {
 		ATE_WWW_RELIGION.38
+	}
+}
+
+on_loot_settlement = {
+	events = {
+		ATE_WWW_COMMIES.10
 	}
 }
