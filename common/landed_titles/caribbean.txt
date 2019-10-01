@@ -666,6 +666,16 @@ e_caribbean = {
 				b_english_harbour_ANB = {}
 				b_old_road_ANB = {}
 			}
+
+			c_montserrat = {
+				color = { 163 216 103 }
+				maritimer = "Beinngarbh"
+				newfie = "Sléibhegarbh"
+				gael_dubh = "Sléibhegarbh"
+				
+				b_plymouth_ANB = {}
+				b_brades_ANB = {}
+			}
 			
 			c_virgin_islands = {
 				color = { 205 103 0 }

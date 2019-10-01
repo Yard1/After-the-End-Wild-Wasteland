@@ -52,6 +52,12 @@ c_sable_adj;Sable;;;;;;;;;;;;;x
 b_sable;Sable;;;;;;;;;;;;;x
 b_sable_adj;Sable;;;;;;;;;;;;;x
 
+PROV3400;Montserrat;;;;;;;;;;;;;x
+c_montserrat;Montserrat;;;;;;;;;;;;;x
+c_montserrat_adj;Montserratian;;;;;;;;;;;;;x
+b_plymouth_ANB;Plymouth;;;;;;;;;;;;;x
+b_brades_ANB;Brades;;;;;;;;;;;;;x
+
 EVTDESC_ATE_WWW_TITLE_2;Due to [Root.GetBestName]'s culture, the Kingdom of Dixieland has proven to be simply ungovernable. Therefore, it has been split into Alabama and Georgia - the old kingdoms that have held the land before the Collapse.;;;;;;;;;;;;;x
 EVTOPTA_ATE_WWW_TITLE_2;Damn it!;;;;;;;;;;;;;x
 EVTOPTB_ATE_WWW_TITLE_2;I see.;;;;;;;;;;;;;x

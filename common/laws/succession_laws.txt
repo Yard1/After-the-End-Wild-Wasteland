@@ -1226,6 +1226,7 @@ succession_laws = {
 					culture = maritimer
 					culture = newfie
 					culture = carpetbagger
+					culture = gael_dubh
 					AND = {
 						religion_openly_gaian_or_heresy_trigger = yes
 						is_tribal = no

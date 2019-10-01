@@ -3838,7 +3838,7 @@ character_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 50
+				factor = 40
 				culture = gael_dubh
 			}
 			modifier = {
@@ -8095,7 +8095,7 @@ character_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 0
+				factor = 10
 				culture = gael_dubh
 			}
 			modifier = {

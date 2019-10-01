@@ -1065,3 +1065,34 @@
 	    add_spouse = 1789001 
 	}
 }
+
+1670007 = {
+	name = "Odhran"
+	dynasty = 2029138 #Murphy
+	culture="calypsonian" # Just graphical culture
+	religion = rastafarian
+	secret_religion = celtic_pagan
+	diplomacy = 5
+	martial = 7
+	stewardship = 7
+	intrigue = 6
+	learning = 5
+	trait = charismatic_negotiator
+	trait = poet
+	trait = charitable
+	trait = patient
+	trait = arbitrary
+	trait = trusting
+	trait = stubborn
+	trait = lustful
+	trait = envious
+	trait = drunkard
+	dna="abdbgpcdacw"
+	2630.7.4 = {
+	    birth = yes
+		culture = gael_dubh
+		effect = { 
+		    set_character_flag = historical_character 
+		}
+	}
+}

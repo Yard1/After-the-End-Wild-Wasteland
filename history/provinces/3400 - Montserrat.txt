@@ -1,0 +1,12 @@
+# 3400 - Montserrat
+
+# County Title
+title = c_montserrat
+
+# Settlements
+max_settlements = 1
+b_plymouth_ANB = castle
+
+# Misc
+culture = gael_dubh
+religion = rastafarian
