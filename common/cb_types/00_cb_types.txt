@@ -11112,6 +11112,13 @@ religious_revolt = {
 			occupy_minors_of_occupied_settlements = FROM
 			gain_all_occupied_titles = { who = FROM type = revolt }
 			clr_character_flag = religious_revolter
+			if = {
+				limit = { religion = cult_of_marx }
+				religion_authority = {
+					modifier = won_holy_war
+					years = 20
+				}
+			}
 		}
 		
 		FROM = {
@@ -11226,6 +11233,15 @@ religious_revolt = {
 							preferred_limit = {
 								NOT = { distance_from_realm = { who = FROM value = 350 } }
 							}
+							save_event_target_as = commie_realm_compare
+						}
+						if = {
+							limit = {
+								relative_realm_size = {
+									who = event_target:commie_realm_compare 
+									size > 1
+								}
+							}
 							primary_title = {
 								dejure_liege_title = {
 									create_title = {
@@ -11233,18 +11249,51 @@ religious_revolt = {
 										landless = no
 										temporary = no
 										name = "fourth_crusade_greek_kingdom_name" #this
-										holder = PREVPREV
-										culture = PREVPREV
+										holder = ROOT
+										culture = ROOT
 										custom_created = yes
 										base_title = PREV
 										copy_title_laws = yes
 									}
 								}
 							}
-							ROOT = {
-								set_defacto_liege = PREV
+							event_target:commie_realm_compare = {
+								set_defacto_liege = ROOT
 							}
 						}
+						else = {
+							event_target:commie_realm_compare = {
+								primary_title = {
+									dejure_liege_title = {
+										create_title = {
+											tier = KING
+											landless = no
+											temporary = no
+											name = "fourth_crusade_greek_kingdom_name" #this
+											holder = PREVPREV
+											culture = PREVPREV
+											custom_created = yes
+											base_title = PREV
+											copy_title_laws = yes
+										}
+									}
+								}
+							}
+							ROOT = {
+								set_defacto_liege = event_target:commie_realm_compare
+							}
+						}
+					}
+				}
+				character_event = { id = ATE_WWW_COMMIES.11 }
+				character_event = { id = ATE_WWW_COMMIES.11 days = 1 }
+				if = {
+					limit = { independent = yes }
+					character_event = { id = ATE_WWW_COMMIES.13 days = 2 }
+				}
+				else = {
+					top_liege = {
+						character_event = { id = ATE_WWW_COMMIES.13 days = 2 }
 					}
 				}
 			}

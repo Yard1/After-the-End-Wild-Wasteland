@@ -1574,6 +1574,15 @@ province_event = {
 			}
 		}
 		else = {
+			owner = {
+				top_liege = { save_event_target_as = prov_top_liege }
+			}
+			county = {
+				dejure_liege_title = {
+					save_event_target_as = prov_de_jure_duchy
+				}
+			}
+			log = "Commie rebels in [This.GetName], top liege [prov_top_liege.GetBestName], de jure duchy [prov_de_jure_duchy.GetName]"
 			religion = cult_of_marx
 			create_character = {
 				random_traits = yes
@@ -1591,11 +1600,11 @@ province_event = {
 				trait = scholar
 				trait = skilled_tactician
 			}
-			
 			new_character = {
 				character_event = { id = misc.3 }
 				character_event = { id = misc.4 }
 				set_character_flag = religious_revolter
+				save_event_target_as = revolter
 				
 				create_title = {
 					tier = DUKE
@@ -1607,12 +1616,45 @@ province_event = {
 					holder = THIS
 				}
 				
-				wealth = 300
+				wealth = 250
 				
 				spawn_religious_army_effect = yes
 				spawn_religious_army_effect = yes
-				spawn_religious_army_effect = yes
-				spawn_religious_army_effect = yes
+				ROOT = {
+					any_neighbor_province = {
+						limit = {
+							has_province_modifier = commie_cell
+							owner = {
+								top_liege = {
+									character = event_target:prov_top_liege
+								}
+							}
+							county = {
+								dejure_liege_title = {
+									title = event_target:prov_de_jure_duchy
+								}
+							}
+						}
+						province_event = { id = TOG.1066 }
+						any_neighbor_province = {
+							limit = {
+								has_province_modifier = commie_cell
+								owner = {
+									top_liege = {
+										character = event_target:prov_top_liege
+									}
+								}
+								county = {
+									dejure_liege_title = {
+										title = event_target:prov_de_jure_duchy
+									}
+								}
+							}
+							province_event = { id = TOG.1066 }
+						}
+					}
+				}
+				
 				
 				if = {
 					limit = {
@@ -1781,6 +1823,39 @@ character_event = {
 						duration = 730
 					}
 				}
+			}
+		}
+	}
+}
+
+# Religious Rebels seize a holding. Fired from 'on_siege_over_winner'. Owner of the winning unit is ROOT. The taken Holding title is in FROM.
+province_event = {
+	id = TOG.1066
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				event_target:revolter = { religion = cult_of_marx }
+			}
+			if = {
+				limit = { NOT = { religion = cult_of_marx } }
+				remove_province_modifier = commie_cell
+				random = {
+					chance = 75
+					religion = event_target:revolter
+				}
+			}
+			event_target:revolter = { spawn_religious_reinforcements_effect = yes }
+		}
+		if = {
+			limit = {
+				NOT = { has_province_modifier = religious_unrest }
+			}
+			add_province_modifier = {
+				name = religious_unrest
+				duration = 730
 			}
 		}
 	}

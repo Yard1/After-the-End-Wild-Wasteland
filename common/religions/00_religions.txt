@@ -3288,7 +3288,6 @@ oldworld = {
 		can_grant_claim = yes
 		can_grant_divorce = yes
 		allow_in_ruler_designer = no
-		reformer_head_of_religion = yes
 				
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -3305,7 +3304,7 @@ oldworld = {
 		intermarry = rust_cultist
 
 		character_modifier = {
-			cult_of_marx_opinion = -75
+			cult_of_marx_opinion = -100
 		}
 	}
 
@@ -3362,7 +3361,7 @@ oldworld = {
 		intermarry = rust_cultist_reformed
 
 		character_modifier = {
-			cult_of_marx_opinion = -75
+			cult_of_marx_opinion = -100
 		}
 	}
 	
@@ -3482,16 +3481,27 @@ oldworld = {
 		}
 		
 		character_modifier = {
+			global_revolt_risk = -0.08
 			same_religion_opinion = 10
-			infidel_opinion = -75
+			indian_group_opinion = -75
+			jewish_group_opinion = -75
+			pirate_opinion = -75
+			pagan_group_opinion = -75
+			mesoamerican_gods_opinion = -75
+			latter_day_saints_opinion = -75
+			pacific_opinion = -75
+			cult_of_saints_opinion = -75
+			christian_opinion = -75
+			american_native_opinion = -75
+			afro_syncretic_opinion = -75
 			americanist_opinion = -100
 			hamiltonian_opinion = -100
 			jeffersonian_opinion = -100
 			libertarian_opinion = -100
 			consumerist_opinion = -100
 			monetarist_opinion = -100
-			rust_cultist_opinion = -75
-			rust_cultist_reformed_opinion = -75
+			rust_cultist_opinion = -100
+			rust_cultist_reformed_opinion = -100
 			chrome_cultist_opinion = -75
 			atomicist_opinion = -75
 			aphite_opinion = -75

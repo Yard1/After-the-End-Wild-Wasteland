@@ -124,7 +124,7 @@ decisions = {
 			religion_group = christian
 			is_heretic = no
 			NOT = {
-				has_earmarked_regiments = ursuline_honor_guard
+				has_earmarked_regiments = teutonic_honor_guard
 			}
 			OR = {
 				is_title_active = d_st_ursulas_chosen
@@ -177,7 +177,7 @@ decisions = {
 			}
 			conditional_tooltip = {
 				trigger = {
-					has_character_modifier = hire_ursuline_honor_guard_cooldown
+					has_character_modifier = hire_teutonic_honor_guard_cooldown
 				}
 
 				custom_tooltip = {
@@ -207,14 +207,14 @@ decisions = {
 						attrition = 1.0
 						disband_on_peace = yes
 						maintenance_multiplier = 0.4
-						earmark = ursuline_honor_guard
+						earmark = teutonic_honor_guard
 					}	
 				}
 			}
 
 			hidden_tooltip = {
 				add_character_modifier = {
-					name = hire_ursuline_honor_guard_cooldown
+					name = hire_teutonic_honor_guard_cooldown
 					hidden = yes
 					years = 1
 				}

@@ -1362,20 +1362,9 @@ character_event = {
 	
 	immediate = {
 		wealth = 300
-		if = {
-			limit = { religion_group = christian }
-			FROM = {
-				letter_event = {
-					id = SoA.1141
-				}
-			}
-		}
-		if = {
-			limit = { religion_group = oldworld }
-			FROM = {
-				letter_event = {
-					id = CM.4399
-				}
+		FROM = {
+			letter_event = {
+				id = SoA.1141
 			}
 		}
 		opinion = {
@@ -1391,6 +1380,7 @@ letter_event = {
 	desc = {
         text = EVTDESC_SOA_1141
         trigger = {
+			NOT = { religion_group = oldworld }
 			NOT = {
 				has_alternate_start_parameter = {
 					key = religion_names
@@ -1402,9 +1392,12 @@ letter_event = {
 	desc = {
         text = HOLY_ORDER_DONATE_MONEY_ALT
         trigger = {
-			has_alternate_start_parameter = {
-				key = religion_names
-				value = random
+			OR = {
+				religion_group = oldworld
+				has_alternate_start_parameter = {
+					key = religion_names
+					value = random
+				}
 			}
         }
     }

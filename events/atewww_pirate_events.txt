@@ -369,7 +369,7 @@ character_event = {
 				NOT = { has_global_flag = pirate_king_hereditary }
 			}
 			log = " ATE_WWW_PIRATE.7: [Root.GetBestName] fire 70"
-			FROMFROM = { save_event_target = dead_pirate_king }
+			FROMFROM = { save_event_target_as = dead_pirate_king }
 			character_event = { id = ATE_WWW_PIRATE.70 days = 1 }
 		}
 		else_if = {
@@ -386,7 +386,7 @@ character_event = {
 				}
 			}
 			log = " ATE_WWW_PIRATE.7: [Root.GetBestName] fire 11"
-			FROMFROM = { save_event_target = dead_pirate_king }
+			FROMFROM = { save_event_target_as = dead_pirate_king }
 			character_event = { id = ATE_WWW_PIRATE.11 days = 1 }
 		}
 	}

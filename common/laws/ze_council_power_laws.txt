@@ -165,7 +165,11 @@ laws = {
 			}
 			additive_modifier = { 
 				value = 10			
-				government = consumerist_government
+				holder_scope = { government = consumerist_government }
+			}
+			additive_modifier = { 
+				value = 100	
+				holder_scope = { government = communist_republic }
 			}
 			additive_modifier = { 
 				value = 10			
@@ -247,7 +251,7 @@ laws = {
 						}
 						if = {
 							limit = {
-								government = consumerist_government
+								holder_scope = { government = consumerist_government }
 								ROOT = { 
 									OR = {
 										has_law = succ_gavelkind
@@ -387,7 +391,11 @@ laws = {
 			}
 			additive_modifier = { 
 				value = 10			
-				government = consumerist_government
+				holder_scope = { government = consumerist_government }
+			}
+			additive_modifier = { 
+				value = 100	
+				holder_scope = { government = communist_republic }
 			}
 			additive_modifier = { 
 				value = 10			
@@ -570,7 +578,11 @@ laws = {
 			}
 			additive_modifier = { 
 				value = 10			
-				government = consumerist_government
+				holder_scope = { government = consumerist_government }
+			}
+			additive_modifier = { 
+				value = 100	
+				holder_scope = { government = communist_republic }
 			}
 			additive_modifier = { 
 				value = 10			
@@ -749,7 +761,11 @@ laws = {
 			}
 			additive_modifier = { 
 				value = 10			
-				government = consumerist_government
+				holder_scope = { government = consumerist_government }
+			}
+			additive_modifier = { 
+				value = 100	
+				holder_scope = { government = communist_republic }
 			}
 			additive_modifier = { 
 				value = 10			
@@ -927,7 +943,11 @@ laws = {
 			}
 			additive_modifier = { 
 				value = 10			
-				government = consumerist_government
+				holder_scope = { government = consumerist_government }
+			}
+			additive_modifier = { 
+				value = 100	
+				holder_scope = { government = communist_republic }
 			}
 			additive_modifier = { 
 				value = 10			
@@ -1106,7 +1126,11 @@ laws = {
 			}
 			additive_modifier = { 
 				value = 10			
-				government = consumerist_government
+				holder_scope = { government = consumerist_government }
+			}
+			additive_modifier = { 
+				value = 100	
+				holder_scope = { government = communist_republic }
 			}
 			additive_modifier = { 
 				value = 10			
@@ -1284,7 +1308,11 @@ laws = {
 			}
 			additive_modifier = { 
 				value = 10			
-				government = consumerist_government
+				holder_scope = { government = consumerist_government }
+			}
+			additive_modifier = { 
+				value = 100	
+				holder_scope = { government = communist_republic }
 			}
 			additive_modifier = { 
 				value = 10			
@@ -1376,8 +1404,13 @@ laws = {
 		potential = {
 			has_dlc = "Zeus"
 			higher_tier_than = duke
-			holder_scope = {
-				is_feudal = yes
+			OR = {
+				holder_scope = {
+					government = communist_republic
+				}
+				holder_scope = {
+					is_feudal = yes
+				}
 			}
 			holy_order = no
 		}
@@ -1386,6 +1419,16 @@ laws = {
 		}			
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				holder_scope = {
+					government = communist_republic
+					NOR = {
+						trait = ambitious
+						trait = cynical
+					}
+				}
+			}
 		}
 		ai_will_revoke = {
 			factor = 0
@@ -1428,6 +1471,13 @@ laws = {
 					}
 				}
 				revoke_law = succession_voting_power_1
+				if = {
+					limit = { has_law = succ_commie_politburo_elective }
+					add_law = {
+						law = succ_commie_centralist_elective
+						opinion_effect = no
+					}
+				}
 			}
 		}
 	}
@@ -1439,13 +1489,20 @@ laws = {
 			has_law = law_voting_power_1
 			has_law = war_voting_power_1
 			has_law = succession_voting_power_0
-			NOT = { religion_group = pirate }
+			NOR = {
+				religion_group = pirate
+			}
 		}
 		potential = {
 			has_dlc = "Zeus"
 			higher_tier_than = duke
-			holder_scope = {
-				is_feudal = yes
+			OR = {
+				holder_scope = {
+					government = communist_republic
+				}
+				holder_scope = {
+					is_feudal = yes
+				}
 			}
 			holy_order = no
 		}
@@ -1497,6 +1554,13 @@ laws = {
 					}
 				}
 				revoke_law = succession_voting_power_0
+				if = {
+					limit = { has_law = succ_commie_centralist_elective }
+					add_law = {
+						law = succ_commie_politburo_elective
+						opinion_effect = no
+					}
+				}
 			}
 		}
 		vassal_limit = 2

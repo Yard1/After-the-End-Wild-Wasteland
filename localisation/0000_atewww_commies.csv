@@ -135,8 +135,8 @@ city_count_cult_of_marx;Mayor;;;;;;;;;;;;;x
 city_count_female_cult_of_marx;Mayor;;;;;;;;;;;;;x
 city_duke_cult_of_marx;Governor;;;;;;;;;;;;;x
 city_duke_female_cult_of_marx;Governor;;;;;;;;;;;;;x
-city_king_cult_of_marx;First Minister;;;;;;;;;;;;;x
-city_king_female_cult_of_marx;First Minister;;;;;;;;;;;;;x
+city_king_cult_of_marx;Chairman;;;;;;;;;;;;;x
+city_king_female_cult_of_marx;Chairwoman;;;;;;;;;;;;;x
 city_emperor_cult_of_marx;General Secretary;;;;;;;;;;;;;x
 city_emperor_female_cult_of_marx;General Secretary;;;;;;;;;;;;;x
 
@@ -146,8 +146,8 @@ count_cult_of_marx;Mayor;;;;;;;;;;;;;x
 count_female_cult_of_marx;Mayor;;;;;;;;;;;;;x
 duke_cult_of_marx;Governor;;;;;;;;;;;;;x
 duke_female_cult_of_marx;Governor;;;;;;;;;;;;;x
-king_cult_of_marx;First Minister;;;;;;;;;;;;;x
-king_female_cult_of_marx;First Minister;;;;;;;;;;;;;x
+king_cult_of_marx;Chairman;;;;;;;;;;;;;x
+king_female_cult_of_marx;Chairwoman;;;;;;;;;;;;;x
 emperor_cult_of_marx;General Secretary;;;;;;;;;;;;;x
 emperor_female_cult_of_marx;General Secretary;;;;;;;;;;;;;x
 
@@ -173,5 +173,5 @@ job_chancellor_cult_of_marx;Commissar for Foreign Affairs;;;;;;;;;;;;;x
 job_marshal_cult_of_marx;Commissar for Defence;;;;;;;;;;;;;x
 job_treasurer_cult_of_marx;Commissar for Industry and Finance;;;;;;;;;;;;;x
 job_spymaster_cult_of_marx;Commissar for State Security;;;;;;;;;;;;;x
-title_councilmember_king_cult_of_marx;Politburo Member;;;;;;;;;;;;;x
-title_councilmember_emperor_cult_of_marx;Politburo Member;;;;;;;;;;;;;x
+title_councilmember_king_cult_of_marx;Commissar without Portfolio;;;;;;;;;;;;;x
+title_councilmember_emperor_cult_of_marx;Commissar without Portfolio;;;;;;;;;;;;;x

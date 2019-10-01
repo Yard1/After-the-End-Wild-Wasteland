@@ -13,6 +13,10 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\government_icon_consumerist_government.dds"
 	}
 	spriteType = {
+		name = "GFX_icon_communist_republic"
+		texturefile = "gfx\\interface\\government_icon_communist_republic.dds"
+	}
+	spriteType = {
 		name = "GFX_trait_president"
 		texturefile = "gfx/traits/president.dds"
 		noOfFrames = 1

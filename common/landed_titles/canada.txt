@@ -9,6 +9,7 @@ e_canada = {
 	title_prefix = DOMINION_OF
 	
 	newfie = "Ceanada"
+	gael_dubh = "Ceanada"
 	
 	k_acadia = {
 		color = { 135 206 250 }
@@ -86,6 +87,7 @@ e_canada = {
 		acadien = "Nouveau-Brunswick"
 		maritimer = "Bronsuic Nuadh"
 		newfie = "Bronsuic Nuadh"
+		gael_dubh = "Bronsuic Nuadh"
 		mikmaq = "Sigenigteoag"
 		deitsch = "Neu-Brunswick"
 		rostmann = "Neu-Brunswick"
@@ -134,6 +136,7 @@ e_canada = {
 		maritimer = "Eilean Eòin"
 		mikmaq = "Pigtogeoag"
 		newfie = "Oileán Phrionsa Éadbhard"
+		gael_dubh = "Oileán Phrionsa Éadbhard"
 		
 		allow = {
 			conditional_tooltip = {
@@ -1314,6 +1317,7 @@ e_canada = {
 			acadien = "Nouveau-Brunswick"
 			maritimer = "Bronsuic Nuadh"
 			newfie = "Bronsuic Nuadh"
+			gael_dubh = "Bronsuic Nuadh"
 			mikmaq = "Sigenigteoag"
 			deitsch = "Neu-Brunswick"
 			rostmann = "Neu-Brunswick"
@@ -1549,6 +1553,7 @@ e_canada = {
 				color2= { 255 255 20 }
 				maritimer = "Magdaileanan"
 				newfie = "Magdaileanan"
+				gael_dubh = "Magdaileanan"
 				
 				b_cap_aux_meules_QC = {}
 				b_havre_aux_maisons_QC = {}
@@ -1593,6 +1598,7 @@ e_canada = {
 			maritimer = "Eilean Eòin"
 			mikmaq = "Pigtogeoag"
 			newfie = "Oileán Phrionsa Éadbhard"
+			gael_dubh = "Oileán Phrionsa Éadbhard"
 
 			c_epekwitk = {
 				color = { 36 187 82 }
@@ -1639,6 +1645,7 @@ e_canada = {
 			metis = "Nouvelle-Écosse"
 			maritimer = "Alba Nuadh"
 			newfie = "Albain Nua"
+			gael_dubh = "Albain Nua"
 			mikmaq = "Segepenegatig"
 
 			c_chignecto = {
@@ -1663,6 +1670,7 @@ e_canada = {
 				mikmaq = "Takumegoochk"
 				maritimer = "Phiogto"
 				newfie = "Phiogto"
+				gael_dubh = "Phiogto"
 
 				b_tatamagouche_NS = {}
 				b_pugwash_NS = {}
@@ -1719,6 +1727,7 @@ e_canada = {
 			haitian = "Côte-Sud"
 			mikmaq = "Gespogoitnag"
 			newfie = "Cladach Theas"
+			gael_dubh = "Cladach Theas"
 			maritimer = "Cladach Theas"
 
 			c_hants = {
@@ -1791,6 +1800,7 @@ e_canada = {
 			metis = "Île-Royale"
 			maritimer = "Ceap Breatainn"
 			newfie = "Cheap Bhreatainn"
+			gael_dubh = "Cheap Bhreatainn"
 			mikmaq = "Onamag"
 			
 			c_sydney = {

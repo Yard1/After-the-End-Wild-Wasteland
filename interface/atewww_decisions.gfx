@@ -179,4 +179,12 @@ spriteTypes = {
 		name = "GFX_recreate_dixieland"
 		texturefile = "gfx\\interface\\decision_icon_stem_duchy_of_georgia.dds"
 	}
+	spriteType = {
+		name = "GFX_hire_ursuline_honor_guard"
+		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_vassalize_st_ursulas_chosen"
+		texturefile = "gfx\\interface\\decision_icon_vassalize_holy_order.dds"
+	}
 }

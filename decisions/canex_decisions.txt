@@ -44,7 +44,7 @@ decisions = {
 						trait = skilled_tactician
 					}
 				new_character = {
-					add_trait = mountie
+					#add_trait = mountie
 					set_character_flag = is_chosen_varangian_leader
 					d_mounties = {
 						grant_title = PREV

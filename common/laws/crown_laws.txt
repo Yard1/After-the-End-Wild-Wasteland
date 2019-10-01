@@ -256,6 +256,9 @@ de_jure_laws = {
 						}
 					}
 				}
+				hidden_tooltip = {
+					NOT = { government = communist_republic }
+				}
 			}
 			OR = {
 				has_law = crown_authority_2
@@ -385,6 +388,13 @@ de_jure_laws = {
 		
 		ai_will_revoke = {
 			factor = 0
+		}
+
+		default_selection = {
+			additive_modifier = {
+				value = 100
+				holder_scope = { government = communist_republic }
+			}
 		}
 		
 		pass_effect = {

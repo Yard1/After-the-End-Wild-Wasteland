@@ -179,6 +179,8 @@ character_event = {
 	immediate = {
 		any_realm_province = {
 			remove_province_modifier = commie_cell
+			remove_province_modifier = religious_unrest
+			remove_province_modifier = peasant_unrest
 		}
 	}
 }
@@ -403,8 +405,22 @@ character_event = {
 						attacker = { religion = cult_of_marx }
 					}
 				}
+				holy_order = no
+				mercenary = no
+				OR = {
+					is_feudal = yes
+					is_republic = yes
+				}
 				any_realm_province = {
-					NOT = { has_province_modifier = commie_cell }
+					owner = {
+						holy_order = no
+						mercenary = no
+						OR = {
+							is_feudal = yes
+							is_republic = yes
+						}
+					}
+					NOR = { religion = cult_of_marx has_province_modifier = commie_cell }
 				}
 			}
 		}
@@ -428,60 +444,38 @@ character_event = {
 							attacker = { religion = cult_of_marx }
 						}
 					}
+					holy_order = no
+					mercenary = no
+					OR = {
+						is_feudal = yes
+						is_republic = yes
+					}
 					any_realm_province = {
+						owner = {
+							holy_order = no
+							mercenary = no
+							OR = {
+								is_feudal = yes
+								is_republic = yes
+							}
+						}
 						NOR = { religion = cult_of_marx has_province_modifier = commie_cell }
 					}
 				}
 				score_value = {
-		            value = 20
-		            NOT = { has_truce = PREV }
-		        }
-				score_value = {
-		            value = 20
-		            NOT = { has_non_aggression_pact_with = PREV }
-		        }
-				score_value = {
-		            value = 40
-		            NOT = { is_allied_with = PREV }
-		        }
-				score_value = {
-		            value = 5
-					any_realm_province = {
-						culture_group = ROOT
-					}
-		        }
-				score_value = {
 		            value = 10
-					any_realm_province = {
-						has_province_modifier = commie_cell
-					}
-		        }
-				score_value = {
-		            value = 10
-					any_realm_province = {
-						count = 3
-						has_province_modifier = commie_cell
-					}
-		        }
-				score_value = {
-		            value = -100
-					any_realm_province = {
-						count = 6
-						has_province_modifier = commie_cell
-					}
-		        }
-				score_value = {
-		            value = 10
-					any_realm_province = {
-						revolt_risk = 0.06
-					}
-		        }
-				score_value = {
-		            value = 10
-					is_evil_trigger = yes
+		            commie_ruler_target = yes
 		        }
 				random_realm_province = {
 					limit = {
+						owner = {
+							holy_order = no
+							mercenary = no
+							OR = {
+								is_feudal = yes
+								is_republic = yes
+							}
+						}
 						NOR = { religion = cult_of_marx has_province_modifier = commie_cell }
 					}
 					preferred_limit = {
@@ -575,6 +569,14 @@ character_event = {
 		FROM = {
 			always = yes
 			location = {
+				owner = {
+					holy_order = no
+					mercenary = no
+					OR = {
+						is_feudal = yes
+						is_republic = yes
+					}
+				}
 				NOR = {
 					has_province_modifier = commie_cell
 					religion = cult_of_marx
@@ -601,6 +603,344 @@ character_event = {
 						duration = -1
 					}
 				}
+			}
+		}
+	}
+	
+}
+
+character_event = {
+	id = ATE_WWW_COMMIES.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		government = communist_republic
+	}
+
+	immediate = {
+		top_liege = {
+			any_demesne_title = {
+				if = {
+					limit = { is_law_potential = succession_voting_power_1 }
+					add_law = { law = succession_voting_power_1 opinion_effect = no }
+					revoke_law = succession_voting_power_0
+				}
+				if = {
+					limit = { is_law_potential = succ_commie_politburo_elective }
+					add_law = { law = succ_commie_politburo_elective opinion_effect = no }
+				}
+				else_if = {
+					limit = { is_law_potential = succ_commie_centralist_elective }
+					add_law = { law = succ_commie_centralist_elective opinion_effect = no }
+				}
+				else_if = {
+					limit = { is_law_potential = succ_open_elective }
+					add_law = { law = succ_open_elective opinion_effect = no }
+				}
+			}
+			recalc_succession = yes
+			any_realm_lord = {
+				limit = {
+					government = communist_republic
+				}
+				any_demesne_title = {
+					if = {
+						limit = { is_law_potential = succession_voting_power_1 }
+						add_law = { law = succession_voting_power_1 opinion_effect = no }
+						revoke_law = succession_voting_power_0
+					}
+					if = {
+						limit = { is_law_potential = succ_commie_politburo_elective }
+						add_law = { law = succ_commie_politburo_elective opinion_effect = no }
+					}
+					else_if = {
+						limit = { is_law_potential = succ_commie_centralist_elective }
+						add_law = { law = succ_commie_centralist_elective opinion_effect = no }
+					}
+					else_if = {
+						limit = { is_law_potential = succ_open_elective }
+						add_law = { law = succ_open_elective opinion_effect = no }
+					}
+				}
+				recalc_succession = yes
+			}
+		}
+		any_demesne_title = {
+			if = {
+				limit = { is_law_potential = succession_voting_power_1 }
+				add_law = { law = succession_voting_power_1 opinion_effect = no }
+				revoke_law = succession_voting_power_0
+			}
+			if = {
+				limit = { is_law_potential = succ_commie_politburo_elective }
+				add_law = { law = succ_commie_politburo_elective opinion_effect = no }
+			}
+			else_if = {
+				limit = { is_law_potential = succ_commie_centralist_elective }
+				add_law = { law = succ_commie_centralist_elective opinion_effect = no }
+			}
+			else_if = {
+				limit = { is_law_potential = succ_open_elective }
+				add_law = { law = succ_open_elective opinion_effect = no }
+			}
+		}
+		recalc_succession = yes
+	}
+	
+}
+
+province_event = {
+	id = ATE_WWW_COMMIES.12
+	hide_window = yes
+	trigger = {
+		has_province_modifier = commie_cell
+		any_neighbor_province = {
+			owner = {
+				holy_order = no
+				mercenary = no
+				OR = {
+					is_feudal = yes
+					is_republic = yes
+				}
+			}
+			NOR = {
+				religion = cult_of_marx
+				owner = { religion = cult_of_marx }
+				has_province_modifier = commie_cell
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 720
+		modifier = {
+			factor = 0.75
+			any_neighbor_province = {
+				owner = {
+					holy_order = no
+					mercenary = no
+					OR = {
+						is_feudal = yes
+						is_republic = yes
+					}
+				}
+				culture = ROOT
+				NOR = {
+					religion = cult_of_marx
+					owner = { religion = cult_of_marx }
+					has_province_modifier = commie_cell
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			any_neighbor_province = {
+				owner = {
+					holy_order = no
+					mercenary = no
+					OR = {
+						is_feudal = yes
+						is_republic = yes
+					}
+				}
+				culture_group = ROOT
+				NOR = {
+					religion = cult_of_marx
+					owner = { religion = cult_of_marx }
+					has_province_modifier = commie_cell
+				}
+			}
+		}
+	}
+
+	immediate = {
+		owner = {
+			top_liege = { save_event_target_as = prov_top_liege }
+		}
+		county = {
+			dejure_liege_title = {
+				save_event_target_as = prov_de_jure_duchy
+			}
+		}
+		random_neighbor_province = {
+			limit = {
+				owner = {
+					holy_order = no
+					mercenary = no
+					OR = {
+						is_feudal = yes
+						is_republic = yes
+					}
+				}
+				NOR = {
+					religion = cult_of_marx
+					owner = { religion = cult_of_marx }
+					has_province_modifier = commie_cell
+				}
+			}
+			preferred_limit = {
+				culture = ROOT
+			}
+			preferred_limit = {
+				culture_group = ROOT
+			}
+			preferred_limit = {
+				owner = {
+					top_liege = {
+						character = event_target:prov_top_liege
+					}
+				}
+				county = {
+					dejure_liege_title = {
+						title = event_target:prov_de_jure_duchy
+					}
+				}
+			}
+			preferred_limit = {
+				owner = {
+					top_liege = {
+						character = event_target:prov_top_liege
+					}
+				}
+			}
+			preferred_limit = {
+				county = {
+					dejure_liege_title = {
+						title = event_target:prov_de_jure_duchy
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+character_event = {
+	id = ATE_WWW_COMMIES.13
+	hide_window = yes
+	is_triggered_only = yes
+	only_independent = yes
+
+	trigger = {
+		tier = KING
+		government = communist_republic
+	}
+
+	immediate = {
+		random_independent_ruler = {
+			limit = {
+				religion = cult_of_marx
+				higher_tier_than = ROOT
+				NOT = { distance_from_realm = { who = FROM value = 350 } }
+			}
+			save_event_target_as = new_overlord
+		}
+		any_independent_ruler = {
+			limit = {
+				religion = cult_of_marx
+				lower_tier_than = ROOT
+				NOT = { distance_from_realm = { who = FROM value = 350 } }
+			}
+			set_defacto_liege = ROOT
+		}
+		if = {
+			limit = { event_target:new_overlord = { always = yes } }
+			set_defacto_liege = event_target:new_overlord
+		}
+		else = {
+			random_independent_ruler = {
+				limit = {
+					religion = cult_of_marx
+					tier = ROOT
+					NOT = { distance_from_realm = { who = FROM value = 350 } }
+				}
+				preferred_limit = {
+					culture_group = ROOT
+					NOT = { distance_from_realm = { who = FROM value = 50 } }
+				}
+				preferred_limit = {
+					culture_group = ROOT
+					NOT = { distance_from_realm = { who = FROM value = 150 } }
+				}
+				preferred_limit = {
+					culture_group = ROOT
+					NOT = { distance_from_realm = { who = FROM value = 250 } }
+				}
+				preferred_limit = {
+					culture_group = ROOT
+					NOT = { distance_from_realm = { who = FROM value = 350 } }
+				}
+				preferred_limit = {
+					NOT = { distance_from_realm = { who = FROM value = 50 } }
+				}
+				preferred_limit = {
+					NOT = { distance_from_realm = { who = FROM value = 150 } }
+				}
+				preferred_limit = {
+					NOT = { distance_from_realm = { who = FROM value = 250 } }
+				}
+				preferred_limit = {
+					NOT = { distance_from_realm = { who = FROM value = 350 } }
+				}
+				save_event_target_as = commie_realm_compare
+			}
+			if = {
+				limit = {
+					relative_realm_size = {
+						who = event_target:commie_realm_compare 
+						size > 1
+					}
+				}
+				primary_title = {
+					dejure_liege_title = {
+						create_title = {
+							tier = EMPEROR
+							landless = no
+							temporary = no
+							name = "fourth_crusade_greek_kingdom_name" #this
+							holder = ROOT
+							culture = ROOT
+							custom_created = yes
+							base_title = PREV
+							copy_title_laws = yes
+						}
+					}
+				}
+				event_target:commie_realm_compare = {
+					set_defacto_liege = ROOT
+				}
+			}
+			else = {
+				event_target:commie_realm_compare = {
+					primary_title = {
+						dejure_liege_title = {
+							create_title = {
+								tier = EMPEROR
+								landless = no
+								temporary = no
+								name = "fourth_crusade_greek_kingdom_name" #this
+								holder = PREVPREV
+								culture = PREVPREV
+								custom_created = yes
+								base_title = PREV
+								copy_title_laws = yes
+							}
+						}
+					}
+				}
+				ROOT = {
+					set_defacto_liege = event_target:commie_realm_compare
+				}
+			}
+		}
+		if = {
+			limit = { independent = yes }
+			character_event = { id = ATE_WWW_COMMIES.11 }
+		}
+		else = {
+			top_liege = {
+				character_event = { id = ATE_WWW_COMMIES.11 }
 			}
 		}
 	}

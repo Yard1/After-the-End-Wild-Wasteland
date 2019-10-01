@@ -1129,7 +1129,7 @@ character_event = {
 				save_event_target_as = taken_pill
 			}
 			hidden_tooltip = { add_character_modifier = { name = taken_medicine_recently days = 15 hidden = yes } }
-			character_event = { id = ATE_WWW_MEDICINE.6 days = 1 }
+			character_event = { id = ATE_WWW_MEDICINE.5 days = 1 }
 		}
 	}
 

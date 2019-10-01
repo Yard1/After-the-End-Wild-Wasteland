@@ -119,7 +119,7 @@ character_event = {
 			trait = zealous
 			trait = cruel
 			trait = wroth
-			trait = dilligent
+			trait = diligent
 			trait = service_cross
 			trait = ambitious
 			trait = shrewd
@@ -220,7 +220,7 @@ character_event = {
 					succession = primogeniture
 				}
 				else_if = {
-					NOT = { has_law = succ_seniority }
+					limit = { NOT = { has_law = succ_seniority } }
 					add_law = {
 						law = succ_seniority
 						opinion_effect = no
@@ -379,12 +379,14 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTA324 # For [God Name]!
-		NOT = {
-			new_character = {
-				character = event_target:airmen_destroyer
+		trigger = {
+			NOT = {
+				new_character = {
+					character = event_target:airmen_destroyer
+				}
 			}
+			religion = ROOT
 		}
-		trigger = { religion = ROOT }
 	}
 	option = {
 		name = EVTOPTB200 # No concern of ours

@@ -4,6 +4,7 @@ decisions = {
 		only_independent = yes
 		ai_check_interval = 24
 		potential = {
+			NOT = { religion = cult_of_marx }
 			is_alternate_start = no
 			NOT = {
 				has_game_rule = {
@@ -228,6 +229,7 @@ decisions = {
 		only_independent = yes
 		ai_check_interval = 24
 		potential = {
+			NOT = { religion = cult_of_marx }
 			NOT = {
 				has_game_rule = {
 					name = empire_decisions
@@ -561,6 +563,7 @@ decisions = {
 		only_independent = yes
 		ai_check_interval = 24
 		potential = {
+			NOT = { religion = cult_of_marx }
 			is_alternate_start = no
 			NOT = {
 				has_game_rule = {
@@ -758,6 +761,7 @@ decisions = {
 		only_independent = yes
 		ai_check_interval = 24
 		potential = {
+			NOT = { religion = cult_of_marx }
 			is_alternate_start = no
 			
 			NOT = {
@@ -941,6 +945,7 @@ decisions = {
 		only_independent = yes
 		ai_check_interval = 24
 		potential = {
+			NOT = { religion = cult_of_marx }
 			OR = {
 				NOT = { has_global_flag = new_california_formed }
 				has_global_flag = california_restored
@@ -1025,11 +1030,13 @@ decisions = {
 			k_the_valley = {
 				de_jure_liege = e_new_california
 			}
-			any_realm_title = {
-				limit = { 
-					tier = KING
+			any_realm_lord = {
+				any_demesne_title = {
+					limit = { 
+						tier = KING
+					}
+					de_jure_liege = e_new_california
 				}
-				de_jure_liege = e_new_california
 			}
 			any_demesne_title = {
 				limit = { 
@@ -1143,11 +1150,13 @@ decisions = {
 			k_the_valley = {
 				de_jure_liege = e_california
 			}
-			any_realm_title = {
-				limit = { 
-					tier = KING
+			any_realm_lord = {
+				any_demesne_title = {
+					limit = { 
+						tier = KING
+					}
+					de_jure_liege = e_california
 				}
-				de_jure_liege = e_california
 			}
 			any_demesne_title = {
 				limit = { 

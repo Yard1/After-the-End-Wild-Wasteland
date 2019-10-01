@@ -3315,7 +3315,7 @@ character_event = {
 						realm_size = 5
 					}
 				}
-				event_target:grand_master = { character_event = { id = MNM_ATEWWW.100 } }
+				event_target:grand_master = { character_event = { id = MNM.6991 } }
 			}
 			15 = {
 				modifier = {
@@ -9053,7 +9053,7 @@ character_event = {
 
 #MISSION: Donate Castle
 character_event = {
-	id = MNM_ATEWWW.100
+	id = MNM.6991
 	hide_window = yes
 
 	is_triggered_only = yes
