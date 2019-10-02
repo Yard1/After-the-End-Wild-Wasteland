@@ -3481,6 +3481,7 @@ oldworld = {
 		}
 		
 		character_modifier = {
+			monthly_character_piety = 1.5
 			global_revolt_risk = -0.08
 			same_religion_opinion = 10
 			americanist_opinion = -100
