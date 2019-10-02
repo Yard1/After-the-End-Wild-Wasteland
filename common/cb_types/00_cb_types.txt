@@ -6335,6 +6335,7 @@ religious = {
 				religion = anabaptist
 				religion = espiritista
 				religion = uahomche
+				religion = rust_cultist
 			}
 			OR = {
 				pacifist = no
@@ -10486,12 +10487,8 @@ pagan_subjugation = {
 					OR = {
 						religion = midewiwin
 						religion = raven_tales
-					}
-					is_tribal = yes
-				}
-				AND = {
-					OR = {
 						religion = uahomche
+						religion = rust_cultist
 					}
 					is_tribal = yes
 				}
@@ -10597,6 +10594,28 @@ pagan_subjugation = {
 					is_nomadic = no
 					AND = {
 						religion = uahomche
+						is_tribal = yes
+					}
+					NOT = {
+						any_war = {
+							defender = { character = PREVPREV }
+							OR = {
+								using_cb = pagan_subjugation
+								using_cb = nomad_subjugation
+							}
+						}
+					}
+				}
+			}
+			AND = {
+				ROOT = {
+					religion = rust_cultist
+				}
+				FROM = {
+					in_revolt = no
+					is_nomadic = no
+					AND = {
+						religion = rust_cultist
 						is_tribal = yes
 					}
 					NOT = {
@@ -12392,6 +12411,7 @@ pagan_county_conquest = {
 						religion = brethren
 						religion = espiritista
 						religion = uahomche
+						religion = rust_cultist
 						AND = {
 							religion = espiritista_reformed
 							has_religion_feature = religion_seafaring
