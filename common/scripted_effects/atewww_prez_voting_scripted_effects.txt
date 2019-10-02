@@ -761,7 +761,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		religion_authority = 0.6
+		religion_authority = 0.4
 		event_target:new_candidate = { 
 			trait = scarred
 		}
@@ -967,7 +967,7 @@ calculate_candidate_score = {
 		
 		limit = {
 		
-		religion_authority = 0.6
+		religion_authority = 0.4
 		NOT = { 
 			culture_group = south_anglo
 		}
@@ -979,7 +979,7 @@ calculate_candidate_score = {
 		
 		limit = {
 		
-		religion_authority = 0.6
+		religion_authority = 0.4
 		culture_group = south_anglo
 		event_target:new_candidate = { 
 			trait = disfigured
@@ -999,7 +999,7 @@ calculate_candidate_score = {
 		
 		limit = {
 		
-		religion_authority = 0.6
+		religion_authority = 0.4
 		event_target:new_candidate = { 
 			trait = mangled
 		}
@@ -1041,7 +1041,7 @@ calculate_candidate_score = {
 		
 		limit = {
 		
-		religion_authority = 0.6
+		religion_authority = 0.4
 		event_target:new_candidate = { 
 			trait = severely_injured
 		}
@@ -1195,7 +1195,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		religion_authority = 0.6
+		religion_authority = 0.4
 		event_target:new_candidate = { 
 			trait = strong
 		}
@@ -1296,7 +1296,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		religion_authority = 0.6
+		religion_authority = 0.4
 		event_target:new_candidate = { 
 			trait = weak
 		}
@@ -1316,7 +1316,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		religion_authority = 0.6
+		religion_authority = 0.4
 		event_target:new_candidate = { 
 			trait = robust
 		}
@@ -1345,7 +1345,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		religion_authority = 0.6
+		religion_authority = 0.4
 		event_target:new_candidate = { 
 			trait = feeble
 		}
@@ -1468,7 +1468,7 @@ calculate_candidate_score = {
 			NOT = { 
 				trait = wroth
 			}
-			religion_authority = 0.6
+			religion_authority = 0.4
 		}
 		event_target:new_candidate = { 
 			trait = patient
@@ -1650,7 +1650,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		religion_authority = 0.6
+		religion_authority = 0.4
 		event_target:new_candidate = { 
 			trait = wroth
 		}
@@ -1735,7 +1735,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		religion_authority = 0.6
+		religion_authority = 0.4
 		NOR = { 
 			trait = envious
 			trait = arbitrary #
@@ -1763,7 +1763,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		religion_authority = 0.6
+		religion_authority = 0.4
 		OR = { 
 			trait = envious
 			trait = arbitrary #
@@ -1800,7 +1800,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		religion_authority = 0.6
+		religion_authority = 0.4
 		event_target:new_candidate = { 
 			trait = craven
 		}
@@ -1903,7 +1903,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		religion_authority = 0.6
+		religion_authority = 0.4
 		NOR = { 
 			trait = deceitful
 			trait = arbitrary
@@ -2012,7 +2012,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		religion_authority = 0.6
+		religion_authority = 0.4
 		event_target:new_candidate = { 
 			trait = blinded
 		}

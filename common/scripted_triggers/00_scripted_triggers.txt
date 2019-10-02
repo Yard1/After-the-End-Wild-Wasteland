@@ -7260,13 +7260,26 @@ has_scarred_trait_trigger = {
 this_is_warrior_culture_trigger = { #Not really about culture - Used in AI voting logic.
 	NOT = { pacifist = yes }
 	OR = { 
-		religion_group = mesoamerican_gods
+		AND = {
+			religion = americanist
+			NOT = { religion_authority = 0.4 }
+		}
+		AND = {
+			religion_group = mesoamerican_gods
+			OR = {
+				NOT = { has_dlc = "Holy Fury"}
+				NOT = {
+					religion = uahomche_reformed
+				}
+			}
+		}
 		religion_group = pirate
 		religion = norse_pagan
 		religion = amazonian
 		religion = raven_tales
 		religion = thelemic
 		religion = jeffersonian
+		religion = rust_cultist
 		OR = {
 			has_religion_feature = religion_warlike
 			has_religion_feature = religion_defensive
@@ -7303,12 +7316,19 @@ this_is_diplomatic_culture_trigger = { #Not really about culture - Used in AI vo
 		AND = { 
 			religion_group = oldworld
 			NOR = {
+				AND = {
+					religion = americanist
+					NOT = { religion_authority = 0.4 }
+				}
 				religion = jeffersonian
+				religion = rust_cultist
+				religion = chrome_cultist
 				religion = rust_cultist_reformed
 			}
 		}
 		has_religion_feature = religion_cosmopolitan
 		has_religion_feature = religion_feature_espiritista
+		has_religion_feature = religion_proselytizing
 		#AND = {
 		#	NOT = { has_dlc = "Holy Fury"}
 		#	religion = rust_cultist_reformed
@@ -7318,11 +7338,12 @@ this_is_diplomatic_culture_trigger = { #Not really about culture - Used in AI vo
 this_is_spiritual_culture_trigger = { #Not really about culture - Used in AI voting logic.
 	NOT = { religion = amazonian }
 	OR = { 
+		is_theocracy = yes
 		religion_group = indian_group
 		religion_group = pacific
+		religion = chrome_cultist
 		has_religion_feature = religion_peaceful
 		has_religion_feature = religion_dogmatic
-		has_religion_feature = religion_proselytizing
 		pacifist = yes
 		#AND = { 
 		#	NOT = { has_dlc = "Holy Fury"}

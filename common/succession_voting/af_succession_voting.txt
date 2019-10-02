@@ -801,7 +801,7 @@ constitutional_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_scarred
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = scarred
 			}
@@ -982,7 +982,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_disfigured
-			religion_authority = 0.6
+			religion_authority = 0.4
 			NOT = { 
 				culture_group = south_anglo
 			}
@@ -993,7 +993,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_disfigured_byzantine
-			religion_authority = 0.6
+			religion_authority = 0.4
 			culture_group = south_anglo
 			FROM = { 
 				trait = disfigured
@@ -1011,7 +1011,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_mangled
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = mangled
 			}
@@ -1048,7 +1048,7 @@ constitutional_elective = {
 		additive_modifier = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_severely_injured
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = severely_injured
 			}
@@ -1204,7 +1204,7 @@ constitutional_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_strong
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = strong
 			}
@@ -1294,7 +1294,7 @@ constitutional_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_weak
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = weak
 			}
@@ -1312,7 +1312,7 @@ constitutional_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_robust
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = robust
 			}
@@ -1338,7 +1338,7 @@ constitutional_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_feeble
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = feeble
 			}
@@ -1451,7 +1451,7 @@ constitutional_elective = {
 				NOT = { 
 					trait = wroth
 				}
-				religion_authority = 0.6
+				religion_authority = 0.4
 			}
 			FROM = { 
 				trait = patient
@@ -1618,7 +1618,7 @@ constitutional_elective = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_wroth_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = wroth
 			}
@@ -1696,7 +1696,7 @@ constitutional_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_brave_positive
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			NOR = { 
 				trait = envious
 				trait = arbitrary #
@@ -1722,7 +1722,7 @@ constitutional_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_brave_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			OR = { 
 				trait = envious
 				trait = arbitrary #
@@ -1756,7 +1756,7 @@ constitutional_elective = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_craven_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = craven
 			}
@@ -1849,7 +1849,7 @@ constitutional_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_paranoid_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			NOR = { 
 				trait = deceitful
 				trait = arbitrary
@@ -1949,7 +1949,7 @@ constitutional_elective = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_blinded_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = blinded
 			}
@@ -3508,7 +3508,7 @@ popular_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_scarred
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = scarred
 			}
@@ -3689,7 +3689,7 @@ popular_elective = {
 		additive_modifier = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_disfigured
-			religion_authority = 0.6
+			religion_authority = 0.4
 			NOT = { 
 				culture_group = south_anglo
 			}
@@ -3700,7 +3700,7 @@ popular_elective = {
 		additive_modifier = {
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_disfigured_byzantine
-			religion_authority = 0.6
+			religion_authority = 0.4
 			culture_group = south_anglo
 			FROM = { 
 				trait = disfigured
@@ -3718,7 +3718,7 @@ popular_elective = {
 		additive_modifier = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_mangled
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = mangled
 			}
@@ -3755,7 +3755,7 @@ popular_elective = {
 		additive_modifier = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_severely_injured
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = severely_injured
 			}
@@ -3911,7 +3911,7 @@ popular_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_strong
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = strong
 			}
@@ -4001,7 +4001,7 @@ popular_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_weak
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = weak
 			}
@@ -4019,7 +4019,7 @@ popular_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_robust
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = robust
 			}
@@ -4045,7 +4045,7 @@ popular_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_feeble
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = feeble
 			}
@@ -4158,7 +4158,7 @@ popular_elective = {
 				NOT = { 
 					trait = wroth
 				}
-				religion_authority = 0.6
+				religion_authority = 0.4
 			}
 			FROM = { 
 				trait = patient
@@ -4325,7 +4325,7 @@ popular_elective = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_wroth_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = wroth
 			}
@@ -4403,7 +4403,7 @@ popular_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_brave_positive
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			NOR = { 
 				trait = envious
 				trait = arbitrary #
@@ -4429,7 +4429,7 @@ popular_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_brave_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			OR = { 
 				trait = envious
 				trait = arbitrary #
@@ -4463,7 +4463,7 @@ popular_elective = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_craven_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = craven
 			}
@@ -4556,7 +4556,7 @@ popular_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_paranoid_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			NOR = { 
 				trait = deceitful
 				trait = arbitrary
@@ -4656,7 +4656,7 @@ popular_elective = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_blinded_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = blinded
 			}

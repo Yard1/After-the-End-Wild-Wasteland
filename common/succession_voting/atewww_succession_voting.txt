@@ -652,7 +652,7 @@ libertarian_elective = {
 		additive_modifier = { # Spiritual culture prefers scholars
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_spiritual_education
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				learning = 10
 				OR = { 
@@ -968,7 +968,7 @@ libertarian_elective = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_mangled
 			NOR = { trait = just trait = zealous }
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = mangled
 			}
@@ -1005,7 +1005,7 @@ libertarian_elective = {
 		additive_modifier = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_severely_injured
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = severely_injured
 			}
@@ -1064,7 +1064,7 @@ libertarian_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_strong
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = strong
 			}
@@ -1083,7 +1083,7 @@ libertarian_elective = {
 			value = 2
 			localisation_key = tooltip_feudal_elector_vote_strong
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = robust
 			}
@@ -1102,7 +1102,7 @@ libertarian_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_weak
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = weak
 			}
@@ -1120,7 +1120,7 @@ libertarian_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_robust
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = robust
 			}
@@ -1323,7 +1323,7 @@ libertarian_elective = {
 				NOT = { 
 					trait = wroth
 				}
-				religion_authority = 0.6
+				religion_authority = 0.4
 			}
 			FROM = { 
 				trait = patient
@@ -1489,7 +1489,7 @@ libertarian_elective = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_wroth_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = wroth
 			}
@@ -1676,7 +1676,7 @@ libertarian_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_paranoid_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			NOR = { 
 				trait = deceitful
 				trait = arbitrary
@@ -3246,7 +3246,7 @@ mib_elective = {
 				NOT = { 
 					trait = wroth
 				}
-				religion_authority = 0.6
+				religion_authority = 0.4
 			}
 			FROM = { 
 				trait = patient
@@ -3343,7 +3343,7 @@ mib_elective = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_wroth_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = wroth
 			}
@@ -9084,7 +9084,7 @@ militarist_appointment = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_scarred
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = scarred
 			}
@@ -10007,7 +10007,7 @@ militarist_appointment = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_paranoid_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			NOR = { 
 				trait = deceitful
 				trait = arbitrary
@@ -11527,7 +11527,7 @@ commie_politburo_elective = {
 		additive_modifier = { 
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_authority = 0.6
+			religion_authority = 0.4
 			trait = zealous
 			NOT = { character = FROM }
 			FROM = {
@@ -11541,7 +11541,7 @@ commie_politburo_elective = {
 		additive_modifier = { 
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_authority = 0.6
+			religion_authority = 0.4
 			NOR = {
 				trait = cynical
 				trait = zealous
@@ -14779,7 +14779,7 @@ commie_centralist_elective = {
 		additive_modifier = { 
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_authority = 0.6
+			religion_authority = 0.4
 			trait = zealous
 			NOT = { character = FROM }
 			FROM = {
@@ -14793,7 +14793,7 @@ commie_centralist_elective = {
 		additive_modifier = { 
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_authority = 0.6
+			religion_authority = 0.4
 			NOR = {
 				trait = cynical
 				trait = zealous
