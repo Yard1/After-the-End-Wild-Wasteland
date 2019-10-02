@@ -720,7 +720,7 @@ presidential_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_scarred
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = scarred
 			}
@@ -901,7 +901,7 @@ presidential_elective = {
 		additive_modifier = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_disfigured
-			religion_authority = 0.6
+			religion_authority = 0.4
 			NOT = { 
 				culture_group = south_anglo
 			}
@@ -912,7 +912,7 @@ presidential_elective = {
 		additive_modifier = {
 			value = -50
 			localisation_key = tooltip_feudal_elector_vote_disfigured_byzantine
-			religion_authority = 0.6
+			religion_authority = 0.4
 			culture_group = south_anglo
 			FROM = { 
 				trait = disfigured
@@ -930,7 +930,7 @@ presidential_elective = {
 		additive_modifier = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_mangled
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = mangled
 			}
@@ -967,7 +967,7 @@ presidential_elective = {
 		additive_modifier = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_severely_injured
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = severely_injured
 			}
@@ -1123,7 +1123,7 @@ presidential_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_strong
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = strong
 			}
@@ -1213,7 +1213,7 @@ presidential_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_weak
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = weak
 			}
@@ -1231,7 +1231,7 @@ presidential_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_robust
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = robust
 			}
@@ -1257,7 +1257,7 @@ presidential_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_feeble
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = feeble
 			}
@@ -1370,7 +1370,7 @@ presidential_elective = {
 				NOT = { 
 					trait = wroth
 				}
-				religion_authority = 0.6
+				religion_authority = 0.4
 			}
 			FROM = { 
 				trait = patient
@@ -1537,7 +1537,7 @@ presidential_elective = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_wroth_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = wroth
 			}
@@ -1615,7 +1615,7 @@ presidential_elective = {
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_brave_positive
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			NOR = { 
 				trait = envious
 				trait = arbitrary #
@@ -1641,7 +1641,7 @@ presidential_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_brave_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			OR = { 
 				trait = envious
 				trait = arbitrary #
@@ -1675,7 +1675,7 @@ presidential_elective = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_craven_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = craven
 			}
@@ -1768,7 +1768,7 @@ presidential_elective = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_paranoid_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			NOR = { 
 				trait = deceitful
 				trait = arbitrary
@@ -1868,7 +1868,7 @@ presidential_elective = {
 			value = -10
 			localisation_key = tooltip_feudal_elector_vote_blinded_negative
 			NOT = { character = FROM } 
-			religion_authority = 0.6
+			religion_authority = 0.4
 			FROM = { 
 				trait = blinded
 			}

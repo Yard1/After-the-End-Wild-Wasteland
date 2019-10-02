@@ -10,8 +10,3 @@ dependencies = {
 	"After The End - Guruism"
 	"Canada Expanded"
 }
-
-supported_checksums=
-{
-	BYVJ CTTK
-}
