@@ -3423,7 +3423,7 @@ oldworld = {
 		
 		interface_skin = { cult_of_marx_interface }
 		
-		icon = 76
+		icon = 77
 		color = { 175 40 40 }
 		
 		crusade_name = GREAT_PATRIOTIC_WAR
@@ -3431,10 +3431,10 @@ oldworld = {
 		priest_title = PARTY_SECRETARY
 		piety_name = LOYALTY
 		
-		high_god_name = GOD_THE_PARTY
+		high_god_name = GOD_MARX
 		
 		god_names = {
-			GOD_MARX GOD_ENGELS GOD_LENIN GOD_REED GOD_CHE GOD_CASTRO GOD_THE_REVOLUTION GOD_THE_DIALECTIC GOD_HISTORY
+			GOD_MARX GOD_ENGELS GOD_MAO GOD_LENIN GOD_REED GOD_CHE GOD_CASTRO GOD_THE_REVOLUTION GOD_THE_DIALECTIC GOD_HISTORY
 		}
 		evil_god_names = {
 			THE_CAPITALIST THE_REACTIONARY THE_NOBLE THE_FASCIST THE_PRIEST THE_BOURGEOISIE
@@ -3456,24 +3456,24 @@ oldworld = {
 		can_call_crusade = no #they have their own stuff
 		allow_in_ruler_designer = no
 
-		aggression = 2
+		aggression = 2.5
 		unit_modifier = {		
-			garrison_size = 0.3
-			levy_size = 0.4
+			garrison_size = 0.4
+			levy_size = 0.5
 			
 			key = "DEF_RELIGION"
 		}
 		unit_home_modifier = {
-			land_morale = 0.4
-			light_infantry_defensive = 0.4
-			heavy_infantry_defensive = 0.4
-			pikemen_defensive = 0.4
-			light_cavalry_defensive = 0.4
-			knights_defensive = 0.4
-			archers_defensive = 0.4
-			horse_archers_defensive = 0.4
-			camel_cavalry_defensive = 0.4
-			war_elephants_defensive = 0.4
+			land_morale = 0.5
+			light_infantry_defensive = 0.5
+			heavy_infantry_defensive = 0.5
+			pikemen_defensive = 0.5
+			light_cavalry_defensive = 0.5
+			knights_defensive = 0.5
+			archers_defensive = 0.5
+			horse_archers_defensive = 0.5
+			camel_cavalry_defensive = 0.5
+			war_elephants_defensive = 0.5
 			
 			garrison_size = 0.2
 			
@@ -3483,6 +3483,14 @@ oldworld = {
 		character_modifier = {
 			global_revolt_risk = -0.08
 			same_religion_opinion = 10
+			americanist_opinion = -100
+			hamiltonian_opinion = -100
+			jeffersonian_opinion = -100
+			libertarian_opinion = -100
+			consumerist_opinion = -100
+			monetarist_opinion = -100
+			rust_cultist_opinion = -100
+			rust_cultist_reformed_opinion = -100
 			indian_group_opinion = -75
 			jewish_group_opinion = -75
 			pirate_opinion = -75
@@ -3494,14 +3502,6 @@ oldworld = {
 			christian_opinion = -75
 			american_native_opinion = -75
 			afro_syncretic_opinion = -75
-			americanist_opinion = -100
-			hamiltonian_opinion = -100
-			jeffersonian_opinion = -100
-			libertarian_opinion = -100
-			consumerist_opinion = -100
-			monetarist_opinion = -100
-			rust_cultist_opinion = -100
-			rust_cultist_reformed_opinion = -100
 			chrome_cultist_opinion = -75
 			atomicist_opinion = -75
 			aphite_opinion = -75

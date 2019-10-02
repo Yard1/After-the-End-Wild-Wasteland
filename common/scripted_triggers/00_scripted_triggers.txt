@@ -9047,7 +9047,7 @@ has_feminist_religion_trigger = {
 
 americanism_under_threat_trigger = {
 	religion = americanist
-	NOT = { num_of_holy_sites = 3 }
+	NOT = { religious_authority = 0.4 }
 }
 
 has_sympathy_trait_trigger = {

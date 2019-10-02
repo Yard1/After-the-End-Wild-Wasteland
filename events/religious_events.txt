@@ -1708,12 +1708,8 @@ character_event = {
 	
 	trigger = {
 		controls_religion = yes
-		OR = {
-			religion = catholic
-			religion = ursuline
-			religion = confederated
-			religion = nestorian
-		}
+		religion_group = christian
+		is_pope = yes
 		
 		religion_authority = 0.20
 
@@ -1950,6 +1946,10 @@ character_event = {
 		modifier = {
 			factor = 0.25
 			trait = zealous
+		}
+		modifier = {
+			factor = 0.8
+			trait = methodist
 		}
 	}
 

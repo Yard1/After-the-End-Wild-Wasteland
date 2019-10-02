@@ -86,6 +86,10 @@ character_event = {
 			}
 		}
 		modifier = {
+			factor = 0.8
+			religion = cult_of_marx
+		}
+		modifier = {
 			factor = 0.6
 			OR = {
 				religion = cult_of_marx

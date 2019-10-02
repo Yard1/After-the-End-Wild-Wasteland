@@ -229,7 +229,7 @@ marry_suitable_courtier_or_vassal = {
 					trait = cannot_marry
 					trait = cat
 					trait = celibate
-					is_rival_of = ROOT
+					is_rival = ROOT
 				}
 				NOT = { is_close_relative = ROOT }
 				OR = {

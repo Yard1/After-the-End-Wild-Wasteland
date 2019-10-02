@@ -2224,7 +2224,7 @@ decisions = {
 		potential = {
 			is_alternate_start = no
 			
-			religion = micltlantec
+			religion = mictlantec
 			
 			is_heretic = no
 
@@ -2318,7 +2318,7 @@ decisions = {
 						}
 					}
 				}
-				has_character_modifier = expelled_d_st_ursulas_chosen
+				has_character_modifier = expelled_d_teutonic_order
 			}
 
 			OR = {

@@ -183,12 +183,13 @@ letter_event = {
 			holder_scope = {
 				show_scope_change = no
 				FROMFROM = {
-					ROOT_join_PREV_holy_order_holder = yes
+					save_event_target_as = order_target
 					if = {
 						limit = { NOT = { trait = disinherited } }
 						add_trait = disinherited
 					}
 				}
+				character_event = { id = SoA.2864 }
 			}
 		}
 	}
@@ -1832,13 +1833,13 @@ letter_event = {
 			holder_scope = {
 				show_scope_change = no
 				FROMFROM = {
-					show_scope_change = no
-					ROOT_join_PREV_holy_order_holder = yes
+					save_event_target_as = order_target
 					if = {
 						limit = { NOT = { trait = disinherited } }
 						add_trait = disinherited
 					}
 				}
+				character_event = { id = SoA.2864 }
 			}
 		}
 	}
@@ -3422,13 +3423,13 @@ letter_event = {
 			holder_scope = {
 				show_scope_change = no
 				FROMFROM = {
-					show_scope_change = no
-					ROOT_join_PREV_holy_order_holder = yes
+					save_event_target_as = order_target
 					if = {
 						limit = { NOT = { trait = disinherited } }
 						add_trait = disinherited
 					}
 				}
+				character_event = { id = SoA.2864 }
 			}
 		}
 		ai_chance = {

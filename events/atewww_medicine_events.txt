@@ -1476,7 +1476,7 @@ character_event = {
 		trigger = {
 			has_character_flag = was_sick
 			character_disease_trigger = no
-			NOT = { has_trait = ill }
+			NOT = { trait = ill }
 		}
 		text = EVTDESC_ATE_WWW_MEDICINE_5_SUCCESS
 	}
@@ -1518,7 +1518,7 @@ character_event = {
 				AND = {
 					has_character_flag = was_sick
 					character_disease_trigger = no
-					NOT = { has_trait = ill }
+					NOT = { trait = ill }
 				}
 				AND = {
 					has_character_flag = was_sick
@@ -1553,7 +1553,7 @@ character_event = {
 				AND = {
 					has_character_flag = was_sick
 					character_disease_trigger = no
-					NOT = { has_trait = ill }
+					NOT = { trait = ill }
 				}
 				AND = {
 					has_character_flag = was_sick
@@ -1593,7 +1593,7 @@ character_event = {
 				AND = {
 					has_character_flag = was_sick
 					character_disease_trigger = no
-					NOT = { has_trait = ill }
+					NOT = { trait = ill }
 				}
 				AND = {
 					has_character_flag = was_sick
@@ -1639,7 +1639,7 @@ character_event = {
 				AND = {
 					has_character_flag = was_sick
 					character_disease_trigger = no
-					NOT = { has_trait = ill }
+					NOT = { trait = ill }
 				}
 				AND = {
 					has_character_flag = was_sick
@@ -1686,7 +1686,7 @@ character_event = {
 				AND = {
 					has_character_flag = was_sick
 					character_disease_trigger = no
-					NOT = { has_trait = ill }
+					NOT = { trait = ill }
 				}
 				AND = {
 					has_character_flag = was_sick

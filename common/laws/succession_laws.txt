@@ -985,7 +985,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = military_governorate } }
 			NOT = { holder_scope = { government = chinese_imperial_government } }
 			NOR = {  #Special Elective.
-				title = e_hre 
+				title = e_dixie
 				has_title_flag = alternate_hre
 			}
 		}
@@ -1508,7 +1508,7 @@ succession_laws = {
 		#child_opinion = 30
 		#dynasty_opinion = 10
 		potential = {
-			NOT = { government = communist_republic }
+			holder_scope = { NOT = { government = communist_republic } }
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				title = e_usa
@@ -1588,10 +1588,6 @@ succession_laws = {
 				title = k_ursuline
 				title = k_confederated
 				title = d_quorum_of_the_twelve
-				AND = {
-					title = d_celtic_pagan_reformed
-					has_religion_feature = religion_theocratic_head
-				}
 			}
 		}
 		
@@ -1638,7 +1634,6 @@ succession_laws = {
 				title = k_ursuline
 				title = k_confederated
 				title = d_quorum_of_the_twelve
-				title = d_celtic_pagan_reformed
 				title = e_redcoat_dominion
 				title = k_pirate_kingdom
 			}

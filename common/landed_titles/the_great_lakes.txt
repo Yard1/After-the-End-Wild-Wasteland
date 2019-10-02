@@ -789,7 +789,7 @@ e_great_lakes = {
 				holy_site = norse_pagan_reformed
 				holy_site = catholic
 				holy_site = consumerist
-				holy_site = cult_of_marx
+				#holy_site = cult_of_marx
 
 				b_chicago_IL = { #Added Norse-like as well as Yiddish name to this county
 					northlander = "Vindgarðr"

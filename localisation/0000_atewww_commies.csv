@@ -1,40 +1,40 @@
-#CODE;ENGLISH;;;;;;;;;x,,,
-###### Religion/titles definitions;;;;;;;;;;;;;;x,,,
-GOD_THE_PARTY;The Party;;;;;;;;;;;;;x,,,
-GOD_MARX;Marx;;;;;;;;;;;;;x,,,
-GOD_ENGELS;Engels;;;;;;;;;;;;;x,,,
-GOD_THE_REVOLUTION;The Revolution;;;;;;;;;;;;;x,,,
-GOD_THE_DIALECTIC;The Dialectic;;;;;;;;;;;;;x,,,
-GOD_HISTORY;History;;;;;;;;;;;;;x,,,
-THE_CAPITALIST;The Capitalist;;;;;;;;;;;;;x,,,
-THE_REACTIONARY;The Reactionary;;;;;;;;;;;;;x,,,
-THE_FASCIST;The Fascist;;;;;;;;;;;;;x,,,
-THE_PRIEST;The Priest;;;;;;;;;;;;;x,,,
-THE_MANIFESTO;The Communist Manifesto;;;;;;;;;;;;;x,,,
-LOYALTY;Loyalty;;;;;;;;;;;;;x,,,
-GREAT_PATRIOTIC_WAR;Great Patriotic War;;;;;;;;;;;;;x,,,
-PARTY_SECRETARY;Party Secretary;;;;;;;;;;;;;x,,,
-STAT_PIETY_LOYALTY;Loyalty;;;;;;;;;;;;;x,,,
+#CODE;ENGLISH;;;;;;;;;x
+###### Religion/titles definitions;;;;;;;;;;;;;;x
+GOD_THE_PARTY;The Party;;;;;;;;;;;;;x
+GOD_MARX;Marx;;;;;;;;;;;;;x
+GOD_MAO;Mao;;;;;;;;;;;;;x
+GOD_ENGELS;Engels;;;;;;;;;;;;;x
+GOD_THE_REVOLUTION;The Revolution;;;;;;;;;;;;;x
+GOD_THE_DIALECTIC;The Dialectic;;;;;;;;;;;;;x
+GOD_HISTORY;History;;;;;;;;;;;;;x
+THE_CAPITALIST;The Capitalist;;;;;;;;;;;;;x
+THE_REACTIONARY;The Reactionary;;;;;;;;;;;;;x
+THE_FASCIST;The Fascist;;;;;;;;;;;;;x
+THE_PRIEST;The Priest;;;;;;;;;;;;;x
+THE_MANIFESTO;The Communist Manifesto;;;;;;;;;;;;;x
+LOYALTY;Loyalty;;;;;;;;;;;;;x
+GREAT_PATRIOTIC_WAR;Great Patriotic War;;;;;;;;;;;;;x
+PARTY_SECRETARY;Party Secretary;;;;;;;;;;;;;x
+STAT_PIETY_LOYALTY;Loyalty;;;;;;;;;;;;;x
 STAT_PIETY_DESC_LOYALTY;Loyalty to the Party is respected by Marxians. Like Prestige, it is added to your score upon the death of a ruler.;;;;;;;;;;;;;x,,
-STAT_PIETY_MENU_LOYALTY;Loyalty;;;;;;;;;;;;;x,,,
+STAT_PIETY_MENU_LOYALTY;Loyalty;;;;;;;;;;;;;x
 MONTHLY_PIETY_LOYALTY;Monthly Loyalty, which is added to your score upon the death of a ruler.;;;;;;;;;;;;;x,,
-cult_of_marx;Marxian;;;;;;;;;;;;;x,,,
+cult_of_marx;Marxian;;;;;;;;;;;;;x
 cult_of_marx_DESC;Since the Event, precious little of the knowledge written down by the scholars of the Old World has been preserved. Of what is known, few ancient scholars are as derided as the sage Marx, whose writings inspired many of old America's enemies. Nevertheless, a handful of brave (or foolhardy) adherents venerate Marx's surviving texts.;;;;;;;;;;;;;x,
-,,,
-,,,
-THE_NOBLE;The Noble;;;;;;;;;;;;;x,,,
-THE_BOURGEOISIE;The Bourgeoisie;;;;;;;;;;;;;x,,,
-GOD_LENIN;Lenin;;;;;;;;;;;;;x,,,
-GOD_CHE;Che;;;;;;;;;;;;;x,,,
-GOD_CASTRO;Castro;;;;;;;;;;;;;x,,,
-GOD_REED;Reed;;;;;;;;;;;;;x,,,
-###### Mercenaries,,,
-d_wobblies;The Wobblies;;;;;;;;;;;;;x,,,
-d_black_panthers;The Black Panthers;;;;;;;;;;;;;x,,,
-d_zapatistas;The Zapatistas;;;;;;;;;;;;;x,,,
-SUB_COMMANDANTE;Sub-Commandante;;;;;;;;;;;;;x,,,
-SUB_COMMANDANTE_FOA;Sub-Commandante;;;;;;;;;;;;;x,,,
-,,,
+cult_of_marx_opinion;[cult_of_marx.GetName] Opinion;;;;;;;;;;;;;x
+THE_NOBLE;The Noble;;;;;;;;;;;;;x
+THE_BOURGEOISIE;The Bourgeoisie;;;;;;;;;;;;;x
+GOD_LENIN;Lenin;;;;;;;;;;;;;x
+GOD_CHE;Che;;;;;;;;;;;;;x
+GOD_CASTRO;Castro;;;;;;;;;;;;;x
+GOD_REED;Reed;;;;;;;;;;;;;x
+###### Mercenaries
+d_wobblies;The Wobblies;;;;;;;;;;;;;x
+d_black_panthers;The Black Panthers;;;;;;;;;;;;;x
+d_zapatistas;The Zapatistas;;;;;;;;;;;;;x
+SUB_COMMANDANTE;Sub-Commandante;;;;;;;;;;;;;x
+SUB_COMMANDANTE_FOA;Sub-Commandante;;;;;;;;;;;;;x
+
 
 ###### Religion Head
 CULT_OF_MARX_HEAD;Chairman;;;;;;;;;;;;;x
@@ -46,29 +46,29 @@ d_cult_of_marx_adj;Communist;;;;;;;;;;;;;x
 ###### USSA
 GENERAL_SECRETARY;General Secretary;;;;;;;;;;;;;x
 GENERAL_SECRETARY_FOA;Dear General Secretary;;;;;;;;;;;;;x
-e_ussa;United Socialist States of America;;;;;;;;;;;;;x,,,
-e_ussa_adj;U.S.S.A.;;;;;;;;;;;;;x,,,
+e_ussa;United Socialist States of America;;;;;;;;;;;;;x
+e_ussa_adj;U.S.S.A.;;;;;;;;;;;;;x
 
 ###### Decisions
-hold_rally;Hold a Rally;;;;;;;;;;;;;x,,,
-hold_rally_desc;Organize a meeting to speak to the people directly about revolution and injustice.;;;;;;;;;;;;;x,,,
-raise_peasant_mob;Raise Peasant Volunteers;;;;;;;;;;;;;x,,,
-raise_peasant_mob_desc;Call on my loyalty to the Party to recruit local peasants to build the mass movement.;;;;;;;;;;;;;x,,,
-seize_party;Found the Party;;;;;;;;;;;;;x,,,
-seize_party_desc;It is the goal of every true Marxian to bring the Party to Earth. I am no different.;;;;;;;;;;;;;x,,,
-form_the_ussa;Form the United Socialist States of America;;;;;;;;;;;;;x,,,
-form_the_ussa_desc;Under my leadership, the words of the sage Marx have started to gain traction. If I can seize a realm of the Old World, the Marxian faith will finally have a bastion of its own.;;;;;;;;;;;;;x,,,
-international_solidarity;Declare the Fifth International;;;;;;;;;;;;;x,,,
-international_solidarity_desc;The sage Marx tells us of the great wheel of the Dialectic that crushes oppression and ends in utopia. I will be the instrument of History that turns this wheel.;;;;;;;;;;;;;x,,,
+hold_rally;Hold a Rally;;;;;;;;;;;;;x
+hold_rally_desc;Organize a meeting to speak to the people directly about revolution and injustice.;;;;;;;;;;;;;x
+raise_peasant_mob;Raise Peasant Volunteers;;;;;;;;;;;;;x
+raise_peasant_mob_desc;Call on my loyalty to the Party to recruit local peasants to build the mass movement.;;;;;;;;;;;;;x
+seize_party;Found the Party;;;;;;;;;;;;;x
+seize_party_desc;It is the goal of every true Marxian to bring the Party to Earth. I am no different.;;;;;;;;;;;;;x
+form_the_ussa;Form the United Socialist States of America;;;;;;;;;;;;;x
+form_the_ussa_desc;Under my leadership, the words of the sage Marx have started to gain traction. If I can seize a realm of the Old World, the Marxian faith will finally have a bastion of its own.;;;;;;;;;;;;;x
+international_solidarity;Declare the Fifth International;;;;;;;;;;;;;x
+international_solidarity_desc;The sage Marx tells us of the great wheel of the Dialectic that crushes oppression and ends in utopia. I will be the instrument of History that turns this wheel.;;;;;;;;;;;;;x
 
 ####### Modifiers
-supported_peasants;Supported Peasants;;;;;;;;;;;;;x,,,
-supported_nobles;Supported Nobles;;;;;;;;;;;;;x,,,
-held_rally;Held Rally;;;;;;;;;;;;;x,,,
-held_rally_effect;Held Rally;;;;;;;;;;;;;x,,,
-held_rally_effects;Held Rally;;;;;;;;;;;;;x,,,
-formed_ussa;Formed the U.S.S.A.;;;;;;;;;;;;;x,,,
-international_solidarity;Declared Fifth International;;;;;;;;;;;;;x,,,
+supported_peasants;Supported Peasants;;;;;;;;;;;;;x
+supported_nobles;Supported Nobles;;;;;;;;;;;;;x
+held_rally;Held Rally;;;;;;;;;;;;;x
+held_rally_effect;Held Rally;;;;;;;;;;;;;x
+held_rally_effects;Held Rally;;;;;;;;;;;;;x
+formed_ussa;Formed the U.S.S.A.;;;;;;;;;;;;;x
+international_solidarity;Declared Fifth International;;;;;;;;;;;;;x
 
 ####### Fellow Travellers
 secret_religious_society_cult_of_marx;[GetReligiousCommunityName_cult_of_marx];;;;;;;;;;x
@@ -175,3 +175,21 @@ job_treasurer_cult_of_marx;Commissar for Industry and Finance;;;;;;;;;;;;;x
 job_spymaster_cult_of_marx;Commissar for State Security;;;;;;;;;;;;;x
 title_councilmember_king_cult_of_marx;Commissar without Portfolio;;;;;;;;;;;;;x
 title_councilmember_emperor_cult_of_marx;Commissar without Portfolio;;;;;;;;;;;;;x
+
+communist_republic;Marxian Peasant Republic;;;;;;;;;;;;;x
+communist_republic_desc;A unique republican government, practiced by Marxian peasants and townsfolk that have cast aside the chains of feudal bondage. This kind of republic is not playable.;;;;;;;;;;;;;x
+communist_republic_FEATURES;§Y*§! Will infiltrate neighboring realms, eventually causing a Marxian uprising\n§Y*§! Marxian realms will unite whenever possible;;;;;;;;;;;;;x
+
+succ_commie_centralist_elective;Centralist Elective;;;;;;;;;;;;;x
+succ_commie_politburo_elective;Council Elective;;;;;;;;;;;;;x
+
+commie_centralist_elective;Centralist Elective;;;;;;;;;;;;;x
+commie_politburo_elective;Council Elective;;;;;;;;;;;;;x
+
+commie_cell;Marxian Activity;;;;;;;;;;;;;x
+commie_cell_desc;§RIf left unchecked, will cause a massive uprising!§!\nHas a chance to be removed by the §YCourt Chaplains's Hunt Apostates§! action;;;;;;;;;;;;;x
+
+opinion_commie_traitor;Ideological Traitor;;;;;;;;;;;;;x
+
+EVTDESC_ATE_WWW_COMMIES_7;My liege, I am pleased to report the success of my mission to [targeted_location.GetName]. The errant Marxian supporters have been rooted out!\nYour humble [From.GetLordSpiritualName]\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_COMMIES_8;The Marxian infiltrators in the County of §Y[targeted_location.GetName]§! have been dealt with.;;;;;;;;;;;;;x

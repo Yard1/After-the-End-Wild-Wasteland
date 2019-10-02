@@ -164,5 +164,17 @@ pacifist_religion = {
 
 commie_cell = {
 	local_revolt_risk = 0.15
-	icon = 8 #change
+	castle_levy_size = -0.20
+	city_levy_size = -0.20
+	temple_levy_size = -0.1
+	local_tax_modifier = -0.2
+	icon = 31
+}
+
+held_yudtes_timer = {
+	hidden = yes
+}
+
+recently_invited_rabbi = {
+	
 }

@@ -231,7 +231,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 600
+		months = 500
 		
 		modifier = {
 			factor = 0.75
@@ -315,6 +315,7 @@ character_event = {
 		name = "EVTOPTA900"
 		piety = 10
 		event_target:targeted_location = {
+			log = "Commie removed in [This.GetName]"
 			remove_province_modifier = commie_cell
 		}
 		liege = {
@@ -329,45 +330,22 @@ character_event = {
 # 20000: The Lord Spiritual informs his liege of the conversion
 letter_event = {
 	id = ATE_WWW_COMMIES.7
-	desc = "EVTDESC20000"
+	#desc = "EVTDESC20000"
+	desc = EVTDESC_ATE_WWW_COMMIES_7
 	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
 
 	option = {
 		name = "EVTOPTA20000"
-		piety = 15
-		hidden_tooltip = {
-			if = {
-				limit = {
-					has_ambition = obj_strengthen_religion
-				}
-				change_variable = { which = strengthen_religion value = 1 }
-			}
-		}
-		if = {
-			limit = {
-				rightful_religious_head_scope = {
-					ROOT = {
-						NOT = { excommunicated_for = PREV }
-					}
-				}
-			}
-			religion_head = {
-				opinion = {
-					modifier = opinion_converted_province
-					who = ROOT
-					months = 24
-				}
-			}
-		}
+		piety = 10
 	}
 }
 
 # 20001: Informs top liege
 character_event = {
 	id = ATE_WWW_COMMIES.8
-	desc = EVTDESC20001
+	desc = EVTDESC_ATE_WWW_COMMIES_8
 	picture = GFX_evt_heretic
 	border = GFX_event_normal_frame_religion
 	
@@ -396,7 +374,8 @@ character_event = {
 			independent = yes
 		}
 		liege = {
-			any_neighbor_independent_ruler = {
+			any_independent_ruler = {
+				is_within_diplo_range = PREV
 				NOT = { religion = cult_of_marx }
 				NOT = { war_with = PREV }
 				NOT = {
@@ -427,134 +406,306 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 240
+		months = 48
 		job_event_mtth_modifier_intrigue_score = yes
+		modifier = {
+			factor = 0.8
+			liege = { tier = KING }
+		}
+		modifier = {
+			factor = 0.6
+			liege = { tier = EMPEROR }
+		}
 	}
 	
 	option = {
 		name = EXCELLENT
 		liege = {
-			any_neighbor_independent_ruler = {
+			if = {
 				limit = {
-					NOT = { religion = cult_of_marx }
-					NOT = { war_with = PREV }
-					NOT = {
-						any_war = {
-							using_cb = religious_revolt
-							attacker = { religion = cult_of_marx }
-						}
-					}
-					holy_order = no
-					mercenary = no
-					OR = {
-						is_feudal = yes
-						is_republic = yes
-					}
-					any_realm_province = {
-						owner = {
-							holy_order = no
-							mercenary = no
-							OR = {
-								is_feudal = yes
-								is_republic = yes
+					any_neighboring_independent_ruler = {
+						is_within_diplo_range = PREV
+						NOT = { religion = cult_of_marx }
+						NOT = { war_with = PREV }
+						NOT = {
+							any_war = {
+								using_cb = religious_revolt
+								attacker = { religion = cult_of_marx }
 							}
 						}
-						NOR = { religion = cult_of_marx has_province_modifier = commie_cell }
+						holy_order = no
+						mercenary = no
+						OR = {
+							is_feudal = yes
+							is_republic = yes
+						}
+						any_realm_province = {
+							owner = {
+								holy_order = no
+								mercenary = no
+								OR = {
+									is_feudal = yes
+									is_republic = yes
+								}
+							}
+							NOR = { religion = cult_of_marx has_province_modifier = commie_cell }
+						}
 					}
 				}
-				score_value = {
-		            value = 10
-		            commie_ruler_target = yes
-		        }
-				random_realm_province = {
+				any_neighboring_independent_ruler = {
 					limit = {
-						owner = {
-							holy_order = no
-							mercenary = no
-							OR = {
-								is_feudal = yes
-								is_republic = yes
+						is_within_diplo_range = PREV
+						NOT = { religion = cult_of_marx }
+						NOT = { war_with = PREV }
+						NOT = {
+							any_war = {
+								using_cb = religious_revolt
+								attacker = { religion = cult_of_marx }
 							}
 						}
-						NOR = { religion = cult_of_marx has_province_modifier = commie_cell }
-					}
-					preferred_limit = {
-						any_neighbor_province = {
-							owner = { same_realm = ROOT }
+						holy_order = no
+						mercenary = no
+						OR = {
+							is_feudal = yes
+							is_republic = yes
 						}
-						revolt_risk = 0.06
-						owner = { is_evil_trigger = yes }
-					}
-					preferred_limit = {
-						any_neighbor_province = {
-							has_province_modifier = commie_cell
-						}
-						revolt_risk = 0.06
-						owner = { is_evil_trigger = yes }
-					}
-					preferred_limit = {
-						any_neighbor_province = {
-							any_neighbor_province = { owner = { same_realm = ROOT } }
-						}
-						revolt_risk = 0.06
-						owner = { is_evil_trigger = yes }
-					}
-					preferred_limit = {
-						any_neighbor_province = {
-							owner = { same_realm = ROOT }
-						}
-						revolt_risk = 0.06
-					}
-					preferred_limit = {
-						any_neighbor_province = {
-							has_province_modifier = commie_cell
-						}
-						revolt_risk = 0.06
-					}
-					preferred_limit = {
-						any_neighbor_province = {
-							any_neighbor_province = { owner = { same_realm = ROOT } }
-						}
-						revolt_risk = 0.06
-					}
-					preferred_limit = {
-						any_neighbor_province = {
-							owner = { same_realm = ROOT }
-						}
-						owner = { is_evil_trigger = yes }
-					}
-					preferred_limit = {
-						any_neighbor_province = {
-							has_province_modifier = commie_cell
-						}
-						owner = { is_evil_trigger = yes }
-					}
-					preferred_limit = {
-						any_neighbor_province = {
-							any_neighbor_province = { owner = { same_realm = ROOT } }
-						}
-						owner = { is_evil_trigger = yes }
-					}
-					preferred_limit = {
-						any_neighbor_province = {
-							owner = { same_realm = ROOT }
+						any_realm_province = {
+							owner = {
+								holy_order = no
+								mercenary = no
+								OR = {
+									is_feudal = yes
+									is_republic = yes
+								}
+							}
+							NOR = { religion = cult_of_marx has_province_modifier = commie_cell }
 						}
 					}
-					preferred_limit = {
-						any_neighbor_province = {
-							has_province_modifier = commie_cell
-						}
+					score_value = {
+						value = 10
+						commie_ruler_target = yes
 					}
-					preferred_limit = {
-						any_neighbor_province = {
-							any_neighbor_province = { owner = { same_realm = ROOT } }
+					random_realm_province = {
+						limit = {
+							owner = {
+								holy_order = no
+								mercenary = no
+								OR = {
+									is_feudal = yes
+									is_republic = yes
+								}
+							}
+							NOR = { religion = cult_of_marx has_province_modifier = commie_cell }
 						}
-					}
-					add_province_modifier = {
-						modifier = commie_cell
-						duration = -1
+						preferred_limit = {
+							any_neighbor_province = {
+								owner = { same_realm = ROOT }
+							}
+							revolt_risk = 0.06
+							owner = { is_evil_trigger = yes }
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								has_province_modifier = commie_cell
+							}
+							revolt_risk = 0.06
+							owner = { is_evil_trigger = yes }
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								any_neighbor_province = { owner = { same_realm = ROOT } }
+							}
+							revolt_risk = 0.06
+							owner = { is_evil_trigger = yes }
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								owner = { same_realm = ROOT }
+							}
+							revolt_risk = 0.06
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								has_province_modifier = commie_cell
+							}
+							revolt_risk = 0.06
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								any_neighbor_province = { owner = { same_realm = ROOT } }
+							}
+							revolt_risk = 0.06
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								owner = { same_realm = ROOT }
+							}
+							owner = { is_evil_trigger = yes }
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								has_province_modifier = commie_cell
+							}
+							owner = { is_evil_trigger = yes }
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								any_neighbor_province = { owner = { same_realm = ROOT } }
+							}
+							owner = { is_evil_trigger = yes }
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								owner = { same_realm = ROOT }
+							}
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								has_province_modifier = commie_cell
+							}
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								any_neighbor_province = { owner = { same_realm = ROOT } }
+							}
+						}
+						log = "Commie infiltration from [Root.Liege.PrimaryTitle.GetName] to [This.GetName]"
+						add_province_modifier = {
+							modifier = commie_cell
+							duration = -1
+						}
 					}
 				}
+			}
+			else = {
+				any_independent_ruler = {
+					limit = {
+						is_within_diplo_range = PREV
+						NOT = { religion = cult_of_marx }
+						NOT = { war_with = PREV }
+						NOT = {
+							any_war = {
+								using_cb = religious_revolt
+								attacker = { religion = cult_of_marx }
+							}
+						}
+						holy_order = no
+						mercenary = no
+						OR = {
+							is_feudal = yes
+							is_republic = yes
+						}
+						any_realm_province = {
+							owner = {
+								holy_order = no
+								mercenary = no
+								OR = {
+									is_feudal = yes
+									is_republic = yes
+								}
+							}
+							NOR = { religion = cult_of_marx has_province_modifier = commie_cell }
+						}
+					}
+					score_value = {
+						value = 10
+						commie_ruler_target = yes
+					}
+					random_realm_province = {
+						limit = {
+							owner = {
+								holy_order = no
+								mercenary = no
+								OR = {
+									is_feudal = yes
+									is_republic = yes
+								}
+							}
+							NOR = { religion = cult_of_marx has_province_modifier = commie_cell }
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								owner = { same_realm = ROOT }
+							}
+							revolt_risk = 0.06
+							owner = { is_evil_trigger = yes }
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								has_province_modifier = commie_cell
+							}
+							revolt_risk = 0.06
+							owner = { is_evil_trigger = yes }
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								any_neighbor_province = { owner = { same_realm = ROOT } }
+							}
+							revolt_risk = 0.06
+							owner = { is_evil_trigger = yes }
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								owner = { same_realm = ROOT }
+							}
+							revolt_risk = 0.06
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								has_province_modifier = commie_cell
+							}
+							revolt_risk = 0.06
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								any_neighbor_province = { owner = { same_realm = ROOT } }
+							}
+							revolt_risk = 0.06
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								owner = { same_realm = ROOT }
+							}
+							owner = { is_evil_trigger = yes }
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								has_province_modifier = commie_cell
+							}
+							owner = { is_evil_trigger = yes }
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								any_neighbor_province = { owner = { same_realm = ROOT } }
+							}
+							owner = { is_evil_trigger = yes }
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								owner = { same_realm = ROOT }
+							}
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								has_province_modifier = commie_cell
+							}
+						}
+						preferred_limit = {
+							any_neighbor_province = {
+								any_neighbor_province = { owner = { same_realm = ROOT } }
+							}
+						}
+						log = "Commie infiltration from [Root.Liege.PrimaryTitle.GetName] to [This.GetName]"
+						add_province_modifier = {
+							modifier = commie_cell
+							duration = -1
+						}
+					}
+				}
+			}
+			change_infamy = {
+				value = 5
+				localisation = "Marxian bastard"
 			}
 		}
 	}
@@ -713,7 +864,11 @@ province_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 720
+		months = 600
+		modifier = {
+			factor = 0.1
+			NOT = { has_global_flag = first_commie_uprising }
+		}
 		modifier = {
 			factor = 0.75
 			any_neighbor_province = {
@@ -745,6 +900,82 @@ province_event = {
 					}
 				}
 				culture_group = ROOT
+				NOR = {
+					religion = cult_of_marx
+					owner = { religion = cult_of_marx }
+					has_province_modifier = commie_cell
+				}
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_neighbor_province = {
+				owner = {
+					holy_order = no
+					mercenary = no
+					OR = {
+						is_feudal = yes
+						is_republic = yes
+					}
+				}
+				revolt_risk = 0.06
+				NOR = {
+					religion = cult_of_marx
+					owner = { religion = cult_of_marx }
+					has_province_modifier = commie_cell
+				}
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_neighbor_province = {
+				owner = {
+					holy_order = no
+					mercenary = no
+					OR = {
+						is_feudal = yes
+						is_republic = yes
+					}
+				}
+				revolt_risk = 0.12
+				NOR = {
+					religion = cult_of_marx
+					owner = { religion = cult_of_marx }
+					has_province_modifier = commie_cell
+				}
+			}
+		}
+		modifier = {
+			factor = 0.9
+			any_neighbor_province = {
+				owner = {
+					holy_order = no
+					mercenary = no
+					OR = {
+						is_feudal = yes
+						is_republic = yes
+					}
+				}
+				revolt_risk = 0.16
+				NOR = {
+					religion = cult_of_marx
+					owner = { religion = cult_of_marx }
+					has_province_modifier = commie_cell
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			any_neighbor_province = {
+				owner = {
+					holy_order = no
+					mercenary = no
+					OR = {
+						is_feudal = yes
+						is_republic = yes
+					}
+				}
+				revolt_risk = 0.20
 				NOR = {
 					religion = cult_of_marx
 					owner = { religion = cult_of_marx }
@@ -781,6 +1012,17 @@ province_event = {
 			}
 			preferred_limit = {
 				culture = ROOT
+				revolt_risk = 0.1
+			}
+			preferred_limit = {
+				culture_group = ROOT
+				revolt_risk = 0.1
+			}
+			preferred_limit = {
+				revolt_risk = 0.1
+			}
+			preferred_limit = {
+				culture = ROOT
 			}
 			preferred_limit = {
 				culture_group = ROOT
@@ -811,6 +1053,11 @@ province_event = {
 					}
 				}
 			}
+			log = "Commie spreads from [Root.GetName] to [This.GetName]"
+			add_province_modifier = {
+				modifier = commie_cell
+				duration = -1
+			}
 		}
 	}
 	
@@ -825,96 +1072,132 @@ character_event = {
 	trigger = {
 		tier = KING
 		government = communist_republic
+		any_independent_ruler = {
+			religion = cult_of_marx
+			higher_tier_than = DUKE
+			NOT = { distance_from_realm = { who = ROOT value = 350 } }
+		}
 	}
 
 	immediate = {
-		random_independent_ruler = {
-			limit = {
-				religion = cult_of_marx
-				higher_tier_than = ROOT
-				NOT = { distance_from_realm = { who = FROM value = 350 } }
-			}
-			save_event_target_as = new_overlord
-		}
-		any_independent_ruler = {
-			limit = {
-				religion = cult_of_marx
-				lower_tier_than = ROOT
-				NOT = { distance_from_realm = { who = FROM value = 350 } }
-			}
-			set_defacto_liege = ROOT
-		}
 		if = {
-			limit = { event_target:new_overlord = { always = yes } }
-			set_defacto_liege = event_target:new_overlord
+			limit = {
+				any_independent_ruler = {
+					religion = cult_of_marx
+					higher_tier_than = ROOT
+					NOT = { distance_from_realm = { who = ROOT value = 350 } }
+				}
+			}
+			random_independent_ruler = {
+				limit = {
+					religion = cult_of_marx
+					higher_tier_than = ROOT
+					NOT = { distance_from_realm = { who = ROOT value = 350 } }
+				}
+				ROOT = { set_defacto_liege = PREV }
+			}
 		}
 		else = {
 			random_independent_ruler = {
 				limit = {
 					religion = cult_of_marx
 					tier = ROOT
-					NOT = { distance_from_realm = { who = FROM value = 350 } }
+					NOT = { distance_from_realm = { who = ROOT value = 350 } }
 				}
 				preferred_limit = {
 					culture_group = ROOT
-					NOT = { distance_from_realm = { who = FROM value = 50 } }
+					NOT = { distance_from_realm = { who = ROOT value = 50 } }
 				}
 				preferred_limit = {
 					culture_group = ROOT
-					NOT = { distance_from_realm = { who = FROM value = 150 } }
+					NOT = { distance_from_realm = { who = ROOT value = 150 } }
 				}
 				preferred_limit = {
 					culture_group = ROOT
-					NOT = { distance_from_realm = { who = FROM value = 250 } }
+					NOT = { distance_from_realm = { who = ROOT value = 250 } }
 				}
 				preferred_limit = {
 					culture_group = ROOT
-					NOT = { distance_from_realm = { who = FROM value = 350 } }
+					NOT = { distance_from_realm = { who = ROOT value = 350 } }
 				}
 				preferred_limit = {
-					NOT = { distance_from_realm = { who = FROM value = 50 } }
+					NOT = { distance_from_realm = { who = ROOT value = 50 } }
 				}
 				preferred_limit = {
-					NOT = { distance_from_realm = { who = FROM value = 150 } }
+					NOT = { distance_from_realm = { who = ROOT value = 150 } }
 				}
 				preferred_limit = {
-					NOT = { distance_from_realm = { who = FROM value = 250 } }
+					NOT = { distance_from_realm = { who = ROOT value = 250 } }
 				}
 				preferred_limit = {
-					NOT = { distance_from_realm = { who = FROM value = 350 } }
+					NOT = { distance_from_realm = { who = ROOT value = 350 } }
 				}
 				save_event_target_as = commie_realm_compare
 			}
 			if = {
 				limit = {
-					relative_realm_size = {
-						who = event_target:commie_realm_compare 
-						size > 1
+					event_target:commie_realm_compare = {
+						relative_realm_size = {
+							who = ROOT
+							size < 1
+						}
 					}
 				}
-				primary_title = {
-					dejure_liege_title = {
-						create_title = {
-							tier = EMPEROR
-							landless = no
-							temporary = no
-							name = "fourth_crusade_greek_kingdom_name" #this
-							holder = ROOT
-							culture = ROOT
-							custom_created = yes
-							base_title = PREV
-							copy_title_laws = yes
+				ROOT = {
+					capital_scope = {
+						county = {
+							dejure_liege_title = { #duchy
+								dejure_liege_title = { #kingdom
+									dejure_liege_title = { #empire
+										save_event_target_as = target_empire
+									}
+								}
+							}
+						}
+					}
+					primary_title = {
+						event_target:target_empire = {
+							create_title = {
+								tier = EMPEROR
+								landless = no
+								temporary = no
+								name = "fourth_crusade_greek_kingdom_name" #this
+								holder = ROOT
+								culture = ROOT
+								custom_created = yes
+								base_title = PREV
+								copy_title_laws = yes
+							}
 						}
 					}
 				}
 				event_target:commie_realm_compare = {
 					set_defacto_liege = ROOT
+					any_independent_ruler = {
+						limit = {
+							religion = cult_of_marx
+							lower_tier_than = ROOT
+							NOT = { distance_from_realm = { who = ROOT value = 350 } }
+						}
+						set_defacto_liege = ROOT
+					}
 				}
 			}
 			else = {
 				event_target:commie_realm_compare = {
+					capital_scope = {
+						county = {
+							dejure_liege_title = { #duchy
+								dejure_liege_title = { #kingdom
+									dejure_liege_title = { #empire
+										save_event_target_as = target_empire
+									}
+								}
+							}
+						}
+					}
 					primary_title = {
-						dejure_liege_title = {
+						event_target:target_empire = {
 							create_title = {
 								tier = EMPEROR
 								landless = no
@@ -929,20 +1212,528 @@ character_event = {
 						}
 					}
 				}
-				ROOT = {
-					set_defacto_liege = event_target:commie_realm_compare
+				event_target:commie_realm_compare = {
+					ROOT = {
+						set_defacto_liege = PREV
+					}
+					any_independent_ruler = {
+						limit = {
+							religion = cult_of_marx
+							lower_tier_than = PREV
+							NOT = { distance_from_realm = { who = ROOT value = 350 } }
+						}
+						set_defacto_liege = PREV
+					}
 				}
 			}
 		}
 		if = {
 			limit = { independent = yes }
 			character_event = { id = ATE_WWW_COMMIES.11 }
+			change_infamy = {
+				value = 30
+				localisation = "Marxian bastard"
+			}
 		}
 		else = {
 			top_liege = {
 				character_event = { id = ATE_WWW_COMMIES.11 }
+				change_infamy = {
+					value = 30
+					localisation = "Marxian bastard"
+				}
 			}
 		}
 	}
 	
+}
+
+province_event = {
+	id = ATE_WWW_COMMIES.14
+	hide_window = yes
+	trigger = {
+		#year = 2820
+		owner = {
+			holy_order = no
+			mercenary = no
+			OR = {
+				is_feudal = yes
+				is_republic = yes
+			}
+		}
+		NOR = {
+			religion = cult_of_marx
+			owner = { religion = cult_of_marx }
+			has_province_modifier = commie_cell
+		}
+		NOT = {
+			any_independent_ruler = {
+				religion = cult_of_marx
+				primary_title = { temporary = no }
+			}
+		}
+		OR = {
+			NOT = { has_global_flag = commie_uprising_being_prepared }
+			had_global_flag = {
+				flag = commie_uprising_being_prepared
+				days = 3600
+			}
+		}
+		OR = {
+			county = { title = c_los_angeles }
+			county = { title = c_santa_clara }
+			county = { title = c_chicago }
+			county = { title = c_winnipeg }
+			county = { title = c_comitan }
+			any_neighbor_province = {
+				OR = {
+					county = { title = c_los_angeles }
+					county = { title = c_santa_clara }
+					county = { title = c_chicago }
+					county = { title = c_winnipeg }
+					county = { title = c_comitan }
+				}
+			}
+			region = world_rustlands
+			region = world_northeast
+			region = world_caribbean
+			region = world_central_america_pacific
+			region = world_central_america_caribbean
+		}
+		any_neighbor_province = {
+			is_land = yes
+			any_neighbor_province = {
+				is_land = yes
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3600
+		modifier = {
+			factor = 0.4
+			NOT = { has_global_flag = first_commie_uprising }
+		}
+		modifier = {
+			factor = 0.6
+			OR = {
+				county = { title = c_los_angeles }
+				county = { title = c_santa_clara }
+				county = { title = c_chicago }
+				county = { title = c_winnipeg }
+				county = { title = c_comitan }
+			}
+		}
+		modifier = {
+			factor = 0.8
+			revolt_risk = 0.06
+		}
+		modifier = {
+			factor = 0.8
+			revolt_risk = 0.12
+		}
+		modifier = {
+			factor = 0.8
+			revolt_risk = 0.18
+		}
+		modifier = {
+			factor = 0.6
+			revolt_risk = 0.22
+		}
+		modifier = {
+			factor = 0.6
+			revolt_risk = 0.3
+		}
+		modifier = {
+			factor = 0.6
+			revolt_risk = 0.5
+		}
+		modifier = {
+			factor = 4
+			has_province_modifier = prosperity_modifier_3
+		}
+		modifier = {
+			factor = 3
+			has_province_modifier = prosperity_modifier_2
+		}
+		modifier = {
+			factor = 2
+			has_province_modifier = prosperity_modifier_1
+		}
+		modifier = {
+			factor = 0.8
+			has_province_modifier = depopulated_1
+		}
+		modifier = {
+			factor = 0.6
+			has_province_modifier = depopulated_2
+		}
+		modifier = {
+			factor = 0.4
+			has_province_modifier = depopulated_3
+		}
+		modifier = {
+			factor = 0.4
+			owner = {
+				trait = cruel
+			}
+		}
+		modifier = {
+			factor = 0.4
+			owner = {
+				trait = impaler
+			}
+		}
+		modifier = {
+			factor = 0.6
+			owner = {
+				trait = arbitrary
+			}
+		}
+		modifier = {
+			factor = 0.6
+			owner = {
+				trait = greedy
+			}
+		}
+		modifier = {
+			factor = 0.8
+			owner = {
+				NOR = {
+					trait = greedy
+					trait = impaler
+					trait = cruel
+				}
+				has_unpleasant_personality_trigger = yes
+			}
+		}
+
+		modifier = {
+			factor = 1.2
+			owner = {
+				trait = humble
+			}
+		}
+		modifier = {
+			factor = 1.4
+			owner = {
+				trait = kind
+			}
+		}
+		modifier = {
+			factor = 1.6
+			owner = {
+				trait = just
+			}
+		}
+		modifier = {
+			factor = 1.6
+			owner = {
+				trait = charitable
+			}
+		}
+		modifier = {
+			factor = 1.2
+			owner = {
+				NOR = {
+					trait = charitable
+					trait = kind
+				}
+				has_pleasant_personality_trigger = yes
+			}
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				diplomacy = 12
+			}
+		}
+		modifier = {
+			factor = 1.1
+			owner = {
+				diplomacy = 16
+			}
+		}
+		
+		modifier = {
+			factor = 3
+			owner = {
+				top_liege = {
+					lower_tier_than = DUKE
+				}
+			}
+		}
+		
+	}
+
+	immediate = {
+		log = "Commie uprising being prepared in [This.GetName]"
+		clr_global_flag = commie_uprising_being_prepared
+		set_global_flag = commie_uprising_being_prepared
+		add_province_modifier = {
+			modifier = commie_cell
+			duration = -1
+		}
+		if = {
+			limit = {
+				NOT = { has_global_flag = first_commie_uprising }
+			}
+			random_neighbor_province = {
+				limit = {
+					owner = {
+						holy_order = no
+						mercenary = no
+						OR = {
+							is_feudal = yes
+							is_republic = yes
+						}
+					}
+					NOR = {
+						religion = cult_of_marx
+						owner = { religion = cult_of_marx }
+						has_province_modifier = commie_cell
+					}
+				}
+				preferred_limit = {
+					culture = ROOT
+					revolt_risk = 0.1
+				}
+				preferred_limit = {
+					culture_group = ROOT
+					revolt_risk = 0.1
+				}
+				preferred_limit = {
+					revolt_risk = 0.1
+				}
+				preferred_limit = {
+					culture = ROOT
+				}
+				preferred_limit = {
+					culture_group = ROOT
+				}
+				preferred_limit = {
+					owner = {
+						top_liege = {
+							character = event_target:prov_top_liege
+						}
+					}
+					county = {
+						dejure_liege_title = {
+							title = event_target:prov_de_jure_duchy
+						}
+					}
+				}
+				preferred_limit = {
+					owner = {
+						top_liege = {
+							character = event_target:prov_top_liege
+						}
+					}
+				}
+				preferred_limit = {
+					county = {
+						dejure_liege_title = {
+							title = event_target:prov_de_jure_duchy
+						}
+					}
+				}
+				log = "Commie spreads from [Root.GetName] to [This.GetName]"
+				add_province_modifier = {
+					modifier = commie_cell
+					duration = -1
+				}
+			}
+			random_neighbor_province = {
+				limit = {
+					owner = {
+						holy_order = no
+						mercenary = no
+						OR = {
+							is_feudal = yes
+							is_republic = yes
+						}
+					}
+					NOR = {
+						religion = cult_of_marx
+						owner = { religion = cult_of_marx }
+						has_province_modifier = commie_cell
+					}
+				}
+				preferred_limit = {
+					culture = ROOT
+					revolt_risk = 0.1
+				}
+				preferred_limit = {
+					culture_group = ROOT
+					revolt_risk = 0.1
+				}
+				preferred_limit = {
+					revolt_risk = 0.1
+				}
+				preferred_limit = {
+					culture = ROOT
+				}
+				preferred_limit = {
+					culture_group = ROOT
+				}
+				preferred_limit = {
+					owner = {
+						top_liege = {
+							character = event_target:prov_top_liege
+						}
+					}
+					county = {
+						dejure_liege_title = {
+							title = event_target:prov_de_jure_duchy
+						}
+					}
+				}
+				preferred_limit = {
+					owner = {
+						top_liege = {
+							character = event_target:prov_top_liege
+						}
+					}
+				}
+				preferred_limit = {
+					county = {
+						dejure_liege_title = {
+							title = event_target:prov_de_jure_duchy
+						}
+					}
+				}
+				log = "Commie spreads from [Root.GetName] to [This.GetName]"
+				add_province_modifier = {
+					modifier = commie_cell
+					duration = -1
+				}
+			}
+		}
+		else = {
+			random = {
+				chance = 50
+				random_neighbor_province = {
+					limit = {
+						owner = {
+							holy_order = no
+							mercenary = no
+							OR = {
+								is_feudal = yes
+								is_republic = yes
+							}
+						}
+						NOR = {
+							religion = cult_of_marx
+							owner = { religion = cult_of_marx }
+							has_province_modifier = commie_cell
+						}
+					}
+					preferred_limit = {
+						culture = ROOT
+						revolt_risk = 0.1
+					}
+					preferred_limit = {
+						culture_group = ROOT
+						revolt_risk = 0.1
+					}
+					preferred_limit = {
+						revolt_risk = 0.1
+					}
+					preferred_limit = {
+						culture = ROOT
+					}
+					preferred_limit = {
+						culture_group = ROOT
+					}
+					preferred_limit = {
+						owner = {
+							top_liege = {
+								character = event_target:prov_top_liege
+							}
+						}
+						county = {
+							dejure_liege_title = {
+								title = event_target:prov_de_jure_duchy
+							}
+						}
+					}
+					preferred_limit = {
+						owner = {
+							top_liege = {
+								character = event_target:prov_top_liege
+							}
+						}
+					}
+					preferred_limit = {
+						county = {
+							dejure_liege_title = {
+								title = event_target:prov_de_jure_duchy
+							}
+						}
+					}
+					log = "Commie spreads from [Root.GetName] to [This.GetName]"
+					add_province_modifier = {
+						modifier = commie_cell
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_COMMIES.15
+	hide_window = yes
+	is_triggered_only = yes
+	only_independent = yes
+	religion = cult_of_marx
+
+	trigger = {
+		tier = DUKE
+		government = communist_republic
+		num_of_duke_titles >= 3
+	}
+
+	immediate = {
+		ROOT = {
+			capital_scope = {
+				county = {
+					dejure_liege_title = { #duchy
+						dejure_liege_title = { #kingdom
+							save_event_target_as = target_kingdom
+						}
+					}
+				}
+			}
+			primary_title = {
+				event_target:target_kingdom = {
+					create_title = {
+						tier = KING
+						landless = no
+						temporary = no
+						name = "fourth_crusade_greek_kingdom_name" #this
+						holder = ROOT
+						culture = ROOT
+						custom_created = yes
+						base_title = PREV
+						copy_title_laws = yes
+					}
+				}
+			}
+		}
+		any_independent_ruler = {
+			limit = {
+				religion = cult_of_marx
+				lower_tier_than = ROOT
+				NOT = { distance_from_realm = { who = ROOT value = 350 } }
+			}
+			set_defacto_liege = ROOT
+		}
+		character_event = { id = ATE_WWW_COMMIES.11 }
+		change_infamy = {
+			value = 20
+			localisation = "Marxian bastard"
+		}
+	}
 }

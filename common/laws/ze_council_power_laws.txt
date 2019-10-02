@@ -58,9 +58,11 @@ laws = {
 				has_law = tribal_organization_4
 			}
 			NOT = { is_nomadic = yes }
-			conditional_tooltip = {
-				trigger = { trait = figurehead }
-				NOT = { trait = figurehead }
+			holder_scope = {
+				conditional_tooltip = {
+					trigger = { trait = figurehead }
+					NOT = { trait = figurehead }
+				}
 			}
 		}
 		potential = {

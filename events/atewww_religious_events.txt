@@ -2186,7 +2186,7 @@ province_event = {
 			AND = {
 				religion = cult_of_marx
 				owner = {
-					top_liege = { NOT = { religion = commie_cell } }
+					top_liege = { NOT = { religion = cult_of_marx } }
 				}
 				NOT = { has_province_modifier = commie_cell }
 			}

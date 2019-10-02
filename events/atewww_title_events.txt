@@ -133,7 +133,7 @@ character_event = {
 			same_realm = ROOT
 			any_claim = {
 				OR = {
-					title = k_dixie
+					title = k_dixieland
 					title = k_alabama
 					title = k_georgia_kingdom
 				}
@@ -173,7 +173,7 @@ character_event = {
 			same_realm = ROOT
 			any_claim = {
 				OR = {
-					title = k_dixie
+					title = k_dixieland
 					title = k_alabama
 					title = k_georgia_kingdom
 				}

@@ -2194,7 +2194,7 @@ settlement_decisions = {
 			society_rank >= 3
 			OR = { 
 				religion = atomicist 
-				religion = atomicist_reformed
+				religion = aphite
 			}
 		}
 		

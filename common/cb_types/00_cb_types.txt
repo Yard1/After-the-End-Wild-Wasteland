@@ -3437,6 +3437,16 @@ crusade = {
 			has_called_crusade = no
 			religion_authority = 0.05
 			conditional_tooltip = {
+				trigger = { religion = cult_of_marx }
+				OR = {
+					NOT = { religion = cult_of_marx }
+					AND = {
+						religion_authority = 0.30
+						higher_tier_than = DUKE
+					}
+				}
+			}
+			conditional_tooltip = {
 				trigger = {
 					is_alternate_start = yes
 					has_alternate_start_parameter = {
@@ -4476,9 +4486,11 @@ crusade = {
 			
 			hidden_tooltip = {
 				if = {
-					OR = {
-						this_has_lame_nickname_trigger = yes
-						has_nickname = no
+					limit = {
+						OR = {
+							this_has_lame_nickname_trigger = yes
+							has_nickname = no
+						}
 					}
 					random_list = {
 						10 = { give_nickname = nick_the_holy }
@@ -6813,6 +6825,12 @@ religious = {
 		modifier = {
 			factor = 2.5
 			ROOT = {
+				religion = cult_of_marx
+			}
+		}
+		modifier = {
+			factor = 2.5
+			FROM = {
 				religion = cult_of_marx
 			}
 		}
@@ -9478,7 +9496,7 @@ cb_faction_independence = {
 	on_fail = {
 		ROOT = {
 			prestige = -50
-#			prisoner = FROM
+			#prisoner = FROM
 			add_character_modifier = {
 				name = faction_independence_ultimatum_timer
 				hidden = yes
@@ -11237,34 +11255,25 @@ religious_revolt = {
 						}
 						if = {
 							limit = {
-								relative_realm_size = {
-									who = event_target:commie_realm_compare 
-									size > 1
-								}
-							}
-							primary_title = {
-								dejure_liege_title = {
-									create_title = {
-										tier = KING
-										landless = no
-										temporary = no
-										name = "fourth_crusade_greek_kingdom_name" #this
-										holder = ROOT
-										culture = ROOT
-										custom_created = yes
-										base_title = PREV
-										copy_title_laws = yes
+								event_target:commie_realm_compare = {
+									relative_realm_size = {
+										who = ROOT
+										size < 1
 									}
 								}
 							}
-							event_target:commie_realm_compare = {
-								set_defacto_liege = ROOT
-							}
-						}
-						else = {
-							event_target:commie_realm_compare = {
+							ROOT = {
+								capital_scope = {
+									county = {
+										dejure_liege_title = { #duchy
+											dejure_liege_title = { #kingdom
+												save_event_target_as = target_kingdom
+											}
+										}
+									}
+								}
 								primary_title = {
-									dejure_liege_title = {
+									event_target:target_kingdom = {
 										create_title = {
 											tier = KING
 											landless = no
@@ -11279,8 +11288,57 @@ religious_revolt = {
 									}
 								}
 							}
-							ROOT = {
-								set_defacto_liege = event_target:commie_realm_compare
+							event_target:commie_realm_compare = {
+								set_defacto_liege = ROOT
+							}
+							any_independent_ruler = {
+								limit = {
+									religion = cult_of_marx
+									lower_tier_than = ROOT
+									NOT = { distance_from_realm = { who = FROM value = 350 } }
+								}
+								set_defacto_liege = ROOT
+							}
+						}
+						else = {
+							event_target:commie_realm_compare = {
+								capital_scope = {
+									county = {
+										dejure_liege_title = { #duchy
+											dejure_liege_title = { #kingdom
+												save_event_target_as = target_kingdom
+											}
+										}
+									}
+								}
+								primary_title = {
+									event_target:target_kingdom = {
+										create_title = {
+											tier = KING
+											landless = no
+											temporary = no
+											name = "fourth_crusade_greek_kingdom_name" #this
+											holder = PREVPREV
+											culture = PREVPREV
+											custom_created = yes
+											base_title = PREV
+											copy_title_laws = yes
+										}
+									}
+								}
+							}
+							event_target:commie_realm_compare = {
+								ROOT = {
+									set_defacto_liege = PREV
+								}
+								any_independent_ruler = {
+									limit = {
+										religion = cult_of_marx
+										lower_tier_than = PREV
+										NOT = { distance_from_realm = { who = FROM value = 350 } }
+									}
+									set_defacto_liege = PREV
+								}
 							}
 						}
 					}
@@ -11290,10 +11348,18 @@ religious_revolt = {
 				if = {
 					limit = { independent = yes }
 					character_event = { id = ATE_WWW_COMMIES.13 days = 2 }
+					change_infamy = {
+						value = 20
+						localisation = "Marxian bastard"
+					}
 				}
 				else = {
 					top_liege = {
 						character_event = { id = ATE_WWW_COMMIES.13 days = 2 }
+						change_infamy = {
+							value = 20
+							localisation = "Marxian bastard"
+						}
 					}
 				}
 			}

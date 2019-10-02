@@ -68,5 +68,9 @@ republic_governments = {
 		
 		## Modifiers
 		court_size_modifier = 10
+
+		character_modifier = {
+			threat_decay_speed = -0.90
+		}
 	}
 }

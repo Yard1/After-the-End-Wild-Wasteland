@@ -1199,9 +1199,7 @@ feudal_elective = {
 		additive_modifier = { 
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_scope = {
-				NOT = { num_of_holy_sites = 3 }
-			}
+			NOT = { religion_authority = 0.4 }
 			NOR = {
 				trait = cynical
 				trait = zealous
@@ -1215,9 +1213,7 @@ feudal_elective = {
 		additive_modifier = { 
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_scope = {
-				NOT = { num_of_holy_sites = 3 }
-			}
+			NOT = { religion_authority = 0.4 }
 			trait = zealous
 			NOT = { character = FROM }
 			FROM = {
@@ -4712,9 +4708,7 @@ tanistry = {
 		additive_modifier = { 
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_scope = {
-				NOT = { num_of_holy_sites = 3 }
-			}
+			NOT = { religion_authority = 0.4 }
 			NOR = {
 				trait = cynical
 				trait = zealous
@@ -4728,9 +4722,7 @@ tanistry = {
 		additive_modifier = { 
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_scope = {
-				NOT = { num_of_holy_sites = 3 }
-			}
+			NOT = { religion_authority = 0.4 }
 			trait = zealous
 			NOT = { character = FROM }
 			FROM = {
@@ -8193,9 +8185,7 @@ elective_gavelkind = {
 		additive_modifier = { 
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_scope = {
-				NOT = { num_of_holy_sites = 3 }
-			}
+			NOT = { religion_authority = 0.4 }
 			NOR = {
 				trait = cynical
 				trait = zealous
@@ -8209,9 +8199,7 @@ elective_gavelkind = {
 		additive_modifier = { 
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_scope = {
-				NOT = { num_of_holy_sites = 3 }
-			}
+			NOT = { religion_authority = 0.4 }
 			trait = zealous
 			NOT = { character = FROM }
 			FROM = {
@@ -12281,9 +12269,7 @@ eldership_rules = {
 		additive_modifier = { 
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_scope = {
-				NOT = { num_of_holy_sites = 3 }
-			}
+			NOT = { religion_authority = 0.4 }
 			NOR = {
 				trait = cynical
 				trait = zealous
@@ -12297,9 +12283,7 @@ eldership_rules = {
 		additive_modifier = { 
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_scope = {
-				NOT = { num_of_holy_sites = 3 }
-			}
+			NOT = { religion_authority = 0.4 }
 			trait = zealous
 			NOT = { character = FROM }
 			FROM = {
@@ -15727,9 +15711,7 @@ eldership_rules = {
 		additive_modifier = { 
 			value = 5
 			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_scope = {
-				NOT = { num_of_holy_sites = 3 }
-			}
+			NOT = { religion_authority = 0.4 }
 			NOR = {
 				trait = cynical
 				trait = zealous
@@ -15743,9 +15725,7 @@ eldership_rules = {
 		additive_modifier = { 
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_crusader
-			religion_scope = {
-				NOT = { num_of_holy_sites = 3 }
-			}
+			NOT = { religion_authority = 0.4 }
 			trait = zealous
 			NOT = { character = FROM }
 			FROM = {
