@@ -9047,7 +9047,7 @@ has_feminist_religion_trigger = {
 
 americanism_under_threat_trigger = {
 	religion = americanist
-	NOT = { religious_authority = 0.4 }
+	NOT = { religion_authority = 0.4 }
 }
 
 has_sympathy_trait_trigger = {

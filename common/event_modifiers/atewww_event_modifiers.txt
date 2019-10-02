@@ -172,7 +172,6 @@ commie_cell = {
 }
 
 held_yudtes_timer = {
-	hidden = yes
 }
 
 recently_invited_rabbi = {

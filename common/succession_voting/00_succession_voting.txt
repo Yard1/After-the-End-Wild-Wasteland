@@ -5110,17 +5110,6 @@ tanistry = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_disfigured
 			this_is_warrior_culture_trigger = no
-			NOT = { 
-				culture_group = byzantine
-			}
-			FROM = { 
-				trait = disfigured
-			}
-		}
-		additive_modifier = {
-			value = -50
-			localisation_key = tooltip_feudal_elector_vote_disfigured_byzantine
-			culture_group = byzantine
 			FROM = { 
 				trait = disfigured
 			}
@@ -5129,9 +5118,6 @@ tanistry = {
 			value = -5
 			localisation_key = tooltip_feudal_elector_vote_disfigured_warrior
 			this_is_warrior_culture_trigger = yes
-			NOT = { 
-				culture_group = byzantine
-			}
 			FROM = { 
 				trait = disfigured
 			}

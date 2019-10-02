@@ -2230,8 +2230,8 @@ character_event = {
 		NOT = { has_character_flag = do_not_disturb }
 		is_member_of_any_warrior_lodge_trigger = yes
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 		wealth = 75
 	}
@@ -2270,8 +2270,8 @@ character_event = {
 #
 #	trigger = { 
 #		OR = { 
-#			society_member_of = warrior_lodge_bon
-##			society_member_of = warrior_lodge_hellenic
+#			society_member_of = warrior_lodge_atomicist
+##			society_member_of = warrior_lodge_americanist
 #		}
 #	}
 #
@@ -2312,8 +2312,8 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 	}
 	is_triggered_only = yes
@@ -2322,13 +2322,13 @@ character_event = {
 		name = {
 			text = EVTOPTDHF25228
 			trigger = {
-				society_member_of = warrior_lodge_bon
+				society_member_of = warrior_lodge_atomicist
 			}
 		}
 		name = {
 			text = EVTOPTDHF25228_HELLENIC #Dionysus
 			trigger = {
-				society_member_of = warrior_lodge_hellenic
+				society_member_of = warrior_lodge_americanist
 			}
 		}
 		trigger = {  
@@ -2367,13 +2367,13 @@ character_event = {
 		name = {
 			text = EVTOPTCHF25228
 			trigger = {
-				society_member_of = warrior_lodge_bon
+				society_member_of = warrior_lodge_atomicist
 			}
 		}
 		name = {
 			text = EVTOPTCHF25228_HELLENIC #Hermes
 			trigger = {
-				society_member_of = warrior_lodge_hellenic
+				society_member_of = warrior_lodge_americanist
 			}
 		}
 		trigger = {  
@@ -2412,13 +2412,13 @@ character_event = {
 		name = {
 			text = EVTOPTBHF25228
 			trigger = {
-				society_member_of = warrior_lodge_bon
+				society_member_of = warrior_lodge_atomicist
 			}
 		}
 		name = {
 			text = EVTOPTBHF25228_HELLENIC #Athena
 			trigger = {
-				society_member_of = warrior_lodge_hellenic
+				society_member_of = warrior_lodge_americanist
 			}
 		}
 		trigger = {  
@@ -2457,13 +2457,13 @@ character_event = {
 		name = {
 			text = EVTOPTAHF25228
 			trigger = {
-				society_member_of = warrior_lodge_bon
+				society_member_of = warrior_lodge_atomicist
 			}
 		}
 		name = {
 			text = EVTOPTAHF25228_HELLENIC #Apollo
 			trigger = {
-				society_member_of = warrior_lodge_hellenic
+				society_member_of = warrior_lodge_americanist
 			}
 		}
 		custom_tooltip = { text = tooltip_betting_easiest_side }
@@ -2504,8 +2504,8 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 	}
 	is_triggered_only = yes
@@ -2639,8 +2639,8 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 	}
 	is_triggered_only = yes
@@ -2848,8 +2848,8 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 	}
 	is_triggered_only = yes
@@ -2933,8 +2933,8 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 	}
 	is_triggered_only = yes
@@ -3153,8 +3153,8 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 	}
 	is_triggered_only = yes
@@ -3296,8 +3296,8 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 	}
 	is_triggered_only = yes
@@ -3410,8 +3410,8 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 	}
 	is_triggered_only = yes
@@ -3820,8 +3820,8 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 	}
 	is_triggered_only = yes
@@ -4067,8 +4067,8 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 	}
 	is_triggered_only = yes
@@ -4089,8 +4089,8 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 	}
 	is_triggered_only = yes
@@ -4112,8 +4112,8 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 	}
 	is_triggered_only = yes
@@ -4134,8 +4134,8 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 	}
 	is_triggered_only = yes
@@ -4155,8 +4155,8 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_americanist
 		}
 	}
 	is_triggered_only = yes
@@ -7981,7 +7981,6 @@ character_event = {
 		NOT = { is_inaccessible_trigger = yes }
 		NOT = { trait = incapable }
 		NOT = { has_character_flag = do_not_disturb }
-		NOT = { society_member_of = warrior_lodge_bon }
 		is_member_of_any_warrior_lodge_trigger = yes
 		any_society_member = { #Make sure there are enough contenders to join in.
 			same_society_as = ROOT

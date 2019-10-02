@@ -381,11 +381,11 @@ decisions = {
 				value = 0.1
 				NOT = { fertility = 0.35 }
 			}
-			additive_modifier = {
+			modifier = {
 				factor = 1.25
 				trait = seducer
 			}
-			additive_modifier = {
+			modifier = {
 				factor = 2
 				trait = lustful
 			}

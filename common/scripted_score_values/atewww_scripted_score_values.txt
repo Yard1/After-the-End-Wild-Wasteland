@@ -56,19 +56,19 @@ commie_ruler_target = {
 		is_evil_trigger = yes
 	}
 	additive_modifier = {
-		value = -10
-		NOT = { distance_from_realm = { who = FROM value = 100 } }
+		value = -30
+		distance_from_realm = { who = FROM value = 100 }
 	}
 	additive_modifier = {
-		value = -10
-		NOT = { distance_from_realm = { who = FROM value = 200 } }
+		value = -30
+		distance_from_realm = { who = FROM value = 200 }
 	}
 	additive_modifier = {
-		value = -10
-		NOT = { distance_from_realm = { who = FROM value = 300 } }
+		value = -30
+		distance_from_realm = { who = FROM value = 300 }
 	}
 	additive_modifier = {
-		value = -10
-		NOT = { distance_from_realm = { who = FROM value = 400 } }
+		value = -30
+		distance_from_realm = { who = FROM value = 400 }
 	}
 }

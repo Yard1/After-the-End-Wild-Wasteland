@@ -56,7 +56,6 @@ republic_governments = {
 		
 		capital_move_delay = 600
 				
-		can_demand_religious_conversion = no
 		have_gender_laws = yes
 		ignores_de_jure_laws = yes
 		barons_need_dynasty = no

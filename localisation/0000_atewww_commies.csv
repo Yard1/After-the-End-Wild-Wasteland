@@ -20,7 +20,8 @@ STAT_PIETY_DESC_LOYALTY;Loyalty to the Party is respected by Marxians. Like Pres
 STAT_PIETY_MENU_LOYALTY;Loyalty;;;;;;;;;;;;;x
 MONTHLY_PIETY_LOYALTY;Monthly Loyalty, which is added to your score upon the death of a ruler.;;;;;;;;;;;;;x,,
 cult_of_marx;Marxian;;;;;;;;;;;;;x
-cult_of_marx_DESC;Since the Event, precious little of the knowledge written down by the scholars of the Old World has been preserved. Of what is known, few ancient scholars are as derided as the sage Marx, whose writings inspired many of old America's enemies. Nevertheless, a handful of brave (or foolhardy) adherents venerate Marx's surviving texts.;;;;;;;;;;;;;x,
+cult_of_marx_DESC;Since the Event, precious little of the knowledge written down by the scholars of the Old World has been preserved. Thanks to the efforts of one literate commoner, the writings of Holy Marx and his Comrades have been uncovered, and now serve to fuel the fire that treathens to consume the feudal order.;;;;;;;;;;;;;x
+cult_of_marx_FEATURES;§Y*§! Only lowborn characters may convert\n§Y*§! May imprision and execute any heathen (and vice versa);;;;;;;;;;;;;x
 cult_of_marx_opinion;[cult_of_marx.GetName] Opinion;;;;;;;;;;;;;x
 THE_NOBLE;The Noble;;;;;;;;;;;;;x
 THE_BOURGEOISIE;The Bourgeoisie;;;;;;;;;;;;;x

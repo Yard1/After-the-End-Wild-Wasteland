@@ -1656,7 +1656,7 @@ province_event = {
 				
 				spawn_religious_army_effect = yes
 				spawn_religious_army_effect = yes
-				spawn_religious_army_effect = yes
+				#spawn_religious_army_effect = yes
 				if = {
 					limit = {
 						NOT = { has_global_flag = first_commie_uprising }
@@ -1908,6 +1908,15 @@ province_event = {
 			add_province_modifier = {
 				name = religious_unrest
 				duration = 730
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_province_modifier = recent_county_uprising }
+			}
+			add_province_modifier = {
+				name = recent_county_uprising
+				duration = 1825
 			}
 		}
 	}

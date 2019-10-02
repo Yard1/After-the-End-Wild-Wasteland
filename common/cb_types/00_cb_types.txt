@@ -11285,6 +11285,9 @@ religious_revolt = {
 											base_title = PREV
 											copy_title_laws = yes
 										}
+										new_title = {
+											set_title_flag = commie_temp_title
+										}
 									}
 								}
 							}
@@ -11324,6 +11327,9 @@ religious_revolt = {
 											base_title = PREV
 											copy_title_laws = yes
 										}
+										new_title = {
+											set_title_flag = commie_temp_title
+										}
 									}
 								}
 							}
@@ -11356,7 +11362,6 @@ religious_revolt = {
 				}
 				else = {
 					top_liege = {
-						narrative_event = { id = ATE_WWW_COMMIES.17 days = 1 }
 						character_event = { id = ATE_WWW_COMMIES.13 days = 2 }
 						change_infamy = {
 							value = 20

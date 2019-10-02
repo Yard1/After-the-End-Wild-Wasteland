@@ -14119,11 +14119,17 @@ commie_centralist_elective = {
 			value = 10
 			religion = cult_of_marx
 			FROMFROM = { 
+				NOT = { has_law = law_voting_power_0 }
 				holder_scope = { same_realm = ROOT }
 			}
 			OR = {
-				vassal_of = FROMFROM 
-				any_dejure_liege = { title = FROMFROM }
+				FROMFROM = { 
+					holder_scope = { is_liege_of = ROOT }
+				}
+				AND = {
+					FROMFROM =  { is_titular = no }
+					any_dejure_liege = { title = FROMFROM }
+				}
 			}
 		}
 	}
@@ -17317,7 +17323,7 @@ commie_centralist_elective = {
 			same_realm = ROOT
 			lower_tier_than = ROOT
 			OR = {
-				vassal_of = ROOT 
+				liege = { character = ROOT }
 				any_dejure_liege = { title = FROMFROM }
 			}
 		} 

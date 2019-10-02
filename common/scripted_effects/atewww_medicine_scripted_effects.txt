@@ -225,7 +225,7 @@ take_medicine_effect = {
 				persistent_event_target:identified_by = {
 					NOT = { character = ROOT }
 					OR = {
-						is_vassal = ROOT
+						ROOT = { is_liege_of = PREV }
 						host = { character = ROOT }
 					}
 				}

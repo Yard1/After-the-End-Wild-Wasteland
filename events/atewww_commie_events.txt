@@ -377,10 +377,8 @@ character_event = {
 			any_independent_ruler = {
 				is_within_diplo_range = PREV
 				NOT = { religion = cult_of_marx }
-				NOT = { war_with = PREV }
 				NOT = {
 					any_war = {
-						using_cb = religious_revolt
 						attacker = { religion = cult_of_marx }
 					}
 				}
@@ -423,13 +421,11 @@ character_event = {
 		liege = {
 			if = {
 				limit = {
-					any_neighboring_independent_ruler = {
+					any_neighbor_independent_ruler = {
 						is_within_diplo_range = PREV
 						NOT = { religion = cult_of_marx }
-						NOT = { war_with = PREV }
 						NOT = {
 							any_war = {
-								using_cb = religious_revolt
 								attacker = { religion = cult_of_marx }
 							}
 						}
@@ -452,14 +448,12 @@ character_event = {
 						}
 					}
 				}
-				any_neighboring_independent_ruler = {
+				any_neighbor_independent_ruler = {
 					limit = {
 						is_within_diplo_range = PREV
 						NOT = { religion = cult_of_marx }
-						NOT = { war_with = PREV }
 						NOT = {
 							any_war = {
-								using_cb = religious_revolt
 								attacker = { religion = cult_of_marx }
 							}
 						}
@@ -582,10 +576,8 @@ character_event = {
 					limit = {
 						is_within_diplo_range = PREV
 						NOT = { religion = cult_of_marx }
-						NOT = { war_with = PREV }
 						NOT = {
 							any_war = {
-								using_cb = religious_revolt
 								attacker = { religion = cult_of_marx }
 							}
 						}
@@ -864,9 +856,9 @@ province_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 600
+		months = 120
 		modifier = {
-			factor = 0.1
+			factor = 0.3
 			NOT = { has_global_flag = first_commie_uprising }
 		}
 		modifier = {
@@ -1168,6 +1160,9 @@ character_event = {
 								base_title = PREV
 								copy_title_laws = yes
 							}
+							new_title = {
+								set_title_flag = commie_temp_title
+							}
 						}
 					}
 				}
@@ -1208,6 +1203,9 @@ character_event = {
 								custom_created = yes
 								base_title = PREV
 								copy_title_laws = yes
+							}
+							new_title = {
+								set_title_flag = commie_temp_title
 							}
 						}
 					}
@@ -1732,6 +1730,9 @@ character_event = {
 						base_title = PREV
 						copy_title_laws = yes
 					}
+					new_title = {
+						set_title_flag = commie_temp_title
+					}
 				}
 			}
 		}
@@ -1819,5 +1820,44 @@ narrative_event = {
 				religion = monetarist
 			}
 		}
+	}
+}
+
+character_event = {
+	id = ATE_WWW_COMMIES.18
+	hide_window = yes
+	is_triggered_only = yes
+	only_independent = yes
+	religion = cult_of_marx
+
+	trigger = {
+		primary_title = { 
+			is_titular = yes
+			has_title_flag = commie_temp_title
+			ROOT = {
+				any_demesne_title = {
+					tier = PREVPREV
+					is_titular = no
+					NOT = { has_title_flag = commie_temp_title }
+				}
+			}
+		}
+	}
+
+	immediate = {
+		primary_title = { 
+			save_event_target_as = title_to_remove
+			ROOT = {
+				random_demesne_title = {
+					limit = {
+						tier = PREVPREV
+						is_titular = no
+						NOT = { has_title_flag = commie_temp_title }
+					}
+					make_primary_title = yes
+				}
+			}
+		}
+		event_target:title_to_remove = { destroy_landed_title = THIS }
 	}
 }
