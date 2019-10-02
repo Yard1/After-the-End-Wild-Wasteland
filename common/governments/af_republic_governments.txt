@@ -35,6 +35,44 @@ republic_governments = {
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
 			}
+			NOT = { is_government_potential = communist_republic }
+			OR = {
+				AND = {
+					is_patrician = yes
+					OR = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+							NOT = {
+								liege_before_war = {
+									NOT = { character = PREV }
+									is_merchant_republic = yes
+								}
+							}
+						}
+						has_game_started = no
+					}
+				}
+				AND = {
+					OR = {
+						AND = {
+							has_game_started = yes
+							is_merchant_republic = yes
+						}
+						capital_scope = { port = yes }
+					}
+					higher_real_tier_than = count
+					any_demesne_province = {
+						always = yes
+					}
+					NOT = {
+						liege_before_war = {
+							NOT = { character = PREV }
+							is_merchant_republic = yes
+						}
+					}
+				}
+			}
 		}
 		
 		color = { 16 89 173 }

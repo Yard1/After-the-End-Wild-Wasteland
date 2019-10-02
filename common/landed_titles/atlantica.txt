@@ -762,6 +762,7 @@ e_atlantica = {
 				color={ 180 170 205 }
 				color2={ 220 220 0 }
 				holy_site = rust_cultist
+				holy_site = rust_cultist_reformed
 				holy_site = libertarian # come on guys
 				
 				deitsch = "Pallisaden"
@@ -1662,6 +1663,7 @@ e_atlantica = {
 		deitsch = "Nei-England"
 		maritimer = "Sasainn Nuadh"
 		newfie = "Sasana Nua"
+		gael_dubh = "Sasana Nua"
 		mikmaq = "Wabanahk"
 		
 		capital = 69
@@ -1939,6 +1941,7 @@ e_atlantica = {
 				b_derry_NH = {
 					british = "Londonderry"
 					newfie = "Doire"
+					gael_dubh = "Doire"
 				}
 				b_dover_NH = {}
 				b_somersworth_NH = {}

@@ -803,6 +803,7 @@ laws = {
 		potential = {
 			has_dlc = "Zeus"
 			NOT = { holder_scope = { is_nomadic = yes } }
+			NOT = { holder_scope = { government = communist_republic } }
 		}
 		revoke_allowed = { always = no }
 		ai_will_do = { factor = 0 }
@@ -821,7 +822,6 @@ laws = {
 		group = revoke_title_law
 		allow = { }
 		default_selection = {
-			factor = 0
 			additive_modifier = { 
 				value = 1000
 				holder_scope = { government = militarist_government }
@@ -830,6 +830,7 @@ laws = {
 		potential = {
 			has_dlc = "Zeus"
 			NOT = { holder_scope = { is_nomadic = yes } }
+			NOT = { holder_scope = { government = communist_republic } }
 		}
 		revoke_allowed = { always = no }
 		ai_will_do = { 
@@ -887,6 +888,12 @@ laws = {
 			modifier = {
 				factor = 10
 				holder_scope = { trait = zealous }
+			}
+		}
+		default_selection = {
+			additive_modifier = { 
+				value = 1000
+				holder_scope = { government = communist_republic }
 			}
 		}
 		ai_will_revoke = { factor = 0 }

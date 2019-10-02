@@ -9,3 +9,8 @@ unenlightened_guru = {
 	local_revolt_risk = 0.01
 	icon = 35
 }
+
+writing_inspiration_neutic = {
+	learning = 1
+	icon = 8
+}

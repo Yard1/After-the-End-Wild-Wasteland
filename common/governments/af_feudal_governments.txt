@@ -35,6 +35,7 @@ feudal_governments = {
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
 			}
+			NOT = { is_government_potential = communist_republic }
 		}
 		
 		color = { 16 89 173 }

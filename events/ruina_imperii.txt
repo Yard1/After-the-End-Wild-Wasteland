@@ -416,7 +416,7 @@ narrative_event = {
 			diplomacy = 20
 		}
 		FROM = {
-			make_tributary = ROOT
+			make_tributary = { who = ROOT tributary_type = permanent }
 		}	
 		ai_chance = {
 			factor = 1000

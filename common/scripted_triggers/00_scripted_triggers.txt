@@ -1246,6 +1246,7 @@ can_be_spiritual_trigger = {
 	}
 	
 	OR = {
+		religion = cult_of_marx
 		is_theocracy = yes
 		AND = {
 			liege = { is_tribal = yes }
@@ -1272,18 +1273,19 @@ can_be_spiritual_trigger = {
 	}
 	
 	OR = {
-		NOT = { religion_group = oldworld }
-		NOT = { liege = { religion_group = oldworld } }
+		religion_group = oldworld
 		trait = detached_priest
 		trait = martial_cleric
 		trait = scholarly_theologian
 		trait = mastermind_theologian
-		has_character_flag = special_spiritual
 		AND = {
-			trait = druid
-			trait = bad_druid
-			NOT = { religion_openly_in_celtic_subgroup_trigger = yes }
+			OR = {
+				trait = druid
+				trait = bad_druid
+			}
+			religion_openly_in_celtic_subgroup_trigger = yes
 		}
+		has_character_flag = special_spiritual
 	}
 }
 
@@ -2226,6 +2228,7 @@ is_widow_or_widower_trigger = {
 
 FROMs_religion_is_playable_trigger = { #Not touching this unless it causes problems
 	NOR = {
+		FROM = { religion = cult_of_marx }
 		#AND = { #Means you're not allowed to play Muslims
 		#	FROM = { religion_group = muslim }
 		#	NOT = { has_dlc = "The Sword of Islam" }
@@ -2279,6 +2282,7 @@ FROMs_religion_is_playable_trigger = { #Not touching this unless it causes probl
 
 ROOTs_religion_is_playable_trigger = { #For targeted decision where FROM is the player
 	NOR = {
+		religion = cult_of_marx
 		#AND = { #Means you're not allowed to play Muslims
 		#	ROOT = { religion_group = muslim }
 		#	NOT = { has_dlc = "The Sword of Islam" }
@@ -2333,6 +2337,7 @@ ROOTs_religion_is_playable_trigger = { #For targeted decision where FROM is the 
 ROOTs_secret_religion_is_playable_trigger = { 
 # To block players from getting a game over if they don't own all DLCs
 	hidden_tooltip = {
+		NOT = { secret_religion = cult_of_marx }
 		OR = {
 			secret_religion_group  = christian
 			secret_religion_group  = afro_syncretic
@@ -6213,6 +6218,7 @@ proselytize_convert_independent_trigger = {
 					religion_group = american_native
 					religion_group = mesoamerican_gods
 					religion_group = afro_syncretic
+					religion = cult_of_marx
 				}
 			} 
 			FROM = { 
@@ -7326,6 +7332,7 @@ this_is_spiritual_culture_trigger = { #Not really about culture - Used in AI vot
 }
 this_is_sea_raider_trigger = {
 	OR = { 
+		religion_group = pirate
 		has_pirate_trait = yes
 		trait = viking
 		trait = ravager
@@ -9040,7 +9047,7 @@ has_feminist_religion_trigger = {
 
 americanism_under_threat_trigger = {
 	religion = americanist
-	NOT = { num_of_holy_sites = 3 }
+	NOT = { religion_authority = 0.4 }
 }
 
 has_sympathy_trait_trigger = {

@@ -3937,7 +3937,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 			    					}
 			    				}
 			    				10 = {
-			    					add_artifact = cookbook_3_amerodeutsch
+			    					add_artifact = cookbook_3_central_german
 			    					#new_artifact = {
 			    					#	set_description = cookbook_3_central_german_desc_rename
 			    					#}
@@ -3945,7 +3945,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 			    						culture_group = amerodeutsch
 			    						NOT = {
 				    						any_artifact = {
-												artifact_type = cookbook_3_amerodeutsch
+												artifact_type = cookbook_3_central_german
 											}
 										}
 			    					}

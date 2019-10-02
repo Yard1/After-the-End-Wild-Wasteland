@@ -902,6 +902,7 @@ e_thunderland = {
 				holy_site = midewiwin
 				holy_site = midewiwin_reformed
 				holy_site = exovedate
+				#holy_site = cult_of_marx
 				
 				b_winnipeg_MB = {}
 				b_whiteshell_MB = {} 

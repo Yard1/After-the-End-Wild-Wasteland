@@ -841,7 +841,7 @@ offmap_decisions = {
 							trait = administrator
 							trait = strategist
 							trait = scholar
-							trait = faqih						
+							#trait = faqih						
 						}
 					}
 				}

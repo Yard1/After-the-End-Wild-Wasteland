@@ -28,6 +28,9 @@ sylvain_desc;This character is a descendant of Jean-Baptise Sylvain, a famed Hai
 trump;Trump Blood;;;;;;;;;;;;;x
 trump_desc;Harking back to a prominent pre-Event business family, the Trump dynasty has always been present in New York.;;;;;;;;;;;;;x
 
+# Cultures
+gael_dubh;Gael Dubh;;;;;;;;;;;;;x
+
 # Titles 
 d_lake_charles;Lake Charles;;;;;;;;;;;;;x
 d_lake_charles_adj;Charleston;;;;;;;;;;;;;x
@@ -49,12 +52,20 @@ c_sable_adj;Sable;;;;;;;;;;;;;x
 b_sable;Sable;;;;;;;;;;;;;x
 b_sable_adj;Sable;;;;;;;;;;;;;x
 
+PROV3400;Montserrat;;;;;;;;;;;;;x
+c_montserrat;Montserrat;;;;;;;;;;;;;x
+c_montserrat_adj;Montserratian;;;;;;;;;;;;;x
+b_plymouth_ANB;Plymouth;;;;;;;;;;;;;x
+b_brades_ANB;Brades;;;;;;;;;;;;;x
+
 EVTDESC_ATE_WWW_TITLE_2;Due to [Root.GetBestName]'s culture, the Kingdom of Dixieland has proven to be simply ungovernable. Therefore, it has been split into Alabama and Georgia - the old kingdoms that have held the land before the Collapse.;;;;;;;;;;;;;x
 EVTOPTA_ATE_WWW_TITLE_2;Damn it!;;;;;;;;;;;;;x
 EVTOPTB_ATE_WWW_TITLE_2;I see.;;;;;;;;;;;;;x
 
 EVTDESC_ATE_WWW_TITLE_3;Thanks to [Root.GetBestName]'s heritage, [Root.GetSheHe] has managed to recreate the Kingdom of Dixieland by combining the kingdoms of Alabama and Georgia into one.;;;;;;;;;;;;;x
 EVTOPTA_ATE_WWW_TITLE_3;As [Root.Religion.GetHighGodName] intended.;;;;;;;;;;;;;x
+
+chinese_grace_become_tributary_allow_india_tt;Has a coastal realm county in South America\n;;;;;;;;;;;;;x
 
 # Religious Features 
 

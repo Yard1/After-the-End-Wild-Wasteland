@@ -8553,9 +8553,11 @@ faction_increase_council_power = {
 
 		modifier = {
 			factor = 0.25
-			government = militarist_government
-			liege = {  
+			FROM = {
 				government = militarist_government
+				liege = {  
+					government = militarist_government
+				}
 			}
 		}
 

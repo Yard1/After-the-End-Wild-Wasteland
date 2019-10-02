@@ -269,10 +269,12 @@ narrative_event = {
 		custom_tooltip = { text = TXT_neutic_unrest }
 		hidden_tooltip = {
 			ROOT = {
-				limit = { religion = neutic }
-				any_realm_province = {
+				if = {
 					limit = { religion = neutic }
-					add_province_modifier = { name = unenlightened_guru duration = 365 }
+					any_realm_province = {
+						limit = { religion = neutic }
+						add_province_modifier = { name = unenlightened_guru duration = 365 }
+					}
 				}
 			}
 		}
@@ -437,7 +439,7 @@ character_event = {
 		}
 		opinion = { modifier = opinion_unenlightened who = FROM years = 10 }
 		custom_tooltip = { text = TXT_neutic_switch_way }
-		hidden_tooltip = { character_event = { id = neutic.19 } }
+		#hidden_tooltip = { character_event = { id = neutic.19 } }
 		ai_chance = {
 			factor = 20
 			modifier = { factor = 2 trait = arbitrary }
@@ -1834,11 +1836,13 @@ narrative_event = {
 			k_the_valley = {
 				de_jure_liege = e_california
 			}
-			any_realm_title = {
-				limit = { 
-					tier = KING
+			any_realm_lord = {
+				any_demesne_title = {
+					limit = { 
+						tier = KING
+					}
+					de_jure_liege = e_california
 				}
-				de_jure_liege = e_california
 			}
 			any_demesne_title = {
 				limit = { 

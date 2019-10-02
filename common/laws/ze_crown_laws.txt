@@ -20,8 +20,9 @@ de_jure_laws = {
 				is_tribal = no
 				is_nomadic = no
 				is_republic = no
-				NOT = {
+				NOR = {
 					government = order_government
+					government = communist_republic
 				}
 			}
 		}
@@ -106,6 +107,10 @@ de_jure_laws = {
 				value = 1000
 				holder_scope = { government = militarist_government }
 			}
+			additive_modifier = { 
+				value = 100	
+				holder_scope = { government = communist_republic }
+			}
 		}
 
 		effect = {
@@ -128,8 +133,9 @@ de_jure_laws = {
 				is_nomadic = no
 				is_republic = no
 				is_theocracy = no
-				NOT = {
+				NOR = {
 					government = order_government
+					government = communist_republic
 				}
 			}
 		}
@@ -183,8 +189,9 @@ de_jure_laws = {
 				is_nomadic = no
 				is_republic = no
 				is_theocracy = no
-				NOT = {
+				NOR = {
 					government = order_government
+					government = communist_republic
 				}
 			}
 		}
@@ -286,6 +293,13 @@ de_jure_laws = {
 		
 		ai_will_revoke = {
 			factor = 0
+		}
+
+		default_selection = {
+			additive_modifier = { 
+				value = 100	
+				holder_scope = { government = communist_republic }
+			}
 		}
 		
 		effect = {

@@ -1290,6 +1290,67 @@ culture =
 
 culture =
 {
+	religion = {
+		"cult_of_marx"
+	}
+
+	templates = { 
+		"coa_plain_indian:1"
+	}
+
+	color = {
+		{ 255 231 93 }		# 0		Gold
+		{ 245 245 245 } 	# 1 	White
+		{ 176 0 0 } 		# 2		Red
+		{ 20 20 20 }		# 3 	Black
+		{ 130 0 0 }			# 4 	Dark Red
+		{ 205 87 10 }		# 5 	Orange
+	}
+	
+	rebel_colors = { 0 1 2 3 4 5 }
+	
+	banned_colors = 
+	{
+		{ 0 0 }
+		{ 1 1 }
+		{ 2 2 }
+		{ 3 3 }
+		{ 4 4 }
+		{ 5 5 }
+		{ 0 1 }
+		{ 0 3 }
+		{ 1 1 2 }
+		{ 1 1 4 }
+		{ 1 1 5 }
+		{ 2 4 5 }
+		{ 3 2 2 }
+		{ 3 3 2 }
+		{ 3 4 4 }
+		{ 3 3 4 }
+		{ 3 5 5 }
+		{ 3 3 5 }
+	}
+
+	emblem = {
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
+	}
+
+	# WHEN ADDING NEW, ALWAYS ADD AT THE END
+	textures = {
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern_commie.tga"
+			size = { x = 10 y = 4 }
+			noOfFrames = 30
+			color = 3
+			emblem = no
+			#random = no
+		}
+	}
+}
+
+culture =
+{
 	religion_group = "latter_day_saints"
 
 	templates = { 

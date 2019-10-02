@@ -118,6 +118,7 @@ e_caribbean = {
 			c_santa_clara = {
 				color={ 201 157 220 }
 				color2={ 220 220 0 }
+				#holy_site = cult_of_marx
 
 				b_santa_clara_CUB = {}
 				b_sagua_la_grande_CUB = {}
@@ -664,6 +665,16 @@ e_caribbean = {
 				b_jolly_harbour_ANB = {}
 				b_english_harbour_ANB = {}
 				b_old_road_ANB = {}
+			}
+
+			c_montserrat = {
+				color = { 163 216 103 }
+				maritimer = "Beinngarbh"
+				newfie = "Sléibhegarbh"
+				gael_dubh = "Sléibhegarbh"
+				
+				b_plymouth_ANB = {}
+				b_brades_ANB = {}
 			}
 			
 			c_virgin_islands = {

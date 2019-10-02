@@ -150,14 +150,30 @@ secret_uahomche_reformed_community = {
 	}
 }
 
-pacifist_religion = {
-	local_revolt_risk = -0.04
-	icon = 8	
-}
-
 secret_rust_cultist_reformed_community = {
 	icon = 18
 	is_visible = {
 		society_member_of = secret_religious_society_rust_cultist_reformed
 	}
+}
+
+pacifist_religion = {
+	local_revolt_risk = -0.04
+	icon = 8	
+}
+
+commie_cell = {
+	local_revolt_risk = 0.15
+	castle_levy_size = -0.20
+	city_levy_size = -0.20
+	temple_levy_size = -0.1
+	local_tax_modifier = -0.2
+	icon = 31
+}
+
+held_yudtes_timer = {
+}
+
+recently_invited_rabbi = {
+	icon = 63
 }

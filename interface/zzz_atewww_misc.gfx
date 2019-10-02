@@ -13,6 +13,10 @@ spriteTypes = {
 		texturefile = "gfx\\interface\\government_icon_consumerist_government.dds"
 	}
 	spriteType = {
+		name = "GFX_icon_communist_republic"
+		texturefile = "gfx\\interface\\government_icon_communist_republic.dds"
+	}
+	spriteType = {
 		name = "GFX_trait_president"
 		texturefile = "gfx/traits/president.dds"
 		noOfFrames = 1
@@ -29,17 +33,17 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_religion_icon_strip"
 		texturefile = "gfx\\interface\\religion_icon_strip.tga"
-		noOfFrames = 76
+		noOfFrames = 77
 	}
 	spriteType = {
 		name = "GFX_religion_icon_strip_small"
 		texturefile = "gfx\\interface\\religion_icon_strip_small.tga"
-		noOfFrames = 76
+		noOfFrames = 77
 	}
 	spriteType = {
 		name = "GFX_religion_icon_strip_big"
 		texturefile = "gfx\\interface\\religion_icon_strip_big.tga"
-		noOfFrames = 76
+		noOfFrames = 77
 	}
 	spriteType = {
 		name = "GFX_obj_marry_lover"

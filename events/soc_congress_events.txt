@@ -2869,10 +2869,12 @@ narrative_event = {
 				character_event = { id = SC.46 }
 			}
 			top_liege = {
-				limit = {
-					has_landed_title = e_usa
+				if = {
+					limit = {
+						has_landed_title = e_usa
+					}
+					character_event = { id = SC.48 }
 				}
-				character_event = { id = SC.48 }
 			}
 			clr_character_flag = legislation
 			set_global_flag = bill_pass

@@ -41,9 +41,7 @@ calculate_candidate_score = {
 		
 		limit = {
 		
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		NOR = {
 			trait = cynical
 			trait = zealous
@@ -58,9 +56,7 @@ calculate_candidate_score = {
 		
 		limit = {
 		
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		trait = zealous
 		NOT = { character = event_target:new_candidate }
 		event_target:new_candidate = {
@@ -611,9 +607,7 @@ calculate_candidate_score = {
 		
 		limit = {
 		
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		event_target:new_candidate = {
 			martial = 10
 			OR = { 
@@ -767,9 +761,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		event_target:new_candidate = { 
 			trait = scarred
 		}
@@ -779,9 +771,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		event_target:new_candidate = { 
 			trait = scarred_mid
 		}
@@ -791,9 +781,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		event_target:new_candidate = { 
 			trait = scarred_high
 		}
@@ -979,9 +967,7 @@ calculate_candidate_score = {
 		
 		limit = {
 		
-		americanist = {
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		NOT = { 
 			culture_group = south_anglo
 		}
@@ -993,9 +979,7 @@ calculate_candidate_score = {
 		
 		limit = {
 		
-		americanist = {
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		culture_group = south_anglo
 		event_target:new_candidate = { 
 			trait = disfigured
@@ -1006,9 +990,7 @@ calculate_candidate_score = {
 		
 		limit = {
 		
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		event_target:new_candidate = { 
 			trait = disfigured
 		}
@@ -1017,9 +999,7 @@ calculate_candidate_score = {
 		
 		limit = {
 		
-		americanist = {
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		event_target:new_candidate = { 
 			trait = mangled
 		}
@@ -1028,9 +1008,7 @@ calculate_candidate_score = {
 		
 		limit = {
 		
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		event_target:new_candidate = { 
 			trait = mangled
 		}
@@ -1063,9 +1041,7 @@ calculate_candidate_score = {
 		
 		limit = {
 		
-		americanist = {
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		event_target:new_candidate = { 
 			trait = severely_injured
 		}
@@ -1219,9 +1195,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		event_target:new_candidate = { 
 			trait = strong
 		}
@@ -1231,9 +1205,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		event_target:new_candidate = { 
 			trait = strong
 		}
@@ -1324,9 +1296,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		event_target:new_candidate = { 
 			trait = weak
 		}
@@ -1336,9 +1306,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		event_target:new_candidate = { 
 			trait = weak
 		}
@@ -1348,9 +1316,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		event_target:new_candidate = { 
 			trait = robust
 		}
@@ -1360,9 +1326,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		event_target:new_candidate = { 
 			trait = robust
 		}
@@ -1381,9 +1345,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		event_target:new_candidate = { 
 			trait = feeble
 		}
@@ -1393,9 +1355,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		event_target:new_candidate = { 
 			trait = feeble
 		}
@@ -1508,9 +1468,7 @@ calculate_candidate_score = {
 			NOT = { 
 				trait = wroth
 			}
-			americanist = {
-				num_of_holy_sites = 3
-			}
+			religion_authority = 0.6
 		}
 		event_target:new_candidate = { 
 			trait = patient
@@ -1692,9 +1650,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		event_target:new_candidate = { 
 			trait = wroth
 		}
@@ -1779,9 +1735,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		NOR = { 
 			trait = envious
 			trait = arbitrary #
@@ -1795,9 +1749,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		NOR = { 
 			trait = envious
 			trait = arbitrary #
@@ -1811,9 +1763,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		OR = { 
 			trait = envious
 			trait = arbitrary #
@@ -1850,9 +1800,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		event_target:new_candidate = { 
 			trait = craven
 		}
@@ -1862,9 +1810,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		event_target:new_candidate = { 
 			trait = craven
 		}
@@ -1957,9 +1903,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = { #If they're really out to get you...
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		NOR = { 
 			trait = deceitful
 			trait = arbitrary
@@ -1998,9 +1942,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		event_target:new_candidate = { 
 			trait = stubborn
 		}
@@ -2060,9 +2002,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		event_target:new_candidate = { 
 			trait = adventurer
 		}
@@ -2072,9 +2012,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			num_of_holy_sites = 3
-		}
+		religion_authority = 0.6
 		event_target:new_candidate = { 
 			trait = blinded
 		}
@@ -2084,9 +2022,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		event_target:new_candidate = { 
 			trait = blinded
 		}
@@ -2290,9 +2226,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		americanist = {
-			NOT = { num_of_holy_sites = 3 }
-		}
+		NOT = { religion_authority = 0.4 }
 		event_target:new_candidate = { 
 			trait = giant
 		}

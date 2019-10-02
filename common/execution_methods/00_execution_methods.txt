@@ -681,6 +681,7 @@ execution_method = {
 				culture = yankee
 				culture = maritimer
 				culture = newfie
+				culture = gael_dubh
 				culture = northlander
 				culture = yooper
 				culture = dellsman

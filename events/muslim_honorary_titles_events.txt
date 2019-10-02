@@ -777,9 +777,9 @@ character_event = {
 				random = 4
 				tooltip = "EVTTOOLTIP105011"
 			}
-			ai_chance = {
-				factor = 1
-			}
+		}
+		ai_chance = {
+			factor = 1
 		}
 	}
 	option = {

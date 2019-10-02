@@ -1129,7 +1129,7 @@ character_event = {
 				save_event_target_as = taken_pill
 			}
 			hidden_tooltip = { add_character_modifier = { name = taken_medicine_recently days = 15 hidden = yes } }
-			character_event = { id = ATE_WWW_MEDICINE.6 days = 1 }
+			character_event = { id = ATE_WWW_MEDICINE.5 days = 1 }
 		}
 	}
 
@@ -1476,7 +1476,7 @@ character_event = {
 		trigger = {
 			has_character_flag = was_sick
 			character_disease_trigger = no
-			NOT = { has_trait = ill }
+			NOT = { trait = ill }
 		}
 		text = EVTDESC_ATE_WWW_MEDICINE_5_SUCCESS
 	}
@@ -1518,7 +1518,7 @@ character_event = {
 				AND = {
 					has_character_flag = was_sick
 					character_disease_trigger = no
-					NOT = { has_trait = ill }
+					NOT = { trait = ill }
 				}
 				AND = {
 					has_character_flag = was_sick
@@ -1553,7 +1553,7 @@ character_event = {
 				AND = {
 					has_character_flag = was_sick
 					character_disease_trigger = no
-					NOT = { has_trait = ill }
+					NOT = { trait = ill }
 				}
 				AND = {
 					has_character_flag = was_sick
@@ -1593,7 +1593,7 @@ character_event = {
 				AND = {
 					has_character_flag = was_sick
 					character_disease_trigger = no
-					NOT = { has_trait = ill }
+					NOT = { trait = ill }
 				}
 				AND = {
 					has_character_flag = was_sick
@@ -1639,7 +1639,7 @@ character_event = {
 				AND = {
 					has_character_flag = was_sick
 					character_disease_trigger = no
-					NOT = { has_trait = ill }
+					NOT = { trait = ill }
 				}
 				AND = {
 					has_character_flag = was_sick
@@ -1686,7 +1686,7 @@ character_event = {
 				AND = {
 					has_character_flag = was_sick
 					character_disease_trigger = no
-					NOT = { has_trait = ill }
+					NOT = { trait = ill }
 				}
 				AND = {
 					has_character_flag = was_sick

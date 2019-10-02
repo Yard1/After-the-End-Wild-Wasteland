@@ -1,0 +1,74 @@
+# Can be utilized in ai_chance, ai_will_do, random list weighting and anything that utilizes the triggered modifiers to calculate a value.
+
+commie_ruler_target = {
+	additive_modifier = {
+		value = 20
+		NOT = { has_truce = PREV }
+	}
+	additive_modifier = {
+		value = 20
+		NOT = { has_non_aggression_pact_with = PREV }
+	}
+	additive_modifier = {
+		value = 40
+		NOT = { is_allied_with = PREV }
+	}
+	additive_modifier = {
+		value = 5
+		any_realm_province = {
+			culture_group = ROOT
+		}
+	}
+	additive_modifier = {
+		value = 10
+		any_realm_province = {
+			any_province_holding = { is_holy_site = cult_of_marx }
+		}
+	}
+	additive_modifier = {
+		value = 10
+		any_realm_province = {
+			has_province_modifier = commie_cell
+		}
+	}
+	additive_modifier = {
+		value = 10
+		any_realm_province = {
+			count = 3
+			has_province_modifier = commie_cell
+		}
+	}
+	additive_modifier = {
+		value = -100
+		any_realm_province = {
+			count = 6
+			has_province_modifier = commie_cell
+		}
+	}
+	additive_modifier = {
+		value = 10
+		any_realm_province = {
+			revolt_risk = 0.06
+		}
+	}
+	additive_modifier = {
+		value = 10
+		is_evil_trigger = yes
+	}
+	additive_modifier = {
+		value = -30
+		distance_from_realm = { who = FROM value = 100 }
+	}
+	additive_modifier = {
+		value = -30
+		distance_from_realm = { who = FROM value = 200 }
+	}
+	additive_modifier = {
+		value = -30
+		distance_from_realm = { who = FROM value = 300 }
+	}
+	additive_modifier = {
+		value = -30
+		distance_from_realm = { who = FROM value = 400 }
+	}
+}

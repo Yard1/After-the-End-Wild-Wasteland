@@ -176,14 +176,16 @@ character_event = {
 	#hide_window = yes
 	
 	option = {
-		set_variable = { which = optA value = 0 }
-		set_variable = { which = optB value = 0 }
-		any_playable_ruler = {
-			character_event = { id = ATE_WWW_DEBUG.40 }
+		random_demesne_province = {
+			add_province_modifier = { name = commie_cell duration = -1 }
 		}
 	}
-	after = {
-		character_event = { id = ATE_WWW_DEBUG.41 days = 1 }
+
+	option = {
+		random_demesne_province = {
+			add_province_modifier = { name = commie_cell duration = -1 }
+			province_event = { id = TOG.1060 }
+		}
 	}
 }
 
@@ -193,18 +195,36 @@ character_event = {
 	picture = GFX_evt_capitol_building
 	
 	is_triggered_only = yes
-	hide_window = yes
+	#hide_window = yes
 	
 	option = {
-		FROM = { change_variable = { which = optA value = 1 } }
-		ai_chance = {
-			factor = -100
-		}
-	}
-	option = {
-		FROM = { change_variable = { which = optB value = 1 } }
-		ai_chance = {
-			factor = -1
+		random_province = {
+			limit = {
+				owner = {
+					holy_order = no
+					mercenary = no
+					OR = {
+						is_feudal = yes
+						is_republic = yes
+					}
+				}
+				NOR = {
+					religion = cult_of_marx
+					owner = { religion = cult_of_marx }
+					has_province_modifier = commie_cell
+				}
+				NOT = {
+					has_global_flag = commie_uprising_being_prepared
+				}
+				OR = {
+					county = { title = c_los_angeles }
+					county = { title = c_santa_clara }
+					county = { title = c_chicago }
+					county = { title = c_winnipeg }
+					county = { title = c_comitan }
+				}
+			}
+			province_event = { id = ATE_WWW_COMMIES.14 }
 		}
 	}
 }

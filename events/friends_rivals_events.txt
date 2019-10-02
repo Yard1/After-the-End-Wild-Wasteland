@@ -8276,19 +8276,6 @@ character_event = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				trait = chaste
-				uses_decadence = yes
-			}
-			hidden_tooltip = {
-				character_event = {
-					id = 5070 #Hedonism/Poetry
-					days = 30
-					random = 30
-				}
-			}
-		}
 	}
 }
 

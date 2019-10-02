@@ -98,6 +98,7 @@ succession_laws = {
 			holder_scope = {
 				NOT = { religion_group = american_native } #uses Eldership instead
 				NOT = { religion_group = pirate }
+				NOT = { government = communist_republic }
 				NAND = {
 					government = consumerist_government
 					OR = {
@@ -239,6 +240,7 @@ succession_laws = {
 			holder_scope = {
 				NOT = { religion_group = american_native } #uses Eldership instead
 				NOT = { religion_group = pirate }
+				NOT = { government = communist_republic }
 				NAND = {
 					government = consumerist_government
 					OR = {
@@ -362,6 +364,7 @@ succession_laws = {
 				}
 			}
 			holder_scope = {
+				NOT = { government = communist_republic }
 				OR = {
 					religion_group = afro_syncretic
 					religion_group = american_native
@@ -518,6 +521,7 @@ succession_laws = {
 				holder_scope = { NOT = { religion_group = pirate } }
 			}
 			holder_scope = {
+				NOT = { government = communist_republic }
 				NOT = { has_landed_title = d_forscom }
 				OR = {
 					independent = yes
@@ -703,6 +707,7 @@ succession_laws = {
 				holder_scope = { NOT = { religion_group = pirate } }
 			}
 			holder_scope = {
+				NOT = { government = communist_republic }
 				NAND = {
 					government = consumerist_government
 					OR = {
@@ -907,6 +912,7 @@ succession_laws = {
 				holder_scope = { NOT = { religion_group = pirate } }
 			}
 			holder_scope = {
+				NOT = { government = communist_republic }
 				NOT = { religion_openly_gaian_or_heresy_trigger = yes }
 				OR = {
 					independent = yes
@@ -979,7 +985,7 @@ succession_laws = {
 			NOT = { holder_scope = { government = military_governorate } }
 			NOT = { holder_scope = { government = chinese_imperial_government } }
 			NOR = {  #Special Elective.
-				title = e_hre 
+				title = e_dixie
 				has_title_flag = alternate_hre
 			}
 		}
@@ -1033,6 +1039,7 @@ succession_laws = {
 				}
 			}
 			holder_scope = {
+				NOT = { government = communist_republic }
 				OR = {
 					independent = yes
 					NOT = {
@@ -1122,6 +1129,7 @@ succession_laws = {
 		feudal_opinion = -5
 		potential = {
 			holder_scope = {
+				NOT = { government = communist_republic }
 				OR = {
 					AND = {
 						has_landed_title = e_usa
@@ -1200,6 +1208,7 @@ succession_laws = {
 				}
 			}
 			holder_scope = {
+				NOT = { government = communist_republic }
 				OR = {
 					independent = yes
 					NOT = {
@@ -1217,6 +1226,7 @@ succession_laws = {
 					culture = maritimer
 					culture = newfie
 					culture = carpetbagger
+					culture = gael_dubh
 					AND = {
 						religion_openly_gaian_or_heresy_trigger = yes
 						is_tribal = no
@@ -1345,6 +1355,7 @@ succession_laws = {
 				}
 			}
 			holder_scope = {
+				NOT = { government = communist_republic }
 				OR = {
 					independent = yes
 					NOT = {
@@ -1497,6 +1508,7 @@ succession_laws = {
 		#child_opinion = 30
 		#dynasty_opinion = 10
 		potential = {
+			holder_scope = { NOT = { government = communist_republic } }
 			NAND = { 
 				has_law = succ_byzantine_elective 
 				title = e_usa
@@ -1576,10 +1588,6 @@ succession_laws = {
 				title = k_ursuline
 				title = k_confederated
 				title = d_quorum_of_the_twelve
-				AND = {
-					title = d_celtic_pagan_reformed
-					has_religion_feature = religion_theocratic_head
-				}
 			}
 		}
 		
@@ -1626,7 +1634,6 @@ succession_laws = {
 				title = k_ursuline
 				title = k_confederated
 				title = d_quorum_of_the_twelve
-				title = d_celtic_pagan_reformed
 				title = e_redcoat_dominion
 				title = k_pirate_kingdom
 			}
@@ -1656,6 +1663,13 @@ succession_laws = {
 						}
 					}
 				}
+			}
+			OR = {
+				holder_scope = {
+					NOT = { government = communist_republic }
+				}
+				temporary = yes
+				lower_tier_than = DUKE
 			}
 			OR = {
 				is_landless_type_title = yes

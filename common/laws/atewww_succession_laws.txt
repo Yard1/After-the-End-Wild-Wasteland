@@ -142,4 +142,77 @@ succession_laws = {
 			always = no
 		}			
 	}
+	succ_commie_politburo_elective = {
+		potential = {
+			temporary = no
+			higher_tier_than = DUKE
+			holder_scope = {
+				government = communist_republic
+			}
+			has_law = succession_voting_power_1
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = commie_politburo_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		default_selection = {
+			factor = 0
+			additive_modifier = {
+				value = 1000
+				higher_tier_than = DUKE
+				holder_scope = {
+					independent = yes
+					government = communist_republic
+				}
+			}
+		}
+	}
+	succ_commie_centralist_elective = {
+		potential = {
+			temporary = no
+			higher_tier_than = COUNT
+			holder_scope = {
+				government = communist_republic
+			}
+			OR = {
+				tier = DUKE
+				NOT = { has_dlc = "Zeus" }
+				AND = {
+					higher_tier_than = DUKE
+					NOT = { has_law = succession_voting_power_1 }
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = commie_centralist_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.9
+		}
+		default_selection = {
+			factor = 0
+			additive_modifier = {
+				value = 1000
+				higher_tier_than = COUNT
+				holder_scope = {
+					independent = no
+					government = communist_republic
+				}
+			}
+		}
+	}
 }

@@ -4588,14 +4588,14 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { rust_cultist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
+			limit = { rust_cultist = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = rust_cultist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { rust_cultist_reformed = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } }
+			limit = { rust_cultist_reformed = { OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist } } }
 			random_playable_ruler = {
 				limit = { religion = rust_cultist_reformed }
 				apply_dogmatic_on_start_effect = yes
@@ -11121,10 +11121,12 @@ character_event = {
 			tiered_piety_reward_effect = yes
 		}
 		if = {
-			OR = {
-				limit = { has_religion_feature = religion_cosmopolitan }
-				limit = { has_religion_feature = religion_feature_espiritista }
-				limit = { has_religion_feature = religion_feature_revelationist }
+			limit = {
+				OR = {
+					limit = { has_religion_feature = religion_cosmopolitan }
+					limit = { has_religion_feature = religion_feature_espiritista }
+					limit = { has_religion_feature = religion_feature_revelationist }
+				}
 			}
 			tiered_piety_negative_effect = yes
 		}

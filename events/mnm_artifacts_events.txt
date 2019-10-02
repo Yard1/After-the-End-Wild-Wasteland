@@ -1223,7 +1223,7 @@ character_event = {
 						factor = 0
 						has_artifact = stone_of_golgotha
 					}
-					narrative_event = { id = MNM.981600 } #Stone of Golgotha
+					narrative_event = { id = MNM.98160 } #Stone of Golgotha
 				}
 
 
@@ -12709,8 +12709,8 @@ character_event = {
 			}
 			event_target:smith_employer = { 
 				any_neighbor_independent_ruler = {
-					is_landed = yes
 					limit = {
+						is_landed = yes
 						NOT = {
 							opinion = {
 								who = PREV

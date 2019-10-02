@@ -251,7 +251,7 @@ character_event = {
 	}
 	option = {
 		name = EVOTPD_ATE_WWW_RELIGION_1
-		effect = { character_event = { id = ATE_WWW_RELIGION.6 } }
+		character_event = { id = ATE_WWW_RELIGION.6 }
 		trigger = { ai = no }
 		ai_chance = {
 			factor = 10
@@ -379,7 +379,7 @@ character_event = {
 	}
 	option = {
 		name = EVOTPD_ATE_WWW_RELIGION_2
-		effect = { character_event = { id = ATE_WWW_RELIGION.5 } }
+		character_event = { id = ATE_WWW_RELIGION.5 }
 	}
 }
 
@@ -401,9 +401,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_ATE_WWW_RELIGION_7
-		effect = {
-			remove_patron_general_trigger = yes
-		}
+		remove_patron_general_trigger = yes
 	}
 }
 
@@ -631,7 +629,12 @@ character_event = {
 			}
 			clr_character_flag = militarist_let_ruler_pick_@ROOT
 		}
-		any_realm_title = {
+		any_realm_character = {
+			any_demesne_title = {
+				clr_title_flag = militarist_ruler_pick_@ROOT
+			}
+		}
+		any_demesne_title = {
 			clr_title_flag = militarist_ruler_pick_@ROOT
 		}
 	}
@@ -2180,6 +2183,19 @@ province_event = {
 				religion_scope = { is_pacifist_religion = no }
 				has_province_modifier = pacifist_religion
 			}
+			AND = {
+				religion = cult_of_marx
+				owner = {
+					top_liege = { NOT = { religion = cult_of_marx } }
+				}
+				NOT = { has_province_modifier = commie_cell }
+			}
+			AND = {
+				has_province_modifier = commie_cell
+				owner = {
+					top_liege = { religion = cult_of_marx }
+				}
+			}
 		}
 	}
 
@@ -2195,6 +2211,26 @@ province_event = {
 		else = {
 			log = "Remove province [This.GetName] as pacifist"
 			remove_province_modifier = pacifist_religion
+		}
+
+		if = {
+			limit = {
+				religion = cult_of_marx
+				owner = {
+					top_liege = { NOT = { religion = cult_of_marx } }
+				}
+				NOT = { has_province_modifier = commie_cell }
+			}
+			add_province_modifier = { name = commie_cell duration = -1 }
+		}
+		else_if = {
+			limit = {
+				owner = {
+					top_liege = { religion = cult_of_marx }
+				}
+				has_province_modifier = commie_cell 
+			}
+			remove_province_modifier = commie_cell
 		}
 	}
 }

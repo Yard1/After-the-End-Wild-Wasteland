@@ -86,8 +86,13 @@ character_event = {
 			}
 		}
 		modifier = {
+			factor = 0.8
+			religion = cult_of_marx
+		}
+		modifier = {
 			factor = 0.6
 			OR = {
+				religion = cult_of_marx
 				has_religion_feature = religion_proselytizing
 				religion_scope = { has_flag = religion_proselytizing }
 			}
@@ -264,7 +269,7 @@ character_event = {
 			has_job_action = action_inquisition
 			OR = {
 				religion = sacred_heart
-				religion = gracia_divinia
+				religion = gracia_divina
 			}
 			location = {
 				NOT = { religion_group = cult_of_saints }
@@ -498,6 +503,10 @@ character_event = {
 					}
 				}
 				same_realm = ROOT
+				OR = {
+					ROOT = { NOT = { religion = cult_of_marx } }
+					dynasty = none
+				}
 			}
 		}
 	}
@@ -508,6 +517,7 @@ character_event = {
 		modifier = {
 			factor = 0.75
 			OR = {
+				religion = cult_of_marx
 				has_religion_feature = religion_proselytizing
 				religion_scope = { has_flag = religion_proselytizing }
 			}
@@ -570,6 +580,10 @@ character_event = {
 						}
 					}
 					same_realm = ROOT
+					OR = {
+						ROOT = { NOT = { religion = cult_of_marx } }
+						dynasty = none
+					}
 				}
 				letter_event = { id = 20010 tooltip = "EVTTOOLTIP20010" }
 			}
@@ -1261,6 +1275,7 @@ character_event = {
 		NOT = { has_character_modifier = bedridden_illness }
 		NOT = { trait = incapable }
 		NOT = { has_character_flag = preacher_arrives }
+		NOT = { religion = cult_of_marx }
 		location = {
 			owner = {
 				NOT = { character = ROOT }
@@ -1312,6 +1327,7 @@ character_event = {
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
 		NOT = { trait = incapable }
+		NOT = { religion = cult_of_marx }
 		location = {
 			owner = {
 				is_adult = yes
@@ -1428,6 +1444,7 @@ character_event = {
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
 		NOT = { trait = incapable }
+		NOT = { religion = cult_of_marx }
 		location = {
 			owner = {
 				NOT = { character = ROOT }

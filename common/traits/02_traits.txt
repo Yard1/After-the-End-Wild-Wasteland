@@ -155,6 +155,7 @@ peasant_leader = {
 	combat_rating = 3 #new value!
 	
 	same_opinion = 25
+	cult_of_marx_opinion = 25
 	
 	vassal_opinion = -10
 

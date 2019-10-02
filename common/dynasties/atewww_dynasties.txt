@@ -235,3 +235,25 @@
 		}
 	} 
 }
+
+2029123 = { name="Bodkin" culture=gael_dubh }
+2029124 = { name="Browne" culture=gael_dubh }
+2029125 = { name="Blake" culture=gael_dubh }
+2029126 = { name="Meade" culture=gael_dubh }
+2029127 = { name="O'Gara" culture=gael_dubh }
+2029128 = { name="Darcy" culture=gael_dubh }
+2029129 = { name="Ryan" culture=gael_dubh }
+2029130 = { name="Dean" culture=gael_dubh }
+2029131 = { name="Browne" culture=gael_dubh }
+2029132 = { name="French" culture=gael_dubh }
+2029133 = { name="Joyce" culture=gael_dubh }
+2029134 = { name="Kerwin" culture=gael_dubh }
+2029135 = { name="Sweeney" culture=gael_dubh }
+2029136 = { name="Riley" culture=gael_dubh }
+2029137 = { name="Driscoll" culture=gael_dubh }
+2029138 = { name="Murphy" culture=gael_dubh }
+2029139 = { name="Lynch" culture=gael_dubh }
+2029140 = { name="Martin" culture=gael_dubh }
+2029141 = { name="Morrison" culture=gael_dubh }
+2029142 = { name="Skerritt" culture=gael_dubh }
+2029143 = { name="Farrell" culture=gael_dubh }

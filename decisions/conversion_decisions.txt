@@ -14,6 +14,10 @@ targetted_decisions = {
 				NOT = { religion = ROOT }
 				religion_group = ROOT
 			}
+			OR = {
+				liege = { NOT = { religion = cult_of_marx } }
+				dynasty = none
+			}
 			controls_religion = no
 		}
 		allow = {
@@ -144,6 +148,10 @@ targetted_decisions = {
 			NOT = { character = FROM }
 			NOT = { religion = FROM }
 			religion_group = FROM
+			OR = {
+				NOT = { religion = cult_of_marx }
+				FROM = { dynasty = none }
+			}
 		}
 		
 		allow = {
@@ -485,6 +493,10 @@ targetted_decisions = {
 				liege = {
 					NOT = { religion = ROOT }
 				}
+			}
+			OR = {
+				capital_scope = { NOT = { religion = cult_of_marx } }
+				dynasty = none
 			}
 			
 			controls_religion = no
@@ -1309,6 +1321,10 @@ targetted_decisions = {
 				religion_group = jewish_group
 				religion_group = indian_group
 			}
+			OR = {
+				NOT = { religion = cult_of_marx }
+				FROM = { dynasty = none }
+			}
 			is_alive = yes
 		}
 		
@@ -1609,6 +1625,7 @@ decisions = {
 						}
 						is_reformed_religion = yes
 					}
+					NOT = { religion = cult_of_marx }
 				}
 				OR = {
 					using_cb = crusade

@@ -1,0 +1,211 @@
+#CODE;ENGLISH;;;;;;;;;x
+###### Religion/titles definitions;;;;;;;;;;;;;;x
+GOD_THE_PARTY;The Party;;;;;;;;;;;;;x
+GOD_MARX;Marx;;;;;;;;;;;;;x
+GOD_MAO;Mao;;;;;;;;;;;;;x
+GOD_ENGELS;Engels;;;;;;;;;;;;;x
+GOD_THE_REVOLUTION;The Revolution;;;;;;;;;;;;;x
+GOD_THE_DIALECTIC;The Dialectic;;;;;;;;;;;;;x
+GOD_HISTORY;History;;;;;;;;;;;;;x
+THE_CAPITALIST;The Capitalist;;;;;;;;;;;;;x
+THE_REACTIONARY;The Reactionary;;;;;;;;;;;;;x
+THE_FASCIST;The Fascist;;;;;;;;;;;;;x
+THE_PRIEST;The Priest;;;;;;;;;;;;;x
+THE_MANIFESTO;The Communist Manifesto;;;;;;;;;;;;;x
+LOYALTY;Loyalty;;;;;;;;;;;;;x
+GREAT_PATRIOTIC_WAR;Great Patriotic War;;;;;;;;;;;;;x
+PARTY_SECRETARY;Party Secretary;;;;;;;;;;;;;x
+STAT_PIETY_LOYALTY;Loyalty;;;;;;;;;;;;;x
+STAT_PIETY_DESC_LOYALTY;Loyalty to the Party is respected by Marxians. Like Prestige, it is added to your score upon the death of a ruler.;;;;;;;;;;;;;x,,
+STAT_PIETY_MENU_LOYALTY;Loyalty;;;;;;;;;;;;;x
+MONTHLY_PIETY_LOYALTY;Monthly Loyalty, which is added to your score upon the death of a ruler.;;;;;;;;;;;;;x,,
+cult_of_marx;Marxian;;;;;;;;;;;;;x
+cult_of_marx_DESC;Since the Event, precious little of the knowledge written down by the scholars of the Old World has been preserved. Thanks to the efforts of one literate commoner, the writings of Holy Marx and his Comrades have been uncovered, and now serve to fuel the fire that treathens to consume the feudal order.;;;;;;;;;;;;;x
+cult_of_marx_FEATURES;§Y*§! Only lowborn characters may convert\n§Y*§! May imprision and execute any heathen (and vice versa);;;;;;;;;;;;;x
+cult_of_marx_opinion;[cult_of_marx.GetName] Opinion;;;;;;;;;;;;;x
+THE_NOBLE;The Noble;;;;;;;;;;;;;x
+THE_BOURGEOISIE;The Bourgeoisie;;;;;;;;;;;;;x
+GOD_LENIN;Lenin;;;;;;;;;;;;;x
+GOD_CHE;Che;;;;;;;;;;;;;x
+GOD_CASTRO;Castro;;;;;;;;;;;;;x
+GOD_REED;Reed;;;;;;;;;;;;;x
+###### Mercenaries
+d_wobblies;The Wobblies;;;;;;;;;;;;;x
+d_black_panthers;The Black Panthers;;;;;;;;;;;;;x
+d_zapatistas;The Zapatistas;;;;;;;;;;;;;x
+SUB_COMMANDANTE;Sub-Commandante;;;;;;;;;;;;;x
+SUB_COMMANDANTE_FOA;Sub-Commandante;;;;;;;;;;;;;x
+
+
+###### Religion Head
+CULT_OF_MARX_HEAD;Chairman;;;;;;;;;;;;;x
+CULT_OF_MARX_HEAD_FEMALE;Chairwoman;;;;;;;;;;;;;x
+CULT_OF_MARX_HEAD_FOA;Dear Comrade Chairman;;;;;;;;;;;;;x
+d_cult_of_marx;The Party;;;;;;;;;;;;;x
+d_cult_of_marx_adj;Communist;;;;;;;;;;;;;x
+
+###### USSA
+GENERAL_SECRETARY;General Secretary;;;;;;;;;;;;;x
+GENERAL_SECRETARY_FOA;Dear General Secretary;;;;;;;;;;;;;x
+e_ussa;United Socialist States of America;;;;;;;;;;;;;x
+e_ussa_adj;U.S.S.A.;;;;;;;;;;;;;x
+
+###### Decisions
+hold_rally;Hold a Rally;;;;;;;;;;;;;x
+hold_rally_desc;Organize a meeting to speak to the people directly about revolution and injustice.;;;;;;;;;;;;;x
+raise_peasant_mob;Raise Peasant Volunteers;;;;;;;;;;;;;x
+raise_peasant_mob_desc;Call on my loyalty to the Party to recruit local peasants to build the mass movement.;;;;;;;;;;;;;x
+seize_party;Found the Party;;;;;;;;;;;;;x
+seize_party_desc;It is the goal of every true Marxian to bring the Party to Earth. I am no different.;;;;;;;;;;;;;x
+form_the_ussa;Form the United Socialist States of America;;;;;;;;;;;;;x
+form_the_ussa_desc;Under my leadership, the words of the sage Marx have started to gain traction. If I can seize a realm of the Old World, the Marxian faith will finally have a bastion of its own.;;;;;;;;;;;;;x
+international_solidarity;Declare the Fifth International;;;;;;;;;;;;;x
+international_solidarity_desc;The sage Marx tells us of the great wheel of the Dialectic that crushes oppression and ends in utopia. I will be the instrument of History that turns this wheel.;;;;;;;;;;;;;x
+
+####### Modifiers
+supported_peasants;Supported Peasants;;;;;;;;;;;;;x
+supported_nobles;Supported Nobles;;;;;;;;;;;;;x
+held_rally;Held Rally;;;;;;;;;;;;;x
+held_rally_effect;Held Rally;;;;;;;;;;;;;x
+held_rally_effects;Held Rally;;;;;;;;;;;;;x
+formed_ussa;Formed the U.S.S.A.;;;;;;;;;;;;;x
+international_solidarity;Declared Fifth International;;;;;;;;;;;;;x
+
+####### Fellow Travellers
+secret_religious_society_cult_of_marx;[GetReligiousCommunityName_cult_of_marx];;;;;;;;;;x
+secret_religious_society_REAL_cult_of_marx;The Fellow Travellers;;;;;;;;;;;;x
+alt_start_community_name_cult_of_marx;The [cult_of_marx.GetName] Faithful;;;;;;;;;;;;;x
+secret_religious_society_cult_of_marx_desc;[GetReligiousSocietyDesc_cult_of_marx];[GetReligiousSocietyDesc_cult_of_marx];[GetReligiousSocietyDesc_cult_of_marx];;[GetReligiousSocietyDesc_cult_of_marx];;;;;;;;;x
+secret_religious_society_cult_of_marx_desc_REAL;The enemies of the prophet Marx have driven the devotees of the great Historical Dialectic underground. For now, they sing paeans to false gods and identify each other with esoteric signs to meet in secret. Whether the ruling classes acknowledge it or not, the revolution cannot be stopped!;;;;;;;;;x
+secretly_convert_to_cult_of_marx_holy_site;Secretly Convert to Marxian;;;;;;;;;;;;;x
+secretly_convert_to_cult_of_marx_holy_site_desc;The Â§YMarxianÂ§! pilgrims that flock to the holy site in Â§Y[Root.Location.GetName]Â§! impress me with the depth and passion of their faith. I am tempted to convert in secrecy...;;;;;;;;;;;;;x
+secret_religious_society_cult_of_marx_currency;Devotion;;;;;;;;;;x
+secret_religious_society_cult_of_marx_rank_1_female;Faithful;;;;;x
+secret_religious_society_cult_of_marx_rank_2_female;Adherent;;;;;x
+secret_religious_society_cult_of_marx_rank_3_female;Preacher;;;;;x
+secret_religious_society_cult_of_marx_rank_4_female;Herald;;;;;x
+secret_religious_society_cult_of_marx_rank_1_male;Faithful;;;;;x
+secret_religious_society_cult_of_marx_rank_2_male;Adherent;;;;;x
+secret_religious_society_cult_of_marx_rank_3_male;Preacher;;;;;x
+secret_religious_society_cult_of_marx_rank_4_male;Herald;;;;;x
+secret_religious_community_cult_of_marx;Secret Marxian Community;;;;;;;;;;;;;x
+secret_cult_of_marx_community;Secret Marxian Community;;;;;;;;;;;;;x
+secret_cult_of_marx_community_desc;In secret, Marxian faithfuls have organized themselves as a community in this province. From there it converts others, grows, and protects their own.;;;;;;;;;;;;x
+secret_religious_society_cult_of_marx_leader_desc;The High Commissar, leading the international effort of bringing more people into the fold.;;;;;;;;;x
+
+###### Events
+EVTTITLEcultofmarx.8;The Marxians;;;;;;;;;;;;;x
+EVTDESCcultofmarx.8;Many of the post-Event faiths speak in hushed tones about Communists and their prophet Marx, castigated as one of America's ancient enemies. However, a handful of coastal scholars continue to find inspiration in a few of Marx's surviving texts, namely the Manifesto. Out of those pages they have decoded a mystical call to revolution against tyranny and the foundation of a universal egalitarian community, formally referred to as the Cult of Marx.;;;;;;;;;;;;;x
+EVTOPTAcultofmarx.8;A spectre is haunting America!;;;;;;;;;;;;;x
+
+EVTNAMEcultofmarx.7;The Party;;;;;;;;;;;;;x
+EVTDESCcultofmarx.7;With so much lost since the Event, most of the sage Marx's writings are virtually unintelligible to the few who take them seriously. What is agreed upon is the importance of the Party, an emancipated community of believers that seeks to banish the tyrants and superstitions rulers use to hold their people in thrall. Thanks to your efforts, the Party has been called to Earth.;;;;;;;;;;;;;x
+EVTOPTcultofmarx.7;Working people of America, unite!;;;;;;;;;;;;;x
+
+EVTNAMEcultofmarx.1;The United Socialist States of America;;;;;;;;;;;;;x
+EVTDESCcultofmarx.1;The Cult of Marx is no longer a fringe movement patronized by esoteric scholars and disgruntled peasants. The ruling classes should tremble now that the Marxian faith has a true power to represent it, a power you firmly control.;;;;;;;;;;;;;x
+EVTOPTcultofmarx.1;We have nothing to lose now but our chains!;;;;;;;;;;;;;x
+
+EVTNAMEcultofmarx.2;The Fifth International;;;;;;;;;;;;;x
+EVTDESCcultofmarx.2;From fleeing the reactionaries who would deny the great Dialectic of History to becoming a power that spans the continent, the Marxian faith has overcome all obstacles and reunited the major sites of revolutionary power. Where the disciples of Marx no doubt failed before the Event, we have suceeded, and the prospect of utopia has never been closer. Today, we proclaim the Fifth International of the Party and invite all to join in the new freedom.;;;;;;;;;;;;;x
+EVTOPTcultofmarx.2;Long live the Revolution!;;;;;;;;;;;;;x
+
+EVTNAMEcultofmarx.5;Trouble;;;;;;;;;;;;;x
+EVTDESCcultofmarx.5;It seems that some of your recruits among the peasantry have been somewhat overzealous in their roles as revolutionaries, and now you are recieving complaints of theft, blackmail and intimidation from local nobles.;;;;;;;;;;;;;x
+EVTOPTAcultofmarx.5;The bleating of counter-revolutionaries;;;;;;;;;;;;;x
+EVTOPTBcultofmarx.5;Perhaps they have gone too far...;;;;;;;;;;;;;x
+
+EVTDESCcultofmarx.6;Your recent actions have impressed your fellow Marxians, but they may also have drawn the attention of old enemies. You have noticed Men in Black trailing you.;;;;;;;;;;;;;x
+EVTOPTcultofmarx.6;They are right to fear me;;;;;;;;;;;;;x
+
+##### Titles
+
+
+temple_count_cult_of_marx;Exempt Secretary;;;;;;;;;;;;;x
+temple_count_female_cult_of_marx;Exempt Secretary;;;;;;;;;;;;;x
+temple_duke_cult_of_marx;District Secretary;;;;;;;;;;;;;x
+temple_duke_female_cult_of_marx;District Secretary;;;;;;;;;;;;;x
+temple_king_cult_of_marx;Regional Secreatry;;;;;;;;;;;;;x
+temple_king_female_cult_of_marx;Regional Secreatry;;;;;;;;;;;;;x
+temple_emperor_cult_of_marx;National Secreatry;;;;;;;;;;;;;x
+temple_emperor_female_cult_of_marx;National Secreatry;;;;;;;;;;;;;x
+
+city_baron_cult_of_marx;Comrade;;;;;;;;;;;;;x
+city_baron_female_cult_of_marx;Comrade;;;;;;;;;;;;;x
+city_count_cult_of_marx;Mayor;;;;;;;;;;;;;x
+city_count_female_cult_of_marx;Mayor;;;;;;;;;;;;;x
+city_duke_cult_of_marx;Governor;;;;;;;;;;;;;x
+city_duke_female_cult_of_marx;Governor;;;;;;;;;;;;;x
+city_king_cult_of_marx;Chairman;;;;;;;;;;;;;x
+city_king_female_cult_of_marx;Chairwoman;;;;;;;;;;;;;x
+city_emperor_cult_of_marx;General Secretary;;;;;;;;;;;;;x
+city_emperor_female_cult_of_marx;General Secretary;;;;;;;;;;;;;x
+
+baron_cult_of_marx;Comrade;;;;;;;;;;;;;x
+baron_female_cult_of_marx;Comrade;;;;;;;;;;;;;x
+count_cult_of_marx;Mayor;;;;;;;;;;;;;x
+count_female_cult_of_marx;Mayor;;;;;;;;;;;;;x
+duke_cult_of_marx;Governor;;;;;;;;;;;;;x
+duke_female_cult_of_marx;Governor;;;;;;;;;;;;;x
+king_cult_of_marx;Chairman;;;;;;;;;;;;;x
+king_female_cult_of_marx;Chairwoman;;;;;;;;;;;;;x
+emperor_cult_of_marx;General Secretary;;;;;;;;;;;;;x
+emperor_female_cult_of_marx;General Secretary;;;;;;;;;;;;;x
+
+temple_barony_of_cult_of_marx;Party Office of;;;;;;;;;;;;;x
+temple_county_of_cult_of_marx;Party Bureau of;;;;;;;;;;;;;x
+temple_duchy_of_cult_of_marx;District Party Bureau of;;;;;;;;;;;;;x
+temple_kingdom_of_cult_of_marx;Regional Party Bureau of;;;;;;;;;;;;;x
+temple_empire_of_cult_of_marx;National Party Bureau of;;;;;;;;;;;;;x
+city_barony_of_cult_of_marx;Commune of;;;;;;;;;;;;;x
+city_county_of_cult_of_marx;County of;;;;;;;;;;;;;x
+city_duchy_of_cult_of_marx;District of;;;;;;;;;;;;;x
+city_kingdom_of_cult_of_marx;Socialist Republic of;;;;;;;;;;;;;x
+city_empire_of_cult_of_marx;Union of Socialist Republics of;;;;;;;;;;;;;x
+barony_of_cult_of_marx;Commune of;;;;;;;;;;;;;x
+county_of_cult_of_marx;County of;;;;;;;;;;;;;x
+duchy_of_cult_of_marx;District of;;;;;;;;;;;;;x
+kingdom_of_cult_of_marx;Socialist Republic of;;;;;;;;;;;;;x
+empire_of_cult_of_marx;Union of Socialist Republics of;;;;;;;;;;;;;x
+
+title_commie_patriarch;Commissar for Organization and Propaganda;;;;;;;;;;;;;x
+job_spiritual_cult_of_marx;Commissar for Organization and Propaganda;;;;;;;;;;;;;x
+job_chancellor_cult_of_marx;Commissar for Foreign Affairs;;;;;;;;;;;;;x
+job_marshal_cult_of_marx;Commissar for Defence;;;;;;;;;;;;;x
+job_treasurer_cult_of_marx;Commissar for Industry and Finance;;;;;;;;;;;;;x
+job_spymaster_cult_of_marx;Commissar for State Security;;;;;;;;;;;;;x
+title_councilmember_king_cult_of_marx;Commissar without Portfolio;;;;;;;;;;;;;x
+title_councilmember_emperor_cult_of_marx;Commissar without Portfolio;;;;;;;;;;;;;x
+
+communist_republic;Marxian Peasant Republic;;;;;;;;;;;;;x
+communist_republic_desc;A unique republican government, practiced by Marxian peasants and townsfolk that have cast aside the chains of feudal bondage. This kind of republic is not playable.;;;;;;;;;;;;;x
+communist_republic_FEATURES;§Y*§! Will infiltrate neighboring realms, eventually causing a Marxian uprising\n§Y*§! Marxian realms will unite whenever possible;;;;;;;;;;;;;x
+
+succ_commie_centralist_elective;Centralist Elective;;;;;;;;;;;;;x
+succ_commie_politburo_elective;Council Elective;;;;;;;;;;;;;x
+
+commie_centralist_elective;Centralist Elective;;;;;;;;;;;;;x
+commie_politburo_elective;Council Elective;;;;;;;;;;;;;x
+
+commie_cell;Marxian Activity;;;;;;;;;;;;;x
+commie_cell_desc;§RIf left unchecked, will cause a massive uprising!§!\nHas a chance to be removed by the §YCourt Chaplains's Hunt Apostates§! action;;;;;;;;;;;;;x
+
+opinion_commie_traitor;Ideological Traitor;;;;;;;;;;;;;x
+
+EVTDESC_ATE_WWW_COMMIES_7;My liege, I am pleased to report the success of my mission to [targeted_location.GetName]. The errant Marxian supporters have been rooted out!\nYour humble [From.GetLordSpiritualName]\n[From.GetTitledName];;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_COMMIES_8;The Marxian infiltrators in the County of §Y[targeted_location.GetName]§! have been dealt with.;;;;;;;;;;;;;x
+
+RULE_COMMIE_UPRISING;Marxian Uprisings;;;;;;;;;;;;;x
+RULE_COMMIE_UPRISING_HISTORICAL_DESC;The first Marxian Uprising will happen after 2820.;;;;;;;;;;;;;x
+RULE_COMMIE_UPRISING_RANDOM_DESC;The first Marxian Uprising may happen at any time.;;;;;;;;;;;;;x
+RULE_COMMIE_UPRISING_OFF_DESC;Marxian Uprisings will not happen at all.;;;;;;;;;;;;;x
+
+EVTNAME_ATE_WWW_COMMIES_16;This Land is Our Land;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_COMMIES_16;The recent peasant rebellion in [prov_top_liege.PrimaryTitle.GetName] is unlike any before. Lead by the literate [Root.GetFirstName], a self-proclaimed "Instrument of Marx", who claims that [Root.GetSheHe] has found the sacred texts of "Marksism", which state that the noble, priest and "capitalist" have no rights to rule over peasants, and indeed, shall be cast down and condemned for their crimes, as the lowborn massess create their own councils, communies and governments - free and democratic - while the heads of those who have ruled over them for so long roll.\n\nThe uprising has been prepared in secret, and the lowborn rebels are showing a suprising degree of coordination and strategy. Whether [prov_top_liege.GetBestName] and [prov_top_liege.GetHerHis] vassals can stop those determined serfs remains to be seen.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_COMMIES_16;The Reds were between us all the time!;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_COMMIES_16;A spectre is haunting America!;;;;;;;;;;;;;x
+
+EVTNAME_ATE_WWW_COMMIES_17;Establishment of [Root.PrimaryTitle.GetFullName];;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_COMMIES_17;"...and let it be known far and wide, that the peasants of the world won't stand for this treatment no more! Long live [Root.Religion.GetRandomGodName]! Long live the Revolution!\n\nThe victorious Marxian rebels have established their own "[Root.PrimaryTitle.GetFullName]", eager to put in the word of [Root.Religion.GetScriptureName] into practice.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_COMMIES_17;This un-American filth must be removed!;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_COMMIES_17;What can a bunch of jumped-up commoners do?;;;;;;;;;;;;;x

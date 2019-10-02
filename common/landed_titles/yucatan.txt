@@ -286,6 +286,7 @@ e_yucatan = {
 			c_comitan = { # 3134
 				color={ 128 67 25 }
 				color2={ 255 255 255 }
+				#holy_site = cult_of_marx
 				
 				b_comitan_CP = {}
 				b_la_trinitaria_CP = {}

@@ -401,7 +401,7 @@ letter_event = {
 			OR = {
 				religion = catholic
 				religion = ursuline
-^				religion = confederated
+				religion = confederated
 				religion = high_chruch
 				religion = mormon
 			}
@@ -1398,7 +1398,7 @@ letter_event = {
 							OR = {
 								religion = catholic
 								religion = ursuline
-^								religion = confederated
+								religion = confederated
 								religion = high_chruch
 								religion = mormon
 							}
@@ -1629,7 +1629,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -1675,7 +1675,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -1722,7 +1722,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -1770,7 +1770,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -1817,7 +1817,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -2002,7 +2002,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -2086,7 +2086,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -2138,7 +2138,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -2183,7 +2183,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -2242,7 +2242,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -2643,7 +2643,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -2710,7 +2710,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -3199,7 +3199,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -3215,7 +3215,7 @@ letter_event = {
 				OR = {
 					religion = catholic
 					religion = ursuline
-^					religion = confederated
+					religion = confederated
 					religion = high_chruch
 					religion = mormon
 				}
@@ -3693,7 +3693,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -4472,7 +4472,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -5841,7 +5841,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -6364,7 +6364,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -6436,7 +6436,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -6546,7 +6546,7 @@ character_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -6957,7 +6957,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -6984,7 +6984,7 @@ letter_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -7043,7 +7043,7 @@ character_event = {
 		OR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -10763,7 +10763,7 @@ character_event = {
 			OR = {
 				religion = catholic
 				religion = ursuline
-^				religion = confederated
+				religion = confederated
 				religion = high_chruch
 				religion = mormon
 			}
@@ -10968,7 +10968,7 @@ character_event = {
 			OR = {
 				religion = catholic
 				religion = ursuline
-^				religion = confederated
+				religion = confederated
 				religion = high_chruch
 				religion = mormon
 			}
@@ -11760,7 +11760,7 @@ character_event = {
 				OR = {
 					religion = catholic 
 					religion = ursuline 
-^					religion = confederated
+					religion = confederated
 					religion = high_chruch
 					religion = mormon
 				}
@@ -12015,7 +12015,7 @@ character_event = {
 		OR = { 
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -12050,7 +12050,7 @@ character_event = {
 		OR = { 
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -12095,7 +12095,7 @@ character_event = {
 						NOR = { 
 							religion = catholic
 							religion = ursuline
-^							religion = confederated
+							religion = confederated
 							religion = high_chruch
 							religion = mormon
 						}
@@ -12264,7 +12264,7 @@ character_event = {
 		OR = { 
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -12310,7 +12310,7 @@ character_event = {
 		OR = { 
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -12389,7 +12389,7 @@ character_event = {
 			OR = { 
 				religion = catholic
 				religion = ursuline
-^				religion = confederated
+				religion = confederated
 				religion = high_chruch
 				religion = mormon
 			}
@@ -12703,7 +12703,7 @@ character_event = {
 			OR = { 
 				religion = catholic
 				religion = ursuline
-^				religion = confederated
+				religion = confederated
 				religion = high_chruch
 				religion = mormon
 			}
@@ -12786,7 +12786,7 @@ character_event = {
 			OR = { 
 				religion = catholic
 				religion = ursuline
-^				religion = confederated
+				religion = confederated
 				religion = high_chruch
 				religion = mormon
 			}
@@ -13867,7 +13867,7 @@ character_event = {
 		OR = { 
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}
@@ -14289,7 +14289,7 @@ character_event = {
 			NOR = { 
 				religion = ursuline
 				religion = mormon
-^				religion = confederated
+				religion = confederated
 				religion = high_chruch
 				religion = catholic
 			}
@@ -14301,7 +14301,7 @@ character_event = {
 			OR = { 
 				religion = ursuline
 				religion = mormon
-^				religion = confederated
+				religion = confederated
 				religion = high_chruch
 				religion = catholic
 			}
@@ -14332,7 +14332,7 @@ character_event = {
 			OR = {
 				religion = catholic
 				religion = ursuline
-^				religion = confederated
+				religion = confederated
 				religion = high_chruch
 				religion = mormon
 			}
@@ -14355,7 +14355,7 @@ character_event = {
 				NOR = { 
 					religion = catholic
 					religion = ursuline
-^					religion = confederated
+					religion = confederated
 					religion = high_chruch
 					religion = mormon
 				}
@@ -14367,7 +14367,7 @@ character_event = {
 				OR = { 
 					religion = catholic
 					religion = ursuline
-^					religion = confederated
+					religion = confederated
 					religion = high_chruch
 					religion = mormon
 				}
@@ -15719,7 +15719,7 @@ character_event = {
 		NOR = {
 			religion = catholic
 			religion = ursuline
-^			religion = confederated
+			religion = confederated
 			religion = high_chruch
 			religion = mormon
 		}

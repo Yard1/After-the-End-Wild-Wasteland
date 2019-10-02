@@ -20,7 +20,7 @@ narrative_event = {
 			set_parent_religion = { religion = exovedate parent = confederated }
 
 			set_global_flag = canadian_church_unified
-			k_confederated = { active = yes }
+			k_confederated = { activate_title = { title = THIS status = yes } }
 			save_event_target_as = unifier
 			if = {
 				limit = {
@@ -841,8 +841,8 @@ character_event = {
 				religion = ursuline
 				religion = angeline
 			}
+			NOT = { capital_scope = { province_id = 118 } } #Detroit
 		}
-		NOT = { capital_scope = { province_id = 118 } } #Detroit
 		set_character_flag = pilgrimage_to_detroit
 		hidden_tooltip = {
 			character_event = { id = canada.19 days = 15 }
@@ -862,8 +862,8 @@ character_event = {
 				religion = ursuline
 				religion = angeline
 			}
+			NOT = { capital_scope = { province_id = 1124 } } #New Orleans
 		}
-		NOT = { capital_scope = { province_id = 1124 } } #New Orleans
 		set_character_flag = pilgrimage_to_new_orleans
 		hidden_tooltip = {
 			character_event = { id = canada.20 days = 15 }
@@ -883,8 +883,8 @@ character_event = {
 				religion = high_church
 				religion = nonconformist
 			}
+			NOT = { capital_scope = { province_id = 63 } } #Washington
 		}
-		NOT = { capital_scope = { province_id = 63 } } #Washington
 		set_character_flag = pilgrimage_to_jerusalem
 		hidden_tooltip = {
 			character_event = { id = SoA.5022 days = 15 }
