@@ -193,3 +193,18 @@ opinion_commie_traitor;Ideological Traitor;;;;;;;;;;;;;x
 
 EVTDESC_ATE_WWW_COMMIES_7;My liege, I am pleased to report the success of my mission to [targeted_location.GetName]. The errant Marxian supporters have been rooted out!\nYour humble [From.GetLordSpiritualName]\n[From.GetTitledName];;;;;;;;;;;;;x
 EVTDESC_ATE_WWW_COMMIES_8;The Marxian infiltrators in the County of §Y[targeted_location.GetName]§! have been dealt with.;;;;;;;;;;;;;x
+
+RULE_COMMIE_UPRISING;Marxian Uprisings;;;;;;;;;;;;;x
+RULE_COMMIE_UPRISING_HISTORICAL_DESC;The first Marxian Uprising will happen after 2820.;;;;;;;;;;;;;x
+RULE_COMMIE_UPRISING_RANDOM_DESC;The first Marxian Uprising may happen at any time.;;;;;;;;;;;;;x
+RULE_COMMIE_UPRISING_OFF_DESC;Marxian Uprisings will not happen at all.;;;;;;;;;;;;;x
+
+EVTNAME_ATE_WWW_COMMIES_16;This Land is Our Land;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_COMMIES_16;The recent peasant rebellion in [prov_top_liege.PrimaryTitle.GetName] is unlike any before. Lead by the literate [Root.GetFirstName], a self-proclaimed "Instrument of Marx", who claims that [Root.GetSheHe] has found the sacred texts of "Marksism", which state that the noble, priest and "capitalist" have no rights to rule over peasants, and indeed, shall be cast down and condemned for their crimes, as the lowborn massess create their own councils, communies and governments - free and democratic - while the heads of those who have ruled over them for so long roll.\n\nThe uprising has been prepared in secret, and the lowborn rebels are showing a suprising degree of coordination and strategy. Whether [prov_top_liege.GetBestName] and [prov_top_liege.GetHerHis] vassals can stop those determined serfs remains to be seen.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_COMMIES_16;The Reds were between us all the time!;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_COMMIES_16;A spectre is haunting America!;;;;;;;;;;;;;x
+
+EVTNAME_ATE_WWW_COMMIES_17;Establishment of [Root.PrimaryTitle.GetFullName];;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_COMMIES_17;"...and let it be known far and wide, that the peasants of the world won't stand for this treatment no more! Long live [Root.Religion.GetRandomGodName]! Long live the Revolution!\n\nThe victorious Marxian rebels have established their own "[Root.PrimaryTitle.GetFullName]", eager to put in the word of [Root.Religion.GetScriptureName] into practice.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_COMMIES_17;This un-American filth must be removed!;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_COMMIES_17;What can a bunch of jumped-up commoners do?;;;;;;;;;;;;;x

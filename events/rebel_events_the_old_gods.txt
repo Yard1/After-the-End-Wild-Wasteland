@@ -1667,6 +1667,7 @@ province_event = {
 					set_global_flag = first_commie_uprising
 					spawn_religious_army_effect = yes
 					spawn_religious_army_effect = yes
+					narrative_event = { id = ATE_WWW_COMMIES.16 days = 1 }
 				}
 				ROOT = {
 					any_neighbor_province = {

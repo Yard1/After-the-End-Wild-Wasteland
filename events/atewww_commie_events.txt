@@ -1251,8 +1251,21 @@ character_event = {
 province_event = {
 	id = ATE_WWW_COMMIES.14
 	hide_window = yes
+	has_dlc = "The Old Gods"
 	trigger = {
-		#year = 2820
+		NOT = {
+			has_game_rule = {
+				name = commie_uprising
+				value = off
+			}
+		}
+		OR = {
+			has_game_rule = {
+				name = commie_uprising
+				value = random
+			}
+			year = 2820
+		}
 		owner = {
 			holy_order = no
 			mercenary = no
@@ -1734,6 +1747,77 @@ character_event = {
 		change_infamy = {
 			value = 20
 			localisation = "Marxian bastard"
+		}
+	}
+}
+
+narrative_event = {
+	id = ATE_WWW_COMMIES.16
+	title = EVTNAME_ATE_WWW_COMMIES_16
+	desc = EVTDESC_ATE_WWW_COMMIES_16
+	picture = GFX_evt_peasants
+	border = GFX_event_narrative_frame_war
+
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_COMMIES_16
+		trigger = {
+			OR = {
+				religion_openly_americanist_or_heresy_trigger = yes
+				religion = consumerist
+				religion = monetarist
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTB_ATE_WWW_COMMIES_16
+		trigger = {
+			NOR = {
+				religion_openly_americanist_or_heresy_trigger = yes
+				religion = consumerist
+				religion = monetarist
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = ATE_WWW_COMMIES.17
+	title = EVTNAME_ATE_WWW_COMMIES_17
+	desc = EVTDESC_ATE_WWW_COMMIES_17
+	picture = GFX_evt_peasants
+	border = GFX_event_narrative_frame_war
+
+	major = yes
+	major_trigger = {
+		is_within_diplo_range = ROOT
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_COMMIES_17
+		trigger = {
+			OR = {
+				religion_openly_americanist_or_heresy_trigger = yes
+				religion = consumerist
+				religion = monetarist
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTB_ATE_WWW_COMMIES_17
+		trigger = {
+			NOR = {
+				religion_openly_americanist_or_heresy_trigger = yes
+				religion = consumerist
+				religion = monetarist
+			}
 		}
 	}
 }
