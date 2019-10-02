@@ -404,7 +404,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 50
+		months = 40
 		job_event_mtth_modifier_intrigue_score = yes
 		modifier = {
 			factor = 0.8
