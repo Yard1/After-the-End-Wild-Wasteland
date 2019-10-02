@@ -7264,7 +7264,15 @@ this_is_warrior_culture_trigger = { #Not really about culture - Used in AI votin
 			religion = americanist
 			NOT = { religion_authority = 0.4 }
 		}
-		religion_group = mesoamerican_gods
+		AND = {
+			religion_group = mesoamerican_gods
+			OR = {
+				NOT = { has_dlc = "Holy Fury"}
+				NOT = {
+					religion = uahomche_reformed
+				}
+			}
+		}
 		religion_group = pirate
 		religion = norse_pagan
 		religion = amazonian
