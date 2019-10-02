@@ -2396,6 +2396,55 @@ latter_day_saints = {
 			cult_of_marx_opinion = -75
 		}
 	}
+
+	coc = {
+		graphical_culture = westerngfx
+
+		icon = 41
+		heresy_icon = 42
+
+		parent = evangelical
+		
+		color = { 0.75 0.4 0.55 }
+		
+		crusade_name = EXPEDITION
+		scripture_name = THE_BOOK_OF_MORMON
+		priest_title = PRIEST
+
+		high_god_name = GOD_THE_GODHEAD
+		
+		god_names = {
+			GOD_GOD GOD_THE_LORD GOD_JEHOVAH GOD_JESUS GOD_THE_PROPHET GOD_THE_HEAVENLY_FATHER GOD_THE_GODHEAD
+		}
+		
+		evil_god_names = {
+			SATAN LUCIFER THE_DEVIL
+		}
+		
+		investiture = yes
+		can_excommunicate = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		priests_can_inherit = no
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		rel_head_defense = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 2
+		
+		intermarry = bickertonite
+		intermarry = strangite
+		intermarry = woolleyite
+
+		character_modifier = {
+			thelemic_opinion = -15
+			thelemic_reformed_opinion = -10
+			cult_of_marx_opinion = -75
+		}
+	}
 }
 
 mesoamerican_gods = {

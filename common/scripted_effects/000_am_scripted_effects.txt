@@ -9450,6 +9450,10 @@ apply_peaceful_on_start_effect = {
 		modifier = religion_peaceful
 		years = 1000
 	}
+	religion_authority = {
+		modifier = religion_peaceful
+		years = 5
+	}
 }
 
 apply_dogmatic_on_start_effect = {

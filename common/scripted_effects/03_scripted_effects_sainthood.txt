@@ -48,22 +48,32 @@ deciding_upon_saint_effect = {
             factor = 0
             NOR = {
                 NAND = {
-					event_target:saint_person = {
-                        OR = {
-							religion_group = catholic
-							NOT = { religion = evangelical }
-							evangelical_can_have_saints = yes
-							NOR = {
-								religion = antinomian
-								religion = charismatic
-								religion = postadventist
-							}
-							religion_group = latter_day_saints
-						}
-						rightful_religious_head_scope = { is_pope = yes }
+                    event_target:saint_person = {
+                        religion = catholic
                     }
                     event_target:saint_person = {
-                        has_ancestor_veneration = yes
+                        religion = nestorian
+                    }
+                    event_target:saint_person = {
+                        AND = {
+                            religion = evangelical
+                            evangelical_can_have_saints = yes
+                        }
+                    }
+                    event_target:saint_person = {
+                        religion = ursuline
+                    }
+                    event_target:saint_person = {
+                        religion = confederated
+                    }
+                    event_target:saint_person = {
+                        religion = high_church
+                    }
+                    event_target:saint_person = {
+                        has_religion_feature = religion_beatification
+                    }
+					event_target:saint_person = {
+                        has_religion_feature = religion_feature_espiritista
                     }
                 }
                 NOR = {
@@ -71,7 +81,7 @@ deciding_upon_saint_effect = {
                         has_character_flag = beatified
                     }
                     event_target:saint_person = {
-                        has_ancestor_veneration = yes
+                        has_religion_feature = religion_beatification
                     }
                 }
             }
@@ -85,12 +95,18 @@ deciding_upon_saint_effect = {
                 }
             }
         }
+        #Mormons need the saint to be married
+        modifier = {
+            factor = 0 
+            is_married = no
+            NOT = { any_spouse_even_if_dead = { always = yes } }
+        }
         #Baptism sponsors have a higher chance of becoming a Saint
         modifier = {
             factor = 1.5
             has_any_opinion_modifier = opinion_baptism_sponsor_target
         }
-        #Protestants and Mormons have a lower chance of becoming Saints
+        #Protestants have a lower chance of becoming Saints
         modifier = {
             factor = 0.8
             OR = {
@@ -100,9 +116,13 @@ deciding_upon_saint_effect = {
                 event_target:saint_person = {
                     religion = high_church
                 }
-                event_target:saint_person = {
-                    religion_group = latter_day_saints
-                }
+            }
+        }
+        #Mormons don't have saints
+        modifier = {
+            factor = 0
+            event_target:saint_person = {
+                religion_group = latter_day_saints
             }
         }
         #Players who don't have a saintly bloodline have a higher chance of becoming a Saint
@@ -321,9 +341,9 @@ deciding_upon_saint_effect = {
                     }
                 }
                 AND = {
-                    religion = wolleyite
+                    religion = woolleyite
                     NOT = {
-                        has_global_flag = wolleyite_saint
+                        has_global_flag = woolleyite_saint
                     }
                 }
                 AND = {
@@ -353,7 +373,7 @@ deciding_upon_saint_effect = {
             confederated = { set_global_flag = confederated_saint }
             high_church = { set_global_flag = high_church_saint }
             mormon = { set_global_flag = mormon_saint }
-            wolleyite = { set_global_flag = wolleyite_saint }
+            woolleyite = { set_global_flag = woolleyite_saint }
             strangite = { set_global_flag = strangite_saint }
             bickertonite = { set_global_flag = bickertonite_saint }
         }

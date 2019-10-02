@@ -297,3 +297,31 @@ defined_text = {
 		localisation_key = PRIEST_PLURAL
 	}
 }
+
+defined_text = {
+	name = GetBlessedExalted
+
+	text = {
+		localisation_key = beatified_LDS
+		trigger = {
+			religion_group = latter_day_saints
+		}
+	}
+	fallback_text = {
+		localisation_key = beatified_christian
+	}
+}
+
+defined_text = {
+	name = GetBlessedExaltedDesc
+
+	text = {
+		localisation_key = beatified_LDS_desc
+		trigger = {
+			religion_group = latter_day_saints
+		}
+	}
+	fallback_text = {
+		localisation_key = beatified_christian_desc
+	}
+}

@@ -9,70 +9,37 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "americanist"
-		any_independent_ruler = {
-			religion = americanist
-			any_realm_character = {
-				limit = {
-					OR = {
-						religion = jeffersonian
-						religion = libertarian
-						religion = hamiltonian
-					}
-				}
-				religion = americanist
+		name = "tank evangelical MA"
+		random_character = {
+			limit = { religion = evangelical }
+			religion_authority = {
+				modifier = evangelical_reformation
+			}
+			religion_authority = {
+				modifier = evangelical_reformation
 			}
 		}
 	}
 
 	option = {
-		name = "jeffersonian"
-		any_independent_ruler = {
-			religion = jeffersonian
-			any_realm_character = {
-				limit = {
-					OR = {
-						religion = americanist
-						religion = libertarian
-						religion = hamiltonian
-					}
-				}
-				religion = jeffersonian
-			}
+		name = "set coc to be its own parent"
+		set_parent_religion = { religion = coc parent = coc }
+	}
+
+	option = {
+		name = "change all evangelical provinces to coc"
+		religion = coc
+		any_province = {
+			limit = { religion = evangelical }
+			religion = coc
 		}
 	}
 
 	option = {
-		name = "libertarian"
-		any_independent_ruler = {
-			religion = libertarian
-			any_realm_character = {
-				limit = {
-					OR = {
-						religion = jeffersonian
-						religion = americanist
-						religion = hamiltonian
-					}
-				}
-				religion = libertarian
-			}
-		}
-	}
-
-	option = {
-		name = "hamiltonian"
-		any_independent_ruler = {
-			religion = hamiltonian
-			any_realm_character = {
-				limit = {
-					OR = {
-						religion = jeffersonian
-						religion = libertarian
-						religion = americanist
-					}
-				}
-				religion = hamiltonian
-			}
+		name = "spawn heresy in a random province"
+		random_realm_province = {
+			limit = { religion = evangelical }
+			province_event = { id = SoA.4000 }
 		}
 	}
 }
@@ -85,35 +52,18 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "americanist"
-		religion = americanist
-			any_realm_character = {
-				religion = americanist
-			}
+		name = "become heretic"
+		become_heretic = yes
 	}
 
 	option = {
-		name = "jeffersonian"
-		religion = jeffersonian
-			any_realm_character = {
-				religion = jeffersonian
-			}
+		name = "become coc"
+		religion = coc
 	}
 
 	option = {
-		name = "libertarian"
-		religion = libertarian
-			any_realm_character = {
-				religion = libertarian
-			}
-	}
-
-	option = {
-		name = "hamiltonian"
-		religion = hamiltonian
-			any_realm_character = {
-				religion = hamiltonian
-			}
+		name = "become evangelica"
+		religion = evangelical
 	}
 }
 
@@ -176,16 +126,9 @@ character_event = {
 	#hide_window = yes
 	
 	option = {
-		random_demesne_province = {
-			add_province_modifier = { name = commie_cell duration = -1 }
-		}
-	}
-
-	option = {
-		random_demesne_province = {
-			add_province_modifier = { name = commie_cell duration = -1 }
-			province_event = { id = TOG.1060 }
-		}
+		set_global_flag = qa_testing
+		set_character_flag = force_saint
+		death = yes
 	}
 }
 

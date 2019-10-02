@@ -1941,6 +1941,14 @@ gender_laws = {
 			}
 
 			modifier = {
+				factor = 100
+				holder_scope = {
+					religion_group = latter_day_saints
+					gender_equality_trigger = no
+				}
+			}
+
+			modifier = {
 				factor = 0
 				holder_scope = {
 					OR = {

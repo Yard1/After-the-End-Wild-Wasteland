@@ -11091,6 +11091,23 @@ character_event = {
 
 				if = {
 					limit = {
+						is_ruler = yes
+						is_feudal = yes
+						religion_group = latter_day_saints
+						gender_equality_trigger = no
+					}
+					any_demesne_title = {
+						limit = { is_law_potential = agnatic_succession }
+						add_law = {
+							law = agnatic_succession
+							opinion_effect = no
+							cooldown = no
+						}
+					}
+				}
+
+				if = {
+					limit = {
 						holy_order = yes
 					}
 					character_event = { id = misc.11 }

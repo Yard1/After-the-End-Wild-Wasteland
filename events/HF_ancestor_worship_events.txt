@@ -129,7 +129,7 @@ character_event = {
         							government = nomadic_government
         							OR = {
         								religion = revelationist
-        								religion = trevelationist_reformed
+        								religion = revelationist_reformed
         							}
         						}
         						religion_openly_gaian_or_heresy_trigger = yes
@@ -233,7 +233,7 @@ character_event = {
         			30 = {
         				trigger = {
         					OR = {
-        						trait = pirate
+        						has_pirate_trait = yes
         						trait = viking
         						trait = ravager
         						trait = sea_queen
