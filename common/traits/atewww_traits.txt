@@ -243,7 +243,6 @@ lutheran = {
 		religion = evangelical
 		is_priest = yes
 	}
-	religious_branch = evangelical
 	religious = yes
 	learning = 2
 	same_opinion = 5
@@ -261,7 +260,6 @@ baptist = {
 		religion = evangelical
 		is_priest = yes
 	}
-	religious_branch = evangelical
 	religious = yes
 	diplomacy = 2
 	same_opinion = 5
@@ -279,7 +277,6 @@ methodist = {
 		religion = evangelical
 		is_priest = yes
 	}
-	religious_branch = evangelical
 	religious = yes
 	martial = 2
 	same_opinion = 5
