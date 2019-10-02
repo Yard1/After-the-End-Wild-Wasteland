@@ -406,7 +406,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 48
+		months = 50
 		job_event_mtth_modifier_intrigue_score = yes
 		modifier = {
 			factor = 0.8
@@ -704,7 +704,7 @@ character_event = {
 				}
 			}
 			change_infamy = {
-				value = 5
+				value = 10
 				localisation = "Marxian bastard"
 			}
 		}
