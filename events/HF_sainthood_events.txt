@@ -142,7 +142,7 @@ character_event = {
                         is_liege_or_above = PREV
                     }
                 }
-                log = "HF.40000: found priest [This.GetBestName] for [Root.GetBestName]"
+                log = "HF.40000: found priest [This.GetBestName] for [Root.GetBestName], [This.Liege.GetBestName] is liege"
                 save_event_target_as = first_priest
                 if = {
                     limit = {
@@ -170,6 +170,22 @@ character_event = {
                             factor = 0.8
                             event_target:saint_person = {
                                 trait = cynical
+                            }
+                        }
+                        modifier = {
+                            factor = 0.5
+                            NOT = {
+                                event_target:saint_person = {
+                                    is_liege_of = PREV
+                                }
+                            }
+                        }
+                        modifier = {
+                            factor = 0.5
+                            NOT = {
+                                event_target:saint_person = {
+                                    is_liege_or_above = PREV
+                                }
                             }
                         }
 
@@ -3768,17 +3784,18 @@ character_event = {
     has_dlc = "Holy Fury"
 
     trigger = {
-        NOR = {
-            has_global_flag = only_papal_saints
-			has_global_flag = only_confed_saints
-            has_global_flag = only_abbess_saints
-            has_global_flag = only_archbishop_saints
+        OR = {
+            AND = { religion = catholic NOT = { has_global_flag = only_papal_saints } }
+            AND = { religion = ursuline NOT = { has_global_flag = only_abbess_saints } }
+            AND = { religion = confederated NOT = { has_global_flag = only_confed_saints } }
+            AND = { religion = high_church NOT = { has_global_flag = only_archbishop_saints } }
         }
     }
 
     immediate = {
 		if = {
 			limit = {
+                religion = catholic
 				has_global_flag = bad_catholic_saint
 			}
 			set_global_flag = only_papal_saints
@@ -3791,8 +3808,9 @@ character_event = {
 				narrative_event = { id = HF.40060 }
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
+                religion = confederated
 				has_global_flag = bad_confed_saint
 			}
 			set_global_flag = only_confed_saints
@@ -3805,8 +3823,9 @@ character_event = {
 				narrative_event = { id = HF.40060 }
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
+                religion = ursuline
 				has_global_flag = bad_ursuline_saint
 			}
 			set_global_flag = only_abbess_saints
@@ -3819,8 +3838,9 @@ character_event = {
 				narrative_event = { id = HF.40060 }
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
+                religion = high_church
 				has_global_flag = bad_high_church_saint
 			}
 			set_global_flag = only_archbishop_saints
