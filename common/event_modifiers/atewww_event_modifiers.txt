@@ -175,5 +175,5 @@ held_yudtes_timer = {
 }
 
 recently_invited_rabbi = {
-	
+	icon = 63
 }
