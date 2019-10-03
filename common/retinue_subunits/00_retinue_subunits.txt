@@ -659,27 +659,36 @@ RETTYPE_CUL_IRISH =
 	}
 }
 
-RETTYPE_CUL_CARIBBEAN = 
-{
+RETTYPE_CUL_CARIBBEAN = {
 	first_type = 0
-	first_amount = 400
+	first_amount = 250
+    second_type = 5
+	second_amount = 150
 	
 	potential = {
 		is_nomadic = no
 		OR = {
-			culture_group = caribbanglo
+		    culture = miskito
+			culture = garinagu
+			culture = kriol
+			culture = guyanese
+			culture = sheban
 			culture_group = antillais
 			culture_group = caribeno
 			culture_group = antilliaanse
 			culture_group = arawak
 			culture_group = filipino
 		}
-		NOT = { culture = yanquito }
+		NOT = {
+     		culture = yanquito 
+		}
 	}
 	
 	modifier = {
-		light_infantry_offensive = 0.4
 		light_infantry_defensive = 0.4
+		light_infantry_morale = 0.2
+		archers_defensive = 0.4
+		archers_morale = 0.2
 	}
 }
 

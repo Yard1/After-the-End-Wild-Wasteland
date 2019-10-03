@@ -12,6 +12,13 @@ ca_culture_welsh_3;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
 ca_culture_welsh_4;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
 ca_culture_welsh_1_desc;The Ceidwadorpamp of Puerto Madryn are trained here alongside their dismounted Iwmyn compatriots.;;;;;;;;;;;;;x
 
+RETTYPE_CUL_JAM;Sefari;;;;;;;;;;;;;x
+ca_culture_jamaican_1;Sefari Training Grounds;;;;;;;;;;;;;x
+ca_culture_jamaican_2;Sefari Training Grounds;;;;;;;;;;;;;x
+ca_culture_jamaican_3;Sefari Training Grounds;;;;;;;;;;;;;x
+ca_culture_jamaican_4;Sefari Training Grounds;;;;;;;;;;;;;x
+ca_culture_jamaican_1_desc;Allegedly based upon the ancient Imperial guard of Ras-Tafari himself, the heavily armed Caribbean Sefari are equipped with only the finest equipment money can buy, all the while presenting a formidable fighting force unlike any.;;;;;;;;;;;;;x
+
 # Mercenaries 
 d_border_patrol;Warriors of Ice;;;;;;;;;;;;;x
 d_border_patrol_adj;Ice;;;;;;;;;;;;;x

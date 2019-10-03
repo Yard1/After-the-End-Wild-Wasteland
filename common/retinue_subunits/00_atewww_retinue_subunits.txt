@@ -18,3 +18,27 @@ RETTYPE_CUL_WEL = {
 		horse_archers_morale = 0.10
 	}
 }
+
+RETTYPE_CUL_JAM = {
+	first_type = 2
+	first_amount = 150
+	second_type = 1
+	second_amount = 100
+	
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture = west_indian
+			culture = calypsonian
+			culture = bermudian
+		    culture = raizal
+		}
+	}
+	
+	modifier = {
+		heavy_infantry_offensive = 0.40
+		heavy_infantry_morale = 0.10
+		pikemen_defensive = 0.40
+		pikemen_morale = 0.10
+	}
+}
