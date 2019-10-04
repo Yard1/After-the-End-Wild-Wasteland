@@ -2647,6 +2647,7 @@ hermetics = {
 			}
 		}
 		learning = 10
+		NOT = { religion = cult_of_marx }
 		OR = {
 			has_religion_feature = religion_astrology
 			religion_group = christian
@@ -2944,6 +2945,7 @@ banking_society = {
 		}
 		NOT = { trait = incapable }
 		prisoner = no
+		NOT = { religion = cult_of_marx }
 		OR = {
 			religion_group = oldworld
 			religion_group = jewish_group
@@ -2996,6 +2998,7 @@ banking_society = {
 	}
 	
 	potential = {
+		NOT = { religion = cult_of_marx }
 		OR = {
 			religion_group = oldworld
 			religion_group = jewish_group
@@ -3238,6 +3241,7 @@ the_assassins = {
 				}
 			}
 		}
+		NOT = { religion = cult_of_marx }
 		OR = {
 			true_religion = americanist
 			true_religion = jeffersonian

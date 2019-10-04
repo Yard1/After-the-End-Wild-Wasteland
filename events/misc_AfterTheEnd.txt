@@ -10757,19 +10757,19 @@ character_event = {
 					trait = slothful
 					trait = drunkard
 				}
-				random_list = {
-					45 = {
-						gain_weight_small_effect = yes
-						weight_trait_check_effect = yes
-					}
-					35 = {
-						gain_weight_medium_effect = yes
-						weight_trait_check_effect = yes
-					}
-					20 = {
-						gain_weight_large_effect = yes
-						weight_trait_check_effect = yes
-					}
+			}
+			random_list = {
+				45 = {
+					gain_weight_small_effect = yes
+					weight_trait_check_effect = yes
+				}
+				35 = {
+					gain_weight_medium_effect = yes
+					weight_trait_check_effect = yes
+				}
+				20 = {
+					gain_weight_large_effect = yes
+					weight_trait_check_effect = yes
 				}
 			}
 		}
@@ -10897,19 +10897,19 @@ character_event = {
 					trait = patient
 					trait = chaste
 				}
-				random_list = {
-					45 = {
-						lose_weight_small_effect = yes
-						weight_trait_check_effect = yes
-					}
-					35 = {
-						lose_weight_medium_effect = yes
-						weight_trait_check_effect = yes
-					}
-					20 = {
-						lose_weight_large_effect = yes
-						weight_trait_check_effect = yes
-					}
+			}
+			random_list = {
+				45 = {
+					lose_weight_small_effect = yes
+					weight_trait_check_effect = yes
+				}
+				35 = {
+					lose_weight_medium_effect = yes
+					weight_trait_check_effect = yes
+				}
+				20 = {
+					lose_weight_large_effect = yes
+					weight_trait_check_effect = yes
 				}
 			}
 		}

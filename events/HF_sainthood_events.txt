@@ -30,6 +30,7 @@ character_event = {
 			religion = antinomian
 			religion = charismatic
 			religion = postadventist
+            religion = strangite
 			trait = excommunicated
 			trait = drunkard
             trait = hedonist

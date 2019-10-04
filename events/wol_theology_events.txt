@@ -506,8 +506,12 @@ character_event = {
 		any_realm_character = {
 			NOT = { religion_group = ROOT }
 			OR = {
-				ROOT = { NOT = { trait = sympathy_pacific_neognostic } }
+				ROOT = { NOT = { trait = sympathy_pacific_religion } }
 				NOT = { religion_group = pacific }
+			}
+			OR = {
+				ROOT = { NOT = { trait = sympathy_cult_of_saints_religion } }
+				NOT = { religion_group = cult_of_saints }
 			}
 		}
 	}
@@ -518,9 +522,13 @@ character_event = {
 			limit = {
 				NOT = { religion_group = ROOT }
 				OR = {
-					ROOT = { NOT = { trait = sympathy_pacific_neognostic } }
+					ROOT = { NOT = { trait = sympathy_pacific_religion } }
 					NOT = { religion_group = pacific }
 				}
+			OR = {
+				ROOT = { NOT = { trait = sympathy_cult_of_saints_religion } }
+				NOT = { religion_group = cult_of_saints }
+			}
 			}
 			character_event = { id = WoL.7041 }
 		}
@@ -1073,7 +1081,7 @@ character_event = {
 
 	trigger = {
 		NOT = { trait = on_pilgrimage }
-		NOT = { trait = on_hajj }
+		#NOT = { trait = on_hajj }
 	}
 	
 	option = {

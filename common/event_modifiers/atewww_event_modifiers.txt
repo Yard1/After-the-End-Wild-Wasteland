@@ -177,3 +177,7 @@ held_yudtes_timer = {
 recently_invited_rabbi = {
 	icon = 63
 }
+
+held_pioneers_day_timer = {
+	icon = 3
+}

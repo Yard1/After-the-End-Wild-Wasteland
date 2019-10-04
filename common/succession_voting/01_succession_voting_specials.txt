@@ -1758,7 +1758,7 @@ byzantine_elective = {
 					FROM = { religion_group = afro_syncretic } 
 				} 
 				AND = {  
-					trait = sympathy_cult_of_saints
+					OR = { trait = sympathy_cult_of_saints trait = sympathy_cult_of_saints_religion }
 					FROM = { religion_group = cult_of_saints } 
 				} 
 				AND = {  
@@ -1766,7 +1766,7 @@ byzantine_elective = {
 					FROM = { religion_group = latter_day_saints } 
 				} 
 				AND = {  
-					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_religion }
 					FROM = { religion_group = pacific } 
 				} 
 				AND = {  
@@ -4300,16 +4300,16 @@ byzantine_elective = {
 				trait = baptized_by_pope
 			}
 		}
-		additive_modifier = { #Praised for being baptized by Patriarch
-			value = 10
-			localisation_key = tooltip_feudal_elector_vote_baptized_by_patriarch
-			NOT = { character = FROM } #Do not judge yourself.
-			religion = orthodox
-			religion = FROM
-			FROM = { 
-				trait = baptized_by_patriarch
-			}
-		}
+		#additive_modifier = { #Praised for being baptized by Patriarch
+		#	value = 10
+		#	localisation_key = tooltip_feudal_elector_vote_baptized_by_patriarch
+		#	NOT = { character = FROM } #Do not judge yourself.
+		#	religion = orthodox
+		#	religion = FROM
+		#	FROM = { 
+		#		trait = baptized_by_patriarch
+		#	}
+		#}
 		additive_modifier = { #Shunned for being of opposite pagan branch.
 			value = -25
 			localisation_key = tooltip_feudal_elector_vote_pagan_branch_negative
@@ -5474,7 +5474,7 @@ hre_feudal_elective = {
 					FROM = { religion_group = afro_syncretic } 
 				} 
 				AND = {  
-					trait = sympathy_cult_of_saints
+					OR = { trait = sympathy_cult_of_saints trait = sympathy_cult_of_saints_religion }
 					FROM = { religion_group = cult_of_saints } 
 				} 
 				AND = {  
@@ -5482,7 +5482,7 @@ hre_feudal_elective = {
 					FROM = { religion_group = latter_day_saints } 
 				} 
 				AND = {  
-					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_religion }
 					FROM = { religion_group = pacific } 
 				} 
 				AND = {  
@@ -6664,8 +6664,8 @@ hre_feudal_elective = {
 				religion_group = pacific
 				religion_group = jewish_group
 				religion_group = indian_group
-				religion = revelationist_pagan
-				religion = revelationist_pagan_reformed
+				religion = revelationist
+				religion = revelationist_reformed
 			}
 			NOT = { trait = gluttonous }
 			FROM = { 
@@ -7763,16 +7763,16 @@ hre_feudal_elective = {
 				trait = baptized_by_pope
 			}
 		}
-		additive_modifier = { #Praised for being baptized by Patriarch
-			value = 10
-			localisation_key = tooltip_feudal_elector_vote_baptized_by_patriarch
-			NOT = { character = FROM } #Do not judge yourself.
-			religion = orthodox
-			religion = FROM
-			FROM = { 
-				trait = baptized_by_patriarch
-			}
-		}
+		#additive_modifier = { #Praised for being baptized by Patriarch
+		#	value = 10
+		#	localisation_key = tooltip_feudal_elector_vote_baptized_by_patriarch
+		#	NOT = { character = FROM } #Do not judge yourself.
+		#	religion = orthodox
+		#	religion = FROM
+		#	FROM = { 
+		#		trait = baptized_by_patriarch
+		#	}
+		#}
 		additive_modifier = { #Shunned for being of opposite pagan branch.
 			value = -25
 			localisation_key = tooltip_feudal_elector_vote_pagan_branch_negative

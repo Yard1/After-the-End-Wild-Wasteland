@@ -618,7 +618,7 @@ character_event = {
 				has_character_flag = imperial_banquet	
 				NOR = {
 					trait = sympathy_pacific
-					trait = sympathy_pacific_neognostic
+					trait = sympathy_pacific_religion
 				}
 			}
 			if = {

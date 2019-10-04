@@ -2258,10 +2258,40 @@ character_event = {
 	religion = neognostic
 	trigger = {
 		NOT = {
-			trait = sympathy_pacific_neognostic
+			trait = sympathy_pacific_religion
 		}
 	}
 	immediate = {
-		add_trait = sympathy_pacific_neognostic
+		add_trait = sympathy_pacific_religion
+	}
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.41
+	hide_window = yes
+	is_triggered_only = yes
+	religion = bickertonite
+	trigger = {
+		NOT = {
+			trait = sympathy_pacific_religion
+		}
+	}
+	immediate = {
+		add_trait = sympathy_pacific_religion
+	}
+}
+
+character_event = {
+	id = ATE_WWW_RELIGION.42
+	hide_window = yes
+	is_triggered_only = yes
+	religion = strangite
+	trigger = {
+		NOT = {
+			trait = sympathy_cult_of_saints_religion
+		}
+	}
+	immediate = {
+		add_trait = sympathy_cult_of_saints_religion
 	}
 }

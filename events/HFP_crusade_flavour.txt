@@ -1238,6 +1238,7 @@ character_event = {
 	        				NOR = {
 								religion_group = cult_of_saints
 	        					trait = sympathy_cult_of_saints
+								trait = sympathy_cult_of_saints_religion
 	        				}
 	        			}
 						AND = {
@@ -1254,7 +1255,7 @@ character_event = {
 	        				}
 	        				NOR = {
 	        					trait = sympathy_pacific
-								trait = sympathy_pacific_neognostic
+								trait = sympathy_pacific_religion
 	        				}
 	        			}
 						AND = {
@@ -1380,6 +1381,7 @@ character_event = {
 								NOR = {
 									religion_group = cult_of_saints
 									trait = sympathy_cult_of_saints
+									trait = sympathy_cult_of_saints_religion
 								}
 							}
 							AND = {
@@ -1396,7 +1398,7 @@ character_event = {
 								}
 								NOT = {
 									trait = sympathy_pacific
-									trait = sympathy_pacific_neognostic
+									trait = sympathy_pacific_religion
 								}
 							}
 							AND = {
@@ -1492,6 +1494,7 @@ character_event = {
         				NOR = {
 							religion_group = cult_of_saints
         					trait = sympathy_cult_of_saints
+							trait = sympathy_cult_of_saints_religion
         				}
         			}
         			add_trait = sympathy_cult_of_saints
@@ -1514,7 +1517,7 @@ character_event = {
         				}
         				NOR = {
         					trait = sympathy_pacific
-							trait = sympathy_pacific_neognostic
+							trait = sympathy_pacific_religion
         				}
         			}
         			add_trait = sympathy_pacific
@@ -2522,6 +2525,7 @@ character_event = {
     				NOR = {
 						religion_group = cult_of_saints
     					trait = sympathy_cult_of_saints
+						trait = sympathy_cult_of_saints_religion
     				}
     			}
     			add_trait = sympathy_cult_of_saints
@@ -2544,7 +2548,7 @@ character_event = {
     				}
     				NOR = {
     					trait = sympathy_pacific
-						trait = sympathy_pacific_neognostic
+						trait = sympathy_pacific_religion
     				}
     			}
     			add_trait = sympathy_pacific
@@ -4012,44 +4016,42 @@ province_event = {
 	has_dlc = "Sons of Abraham"
 
 	trigger = {
-		if = {
-			limit = {
+		OR = {
+			AND = {
 				has_global_flag = catholic_shepherds_crusade
-			}
-			any_landed_title = {
-				tier = COUNT
-				OR = {
-					empire = {
-						title = e_lone_star
+				any_landed_title = {
+					tier = COUNT
+					OR = {
+						empire = {
+							title = e_lone_star
+						}
+						kingdom = {
+							title = k_columbia
+						}
 					}
-					kingdom = {
-						title = k_columbia
+					owner = {
+						NOT = {
+							religion = FROMFROM
+						}
 					}
 				}
-				owner = {
-					NOT = {
-						religion = FROMFROM
-					}
-				}
 			}
-		}
-		else_if = {
-			limit = {
+			AND = {
 				has_global_flag = ursuline_shepherds_crusade
-			}
-			any_landed_title = {
-				tier = COUNT
-				OR = {
-					empire = {
-						title = e_canada
+				any_landed_title = {
+					tier = COUNT
+					OR = {
+						empire = {
+							title = e_canada
+						}
+						kingdom = {
+							title = k_louisiana
+						}
 					}
-					kingdom = {
-						title = k_louisiana
-					}
-				}
-				owner = {
-					NOT = {
-						religion = FROMFROM
+					owner = {
+						NOT = {
+							religion = FROMFROM
+						}
 					}
 				}
 			}

@@ -187,4 +187,8 @@ spriteTypes = {
 		name = "GFX_vassalize_st_ursulas_chosen"
 		texturefile = "gfx\\interface\\decision_icon_vassalize_holy_order.dds"
 	}
+	spriteType = {
+		name = "GFX_celebrate_pioneers_day"
+		texturefile = "gfx/interface/oregon.tga"
+	}
 }

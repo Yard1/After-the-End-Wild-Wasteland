@@ -1478,12 +1478,14 @@ letter_event = {
 			}
 			5 = {  
 				trigger = { #Check if holy orders exist.
-					OR = { 
-						is_title_active = d_knights_of_columbus 
-						is_title_active = d_knights_of_peter_claver 
-						is_title_active = d_st_ursulas_chosen 
-						is_title_active = d_nauvoo_legion 
+					OR = {
+						religion = catholic
+						religion = ursuline
+						religion = confederated
+						religion = high_church
+						religion = mormon
 					}
+					holy_order_check_active_trigger = yes
 					FROM = { 
 						higher_real_tier_than = KING 
 						any_demesne_title = { #Check if you have enough land to give.
@@ -1552,7 +1554,10 @@ letter_event = {
 					NOT = {
 						FROM = {
 							any_artifact = { 
-								has_artifact_flag = christian 
+								OR = {
+									AND = { has_artifact_flag = christian religion_group = christian }
+									AND = { has_artifact_flag = mormon religion_group = latter_day_saints }
+								}
 								OR = { 
 									has_artifact_flag = rare
 									has_artifact_flag = very_rare
@@ -3769,9 +3774,16 @@ letter_event = {
 				OR = { 
 					has_landed_title = d_knights_of_columbus
 					has_landed_title = d_knights_of_peter_claver
+					has_landed_title = d_lebanon_brethren
 					has_landed_title = d_st_ursulas_chosen
-					has_landed_title = d_quorum_of_the_twelve
-				} 
+					has_landed_title = k_ursuline_state
+					has_landed_title = d_national_cathedral
+					has_landed_title = d_uel
+					has_landed_title = d_st_pats
+					has_landed_title = d_order_of_brotherhood
+					has_landed_title = d_salvation_army
+					has_landed_title = d_nauvoo_legion
+				}
 			}
 			save_event_target_as = scoped_grandmaster
 		}
@@ -3825,9 +3837,16 @@ letter_event = {
 					OR = { 
 						has_landed_title = d_knights_of_columbus
 						has_landed_title = d_knights_of_peter_claver
+						has_landed_title = d_lebanon_brethren
 						has_landed_title = d_st_ursulas_chosen
-						has_landed_title = d_quorum_of_the_twelve
-					} 
+						has_landed_title = k_ursuline_state
+						has_landed_title = d_national_cathedral
+						has_landed_title = d_uel
+						has_landed_title = d_st_pats
+						has_landed_title = d_order_of_brotherhood
+						has_landed_title = d_salvation_army
+						has_landed_title = d_nauvoo_legion
+					}
 				}
 				ROOT = {
 					random_demesne_title = {

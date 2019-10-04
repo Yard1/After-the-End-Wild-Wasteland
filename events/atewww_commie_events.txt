@@ -372,8 +372,7 @@ character_event = {
 		has_job_title = job_spymaster
 		liege = {
 			independent = yes
-		}
-		liege = {
+			primary_title = { temporary = no }
 			any_independent_ruler = {
 				is_within_diplo_range = PREV
 				NOT = { religion = cult_of_marx }

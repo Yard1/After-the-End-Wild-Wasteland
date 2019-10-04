@@ -1212,7 +1212,7 @@ character_event = {
 
 # Redcoat Dominion converts to Confederated
 character_event = {
-	id = 177505
+	id = 177508
 	title = redcoats.5.name_conf
 	desc = "redcoats.5.desc"
 	picture = "GFX_evt_brit_laughing"

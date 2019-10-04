@@ -1874,11 +1874,11 @@ character_event = {
 	min_age = 16
 	only_capable = yes
 	prisoner = no
-	religion = mormon
+	religion_group = latter_day_saints
+	has_dlc = "Sons of Abraham"
 
 	trigger = {
-		has_dlc = "Sons of Abraham"
-		has_landed_title = d_quorum_of_the_twelve
+		rightful_religious_head_scope = { character = PREV }
 		trait = bad_priest_mormon
 		NOT = { has_character_modifier = bad_rel_head }
 	}

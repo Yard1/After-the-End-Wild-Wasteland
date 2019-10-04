@@ -584,7 +584,7 @@ targetted_decisions = {
 			if = {
 				limit = {
 					religion_group = cult_of_saints
-					NOT = { trait = sympathy_cult_of_saints }
+					NOR = { trait = sympathy_cult_of_saints trait = sympathy_cult_of_saints_religion }
 					capital_scope = {
 						NOT = { religion_group = ROOT }
 					}
@@ -597,7 +597,7 @@ targetted_decisions = {
 			if = {
 				limit = {
 					religion_group = pacific
-					NOT = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
+					NOR = { trait = sympathy_pacific trait = sympathy_pacific_religion }
 					capital_scope = {
 						NOT = { religion_group = ROOT }
 					}

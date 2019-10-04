@@ -12666,7 +12666,7 @@ character_event = {
 			limit = {
 				FROMFROM = {
 					OR = {
-						trait = on_hajj
+						#trait = on_hajj
 						is_inaccessible_trigger = yes
 						trait = on_pilgrimage
 					}

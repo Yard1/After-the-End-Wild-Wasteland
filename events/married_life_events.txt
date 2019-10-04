@@ -2297,7 +2297,7 @@ character_event = {
 		random_spouse = {
 			limit = {
 				NOT = { trait = incapable }
-				NOT = { religion = jain }
+				NOT = { religion = gaian }
 				prisoner = no
 				is_alive = yes
 				is_abroad = no

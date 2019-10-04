@@ -260,7 +260,7 @@ constitutional_elective = {
 					FROM = { religion_group = pagan_group } 
 				} 
 				AND = {  
-					trait = sympathy_cult_of_saints
+					OR = { trait = sympathy_cult_of_saints trait = sympathy_cult_of_saints_religion }
 					FROM = { religion_group = cult_of_saints } 
 				} 
 				AND = {  
@@ -280,7 +280,7 @@ constitutional_elective = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_religion }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  
@@ -3053,7 +3053,7 @@ popular_elective = {
 					FROM = { religion_group = pagan_group } 
 				} 
 				AND = {  
-					trait = sympathy_cult_of_saints
+					OR = { trait = sympathy_cult_of_saints trait = sympathy_cult_of_saints_religion }
 					FROM = { religion_group = cult_of_saints } 
 				} 
 				AND = {  
@@ -3073,7 +3073,7 @@ popular_elective = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_religion }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  
@@ -4910,25 +4910,22 @@ popular_elective = {
 			value = 10
 			localisation_key = tooltip_feudal_elector_vote_baptized_by_pope
 			NOT = { character = FROM } #Do not judge yourself.
-			OR = { 
-				religion = catholic 
-				religion = fraticelli
-			} 
+			religion_group = christian 
 			religion = FROM
 			FROM = { 
 				trait = baptized_by_pope
 			}
 		}
-		additive_modifier = { #Praised for being baptized by Patriarch
-			value = 10
-			localisation_key = tooltip_feudal_elector_vote_baptized_by_patriarch
-			NOT = { character = FROM } #Do not judge yourself.
-			religion = orthodox
-			religion = FROM
-			FROM = { 
-				trait = baptized_by_patriarch
-			}
-		}
+		#additive_modifier = { #Praised for being baptized by Patriarch
+		#	value = 10
+		#	localisation_key = tooltip_feudal_elector_vote_baptized_by_patriarch
+		#	NOT = { character = FROM } #Do not judge yourself.
+		#	religion = orthodox
+		#	religion = FROM
+		#	FROM = { 
+		#		trait = baptized_by_patriarch
+		#	}
+		#}
 		additive_modifier = { #Shunned for being of opposite pagan branch.
 			value = -25
 			localisation_key = tooltip_feudal_elector_vote_pagan_branch_negative

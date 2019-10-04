@@ -1680,10 +1680,9 @@ succession_laws = {
 						religion = ursuline
 						religion = confederated
 						religion = high_church
-						religion = bickertonite
-						religion = strangite
+						religion = mormon
 						religion = hamiltonian
-						religion = libertarian 
+						religion = libertarian
 					}
 				}
 			}
@@ -1734,10 +1733,9 @@ succession_laws = {
 				OR = {
 					religion = catholic
 					religion = ursuline
-					religion = high_church
 					religion = confederated
-					religion = bickertonite
-					religion = strangite
+					religion = high_church
+					religion = mormon
 					religion = hamiltonian
 					religion = libertarian
 				}
@@ -1841,7 +1839,7 @@ gender_laws = {
 							any_owned_bloodline = {
 								has_bloodline_flag = bloodline_effect_cognatic
 							}
-							any_suzerain = {
+							suzerain = {
 								has_religion_feature = religion_patriarchal
 							}
 						}
@@ -1978,7 +1976,7 @@ gender_laws = {
 					AND = {
 						has_law = agnatic_succession
 							holder_scope = {
-							any_suzerain = {
+							suzerain = {
 								has_religion_feature = religion_patriarchal
 							}
 						}
@@ -1986,7 +1984,7 @@ gender_laws = {
 					AND = {
 						has_law = enatic_succession
 							holder_scope = {
-							any_suzerain = {
+							suzerain = {
 								matriarchal_religion = yes
 							}
 						}
@@ -2108,7 +2106,7 @@ gender_laws = {
 				AND = {
 					has_law = agnatic_succession
 						holder_scope = {
-						any_suzerain = {
+						suzerain = {
 							has_religion_feature = religion_patriarchal
 						}
 					}
@@ -2116,7 +2114,7 @@ gender_laws = {
 				AND = {
 					has_law = enatic_succession
 						holder_scope = {
-						any_suzerain = {
+						suzerain = {
 							matriarchal_religion = yes
 						}
 					}
@@ -2272,7 +2270,7 @@ gender_laws = {
 								any_owned_bloodline = {
 									has_bloodline_flag = bloodline_enatic
 								}
-								any_suzerain = {
+								suzerain = {
 									matriarchal_religion = yes
 								}
 							}
@@ -2386,7 +2384,7 @@ gender_laws = {
 				AND = {
 					has_law = agnatic_succession
 						holder_scope = {
-						any_suzerain = {
+						suzerain = {
 							has_religion_feature = religion_patriarchal
 						}
 					}
@@ -2394,7 +2392,7 @@ gender_laws = {
 				AND = {
 					has_law = enatic_succession
 						holder_scope = {
-						any_suzerain = {
+						suzerain = {
 							matriarchal_religion = yes
 						}
 					}

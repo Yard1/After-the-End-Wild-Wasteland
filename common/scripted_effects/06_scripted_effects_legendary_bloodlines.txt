@@ -241,6 +241,10 @@ died_before_achieveing_greatness_effect = {
 	}
 }
 
+found_a_legendary_bloodline_effect = {
+	found_a_legendary_bloodline_effect_fixed = yes
+}
+
 died_founding_a_bloodline_effect = { #for the main heir
 	#send news of death to other heroes/society members?
 	save_event_target_as = bloodline_founder

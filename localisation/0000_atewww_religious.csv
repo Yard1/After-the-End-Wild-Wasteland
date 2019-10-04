@@ -1,5 +1,13 @@
 #CODE;ENGLISH;FRENCH;GERMAN;SPANISH;;;;;;;;;x
 
+EVTDESC_america_pilgrim_101;You have been invited to join [From.GetTitledFirstName] at [From.GetHerHis] Thanksgiving dinner this year. It is an occasion where theological debates are strictly prohibited in the name of peace and brotherhood.;;;;;;;;;;;;;x
+
+EVTDESCancrel.0020;You have sent out summons to all of your vassals for the divination. Those that do not follow the true faith will have to offer gold to be exempted from this sacred ceremony.;Vous avez envoyé un avis de convocation à tous vos vassaux pour le blót. Ceux qui ont été baptisés ou qui affirment suivre l'enseignement du prophète devront offrir de l'or pour être exemptés de ce festin majestueux. ;Ihr habt all Eure Vasallen zum Blót zusammengerufen. Diejenigen, die getauft wurden oder den Lehren des Propheten folgen, müssen Gold anbieten, um von diesem großartigen Festschmaus fernbleiben zu können.;;Has enviado citaciones a todos tus vasallos para la mancha. Los que han sido bautizados o profesan seguir las enseñanzas del profeta tendrán que ofrecer oro para quedar exentos de esta magnífica fiesta.;;;;;;;;;x
+
+TITLE_GAINED_RELIGIOUS_SETUP;New Cardinal appointed.;Nouveau cardinal nommé;Neuer Kardinal ernannt;;Nuevo cardenal nombrado.;;;;;;;;;x
+TITLE_GAINED_RELIGIOUS_LETTER;$NEWHOLDER$ was given a seat in the [GetConclaveName].;$NEWHOLDER$ a reçu un siège au Collège des cardinaux.;$NEWHOLDER$ wurde ins Kardinalskollegium berufen.;;$NEWHOLDER$ ha obtenido un asiento en el Colegio Cardenalicio.;;;;;;;;;x
+TITLE_GAINED_RELIGIOUS_LOG;$NEWHOLDER$ was given a seat in the [GetConclaveName].;$NEWHOLDER$ a reçu un siège au Collège des cardinaux.;$NEWHOLDER$ wurde ins Kardinalskollegium berufen.;;$NEWHOLDER$ ha obtenido un asiento en el Colegio Cardenalicio.;;;;;;;;;x
+
 ROADMEN;Roadmen;;;;;;;;;;;;;x
 PRIEST_PLURAL;[This.GetPriest]s;;;;;;;;;;;;;x
 monetarist_opinion;[monetarist.GetName] Opinion;;;;;;;;;;;;;x
@@ -487,6 +495,16 @@ EVTDESC_ATE_WWW_RELIGION_34;[abductor.GetBestName] has forced my [From.GetSonDau
 EVTDESC_ATE_WWW_RELIGION_31;As I pick up the fragile, little body of [From.GetFirstName], I cannot help but wonder what sort of a [From.GetSonDaughter] [From.GetSheHe] will be, now that I will raise [From.GetHerHim] in accordance to the will of [Root.Religion.GetHighGodName], as I would have raised a [From.GetSonDaughter] of my own blood.;;;;;;;;;;;;;x
 EVTOPTA_ATE_WWW_RELIGION_31;Welcome, [From.GetSonDaughter].;;;;;;;;;;;;;x
 
+# Cetic
+EVTDESC_cetic_choose_way;You have come to a crossroad of faith. It is time for you to choose which gurus you will follow, which writings you will focus on.;;;;;;;;;;;;;x
+cetic_way_decision;Select a Way;;;;;;;;;;;;;x
+cetic_way_decision_desc;You have come to a crossroad of faith. It is time for you to choose which gurus you will follow, which writings you will focus on.;;;;;;;;;;;;;x
+change_cetic_way_decision;Select a Way;;;;;;;;;;;;;x
+change_cetic_way_decision_desc;You have come to a crossroad of faith. You may change your Way, if you so desire.;;;;;;;;;;;;;x
+tooltip_pick_cetic_way;Determine which §YWay§! you will follow.;Détermine à quelle §Ybranche païenne§! vous appartenez.;Bestimmt, welchem §Yheidnischen zweig§! Ihr angehört.;;Determina a qué §Yrama pagana§! perteneces.;;;;;;;;x
+tooltip_change_cetic_way;Abandon the §YWay§! you currently ascribe to and choose another one.;Abandonner la §Ybranche païenne§! que vous avez choisie et en prendre une autre.;Gebt Euren momentanen §Yheidnischen Zweig§! auf uns wählt einen anderen.;;Abandona la §Yrama pagana§! a la que perteneces actualmente y elige otra.;;;;;;;;x
+
+
 # Atomiscists
 atom_bless_health_effect;The Price of Atom;;;;;;;;;;;;;x
 atom_curse_health_effect;The Price of Atom;;;;;;;;;;;;;x
@@ -755,6 +773,98 @@ wonder_salt_lake_temple;Salt Lake Temple ;;;;;;;;;;;;;x
 wonder_salt_lake_temple_construction_desc;Miracolously, the Salt Lake Temple has survived the Event. Ever since then, it has been meticulously preserved and cared for by Mormon faithful, Angel Moroni still topping the spire.;;;;;;;;;;;;;x
 wonder_salt_lake_temple_desc;Miracolously, the Salt Lake Temple has survived the Event. Ever since then, it has been meticulously preserved and cared for by Mormon faithful, Angel Moroni still topping the spire.;;;;;;;;;;;;;x
 
+celebrate_pioneers_day;Celebrate Pioneer Day;;;;;;;;;;;;;x
+celebrate_pioneers_day_desc;The time has come to celebrate Pioneer Day, the ancient holiday commemorating the entry of first pioneers into Deseret.;;;;;;;;;;;;;x
+pioneers_day_feast;Your vassals are invited to a Pioneer Day celebration.;;;;;;;;;;;;;x
+held_pioneers_day_timer;Recently Held Pioneer Day;;;;;;;;;;;;;x
+EVTTOOLTIP_ATE_WWW_MORMON_101;The Pioneer Day celebration begins!;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MORMON_100;A long time before the event, first pioneers have entered Deseret, driven away from their homes. Thanks to their perservance and industry, they have managed to carve out a prosperous state from nothing.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_MORMON_100;We must send our invitations.;;;;;;;;;;;;;x
+pioneers_day_invitations_sent;You send invitations to your vassals.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MORMON_101;You have been invited to join [From.GetTitledFirstName] at [From.GetHerHis] Pioneer Day celebration this year.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_MORMON_101;Of course I will attend!;;;;;;;;;;;;;x
+pioneers_day_accepted;You attend the Pioneer Day celebration.;;;;;;;;;;;;;x
+EVTOPTB_ATE_WWW_MORMON_101;I don't think so.;;;;;;;;;;;;;x
+pioneers_day_declined;You decline to attend the Pioneer Day celebration.;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MORMON_102;[From.GetTitledFirstName] has refused your invitation to the Pioneer Day celebration, claiming [From.GetSheHe] has other plans.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_MORMON_102;I didn't want [From.GetHerHim] there anyway!;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MORMON_103;The Pioneer Day celebration has begun in earnest. As is tradition, the day is filled with festivities and prayer, with the traditional barbecue soon to start.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_MORMON_103;What a wonderful time!;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MORMON_104;The barbecue lasts well into the night, but it eventually comes to an end. As your stuffed and drowsy guests stumble home, you can hear them murmur that this day was especially wonderful.;;;;;;;;;;;;;x
+EVTOPTA_ATE_WWW_MORMON_104;Praise the Heavenly Father!;;;;;;;;;;;;;x
+EVTDESC_ATE_WWW_MORMON_105;The barbecue lasts well into the night, but it eventually comes to an end. As you drowsily stumble your way back to your carriage, you can hear the other guests murmur about how good this day was.;;;;;;;;;;;;;x
+
+create_bickertonite_presidency;Create the Neo-Godbeite Presidency;;;;;;;;;;;;;x
+create_bickertonite_presidency_desc;If I am pious enough and control Salt Lake City, I can create a Neo-Godbeite President to serve as the head of the faith in opposition to the vile Mormon President.;;;;;;;;;;;;;x
+d_bickertonite_adj;Neo-Godbeite;;;;;;;;;;;;;x
+d_bickertonite;Neo-Godbeite Presidency;;;;;;;;;;;;;x
+bickertonite;Neo-Godbeite;;;;;;;;;;;;;x
+bickertonite_DESC;Neo-Godbeites are reformist Mormons who reject the infalliability of the Prophet and are strongly influenced by -- and are often sympathetic towards -- the Cetics, Gaians, and Neo-Gnostics. They believe in the primacy of personal revelation, the seperation of church and state, and believe that men and women are both worthy of priesthood. They have strong mystical tendencies and seek the restoration of a distantly-remembered President.;;;;;;;;;;;;;x
+bickertonite_FEATURES;§Y*§! Tolerate, and are tolerated by §YPacific§! religions\n§Y*§! May have ambitions to remove vices.;;;;;;;;;;;;;x
+
+secret_religious_society_bickertonite;[GetReligiousCommunityName_bickertonite];[GetReligiousCommunityName_bickertonite];[GetReligiousCommunityName_bickertonite];;[GetReligiousCommunityName_bickertonite];;;;;;;;;x
+secret_religious_society_REAL_bickertonite;The Disciples of Spirit;;;;;;;;;;;;x
+alt_start_community_name_bickertonite;The [bickertonite.GetName] Faithful;;;;;;;;;;;;;x
+secret_religious_society_bickertonite_desc;[GetReligiousSocietyDesc_bickertonite];[GetReligiousSocietyDesc_bickertonite];[GetReligiousSocietyDesc_bickertonite];;[GetReligiousSocietyDesc_bickertonite];;;;;;;;;x
+secret_religious_society_bickertonite_desc_REAL;Ever since Joseph Smith revealed the Book of Mormon, his followers have been shunned and despised by those who did not accept the new gospel. Although they have been forced underground, true Mormons secretly continue the tradition of proselytizing to gentiles and correcting the Great Apostasy, until the day comes when they can once more practice the true faith openly.;;;;;;;;;;x
+secretly_convert_to_bickertonite_holy_site;Secretly Convert to [bickertonite.GetName];;;;;;;;;;;;;x
+secretly_convert_to_bickertonite_holy_site_desc;The §Y[bickertonite.GetName]§! pilgrims that flock to the holy site in §Y[Root.Location.GetName]§! impress me with the depth and passion of their faith. I am tempted to convert in secrecy...;;;;;;;;;;;;;x
+secret_religious_society_bickertonite_currency;Devotion;Dévotion;Hingabe;;Devoción;;;;;;;;;x
+secret_religious_society_bickertonite_rank_1_female;Faithful;Fidèle;Getreue;;Fiel;;;;x
+secret_religious_society_bickertonite_rank_2_female;Adherent;Adhérente;Anhängerin;;Seguidora;;;;x
+secret_religious_society_bickertonite_rank_3_female;Preacher;Prêcheuse;Predigerin;;Predicadora;;;;x
+secret_religious_society_bickertonite_rank_4_female;Herald;Messagère;Herold;;Mensajera;;;;x
+secret_religious_society_bickertonite_rank_1_male;Faithful;Fidèle;Getreuer;;Fiel;;;;x
+secret_religious_society_bickertonite_rank_2_male;Adherent;Adhérent;Anhänger;;Seguidor;;;;x
+secret_religious_society_bickertonite_rank_3_male;Preacher;Prêcheur;Prediger;;Predicador;;;;x
+secret_religious_society_bickertonite_rank_4_male;Herald;Messager;Herold;;Mensajero;;;;x
+secret_religious_community_bickertonite;Secret Neo-Godbeite Community;;;;;;;;;;;;;x
+secret_bickertonite_community;Secret Neo-Godbeite Community;;;;;;;;;;;;;x
+secret_bickertonite_community_desc;In secret, Neo-Godbeite faithful have organized themselves as a community in this province. From there it converts others, grows, and protects their own.;En secret, les fidèles se sont organisés en tant que communauté dans cette province. De là, la commaunauté convertit d'autres personnes, grandit et protège les siens.;;;;;;;;;;;;x
+secret_religious_society_bickertonite_leader_desc;The High Priest, leading the international effort of bringing more people into the fold.;Le grand prêtre dirige l'effort mondial visant à réunir davantage de personnes dans les rangs de sa société.;Der Hohepriester des $SOCIETY|Y$-Zirkels, der die internationalen Bemühungen leitet, mehr Menschen in den Schoß der Familie zu führen.;;El Sumo sacerdote, que dirige la misión a escala internacional para atraer a más fieles.;;;;;;;;;x
+
+strangite;Apotheite;;;;;;;;;;;;;x
+strangite_DESC;Apotheism is a faith originating in the isolated Mormon communities of Mexico. They believe that the gift of the Holy Ghost, granted after baptism, makes the faithful partly divine in nature. Those who are truly faithful in life may become gods in death, equal to the Heavenly Father and deserving of worship. Those few who are truly wicked are cast into outer darkness, where they become devils like Satan, spitefully leading men away from the gods.;;;;;;;;;;;;;x
+strangite_FEATURES;§Y*§! Tolerate, and are tolerated by §YCult of Saints§! religions\n§Y*§! Can venerate ancestors;;;;;;;;;;;;;x
+GOD_SMITH;Joseph Smith;;;;;;;;;;;;;x
+GOD_MORONI;Moroni;;;;;;;;;;;;;x
+GOD_MORMON;Mormon;;;;;;;;;;;;;x
+GOD_ELIJAH;Elijah;;;;;;;;;;;;;x
+GOD_THE_PROPHETS;The Prophets;;;;;;;;;;;;;x
+GOD_THE_APOSTLES;The Apostles;;;;;;;;;;;;;x
+GADIANTON;Gadianton;;;;;;;;;;;;;x
+KORIHOR;Korihor;;;;;;;;;;;;;x
+JUDAS;Judas;;;;;;;;;;;;;x
+SHEREM;Sherem;;;;;;;;;;;;;x
+CAIN;Cain;;;;;;;;;;;;;x
+THE_ANTICHRIST;The Antichrist;;;;;;;;;;;;;x
+
+secret_religious_society_strangite;[GetReligiousCommunityName_strangite];[GetReligiousCommunityName_strangite];[GetReligiousCommunityName_strangite];;[GetReligiousCommunityName_strangite];;;;;;;;;x
+secret_religious_society_REAL_strangite;The Saints;;;;;;;;;;;;x
+alt_start_community_name_strangite;The [strangite.GetName] Faithful;;;;;;;;;;;;;x
+secret_religious_society_strangite_desc;[GetReligiousSocietyDesc_strangite];[GetReligiousSocietyDesc_strangite];[GetReligiousSocietyDesc_strangite];;[GetReligiousSocietyDesc_strangite];;;;;;;;;x
+secret_religious_society_strangite_desc_REAL;Ever since Joseph Smith revealed the Book of Mormon, his followers have been shunned and despised by those who did not accept the new gospel. Although they have been forced underground, true Mormons secretly continue the tradition of proselytizing to gentiles and correcting the Great Apostasy, until the day comes when they can once more practice the true faith openly.;;;;;;;;x
+secretly_convert_to_strangite_holy_site;Secretly Convert to Apotheite;;;;;;;;;;;;;x
+secretly_convert_to_strangite_holy_site_desc;The §YApotheite§! pilgrims that flock to the holy site in §Y[Root.Location.GetName]§! impress me with the depth and passion of their faith. I am tempted to convert in secrecy...;;;;;;;;;;;;;x
+secret_religious_society_strangite_currency;Devotion;Dévotion;Hingabe;;Devoción;;;;;;;;;x
+secret_religious_society_strangite_rank_1_female;Faithful;Fidèle;Getreue;;Fiel;;;;x
+secret_religious_society_strangite_rank_2_female;Adherent;Adhérente;Anhängerin;;Seguidora;;;;x
+secret_religious_society_strangite_rank_3_female;Preacher;Prêcheuse;Predigerin;;Predicadora;;;;x
+secret_religious_society_strangite_rank_4_female;Herald;Messagère;Herold;;Mensajera;;;;x
+secret_religious_society_strangite_rank_1_male;Faithful;Fidèle;Getreuer;;Fiel;;;;x
+secret_religious_society_strangite_rank_2_male;Adherent;Adhérent;Anhänger;;Seguidor;;;;x
+secret_religious_society_strangite_rank_3_male;Preacher;Prêcheur;Prediger;;Predicador;;;;x
+secret_religious_society_strangite_rank_4_male;Herald;Messager;Herold;;Mensajero;;;;x
+secret_religious_community_strangite;Secret Apotheite Community;;;;;;;;;;;;;x
+secret_strangite_community;Secret Apotheite Community;;;;;;;;;;;;;x
+secret_strangite_community_desc;In secret, Apotheite faithful have organized themselves as a community in this province. From there it converts others, grows, and protects their own.;En secret, les fidèles se sont organisés en tant que communauté dans cette province. De là, la commaunauté convertit d'autres personnes, grandit et protège les siens.;;;;;;;;;;;;x
+secret_religious_society_strangite_leader_desc;The High Priest, leading the international effort of bringing more people into the fold.;Le grand prêtre dirige l'effort mondial visant à réunir davantage de personnes dans les rangs de sa société.;Der Hohepriester des $SOCIETY|Y$-Zirkels, der die internationalen Bemühungen leitet, mehr Menschen in den Schoß der Familie zu führen.;;El Sumo sacerdote, que dirige la misión a escala internacional para atraer a más fieles.;;;;;;;;;x
+
+
+secretly_convert_to_woolleyite_holy_site;Secretly Convert to Woolleyite;;;;;;;;;;;;;x
+secretly_convert_to_woolleyite_holy_site_desc;The §YWoolleyite§! pilgrims that flock to the holy site in §Y[Root.Location.GetName]§! impress me with the depth and passion of their faith. I am tempted to convert in secrecy...;;;;;;;;;;;;;x
+
+
 # Misc
 
 CRUSADE_COOLDOWN;A [Root.Religion.GetCrusadeName] for the [Root.Religion.GetName] faith has not been called in the last 10 years\n;;;;;;;;;x
@@ -784,7 +894,7 @@ pacifist_realm_prospering;A Realm Prospers;Déterminer la branche païenne;Heidenz
 neognostic_FEATURES;§Y*§! Are considered a Catholic heresy owing to their agreement with the Catholic understanding of God and the Saints, while dismissing the teachings of most Cetic Gurus.\n§Y*§! Tolerate, and are tolerated by §YPacific§! religions\n§Y*§! May have ambitions to remove vices.;;;;;;;;;;;;;x
 
 # sainthood
-EVTDESC_HF_40004_LDS;[saint_person.GetDynName] lived a pious life, truly following the example of [saint_person.Religion.GetHighGodName]. [saint_person.GetSheHeCap] passed on [saint_person.GetDeathDate], and people have long wondered if [saint_person.GetSheHe] would be considered a true [saint_person.GetReligiousPerson] or not.\n\nIn a grand ceremony [bishopric_holder.GetTitledFirstName] has declared [saint_person.GetFirstNameWithNick] as a [saint_person.GetReligiousPerson] who has indeed entered Heaven, celebrated by the people of [saint_person.PrimaryTitle.GetName] as well as by the [saint_person.Religion.GetGroupName] world as a whole.\n\nWe can only wish to follow [saint_person.GetHerHis] example, and become truly pious people in the eyes of [saint_person.Religion.GetHighGodName].;;;;;;;;;;;;;x
+EVTDESC_HF_40004_LDS;[saint_person.GetDynName] lived a pious life, truly following the example of [saint_person.Religion.GetHighGodName]. [saint_person.GetSheHeCap] passed on [saint_person.GetDeathDate] and right away, the populace of [saint_capital.GetName] has unanimously agreed that [saint_person.GetDynName] is truly destined for the Celestial Kingdom.\n\nWe can only wish to follow [saint_person.GetHerHis] example, and become as Exalted as [saint_person.GetDynName] in the eyes of [saint_person.Religion.GetHighGodName].;;;;;;;;;;;;;x
 EVTDESC_HF_40004;[saint_person.GetDynName] lived a pious life, truly following the example of [saint_person.Religion.GetHighGodName]. [saint_person.GetSheHeCap] passed on [saint_person.GetDeathDate], and people have long wondered if [saint_person.GetSheHe] would be considered a true [saint_person.GetReligiousPerson] or not.\n\nIn a grand ceremony [bishopric_holder.GetTitledFirstName] has declared [saint_person.GetFirstNameWithNick] as a [saint_person.GetReligiousPerson] who has indeed entered Heaven, celebrated by the people of [saint_person.PrimaryTitle.GetName] as well as by the [saint_person.Religion.GetGroupName] world as a whole.\n\nWe can only wish to follow [saint_person.GetHerHis] example, and become truly pious people in the eyes of [saint_person.Religion.GetHighGodName].;[saint_person.GetDynName] a vécu une vie pieuse, suivant pleinement l'exemple [saint_person.Get_du_HighGod]. [saint_person.GetIlElleCap] est décédé[saint_person.Get_E] le [saint_person.GetDeathDate] et les gens se demandent depuis [saint_person.GetSilSielle] sera considéré[saint_person.Get_E] comme un[saint_person.Get_E] vrai[saint_person.Get_E] [saint_person.GetReligiousGroupMascFem].\n\nDans une grande cérémonie, [bishopric_holder.Get_le_TitledFirstName] a déclaré que [saint_person.GetFirstNameWithNick] est effectivement entré[saint_person.Get_E] au Paradis, ce qui est célébré dans tout le monde [saint_person.Religion.GetGroupName].\n\nNous ne pouvons que vouloir suivre son exemple et devenir des gens vraiment pieux aux yeux [saint_person.Get_du_HighGod].;[saint_person.GetDynName] lebte ein frommes Leben und folgte dabei dem Vorbild von [saint_person.Religion.GetHighGodName]. [saint_person.GetSheHeCap] verstarb am [saint_person.GetDeathDate] und man hat lange darüber nachgedacht, [saint_person.GetSheHe] als wahren [saint_person.Religion.GetGroupName]en Gläubigen anzusehen oder nicht.\n\nIn einer großen Zeremonie hat [bishopric_holder.GetTitledFirstName], [saint_person.GetFirstNameWithNick] als [saint_person.Religion.GetGroupName] erklärt, [saint_person.Getderdie] tatsächlich in den Himmel gekommen ist und nun sowohl vom [saint_person.PrimaryTitle.GetName]en Volk als auch von der [saint_person.Religion.GetGroupName]en Weltgemeinschaft als Ganzes gefeiert wird.\n\nWir können nur [saint_person.GetHerHis]em Beispiel folgen und in den Augen von [saint_person.Religion.GetHighGodName] zu wirklich frommen Gläubigen werden.;;[saint_person.GetDynName] tuvo una vida piadosa siguiendo el ejemplo de [saint_person.Religion.GetHighGodName]. Murió en [saint_person.GetDeathDate] y la gente ha reflexionado durante mucho tiempo si sería o no un[saint_person.GetXA] verdader[saint_person.GetOA] [saint_person.Religion.GetGroupName].\n\nEn una gran ceremonia [bishopric_holder.GetTitledFirstName] ha proclamado a [saint_person.GetFirstNameWithNick] como [saint_person.Religion.GetGroupName] que ha entrado verdaderamente en el Cielo, lo que fue celebrado por el pueblo de [saint_person.PrimaryTitle.GetName] así como todo el mundo [saint_person.Religion.GetGroupName]. \n\nSolo podemos aspirar a seguir su ejemplo y llegar a ser un pueblo realmente piadoso a los ojos de [saint_person.Religion.GetHighGodName].;;;;;x
 EVTOPTAHF.40004;It is a loss to all of us.;C'est une perte pour nous tous.;Dieser Verlust betrifft uns alle.;;Es una pérdida para todos.;;;;;x
 TITLEHF.40004;A Blessed has Passed;Un[saint_person.Get_E] saint[saint_person.Get_E] a trépassé;Ein Heiliger ist verstorben;;Ha muerto un[saint_person.GetXA] bendit[saint_person.GetOA];;;;;x

@@ -707,7 +707,7 @@ feudal_elective = {
 					FROM = { religion_group = pagan_group } 
 				} 
 				AND = {  
-					trait = sympathy_cult_of_saints
+					OR = { trait = sympathy_cult_of_saints trait = sympathy_cult_of_saints_religion }
 					FROM = { religion_group = cult_of_saints } 
 				} 
 				AND = {  
@@ -727,7 +727,7 @@ feudal_elective = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_religion }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  
@@ -3867,15 +3867,14 @@ tanistry = {
 		days = 1
 		additive_modifier = {
 			value = 1
-			localisation_key = tooltip_vote_strength_theocratic_feudal_government
 			OR = {
 				is_theocracy = yes
 				is_priest = yes
 			}
 			FROMFROM = {
 				holder_scope = {
+					religion = ROOT
 					government = theocratic_feudal_government
-					NOT = { character = ROOT }
 				}
 			}
 		}
@@ -4326,7 +4325,7 @@ tanistry = {
 					FROM = { religion_group = pagan_group } 
 				} 
 				AND = {  
-					trait = sympathy_cult_of_saints
+					OR = { trait = sympathy_cult_of_saints trait = sympathy_cult_of_saints_religion }
 					FROM = { religion_group = cult_of_saints } 
 				} 
 				AND = {  
@@ -4346,7 +4345,7 @@ tanistry = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_religion }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  
@@ -4385,22 +4384,22 @@ tanistry = {
 		}
 
 		#Barbarism - Tribal succession, that is the point.
-	#	additive_modifier = { 
-	#		value = -15
-	#		localisation_key = tooltip_feudal_elector_vote_uncivilized
-	#		OR = { 
-	#			is_feudal = yes 
-	#			is_merchant_republic = yes
-	#			is_patrician = yes
-	#		}
-	#		FROM = { 
-	#			NOR = { 
-	#				is_feudal = yes 
-	#				is_merchant_republic = yes
-	#				is_patrician = yes
-	#			} 
-	#		}
-	#	}
+		#	additive_modifier = { 
+		#		value = -15
+		#		localisation_key = tooltip_feudal_elector_vote_uncivilized
+		#		OR = { 
+		#			is_feudal = yes 
+		#			is_merchant_republic = yes
+		#			is_patrician = yes
+		#		}
+		#		FROM = { 
+		#			NOR = { 
+		#				is_feudal = yes 
+		#				is_merchant_republic = yes
+		#				is_patrician = yes
+		#			} 
+		#		}
+		#	}
 		#Tribalism
 
 		additive_modifier = { 
@@ -7593,28 +7592,28 @@ elective_gavelkind = {
 				}
 			}
 		}
-	#	additive_modifier = { #Still too young for older rulers
-	#		value = -20
-	#		localisation_key = tooltip_feudal_elector_vote_youngster
-	#		age = 30
-	#		FROM = {
-	#			age = 16
-	#			NOT = {
-	#				age = 25
-	#			}
-	#		}
-	#	}
-	#	additive_modifier = { 
-	#		value = -15
-	#		localisation_key = tooltip_feudal_elector_vote_youngster
-	#		age = 40
-	#		FROM = {
-	#			age = 25
-	#			NOT = {
-	#				age = 35
-	#			}
-	#		}
-	#	}
+		#	additive_modifier = { #Still too young for older rulers
+		#		value = -20
+		#		localisation_key = tooltip_feudal_elector_vote_youngster
+		#		age = 30
+		#		FROM = {
+		#			age = 16
+		#			NOT = {
+		#				age = 25
+		#			}
+		#		}
+		#	}
+		#	additive_modifier = { 
+		#		value = -15
+		#		localisation_key = tooltip_feudal_elector_vote_youngster
+		#		age = 40
+		#		FROM = {
+		#			age = 25
+		#			NOT = {
+		#				age = 35
+		#			}
+		#		}
+		#	}
 		additive_modifier = { #Old just right.
 			value = 15
 			localisation_key = tooltip_feudal_elector_vote_prime_age
@@ -7745,7 +7744,7 @@ elective_gavelkind = {
 					FROM = { religion_group = pagan_group } 
 				} 
 				AND = {  
-					trait = sympathy_cult_of_saints
+					OR = { trait = sympathy_cult_of_saints trait = sympathy_cult_of_saints_religion }
 					FROM = { religion_group = cult_of_saints } 
 				} 
 				AND = {  
@@ -7765,7 +7764,7 @@ elective_gavelkind = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_religion }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  
@@ -7804,22 +7803,22 @@ elective_gavelkind = {
 		}
 
 		#Barbarism - Tribal succession, that is the point.
-	#	additive_modifier = { 
-	#		value = -15
-	#		localisation_key = tooltip_feudal_elector_vote_uncivilized
-	#		OR = { 
-	#			is_feudal = yes 
-	#			is_merchant_republic = yes
-	#			is_patrician = yes
-	#		}
-	#		FROM = { 
-	#			NOR = { 
-	#				is_feudal = yes 
-	#				is_merchant_republic = yes
-	#				is_patrician = yes
-	#			} 
-	#		}
-	#	}
+		#	additive_modifier = { 
+		#		value = -15
+		#		localisation_key = tooltip_feudal_elector_vote_uncivilized
+		#		OR = { 
+		#			is_feudal = yes 
+		#			is_merchant_republic = yes
+		#			is_patrician = yes
+		#		}
+		#		FROM = { 
+		#			NOR = { 
+		#				is_feudal = yes 
+		#				is_merchant_republic = yes
+		#				is_patrician = yes
+		#			} 
+		#		}
+		#	}
 		#Tribalism
 
 		additive_modifier = { 
@@ -11663,7 +11662,7 @@ eldership_rules = {
 					FROM = { religion_group = pagan_group } 
 				} 
 				AND = {  
-					trait = sympathy_cult_of_saints
+					OR = { trait = sympathy_cult_of_saints trait = sympathy_cult_of_saints_religion }
 					FROM = { religion_group = cult_of_saints } 
 				} 
 				AND = {  
@@ -11683,7 +11682,7 @@ eldership_rules = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_religion }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  
@@ -11771,7 +11770,7 @@ eldership_rules = {
 					FROM = { religion_group = pagan_group } 
 				} 
 				AND = {  
-					trait = sympathy_cult_of_saints
+					OR = { trait = sympathy_cult_of_saints trait = sympathy_cult_of_saints_religion }
 					FROM = { religion_group = cult_of_saints } 
 				} 
 				AND = {  
@@ -11791,7 +11790,7 @@ eldership_rules = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_religion }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  
@@ -15308,7 +15307,7 @@ eldership_rules = {
 					FROM = { religion_group = pagan_group } 
 				} 
 				AND = {  
-					trait = sympathy_cult_of_saints
+					OR = { trait = sympathy_cult_of_saints trait = sympathy_cult_of_saints_religion }
 					FROM = { religion_group = cult_of_saints } 
 				} 
 				AND = {  
@@ -15328,7 +15327,7 @@ eldership_rules = {
 					FROM = { religion_group = american_native } 
 				}
 				AND = {  
-					OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
+					OR = { trait = sympathy_pacific trait = sympathy_pacific_religion }
 					FROM = { religion_group = pacific } 
 				}
 				AND = {  

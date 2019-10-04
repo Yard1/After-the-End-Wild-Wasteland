@@ -399,6 +399,7 @@ character_event = { # Sympathy for founder group
 							NOR = {
 								religion_group = cult_of_saints
 								trait = sympathy_cult_of_saints
+								trait = sympathy_cult_of_saints_religion
 							}
 						}
 					}
@@ -408,7 +409,7 @@ character_event = { # Sympathy for founder group
 							NOR = {
 								religion_group = pacific
 								trait = sympathy_pacific
-								trait = sympathy_pacific_neognostic
+								trait = sympathy_pacific_religion
 							}
 						}
 					}
@@ -522,6 +523,7 @@ character_event = { # Sympathy for founder group
 								NOR = {
 									religion_group = cult_of_saints
 									trait = sympathy_cult_of_saints
+									trait = sympathy_cult_of_saints_religion
 								}
 							}
 						}
@@ -531,7 +533,7 @@ character_event = { # Sympathy for founder group
 								NOR = {
 									religion_group = pacific
 									trait = sympathy_pacific
-									trait = sympathy_pacific_neognostic
+									trait = sympathy_pacific_religion
 								}
 							}
 						}
@@ -8832,7 +8834,11 @@ character_event = {
 				NOT = {
 					character = ROOT
 				}
-				religion_group = christian
+				OR = {
+					religion_group = christian
+					religion_group = latter_day_saints
+					religion_group = cult_of_saints
+				}
 			}
 		}
 	}
@@ -9250,7 +9256,11 @@ character_event = {
 		is_ruler = no
 		is_female = yes
 		NOT = { matriarchal_religion = yes }
-		religion_group = christian
+		OR = {
+			religion_group = christian
+			religion_group = latter_day_saints
+			religion_group = cult_of_saints
+		}
 		is_married = no
 		NOT = { num_of_children = 1 }
 		NOT = { num_of_lovers = 1 }

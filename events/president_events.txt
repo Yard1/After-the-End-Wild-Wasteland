@@ -12,12 +12,61 @@ character_event = {
 	desc = DEBUG
 	is_triggered_only = yes # Triggered by on_death, on_yearly_pulse
 	hide_window = yes
+	religion = americanist
 	
 	trigger = {
 		NOT = {
 			e_usa = { holder_scope = { always = yes } }
 		}
 		has_landed_title = d_americanist
+		NOT = { has_global_flag = pres_election }
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = pres_election
+		set_global_flag = declare_candidacy
+		any_playable_ruler = { # Inform players
+			limit = { religion = americanist }
+			character_event = { id = prez.3 }
+		}
+		k_papal_state = {
+			holder_scope = {
+				#diplomatic_immunity = yes
+				#add_trait = electoral_college
+				set_variable = { which = num_candidates value = 0 }
+				character_event = { id = prez.7 days = 30 } # End candidate declaration period
+				#d_americanist = { grant_title = PREV }
+			}
+		}
+		d_americanist = {
+			activate_title = { title = THIS status = no }
+			unsafe_destroy_landed_title = THIS
+		}
+	}
+	
+	option = {
+		name = DEBUG
+	}
+}
+
+# President is dead
+character_event = {
+	id = prez.100
+	desc = DEBUG
+	is_triggered_only = yes # Triggered by on_death, on_yearly_pulse
+	hide_window = yes
+	
+	trigger = {
+		NOT = {
+			e_usa = { holder_scope = { always = yes } }
+		}
+		FROM = { title = d_americanist }
+		NOT = { 
+			trait = president
+		}
 		NOT = { has_global_flag = pres_election }
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
@@ -725,12 +774,12 @@ narrative_event = {
 	
 	option = {
 		name = prez.94.optA
-		d_americanist = { gain_title = PREV }
 		prestige = 500
 		remove_trait = on_campaign
 		add_trait = president
 		set_character_flag = current_president
 		clr_character_flag = pres_candidate
+		d_americanist = { gain_title = PREV }
 		if = {
 			limit = { NOT = { dynasty = none } }
 			give_nickname = nick_lastname

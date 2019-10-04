@@ -287,42 +287,10 @@ character_event = {
 			limit = { has_law = succ_open_elective }
 			character_event = { id = ATE_WWWW_AIRMEN.4 }
 		}
-		if = {
-			limit = {
-				is_married = no
-				is_marriage_adult = yes
-				NOR = {
-					trait = dog
-					trait = eunuch
-					trait = monk
-					trait = nun
-					trait = horse
-					trait = cannot_marry
-					trait = cat
-				}
-				is_inaccessible_or_incapable_trigger = no
-				prisoner = no
-				is_incapable = no
-			}
-			character_event = { id = ATE_WWWW_AIRMEN.6 }
-		}
+		character_event = { id = ATE_WWWW_AIRMEN.6 }
 		any_dynasty_member = {
 			limit = {
 				NOT = { character = ROOT }
-				is_married = no
-				is_marriage_adult = yes
-				NOR = {
-					trait = dog
-					trait = eunuch
-					trait = monk
-					trait = nun
-					trait = horse
-					trait = cannot_marry
-					trait = cat
-				}
-				is_inaccessible_or_incapable_trigger = no
-				prisoner = no
-				is_incapable = no
 				any_liege = { character = ROOT }
 			}
 			character_event = { id = ATE_WWWW_AIRMEN.6 }
@@ -334,7 +302,6 @@ character_event = {
 character_event = {
 	id = ATE_WWWW_AIRMEN.6
 	hide_window = yes
-	religion = americanist
 	is_triggered_only = yes
 
 	trigger = {
@@ -343,20 +310,95 @@ character_event = {
 		NOR = {
 			trait = dog
 			trait = eunuch
-			trait = monk
-			trait = nun
+			trait = amazon_trait
+			trait = celibate
+			is_ascetic_trigger = yes
 			trait = horse
 			trait = cannot_marry
 			trait = cat
+			any_lover = { ai = no }
+			any_close_relative = { ai = no }
+			any_friend = { ai = no }
+			any_rival = { ai = no }
+			any_consort = { ai = no }
+			has_character_flag = eternal_life_mystic
+			has_character_modifier = in_seclusion
+			has_character_modifier = elder_long_life_modifier
+			immortal = yes
 		}
 		is_inaccessible_or_incapable_trigger = no
 		prisoner = no
-		is_incapable = no
 	}
 
 	immediate = {
 		log = "ATE_WWWW_AIRMEN.6: ROOT:[Root.GetBestName]"
-		marry_suitable_courtier_or_vassal = yes
+		random = {
+			chance = 25
+			modifier = {
+				factor = 0.25
+				is_ruler = no
+				NOT = {
+					any_heir_title = {
+						title = d_order_airmen
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				age = 25
+				OR = {
+					is_ruler = yes
+					any_heir_title = {
+						title = d_order_airmen
+					}
+				}
+				OR = {
+					has_children = no
+					d_order_airmen = {
+						current_heir = {
+							NOT = { dynasty = ROOT }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 4
+				age = 30
+				OR = {
+					is_ruler = yes
+					any_heir_title = {
+						title = d_order_airmen
+					}
+				}
+				OR = {
+					has_children = no
+					d_order_airmen = {
+						current_heir = {
+							NOT = { dynasty = ROOT }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				age = 35
+				OR = {
+					is_ruler = yes
+					any_heir_title = {
+						title = d_order_airmen
+					}
+				}
+				OR = {
+					has_children = no
+					d_order_airmen = {
+						current_heir = {
+							NOT = { dynasty = ROOT }
+						}
+					}
+				}
+			}
+			marry_suitable_courtier_or_vassal = yes
+		}
 	}
 
 }

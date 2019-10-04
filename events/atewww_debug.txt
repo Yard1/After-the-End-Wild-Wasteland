@@ -10,29 +10,8 @@ character_event = {
 	
 	option = {
 		name = "tank evangelical MA"
-		random_character = {
-			limit = { religion = evangelical }
-			religion_authority = {
-				modifier = evangelical_reformation
-			}
-			religion_authority = {
-				modifier = evangelical_reformation
-			}
-		}
-	}
-
-	option = {
-		name = "set coc to be its own parent"
-		set_parent_religion = { religion = coc parent = coc }
-	}
-
-	option = {
-		name = "change all evangelical provinces to coc"
-		religion = coc
-		any_province = {
-			limit = { religion = evangelical }
-			religion = coc
-		}
+		log = "coc is in [coc.GetGroupName] group"
+		log = "evangelical is in [evangelical.GetGroupName] group"
 	}
 
 	option = {
@@ -181,7 +160,39 @@ character_event = {
 	hide_window = yes
 	
 	option = {
-		log = "OptA: [Root.optA.GetValue] OptB: [Root.optB.GetValue]"
+		religion = bickertonite
+		any_realm_character = {
+			religion = bickertonite
+		}
+		activate_title = { title = d_bickertonite status = yes }
+		hidden_tooltip = {
+			create_random_priest = {
+				dynasty = none
+				random_traits = yes
+			}
+			new_character = {
+				character_event = { id = misc.3 } #Diversity
+				character_event = { id = misc.4 } # Physique
+				d_bickertonite = {
+					grant_title = PREV
+					add_law = {
+						law = succ_bickertonite_relhead_elective
+						opinion_effect = no
+					}
+				}
+				wealth = 500
+				opinion = {
+					who = ROOT
+					modifier = opinion_creator_of_rel_heal
+				}
+			}
+			
+			religion_authority = {
+				modifier = papacy_instituted
+				years = 20
+			}
+		}
+		piety = 1000
 	}
 }
 

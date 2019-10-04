@@ -159,7 +159,7 @@ laws = {
 				holder_scope = { has_religion_feature = religion_feature_midewiwin }
 				holder_scope = { has_religion_feature = religion_patriarchal }
 				holder_scope = {
-					any_suzerain = {
+					suzerain = {
 						has_religion_feature = religion_patriarchal
 					}
 				}
@@ -469,7 +469,7 @@ laws = {
 				holder_scope = { has_religion_feature = religion_feature_midewiwin }
 				holder_scope = { has_religion_feature = religion_patriarchal }
 				holder_scope = {
-					any_suzerain = {
+					suzerain = {
 						matriarchal_religion = yes
 					}
 				}
@@ -639,7 +639,7 @@ laws = {
 					}
 				}
 				holder_scope = {
-					any_suzerain = {
+					suzerain = {
 						matriarchal_religion = yes
 					}
 				}

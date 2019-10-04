@@ -805,3 +805,184 @@ character_event = {
 		k_s_mart = { destroy_landed_title = THIS }
 	}
 }
+
+character_event = {
+	id = miscATEWW.8
+	desc = "Let republics marry"
+	hide_window = yes
+	only_playable = yes
+	ai = yes
+	capable_only = yes
+	prisoner = no
+	min_age = 18
+	is_married = no
+
+	trigger = {
+		NOR = {
+			is_ruler = no
+			is_feudal = yes
+			is_tribal = yes
+			is_nomadic = yes
+			is_patrician = yes
+		}
+		OR = {
+			is_republic = yes
+			is_theocracy = yes
+		}
+		is_betrothed = no
+		is_married = no
+		is_marriage_adult = yes
+		can_marry = yes
+		NOR = {
+			trait = homosexual
+			trait = dog
+			trait = eunuch
+			trait = amazon_trait
+			trait = celibate
+			is_ascetic_trigger = yes
+			trait = horse
+			trait = cannot_marry
+			trait = cat
+			any_lover = { ai = no }
+			any_close_relative = { ai = no }
+			any_friend = { ai = no }
+			any_rival = { ai = no }
+			any_consort = { ai = no }
+			has_character_flag = eternal_life_mystic
+			has_character_modifier = in_seclusion
+			has_character_modifier = elder_long_life_modifier
+			immortal = yes
+		}
+		is_inaccessible_or_incapable_trigger = no
+		prisoner = no
+	}
+
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.8
+			is_theocracy = no
+		}
+	}
+
+	immediate = {
+		log = "miscATEWW.8: ROOT:[Root.GetBestName]"
+		if = {
+			limit = {
+				age = 18
+				NOT = { age = 30 }
+			}
+			if = {
+				limit = { is_female = yes }
+				create_character = {
+					random_traits = yes
+					dynasty = NONE
+					female = no
+					age = 24
+					religion = FROM
+					culture = FROM
+					flag = keep_male
+				}
+				new_character = {
+					character_event = { id = misc.3 } # Diversity
+					character_event = { id = misc.4 } # Physique
+					add_spouse_matrilineal = PREV
+				}
+			}
+			else = {
+				create_character = {
+					random_traits = yes
+					dynasty = NONE
+					female = yes
+					age = 24
+					religion = FROM
+					culture = FROM
+					flag = keep_male
+				}
+				new_character = {
+					character_event = { id = misc.3 } # Diversity
+					character_event = { id = misc.4 } # Physique
+					add_spouse = PREV
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				age = 30
+				NOT = { age = 45 }
+			}
+			if = {
+				limit = { is_female = yes }
+				create_character = {
+					random_traits = yes
+					dynasty = NONE
+					female = no
+					age = 35
+					religion = FROM
+					culture = FROM
+					flag = keep_male
+				}
+				new_character = {
+					character_event = { id = misc.3 } # Diversity
+					character_event = { id = misc.4 } # Physique
+					add_spouse_matrilineal = PREV
+				}
+			}
+			else = {
+				create_character = {
+					random_traits = yes
+					dynasty = NONE
+					female = yes
+					age = 35
+					religion = FROM
+					culture = FROM
+					flag = keep_male
+				}
+				new_character = {
+					character_event = { id = misc.3 } # Diversity
+					character_event = { id = misc.4 } # Physique
+					add_spouse = PREV
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				age = 45
+			}
+			if = {
+				limit = { is_female = yes }
+				create_character = {
+					random_traits = yes
+					dynasty = NONE
+					female = no
+					age = 48
+					religion = FROM
+					culture = FROM
+					flag = keep_male
+				}
+				new_character = {
+					character_event = { id = misc.3 } # Diversity
+					character_event = { id = misc.4 } # Physique
+					add_spouse_matrilineal = PREV
+				}
+			}
+			else = {
+				create_character = {
+					random_traits = yes
+					dynasty = NONE
+					female = yes
+					age = 48
+					religion = FROM
+					culture = FROM
+					flag = keep_male
+				}
+				new_character = {
+					character_event = { id = misc.3 } # Diversity
+					character_event = { id = misc.4 } # Physique
+					add_spouse = PREV
+				}
+			}
+		}
+	}
+
+}

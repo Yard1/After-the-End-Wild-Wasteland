@@ -115,7 +115,7 @@ character_event = {
 			interested_in_society = the_cult_of_kali
 			interested_in_society = the_plaguebringers
 			interested_in_society = the_illuminati
-			interested_in_society = the_epa
+			#interested_in_society = the_epa
 			interested_in_society = cult_of_cortez
 			interested_in_society = bohemian_grove
 			interested_in_society = davy_jones_mates
@@ -145,7 +145,7 @@ character_event = {
 			interested_in_society = the_cult_of_kali
 			interested_in_society = the_plaguebringers
 			interested_in_society = the_illuminati
-			interested_in_society = the_epa
+			#interested_in_society = the_epa
 			interested_in_society = cult_of_cortez
 			interested_in_society = bohemian_grove
 			interested_in_society = davy_jones_mates
@@ -259,21 +259,21 @@ character_event = {
 			}
 		}
 		#EPA
-		if = {
-			limit = {
-				interested_in_society = the_epa
-				NOT = { has_character_flag = being_recruited_by_the_epa }
-			}
-			random_society_member = {
-				limit = {
-					society_member_of = the_epa
-					#is_within_diplo_range = ROOT
-					is_society_grandmaster = no
-				}
-				save_event_target_as = satanists_recruiter
-				character_event = { id = MNM.99998 }
-			}
-		}
+		#if = {
+		#	limit = {
+		#		interested_in_society = the_epa
+		#		NOT = { has_character_flag = being_recruited_by_the_epa }
+		#	}
+		#	random_society_member = {
+		#		limit = {
+		#			society_member_of = the_epa
+		#			#is_within_diplo_range = ROOT
+		#			is_society_grandmaster = no
+		#		}
+		#		save_event_target_as = satanists_recruiter
+		#		character_event = { id = MNM.99998 }
+		#	}
+		#}
 		#Cult of Cortez
 		if = {
 			limit = {

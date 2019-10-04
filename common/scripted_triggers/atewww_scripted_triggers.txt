@@ -157,6 +157,7 @@ has_ancestor_veneration = {
 	OR = {
 		religion_group = american_native
 		religion = gracia_divina
+		religion = strangite
 		has_religion_feature = religion_beatification
 		has_religion_feature = religion_feature_espiritista
 	}
@@ -182,6 +183,8 @@ religion_can_excommunicate = {
 		religion = libertarian
 		religion = brethren
 		religion = cult_of_marx
+		religion = bickertonite
+		religion = woolleyite
 	}
 }
 
@@ -285,6 +288,20 @@ true_religion_americanist_or_heresy_trigger = {
 	}
 }
 
+true_religion_midewiwin_or_reformed_trigger = {
+	OR = {
+		true_religion = midewiwin
+		true_religion = midewiwin_reformed
+	}
+}
+
+true_religion_raven_tales_or_reformed_trigger = {
+	OR = {
+		true_religion = raven_tales
+		true_religion = raven_tales_reformed
+	}
+}
+
 is_landless = {
 	is_landed = no
 }
@@ -319,6 +336,8 @@ is_pope = {
 		has_landed_title = d_high_church
 		has_landed_title = k_confederated
 		has_landed_title = d_quorum_of_the_twelve
+		has_landed_title = d_bickertonite
+		has_landed_title = d_woolleyite
 		AND = {
 			is_antipope = no
 			rightful_religious_head_scope = { character = PREV }
@@ -334,6 +353,8 @@ is_antipope = {
 			title = d_high_church
 			title = k_confederated
 			title = d_quorum_of_the_twelve
+			title = d_bickertonite
+			title = d_woolleyite
 		}
 	}
 }
@@ -551,5 +572,30 @@ is_pacifist_religion = {
 		religion = anabaptist
 		religion = gaian
 		religion = libertarian
+	}
+}
+
+is_unimportant_enough_to_marry_trigger = {
+	NOR = {
+		is_married = yes
+		is_betrothed = yes
+		higher_tier_than = BARON
+		AND = {
+			NOT = { dynasty = none }
+			num_of_dynasty_members = 2
+		}
+		any_lover = { ai = no }
+		any_close_relative = { ai = no }
+		any_friend = { ai = no }
+		any_rival = { ai = no }
+		any_consort = { ai = no }
+		num_of_claims = 1
+		has_character_flag = eternal_life_mystic
+		trait = horse
+		trait = cat
+		trait = dog
+		has_character_modifier = in_seclusion
+		has_character_modifier = elder_long_life_modifier
+		immortal = yes
 	}
 }

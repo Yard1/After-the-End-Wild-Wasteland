@@ -846,8 +846,12 @@ character_event = {
 				}
 				FROM = {
 					if = {
-						limit = { trait = sympathy_pacific_neognostic }
+						limit = { trait = sympathy_pacific_religion }
 						remove_trait = sympathy_pacific
+					}
+					if = {
+						limit = { trait = sympathy_cult_of_saints_religion }
+						remove_trait = sympathy_cult_of_saints
 					}
 				}
 			}
@@ -958,7 +962,7 @@ character_event = {
 								ROOT = {
 									OR = {
 										trait = sympathy_pacific
-										trait = sympathy_pacific_neognostic
+										trait = sympathy_pacific_religion
 									}
 								}
 							}

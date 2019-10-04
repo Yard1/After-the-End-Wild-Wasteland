@@ -7355,6 +7355,10 @@ add_brazilian_artifact_effect = { #Used in event JD.15016 (possible to use elsew
 }
 
 #MORE VANILLA OVERRIDES##
+# THIS is getting the trait added, the kinslayer_target target is the person dying
+# Save the event target before running this effect any time you publicly kill someone, the effect automatically checks they are a relative so you don't need to
+# The event target is cleared after the trait is added so re-save the target and re-run the effect to check for another character in the same event
+# The traits will overwrite each other kinslayer > familial_kinslayer > dynastic_kinslayer
 add_kinslayer_trait_effect = {
 	if = { #Parents, children, direct ancestors or descendants 
 		limit = {
@@ -8511,7 +8515,7 @@ random_coronation_events_effect = {
 
 ##Troubled Pregnancy##
 troubled_pregnancy_chance_low_effect = { 
-random_list = { 
+	random_list = { 
 	70 = { custom_tooltip = { text = tooltip_pregnancy_stable } }
 	30 = { custom_tooltip = { text = tooltip_pregnancy_gets_worse }
 		modifier = { 
@@ -8889,7 +8893,7 @@ random_list = {
 }
 
 troubled_pregnancy_chance_medium_effect = { 
-random_list = { 
+	random_list = { 
 	50 = { custom_tooltip = { text = tooltip_pregnancy_stable } }
 	50 = { custom_tooltip = { text = tooltip_pregnancy_gets_worse }
 		modifier = { 

@@ -1473,7 +1473,7 @@ check_if_ancestor_worship_worthy_effect = {
 				is_seafarer = yes
             }
             OR = { 
-                trait = pirate
+                has_pirate_trait = yes
                 trait = viking
                 trait = ravager
                 trait = sea_queen
@@ -1490,7 +1490,7 @@ check_if_ancestor_worship_worthy_effect = {
 				is_seafarer = yes
             }
             NOR = {
-                trait = pirate
+                has_pirate_trait = yes
                 trait = viking
                 trait = ravager
                 trait = sea_queen

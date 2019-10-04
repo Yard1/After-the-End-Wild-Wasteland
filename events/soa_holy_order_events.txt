@@ -2305,9 +2305,9 @@ character_event = {
 			}
 		}
 		liege = {
-			NOT = { has_landed_title = d_bektashi }
+			NOT = { has_landed_title = d_oppenheimer }
 			liege = {
-				NOT = { has_landed_title = d_bektashi }
+				NOT = { has_landed_title = d_oppenheimer }
 			}
 		}
 		
@@ -12423,7 +12423,7 @@ character_event = {
 		
 		liege = {
 			holy_order = no
-			religion = sacred_hearts
+			religion = sacred_heart
 			liege = {
 				holy_order = no
 			}
