@@ -639,8 +639,7 @@ RETTYPE_CUL_DEL =
 	}
 }
 
-RETTYPE_CUL_IRISH = 
-{
+RETTYPE_CUL_IRISH = {
 	first_type = 1
 	first_amount = 200
 	
@@ -650,6 +649,7 @@ RETTYPE_CUL_IRISH =
 			culture = maritimer
 			culture = yankee
 			culture = newfie
+			culture = gael_dubh
 		}
 	}
 	
