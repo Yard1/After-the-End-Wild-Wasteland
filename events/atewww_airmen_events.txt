@@ -134,7 +134,7 @@ character_event = {
 character_event = {
 	id = ATE_WWWW_AIRMEN.3
 	hide_window = yes
-	only_rulers = yes
+	only_playable = yes
 	religion = americanist
 		
 	trigger = {
@@ -273,7 +273,7 @@ character_event = {
 character_event = {
 	id = ATE_WWWW_AIRMEN.5
 	hide_window = yes
-	only_rulers = yes
+	only_playable = yes
 	religion = americanist
 	is_triggered_only = yes
 
