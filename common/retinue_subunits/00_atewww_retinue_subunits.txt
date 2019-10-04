@@ -42,3 +42,21 @@ RETTYPE_CUL_JAM = {
 		pikemen_morale = 0.10
 	}
 }
+
+RETTYPE_CUL_CUBAN = {
+	first_type = 3
+	first_amount = 400
+	
+	potential = {
+		is_nomadic = no
+		OR = {
+		    culture = cubano
+		    culture = afrocubano
+		}
+	}
+	
+	modifier = {
+		light_cavalry_offensive = 0.2
+		light_cavalry_morale = 0.2
+	}
+}

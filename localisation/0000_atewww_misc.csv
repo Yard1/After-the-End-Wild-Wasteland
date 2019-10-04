@@ -19,6 +19,13 @@ ca_culture_jamaican_3;Sefari Training Grounds;;;;;;;;;;;;;x
 ca_culture_jamaican_4;Sefari Training Grounds;;;;;;;;;;;;;x
 ca_culture_jamaican_1_desc;Allegedly based upon the ancient Imperial guard of Ras-Tafari himself, the heavily armed Caribbean Sefari are equipped with only the finest equipment money can buy, all the while presenting a formidable fighting force unlike any.;;;;;;;;;;;;;x
 
+RETTYPE_CUL_CUBAN;Azucarero;;;;;;;;;;;;;x
+ca_culture_cuban_1;Azucarero Riding Grounds;;;;;;;;;;;;;x
+ca_culture_cuban_2;Azucarero Riding Grounds;;;;;;;;;;;;;x
+ca_culture_cuban_3;Azucarero Riding Grounds;;;;;;;;;;;;;x
+ca_culture_cuban_4;Azucarero Riding Grounds;;;;;;;;;;;;;x
+ca_culture_cuban_1_desc;The infamous machete wielding Cuban Azucarero cavalry are raised and trained here. Specialising in skirmishing and harassment tactics, they are an integral part of any Cuban army;;;;;;;;;;;;;x
+
 # Mercenaries 
 d_border_patrol;Warriors of Ice;;;;;;;;;;;;;x
 d_border_patrol_adj;Ice;;;;;;;;;;;;;x
