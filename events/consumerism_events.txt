@@ -14,6 +14,7 @@ narrative_event = {
 	only_playable = yes
 	
 	trigger = {
+		ai = yes
 		controls_religion = no
 		is_landed = yes
 		is_tribal = no
@@ -28,7 +29,13 @@ narrative_event = {
 		}
 		NOT = { has_global_flag = consumerist_revolt_ongoing }
 		any_realm_province = {
+			owner = {
+				ai = yes
+			}
 			kingdom = {
+				holder_scope = {
+					ai = yes
+				}
 				OR = {
 					has_holder = no
 					holder_scope = {
@@ -90,13 +97,19 @@ narrative_event = {
 	immediate = {
 		set_character_flag = consumerist_revolt
 		set_global_flag = consumerist_revolt_ongoing
-		clear_global_event_target = consumerist_prophet
+		clr_global_event_target = consumerist_prophet
 		
 		activate_title = { title = d_consumerist status = yes }
 		
 		random_realm_province = {
 			limit = {
+				owner = {
+					ai = yes
+				}
 				kingdom = {
+					holder_scope = {
+						ai = yes
+					}
 					OR = {
 						has_holder = no
 						holder_scope = {
@@ -504,33 +517,6 @@ narrative_event = {
 						tier = KING
 					}
 				}
-			}
-		}
-
-		#memes
-		if = {
-			limit = {
-				c_2000060 = { 
-					ai = yes
-					is_alive = yes
-					is_incapable = no
-					prisoner = no
-					religion_group = oldworld
-					has_secret_religion = no
-				}
-			}
-			random_list = {
-				50 = {
-					c_2000060 = { 
-						set_secret_religion = consumerist
-					}
-				}
-				25 = {
-					c_2000060 = { 
-						religion = consumerist
-					}
-				}
-				25 = {}
 			}
 		}
 	}

@@ -15677,7 +15677,7 @@ character_event = {
 		}
 		if =  { 
 			limit =  { 
-				has_landed_title = d_occultist_pagan_reformed 
+				has_landed_title = d_occultist_reformed 
 				any_artifact = { artifact_type = crown_occultist_fylkir }
 			}
 			add_trait = dead_crown_occultist_fylkir

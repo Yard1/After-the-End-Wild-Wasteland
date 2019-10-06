@@ -232,9 +232,11 @@ decisions = {
 		}
 		allow = {
 			age = 16
-			NOT = { trait = in_hiding }
-			NOT = { trait = incapable }
+			block_general_event_trigger = no
+			holy_order = no
+			mercenary = no
 			is_landed = yes
+			NOT = { trait = travelling }
 			# Reduce the number of candidates somewhat
 			hidden_tooltip = { 
 				OR = {
@@ -248,6 +250,7 @@ decisions = {
 		}
 		effect = {
 			add_trait = on_campaign_speaker
+			add_trait = travelling
 			set_character_flag = speaker_candidate
 			hidden_tooltip = {
 				any_playable_ruler = { # Inform players

@@ -33,12 +33,11 @@ character_event = {
 			character_event = { id = prez.3 }
 		}
 		k_papal_state = {
+			set_variable = { which = num_candidates value = 0 }
 			holder_scope = {
-				#diplomatic_immunity = yes
-				#add_trait = electoral_college
-				set_variable = { which = num_candidates value = 0 }
-				character_event = { id = prez.7 days = 30 } # End candidate declaration period
-				#d_americanist = { grant_title = PREV }
+				1050 = {
+					province_event = { id = prez.700 days = 30 } # End candidate declaration period
+				}
 			}
 		}
 		d_americanist = {
@@ -76,17 +75,16 @@ character_event = {
 	immediate = {
 		set_global_flag = pres_election
 		set_global_flag = declare_candidacy
-		any_playable_ruler = { # Inform players
+		any_player = { # Inform players
 			limit = { religion = americanist }
 			character_event = { id = prez.3 }
 		}
 		k_papal_state = {
+			set_variable = { which = num_candidates value = 0 }
 			holder_scope = {
-				#diplomatic_immunity = yes
-				#add_trait = electoral_college
-				set_variable = { which = num_candidates value = 0 }
-				character_event = { id = prez.7 days = 30 } # End candidate declaration period
-				#d_americanist = { grant_title = PREV }
+				1050 = {
+					province_event = { id = prez.700 days = 30 } # End candidate declaration period
+				}
 			}
 		}
 		d_americanist = {
@@ -129,8 +127,8 @@ character_event = {
 			character_event = { id = prez.3 }
 		}
 		k_papal_state = {
+			set_variable = { which = num_candidates value = 0 }
 			holder_scope = {
-				set_variable = { which = num_candidates value = 0 }
 				character_event = { id = prez.7 days = 30 } # End candidate declaration period
 			}
 		}
@@ -209,9 +207,23 @@ character_event = {
 				limit = {
 					religion = americanist
 					trait = on_campaign
-					has_character_flag = pres_candidate
 				}
+				show_portrait = yes
 				custom_tooltip = { text = TOOLTIPPRESIDENTCANDIDATE }
+			}
+		}
+	}
+}
+
+province_event = {
+	id = prez.700
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		k_papal_state = {
+			holder_scope = {
+				character_event = { id = prez.7 }
 			}
 		}
 	}
@@ -223,31 +235,36 @@ character_event = {
 	desc = DEBUG
 	is_triggered_only = yes # triggered from prez.1
 	hide_window = yes
-	
+
 	option = {
 		name = DEBUG
+		log = "prez.7, enough candidates, prez.9 in 30 days"
 		trigger = {
-			check_variable = { which = num_candidates value = 0.1 }
-			has_global_flag = pres_election
+			k_papal_state = { check_variable = { which = num_candidates value = 0.1 } }
 		}
+		set_global_flag = pres_election
 		clr_global_flag = declare_candidacy
-		any_playable_ruler = {
+		any_player = {
 			limit = { religion = americanist }
 			character_event = { id = prez.6 }
 		}
-		character_event = { id = prez.9 days = 30 } # Thin out the field
+		1050 = {
+			province_event = { id = prez.9 days = 30 } # Thin out the field
+		}
 	}
 	
 	option = {
+		log = "prez.7 not enough candidates"
 		name = DEBUG
 		trigger = {
 			OR = {
-				NOT = { check_variable = { which = num_candidates value = 0.1 } }
+				NOT = { k_papal_state = { check_variable = { which = num_candidates value = 0.1 } } }
 				NOT = { has_global_flag = pres_election }
 			}
 		}
-		character_event = { id = prez.7 }
-		
+		1050 = {
+			province_event = { id = prez.700 days = 1 } # Thin out the field
+		}
 		set_global_flag = declare_candidacy
 	}
 }
@@ -265,7 +282,8 @@ character_event = {
 	
 	immediate = {
 		remove_trait = on_campaign
-		k_papal_state = { holder_scope = { change_variable = { which = num_candidates value = -1 } } }
+		remove_trait = travelling
+		k_papal_state = { change_variable = { which = num_candidates value = -1 } }
 		any_playable_ruler = { # Inform players
 			limit = { religion = americanist }
 			character_event = { id = prez.5 days = 1 }
@@ -279,6 +297,20 @@ character_event = {
 	}
 }
 
+province_event = {
+	id = prez.900
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		k_papal_state = {
+			holder_scope = {
+				character_event = { id = prez.9 }
+			}
+		}
+	}
+}
+
 # Thin out the field
 character_event = {
 	id = prez.9
@@ -287,12 +319,33 @@ character_event = {
 	hide_window = yes
 	
 	immediate = {
-		character_event = { id = prez.89 days = 90 } # Schedule voting
-		character_event = { id = prez.10 } # Thin out the field
+		log = "prez.9: [Root.GetBestName], prez.89 in 90 days"
+		k_papal_state = {
+			holder_scope = {
+				1050 = { 
+					province_event = { id = prez.8900 days = 90 } # Schedule voting
+				}
+				character_event = { id = prez.10 } # Thin out the field
+			}
+		}
 	}
 	
 	option = {
 		name = DEBUG
+	}
+}
+
+province_event = {
+	id = prez.1000
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		k_papal_state = {
+			holder_scope = {
+				character_event = { id = prez.10 }
+			}
+		}
 	}
 }
 
@@ -305,22 +358,30 @@ character_event = {
 	
 	option = { # More than 4 candidates
 		name = DEBUG
+		log = "prez.10, more than 4 candidates"
 		trigger = {
-			check_variable = { which = num_candidates value = 4.1 }
+			k_papal_state = { check_variable = { which = num_candidates value = 4.1 } }
 			has_global_flag = pres_election
 		}
-		character_event = { id = prez.10 days = 3 } # Continue loop
-		character_event = { id = prez.205 } # Hold opinion poll
+		k_papal_state = {
+			holder_scope = {
+				1050 = { 
+					province_event = { id = prez.1000 days = 3 } # Continue loop
+				}
+				character_event = { id = prez.205 } # Hold opinion poll
+			}
+		}
 	}
 	
 	option = { # 4 or less candidates
 		name = DEBUG
 		trigger = {
 			OR = {
-				NOT = { check_variable = { which = num_candidates value = 4.1 } }
+				NOT = { k_papal_state = { check_variable = { which = num_candidates value = 4.1 } } }
 				NOT = { has_global_flag = pres_election }
 			}
 		}
+		log = "prez.10, 4 or less candidates"
 		set_global_flag = pres_voting #once 4 or less candidates have been selected, you can no longer drop out of the race via decision.
 	}
 }
@@ -355,7 +416,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 2
-				k_papal_state = { holder_scope = { check_variable = { which = num_candidates value = 8 } } }
+				k_papal_state = { check_variable = { which = num_candidates value = 8 } }
+			}
+			modifier = {
+				factor = 0
+				k_papal_state = { NOT = { check_variable = { which = num_candidates value = 4.1 } } }
 			}
 		}
 		character_event = { id = prez.8 }
@@ -376,6 +441,20 @@ character_event = {
 	}
 }
 
+province_event = {
+	id = prez.8900
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		k_papal_state = {
+			holder_scope = {
+				character_event = { id = prez.89 }
+			}
+		}
+	}
+}
+
 #### VOTING
 # Warn players about upcoming election
 character_event = {
@@ -385,16 +464,18 @@ character_event = {
 	hide_window = yes
 	
 	immediate = {
-		character_event = { id = prez.91 days = 30 }
-	}
-	
-	option = {
-		name = DEBUG
-		any_playable_ruler = {
+		log = "prez.89: [Root.GetBestName], prez.91 in 30 days"
+		any_player = {
 			limit = { religion = americanist }
 			character_event = { id = prez.90 }
 		}
+		k_papal_state = {
+			holder_scope = {
+				 1050 = { province_event = { id = prez.9100 days = 30 } }
+			}
+		}
 	}
+	
 }
 
 # Player warning
@@ -411,12 +492,31 @@ character_event = {
 	}
 }
 
+province_event = {
+	id = prez.9100
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		k_papal_state = {
+			holder_scope = {
+				character_event = { id = prez.91 }
+			}
+		}
+	}
+}
+
+
 # Send out ballots
 character_event = {
 	id = prez.91
 	desc = DEBUG
 	is_triggered_only = yes
 	
+	immediate = {
+		log = "prez.91: [Root.GetBestName]"
+	}
+
 	option = {
 		name = DEBUG
 		on_campaign = {
@@ -449,10 +549,12 @@ character_event = {
 			}
 			save_event_target_as = c4
 		}
-		set_variable = { which = "c1_votes" value = 0 }
-		set_variable = { which = "c2_votes" value = 0 }
-		set_variable = { which = "c3_votes" value = 0 }
-		set_variable = { which = "c4_votes" value = 0 }
+		k_papal_state = {
+			set_variable = { which = "c1_votes" value = 0 }
+			set_variable = { which = "c2_votes" value = 0 }
+			set_variable = { which = "c3_votes" value = 0 }
+			set_variable = { which = "c4_votes" value = 0 }
+		}
 		
 		any_independent_ruler = {
 			any_realm_character = {
@@ -463,9 +565,10 @@ character_event = {
 				letter_event = { id = prez.92 }
 			}
 		}
-		
-		character_event = { id = prez.93 days = 1 } # Count votes
-		character_event = { id = prez.98 days = 2 } # Cleanup
+		1050 = {
+			province_event = { id = prez.9300 days = 1 } # Count votes
+			province_event = { id = prez.9800 days = 2 } # Cleanup
+		}
 	}
 }
 
@@ -485,7 +588,7 @@ letter_event = {
 			event_target:c1 = { always = yes }
 		}
 		event_target:c1 = { custom_tooltip = { text = prez.92.tooltip } }
-		hidden_tooltip = { FROM = { change_variable = { which = "c1_votes" value = 1 } } }
+		hidden_tooltip = { k_papal_state = { change_variable = { which = "c1_votes" value = 1 } } }
 	}
 	
 	option = {
@@ -495,7 +598,7 @@ letter_event = {
 			event_target:c2 = { always = yes }
 		}
 		event_target:c2 = { custom_tooltip = { text = prez.92.tooltip } }
-		hidden_tooltip = { FROM = { change_variable = { which = "c2_votes" value = 1 } } }
+		hidden_tooltip = { k_papal_state = { change_variable = { which = "c2_votes" value = 1 } } }
 	}
 	
 	option = {
@@ -505,7 +608,7 @@ letter_event = {
 			event_target:c3 = { always = yes }
 		}
 		event_target:c3 = { custom_tooltip = { text = prez.92.tooltip } }
-		hidden_tooltip = { FROM = { change_variable = { which = "c3_votes" value = 1 } } }
+		hidden_tooltip = { k_papal_state = { change_variable = { which = "c3_votes" value = 1 } } }
 	}
 	
 	option = {
@@ -515,7 +618,7 @@ letter_event = {
 			event_target:c4 = { always = yes }
 		}
 		event_target:c4 = { custom_tooltip = { text = prez.92.tooltip } }
-		hidden_tooltip = { FROM = { change_variable = { which = "c4_votes" value = 1 } } }
+		hidden_tooltip = { k_papal_state = { change_variable = { which = "c4_votes" value = 1 } } }
 	}
 
 	option = {
@@ -627,22 +730,36 @@ letter_event = {
 		if = {
 			limit = { has_character_flag = best_candidate_c1 }
 			log = "best candidate c1: [c1.GetBestName]"
-			FROM = { change_variable = { which = "c1_votes" value = 1 } }
+			k_papal_state = { change_variable = { which = "c1_votes" value = 1 } }
 		}
 		else_if = {
 			limit = { has_character_flag = best_candidate_c2 }
 			log = "best candidate c2: [c2.GetBestName]"
-			FROM = { change_variable = { which = "c2_votes" value = 1 } }
+			k_papal_state = { change_variable = { which = "c2_votes" value = 1 } }
 		}
 		else_if = {
 			limit = { has_character_flag = best_candidate_c3 }
 			log = "best candidate c3: [c3.GetBestName]"
-			FROM = { change_variable = { which = "c3_votes" value = 1 } }
+			k_papal_state = { change_variable = { which = "c3_votes" value = 1 } }
 		}
 		else_if = {
 			limit = { has_character_flag = best_candidate_c4 }
 			log = "best candidate c4: [c4.GetBestName]"
-			FROM = { change_variable = { which = "c4_votes" value = 1 } }
+			k_papal_state = { change_variable = { which = "c4_votes" value = 1 } }
+		}
+	}
+}
+
+province_event = {
+	id = prez.9300
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		k_papal_state = {
+			holder_scope = {
+				character_event = { id = prez.93 }
+			}
 		}
 	}
 }
@@ -661,16 +778,16 @@ character_event = {
 	option = {
 		name = DEBUG
 		trigger = {
-			check_variable = { which = "c1_votes" which = "c2_votes" }
-			check_variable = { which = "c1_votes" which = "c3_votes" }
-			check_variable = { which = "c1_votes" which = "c4_votes" }
+			k_papal_state = { check_variable = { which = "c1_votes" which = "c2_votes" } }
+			k_papal_state = { check_variable = { which = "c1_votes" which = "c3_votes" } }
+			k_papal_state = { check_variable = { which = "c1_votes" which = "c4_votes" } }
 		}
 		event_target:c1 = {
 			liege = {
 				save_event_target_as = pres_liege
 			}
-			d_americanist = { gain_title = PREV }
-			set_defacto_liege = event_target:pres_liege
+			#d_americanist = { gain_title = PREV }
+			#set_defacto_liege = event_target:pres_liege
 			save_event_target_as = winner
 			narrative_event = { id = prez.94 }
 		}
@@ -679,16 +796,16 @@ character_event = {
 	option = {
 		name = DEBUG
 		trigger = {
-			check_variable = { which = "c2_votes" which = "c1_votes" }
-			check_variable = { which = "c2_votes" which = "c3_votes" }
-			check_variable = { which = "c2_votes" which = "c4_votes" }
+			k_papal_state = { check_variable = { which = "c2_votes" which = "c1_votes" } }
+			k_papal_state = { check_variable = { which = "c2_votes" which = "c3_votes" } }
+			k_papal_state = { check_variable = { which = "c2_votes" which = "c4_votes" } }
 		}
 		event_target:c2 = {
 			liege = {
 				save_event_target_as = pres_liege
 			}
-			d_americanist = { gain_title = PREV }
-			set_defacto_liege = event_target:pres_liege
+			#d_americanist = { gain_title = PREV }
+			#set_defacto_liege = event_target:pres_liege
 			save_event_target_as = winner
 			narrative_event = { id = prez.94 }
 		}
@@ -697,16 +814,16 @@ character_event = {
 	option = {
 		name = DEBUG
 		trigger = {
-			check_variable = { which = "c3_votes" which = "c1_votes" }
-			check_variable = { which = "c3_votes" which = "c2_votes" }
-			check_variable = { which = "c3_votes" which = "c4_votes" }
+			k_papal_state = { check_variable = { which = "c3_votes" which = "c1_votes" } }
+			k_papal_state = { check_variable = { which = "c3_votes" which = "c2_votes" } }
+			k_papal_state = { check_variable = { which = "c3_votes" which = "c4_votes" } }
 		}
 		event_target:c3 = {
 			liege = {
 				save_event_target_as = pres_liege
 			}
-			d_americanist = { gain_title = PREV }
-			set_defacto_liege = event_target:pres_liege
+			#d_americanist = { gain_title = PREV }
+			#set_defacto_liege = event_target:pres_liege
 			save_event_target_as = winner
 			narrative_event = { id = prez.94 }
 		}
@@ -715,16 +832,16 @@ character_event = {
 	option = {
 		name = DEBUG
 		trigger = {
-			check_variable = { which = "c4_votes" which = "c1_votes" }
-			check_variable = { which = "c4_votes" which = "c2_votes" }
-			check_variable = { which = "c4_votes" which = "c3_votes" }
+			k_papal_state = { check_variable = { which = "c4_votes" which = "c1_votes" } }
+			k_papal_state = { check_variable = { which = "c4_votes" which = "c2_votes" } }
+			k_papal_state = { check_variable = { which = "c4_votes" which = "c3_votes" } }
 		}
 		event_target:c4 = {
 			liege = {
 				save_event_target_as = pres_liege
 			}
-			d_americanist = { gain_title = PREV }
-			set_defacto_liege = event_target:pres_liege
+			#d_americanist = { gain_title = PREV }
+			#set_defacto_liege = event_target:pres_liege
 			save_event_target_as = winner
 			narrative_event = { id = prez.94 }
 		}
@@ -776,6 +893,7 @@ narrative_event = {
 		name = prez.94.optA
 		prestige = 500
 		remove_trait = on_campaign
+		remove_trait = travelling
 		add_trait = president
 		set_character_flag = current_president
 		clr_character_flag = pres_candidate
@@ -785,6 +903,7 @@ narrative_event = {
 			give_nickname = nick_lastname
 		}
 		hidden_tooltip = {
+			set_defacto_liege = event_target:pres_liege
 			any_playable_ruler = {
 				limit = { religion = americanist }
 				character_event = { id = prez.95 }
@@ -837,6 +956,20 @@ character_event = {
 	}
 }
 
+province_event = {
+	id = prez.9800
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		k_papal_state = {
+			holder_scope = {
+				character_event = { id = prez.98 }
+			}
+		}
+	}
+}
+
 # Cleanup event (all characters)
 character_event = {
 	id = prez.98
@@ -848,11 +981,9 @@ character_event = {
 		clr_global_flag = pres_election
 		clr_global_flag = declare_candidacy
 		clr_global_flag = pres_voting
-		k_papal_state = { holder_scope = {
-			#diplomatic_immunity = no
-			#remove_trait = electoral_college
+		k_papal_state = {
 			set_variable = { which = num_candidates value = 0 }
-		} }
+		}
 		any_independent_ruler = {
 			any_realm_character = {
 				character_event = { id = prez.99 }
@@ -874,6 +1005,7 @@ character_event = {
 	
 	immediate = {
 		remove_trait = on_campaign
+		remove_trait = travelling
 		clr_character_flag = pres_candidate
 		clr_character_flag = vp_candidate
 		clr_character_flag = dropped_out
@@ -1355,24 +1487,26 @@ character_event = {
 			log = "c8: [This.GetBestName]"
 			character_event = { id = prez.11 days = 2 } # After getting poll, decide whether to drop out
 		}
-		set_variable = { which = "c1_votes" value = 0 }
-		set_variable = { which = "c2_votes" value = 0 }
-		set_variable = { which = "c3_votes" value = 0 }
-		set_variable = { which = "c4_votes" value = 0 }
-		set_variable = { which = "c5_votes" value = 0 }
-		set_variable = { which = "c6_votes" value = 0 }
-		set_variable = { which = "c7_votes" value = 0 }
-		set_variable = { which = "c8_votes" value = 0 }
+		k_papal_state = {
+			set_variable = { which = "c1_votes" value = 0 }
+			set_variable = { which = "c2_votes" value = 0 }
+			set_variable = { which = "c3_votes" value = 0 }
+			set_variable = { which = "c4_votes" value = 0 }
+			set_variable = { which = "c5_votes" value = 0 }
+			set_variable = { which = "c6_votes" value = 0 }
+			set_variable = { which = "c7_votes" value = 0 }
+			set_variable = { which = "c8_votes" value = 0 }
 
-		set_variable = { which = "1st_place" value = 0 }
-		set_variable = { which = "2nd_place" value = 0 }
-		set_variable = { which = "3rd_place" value = 0 }
-		set_variable = { which = "4th_place" value = 0 }
-		set_variable = { which = "1st_place_index" value = 0 }
-		set_variable = { which = "2nd_place_index" value = 0 }
-		set_variable = { which = "3rd_place_index" value = 0 }
-		set_variable = { which = "4th_place_index" value = 0 }
-		character_event = { id = prez.208 days = 1 }
+			set_variable = { which = "1st_place" value = 0 }
+			set_variable = { which = "2nd_place" value = 0 }
+			set_variable = { which = "3rd_place" value = 0 }
+			set_variable = { which = "4th_place" value = 0 }
+			set_variable = { which = "1st_place_index" value = 0 }
+			set_variable = { which = "2nd_place_index" value = 0 }
+			set_variable = { which = "3rd_place_index" value = 0 }
+			set_variable = { which = "4th_place_index" value = 0 }
+		}
+		1050 = { province_event = { id = prez.2080 days = 1 } }
 		
 		any_independent_ruler = {
 			any_realm_character = {
@@ -1566,7 +1700,7 @@ character_event = {
 		if = {
 			limit = { has_character_flag = best_candidate_c1 }
 			log = "best candidate c1: [c1.GetBestName]"
-			FROM = {
+			k_papal_state = { 
 				if = {
 					limit = {
 						check_variable = { which ="c1_votes" which = "1st_place" }
@@ -1637,7 +1771,7 @@ character_event = {
 		else_if = {
 			limit = { has_character_flag = best_candidate_c2 }
 			log = "best candidate c2: [c2.GetBestName]"
-			FROM = {
+			k_papal_state = { 
 				if = {
 					limit = {
 						check_variable = { which ="c2_votes" which = "1st_place" }
@@ -1708,7 +1842,7 @@ character_event = {
 		else_if = {
 			limit = { has_character_flag = best_candidate_c3 }
 			log = "best candidate c3: [c3.GetBestName]"
-			FROM = {
+			k_papal_state = { 
 				if = {
 					limit = {
 						check_variable = { which ="c3_votes" which = "1st_place" }
@@ -1779,7 +1913,7 @@ character_event = {
 		else_if = {
 			limit = { has_character_flag = best_candidate_c4 }
 			log = "best candidate c4: [c4.GetBestName]"
-			FROM = {
+			k_papal_state = { 
 				if = {
 					limit = {
 						check_variable = { which ="c4_votes" which = "1st_place" }
@@ -1850,7 +1984,7 @@ character_event = {
 		else_if = {
 			limit = { has_character_flag = best_candidate_c5 }
 			log = "best candidate c5: [c5.GetBestName]"
-			FROM = {
+			k_papal_state = { 
 				if = {
 					limit = {
 						check_variable = { which ="c5_votes" which = "1st_place" }
@@ -1921,7 +2055,7 @@ character_event = {
 		else_if = {
 			limit = { has_character_flag = best_candidate_c6 }
 			log = "best candidate c6: [c6.GetBestName]"
-			FROM = {
+			k_papal_state = { 
 				if = {
 					limit = {
 						check_variable = { which ="c6_votes" which = "1st_place" }
@@ -1992,7 +2126,7 @@ character_event = {
 		else_if = {
 			limit = { has_character_flag = best_candidate_c7 }
 			log = "best candidate c7: [c7.GetBestName]"
-			FROM = {
+			k_papal_state = { 
 				if = {
 					limit = {
 						check_variable = { which ="c7_votes" which = "1st_place" }
@@ -2063,7 +2197,7 @@ character_event = {
 		else_if = {
 			limit = { has_character_flag = best_candidate_c8 }
 			log = "best candidate c8: [c8.GetBestName]"
-			FROM = {
+			k_papal_state = { 
 				if = {
 					limit = {
 						check_variable = { which ="c8_votes" which = "1st_place" }
@@ -2134,230 +2268,247 @@ character_event = {
 	}
 }
 
+province_event = {
+	id = prez.2080
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		k_papal_state = {
+			holder_scope = {
+				character_event = { id = prez.208 }
+			}
+		}
+	}
+}
+
 # Report results, and set flags for AI
 character_event = {
 	id = prez.208
 	desc = prez.208.desc
 	picture = GFX_evt_recieve_letter
 	is_triggered_only = yes
-	hide_from = yes
+	hide_window = yes
 	
 	immediate = {
 		log = "----------------------------"
 		log = "Determine place, [Root.GetBestName]"
-		log = "c1: [Root.c1_votes.GetValue]"
-		log = "c2: [Root.c2_votes.GetValue]"
-		log = "c3: [Root.c3_votes.GetValue]"
-		log = "c4: [Root.c4_votes.GetValue]"
-		log = "c5: [Root.c5_votes.GetValue]"
-		log = "c6: [Root.c6_votes.GetValue]"
-		log = "c7: [Root.c7_votes.GetValue]"
-		log = "c8: [Root.c8_votes.GetValue]"
+		k_papal_state = {
+			log = "c1: [This.c1_votes.GetValue]"
+			log = "c2: [This.c2_votes.GetValue]"
+			log = "c3: [This.c3_votes.GetValue]"
+			log = "c4: [This.c4_votes.GetValue]"
+			log = "c5: [This.c5_votes.GetValue]"
+			log = "c6: [This.c6_votes.GetValue]"
+			log = "c7: [This.c7_votes.GetValue]"
+			log = "c8: [This.c8_votes.GetValue]"
 
-		log = "1st_place: [Root.1st_place.GetValue]"
-		log = "2nd_place: [Root.2nd_place.GetValue]"
-		log = "3rd_place: [Root.3rd_place.GetValue]"
-		log = "4th_place: [Root.4th_place.GetValue]"
+			log = "1st_place: [This.1st_place.GetValue]"
+			log = "2nd_place: [This.2nd_place.GetValue]"
+			log = "3rd_place: [This.3rd_place.GetValue]"
+			log = "4th_place: [This.4th_place.GetValue]"
 
-		log = "1st_place_index: [Root.1st_place_index.GetValue]"
-		log = "2nd_place_index: [Root.2nd_place_index.GetValue]"
-		log = "3rd_place_index: [Root.3rd_place_index.GetValue]"
-		log = "4th_place_index: [Root.4th_place_index.GetValue]"
+			log = "1st_place_index: [This.1st_place_index.GetValue]"
+			log = "2nd_place_index: [This.2nd_place_index.GetValue]"
+			log = "3rd_place_index: [This.3rd_place_index.GetValue]"
+			log = "4th_place_index: [This.4th_place_index.GetValue]"
+		}
+		k_papal_state = {
+			if = {
+				limit = {
+					is_variable_equal = { which = "1st_place_index" value = 1 }
+				}
+				event_target:c1 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "1st_place_index" value = 2 }
+				}
+				event_target:c2 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "1st_place_index" value = 3 }
+				}
+				event_target:c3 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "1st_place_index" value = 4 }
+				}
+				event_target:c4 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "1st_place_index" value = 5 }
+				}
+				event_target:c5 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "1st_place_index" value = 6 }
+				}
+				event_target:c6 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "1st_place_index" value = 7 }
+				}
+				event_target:c7 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
+			}
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "1st_place_index" value = 8 }
+				}
+				event_target:c8 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
+			}
 
-		if = {
-			limit = {
-				is_variable_equal = { which = "1st_place_index" value = 1 }
+			if = {
+				limit = {
+					is_variable_equal = { which = "2nd_place_index" value = 1 }
+				}
+				event_target:c1 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
 			}
-			event_target:c1 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "1st_place_index" value = 2 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "2nd_place_index" value = 2 }
+				}
+				event_target:c2 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
 			}
-			event_target:c2 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "1st_place_index" value = 3 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "2nd_place_index" value = 3 }
+				}
+				event_target:c3 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
 			}
-			event_target:c3 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "1st_place_index" value = 4 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "2nd_place_index" value = 4 }
+				}
+				event_target:c4 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
 			}
-			event_target:c4 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "1st_place_index" value = 5 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "2nd_place_index" value = 5 }
+				}
+				event_target:c5 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
 			}
-			event_target:c5 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "1st_place_index" value = 6 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "2nd_place_index" value = 6 }
+				}
+				event_target:c6 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
 			}
-			event_target:c6 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "1st_place_index" value = 7 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "2nd_place_index" value = 7 }
+				}
+				event_target:c7 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
 			}
-			event_target:c7 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "1st_place_index" value = 8 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "2nd_place_index" value = 8 }
+				}
+				event_target:c8 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
 			}
-			event_target:c8 = { set_character_flag = 1st_place log = "1st_place: [This.GetBestName]" }
-		}
 
-		if = {
-			limit = {
-				is_variable_equal = { which = "2nd_place_index" value = 1 }
+			if = {
+				limit = {
+					is_variable_equal = { which = "3rd_place_index" value = 1 }
+				}
+				event_target:c1 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
 			}
-			event_target:c1 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "2nd_place_index" value = 2 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "3rd_place_index" value = 2 }
+				}
+				event_target:c2 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
 			}
-			event_target:c2 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "2nd_place_index" value = 3 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "3rd_place_index" value = 3 }
+				}
+				event_target:c3 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
 			}
-			event_target:c3 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "2nd_place_index" value = 4 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "3rd_place_index" value = 4 }
+				}
+				event_target:c4 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
 			}
-			event_target:c4 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "2nd_place_index" value = 5 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "3rd_place_index" value = 5 }
+				}
+				event_target:c5 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
 			}
-			event_target:c5 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "2nd_place_index" value = 6 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "3rd_place_index" value = 6 }
+				}
+				event_target:c6 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
 			}
-			event_target:c6 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "2nd_place_index" value = 7 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "3rd_place_index" value = 7 }
+				}
+				event_target:c7 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
 			}
-			event_target:c7 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "2nd_place_index" value = 8 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "3rd_place_index" value = 8 }
+				}
+				event_target:c8 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
 			}
-			event_target:c8 = { set_character_flag = 2nd_place log = "2nd_place: [This.GetBestName]" }
-		}
 
-		if = {
-			limit = {
-				is_variable_equal = { which = "3rd_place_index" value = 1 }
+			if = {
+				limit = {
+					is_variable_equal = { which = "4th_place_index" value = 1 }
+				}
+				event_target:c1 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
 			}
-			event_target:c1 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "3rd_place_index" value = 2 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "4th_place_index" value = 2 }
+				}
+				event_target:c2 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
 			}
-			event_target:c2 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "3rd_place_index" value = 3 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "4th_place_index" value = 3 }
+				}
+				event_target:c3 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
 			}
-			event_target:c3 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "3rd_place_index" value = 4 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "4th_place_index" value = 4 }
+				}
+				event_target:c4 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
 			}
-			event_target:c4 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "3rd_place_index" value = 5 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "4th_place_index" value = 5 }
+				}
+				event_target:c5 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
 			}
-			event_target:c5 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "3rd_place_index" value = 6 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "4th_place_index" value = 6 }
+				}
+				event_target:c6 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
 			}
-			event_target:c6 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "3rd_place_index" value = 7 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "4th_place_index" value = 7 }
+				}
+				event_target:c7 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
 			}
-			event_target:c7 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "3rd_place_index" value = 8 }
+			else_if = {
+				limit = {
+					is_variable_equal = { which = "4th_place_index" value = 8 }
+				}
+				event_target:c8 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
 			}
-			event_target:c8 = { set_character_flag = 3rd_place log = "3rd_place: [This.GetBestName]" }
-		}
-
-				if = {
-			limit = {
-				is_variable_equal = { which = "4th_place_index" value = 1 }
-			}
-			event_target:c1 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "4th_place_index" value = 2 }
-			}
-			event_target:c2 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "4th_place_index" value = 3 }
-			}
-			event_target:c3 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "4th_place_index" value = 4 }
-			}
-			event_target:c4 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "4th_place_index" value = 5 }
-			}
-			event_target:c5 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "4th_place_index" value = 6 }
-			}
-			event_target:c6 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "4th_place_index" value = 7 }
-			}
-			event_target:c7 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
-		}
-		else_if = {
-			limit = {
-				is_variable_equal = { which = "4th_place_index" value = 8 }
-			}
-			event_target:c8 = { set_character_flag = 4th_place log = "4th_place: [This.GetBestName]" }
 		}
 	}
 }

@@ -1305,13 +1305,6 @@ obj_wants_landed_title = {
 			factor = 3.0
 			trait = ambitious
 		}
-		modifier = {
-			factor = 2.0
-			religion_group = muslim
-			liege = {
-				dynasty = ROOT
-			}
-		}
 	}
 	success = {
 		is_ruler = yes
@@ -1841,21 +1834,6 @@ obj_become_king = {
 		capital_scope = {
 			kingdom = {
 				always = yes
-			}
-		}
-		NAND = {
-			ai = yes
-			kingdom = {
-				OR = {
-					title = k_nenets
-					title = k_sapmi
-					title = k_perm
-				}
-			}
-			OR = {
-				culture = lappish
-				culture = samoyed
-				culture = komi
 			}
 		}
 	}

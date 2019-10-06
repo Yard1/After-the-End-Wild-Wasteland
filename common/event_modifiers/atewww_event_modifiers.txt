@@ -181,3 +181,7 @@ recently_invited_rabbi = {
 held_pioneers_day_timer = {
 	icon = 3
 }
+
+faction_pro_imperial_ultimatum_timer = {
+	icon = 3
+}

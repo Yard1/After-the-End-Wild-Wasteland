@@ -892,7 +892,7 @@ decisions = {
 		is_high_prio = yes
 		
 		potential = {
-			min_age = 20
+			age = 20
 			religion = cetic
 			e_california = { # requires figurehead emperor
 				holder_scope = {
@@ -1063,6 +1063,7 @@ decisions = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
+			NOT = { has_character_flag = ulama_in_progress }
 			NOT = { has_character_modifier = recent_ritual_ballgame }
 		}
 		allow = {
@@ -1224,7 +1225,7 @@ decisions = {
 						days = 730
 					}
 				}
-			}				
+			}
 		}
 	}
 	

@@ -588,8 +588,7 @@ character_event = {
 		c_2000060 = { 
 			is_patrician = no
 			is_alive = yes
-			is_incapable = no
-			prisoner = no
+			block_general_event_trigger = no
 			liege = { has_landed_title = d_new_york }
 		}
 	}
@@ -604,7 +603,7 @@ character_event = {
 			}
 			c_1788013 = { #starting clinton character
 				dynasty_head = { 
-					add_rival=ROOT
+					add_rival = ROOT
 					ROOT = { add_rival=PREV }
 				} 
 			}
