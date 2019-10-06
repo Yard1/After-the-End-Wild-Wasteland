@@ -33,9 +33,6 @@ narrative_event = {
 				ai = yes
 			}
 			kingdom = {
-				holder_scope = {
-					ai = yes
-				}
 				OR = {
 					has_holder = no
 					holder_scope = {
@@ -88,10 +85,6 @@ narrative_event = {
 			factor = 0.75
 			year = 2800
 		}
-		modifier = {
-			factor = 10.0
-			ai = no
-		}
 	}
 	
 	immediate = {
@@ -107,9 +100,6 @@ narrative_event = {
 					ai = yes
 				}
 				kingdom = {
-					holder_scope = {
-						ai = yes
-					}
 					OR = {
 						has_holder = no
 						holder_scope = {

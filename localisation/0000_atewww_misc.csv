@@ -65,6 +65,258 @@ EVTOPTB_ATE_WWW_TITLE_2;I see.;;;;;;;;;;;;;x
 EVTDESC_ATE_WWW_TITLE_3;Thanks to [Root.GetBestName]'s heritage, [Root.GetSheHe] has managed to recreate the Kingdom of Dixieland by combining the kingdoms of Alabama and Georgia into one.;;;;;;;;;;;;;x
 EVTOPTA_ATE_WWW_TITLE_3;As [Root.Religion.GetHighGodName] intended.;;;;;;;;;;;;;x
 
+#newfie titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+baron_newfie;Barún;;;;;;;;;;;;;x
+baron_female_newfie;Banbharún;;;;;;;;;;;;;x
+baron_title_ruler_consort_newfie;Banbharún;;;;;;;;;;;;;x
+baron_title_ruler_consort_female_newfie;Barún;;;;;;;;;;;;;x
+barony_of_newfie;Bairnéad na;;;;;;;;;;;;;x
+count_newfie;Tiarna;;;;;;;;;;;;;x
+count_female_newfie;Bantiarna;;;;;;;;;;;;;x
+count_title_ruler_consort_newfie;Bantiarna;;;;;;;;;;;;;x
+count_title_ruler_consort_female_newfie;Tiarna;;;;;;;;;;;;;x
+county_of_newfie;Tiarnas na;;;;;;;;;;;;;x
+duke_newfie;Íseal-Rí;;;;;;;;;;;;;x
+duke_female_newfie;Íseal-Banríon;;;;;;;;;;;;;x
+duke_title_ruler_consort_newfie;Íseal-Banríon;;;;;;;;;;;;;x
+duke_title_ruler_consort_female_newfie;Íseal-Rí;;;;;;;;;;;;;x
+duchy_of_newfie;Íseal-Ríocht na;;;;;;;;;;;;;x
+king_newfie;Rí;;;;;;;;;;;;;x
+king_female_newfie;Banríon;;;;;;;;;;;;;x
+king_title_consort_newfie;Banríon;;;;;;;;;;;;;x
+king_title_consort_female_newfie;Rí;;;;;;;;;;;;;x
+kingdom_of_newfie;Ríocht na;;;;;;;;;;;;;x
+emperor_newfie;Ard-rí;;;;;;;;;;;;;x
+emperor_female_newfie;Ard-Banríon;;;;;;;;;;;;;x
+emperor_title_consort_newfie;Ard-Banríon;;;;;;;;;;;;;x
+emperor_title_consort_female_newfie;Ard-rí;;;;;;;;;;;;;x
+empire_of_newfie;Impireacht na;;;;;;;;;;;;;x
+title_prince_newfie;Flaith;;;;;;;;;;;;;x
+title_prince_female_newfie;Banflaith;;;;;;;;;;;;;x
+city_baron_newfie;Méara;;;;;;;;;;;;;x
+city_count_newfie;Méara;;;;;;;;;;;;;x
+city_duke_newfie;Ard-méara;;;;;;;;;;;;;x
+city_king_newfie;Taoiseach;;;;;;;;;;;;;x
+city_barony_of_newfie;Baile nu;;;;;;;;;;;;;x
+city_county_of_newfie;Baile nu;;;;;;;;;;;;;x
+city_duchy_of_newfie;Poblacht nu;;;;;;;;;;;;;x
+city_kingdom_of_newfie;Taibhseach Poblacht nu;;;;;;;;;;;;;x
+
+#maratimer titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+baron_maritimer;Baran;;;;;;;;;;;;;x
+baron_female_maritimer;Banabharan;;;;;;;;;;;;;x
+baron_title_ruler_consort_maritimer;Banabharan;;;;;;;;;;;;;x
+baron_title_ruler_consort_female_maritimer;Baran;;;;;;;;;;;;;x
+barony_of_maritimer;Frithbharan;;;;;;;;;;;;;x
+count_maritimer;Tighearna;;;;;;;;;;;;;x
+count_female_maritimer;Baintighearna;;;;;;;;;;;;;x
+count_title_ruler_consort_maritimer;Baintighearna;;;;;;;;;;;;;x
+count_title_ruler_consort_female_maritimer;Tighearna;;;;;;;;;;;;;x
+county_of_maritimer;Tighearnas;;;;;;;;;;;;;x
+duke_maritimer;Iseal-righ;;;;;;;;;;;;;x
+duke_female_maritimer;Iseal-Banrigh;;;;;;;;;;;;;x
+duke_title_ruler_consort_maritimer;Iseal-Banrigh;;;;;;;;;;;;;x
+duke_title_ruler_consort_female_maritimer;Iseal-righ;;;;;;;;;;;;;x
+duchy_of_maritimer;Iseal-Rioghachd na;;;;;;;;;;;;;x
+king_maritimer;Righ;;;;;;;;;;;;;x
+king_female_maritimer;Banrigh;;;;;;;;;;;;;x
+king_title_consort_maritimer;Banrigh;;;;;;;;;;;;;x
+king_title_consort_female_maritimer;Righ;;;;;;;;;;;;;x
+kingdom_of_maritimer;Rioghachd na;;;;;;;;;;;;;x
+emperor_maritimer;Impire;;;;;;;;;;;;;x
+emperor_female_maritimer;Banimpire;;;;;;;;;;;;;x
+emperor_title_consort_maritimer;Banimpire;;;;;;;;;;;;;x
+emperor_title_consort_female_maritimer;Impire;;;;;;;;;;;;;x
+empire_of_maritimer;Impireachd na;;;;;;;;;;;;;x
+title_prince_maritimer;Flath;;;;;;;;;;;;;x
+title_prince_female_maritimer;Banaflath;;;;;;;;;;;;;x
+city_baron_maritimer;Mear;;;;;;;;;;;;;x
+city_count_maritimer;Mear;;;;;;;;;;;;;x
+city_duke_maritimer;Ard-Mear;;;;;;;;;;;;;x
+city_king_maritimer;Priomhair;;;;;;;;;;;;;x
+city_barony_of_maritimer;Baile na;;;;;;;;;;;;;x
+city_county_of_maritimer;Baile na;;;;;;;;;;;;;x
+city_duchy_of_maritimer;Poblachd na;;;;;;;;;;;;;x
+city_kingdom_of_maritimer;Alainn Poblacht na;;;;;;;;;;;;;x
+
+#gael_dubh titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+baron_gael_dubh;Garda;;;;;;;;;;;;;x
+baron_female_gael_dubh;Bangarda;;;;;;;;;;;;;x
+baron_title_ruler_consort_gael_dubh;Bangarda;;;;;;;;;;;;;x
+baron_title_ruler_consort_female_gael_dubh;Garda;;;;;;;;;;;;;x
+barony_of_gael_dubh;Garastún nu;;;;;;;;;;;;;x
+count_gael_dubh;Ardabhcóide;;;;;;;;;;;;;x
+count_female_gael_dubh;Banardabhcóide;;;;;;;;;;;;;x
+count_title_ruler_consort_gael_dubh;Banardabhcóide;;;;;;;;;;;;;x
+count_title_ruler_consort_female_gael_dubh;Ardabhcóide;;;;;;;;;;;;;x
+county_of_gael_dubh;Clós nu;;;;;;;;;;;;;x
+duke_gael_dubh;Cigire;;;;;;;;;;;;;x
+duke_female_gael_dubh;Bancigire;;;;;;;;;;;;;x
+duke_title_ruler_consort_gael_dubh;Bancigire;;;;;;;;;;;;;x
+duke_title_ruler_consort_female_gael_dubh;Cigire;;;;;;;;;;;;;x
+duchy_of_gael_dubh;Barda nu;;;;;;;;;;;;;x
+king_gael_dubh;Ceannfort;;;;;;;;;;;;;x
+king_female_gael_dubh;Banceannfort;;;;;;;;;;;;;x
+king_title_consort_gael_dubh;Banceannfort;;;;;;;;;;;;;x
+king_title_consort_female_gael_dubh;Ceannfort;;;;;;;;;;;;;x
+kingdom_of_gael_dubh;Ceantar nu;;;;;;;;;;;;;x
+emperor_gael_dubh;Giúistís;;;;;;;;;;;;;x
+emperor_female_gael_dubh;Bangiúistís;;;;;;;;;;;;;x
+emperor_title_consort_gael_dubh;Bangiúistís;;;;;;;;;;;;;x
+emperor_title_consort_female_gael_dubh;Giúistís;;;;;;;;;;;;;x
+empire_of_gael_dubh;Críoch nu;;;;;;;;;;;;;x
+title_prince_gael_dubh;Leas;;;;;;;;;;;;;x
+title_prince_female_gael_dubh;Banleas;;;;;;;;;;;;;x
+city_baron_gael_dubh;Méara;;;;;;;;;;;;;x
+city_count_gael_dubh;Méara;;;;;;;;;;;;;x
+city_duke_gael_dubh;Ard-méara;;;;;;;;;;;;;x
+city_king_gael_dubh;Taoiseach;;;;;;;;;;;;;x
+city_barony_of_gael_dubh;Baile nu;;;;;;;;;;;;;x
+city_county_of_gael_dubh;Baile nu;;;;;;;;;;;;;x
+city_duchy_of_gael_dubh;Poblacht nu;;;;;;;;;;;;;x
+city_kingdom_of_gael_dubh;Taibhseach Poblacht nu;;;;;;;;;;;;;x
+
+#texan titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+baron_texan;Sheriff;;;;;;;;;;;;;x
+baron_female_texan;Sheriff;;;;;;;;;;;;;x
+baron_title_ruler_consort_texan;;;;;;;;;;;;;;x
+baron_title_ruler_consort_female_texan;;;;;;;;;;;;;;x
+barony_of_texan;Armory of;;;;;;;;;;;;;x
+count_texan;Baron;;;;;;;;;;;;;x
+count_female_texan;Baronness;;;;;;;;;;;;;x
+count_title_ruler_consort_texan;Baroness;;;;;;;;;;;;;x
+count_title_ruler_consort_female_texan;Baron;;;;;;;;;;;;;x
+emperor_title_consort_texan;First Lady;;;;;;;;;;;;;x
+emperor_title_consort_female_texan;First Lord;;;;;;;;;;;;;x
+
+#cajun titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+count_cajun;Comte;;;;;;;;;;;;;x
+count_female_cajun;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_cajun;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_female_cajun;Comte;;;;;;;;;;;;;x
+county_of_cajun;Paroisse de;;;;;;;;;;;;;x
+duke_cajun;Duc;;;;;;;;;;;;;x
+duke_female_cajun;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_cajun;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_female_cajun;Duc;;;;;;;;;;;;;x
+duchy_of_cajun;Duché de;;;;;;;;;;;;;x
+king_cajun;Roi;;;;;;;;;;;;;x
+king_female_cajun;Reine;;;;;;;;;;;;;x
+king_title_consort_cajun;Époux;;;;;;;;;;;;;x
+king_title_consort_female_cajun;Époux;;;;;;;;;;;;;x
+kingdom_of_cajun;Royaume de;;;;;;;;;;;;;x
+emperor_ontarois;Empereur;;;;;;;;;;;;;x
+emperor_female_cajun;Impératrice;;;;;;;;;;;;;x
+emperor_title_consort_cajun;Époux;;;;;;;;;;;;;x
+emperor_title_consort_female_cajun;Époux;;;;;;;;;;;;;x
+empire_of_cajun;Empire de;;;;;;;;;;;;;x
+title_prince_cajun;Prince;;;;;;;;;;;;x
+title_prince_female_cajun;Princesse;;;;;;;;;;;;;x
+city_baron_cajun;Maire;;;;;;;;;;;;;x
+city_count_cajun;Maire;;;;;;;;;;;;;x
+city_duke_cajun;Grande Maire;;;;;;;;;;;;;x
+city_king_cajun;Président;;;;;;;;;;;;;x
+city_barony_of_cajun;Ville de;;;;;;;;;;;;;x
+city_county_of_cajun;Ville de;;;;;;;;;;;;;x
+city_duchy_of_cajun;République de;;;;;;;;;;;;;x
+city_kingdom_of_cajun;Grande République de;;;;;;;;;;;;;x
+
+#quebecois titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+count_quebecois;Comte;;;;;;;;;;;;;x
+count_female_quebecois;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_quebecois;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_female_quebecois;Comte;;;;;;;;;;;;;x
+county_of_quebecois;Comté de;;;;;;;;;;;;;x
+duke_quebecois;Duc;;;;;;;;;;;;;x
+duke_female_quebecois;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_quebecois;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_female_quebecois;Duc;;;;;;;;;;;;;x
+duchy_of_quebecois;Duché de;;;;;;;;;;;;;x
+king_quebecois;Roi;;;;;;;;;;;;;x
+king_female_quebecois;Reine;;;;;;;;;;;;;x
+king_title_consort_quebecois;Reine;;;;;;;;;;;;;x
+king_title_consort_female_quebecois;Roi;;;;;;;;;;;;;x
+kingdom_of_quebecois;Royaume de;;;;;;;;;;;;;x
+emperor_quebecois;Empereur;;;;;;;;;;;;;x
+emperor_female_quebecois;Impératrice;;;;;;;;;;;;;x
+emperor_title_consort_quebecois;Impératrice;;;;;;;;;;;;;x
+emperor_title_consort_female_quebecois;Empereur;;;;;;;;;;;;;x
+empire_of_quebecois;Empire de;;;;;;;;;;;;;x
+title_prince_quebecois;Prince;;;;;;;;;;;;x
+title_prince_female_quebecois;Princesse;;;;;;;;;;;;;x
+city_baron_quebecois;Maire;;;;;;;;;;;;;x
+city_count_quebecois;Maire;;;;;;;;;;;;;x
+city_duke_quebecois;Grande Maire;;;;;;;;;;;;;x
+city_king_quebecois;Président;;;;;;;;;;;;;x
+city_barony_of_quebecois;Ville de;;;;;;;;;;;;;x
+city_county_of_quebecois;Ville de;;;;;;;;;;;;;x
+city_duchy_of_quebecois;République de;;;;;;;;;;;;;x
+city_kingdom_of_quebecois;Grande République de;;;;;;;;;;;;;x
+
+#acadien titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+count_acadien;Comte;;;;;;;;;;;;;x
+count_female_acadien;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_acadien;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_female_acadien;Comte;;;;;;;;;;;;;x
+county_of_acadien;Comté de;;;;;;;;;;;;;x
+duke_acadien;Duc;;;;;;;;;;;;;x
+duke_female_acadien;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_acadien;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_female_acadien;Duc;;;;;;;;;;;;;x
+duchy_of_acadien;Duché de;;;;;;;;;;;;;x
+king_acadien;Roi;;;;;;;;;;;;;x
+king_female_acadien;Reine;;;;;;;;;;;;;x
+king_title_consort_acadien;Époux;;;;;;;;;;;;;x
+king_title_consort_female_acadien;Époux;;;;;;;;;;;;;x
+kingdom_of_acadien;Royaume de;;;;;;;;;;;;;x
+emperor_acadien;Empereur;;;;;;;;;;;;;x
+emperor_female_acadien;Impératrice;;;;;;;;;;;;;x
+emperor_title_consort_acadien;Époux;;;;;;;;;;;;;x
+emperor_title_consort_female_acadien;Époux;;;;;;;;;;;;;x
+empire_of_acadien;Empire de;;;;;;;;;;;;;x
+title_prince_acadien;Prince;;;;;;;;;;;;x
+title_prince_female_acadien;Princesse;;;;;;;;;;;;;x
+city_baron_acadien;Maire;;;;;;;;;;;;;x
+city_count_acadien;Maire;;;;;;;;;;;;;x
+city_duke_acadien;Grande Maire;;;;;;;;;;;;;x
+city_king_acadien;Président;;;;;;;;;;;;;x
+city_barony_of_acadien;Ville de;;;;;;;;;;;;;x
+city_county_of_acadien;Ville de;;;;;;;;;;;;;x
+city_duchy_of_acadien;République de;;;;;;;;;;;;;x
+city_kingdom_of_acadien;Grande République de;;;;;;;;;;;;;x
+
+#ontarois titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+count_ontarois;Comte;;;;;;;;;;;;;x
+count_female_ontarois;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_ontarois;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_female_ontarois;Comte;;;;;;;;;;;;;x
+county_of_ontarois;Comté de;;;;;;;;;;;;;x
+duke_ontarois;Duc;;;;;;;;;;;;;x
+duke_female_ontarois;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_ontarois;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_female_ontarois;Duc;;;;;;;;;;;;;x
+duchy_of_ontarois;Duché de;;;;;;;;;;;;;x
+king_ontarois;Roi;;;;;;;;;;;;;x
+king_female_ontarois;Reine;;;;;;;;;;;;;x
+king_title_consort_ontarois;Époux;;;;;;;;;;;;;x
+king_title_consort_female_ontarois;Époux;;;;;;;;;;;;;x
+kingdom_of_ontarois;Royaume de;;;;;;;;;;;;;x
+emperor_ontarois;Empereur;;;;;;;;;;;;;x
+emperor_female_ontarois;Impératrice;;;;;;;;;;;;;x
+emperor_title_consort_ontarois;Époux;;;;;;;;;;;;;x
+emperor_title_consort_female_ontarois;Époux;;;;;;;;;;;;;x
+empire_of_ontarois;Empire de;;;;;;;;;;;;;x
+title_prince_ontarois;Prince;;;;;;;;;;;;x
+title_prince_female_ontarois;Princesse;;;;;;;;;;;;;x
+city_baron_ontarois;Maire;;;;;;;;;;;;;x
+city_count_ontarois;Maire;;;;;;;;;;;;;x
+city_duke_ontarois;Grande Maire;;;;;;;;;;;;;x
+city_king_ontarois;Président;;;;;;;;;;;;;x
+city_barony_of_ontarois;Ville de;;;;;;;;;;;;;x
+city_county_of_ontarois;Ville de;;;;;;;;;;;;;x
+city_duchy_of_ontarois;République de;;;;;;;;;;;;;x
+city_kingdom_of_ontarois;Grande République de;;;;;;;;;;;;;x
+
 # Brazil
 
 chinese_grace_become_tributary_allow_india_tt;Has a coastal realm county in South America\n;;;;;;;;;;;;;x
