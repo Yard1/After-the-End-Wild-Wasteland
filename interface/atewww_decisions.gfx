@@ -187,4 +187,20 @@ spriteTypes = {
 		name = "GFX_vassalize_st_ursulas_chosen"
 		texturefile = "gfx\\interface\\decision_icon_vassalize_holy_order.dds"
 	}
+	spriteType = {
+		name = "GFX_celebrate_pioneers_day"
+		texturefile = "gfx/interface/oregon.tga"
+	}
+	spriteType = {
+		name = "GFX_consumerist_money_to_piety"
+		texturefile = "gfx/interface/invest.dds"
+	}
+	spriteType = {
+		name = "GFX_cetic_way_decision"
+		texturefile = "gfx/interface/cetic_pilgrim.dds"
+	}
+	spriteType = {
+		name = "GFX_change_cetic_way_decision"
+		texturefile = "gfx/interface/cetic_pilgrim.dds"
+	}
 }

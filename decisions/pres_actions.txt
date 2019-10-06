@@ -79,12 +79,12 @@ decisions = {
 		}
 		allow = {
 			age = 35
-			wealth = 50
 			block_general_event_trigger = no
 			is_landed = yes
 			holy_order = no
 			mercenary = no
 			is_playable = yes
+			NOT = { trait = travelling }
 			OR = {
 				ai = no
 				independent = yes
@@ -99,20 +99,27 @@ decisions = {
 				learning = 10
 				intrigue = 10
 				monthly_income = 15
+				piety = 150
+				prestige = 250
 				trait = ambitious
+				higher_real_tier_than = DUKE
 				has_ambition = obj_become_president
+				any_owned_bloodline = {
+					has_bloodline_flag = prez_bloodline
+				}
 			} }
 		}
 		effect = {
 			wealth = -50
 			add_trait = on_campaign
+			add_trait = travelling
 			set_character_flag = pres_candidate
 			hidden_tooltip = {
-				any_playable_ruler = { # Inform players
+				any_player = { # Inform players
 					limit = { religion = americanist }
 					character_event = { id = prez.4 }
 				}
-				k_papal_state = { holder_scope = { change_variable = { which = num_candidates value = 1 } } }
+				k_papal_state = { change_variable = { which = num_candidates value = 1 } }
 			}
 		}
 		revoke_allowed = {
@@ -122,7 +129,15 @@ decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
+				war = yes
+			}
+			modifier = {
+				factor = 0.25
 				NOT = { monthly_income = 2.5 }
+			}
+			modifier = {
+				factor = 0.25
+				NOT = { wealth = 50 }
 			}
 			modifier = {
 				factor = 0.2
@@ -133,15 +148,19 @@ decisions = {
 			}
 			modifier = {
 				factor = 0
-				k_papal_state = { holder_scope = { check_variable = { which = num_candidates value = 15 } } }
+				k_papal_state = { check_variable = { which = num_candidates value = 16 } }
 			}
 			modifier = {
-				factor = 0.15
-				k_papal_state = { holder_scope = { check_variable = { which = num_candidates value = 8 } } }
+				factor = 0.25
+				k_papal_state = { check_variable = { which = num_candidates value = 8 } }
 			}
 			modifier = {
-				factor = 0.4
-				k_papal_state = { holder_scope = { check_variable = { which = num_candidates value = 4 } } }
+				factor = 0.5
+				k_papal_state = { check_variable = { which = num_candidates value = 4 } }
+			}
+			modifier = {
+				factor = 5
+				k_papal_state = { NOT = { check_variable = { which = num_candidates value = 4 } } }
 			}
 			modifier = {
 				factor = 100
@@ -150,6 +169,16 @@ decisions = {
 			modifier = {
 				factor = 10
 				has_ambition = obj_become_president
+			}
+			modifier = {
+				factor = 1.5
+				any_owned_bloodline = {
+					has_bloodline_flag = prez_bloodline
+				}
+			}
+			modifier = {
+				factor = 2
+				age = 45
 			}
 			modifier = {
 				factor = 2
@@ -204,6 +233,46 @@ decisions = {
 				factor = 1.5
 				learning = 20
 			}
+			modifier = {
+				factor = 1.25
+				martial = 15
+			}
+			modifier = {
+				factor = 1.25
+				martial = 20
+			}
+			modifier = {
+				factor = 1.25
+				stewardship = 15
+			}
+			modifier = {
+				factor = 1.25
+				stewardship = 20
+			}
+			modifier = {
+				factor = 1.25
+				prestige = 500
+			}
+			modifier = {
+				factor = 1.25
+				prestige = 750
+			}
+			modifier = {
+				factor = 1.25
+				prestige = 1000
+			}
+			modifier = {
+				factor = 1.25
+				piety = 250
+			}
+			modifier = {
+				factor = 1.25
+				piety = 375
+			}
+			modifier = {
+				factor = 1.25
+				piety = 500
+			}
 		}
 	}
 	
@@ -218,7 +287,7 @@ decisions = {
 			trait = on_campaign
 			has_global_flag = pres_election
 			NOT = { has_global_flag = pres_voting }
-			k_papal_state = { holder_scope = { check_variable = { which = num_candidates value = 1.9 } } } # last candidate can't drop out
+			k_papal_state = { check_variable = { which = num_candidates value = 1.9 } } # last candidate can't drop out
 		}
 		allow = {
 			always = yes
@@ -230,12 +299,9 @@ decisions = {
 			always = no
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.01
-			}
-			modifier = {
-				factor = 5
+			factor = 0
+			additive_modifier = {
+				value = 5
 				NOT = { wealth = 0 }
 			}
 		}

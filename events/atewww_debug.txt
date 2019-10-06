@@ -9,70 +9,16 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "americanist"
-		any_independent_ruler = {
-			religion = americanist
-			any_realm_character = {
-				limit = {
-					OR = {
-						religion = jeffersonian
-						religion = libertarian
-						religion = hamiltonian
-					}
-				}
-				religion = americanist
-			}
-		}
+		name = "tank evangelical MA"
+		log = "coc is in [coc.GetGroupName] group"
+		log = "evangelical is in [evangelical.GetGroupName] group"
 	}
 
 	option = {
-		name = "jeffersonian"
-		any_independent_ruler = {
-			religion = jeffersonian
-			any_realm_character = {
-				limit = {
-					OR = {
-						religion = americanist
-						religion = libertarian
-						religion = hamiltonian
-					}
-				}
-				religion = jeffersonian
-			}
-		}
-	}
-
-	option = {
-		name = "libertarian"
-		any_independent_ruler = {
-			religion = libertarian
-			any_realm_character = {
-				limit = {
-					OR = {
-						religion = jeffersonian
-						religion = americanist
-						religion = hamiltonian
-					}
-				}
-				religion = libertarian
-			}
-		}
-	}
-
-	option = {
-		name = "hamiltonian"
-		any_independent_ruler = {
-			religion = hamiltonian
-			any_realm_character = {
-				limit = {
-					OR = {
-						religion = jeffersonian
-						religion = libertarian
-						religion = americanist
-					}
-				}
-				religion = hamiltonian
-			}
+		name = "spawn heresy in a random province"
+		random_realm_province = {
+			limit = { religion = evangelical }
+			province_event = { id = SoA.4000 }
 		}
 	}
 }
@@ -85,35 +31,18 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "americanist"
-		religion = americanist
-			any_realm_character = {
-				religion = americanist
-			}
+		name = "become heretic"
+		become_heretic = yes
 	}
 
 	option = {
-		name = "jeffersonian"
-		religion = jeffersonian
-			any_realm_character = {
-				religion = jeffersonian
-			}
+		name = "become coc"
+		religion = coc
 	}
 
 	option = {
-		name = "libertarian"
-		religion = libertarian
-			any_realm_character = {
-				religion = libertarian
-			}
-	}
-
-	option = {
-		name = "hamiltonian"
-		religion = hamiltonian
-			any_realm_character = {
-				religion = hamiltonian
-			}
+		name = "become evangelica"
+		religion = evangelical
 	}
 }
 
@@ -176,16 +105,9 @@ character_event = {
 	#hide_window = yes
 	
 	option = {
-		random_demesne_province = {
-			add_province_modifier = { name = commie_cell duration = -1 }
-		}
-	}
-
-	option = {
-		random_demesne_province = {
-			add_province_modifier = { name = commie_cell duration = -1 }
-			province_event = { id = TOG.1060 }
-		}
+		set_global_flag = qa_testing
+		set_character_flag = force_saint
+		death = yes
 	}
 }
 
@@ -238,7 +160,39 @@ character_event = {
 	hide_window = yes
 	
 	option = {
-		log = "OptA: [Root.optA.GetValue] OptB: [Root.optB.GetValue]"
+		religion = bickertonite
+		any_realm_character = {
+			religion = bickertonite
+		}
+		activate_title = { title = d_bickertonite status = yes }
+		hidden_tooltip = {
+			create_random_priest = {
+				dynasty = none
+				random_traits = yes
+			}
+			new_character = {
+				character_event = { id = misc.3 } #Diversity
+				character_event = { id = misc.4 } # Physique
+				d_bickertonite = {
+					grant_title = PREV
+					add_law = {
+						law = succ_bickertonite_relhead_elective
+						opinion_effect = no
+					}
+				}
+				wealth = 500
+				opinion = {
+					who = ROOT
+					modifier = opinion_creator_of_rel_heal
+				}
+			}
+			
+			religion_authority = {
+				modifier = papacy_instituted
+				years = 20
+			}
+		}
+		piety = 1000
 	}
 }
 

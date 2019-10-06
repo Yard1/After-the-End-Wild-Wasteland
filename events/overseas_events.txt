@@ -275,8 +275,7 @@ province_event = {
 				3 = { FROM = { character_event = { id = overseas.19 } } }
 			}
 		}
-		
-		if = {
+		else_if = {
 			limit = {
 				OR = {
 					# places where Pacific merchants might land

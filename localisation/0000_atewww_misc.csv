@@ -79,7 +79,269 @@ EVTOPTB_ATE_WWW_TITLE_2;I see.;;;;;;;;;;;;;x
 EVTDESC_ATE_WWW_TITLE_3;Thanks to [Root.GetBestName]'s heritage, [Root.GetSheHe] has managed to recreate the Kingdom of Dixieland by combining the kingdoms of Alabama and Georgia into one.;;;;;;;;;;;;;x
 EVTOPTA_ATE_WWW_TITLE_3;As [Root.Religion.GetHighGodName] intended.;;;;;;;;;;;;;x
 
+#newfie titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+baron_newfie;Barún;;;;;;;;;;;;;x
+baron_female_newfie;Banbharún;;;;;;;;;;;;;x
+baron_title_ruler_consort_newfie;Banbharún;;;;;;;;;;;;;x
+baron_title_ruler_consort_female_newfie;Barún;;;;;;;;;;;;;x
+barony_of_newfie;Bairnéad na;;;;;;;;;;;;;x
+count_newfie;Tiarna;;;;;;;;;;;;;x
+count_female_newfie;Bantiarna;;;;;;;;;;;;;x
+count_title_ruler_consort_newfie;Bantiarna;;;;;;;;;;;;;x
+count_title_ruler_consort_female_newfie;Tiarna;;;;;;;;;;;;;x
+county_of_newfie;Tiarnas na;;;;;;;;;;;;;x
+duke_newfie;Íseal-Rí;;;;;;;;;;;;;x
+duke_female_newfie;Íseal-Banríon;;;;;;;;;;;;;x
+duke_title_ruler_consort_newfie;Íseal-Banríon;;;;;;;;;;;;;x
+duke_title_ruler_consort_female_newfie;Íseal-Rí;;;;;;;;;;;;;x
+duchy_of_newfie;Íseal-Ríocht na;;;;;;;;;;;;;x
+king_newfie;Rí;;;;;;;;;;;;;x
+king_female_newfie;Banríon;;;;;;;;;;;;;x
+king_title_consort_newfie;Banríon;;;;;;;;;;;;;x
+king_title_consort_female_newfie;Rí;;;;;;;;;;;;;x
+kingdom_of_newfie;Ríocht na;;;;;;;;;;;;;x
+emperor_newfie;Ard-rí;;;;;;;;;;;;;x
+emperor_female_newfie;Ard-Banríon;;;;;;;;;;;;;x
+emperor_title_consort_newfie;Ard-Banríon;;;;;;;;;;;;;x
+emperor_title_consort_female_newfie;Ard-rí;;;;;;;;;;;;;x
+empire_of_newfie;Impireacht na;;;;;;;;;;;;;x
+title_prince_newfie;Flaith;;;;;;;;;;;;;x
+title_prince_female_newfie;Banflaith;;;;;;;;;;;;;x
+city_baron_newfie;Méara;;;;;;;;;;;;;x
+city_count_newfie;Méara;;;;;;;;;;;;;x
+city_duke_newfie;Ard-méara;;;;;;;;;;;;;x
+city_king_newfie;Taoiseach;;;;;;;;;;;;;x
+city_barony_of_newfie;Baile nu;;;;;;;;;;;;;x
+city_county_of_newfie;Baile nu;;;;;;;;;;;;;x
+city_duchy_of_newfie;Poblacht nu;;;;;;;;;;;;;x
+city_kingdom_of_newfie;Taibhseach Poblacht nu;;;;;;;;;;;;;x
+
+#maratimer titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+baron_maritimer;Baran;;;;;;;;;;;;;x
+baron_female_maritimer;Banabharan;;;;;;;;;;;;;x
+baron_title_ruler_consort_maritimer;Banabharan;;;;;;;;;;;;;x
+baron_title_ruler_consort_female_maritimer;Baran;;;;;;;;;;;;;x
+barony_of_maritimer;Frithbharan;;;;;;;;;;;;;x
+count_maritimer;Tighearna;;;;;;;;;;;;;x
+count_female_maritimer;Baintighearna;;;;;;;;;;;;;x
+count_title_ruler_consort_maritimer;Baintighearna;;;;;;;;;;;;;x
+count_title_ruler_consort_female_maritimer;Tighearna;;;;;;;;;;;;;x
+county_of_maritimer;Tighearnas;;;;;;;;;;;;;x
+duke_maritimer;Iseal-righ;;;;;;;;;;;;;x
+duke_female_maritimer;Iseal-Banrigh;;;;;;;;;;;;;x
+duke_title_ruler_consort_maritimer;Iseal-Banrigh;;;;;;;;;;;;;x
+duke_title_ruler_consort_female_maritimer;Iseal-righ;;;;;;;;;;;;;x
+duchy_of_maritimer;Iseal-Rioghachd na;;;;;;;;;;;;;x
+king_maritimer;Righ;;;;;;;;;;;;;x
+king_female_maritimer;Banrigh;;;;;;;;;;;;;x
+king_title_consort_maritimer;Banrigh;;;;;;;;;;;;;x
+king_title_consort_female_maritimer;Righ;;;;;;;;;;;;;x
+kingdom_of_maritimer;Rioghachd na;;;;;;;;;;;;;x
+emperor_maritimer;Impire;;;;;;;;;;;;;x
+emperor_female_maritimer;Banimpire;;;;;;;;;;;;;x
+emperor_title_consort_maritimer;Banimpire;;;;;;;;;;;;;x
+emperor_title_consort_female_maritimer;Impire;;;;;;;;;;;;;x
+empire_of_maritimer;Impireachd na;;;;;;;;;;;;;x
+title_prince_maritimer;Flath;;;;;;;;;;;;;x
+title_prince_female_maritimer;Banaflath;;;;;;;;;;;;;x
+city_baron_maritimer;Mear;;;;;;;;;;;;;x
+city_count_maritimer;Mear;;;;;;;;;;;;;x
+city_duke_maritimer;Ard-Mear;;;;;;;;;;;;;x
+city_king_maritimer;Priomhair;;;;;;;;;;;;;x
+city_barony_of_maritimer;Baile na;;;;;;;;;;;;;x
+city_county_of_maritimer;Baile na;;;;;;;;;;;;;x
+city_duchy_of_maritimer;Poblachd na;;;;;;;;;;;;;x
+city_kingdom_of_maritimer;Alainn Poblacht na;;;;;;;;;;;;;x
+
+#gael_dubh titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+baron_gael_dubh;Garda;;;;;;;;;;;;;x
+baron_female_gael_dubh;Bangarda;;;;;;;;;;;;;x
+baron_title_ruler_consort_gael_dubh;Bangarda;;;;;;;;;;;;;x
+baron_title_ruler_consort_female_gael_dubh;Garda;;;;;;;;;;;;;x
+barony_of_gael_dubh;Garastún nu;;;;;;;;;;;;;x
+count_gael_dubh;Ardabhcóide;;;;;;;;;;;;;x
+count_female_gael_dubh;Banardabhcóide;;;;;;;;;;;;;x
+count_title_ruler_consort_gael_dubh;Banardabhcóide;;;;;;;;;;;;;x
+count_title_ruler_consort_female_gael_dubh;Ardabhcóide;;;;;;;;;;;;;x
+county_of_gael_dubh;Clós nu;;;;;;;;;;;;;x
+duke_gael_dubh;Cigire;;;;;;;;;;;;;x
+duke_female_gael_dubh;Bancigire;;;;;;;;;;;;;x
+duke_title_ruler_consort_gael_dubh;Bancigire;;;;;;;;;;;;;x
+duke_title_ruler_consort_female_gael_dubh;Cigire;;;;;;;;;;;;;x
+duchy_of_gael_dubh;Barda nu;;;;;;;;;;;;;x
+king_gael_dubh;Ceannfort;;;;;;;;;;;;;x
+king_female_gael_dubh;Banceannfort;;;;;;;;;;;;;x
+king_title_consort_gael_dubh;Banceannfort;;;;;;;;;;;;;x
+king_title_consort_female_gael_dubh;Ceannfort;;;;;;;;;;;;;x
+kingdom_of_gael_dubh;Ceantar nu;;;;;;;;;;;;;x
+emperor_gael_dubh;Giúistís;;;;;;;;;;;;;x
+emperor_female_gael_dubh;Bangiúistís;;;;;;;;;;;;;x
+emperor_title_consort_gael_dubh;Bangiúistís;;;;;;;;;;;;;x
+emperor_title_consort_female_gael_dubh;Giúistís;;;;;;;;;;;;;x
+empire_of_gael_dubh;Críoch nu;;;;;;;;;;;;;x
+title_prince_gael_dubh;Leas;;;;;;;;;;;;;x
+title_prince_female_gael_dubh;Banleas;;;;;;;;;;;;;x
+city_baron_gael_dubh;Méara;;;;;;;;;;;;;x
+city_count_gael_dubh;Méara;;;;;;;;;;;;;x
+city_duke_gael_dubh;Ard-méara;;;;;;;;;;;;;x
+city_king_gael_dubh;Taoiseach;;;;;;;;;;;;;x
+city_barony_of_gael_dubh;Baile nu;;;;;;;;;;;;;x
+city_county_of_gael_dubh;Baile nu;;;;;;;;;;;;;x
+city_duchy_of_gael_dubh;Poblacht nu;;;;;;;;;;;;;x
+city_kingdom_of_gael_dubh;Taibhseach Poblacht nu;;;;;;;;;;;;;x
+
+#texan titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+baron_texan;Sheriff;;;;;;;;;;;;;x
+baron_female_texan;Sheriff;;;;;;;;;;;;;x
+baron_title_ruler_consort_texan;;;;;;;;;;;;;;x
+baron_title_ruler_consort_female_texan;;;;;;;;;;;;;;x
+barony_of_texan;Armory of;;;;;;;;;;;;;x
+count_texan;Baron;;;;;;;;;;;;;x
+count_female_texan;Baronness;;;;;;;;;;;;;x
+count_title_ruler_consort_texan;Baroness;;;;;;;;;;;;;x
+count_title_ruler_consort_female_texan;Baron;;;;;;;;;;;;;x
+emperor_title_consort_texan;First Lady;;;;;;;;;;;;;x
+emperor_title_consort_female_texan;First Lord;;;;;;;;;;;;;x
+
+#cajun titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+count_cajun;Comte;;;;;;;;;;;;;x
+count_female_cajun;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_cajun;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_female_cajun;Comte;;;;;;;;;;;;;x
+county_of_cajun;Paroisse de;;;;;;;;;;;;;x
+duke_cajun;Duc;;;;;;;;;;;;;x
+duke_female_cajun;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_cajun;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_female_cajun;Duc;;;;;;;;;;;;;x
+duchy_of_cajun;Duché de;;;;;;;;;;;;;x
+king_cajun;Roi;;;;;;;;;;;;;x
+king_female_cajun;Reine;;;;;;;;;;;;;x
+king_title_consort_cajun;Époux;;;;;;;;;;;;;x
+king_title_consort_female_cajun;Époux;;;;;;;;;;;;;x
+kingdom_of_cajun;Royaume de;;;;;;;;;;;;;x
+emperor_ontarois;Empereur;;;;;;;;;;;;;x
+emperor_female_cajun;Impératrice;;;;;;;;;;;;;x
+emperor_title_consort_cajun;Époux;;;;;;;;;;;;;x
+emperor_title_consort_female_cajun;Époux;;;;;;;;;;;;;x
+empire_of_cajun;Empire de;;;;;;;;;;;;;x
+title_prince_cajun;Prince;;;;;;;;;;;;x
+title_prince_female_cajun;Princesse;;;;;;;;;;;;;x
+city_baron_cajun;Maire;;;;;;;;;;;;;x
+city_count_cajun;Maire;;;;;;;;;;;;;x
+city_duke_cajun;Grande Maire;;;;;;;;;;;;;x
+city_king_cajun;Président;;;;;;;;;;;;;x
+city_barony_of_cajun;Ville de;;;;;;;;;;;;;x
+city_county_of_cajun;Ville de;;;;;;;;;;;;;x
+city_duchy_of_cajun;République de;;;;;;;;;;;;;x
+city_kingdom_of_cajun;Grande République de;;;;;;;;;;;;;x
+
+#quebecois titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+count_quebecois;Comte;;;;;;;;;;;;;x
+count_female_quebecois;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_quebecois;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_female_quebecois;Comte;;;;;;;;;;;;;x
+county_of_quebecois;Comté de;;;;;;;;;;;;;x
+duke_quebecois;Duc;;;;;;;;;;;;;x
+duke_female_quebecois;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_quebecois;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_female_quebecois;Duc;;;;;;;;;;;;;x
+duchy_of_quebecois;Duché de;;;;;;;;;;;;;x
+king_quebecois;Roi;;;;;;;;;;;;;x
+king_female_quebecois;Reine;;;;;;;;;;;;;x
+king_title_consort_quebecois;Reine;;;;;;;;;;;;;x
+king_title_consort_female_quebecois;Roi;;;;;;;;;;;;;x
+kingdom_of_quebecois;Royaume de;;;;;;;;;;;;;x
+emperor_quebecois;Empereur;;;;;;;;;;;;;x
+emperor_female_quebecois;Impératrice;;;;;;;;;;;;;x
+emperor_title_consort_quebecois;Impératrice;;;;;;;;;;;;;x
+emperor_title_consort_female_quebecois;Empereur;;;;;;;;;;;;;x
+empire_of_quebecois;Empire de;;;;;;;;;;;;;x
+title_prince_quebecois;Prince;;;;;;;;;;;;x
+title_prince_female_quebecois;Princesse;;;;;;;;;;;;;x
+city_baron_quebecois;Maire;;;;;;;;;;;;;x
+city_count_quebecois;Maire;;;;;;;;;;;;;x
+city_duke_quebecois;Grande Maire;;;;;;;;;;;;;x
+city_king_quebecois;Président;;;;;;;;;;;;;x
+city_barony_of_quebecois;Ville de;;;;;;;;;;;;;x
+city_county_of_quebecois;Ville de;;;;;;;;;;;;;x
+city_duchy_of_quebecois;République de;;;;;;;;;;;;;x
+city_kingdom_of_quebecois;Grande République de;;;;;;;;;;;;;x
+
+#acadien titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+count_acadien;Comte;;;;;;;;;;;;;x
+count_female_acadien;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_acadien;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_female_acadien;Comte;;;;;;;;;;;;;x
+county_of_acadien;Comté de;;;;;;;;;;;;;x
+duke_acadien;Duc;;;;;;;;;;;;;x
+duke_female_acadien;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_acadien;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_female_acadien;Duc;;;;;;;;;;;;;x
+duchy_of_acadien;Duché de;;;;;;;;;;;;;x
+king_acadien;Roi;;;;;;;;;;;;;x
+king_female_acadien;Reine;;;;;;;;;;;;;x
+king_title_consort_acadien;Époux;;;;;;;;;;;;;x
+king_title_consort_female_acadien;Époux;;;;;;;;;;;;;x
+kingdom_of_acadien;Royaume de;;;;;;;;;;;;;x
+emperor_acadien;Empereur;;;;;;;;;;;;;x
+emperor_female_acadien;Impératrice;;;;;;;;;;;;;x
+emperor_title_consort_acadien;Époux;;;;;;;;;;;;;x
+emperor_title_consort_female_acadien;Époux;;;;;;;;;;;;;x
+empire_of_acadien;Empire de;;;;;;;;;;;;;x
+title_prince_acadien;Prince;;;;;;;;;;;;x
+title_prince_female_acadien;Princesse;;;;;;;;;;;;;x
+city_baron_acadien;Maire;;;;;;;;;;;;;x
+city_count_acadien;Maire;;;;;;;;;;;;;x
+city_duke_acadien;Grande Maire;;;;;;;;;;;;;x
+city_king_acadien;Président;;;;;;;;;;;;;x
+city_barony_of_acadien;Ville de;;;;;;;;;;;;;x
+city_county_of_acadien;Ville de;;;;;;;;;;;;;x
+city_duchy_of_acadien;République de;;;;;;;;;;;;;x
+city_kingdom_of_acadien;Grande République de;;;;;;;;;;;;;x
+
+#ontarois titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+count_ontarois;Comte;;;;;;;;;;;;;x
+count_female_ontarois;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_ontarois;Comtesse;;;;;;;;;;;;;x
+count_title_ruler_consort_female_ontarois;Comte;;;;;;;;;;;;;x
+county_of_ontarois;Comté de;;;;;;;;;;;;;x
+duke_ontarois;Duc;;;;;;;;;;;;;x
+duke_female_ontarois;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_ontarois;Duchesse;;;;;;;;;;;;;x
+duke_title_ruler_consort_female_ontarois;Duc;;;;;;;;;;;;;x
+duchy_of_ontarois;Duché de;;;;;;;;;;;;;x
+king_ontarois;Roi;;;;;;;;;;;;;x
+king_female_ontarois;Reine;;;;;;;;;;;;;x
+king_title_consort_ontarois;Époux;;;;;;;;;;;;;x
+king_title_consort_female_ontarois;Époux;;;;;;;;;;;;;x
+kingdom_of_ontarois;Royaume de;;;;;;;;;;;;;x
+emperor_ontarois;Empereur;;;;;;;;;;;;;x
+emperor_female_ontarois;Impératrice;;;;;;;;;;;;;x
+emperor_title_consort_ontarois;Époux;;;;;;;;;;;;;x
+emperor_title_consort_female_ontarois;Époux;;;;;;;;;;;;;x
+empire_of_ontarois;Empire de;;;;;;;;;;;;;x
+title_prince_ontarois;Prince;;;;;;;;;;;;x
+title_prince_female_ontarois;Princesse;;;;;;;;;;;;;x
+city_baron_ontarois;Maire;;;;;;;;;;;;;x
+city_count_ontarois;Maire;;;;;;;;;;;;;x
+city_duke_ontarois;Grande Maire;;;;;;;;;;;;;x
+city_king_ontarois;Président;;;;;;;;;;;;;x
+city_barony_of_ontarois;Ville de;;;;;;;;;;;;;x
+city_county_of_ontarois;Ville de;;;;;;;;;;;;;x
+city_duchy_of_ontarois;République de;;;;;;;;;;;;;x
+city_kingdom_of_ontarois;Grande République de;;;;;;;;;;;;;x
+
+# Brazil
+
 chinese_grace_become_tributary_allow_india_tt;Has a coastal realm county in South America\n;;;;;;;;;;;;;x
+china_send_relief;Sending Relief to Brazil;Envoyer une expédition d'aide en Chine;Schickt Hilfsgüter nach Brazil;;Enviar socorro a Brazil;;;;;;;;;x
+chinese_grace_send_relief_desc;As the §Y[Root.Offmap.GetFullName]§! is suffering from a great famine, you can offer to send a relief expedition to deliver supplies and help the Emperor in maintaining the stability of Brazil.\n;Puisque l'§Y[Root.Offmap.GetFullName]§! subit une grande famine, vous pouvez proposer d'envoyer une expédition d'aide pour fournir des vivres et ainsi aider l'Empereur à maintenir la stabilité de la Chine.\n;§Y[Root.Offmap.GetFullName]§! leidet unter einer großen Hungersnot und Ihr könnt anbieten, Hilfsgüter zu liefern, um dem Kaiser bei der Aufrechterhaltung der Stabilität zu helfen.\n;;Como el §Y[Root.Offmap.GetFullName]§! sufre una gran hambruna, puedes ofrecer enviar una expedición de socorro para entregar suministros y ayudar al emperador a mantener la estabilidad de Brazil.\n;;;;;;;;;x
+EVTDESC_JD_50031_CW;[FromFrom.GetChinaPreviousStatusEnd]. Civil War now rocks Brazil as a rebellious governor has managed to gather support from the local military officers in [GetRandomChineseRegion]. Coffee Current profits are halved and Tributary states can use this opportunity to break free - Brazil will not be able to assist them should they be attacked anyway.;[FromFrom.GetChinaPreviousStatusEnd]. La guerre civile ébranle la Chine alors qu'un gouverneur rebelle a réussi à recueillir le soutien des officiers militaires locaux à [GetRandomChineseRegion]. Les bénéfices de la Route de la Soie se réduisent de moitié et les États tributaires pourraient profiter de cette occasion pour se libérer - la Chine ne pourrait de toute façon pas les aider s'ils étaient attaqués.;[FromFrom.GetChinaPreviousStatusEnd]. Der Bürgerkrieg ist in Brazil ausgebrochen, als es ein rebellischer Gouverneur geschafft hat, Unterstützung des lokalen Militärs von [GetRandomChineseRegion] zu erlangen. Gewinne an der Seidenstraße sind reduziert und Tributstaaten können diese Möglichkeit nutzen, ihre Unabhängigkeit zu fordern. Brazil wird sie außerdem nicht schützen können.;;[FromFrom.GetChinaPreviousStatusEnd]. La guerra civil estremece Brazil cuando un gobernador rebelde se gana el apoyo de los oficiales militares locales de [GetRandomChineseRegion]. Los beneficios de la Ruta de la Seda se reducen a la mitad, los estados tributarios pueden aprovechar esta oportunidad para liberarse y de todos modos Brazil tampoco podrá ayudarlos si son atacados.;;;;;;;;;x
+EVTDESC_JD_50031_UNREST;[FromFrom.GetChinaPreviousStatusEnd]. Popular uprisings have broken out in [GetRandomChineseRegion] and large groups of disgruntled peasants have taken up arms, led by [GetRandomChineseFaction]. Trade has been halved along the Coffee Current and Brazil will not be able to defend its Tributary states.;[FromFrom.GetChinaPreviousStatusEnd]. Des soulèvements populaires ont éclaté à [GetRandomChineseRegion] et de grands groupes de paysans mécontents dirigés par [GetRandomChineseFaction] ont pris les armes. Le commerce a été réduit de moitié le long de la Route de la Soie et la Chine ne pourra pas défendre ses États tributaires.;[FromFrom.GetChinaPreviousStatusEnd]. Aufstände sind in [GetRandomChineseRegion] ausgebrochen und große Gruppen verärgerter Bauern, angeführt von [GetRandomChineseFaction], haben die Waffen ergriffen. Der Handel auf der Seidenstraße ist zum Stillstand gekommen und Brazil wird nicht in der Lage sein, seine Tributstaaten zu schützen.;;[FromFrom.GetChinaPreviousStatusEnd]. Han estallado levantamientos populares en [GetRandomChineseRegion] y grandes grupos de campesinos descontentos han tomado las armas, liderados por [GetRandomChineseFaction]. El comercio en la Ruta de la Seda se reduce a la mitad y Brazil no será capaz de defender a sus estados tributarios.;;;;;;;;;x
+EVTDESC_JD_50031_PLAGUE;[FromFrom.GetChinaPreviousStatusEnd]. The Pale Rider is sowing his deadly seeds in Brazil - a Devastating Plague has broken out in [GetRandomChineseRegion]. No goods travel along the Coffee Current as the merchants fear infection. Even so, the deadly scourge is spreading quickly, and the troubles of Brazil could soon be ours... Brazil will not be able to assist its Tributary states.;[FromFrom.GetChinaPreviousStatusEnd]. La Faucheuse ensemence ses graines mortelles en Chine - une peste dévastatrice a éclaté à [GetRandomChineseRegion]. Aucune marchandise ne transite via la Route de la Soie, puisque les commerçants craignent une infection. Même ainsi, le fléau mortel se répand rapidement, et les problèmes de la Chine pourraient bientôt être les nôtres... La Chine ne pourra pas aider ses États tributaires.;[FromFrom.GetChinaPreviousStatusEnd]. Der fahle Reiter sät seine tödlichen Samen in Brazil und eine verheerende Pest ist in [GetRandomChineseRegion] ausgebrochen. Händler fürchten Infektionen und schicken keine Waren mehr auf die Seidenstraße. Trotzdem breitet sich die tödliche Geißel schnell aus und die Probleme Chinas könnten bald auch die unseren sein... Brazil wird nicht in der Lage sein, seinen Tributstaaten zu helfen.;;[FromFrom.GetChinaPreviousStatusEnd]. El Jinete pálido está sembrando sus semillas mortales en Brazil. Ha aparecido un brote de Peste devastadora en [GetRandomChineseRegion]. Los bienes no viajan por la Ruta de la Seda, ya que los mercaderes temen la infección. Aun así, el azote mortal se extiende rápidamente y los problemas de Brazil pronto podrían ser los nuestros… Brazil no podrá ayudar a sus estados tributarios.;;;;;;;;;x
+EVTDESC_JD_50031_GOLDEN;[FromFrom.GetChinaPreviousStatusEnd]. Harmony and progress are blossoming throughout Brazil under the benevolent rule of [FromFrom.Ruler.GetDynName]. New types of precious silks and other wondrous new wares have started to flow along the increasingly safe routes of the Coffee Current, whose wealth has doubled!;[FromFrom.GetChinaPreviousStatusEnd]. L'harmonie et les progrès sont en plein essor dans toute la Chine sous le règne bienveillant de [FromFrom.Ruler.GetDynName]. De nouveaux types de soies précieuses et d'autres nouvelles marchandises merveilleuses ont commencé à transiter via les routes de plus en plus sûres de la Route de la Soie, dont la richesse a doublé!;[FromFrom.GetChinaPreviousStatusEnd]. Harmonie und Fortschritt erblühen in ganz Brazil unter der wohlwollenden Herrschaft von [FromFrom.Ruler.GetDynName]. Es tauchen neue Arten kostbarer Seide und andere wundersame neue Waren nach und nach auf dem immer sichereren Wegen der Seidenstraße auf. Der Reichtum der Seidenstraße hat sich verdoppelt!;;[FromFrom.GetChinaPreviousStatusEnd]. La armonía y progreso florecen por toda Brazil bajo el gobierno benévolo de [FromFrom.Ruler.GetDynName]. ¡Nuevos tipos de sedas preciosas y otros nuevos bienes maravillosos han empezado a fluir por los caminos cada vez más seguros de la Ruta de la Seda, cuya riqueza se ha doblado!;;;;;;;;;x
+EVTDESC_JD_50141_BOOST;With Brazil already suffering from the [offmap_china.GetPrevStatus], a great Gaúcho horde has decided to exploit the situation and has crossed into Southern Brazil. Will the fierce horsemen from the endless pampas manage to break the Jaguar's back?;Alors que la Chine souffre déjà ([offmap_china.GetPrevStatus]), une grande horde mongole a décidé de profiter de la situation et traversé le nord de la Chine. Les féroces cavaliers des steppes parviendront-ils à briser le dos du Dragon ?;Mit Brazil, das bereits unter [offmap_china.GetPrevStatus] leidet, hat eine große mongolische Armee beschlossen, die Situation zu nutzen und ist in Nordchina eingefallen. Werden die tapferen Reiter der endlosen Steppe in der Lage sein, den Rücken des Drachen zu brechen?;;Con Brazil ya sufriendo por [offmap_china.GetPrevStatus], una gran horda mongola ha decidido aprovechar la situación, entrando en el Norte de Brazil. ¿Conseguirán los feroces jinetes de las estepas infinitas partir el lomo del dragón?;;;;;;;;;x
+EVTDESC_JD_50141_PENALTY;Right when Brazil is experiencing an almost unprecedented [offmap_china.GetPrevStatus], a great Gaúcho horde has crossed into Southern Brazil, intent on conquering the whole empire, but the Jaguar is mighty and the fierce pampa warriors are in for a titanic struggle.;Juste au moment où la Chine connaît un état presque sans précédent ([offmap_china.GetPrevStatus]), une grande horde mongole a traversé l'Hebei, dans l'intention de conquérir tout l'empire, mais le Jaguar est puissant et les féroces guerriers des steppes livrent une bataille titanesque.;Grade als Brazil eine fast beispiellose [offmap_china.GetPrevStatus] erlebt, hat eine noch nie dagewesene Horde Hebei überquert, um das ganze Reich zu erobern. Allerdings ist der Drache mächtig und den tapferen Steppenkrieger steht ein gigantischer Kampf bevor.;;Justo cuando Brazil sufría de una [offmap_china.GetPrevStatus] sin precedentes, una gran horda mongola ha cruzado el Heibei, intentando conquistar el imperio entero, pero el Dragón es poderoso y a los feroces guerreros de la estepa les espera una lucha titánica.;;;;;;;;;x
 
 # Religious Features 
 
@@ -198,3 +460,18 @@ musician_opinion;Musician Opinion;;;;;;;;;;;;;x
 
 obj_marry_lover_title;Marry for Love;Se marier;Heiraten;;Casarse;;;;;;;;;x
 obj_marry_lover_desc;[This.GetTitledFirstName] desires to marry their lover.;[This.Get_Le_TitledFirstName] souhaite se marier.;[This.GetTitledFirstName] möchte heiraten.;;[This.GetTitledFirstName] quiere casarse.;;;;;;;;;x
+
+# Patrician marriage
+EVTDESC_REP_4001;[From.GetTitledFirstName] today announced her marriage to a man belonging to one of [Root.MercRepCapital.GetName]'s smaller and less noteworthy burgher families. May they grow old and happy together.;[From.Get_Le_TitledFirstName] annonce aujourd'hui qu'il épousera une femme issue d'une petite famille bourgeoise roturière de [Root.MercRepCapital.GetName]. Puissent-ils vivre heureux ensemble pour longtemps.;[From.GetTitledFirstName] hat heute seine Hochzeit mit einer Frau verkündet, die zu einer von [Root.MercRepCapital.GetName]s kleineren und weniger erwähnenswerten Bürgerfamilien gehört. Mögen sie zusammen alt und glücklich werden. ;;[From.GetTitledFirstName] ha anunciado hoy su matrimonio con una mujer perteneciente a una de las familias burguesas de menor tamaño y menos destacadas de [Root.MercRepCapital.GetName]. ¡Que vivan juntos y felices por muchos años!;;;;;;;;;x
+EVTDESC_REP_4005;[From.GetTitledFirstName] seems to have fallen blindly for a mercenary she met while frequenting one of the seedier establishments in [Root.MercRepCapital.GetName]. She has offered him her hand in marriage, and he has accepted.;[From.Get_Le_TitledFirstName] semble être tombé sous le charme d'une jeune fille de taverne qu'il a rencontrée alors qu'il se trouvait dans l'un des établissements les plus louches de [Root.MercRepCapital.GetName]. Il lui a demandé sa main, et elle a accepté de l'épouser;[From.GetTitledFirstName] scheint blind einem Barmädchen verfallen zu sein, dass er kennengelernt hat, als er eines der schäbigeren Etablissements in [Root.MercRepCapital.GetName] frequentierte. Er hat um ihre Hand angehalten und sie hat angenommen.;;[From.GetTitledFirstName] parece haberse enamorado ciegamente de una camarera de bar que conoció en uno de los establecimientos más sórdidos de [Root.MercRepCapital.GetName]. Le ha propuesto matrimonio y ella ha aceptado.;;;;;;;;;x
+EVTOPTA_REP_4005;I see...;Je vois...;Ich verstehe ...;;Entiendo...;;;;;;;;;x
+EVTDESC_REP_4006;[From.GetTitledFirstName] has become infatuated with a young peasant boy from one of [Root.MercRepCapital.GetName]'s outlying farming settlements. He is apparently quite the looker, and has agreed to take her hand in marriage.;[From.Get_Le_TitledFirstName] s'est épris d'une jeune paysanne issue d'un village rural de la périphérie de [Root.MercRepCapital.GetName]. On dit qu'elle est d'une grande beauté. Elle a accepté de devenir son épouse.;[From.GetTitledFirstName] ist in ein junges Bauernmädchen aus einer der außerhalb liegenden Landwirtschaftssiedlungen von [Root.MercRepCapital.GetName] vernarrt. Sie ist anscheinend ein echter Hingucker und hat seinen Antrag angenommen.;;[From.GetTitledFirstName] se ha encaprichado de una joven campesina de una explotación agrícola ubicada en la periferia de [Root.MercRepCapital.GetName]. Ella parece no ser muy agraciada y ha aceptado su proposición matrimonial.;;;;;;;;;x
+EVTOPTA_REP_4006;Good for her.;Tant mieux pour lui.;Gut für ihn.;;Me alegro por él.;;;;;;;;;x
+EVTDESC_REP_4007;Somewhat surprisingly, [From.GetTitledFirstName] announced today that she is marrying the son of wealthy merchant family in [Root.MercRepCapital.GetName]. Though the family has little influence in the Republic, it is quite wealthy and this might explain [From.GetFirstName]'s willingness to overlook the boy's... unique features.;Voici qui est assez surprenant, [From.Get_le_TitledFirstName] a annoncé aujourd'hui qu'il se mariait avec la fille d'une riche famille de marchands de [Root.MercRepCapital.GetName]. Même si cette famille n'a que peu d'influence dans la République, elle est assez riche. Voilà qui expliquerait la motivation de [From.GetFirstName] à vouloir garder un oeil sur la fille... ou plutôt sur sa dot.;Etwas überraschend verkündete [From.GetTitledFirstName] heute, dass er die Tochter einer reichen Kaufmannsfamilie in [Root.MercRepCapital.GetName] heiraten wird. Auch wenn die Familie wenig Einfluss in der Republik hat, ist sie recht wohlhabend und dies könnte auch [From.GetFirstName]s Bereitschaft erklären, über die ... einzigartigen Eigenschaften des Mädchens ...hinwegzusehen. ;;Sorprendentemente, [From.GetTitledFirstName] ha anunciado hoy su intención de casarse con la hija de una adinerada familia de mercaderes en [Root.MercRepCapital.GetName]. Aunque la familia tiene poca influencia en la República, es bastante pudiente, lo que podría explicar la disposición de [From.GetFirstName] para pasar por alto las "características únicas" de la chica.;;;;;;;;;x
+EVTOPTA_REP_4007;I am not surprised.;Je ne suis pas surpris.;Ich bin nicht überrascht.;;No me sorprende.;;;;;;;;;x
+EVTDESC_REP_4009;[From.GetTitledFirstName] has become quite taken with one of her stable boys. He is half her age and she is more than old enough to be his mother, but she has apparently managed to woo him with gifts and kind words. Today they were united in marriage.;[From.Get_Le_TitledFirstName] est tombé sous le charme de l'une de ses servantes. Elle n'a que la moitié de son âge, et lui, de son côté, pourrait être son père. Il est tout de même parvenu à l'amadouer avec moults cadeaux et belles paroles. Aujourd'hui ils se sont unis par les liens du mariage.;[From.GetTitledFirstName] hat an einem seiner Dienstmädchen Gefallen gefunden. Sie ist halb so alt wie er und er ist so alt, dass er leicht ihr Vater sein könnte, aber anscheinend hat er es geschafft, sie mit Geschenken und freundlichen Worten zu umwerben. Heute wurden sie im Ehebund vereint. ;;[From.GetTitledFirstName] se ha obstinado en una de sus sirvientas. Le dobla la edad y tiene años suficientes para ser su padre, pero al parecer ha logrado conquistarla con regalos y zalamerías. Hoy se han unido en matrimonio.;;;;;;;;;x
+EVTOPTA_REP_4009;That sly old fox.;Ce vieux renard lubrique.;Dieser gerissene, alte Fuchs.;;Astuto viejo zorro.;;;;;;;;;x
+EVTDESC_REP_4011;Whispered rumors claim that [From.GetTitledFirstName] has been spending quite a bit of time with a significantly older and unmarried widow in [Root.MercRepCapital.GetName]. Today he finally announced he is in love with her, and that she has agreed to become his wife.;Des rumeurs veulent que [From.Get_le_TitledFirstName] fréquente depuis un moment à [Root.MercRepCapital.GetName] une veuve célibataire nettement plus âgée que lui. Aujourd'hui, il a finalement annoncé qu'il l'aimait et qu'elle avait accepté de devenir son épouse. ;Getuschelte Gerüchte behaupten, dass [From.GetTitledFirstName] viel Zeit mit einer signifikant älteren und unverheirateten Witwe in [Root.MercRepCapital.GetName] verbringt. Heute verkündete er endlich, dass er in sie verliebt ist und dass sie zugestimmt hat, seine Frau zu werden. ;;Los rumores afirmaban que [From.GetTitledFirstName] había estado pasando bastante tiempo con una viuda de [Root.MercRepCapital.GetName] significativamente mayor que él. Hoy finalmente ha anunciado haberse enamorado de ella y su próxima unión matrimonial.;;;;;;;;;x
+EVTOPTA_REP_4011;So the rumors were true!;Les rumeurs étaient donc vraies !;Die Gerüchte waren also wahr!;;¡Así que los rumores eran ciertos!;;;;;;;;;x
+EVTDESC_REP_4013;Some time ago, a merchant galley working for the [Root.GetOnlyDynastyName] family brought back several visiting dignitaries from a distant land far to the south. It seems one of them, a man, has become the target of [From.GetTitledFirstName]'s infatuation. After courting him for weeks, he has finally agreed to marry her, take up her faith, and settle in [Root.MercRepCapital.GetName].;Il y a quelque temps, une galère marchande au service de la famille [Root.GetOnlyDynastyName] a ramené d'un pays lointain méridional plusieurs dignitaires étrangers. Il semble que l'un d'eux ait ému le coeur [From.Get_du_TitledFirstName]. Après des semaines passées à la courtiser, elle a finalement accepté de l'épouser, d'adopter sa foi et de s'installer à [Root.MercRepCapital.GetName].;Vor geraumer Zeit brachte ein Handelsschiff, mehrere Würdenträger aus dem Süden zu Besuch. Es scheint, dass einer von ihnen, eine Frau, das Ziel von [From.GetTitledFirstName]s Vernarrtheit geworden ist. Nachdem er sie für Wochen umworben hat, hat sie endlich zugestimmt, ihn zu heiraten, seinen Glauben anzunehmen und nach [Root.MercRepCapital.GetName] zu ziehen.;;Hace algún tiempo, una galera mercante que faenaba para la familia [Root.GetOnlyDynastyName] trajo de vuelta a varios dignatarios de lejanas tierras sureñas. Al parecer, uno de ellos, una mujer, se ha convertido en el objeto de deseo de [From.GetTitledFirstName]. Tras cortejarla durante semanas, finalmente ella ha aceptado casarse con él, convertirse a su fe y asentarse en [Root.MercRepCapital.GetName].;;;;;;;;;x
+EVTOPTA_REP_4013;Fate brought them together, I suppose.;Le destin les a unis, j'imagine.;Das Schicksal hat sie anscheinend zusammengebracht.;;El destino los ha unido, supongo.;;;;;;;;;x

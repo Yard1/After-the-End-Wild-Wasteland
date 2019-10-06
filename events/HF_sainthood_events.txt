@@ -10,26 +10,33 @@ character_event = {
 	is_triggered_only = yes
 	min_age = 16
     only_playable = yes
-	religion_group = christian
 	has_dlc = "Holy Fury"
 
 	trigger = {
+        OR = {
+            religion_group = christian
+            religion_group = latter_day_saints
+        }
 		death_in_china_trigger = no
 		death_no_trace_trigger = no
 		OR = {
 			NOT = { religion = evangelical }
-			evangelical_can_have_saints = yes
+            AND = {
+                religion = evangelical
+			    evangelical_can_have_saints = yes
+            }
 		}
 		NOR = {
 			religion = antinomian
 			religion = charismatic
 			religion = postadventist
+            religion = strangite
 			trait = excommunicated
 			trait = drunkard
-			trait = hedonist
-			trait = cannibal_trait
+            trait = hedonist
+            trait = cannibal_trait
+            trait = impaler
 			#controls_religion = yes
-            religion = antinomian
             is_any_kinslayer_trigger = yes
             has_character_modifier = voice_of_satan
             has_character_modifier = known_satanist
@@ -43,36 +50,44 @@ character_event = {
             
             is_antipope = yes
 		}
-		OR = {
-			AND = {
-				tier = Emperor
-				piety >= 1250
-			}
+        OR = {
+            #DEBUG
+            has_character_flag = force_saint
+            AND = {
+                OR = {
+                    AND = {
+                        tier = Emperor
+                        piety >= 1250
+                    }
 
-			AND = {
-				tier = King
-				piety >= 1000
-			}
-			AND = {
-				tier = Duke
-				piety >= 750
-			}
-			AND = {
-				tier = Count
-				piety >= 500
-			}
-			has_character_modifier = true_christian_knight
-            has_any_opinion_modifier = opinion_baptism_sponsor_target
-		}
-		has_vice_trigger = no
-		is_benevolent_trigger = yes
-		is_pious_trigger = yes
-		has_virtue_trigger = yes
-		is_adult = yes
+                    AND = {
+                        tier = King
+                        piety >= 1000
+                    }
+                    AND = {
+                        tier = Duke
+                        piety >= 750
+                    }
+                    AND = {
+                        tier = Count
+                        piety >= 500
+                    }
+                    has_character_modifier = true_christian_knight
+                    has_any_opinion_modifier = opinion_baptism_sponsor_target
+                }
+                has_vice_trigger = no
+                is_benevolent_trigger = yes
+                is_pious_trigger = yes
+                has_virtue_trigger = yes
+                is_adult = yes
+            }
+        }
 	}
 
 	immediate = {
+        log = "HF.40000: Fire for [Root.GetBestName]"
         #Beatification
+        primary_title = { save_event_target_as = saint_person_title }
         save_event_target_as = saint_person
         event_target:saint_person = {
         	capital_scope = {
@@ -97,44 +112,90 @@ character_event = {
         	}
         	save_event_target_as = random_saint_realm_province
         }
-        if = {
-            limit = {
-                OR = {
-					religion_group = christian
-					religion_group = latter_day_saints
-				}
-            }
+        top_liege = {
             random_realm_character = {
                 limit = {
                     is_theocracy = yes
                     religion = event_target:saint_person
+                    OR = {
+                        NOT = { religion = evangelical }
+                        trait = lutheran
+                    }
                     NOR = {
                         trait = bad_priest_christian
                         trait = bad_priest_mormon
                     }
                     is_landed = yes
                 }
-                random = {
-                    chance = 100
-                    modifier = {
-                        factor = 0.25
-                        event_target:saint_person = {
-                            any_owned_bloodline = {
-                                has_bloodline_flag = saintly_bloodline
-                            }
-                        }
+                preferred_limit = {
+                    higher_tier_than = BARON
+                    event_target:saint_person = {
+                        is_liege_of = PREV
                     }
-                    modifier = {
-                        factor = 0.8
-                        event_target:saint_person = {
-                            trait = cynical
-                        }
+                }
+                preferred_limit = {
+                    event_target:saint_person = {
+                        is_liege_of = PREV
+                    }
+                }
+                preferred_limit = {
+                    event_target:saint_person = {
+                        is_liege_or_above = PREV
+                    }
+                }
+                log = "HF.40000: found priest [This.GetBestName] for [Root.GetBestName], [This.Liege.GetBestName] is liege"
+                save_event_target_as = first_priest
+                if = {
+                    limit = {
+                        event_target:saint_person = { has_character_flag = force_saint }
                     }
                     random_realm_province = {
                         province_event = { id = HF.40001 }
                     }
                     event_target:saint_person = {
                         set_character_flag = beatified
+                    }
+                }
+                else = {
+                    random = {
+                        chance = 100
+                        modifier = {
+                            factor = 0.25
+                            event_target:saint_person = {
+                                any_owned_bloodline = {
+                                    has_bloodline_flag = saintly_bloodline
+                                }
+                            }
+                        }
+                        modifier = {
+                            factor = 0.8
+                            event_target:saint_person = {
+                                trait = cynical
+                            }
+                        }
+                        modifier = {
+                            factor = 0.5
+                            NOT = {
+                                event_target:saint_person = {
+                                    is_liege_of = PREV
+                                }
+                            }
+                        }
+                        modifier = {
+                            factor = 0.5
+                            NOT = {
+                                event_target:saint_person = {
+                                    is_liege_or_above = PREV
+                                }
+                            }
+                        }
+
+                        random_realm_province = {
+                            province_event = { id = HF.40001 }
+                        }
+                        event_target:saint_person = {
+                            set_character_flag = beatified
+                        }
                     }
                 }
             }
@@ -151,7 +212,19 @@ character_event = {
             }
         }
         #Potential for sainthood
-        deciding_upon_saint_effect = yes
+        if = {
+            limit = {
+                has_character_flag = force_saint
+                NOT = { religion_group = latter_day_saints }
+            }
+            random_realm_province = {
+                province_event = { id = HF.40010 }
+            }
+            change_variable = { which = global_saint_number value = 1 }
+        }
+        else = {
+            deciding_upon_saint_effect = yes
+        }
 	}
 }
 
@@ -163,6 +236,7 @@ province_event = {
     has_dlc = "Holy Fury"
 
 	immediate = {
+        log = "HF.40001: Fire for [Root.GetName], saint [saint_person.GetBestName]"
         if = {
             limit = {
                 has_global_flag = qa_testing
@@ -184,42 +258,63 @@ province_event = {
 
     immediate = {
         holder_scope = {
+            log = "HF.40002: Fire for [This.GetBestName], saint [saint_person.GetBestName]"
         	if = {
         		limit = {
-        			OR = {
-						has_global_flag = only_papal_saints
-						has_global_flag = only_confed_saints
-						has_global_flag = only_abbess_saints
-						has_global_flag = only_archbishop_saints
-						has_global_flag = only_presidential_saints
-					}
         			event_target:saint_person = {
         				OR = {
-							religion = catholic
-							religion = ursuline
-							religion = confederated
-							religion = high_church
-							religion = mormon
+							AND = { religion = catholic has_global_flag = only_papal_saints }
+							AND = { religion = ursuline has_global_flag = only_abbess_saints }
+							AND = { religion = confederated has_global_flag = only_confed_saints }
+							AND = { religion = high_church has_global_flag = only_archbishop_saints }
 						}
         			}
         		}
         		rightful_religious_head_scope = {
+                    log = "HF.40002: only papal beatfication by [This.GetBestName] for [saint_person.GetBestName]"
     				character_event = { id = HF.40005 }
         		}
         	}
         	else = {
-	            random_realm_character = {
-	                limit = {
-	                    is_theocracy = yes
-	                    religion = event_target:saint_person
-	                    NOR = {
-	                        trait = bad_priest_christian
-	                        trait = bad_priest_mormon
-	                    }
-                        is_landed = yes
-	                }
-	                character_event = { id = HF.40003 }
-	            }
+                top_liege = {
+                    random_realm_character = {
+                        limit = {
+                            is_alive = yes
+                            is_theocracy = yes
+                            religion = event_target:saint_person
+                            OR = {
+                                NOT = { religion = evangelical }
+                                trait = lutheran
+                            }
+                            NOR = {
+                                trait = bad_priest_christian
+                                trait = bad_priest_mormon
+                            }
+                            is_landed = yes
+                        }
+                        preferred_limit = {
+                            character = event_target:first_priest
+                        }
+                        preferred_limit = {
+                            higher_tier_than = BARON
+                            event_target:saint_person_title = {
+                                holder_scope = { is_liege_of = PREVPREV }
+                            }
+                        }
+                        preferred_limit = {
+                            event_target:saint_person_title = {
+                                holder_scope = { is_liege_of = PREVPREV }
+                            }
+                        }
+                        preferred_limit = {
+                            event_target:saint_person_title = {
+                                holder_scope = { is_liege_or_above = PREVPREV }
+                            }
+                        }
+                        log = "HF.40002: found priest [This.GetBestName] for [saint_person.GetBestName]"
+                        character_event = { id = HF.40003 }
+                    }
+                }
             }
         }
     }
@@ -233,6 +328,7 @@ character_event = {
     has_dlc = "Holy Fury"
 
     immediate = {
+        log = "HF.40003: Fire for [Root.GetBestName], saint [saint_person.GetBestName], bishopric_holder [bishopric_holder.GetBestName]"
         save_event_target_as = bishopric_holder
         event_target:saint_person = {
             add_trait = beatified
@@ -310,8 +406,22 @@ character_event = {
 #Beatification is made official
 narrative_event = {
 	id = HF.40004
-	title = TITLEHF.40004
-	desc = EVTDESC_HF_40004
+	title = {
+        trigger = { NOT = { religion_group = latter_day_saints } }
+        text = TITLEHF.40004
+    }
+	title = {
+        trigger = { religion_group = latter_day_saints }
+        text = TITLEHF.40004_LDS
+    }
+	desc = {
+        trigger = { NOT = { religion_group = latter_day_saints } }
+        text = EVTDESC_HF_40004
+    }
+	desc = {
+        trigger = { religion_group = latter_day_saints }
+        text = EVTDESC_HF_40004_LDS
+    }
 	portrait = event_target:saint_person
 	is_triggered_only = yes
 	picture = GFX_evt_beatification
@@ -320,6 +430,7 @@ narrative_event = {
 
 	option = {
 		name = EVTOPTAHF.40004
+        trigger = { NOT = { religion_group = latter_day_saints } }
         if = {
             limit = {
                 event_target:saint_person = {
@@ -329,6 +440,19 @@ narrative_event = {
             piety = 50
         }
         show_portrait = event_target:bishopric_holder
+	}
+
+	option = {
+		name = EVTOPTAHF.40004
+        trigger = { religion_group = latter_day_saints }
+        if = {
+            limit = {
+                event_target:saint_person = {
+                    family = ROOT
+                }
+            }
+            piety = 50
+        }
 	}
 }
 
@@ -340,6 +464,7 @@ character_event = {
     has_dlc = "Holy Fury"
 
     immediate = {
+        log = "HF.40005: Fire for [Root.GetBestName], saint [saint_person.GetBestName]"
         event_target:saint_person = {
             add_trait = beatified
             if = {
@@ -407,6 +532,7 @@ narrative_event = {
     has_dlc = "Holy Fury"
 
     option = {      
+        log = "HF.40006: Fire for [Root.GetBestName], saint [saint_person.GetBestName]"
         name = EVTOPTA_HF_40006
         if = {
             limit = {
@@ -445,6 +571,7 @@ character_event = {
     is_triggered_only = yes
     has_dlc = "Holy Fury"
     immediate = {
+        log = "HF.40010: Fire for [Root.GetName], saint [saint_person.GetBestName]"
         if = {
             limit = {
                 OR = {
@@ -489,6 +616,7 @@ province_event = {
     }
 
     immediate = { 
+        log = "HF.40015: Fire for [Root.GetName], saint [saint_person.GetBestName]"
         if = {
             limit = {
                 event_target:saint_capital = {
@@ -547,6 +675,7 @@ character_event = {
     has_dlc = "Holy Fury"
 
     immediate = {
+        log = "HF.40015: Fire for [Root.GetBestName], saint [saint_person.GetBestName], canonizer [canonizer_person.GetName]"
         save_event_target_as = canonizer_person
     }
 
@@ -3161,11 +3290,14 @@ character_event = {
     min_age = 16
 
     trigger = {
-    	OR = {
-   	    	trait = drunkard
-   	    	trait = hedonist
-    	}
+    	has_common_devilworship_prerequisites = yes
     	#year = 900
+        OR = {
+            religion = catholic
+            religion = confederated
+            religion = ursuline
+            religion = high_church
+        }
 		OR = {
 			AND = {
 				rightful_religious_head_scope = {
@@ -3190,12 +3322,6 @@ character_event = {
 					has_landed_title = d_high_church
 				}
 				NOT = { has_global_flag = only_archbishop_saints }
-			}
-			AND = {
-				rightful_religious_head_scope = {
-					has_landed_title = d_quorum_of_the_twelve
-				}
-				NOT = { has_global_flag = only_presidential_saints }
 			}
 		}
     }
@@ -3239,7 +3365,30 @@ character_event = {
 			limit = {
 				is_theocracy = yes
 				religion = ROOT
+                OR = {
+                    NOT = { religion = evangelical }
+                    trait = lutheran
+                }
 			}
+            preferred_limit = {
+                character = event_target:first_priest
+            }
+            preferred_limit = {
+                higher_tier_than = BARON
+                event_target:saint_person_title = {
+                    holder_scope = { is_liege_of = PREVPREV }
+                }
+            }
+            preferred_limit = {
+                event_target:saint_person_title = {
+                    holder_scope = { is_liege_of = PREVPREV }
+                }
+            }
+            preferred_limit = {
+                event_target:saint_person_title = {
+                    holder_scope = { is_liege_or_above = PREVPREV }
+                }
+            }
 			save_event_target_as = bishopric_holder 
 			primary_title = {
 				save_event_target_as = bishopric_title
@@ -3283,11 +3432,9 @@ province_event = {
                 limit = {
                     is_theocracy = yes
                     religion = event_target:saint_person
-                    NOR = {
-                        OR = {
-							trait = bad_priest_christian
-							trait = bad_priest_mormon
-						}
+                    OR = {
+                        NOT = { religion = evangelical }
+                        trait = lutheran
                     }
                     NOR = {
                     	event_target:saint_person = {
@@ -3296,6 +3443,25 @@ province_event = {
                     	event_target:saint_person = {
                     		trait = saint
                     	}
+                    }
+                }
+                preferred_limit = {
+                    character = event_target:first_priest
+                }
+                preferred_limit = {
+                    higher_tier_than = BARON
+                    event_target:saint_person_title = {
+                        holder_scope = { is_liege_of = PREVPREV }
+                    }
+                }
+                preferred_limit = {
+                    event_target:saint_person_title = {
+                        holder_scope = { is_liege_of = PREVPREV }
+                    }
+                }
+                preferred_limit = {
+                    event_target:saint_person_title = {
+                        holder_scope = { is_liege_or_above = PREVPREV }
                     }
                 }
                 character_event = { id = HF.40053 }
@@ -3341,14 +3507,6 @@ character_event = {
 				}
 				NOT = {
 					has_global_flag = only_archbishop_saints
-				}
-			}
-			AND = {
-				rightful_religious_head_scope = {
-					has_landed_title = d_quorum_of_the_twelve
-				}
-				NOT = {
-					has_global_flag = only_presidential_saints
 				}
 			}
 		}
@@ -3397,12 +3555,6 @@ character_event = {
 				}
 				set_global_flag = bad_high_church_saint
 			}
-			else_if = {
-				limit = {
-					religion = mormon
-				}
-				set_global_flag = bad_mormon_saint
-			}
         }
         any_realm_character = {
             limit = {
@@ -3450,8 +3602,7 @@ narrative_event = {
 	    		#Stranger, and dislike sinful beatified
 		    	AND = {
 		    		NOR = {
-	    				trait = drunkard
-	    				trait = hedonist
+	    				has_common_devilworship_prerequisites = yes
 	    			    event_target:saint_person = {
 	    				   family = ROOT
                         }
@@ -3459,10 +3610,7 @@ narrative_event = {
 	    		}
 	    		#Family member, and disapprove of sinful beatified
 	    		AND = {
-					NOR = {
-							trait = drunkard
-							trait = hedonist
-					}
+					has_common_devilworship_prerequisites = no
 					event_target:saint_person = {
 						family = ROOT
 					}
@@ -3478,10 +3626,7 @@ narrative_event = {
 			OR = {
 				#Not family member, but similar
 				AND = {
-					OR = {
-						trait = drunkard
-						trait = hedonist
-					}
+					has_common_devilworship_prerequisites = yes
 					NOT = {
 						event_target:saint_person = {
 							family = ROOT
@@ -3490,10 +3635,7 @@ narrative_event = {
 				}
 				#Family Member and similar
 				AND = {
-					OR = {
-						trait = drunkard
-						trait = hedonist
-					}
+					has_common_devilworship_prerequisites = yes
 					event_target:saint_person = {
 						family = ROOT
 					}
@@ -3515,10 +3657,7 @@ narrative_event = {
         name = EVTOPTA_HF_40055
         trigger = {
         	NOT = {
-    			OR = {
-					trait = drunkard
-					trait = hedonist
-    			}        		
+    			has_common_devilworship_prerequisites = yes       		
     			event_target:saint_person = {
         			family = ROOT
         		}
@@ -3531,10 +3670,7 @@ narrative_event = {
     option = {
     	name = EVTOPTB_HF_40055
     	trigger = {
-			OR = {
-				trait = drunkard
-				trait = hedonist
-			}    		
+			has_common_devilworship_prerequisites = yes   		
     		NOT = {
     			event_target:saint_person = {
     				family = ROOT
@@ -3552,11 +3688,7 @@ narrative_event = {
     			family = ROOT
     		}
     		NOT = {
-    			OR = {
-					trait = drunkard
-					trait = hedonist
-    			}
-    			
+    			has_common_devilworship_prerequisites = yes
     		}
     	}
         show_portrait = bishopric_holder
@@ -3566,10 +3698,7 @@ narrative_event = {
     option = {
     	name = EVTOPTD_HF_40055
     	trigger = {
-			OR = {
-				trait = drunkard
-				trait = hedonist
-			}    		
+			has_common_devilworship_prerequisites = yes   		
 			event_target:saint_person = {
     			family = ROOT
     		}
@@ -3645,16 +3774,6 @@ province_event = {
 				}
 			}
 		}
-		else_if = {
-			limit = {
-				has_global_flag = bad_mormon_saint
-			}
-			d_quorum_of_the_twelve = { 
-				holder_scope = {
-					character_event = { id = HF.40058 }
-				}
-			}
-		}
     }
 }
 
@@ -3666,18 +3785,18 @@ character_event = {
     has_dlc = "Holy Fury"
 
     trigger = {
-        NOR = {
-            has_global_flag = only_papal_saints
-			has_global_flag = only_confed_saints
-            has_global_flag = only_abbess_saints
-            has_global_flag = only_archbishop_saints
-            has_global_flag = only_presidential_saints
+        OR = {
+            AND = { religion = catholic NOT = { has_global_flag = only_papal_saints } }
+            AND = { religion = ursuline NOT = { has_global_flag = only_abbess_saints } }
+            AND = { religion = confederated NOT = { has_global_flag = only_confed_saints } }
+            AND = { religion = high_church NOT = { has_global_flag = only_archbishop_saints } }
         }
     }
 
     immediate = {
 		if = {
 			limit = {
+                religion = catholic
 				has_global_flag = bad_catholic_saint
 			}
 			set_global_flag = only_papal_saints
@@ -3690,8 +3809,9 @@ character_event = {
 				narrative_event = { id = HF.40060 }
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
+                religion = confederated
 				has_global_flag = bad_confed_saint
 			}
 			set_global_flag = only_confed_saints
@@ -3704,8 +3824,9 @@ character_event = {
 				narrative_event = { id = HF.40060 }
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
+                religion = ursuline
 				has_global_flag = bad_ursuline_saint
 			}
 			set_global_flag = only_abbess_saints
@@ -3718,8 +3839,9 @@ character_event = {
 				narrative_event = { id = HF.40060 }
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
+                religion = high_church
 				has_global_flag = bad_high_church_saint
 			}
 			set_global_flag = only_archbishop_saints
@@ -3728,20 +3850,6 @@ character_event = {
 			any_playable_ruler = {
 				limit = {
 					religion = high_church
-				}
-				narrative_event = { id = HF.40060 }
-			}
-		}
-		if = {
-			limit = {
-				has_global_flag = bad_mormon_saint
-			}
-			set_global_flag = only_presidential_saints
-			clr_global_flag = bad_mormon_saint
-			log = "Only Archbishoprical Beatifications, declared by [Root.GetTitledName]"
-			any_playable_ruler = {
-				limit = {
-					religion = mormon
 				}
 				narrative_event = { id = HF.40060 }
 			}
@@ -3759,18 +3867,14 @@ narrative_event = {
 	    	OR = {
 	    		#Stranger, and dislike sinful beatified
 	    		NOR = {
-    				trait = drunkard
-    				trait = hedonist
+    				has_common_devilworship_prerequisites = yes
 	    			event_target:saint_person = {
 	    				family = ROOT
 	    			}
 	    		}
 	    		#Family member, and dislike sinful beatified
 	    		AND = {
-					NOR = {
-						trait = drunkard
-						trait = hedonist
-					}
+					has_common_devilworship_prerequisites = no
 					event_target:saint_person = {
 						family = ROOT
 					}
@@ -3786,10 +3890,7 @@ narrative_event = {
 			OR = {
 				#Not family member of Saint, but similar
 				AND = {
-					OR = {
-						trait = drunkard
-						trait = hedonist
-					}
+					has_common_devilworship_prerequisites = yes
 					NOT = {
 						event_target:saint_person = {
 							family = ROOT
@@ -3798,10 +3899,7 @@ narrative_event = {
 				}
 				#Family Member of Saint and similar
 				AND = {
-					OR = {
-						trait = drunkard
-						trait = hedonist
-					}
+					has_common_devilworship_prerequisites = yes
 					event_target:saint_person = {
 						family = ROOT
 					}
@@ -3822,8 +3920,7 @@ narrative_event = {
         name = EVTOPTA_HF_40060
         trigger = {
         	NOR = {
-				trait = drunkard
-				trait = hedonist
+				has_common_devilworship_prerequisites = yes
     			event_target:saint_person = {
         			family = ROOT
         		}
@@ -3837,10 +3934,7 @@ narrative_event = {
     option = {
     	name = EVTOPTB_HF_40060
     	trigger = {
-			OR = {
-				trait = drunkard
-				trait = hedonist
-			}    		
+			has_common_devilworship_prerequisites = yes    		
     		NOT = {
     			event_target:saint_person = {
     				family = ROOT
@@ -3869,10 +3963,7 @@ narrative_event = {
     		event_target:saint_person = {
     			family = ROOT
     		}
-    		NOR = {
-				trait = drunkard
-				trait = hedonist
-    		}
+    		has_common_devilworship_prerequisites = no
     	}
         custom_tooltip = { text = impious_beatification_tooltip }
         show_portrait = event_target:saint_person
@@ -3882,10 +3973,7 @@ narrative_event = {
     option = {
     	name = EVTOPTD_HF_40060
     	trigger = {
-			OR = {
-				trait = drunkard
-				trait = hedonist
-			}    		
+			has_common_devilworship_prerequisites = yes    		
 			event_target:saint_person = {
     			family = ROOT
     		}
@@ -3968,7 +4056,7 @@ character_event = {
 						trait = drunkard
 						k_papal_state = {
 							holder_scope = {
-							trait = drunkard
+							    trait = drunkard
 							}
 						}
 					}
@@ -4265,92 +4353,6 @@ character_event = {
 					}
 				}
 			}
-			AND = {
-				religion = mormon
-					d_quorum_of_the_twelve = {
-					holder_scope = {
-						trait = bad_priest_mormon
-						independent = yes
-						opinion = {
-							who = ROOT
-							value = 50
-						}
-					}
-				}
-				OR = {
-					AND = {
-						trait = impaler
-						d_quorum_of_the_twelve = {
-							holder_scope = {
-								trait = impaler
-							}
-						}	
-					}
-					AND = {
-						trait = hedonist
-						d_quorum_of_the_twelve = {
-							holder_scope = {
-								trait = hedonist
-							}
-						}
-					}
-					AND = {
-						trait = cannibal_trait
-						d_quorum_of_the_twelve = {
-							holder_scope = {
-								trait = cannibal_trait
-							}
-						}
-					}
-					AND = {
-						trait = lunatic
-						d_quorum_of_the_twelve = {
-							holder_scope = {
-								trait = lunatic
-							}
-						}
-					}
-					AND = {
-						trait = drunkard
-						d_quorum_of_the_twelve = {
-							holder_scope = {
-							trait = drunkard
-							}
-						}
-					}
-					AND = {
-						trait = homosexual
-						d_quorum_of_the_twelve = {
-							holder_scope = {
-								trait = homosexual
-								is_lover = ROOT
-								trait = lustful
-							}
-						}
-					}
-					AND = {
-						trait = lustful
-						d_quorum_of_the_twelve = {
-							is_lover = ROOT
-							trait = lustful
-							NOT = {
-								trait = homosexual
-							}
-						}
-					}
-					AND = {
-						OR = {
-							trait = seducer
-							trait = seductress
-						}
-						d_quorum_of_the_twelve = {
-							holder_scope = {
-								trait = seducer
-							}
-						}
-					}
-				}
-			}
 		}
     	NOT = {
     		trait = excommunicated
@@ -4413,21 +4415,6 @@ character_event = {
 			random = {
 				chance = 20
 				d_high_church = {
-					holder_scope = {
-						character_event = { id = HF.40091 }
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				event_target:saint_person = {
-					religion = mormon
-				}
-			}
-			random = {
-				chance = 20
-				d_quorum_of_the_twelve = {
 					holder_scope = {
 						character_event = { id = HF.40091 }
 					}
@@ -4722,15 +4709,7 @@ narrative_event = {
 
             modifier = {
                 factor = 0.25
-                OR = {
-                    trait = cannibal_trait
-                    trait = impaler
-                    trait = hedonist
-                    trait = drunkard
-                    trait = seducer
-                    trait = lustful
-                    trait = lunatic                
-                }
+                has_common_devilworship_prerequisites = yes
             }
         }
     }
@@ -4767,15 +4746,7 @@ narrative_event = {
             factor = 20 
             modifier = {
                 factor = 4
-                OR = {
-                    trait = cannibal_trait
-                    trait = impaler
-                    trait = hedonist
-                    trait = drunkard
-                    trait = seducer
-                    trait = lustful
-                    trait = lunatic
-                }
+                has_common_devilworship_prerequisites = yes
             }
         }
 
@@ -4799,7 +4770,6 @@ narrative_event = {
 				has_landed_title = k_confederated
 				has_landed_title = k_ursuline
 				has_landed_title = d_high_church
-				has_landed_title = d_quorum_of_the_twelve
 			}
             any_war = {
                 using_cb = depose_impious_pope

@@ -2834,21 +2834,15 @@ character_event = {
 
 	trigger = {
 		is_save_game = no
-		is_tribal = yes #Can be used by feudals, but only tribals should start with it.
 		is_landed = yes
 		OR = {
-			primary_title = {
-				is_law_potential = succ_eldership
-			}
 			AND = {
-				ROOT = {
-					OR = {
-						culture = yankee
-						culture = maritimer
-						culture = newfie
-						culture = carpetbagger
-					}
+				is_tribal = yes #Can be used by feudals, but only tribals should start with it.
+				primary_title = {
+					is_law_potential = succ_eldership
 				}
+			}
+			primary_title = {
 				is_law_potential = succ_tanistry
 			}
 		}
@@ -2859,14 +2853,6 @@ character_event = {
 			any_demesne_title = { #First apply law.
 				if = {
 					limit = {
-						holder_scope = {
-							OR = {
-								culture = yankee
-								culture = maritimer
-								culture = newfie
-								culture = carpetbagger
-							}
-						}
 						is_law_potential = succ_tanistry
 					}
 					add_law = {
@@ -2876,7 +2862,10 @@ character_event = {
 					}
 				}
 				else_if = {
-					limit = { is_law_potential = succ_eldership }
+					limit = {
+						ROOT = { is_tribal = yes }
+						is_law_potential = succ_eldership
+					}
 					add_law = {
 						law = succ_eldership
 						cooldown = no

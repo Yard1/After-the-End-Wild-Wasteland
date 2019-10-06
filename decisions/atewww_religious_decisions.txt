@@ -1101,6 +1101,275 @@ decisions = {
 			}
 		}
 	}
+
+	cetic_way_decision = {
+		is_high_prio = yes
+		ai_check_interval = 70 #check only once every 70 months.
+		potential = {
+			is_adult = yes
+			OR = {
+				AND = {
+					religion = cetic
+					NOT = { trait = way_fist }
+					NOT = { trait = way_cowl }
+					NOT = { trait = way_dove }
+					NOT = { trait = way_book }
+				}
+				AND = {
+					religion = neutic
+					NOT = { trait = way_fist_neutic }
+					NOT = { trait = way_cowl_neutic }
+					NOT = { trait = way_dove_neutic }
+					NOT = { trait = way_book_neutic }
+				}
+			}
+			NOT = { has_character_flag = flag_picking_branch }			
+		}
+		
+		allow = {
+			prisoner = no
+			NOT = { trait = incapable }
+		}
+		
+		effect = {
+			custom_tooltip = {
+				text = tooltip_pick_cetic_way
+			}
+			hidden_tooltip = {
+				set_character_flag = flag_picking_branch
+				if = {
+					limit = { religion = cetic }
+					character_event = { id = cetic.19 }
+				}
+				else = {
+					character_event = { id = neutic.8 }
+				}
+				add_character_modifier = { modifier = picked_pagan_branch_cooldown years = 5 hidden = yes }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 1.5
+				trait = zealous
+			}
+		}
+	}
+	change_cetic_way_decision = {
+		only_playable = yes
+		ai = no
+
+		potential = {
+			is_adult = yes
+			OR = {
+				AND = {
+					religion = cetic
+					OR = { 
+						trait = way_fist
+						trait = way_cowl
+						trait = way_dove 
+						trait = way_book
+					}
+				}
+				AND = {
+					religion = neutic
+					OR = { 
+						trait = way_fist_neutic
+						trait = way_cowl_neutic
+						trait = way_dove_neutic
+						trait = way_book_neutic
+					}
+				}
+			}
+			NOT = { has_character_flag = flag_changed_branch }
+			NOT = { has_character_flag = flag_picking_branch }
+		}
+		
+		allow = {
+			prisoner = no
+			NOT = { trait = incapable }
+			custom_tooltip = { text = pagan_branch_timer 
+				hidden_tooltip = { NOT = { has_character_modifier = picked_pagan_branch_cooldown } } 
+			}
+		}
+		
+		effect = {
+			custom_tooltip = {
+				text = tooltip_change_cetic_way
+			}
+			hidden_tooltip = {
+				set_character_flag = flag_picking_branch
+				set_character_flag = flag_changed_branch
+				if = {
+					limit = { religion = cetic }
+					character_event = { id = cetic.19 }
+				}
+				else = {
+					character_event = { id = neutic.8 }
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	celebrate_pioneers_day = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 1
+		potential = {
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			religion_group = latter_day_saints
+			culture_group = rockland
+			NOT = { has_character_modifier = held_pioneers_day_timer }
+			NOT = {	has_character_flag = holding_pioneers_day }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			war = no
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			month = 5
+			NOT = { month = 7 }
+			wealth = 25
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+		}
+		effect = {
+			wealth = -25
+			set_character_flag = holding_pioneers_day
+			set_character_flag = recent_minor_decision
+			set_character_flag = do_not_disturb
+			hidden_tooltip = { character_event = { id = ATE_WWW_MORMON.106 days = 150 } } # Safety catch flag clearing
+			custom_tooltip = {
+				text = pioneers_day_feast
+				hidden_tooltip = { 
+					character_event = { id = ATE_WWW_MORMON.100 } 
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				custom_tooltip = {
+					text = capital_prospers_custom_tooltip
+					hidden_tooltip = {
+						capital_scope = {
+							change_variable = { which = prosperity_value value = 8 }
+						}
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.75
+				NOT = { culture = utahn }
+			}	
+			modifier = {
+				factor = 0
+				NOT = {
+					wealth = 300
+				}
+			}
+			modifier = {
+				factor = 0
+				trait = shy
+			}
+			modifier = {
+				factor = 0
+				NOT = { diplomacy = 10 }
+			}	
+			modifier = {
+				factor = 0
+				has_character_flag = recent_minor_decision
+				NOT = {
+					had_character_flag = {
+						flag = recent_minor_decision
+						days = 730
+					}
+				}
+			}
+		}
+	}
+
+	consumerist_money_to_piety = {
+		only_playable = yes
+		ai_check_interval = 40
+
+		potential = {
+			age = 16
+			block_general_event_trigger = no
+			is_playable = yes
+			OR = {
+				religion = consumerist
+				religion = monetarist
+			}
+			NOT = { trait = cynical }
+		}
+
+		allow = {
+			wealth = 100
+		}
+
+		effect = {
+			set_character_flag = recent_minor_decision
+			wealth = -100
+			piety = 30
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.04 # Slow it down
+			}
+			modifier = {
+				factor = 2.5
+				trait = zealous
+			}
+			modifier = {
+				factor = 0.5
+				trait = greedy
+			}
+			modifier = {
+				factor = 0
+				has_character_flag = recent_minor_decision
+				NOT = {
+					had_character_flag = {
+						flag = recent_minor_decision
+						days = 730
+					}
+				}
+			}
+		}
+	}
 }
 
 targeted_decisions = {

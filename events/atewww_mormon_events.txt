@@ -1,0 +1,204 @@
+namespace = ATE_WWW_MORMON
+## Thanksgiving ##
+
+# Invitations Sent
+character_event = {
+	id = ATE_WWW_MORMON.100
+	desc = EVTDESC_ATE_WWW_MORMON_100
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_MORMON_100
+		any_vassal = {
+			limit = {
+                culture_group = rockland
+                religion = ROOT
+				age = 16
+				prisoner = no
+				war = no
+				NOT = { trait = incapable }
+                is_inaccessible_trigger = no
+			}
+			character_event = { id = ATE_WWW_MORMON.101 days = 2 tooltip = EVTTOOLTIP_ATE_WWW_MORMON_101 }
+		}
+		custom_tooltip = { text = pioneers_day_invitations_sent }
+		hidden_tooltip = { character_event = { id = ATE_WWW_MORMON.103 days = 10 } }
+		hidden_tooltip = { character_event = { id = ATE_WWW_MORMON.104 days = 12 } }
+	}
+}
+
+# Invitation Received
+character_event = {
+	id = ATE_WWW_MORMON.101
+	desc = EVTDESC_ATE_WWW_MORMON_101
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	trigger = { NOT = { is_inaccessible_trigger = yes } }
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_MORMON_101
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.25
+				culture = utahn
+			}
+			modifier = {
+				factor = 2
+				opinion = { who = from value = -40 }
+			}
+			modifier  = {
+				factor = 2
+				opinion = { who = from value = -20 }
+			}
+		}
+		custom_tooltip = { text = pioneers_day_accepted }
+		set_character_flag = attending_pioneers_day
+		set_character_flag = do_not_disturb
+		hidden_tooltip = { character_event = { id = ATE_WWW_MORMON.103 days = 8 } }
+		hidden_tooltip = { character_event = { id = ATE_WWW_MORMON.106 days = 20 } } # Safety catch flag clearing
+	}
+	option = {
+		name = EVTOPTB_ATE_WWW_MORMON_101
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.25
+				NOT = { religion_group = latter_day_saints }
+			}
+			modifier  = {
+				factor = 2
+				NOT = { opinion = { who = from value = -60 } }
+			}
+			modifier  = {
+				factor = 2
+				NOT = { opinion = { who = from value = -80 } }
+			}
+		}
+		FROM = {
+			opinion = {
+				modifier = opinion_dislike
+				who = ROOT
+				years = 2
+			}
+		}
+		custom_tooltip = { text = pioneers_day_declined }
+		hidden_tooltip = {
+			FROM = { character_event = { id = ATE_WWW_MORMON.102 } }
+		}
+	}
+}
+
+# Invitation Refused
+character_event = {
+	id = ATE_WWW_MORMON.102
+	desc = EVTDESC_ATE_WWW_MORMON_102
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_MORMON_102
+		opinion = {
+			modifier = opinion_dislike
+			who = FROM
+			years = 2
+		}
+	}
+}
+
+# Thanksgiving Feast Begins
+character_event = {
+	id = ATE_WWW_MORMON.103
+	desc = EVTDESC_ATE_WWW_MORMON_103
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_MORMON_103
+		gain_weight_small_effect = yes
+	}
+}
+
+# Thanksgiving Feast Ends (Host)
+character_event = {
+	id = ATE_WWW_MORMON.104
+	desc = EVTDESC_ATE_WWW_MORMON_104
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_MORMON_104
+		any_vassal = {
+			limit = { has_character_flag = attending_pioneers_day }
+			opinion = {
+				modifier = opinion_enjoyed_feast
+				who = ROOT
+				years = 2
+			}
+		}
+		hidden_tooltip = {
+			any_vassal = {
+				limit = { has_character_flag = attending_pioneers_day }
+				character_event = { id = ATE_WWW_MORMON.105 }
+			}
+		}
+		add_character_modifier = {
+			name = held_pioneers_day_timer
+			duration = 1095
+			hidden = yes
+		}
+		prestige = 75
+		piety = 75
+		clr_character_flag = holding_pioneers_day
+		clr_character_flag = do_not_disturb
+	}
+}
+
+# Thanksgiving Feast Ends (Guest)
+character_event = {
+	id = ATE_WWW_MORMON.105
+	desc = EVTDESC_ATE_WWW_MORMON_105
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_ATE_WWW_MORMON_104
+		clr_character_flag = attending_pioneers_day
+		clr_character_flag = do_not_disturb
+	}
+}
+
+# Safety catch - clears character flags and modifiers
+character_event = {
+	id = ATE_WWW_MORMON.106
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = do_not_disturb
+		clr_character_flag = holding_pioneers_day
+		clr_character_flag = attending_pioneers_day
+	}
+}

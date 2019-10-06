@@ -236,8 +236,12 @@ character_event = {
 			diplomacy = 10
 			location = { NOT = { religion_group = ROOT } }
 			NOT = {
-				trait = sympathy_pacific_neognostic
+				trait = sympathy_pacific_religion
 				location = { religion_group = pacific }
+			}
+			NOT = {
+				trait = sympathy_cult_of_saints_religion
+				location = { religion_group = cult_of_saints }
 			}
 			OR = {
 				trait = cynical

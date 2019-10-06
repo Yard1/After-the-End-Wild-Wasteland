@@ -3804,6 +3804,10 @@ character_event = {
 					}
 					modifier = {
 						factor = 0
+						trait = sympathy_cult_of_saints_religion
+					}
+					modifier = {
+						factor = 0
 						NOR = {
 							educator = { religion_group = cult_of_saints }
 							location = { religion_group = cult_of_saints } 
@@ -3820,7 +3824,7 @@ character_event = {
 					}
 					modifier = {
 						factor = 0
-						trait = sympathy_pacific_neognostic
+						trait = sympathy_pacific_religion
 					}
 					modifier = {
 						factor = 0

@@ -544,8 +544,6 @@ de_jure_laws = {
 					religion = mormon
 					religion = hamiltonian
 					religion = libertarian
-					#religion = bickertonite
-					#religion = strangite
 				}
 				is_tribal = no
 				is_nomadic = no

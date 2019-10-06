@@ -136,25 +136,25 @@ character_event = {
 				}
 				modifier = {
 					factor = 2
-					monastic_leader:event_target = { 
+					event_target:monastic_leader = { 
 						NOT = { demesne_size = 1 }
 					}
 				}
 				modifier = {
 					factor = 2
-					monastic_leader:event_target = { 
+					event_target:monastic_leader = { 
 						NOT = { demesne_size = 2 }
 					}
 				}
 				modifier = {
 					factor = 0.5
-					monastic_leader:event_target = {
+					event_target:monastic_leader = {
 						num_of_count_titles = 1
 					}
 				}
 				modifier = {
 					factor = 0.5
-					monastic_leader:event_target = {
+					event_target:monastic_leader = {
 						realm_size = 5
 					}
 				}

@@ -1283,7 +1283,7 @@ narrative_event = {
 		}
 		religion_group = christian
 		enemy = {
-			religion_group = muslim
+			religion_group = oldworld
 		}
 		has_game_rule = {
 			name = siege_events
@@ -1391,9 +1391,9 @@ narrative_event = {
 		siege = {
 			is_attacker = no
 		}
-		religion_group = muslim
+		religion_group = oldworld
 		enemy = {
-			NOT = { religion_group = muslim }
+			NOT = { religion_group = oldworld }
 		}
 		has_game_rule = {
 			name = siege_events

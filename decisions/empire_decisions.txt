@@ -771,18 +771,16 @@ decisions = {
 				}
 			}
 			independent = yes
+			culture_group = gallomerican
 			OR = {
-				culture = quebecois
-				culture = acadien
-				culture = cajun
-				culture = creole
-				culture = ontarois
+				has_landed_title = k_louisiana
+				has_landed_title = k_quebec
 			}
-			has_landed_title = k_louisiana
 			NOT = { has_landed_title = e_usa }
 			NOT = { has_landed_title = e_dixie }
 			NOT = { has_landed_title = e_nys }
 			NOT = { has_landed_title = k_keystone }
+			NOT = { has_landed_title = e_canada }
 			NOT = { has_global_flag = new_france_formed }
 		}
 		allow = {
@@ -793,12 +791,29 @@ decisions = {
 			scaled_wealth = 2
 			war = no
 			realm_size = 250
-			has_landed_title = k_louisiana
-			has_landed_title = k_missouri
-			completely_controls = k_louisiana
-			completely_controls = k_ozarks
-			completely_controls = k_missouri
-			completely_controls = d_mobile
+			OR = {
+				AND = {
+					has_landed_title = k_louisiana
+					has_landed_title = k_missouri
+					completely_controls = k_louisiana
+					completely_controls = k_ozarks
+					completely_controls = k_missouri
+					completely_controls = d_mobile
+				}
+				AND = {
+					has_landed_title = k_quebec
+					OR = {
+						has_landed_title = k_maritimes
+						has_landed_title = k_acadia
+					}
+					completely_controls = k_quebec
+					OR = {
+						completely_controls = k_maritimes
+						completely_controls = k_acadia
+					}
+					completely_controls = k_cote_nord
+				}
+			}
 		}
 		effect = {
 			set_global_flag = new_france_formed
@@ -840,19 +855,48 @@ decisions = {
 				}	
 				sound_effect = bloodline_added			
 			}
-			k_louisiana = {
-				de_jure_liege = e_new_france
-				destroy_landed_title = THIS
+			if = {
+				limit = {
+					AND = {
+						has_landed_title = k_louisiana
+						has_landed_title = k_missouri
+						completely_controls = k_louisiana
+						completely_controls = k_ozarks
+						completely_controls = k_missouri
+						completely_controls = d_mobile
+					}
+				}
+				k_louisiana = {
+					de_jure_liege = e_new_france
+					destroy_landed_title = THIS
+				}
+				k_ozarks = {
+					de_jure_liege = e_new_france
+				}
+				k_missouri = {
+					de_jure_liege = e_new_france
+					destroy_landed_title = THIS
+				}
+				d_mobile = {
+					de_jure_liege = k_louisiana
+				}
 			}
-			k_ozarks = {
-				de_jure_liege = e_new_france
-			}
-			k_missouri = {
-				de_jure_liege = e_new_france
-				destroy_landed_title = THIS
-			}
-			d_mobile = {
-				de_jure_liege = k_louisiana
+			else = {
+				k_quebec = {
+					de_jure_liege = e_new_france
+					destroy_landed_title = THIS
+				}
+				k_maritimes = {
+					de_jure_liege = e_new_france
+					destroy_landed_title = THIS
+				}
+				k_acadia = {
+					de_jure_liege = e_new_france
+					destroy_landed_title = THIS
+				}
+				k_cote_nord = {
+					de_jure_liege = e_new_france
+				}
 			}
 			any_demesne_title = {
 				limit = { 

@@ -3293,29 +3293,29 @@ character_event = {
 				}
 				modifier = {
 					factor = 2
-					grand_master:event_target = { 
+					event_target:grand_master = { 
 						NOT = { demesne_size = 1 }
 					}
 				}
 				modifier = {
 					factor = 2
-					grand_master:event_target = { 
+					event_target:grand_master = { 
 						NOT = { demesne_size = 2 }
 					}
 				}
 				modifier = {
 					factor = 0.5
-					grand_master:event_target = {
+					event_target:grand_master = {
 						num_of_count_titles = 1
 					}
 				}
 				modifier = {
 					factor = 0.5
-					grand_master:event_target = {
+					event_target:grand_master = {
 						realm_size = 5
 					}
 				}
-				event_target:grand_master = { character_event = { id = MNM.6991 } }
+				event_target:grand_master = { character_event = { id = MMM_ATEWWW.1 } }
 			}
 			15 = {
 				modifier = {
@@ -9053,7 +9053,7 @@ character_event = {
 
 #MISSION: Donate Castle
 character_event = {
-	id = MNM.6991
+	id = MMM_ATEWWW.1
 	hide_window = yes
 
 	is_triggered_only = yes

@@ -7199,12 +7199,7 @@ ask_for_money_chance = {
 		localisation_key = POPE_AIREASON_MODIFIER_RULER_FACTIONS_AGAINST_ANTIPOPE
 		in_faction = faction_antiking
 		FROM = {
-			NOR = {
-				has_claim = k_papal_state
-				has_claim = k_ursuline
-				has_claim = d_quorum_of_the_twelve
-				has_claim = d_supreme_court
-			}
+			is_antipope = no
 		}
 	}
 	additive_modifier = {

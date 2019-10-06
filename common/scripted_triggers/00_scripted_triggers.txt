@@ -2940,11 +2940,11 @@ has_sympathy_for_true_religion_of_prev_trigger = {
 			PREV = { true_religion_group_christian_trigger = yes }
 		}
 		AND = {
-			trait = sympathy_cult_of_saints
+			OR = { trait = sympathy_cult_of_saints trait = sympathy_cult_of_saints_religion }
 			PREV = { true_religion_group_cult_of_saints_trigger = yes }
 		}
 		AND = {
-			OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
+			OR = { trait = sympathy_pacific trait = sympathy_pacific_religion }
 			PREV = { true_religion_group_pacific_trigger = yes }
 		}
 		AND = {
@@ -2993,11 +2993,11 @@ has_sympathy_for_true_religion_of_root_trigger = {
 			ROOT = { true_religion_group_christian_trigger = yes }
 		}
 		AND = {
-			trait = sympathy_cult_of_saints
+			OR = { trait = sympathy_cult_of_saints trait = sympathy_cult_of_saints_religion }
 			ROOT = { true_religion_group_cult_of_saints_trigger = yes }
 		}
 		AND = {
-			OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic }
+			OR = { trait = sympathy_pacific trait = sympathy_pacific_religion }
 			ROOT = { true_religion_group_pacific_trigger = yes }
 		}
 		AND = {
@@ -3064,11 +3064,11 @@ ok_sr_sympathy_mission_target_trigger = {
 			}
 			AND = {
 				true_religion_group = cult_of_saints
-				PREV = { trait = sympathy_cult_of_saints }
+				PREV = { OR = { trait = sympathy_cult_of_saints trait = sympathy_cult_of_saints_religion } }
 			}
 			AND = {
 				true_religion_group = pacific
-				PREV = { OR = { trait = sympathy_pacific trait = sympathy_pacific_neognostic } }
+				PREV = { OR = { trait = sympathy_pacific trait = sympathy_pacific_religion } }
 			}
 			AND = {
 				true_religion_group = latter_day_saints
@@ -3981,6 +3981,7 @@ has_plaguebringers_prerequisites = {
 has_illuminati_prerequisites = {
 	has_common_devilworship_prerequisites = yes
 	religion_group = oldworld
+	NOT = { religion = cult_of_marx }
 	NOT = { trait = legendary }
 }
 
@@ -4011,10 +4012,7 @@ has_starry_wisdom_prerequisites = {
 
 has_unseelie_prerequisites = {
 	has_common_devilworship_prerequisites = yes
-	OR = {
-		religion_openly_in_celtic_subgroup_trigger = yes
-		religion_secretly_in_celtic_subgroup_trigger = yes
-	}
+	religion_openly_in_celtic_subgroup_trigger = yes
 }
 
 same_society_rank_as_prev_trigger = {
@@ -6124,34 +6122,12 @@ has_unsafe_religion = {
 		AND = {
 			NOT = { has_dlc = "The Old Gods" }
 			OR = {
-				religion = zoroastrian
-				religion = mazdaki
-				religion = manichean
-				religion = khurmazta
-				religion = bon
-				religion = bon_reformed
 				religion = norse_pagan
 				religion = norse_pagan_reformed
-				religion = baltic_pagan
-				religion = baltic_pagan_reformed
-				religion = finnish_pagan
-				religion = finnish_pagan_reformed
-				religion = slavic_pagan
-				religion = slavic_pagan_reformed
-				religion = tengri_pagan
-				religion = tengri_pagan_reformed
-				religion = west_african_pagan
-				religion = west_african_pagan_reformed
-				religion = zun_pagan
-				religion = zun_pagan_reformed
-				religion = hellenic_pagan
-				religion = hellenic_pagan_reformed
 				religion = pagan
-				religion = aztec
-				religion = aztec_reformed
 				religion = revelationist
 				religion = revelationist_reformed
-				relgion = rust_cultist_reformed
+				religion = rust_cultist_reformed
 				religion = rust_cultist
 				religion = chrome_cultist
 				religion = occultist
@@ -6166,14 +6142,14 @@ has_unsafe_religion = {
 			NOT = { has_dlc = "Rajas of India" }
 			OR = {
 				religion = hindu
-				religion = buddhist
-				religion = jain
+				#religion = buddhist
+				#religion = jain
 			}
 		}
-		AND = {
-			NOT = { has_dlc = "Jade Dragon" }
-			religion = taoist
-		}
+		#AND = {
+		#	NOT = { has_dlc = "Jade Dragon" }
+		#	religion = taoist
+		#}
 	}
 }
 
@@ -6219,6 +6195,9 @@ proselytize_convert_independent_trigger = {
 					religion_group = mesoamerican_gods
 					religion_group = afro_syncretic
 					religion = cult_of_marx
+					religion = rust_cultist
+					religion = rust_cultist_reformed
+					religion = chrome_cultist
 				}
 			} 
 			FROM = { 
@@ -7309,9 +7288,15 @@ this_is_diplomatic_culture_trigger = { #Not really about culture - Used in AI vo
 		is_merchant_republic = yes
 	} 
 	OR = { 
-		religion_group = christian
+		AND = {
+			religion_group = christian
+			NOT = { religion = neognostic }
+		}
 		religion_group = cult_of_saints
-		religion_group = latter_day_saints
+		AND = {
+			religion_group = latter_day_saints
+			NOT = { religion = bickertonite }
+		}
 		religion_group = jewish_group
 		AND = { 
 			religion_group = oldworld
@@ -7329,10 +7314,10 @@ this_is_diplomatic_culture_trigger = { #Not really about culture - Used in AI vo
 		has_religion_feature = religion_cosmopolitan
 		has_religion_feature = religion_feature_espiritista
 		has_religion_feature = religion_proselytizing
-		#AND = {
-		#	NOT = { has_dlc = "Holy Fury"}
-		#	religion = rust_cultist_reformed
-		#}
+		AND = {
+			NOT = { has_dlc = "Holy Fury"}
+			religion = rust_cultist_reformed
+		}
 	}
 }
 this_is_spiritual_culture_trigger = { #Not really about culture - Used in AI voting logic.
@@ -7342,6 +7327,8 @@ this_is_spiritual_culture_trigger = { #Not really about culture - Used in AI vot
 		religion_group = indian_group
 		religion_group = pacific
 		religion = chrome_cultist
+		religion = neognostic
+		religion = bickertonite
 		has_religion_feature = religion_peaceful
 		has_religion_feature = religion_dogmatic
 		pacifist = yes

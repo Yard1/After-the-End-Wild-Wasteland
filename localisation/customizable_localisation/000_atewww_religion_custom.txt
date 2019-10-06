@@ -297,3 +297,59 @@ defined_text = {
 		localisation_key = PRIEST_PLURAL
 	}
 }
+
+defined_text = {
+	name = GetBlessedExalted
+
+	text = {
+		localisation_key = beatified_LDS
+		trigger = {
+			religion_group = latter_day_saints
+		}
+	}
+	fallback_text = {
+		localisation_key = beatified_christian
+	}
+}
+
+defined_text = {
+	name = GetBlessedExaltedDesc
+
+	text = {
+		localisation_key = beatified_LDS_desc
+		trigger = {
+			religion_group = latter_day_saints
+		}
+	}
+	fallback_text = {
+		localisation_key = beatified_christian_desc
+	}
+}
+
+defined_text = {
+    name = GetConsumeristMoneyToPiety
+
+    text = {
+        localisation_key = consumerist_money_to_piety_monetarist
+        trigger = {
+            religion = monetarist
+        }
+    }
+    fallback_text = {
+        localisation_key = consumerist_money_to_piety_consumerist
+    }
+}
+
+defined_text = {
+    name = GetConsumeristMoneyToPietyDesc
+
+    text = {
+        localisation_key = consumerist_money_to_piety_desc_monetarist
+        trigger = {
+            religion = monetarist
+        }
+    }
+    fallback_text = {
+        localisation_key = consumerist_money_to_piety_desc_consumerist
+    }
+}

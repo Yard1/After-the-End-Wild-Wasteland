@@ -241,6 +241,10 @@ died_before_achieveing_greatness_effect = {
 	}
 }
 
+found_a_legendary_bloodline_effect = {
+	found_a_legendary_bloodline_effect_fixed = yes
+}
+
 died_founding_a_bloodline_effect = { #for the main heir
 	#send news of death to other heroes/society members?
 	save_event_target_as = bloodline_founder
@@ -364,230 +368,6 @@ found_a_bloodline_effect = { #for alive hero
 	save_event_target_as = bloodline_founder
 	narrative_event = { id = HF.12300 days = 3 }
 	clr_XYZ_desc_flag_effect = yes
-}
-
-found_a_legendary_bloodline_effect = { #For any hero
-	custom_tooltip = {
-		text = found_bloodline_tt
-		hidden_effect = {
-			ROOT = {
-				society = {
-					save_event_target_as = society_affiliation
-				}
-			}
-		}
-		random_list = {
-			10 = {
-				trigger = {
-					OR = {
-						religion_openly_tengri_or_reformed_trigger = yes
-						is_nomadic = yes
-					}
-					has_character_modifier = pet_hunting_eagle
-					has_character_modifier = friend_of_eagles
-					trait = falconer
-				}
-				if = {
-					limit = { is_female = yes }
-					create_bloodline = { type = legendary_eagle_hunter_female society = event_target:society_affiliation }
-				}
-				else = {
-					create_bloodline = { type = legendary_eagle_hunter_male society = event_target:society_affiliation }	
-				}
-				new_bloodline = {
-					set_description = bloodline_desc_legendary_eagle_hunter
-					random_list = { 
-						#Randomize names
-						20 = { set_name = bloodline_legendary_eagle_hunter_A }
-						20 = { set_name = bloodline_legendary_eagle_hunter_B }
-						20 = { set_name = bloodline_legendary_eagle_hunter_C }
-						20 = { set_name = bloodline_legendary_eagle_hunter_D }
-					}
-				}
-			}
-			10 = { # (Way of Life exclusive)
-				trigger = { has_dlc = "Way of Life" }
-				if = {
-					limit = { is_female = yes }
-					create_bloodline = { type = legendary_dog_hunter_female society = event_target:society_affiliation }
-				}
-				else = {
-					create_bloodline = { type = legendary_dog_hunter_male society = event_target:society_affiliation }	
-				}
-
-				new_bloodline = {
-					set_description = bloodline_desc_legendary_dog_hunter
-					random_list = { 
-						#Randomize names
-						20 = { set_name = bloodline_legendary_dog_hunter_A }
-						20 = { set_name = bloodline_legendary_dog_hunter_B }
-						20 = { set_name = bloodline_legendary_dog_hunter_C }
-						20 = { set_name = bloodline_legendary_dog_hunter_D }
-					}
-				}
-			}
-			5 = { #Available to all
-				if = {
-					limit = { is_female = yes }
-					create_bloodline = { type = legendary_battle_survivor_female society = event_target:society_affiliation }
-				}
-				else = {
-					create_bloodline = { type = legendary_battle_survivor_male society = event_target:society_affiliation }	
-				}
-				new_bloodline = {
-					set_description = bloodline_desc_legendary_battle_survivor
-					random_list = { 
-						#Randomize names
-						20 = { set_name = bloodline_legendary_battle_survivor_A }
-						20 = { set_name = bloodline_legendary_battle_survivor_B }
-						20 = { set_name = bloodline_legendary_battle_survivor_C }
-						20 = { set_name = bloodline_legendary_battle_survivor_D }
-					}
-				}
-			}
-			5 = { #(Conclave exclusive)
-				trigger = { has_dlc = "Conclave" }
-				if = {
-					limit = { is_female = yes }
-					create_bloodline = { type = legendary_leader_female society = event_target:society_affiliation }
-				}
-				else = {
-					create_bloodline = { type = legendary_leader_male society = event_target:society_affiliation }	
-				}
-				new_bloodline = {
-					set_description = bloodline_desc_legendary_leader
-					random_list = { 
-						#Randomize names
-						20 = { set_name = bloodline_legendary_leader_A }
-						20 = { set_name = bloodline_legendary_leader_B }
-						20 = { set_name = bloodline_legendary_leader_C }
-						20 = { set_name = bloodline_legendary_leader_D }
-					}
-				}
-			}
-			5 = { #Available to all
-				if = {
-					limit = { is_female = yes }
-					create_bloodline = { type = legendary_warrior_female society = event_target:society_affiliation }
-				}
-				else = {
-					create_bloodline = { type = legendary_warrior_male society = event_target:society_affiliation }	
-				}
-				
-				new_bloodline = {
-					set_description = bloodline_desc_legendary_warrior
-					random_list = { 
-						#Randomize names
-						20 = { set_name = bloodline_legendary_warrior_A }
-						20 = { set_name = bloodline_legendary_warrior_B }
-						20 = { set_name = bloodline_legendary_warrior_C }
-						20 = { set_name = bloodline_legendary_warrior_D }
-					}
-				}
-			}
-			10 = { #(Monks & Mystics/Jade Dragon exclusive)
-				trigger = {
-					OR = {
-						has_dlc = "Monks and Mystics"
-						has_dlc = "Jade Dragon"
-					}
-				}
-				if = {
-					limit = { is_female = yes }
-					create_bloodline = { type = legendary_soldier_female society = event_target:society_affiliation }
-				}
-				else = {
-					create_bloodline = { type = legendary_soldier_male society = event_target:society_affiliation }	
-				}
-				new_bloodline = {
-					set_description = bloodline_desc_legendary_soldier
-					random_list = { 
-						#Randomize names
-						20 = { set_name = bloodline_legendary_soldier_A }
-						20 = { set_name = bloodline_legendary_soldier_B }
-						20 = { set_name = bloodline_legendary_soldier_C }
-						20 = { set_name = bloodline_legendary_soldier_D }
-					}
-				}
-			}
-			5 = { #Available to all
-				if = {
-					limit = { is_female = yes }
-					create_bloodline = { type = legendary_battle_bard_female society = event_target:society_affiliation }
-				}
-				else = {
-					create_bloodline = { type = legendary_battle_bard_male society = event_target:society_affiliation }	
-				}
-				new_bloodline = {
-					set_description = bloodline_desc_legendary_battle_bard
-					random_list = { 
-						#Randomize names
-						20 = { set_name = bloodline_legendary_battle_bard_A }
-						20 = { set_name = bloodline_legendary_battle_bard_B }
-						20 = { set_name = bloodline_legendary_battle_bard_C }
-						20 = { set_name = bloodline_legendary_battle_bard_D }
-					}
-				}
-			}
-			5 = { #Available to all
-				if = {
-					limit = { is_female = yes }
-					create_bloodline = { type = legendary_commander_female society = event_target:society_affiliation }
-				}
-				else = {
-					create_bloodline = { type = legendary_commander_male society = event_target:society_affiliation }	
-				}
-				new_bloodline = {
-					set_description = bloodline_desc_legendary_commander
-					random_list = { 
-						#Randomize names
-						20 = { set_name = bloodline_legendary_commander_A }
-						20 = { set_name = bloodline_legendary_commander_B }
-						20 = { set_name = bloodline_legendary_commander_C }
-						20 = { set_name = bloodline_legendary_commander_D }
-					}
-				}
-			}
-			5 = { #Available to all
-				if = {
-					limit = { is_female = yes }
-					create_bloodline = { type = legendary_captor_female society = event_target:society_affiliation }
-				}
-				else = {
-					create_bloodline = { type = legendary_captor_male society = event_target:society_affiliation }	
-				}
-				new_bloodline = {
-					set_description = bloodline_desc_legendary_captor
-					random_list = { 
-						#Randomize names
-						20 = { set_name = bloodline_legendary_captor_A }
-						20 = { set_name = bloodline_legendary_captor_B }
-						20 = { set_name = bloodline_legendary_captor_C }
-						20 = { set_name = bloodline_legendary_captor_D }
-					}
-				}
-			}
-			5 = { #Available to all
-				if = {
-					limit = { is_female = yes }
-					create_bloodline = { type = legendary_raider_female society = event_target:society_affiliation }
-				}
-				else = {
-					create_bloodline = { type = legendary_raider_male society = event_target:society_affiliation }	
-				}
-				new_bloodline = {
-					set_description = bloodline_desc_legendary_raider
-					random_list = { 
-						#Randomize names
-						20 = { set_name = bloodline_legendary_raider_A }
-						20 = { set_name = bloodline_legendary_raider_B }
-						20 = { set_name = bloodline_legendary_raider_C }
-						20 = { set_name = bloodline_legendary_raider_D }
-					}
-				}
-			}
-		}
-	}
 }
 
 randomize_ABCDEF_desc_flag_effect = {	
@@ -1116,6 +896,8 @@ spawn_old_duelist_effect = {
 		add_one_duel_experience_modifier = yes
 		add_one_duel_experience_modifier = yes
 		add_one_duel_experience_modifier = yes
+		character_event = { id = misc.3 } # Diversity
+		character_event = { id = misc.4 } # Physique
 		set_character_flag = invited_soldier
 		save_event_target_as = invited_character
 	}
@@ -1359,6 +1141,8 @@ spawn_giant_duelist_effect = {
 				}
 			}
 		}
+		character_event = { id = misc.3 } # Diversity
+		character_event = { id = misc.4 } # Physique
 		set_character_flag = invited_soldier
 		save_event_target_as = invited_character
 	}
@@ -1681,190 +1465,10 @@ spawn_creature_champion_effect = {
 				}
 			}
 		}
+		character_event = { id = misc.3 } # Diversity
+		character_event = { id = misc.4 } # Physique
 		set_character_flag = invited_soldier
 		save_event_target_as = invited_character
-	}
-}
-
-#### For creating bloodlines in general ####
-#### If your bloodline requires a specific religion, one which should *not change* if the founder changes religion, this needs to be set.
-#### IMPORTANT: If religions are added: add new religion checks in new else-if limits and in the religion_same_as_bloodline_founder_trigger scripted trigger.
-set_bloodline_founder_religion_flag_effect = {
-	if = {
-		limit = { religion_openly_norse_or_reformed_trigger = yes }
-		new_bloodline = { set_bloodline_flag = requires_norse_pagan_religion }
-	}
-	else_if = {
-		limit = { religion_openly_baltic_or_reformed_trigger = yes }
-		new_bloodline = { set_bloodline_flag = requires_baltic_pagan_religion }
-	}
-	else_if = {
-		limit = { religion_openly_finnish_or_reformed_trigger = yes }
-		new_bloodline = { set_bloodline_flag = requires_finnish_pagan_religion }
-	}
-	else_if = {
-		limit = { religion_openly_slavic_or_reformed_trigger = yes }
-		new_bloodline = { set_bloodline_flag = requires_slavic_pagan_religion }
-	}
-	else_if = {
-		limit = { religion_openly_tengri_or_reformed_trigger = yes }
-		new_bloodline = { set_bloodline_flag = requires_tengri_pagan_religion }
-	}
-	else_if = {
-		limit = { religion_openly_west_african_or_reformed_trigger = yes }
-		new_bloodline = { set_bloodline_flag = requires_west_african_pagan_religion }
-	}
-	else_if = {
-		limit = { religion_openly_zun_or_reformed_trigger = yes }
-		new_bloodline = { set_bloodline_flag = requires_zun_pagan_religion }
-	}
-	else_if = {
-		limit = { religion_openly_bon_or_reformed_trigger = yes }
-		new_bloodline = { set_bloodline_flag = requires_bon_pagan_religion }
-	}
-	else_if = {
-		limit = { religion_openly_hellenic_or_reformed_trigger = yes }
-		new_bloodline = { set_bloodline_flag = requires_hellenic_pagan_religion }
-	}
-	else_if = {
-		limit = { religion_openly_aztec_or_reformed_trigger = yes }
-		new_bloodline = { set_bloodline_flag = requires_aztec_pagan_religion }
-	}
-	else_if = {
-		limit = { religion = catholic }
-		new_bloodline = { set_bloodline_flag = requires_catholic_religion }
-	}
-	else_if = {
-		limit = { religion = cathar }
-		new_bloodline = { set_bloodline_flag = requires_cathar_religion }
-	}
-	else_if = {
-		limit = { religion = fraticelli }
-		new_bloodline = { set_bloodline_flag = requires_fraticelli_religion }
-	}
-	else_if = {
-		limit = { religion = waldensian }
-		new_bloodline = { set_bloodline_flag = requires_waldensian_religion }
-	}
-	else_if = {
-		limit = { religion = lollard }
-		new_bloodline = { set_bloodline_flag = requires_lollard_religion }
-	}
-	else_if = {
-		limit = { religion = orthodox }
-		new_bloodline = { set_bloodline_flag = requires_orthodox_religion }
-	}
-	else_if = {
-		limit = { religion = bogomilist }
-		new_bloodline = { set_bloodline_flag = requires_bogomilist_religion }
-	}
-	else_if = {
-		limit = { religion = monothelite }
-		new_bloodline = { set_bloodline_flag = requires_monothelite_religion }
-	}
-	else_if = {
-		limit = { religion = iconoclast }
-		new_bloodline = { set_bloodline_flag = requires_iconoclast_religion }
-	}
-	else_if = {
-		limit = { religion = paulician }
-		new_bloodline = { set_bloodline_flag = requires_paulician_religion }
-	}
-	else_if = {
-		limit = { religion = miaphysite }
-		new_bloodline = { set_bloodline_flag = requires_miaphysite_religion }
-	}
-	else_if = {
-		limit = { religion = monophysite }
-		new_bloodline = { set_bloodline_flag = requires_monophysite_religion }
-	}
-	else_if = {
-		limit = { religion = nestorian }
-		new_bloodline = { set_bloodline_flag = requires_nestorian_religion }
-	}
-	else_if = {
-		limit = { religion = messalian }
-		new_bloodline = { set_bloodline_flag = requires_messalian_religion }
-	}
-	else_if = {
-		limit = { religion = sunni }
-		new_bloodline = { set_bloodline_flag = requires_sunni_religion }
-	}
-	else_if = {
-		limit = { religion = zikri }
-		new_bloodline = { set_bloodline_flag = requires_zikri_religion }
-	}
-	else_if = {
-		limit = { religion = yazidi }
-		new_bloodline = { set_bloodline_flag = requires_yazidi_religion }
-	}
-	else_if = {
-		limit = { religion = shiite }
-		new_bloodline = { set_bloodline_flag = requires_shiite_religion }
-	}
-	else_if = {
-		limit = { religion = druze }
-		new_bloodline = { set_bloodline_flag = requires_druze_religion }
-	}
-	else_if = {
-		limit = { religion = hurufi }
-		new_bloodline = { set_bloodline_flag = requires_hurufi_religion }
-	}
-	else_if = {
-		limit = { religion = ibadi }
-		new_bloodline = { set_bloodline_flag = requires_ibadi_religion }
-	}
-	else_if = {
-		limit = { religion = kharijite }
-		new_bloodline = { set_bloodline_flag = requires_kharijite_religion }
-	}
-	else_if = {
-		limit = { religion = jewish }
-		new_bloodline = { set_bloodline_flag = requires_jewish_religion }
-	}
-	else_if = {
-		limit = { religion = samaritan }
-		new_bloodline = { set_bloodline_flag = requires_samaritan_religion }
-	}
-	else_if = {
-		limit = { religion = karaite }
-		new_bloodline = { set_bloodline_flag = requires_karaite_religion }
-	}
-	else_if = {
-		limit = { religion = zoroastrian }
-		new_bloodline = { set_bloodline_flag = requires_zoroastrian_religion }
-	}
-	else_if = {
-		limit = { religion = mazdaki }
-		new_bloodline = { set_bloodline_flag = requires_mazdaki_religion }
-	}
-	else_if = {
-		limit = { religion = manichean }
-		new_bloodline = { set_bloodline_flag = requires_manichean_religion }
-	}
-	else_if = {
-		limit = { religion = khurmazta }
-		new_bloodline = { set_bloodline_flag = requires_khurmazta_religion }
-	}
-	else_if = {
-		limit = { religion = taoist }
-		new_bloodline = { set_bloodline_flag = requires_taoist_religion }
-	}
-
-	else_if = {
-		limit = { religion = hindu }
-		new_bloodline = { set_bloodline_flag = requires_hindu_religion }
-	}
-	else_if = {
-		limit = { religion = buddhist }
-		new_bloodline = { set_bloodline_flag = requires_buddhist_religion }
-	}
-	else_if = {
-		limit = { religion = jain }
-		new_bloodline = { set_bloodline_flag = requires_jain_religion }
-	}
-	else = {
-		# Add new religions in new else-if limits.
 	}
 }
 

@@ -366,7 +366,7 @@ character_event = {
 		}
 		trigger = {
 			NOT = { religion_group = pacific } #Random World safety check.
-			NOT = { trait = sympathy_pacific_neognostic }
+			NOT = { trait = sympathy_pacific_religion }
 		}
 		add_trait = sympathy_pacific
 		clr_character_flag = flag_picking_sympathy
@@ -508,6 +508,7 @@ character_event = {
 		}
 		trigger = {
 			NOT = { religion_group = cult_of_saints } #Random World safety check.
+			NOT = { trait = sympathy_cult_of_saints_religion }
 		}
 		add_trait = sympathy_cult_of_saints
 		clr_character_flag = flag_picking_sympathy
@@ -3165,6 +3166,8 @@ character_event = {
 							ROOT = { 
 								NOR = { 
 									has_law = succ_byzantine_elective 
+									has_law = succ_eldership
+									has_law = succ_tanistry
 									has_law = succ_turkish_succession 
 								}
 								OR = { 
@@ -3231,6 +3234,8 @@ character_event = {
 							ROOT = { 
 								NOR = { 
 									has_law = succ_byzantine_elective 
+									has_law = succ_eldership
+									has_law = succ_tanistry
 									has_law = succ_turkish_succession 
 								}
 								OR = { 
@@ -3580,6 +3585,8 @@ character_event = {
 							ROOT = { 
 								NOR = { 
 									has_law = succ_byzantine_elective 
+									has_law = succ_eldership
+									has_law = succ_tanistry
 									has_law = succ_turkish_succession 
 								}
 								OR = { 
@@ -3646,6 +3653,8 @@ character_event = {
 							ROOT = { 
 								NOR = { 
 									has_law = succ_byzantine_elective 
+									has_law = succ_eldership
+									has_law = succ_tanistry
 									has_law = succ_turkish_succession 
 								}
 								OR = { 
@@ -5045,6 +5054,8 @@ character_event = {
 
 	trigger = {
 		OR = {
+			trait = corsair
+			trait = pirate_king
 			trait = ravager
 			trait = seaking
 			trait = sea_queen
@@ -5098,7 +5109,7 @@ character_event = {
 		}
 		if = { 
 			limit = {
-				trait = ravager
+				OR = { trait = ravager trait = corsair }
 			}
 			custom_tooltip = {
 				text = "TOOLTIP_EVTOPTAHF230210"
@@ -5119,6 +5130,7 @@ character_event = {
 				OR = {
 					trait = seaking
 					trait = sea_queen
+					trait = pirate_king
 				}
 			}
 			custom_tooltip = {
@@ -5157,7 +5169,7 @@ character_event = {
 		name = EVTOPTBHF23210
 		if = { 
 			limit = {
-				trait = ravager
+				OR = { trait = ravager trait = corsair }
 			}
 			wealth = 100
 			if = { 
@@ -5172,6 +5184,7 @@ character_event = {
 				OR = {
 					trait = seaking
 					trait = sea_queen
+					trait = pirate_king
 				}
 			}
 			wealth = 200
@@ -5187,7 +5200,7 @@ character_event = {
 		name = EVTOPTCHF23210
 		if = { 
 			limit = {
-				trait = ravager
+				OR = { trait = ravager trait = corsair }
 			}
 			prestige = 150
 		}
@@ -5196,6 +5209,7 @@ character_event = {
 				OR = {
 					trait = seaking
 					trait = sea_queen
+					trait = pirate_king
 				}
 			}
 			prestige = 300
@@ -11123,9 +11137,9 @@ character_event = {
 		if = {
 			limit = {
 				OR = {
-					limit = { has_religion_feature = religion_cosmopolitan }
-					limit = { has_religion_feature = religion_feature_espiritista }
-					limit = { has_religion_feature = religion_feature_revelationist }
+					has_religion_feature = religion_cosmopolitan
+					has_religion_feature = religion_feature_espiritista
+					has_religion_feature = religion_feature_revelationist
 				}
 			}
 			tiered_piety_negative_effect = yes
@@ -11583,6 +11597,8 @@ character_event = {
 					limit = { 
 						NOR = { 
 							has_law = succ_byzantine_elective 
+							has_law = succ_eldership
+							has_law = succ_tanistry
 							has_law = succ_turkish_succession 
 						}
 						OR = { 

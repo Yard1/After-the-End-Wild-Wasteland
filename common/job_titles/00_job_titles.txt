@@ -503,6 +503,22 @@ job_spiritual = {
 					}
 				}
 			}
+			conditional_tooltip = {
+				trigger = {
+					has_autocephaly = yes
+				}
+				OR = {
+					has_autocephaly = no
+					NOT = {
+						ROOT = {
+							show_scope_change = no
+							rightful_religious_head_scope = {
+								character = FROM
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	gain_effect = {

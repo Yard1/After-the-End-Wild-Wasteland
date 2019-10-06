@@ -999,7 +999,7 @@ decisions = {
 							}
 							modifier = {
 								factor = 0
-								religion = neognostic
+								trait = sympathy_pacific_religion
 							}
 							modifier = { # Prioritize getting a sympathy trait that is useful
 								factor = 100
@@ -1203,6 +1203,10 @@ decisions = {
 							modifier = {
 								factor = 0
 								religion = exovedate
+							}
+							modifier = {
+								factor = 0
+								trait = sympathy_cult_of_saints_religion
 							}
 							modifier = { # Prioritize getting a sympathy trait that is useful
 								factor = 100

@@ -209,7 +209,7 @@ character_event = {
 			factor = 10
 			modifier = {
 				factor = 20
-				female = yes
+				is_female = yes
 			}
 			modifier = {
 				factor = 20
@@ -249,7 +249,7 @@ character_event = {
 			factor = 10
 			modifier = {
 				factor = 20
-				female = yes
+				is_female = yes
 			}
 			modifier = {
 				factor = 20
@@ -448,7 +448,7 @@ character_event = {
 			factor = 10
 			modifier = {
 				factor = 20
-				female = yes
+				is_female = yes
 			}
 			modifier = {
 				factor = 20
@@ -506,7 +506,7 @@ character_event = {
 			factor = 10
 			modifier = {
 				factor = 20
-				female = yes
+				is_female = yes
 			}
 			modifier = {
 				factor = 20

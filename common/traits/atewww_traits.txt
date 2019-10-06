@@ -287,12 +287,26 @@ methodist = {
 	ai_zeal = 5
 }
 
-sympathy_pacific_neognostic = {
+sympathy_pacific_religion = {
 	potential = {
 		religion = neognostic
+		religion = bickertonite
 	}
 
 	tolerates_pacific = yes		# Tolerates and is tolerated by Pacific
+	
+	customizer = no
+	random = no
+	hidden = yes
+	religious = yes
+}
+
+sympathy_cult_of_saints_religion = {
+	potential = {
+		religion = strangite
+	}
+
+	tolerates_cult_of_saints = yes		# Tolerates and is tolerated by Pacific
 	
 	customizer = no
 	random = no

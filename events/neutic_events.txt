@@ -17,7 +17,7 @@ character_event = {
 		modifier = { factor = 0.5 trait = stressed }
 		modifier = { factor = 0.5 trait = depressed }
 		modifier = { factor = 2 trait = diligent }
-		modifier = { factor = 5 has_character_modifier = writing_inspiration_neutic_neutic }
+		modifier = { factor = 5 has_character_modifier = writing_inspiration_neutic }
 	}
 	
 	immediate = {
@@ -294,9 +294,9 @@ character_event = {
 	desc = EVTDESC_neutic_write_discuss
 	picture = GFX_evt_courtiers_talking
 	is_triggered_only = yes
-	
+	religion = neutic
+
 	trigger = {
-		religion = neutic
 		has_character_modifier = intense_writing
 		NOT = { has_character_modifier = writing_inspiration_neutic }
 	}
@@ -320,9 +320,7 @@ character_event = {
 	picture = GFX_evt_library
 	is_triggered_only = yes
 	
-	trigger = {
-		religion = neutic
-	}
+	religion = neutic
 	
 	option = {
 		name = EVTOPT_neutic_inspire_inform_switch
@@ -411,9 +409,7 @@ character_event = {
 	picture = GFX_evt_lunatic
 	is_triggered_only = yes
 	
-	trigger = {
-		religion = neutic
-	}
+	religion = neutic
 	
 	option = {
 		name = EVTOPT_neutic_terrible_inform_switch
@@ -469,35 +465,14 @@ character_event = {
 
 character_event = {
 	id = neutic.8
-	desc = EVTDESC_neutic_choose_way
+	desc = EVTDESC_cetic_choose_way
 	picture = GFX_evt_chinese_bureaucrat
 	is_triggered_only = yes
 
-	trigger = {
-		religion = neutic
-	}
-	
-	option = {
-		name = EVTOPT_neutic_choose_same
-		trigger = {
-			any_close_relative = {
-				NOT = {
-					reverse_has_opinion_modifier = { who = ROOT modifier = opinion_unenlightened }
-				}
-			}
-		}
-		piety = 20
-		ai_chance = {
-			factor = 100
-			modifier = { factor = 2	trait = zealous }
-			modifier = { factor = 0.3 trait = arbitrary }
-			modifier = { factor = 0.5 trait = cynical }
-		}
-	}
+	religion = neutic
 	
 	option = {
 		name = EVTOPT_neutic_choose_book
-		trigger = { NOT = { trait = way_book_neutic } }
 		hidden_tooltip = {
 			remove_trait = way_fist_neutic
 			remove_trait = way_cowl_neutic
@@ -522,7 +497,6 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_neutic_choose_fist
-		trigger = { NOT = { trait = way_fist_neutic } }
 		hidden_tooltip = {
 			remove_trait = way_book_neutic
 			remove_trait = way_cowl_neutic
@@ -547,7 +521,6 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_neutic_choose_cowl
-		trigger = { NOT = { trait = way_cowl_neutic } }
 		hidden_tooltip = {
 			remove_trait = way_fist_neutic
 			remove_trait = way_book_neutic
@@ -577,7 +550,6 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_neutic_choose_dove
-		trigger = { NOT = { trait = way_dove_neutic } }
 		hidden_tooltip = {
 			remove_trait = way_fist_neutic
 			remove_trait = way_cowl_neutic
@@ -599,6 +571,8 @@ character_event = {
 			modifier = { factor = 0.3 trait = arbitrary }
 		}
 	}
+
+	after = { clr_character_flag = flag_picking_branch }
 }
 
 # Converting to Neutic
@@ -611,9 +585,7 @@ character_event = {
 
 	is_triggered_only = yes
 	
-	trigger = {
-		religion = neutic
-	}
+	religion = neutic
 	
 	option = {
 		name = EVTOPT_neutic_choose_book
@@ -898,7 +870,7 @@ character_event = {
 	id = neutic.300
 	desc = EVTDESC_neutic_300
 
-	trigger = { religion = neutic }
+	religion = neutic
 
 	picture = GFX_evt_holy_emperor
 	border = GFX_event_normal_frame_religion

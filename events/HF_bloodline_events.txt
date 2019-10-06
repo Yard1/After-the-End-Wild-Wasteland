@@ -399,6 +399,7 @@ character_event = { # Sympathy for founder group
 							NOR = {
 								religion_group = cult_of_saints
 								trait = sympathy_cult_of_saints
+								trait = sympathy_cult_of_saints_religion
 							}
 						}
 					}
@@ -408,7 +409,7 @@ character_event = { # Sympathy for founder group
 							NOR = {
 								religion_group = pacific
 								trait = sympathy_pacific
-								trait = sympathy_pacific_neognostic
+								trait = sympathy_pacific_religion
 							}
 						}
 					}
@@ -522,6 +523,7 @@ character_event = { # Sympathy for founder group
 								NOR = {
 									religion_group = cult_of_saints
 									trait = sympathy_cult_of_saints
+									trait = sympathy_cult_of_saints_religion
 								}
 							}
 						}
@@ -531,7 +533,7 @@ character_event = { # Sympathy for founder group
 								NOR = {
 									religion_group = pacific
 									trait = sympathy_pacific
-									trait = sympathy_pacific_neognostic
+									trait = sympathy_pacific_religion
 								}
 							}
 						}
@@ -2196,7 +2198,7 @@ narrative_event = {
 		modifier = {
 			factor = 0.35
 			NOR = { 
-				culture_group = north_anglo
+				culture_group = north_atlantic
 				culture_group = south_anglo
 				culture_group = west_anglo
 			}
@@ -2242,7 +2244,7 @@ narrative_event = {
 		}
 		modifier = {
 			factor = 1.5
-			culture_group = north_anglo
+			culture_group = north_atlantic
 		}
 		modifier = {
 			factor = 0.5
@@ -2847,7 +2849,7 @@ narrative_event = {
 					}
 					modifier = {
 						factor = 1.5
-						culture = greek
+						culture = beltway
 					}
 					narrative_event = { id = HF.24206 days = 150 random = 250 }
 				}
@@ -8832,7 +8834,11 @@ character_event = {
 				NOT = {
 					character = ROOT
 				}
-				religion_group = christian
+				OR = {
+					religion_group = christian
+					religion_group = latter_day_saints
+					religion_group = cult_of_saints
+				}
 			}
 		}
 	}
@@ -9250,7 +9256,11 @@ character_event = {
 		is_ruler = no
 		is_female = yes
 		NOT = { matriarchal_religion = yes }
-		religion_group = christian
+		OR = {
+			religion_group = christian
+			religion_group = latter_day_saints
+			religion_group = cult_of_saints
+		}
 		is_married = no
 		NOT = { num_of_children = 1 }
 		NOT = { num_of_lovers = 1 }

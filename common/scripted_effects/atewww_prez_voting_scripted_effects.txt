@@ -1,5 +1,6 @@
 calculate_candidate_score = {
 	log = "Current candidate: [new_candidate.GetBestName]"
+	set_variable = { which = newCandidate value = 0 }
 	if = { 
 		
 		limit = {

@@ -137,7 +137,7 @@ narrative_event = {
 				event_target:old_bishop = {
 					unsafe_religion = confederated
 					any_courtier = {
-						limit = { is_prisoner = no }
+						limit = { prisoner = no }
 						religion = confederated
 					}
 					capital_scope = {
@@ -194,7 +194,7 @@ narrative_event = {
 				event_target:old_pope = {
 					unsafe_religion = confederated
 					any_courtier = {
-						limit = { is_prisoner = no }
+						limit = { prisoner = no }
 						religion = confederated
 					}
 					capital_scope = {

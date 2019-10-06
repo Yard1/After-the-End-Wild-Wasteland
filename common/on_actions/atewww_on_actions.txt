@@ -1,11 +1,7 @@
 on_yearly_pulse = {
 	events = {
-		ATE_WWW_RELIGION.16
 		ATE_WWWW_AIRMEN.5
-		ATE_WWW_RELIGION.28
-		ATE_WWW_RELIGION.30
-		ATE_WWW_RELIGION.36
-		ATE_WWW_RELIGION.40
+		miscATEWW.8
 	}
 }
 
@@ -17,6 +13,8 @@ on_startup = {
 		ATE_WWW_RELIGION.28
 		ATE_WWW_RELIGION.39
 		ATE_WWW_RELIGION.40
+		ATE_WWW_RELIGION.41
+		ATE_WWW_RELIGION.42
 	}
 }
 
@@ -34,6 +32,8 @@ on_host_change = {
 		ATE_WWW_RELIGION.36
 		HF.23016
 		ATE_WWW_RELIGION.40
+		ATE_WWW_RELIGION.41
+		ATE_WWW_RELIGION.42
 		ATE_WWW_COMMIES.2
 		ATE_WWW_COMMIES.3
 		ATE_WWW_COMMIES.4
@@ -66,6 +66,8 @@ on_character_convert_religion = {
 		ATE_WWW_RELIGION.30
 		ATE_WWW_RELIGION.36
 		ATE_WWW_RELIGION.40
+		ATE_WWW_RELIGION.41
+		ATE_WWW_RELIGION.42
 		ATE_WWW_COMMIES.1
 		ATE_WWW_COMMIES.3
 	}
@@ -118,7 +120,7 @@ on_adulthood = {
 	events = {
 		ATE_WWW_PIRATE.6
 		ATE_WWW_RELIGION.16
-		neutic.8	  # choose neutic path
+		#neutic.8	  # choose neutic path
 	}
 }
 
@@ -128,6 +130,8 @@ on_birth = {
 		misc.41
 		ATE_WWW_RELIGION.28
 		ATE_WWW_RELIGION.40
+		ATE_WWW_RELIGION.41
+		ATE_WWW_RELIGION.42
 		ATE_WWW_COMMIES.2
 		ATE_WWW_COMMIES.3
 		ATE_WWW_COMMIES.4
@@ -146,6 +150,7 @@ on_create_title = {
 # ROOT is the character, FROM is the title, FROMFROM is the old holder
 on_new_holder = {
 	events = {
+		miscATEWW.4
 		misc.40
 		ATE_WWWW_AIRMEN.1
 		ATE_WWW_RELIGION.16
@@ -168,6 +173,7 @@ on_new_holder = {
 on_new_holder_inheritance = {
 	events = {
 		misc.40
+		prez.100
 		ATE_WWWW_AIRMEN.3
 		ATE_WWW_RELIGION.11
 		ATE_WWW_RELIGION.9
@@ -184,6 +190,7 @@ on_new_holder_inheritance = {
 on_new_holder_usurpation = {
 	events = {
 		misc.40
+		prez.100
 		ATE_WWWW_AIRMEN.1
 		ATE_WWW_RELIGION.11
 		ATE_WWW_RELIGION.9

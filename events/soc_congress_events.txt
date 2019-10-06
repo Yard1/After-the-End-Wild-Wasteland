@@ -390,6 +390,7 @@ character_event = {
 	
 	immediate = {
 		remove_trait = on_campaign_speaker
+		remove_trait = travelling
 		k_papal_state = { holder_scope = { change_variable = { which = s_num_candidates value = -1 } } }
 		any_character = {
 			limit = {
@@ -1269,6 +1270,7 @@ narrative_event = {
 		name = EVTOPTASC20
 		prestige = 500
 		remove_trait = on_campaign_speaker
+		remove_trait = travelling
 		add_trait = speaker
 		society_rank_up = 3
 		set_society_grandmaster = yes
@@ -1383,6 +1385,7 @@ character_event = {
 	
 	immediate = {
 		remove_trait = on_campaign_speaker
+		remove_trait = travelling
 		clr_character_flag = speaker_candidate
 		clr_character_flag = dropped_out
 	}

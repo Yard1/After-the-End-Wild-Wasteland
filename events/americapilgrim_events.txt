@@ -2124,6 +2124,7 @@ character_event = {
 				prisoner = no
 				war = no
 				NOT = { trait = incapable }
+				is_inaccessible_trigger = no
 			}
 			character_event = { id = america_pilgrim.101 days = 2 tooltip = EVTTOOLTIP_america_pilgrim_101 }
 		}
@@ -2147,15 +2148,14 @@ character_event = {
 	option = {
 		name = EVTOPTA_america_pilgrim_101
 		ai_chance = {
-			factor = 80
+			factor = 1
 			modifier = {
-				factor = 0
-				NOT = {
-					opinion = {
-						who = ROOT
-						value = -20
-					}
-				}
+				factor = 2
+				opinion = { who = from value = -40 }
+			}
+			modifier  = {
+				factor = 2
+				opinion = { who = from value = -20 }
 			}
 		}
 		custom_tooltip = { text = thanksgiving_accepted }
@@ -2167,7 +2167,15 @@ character_event = {
 	option = {
 		name = EVTOPTB_america_pilgrim_101
 		ai_chance = {
-			factor = 20
+			factor = 1
+			modifier  = {
+				factor = 2
+				NOT = { opinion = { who = from value = -60 } }
+			}
+			modifier  = {
+				factor = 2
+				NOT = { opinion = { who = from value = -80 } }
+			}
 		}
 		FROM = {
 			opinion = {

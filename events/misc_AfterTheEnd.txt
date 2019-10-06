@@ -10757,19 +10757,19 @@ character_event = {
 					trait = slothful
 					trait = drunkard
 				}
-				random_list = {
-					45 = {
-						gain_weight_small_effect = yes
-						weight_trait_check_effect = yes
-					}
-					35 = {
-						gain_weight_medium_effect = yes
-						weight_trait_check_effect = yes
-					}
-					20 = {
-						gain_weight_large_effect = yes
-						weight_trait_check_effect = yes
-					}
+			}
+			random_list = {
+				45 = {
+					gain_weight_small_effect = yes
+					weight_trait_check_effect = yes
+				}
+				35 = {
+					gain_weight_medium_effect = yes
+					weight_trait_check_effect = yes
+				}
+				20 = {
+					gain_weight_large_effect = yes
+					weight_trait_check_effect = yes
 				}
 			}
 		}
@@ -10897,19 +10897,19 @@ character_event = {
 					trait = patient
 					trait = chaste
 				}
-				random_list = {
-					45 = {
-						lose_weight_small_effect = yes
-						weight_trait_check_effect = yes
-					}
-					35 = {
-						lose_weight_medium_effect = yes
-						weight_trait_check_effect = yes
-					}
-					20 = {
-						lose_weight_large_effect = yes
-						weight_trait_check_effect = yes
-					}
+			}
+			random_list = {
+				45 = {
+					lose_weight_small_effect = yes
+					weight_trait_check_effect = yes
+				}
+				35 = {
+					lose_weight_medium_effect = yes
+					weight_trait_check_effect = yes
+				}
+				20 = {
+					lose_weight_large_effect = yes
+					weight_trait_check_effect = yes
 				}
 			}
 		}
@@ -11086,6 +11086,23 @@ character_event = {
 					}
 					any_realm_character = {
 						character_event = { id = miscATEWW.5 }
+					}
+				}
+
+				if = {
+					limit = {
+						is_ruler = yes
+						is_feudal = yes
+						religion_group = latter_day_saints
+						gender_equality_trigger = no
+					}
+					any_demesne_title = {
+						limit = { is_law_potential = agnatic_succession }
+						add_law = {
+							law = agnatic_succession
+							opinion_effect = no
+							cooldown = no
+						}
 					}
 				}
 
