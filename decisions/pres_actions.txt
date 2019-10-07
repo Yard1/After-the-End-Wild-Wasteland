@@ -107,6 +107,10 @@ decisions = {
 				any_owned_bloodline = {
 					has_bloodline_flag = prez_bloodline
 				}
+				AND = {
+					has_global_flag = force_candidate
+					NOT = { k_papal_state = { check_variable = { which = num_candidates value = 0.1 } } }
+				}
 			} }
 		}
 		effect = {
@@ -141,6 +145,11 @@ decisions = {
 			}
 			modifier = {
 				factor = 0.2
+			}
+			modifier = {
+				factor = 10
+				has_global_flag = force_candidate
+				NOT = { k_papal_state = { check_variable = { which = num_candidates value = 0.1 } } }
 			}
 			modifier = {
 				factor = 8

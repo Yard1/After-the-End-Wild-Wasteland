@@ -37,6 +37,7 @@ character_event = {
 			holder_scope = {
 				1050 = {
 					province_event = { id = prez.700 days = 30 } # End candidate declaration period
+					province_event = { id = prez.9800 days = 180 } # Cleanup
 				}
 			}
 		}
@@ -84,6 +85,7 @@ character_event = {
 			holder_scope = {
 				1050 = {
 					province_event = { id = prez.700 days = 30 } # End candidate declaration period
+					province_event = { id = prez.9800 days = 180 } # Cleanup
 				}
 			}
 		}
@@ -244,6 +246,7 @@ character_event = {
 		}
 		set_global_flag = pres_election
 		clr_global_flag = declare_candidacy
+		clr_global_flag = force_candidate
 		any_player = {
 			limit = { religion = americanist }
 			character_event = { id = prez.6 }
@@ -263,9 +266,10 @@ character_event = {
 			}
 		}
 		1050 = {
-			province_event = { id = prez.700 days = 1 } # Thin out the field
+			province_event = { id = prez.700 days = 7 } # Thin out the field
 		}
 		set_global_flag = declare_candidacy
+		set_global_flag = force_candidate
 	}
 }
 
