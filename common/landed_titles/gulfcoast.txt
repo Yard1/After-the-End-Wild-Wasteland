@@ -10,7 +10,7 @@ e_gulfcoast = {
 
 		# Crusade target weight
 		catholic = 500
-		ursuline = 50
+		ursuline = 5
 		americanist = 5
 		jeffersonian = 5
 		hamiltonian = 5

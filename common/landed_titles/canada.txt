@@ -163,12 +163,13 @@ e_canada = {
 		color2 = { 210 190 0 }
 
 		# Crusade target weight
-		ursuline = 5
+		ursuline = 100
+		confederated = 5000
 		americanist = 5
 		jeffersonian = 5
 		hamiltonian = 5
 		libertarian = 5
-		rust_cultist = 50
+		rust_cultist_reformed = 50
 		occultist_reformed = 50
 		thelemic_reformed = 100
 		norse_pagan_reformed = 50
@@ -643,11 +644,12 @@ e_canada = {
 		# Crusade target weight
 		catholic = 5
 		ursuline = 5000
+		confederated = 4000
 		americanist = 5
 		jeffersonian = 5
 		hamiltonian = 5
 		libertarian = 5
-		rust_cultist = 5
+		rust_cultist_reformed = 5
 		occultist_reformed = 50
 		thelemic_reformed = 50
 		norse_pagan_reformed = 50
@@ -1265,7 +1267,8 @@ e_canada = {
 		culture = maritimer
 
 		# Crusade target weight
-		ursuline = 50
+		ursuline = 500
+		confederated = 500
 		jeffersonian = 5
 		hamiltonian = 5
 		libertarian = 5
@@ -1863,8 +1866,9 @@ e_canada = {
 
 		# Crusade target weight
 		ursuline = 500 #contains a holy site now
+		confederated = 500
 		midewiwin_reformed = 500
-		rust_cultist = 5
+		rust_cultist_reformed = 5
 		norse_pagan_reformed = 50
 
 		capital = 284 # Sudbury

@@ -3488,6 +3488,7 @@ crusade = {
 							religion = midewiwin_reformed
 							religion = raven_tales_reformed
 						}
+						pacifist = no
 						custom_tooltip = {
 							text = CTT_PAGAN_GHWS_UNLOCKED
 							has_global_flag = pagan_ghws_unlocked
@@ -6336,6 +6337,12 @@ religious = {
 				religion = espiritista
 				religion = uahomche
 				religion = rust_cultist
+				religion = espiritista_reformed
+				religion = uahomche_reformed
+				religion = midewiwin_reformed
+				religion = uahomche_reformed
+				religion = rust_cultist_reformed
+				religion = chrome_cultist
 			}
 			OR = {
 				pacifist = no
@@ -6553,13 +6560,24 @@ religious = {
 					FROM = { is_nomadic = no }
 				}
 			}
-			NOR = { 
+			NOR = {
 				religion_group = pagan_group
 				religion = midewiwin
+				religion = midewiwin_reformed
 				religion = raven_tales
+				religion = raven_tales_reformed
 				religion = brethren
 				religion = anabaptist
 				religion = espiritista
+				religion = uahomche
+				religion = rust_cultist
+				religion = espiritista_reformed
+				religion = uahomche_reformed
+				religion = midewiwin_reformed
+				religion = raven_tales_reformed
+				religion = uahomche_reformed
+				religion = rust_cultist_reformed
+				religion = chrome_cultist
 			}
 			OR = {
 				pacifist = no
@@ -12101,8 +12119,10 @@ pagan_holy_war = { #
 				religion = midewiwin_reformed
 				religion = raven_tales_reformed
 				religion = uahomche_reformed
+				religion = rust_cultist_reformed
+				religion = chrome_cultist
 			}
-			NOT = { has_religion_feature = religion_peaceful }
+			pacifist = no
 			NOT = { same_realm = FROM }
 			NOT = { religion = FROM }
 			top_liege = {
@@ -12175,12 +12195,16 @@ pagan_holy_war = { #
 				religion = revelationist_reformed
 				religion = occultist_reformed
 				religion = thelemic_reformed
-				religion = celtic_pagan_reformed #update to celtic_pagan_reformed
-				religion = espiritista_reformed 
+				religion = celtic_pagan_reformed
+				religion = espiritista_reformed
 				religion = uahomche_reformed
 				religion = midewiwin_reformed
 				religion = raven_tales_reformed
+				religion = uahomche_reformed
+				religion = rust_cultist_reformed
+				religion = chrome_cultist
 			}
+			pacifist = no
 			NOT = { same_realm = FROM }
 			NOT = { religion = FROM }
 			top_liege = {

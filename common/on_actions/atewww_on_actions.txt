@@ -135,6 +135,7 @@ on_birth = {
 		ATE_WWW_COMMIES.2
 		ATE_WWW_COMMIES.3
 		ATE_WWW_COMMIES.4
+		MT.9000
 	}
 }
 

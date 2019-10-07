@@ -2804,6 +2804,9 @@ character_event = { # What does the liege wish to do with the apostate?
 	
 	option = { # Execute them!
 		name = MNM.70200.a
+		trigger = {
+			pacifist = no
+		}
 		
 		ai_chance = {
 			factor = 50
@@ -3083,9 +3086,15 @@ character_event = { # What does the liege wish to do with the apostate?
 			
 			modifier = {
 				factor = 0
-				NOT = {
+				NOR = {
+					trait = cynical
 					trait = trusting
 				}
+			}
+
+			modifier = {
+				factor = 5
+				trait = cynical
 			}
 		}
 		

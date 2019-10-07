@@ -2672,7 +2672,11 @@ hermetics = {
 			is_nomadic = yes
 			is_tribal = yes
 		}
-		hidden_trigger = { mercenary = no }
+		NAND = {
+			is_theocracy = yes
+			controls_religion = yes
+		}
+		hidden_trigger = { mercenary = no holy_order = no }
 		age = 18
 		hidden_trigger = {
 			NOT = { has_character_flag = society_join_block }

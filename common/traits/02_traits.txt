@@ -2702,8 +2702,7 @@ kow_tow_completed_tier_3 = {
 	random = no
 }
 giant = {
-	birth = 50
-	inherit_chance = 5
+	birth = 20
 	
 	opposites =  {
 		dwarf

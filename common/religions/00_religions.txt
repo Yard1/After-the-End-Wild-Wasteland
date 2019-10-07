@@ -2591,6 +2591,7 @@ mesoamerican_gods = {
 			GOD_XIBALBA GOD_KABRAKAN
 		}
 
+		can_call_crusade = yes
 		can_grant_divorce = yes
 		priests_can_inherit = no
 		priests_can_marry = yes
@@ -2600,7 +2601,7 @@ mesoamerican_gods = {
 		dislike_tribal_organization = no
 		#can_demand_religious_conversion = no
 		
-		crusade_name = CRUSADE
+		crusade_name = GREAT_HOLY_WAR
 		scripture_name = THE_POPOL_VUH
 		priest_title = PRIEST
 		

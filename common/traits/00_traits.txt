@@ -836,8 +836,8 @@ homosexual = {
 #####################
 
 clubfooted = {
-	birth = 50
-	inherit_chance = 15
+	birth = 15 # EMF
+	inherit_chance = 1
 	
 	combat_rating = -5 #old value: -1
 	
@@ -852,8 +852,8 @@ clubfooted = {
 	female_insult_adj = INSULT_LIMPING
 }
 harelip = {
-	birth = 50
-	inherit_chance = 15
+	birth = 20 # EMF
+	inherit_chance = 1
 	
 	sex_appeal_opinion = -10
 	same_opinion = 5
@@ -866,8 +866,8 @@ harelip = {
 	female_insult_adj = INSULT_CLEFT_LIPPED
 }
 hunchback = {
-	birth = 50
-	inherit_chance = 15
+	birth = 15 # EMF
+	inherit_chance = 1
 	
 	sex_appeal_opinion = -30
 	same_opinion = 5
@@ -882,8 +882,8 @@ hunchback = {
 	female_insult_adj = INSULT_CROOKED
 }
 lisp = {
-	birth = 50
-	inherit_chance = 15
+	birth = 25 # EMF
+	inherit_chance = 1
 	
 	same_opinion = 5
 	
@@ -896,8 +896,8 @@ lisp = {
 	child_insult_adj = INSULT_STUPID
 }
 stutter = {
-	birth = 50
-	inherit_chance = 15
+	birth = 25 # EMF
+	inherit_chance = 1
 	
 	same_opinion = 5
 	
@@ -910,8 +910,8 @@ stutter = {
 	child_insult_adj = INSULT_STUPID
 }
 fair = {
-	birth = 100
-	inherit_chance = 15
+	birth = 30 # EMF
+	inherit_chance = 1
 	
 	sex_appeal_opinion = 30
 	
@@ -928,8 +928,8 @@ fair = {
 	child_compliment_adj = COMPL_PRETTY
 }
 ugly = {
-	birth = 100
-	inherit_chance = 10
+	birth = 30 # EMF
+	inherit_chance = 1
 	
 	sex_appeal_opinion = -20
 	
@@ -947,9 +947,8 @@ ugly = {
 	child_insult_adj = INSULT_UGLY
 }
 dwarf = {
-	birth = 25
-	inherit_chance = 25
-	both_parent_has_trait_inherit_chance = 50
+	birth = 10
+	inherit_chance = 1
 
 	sex_appeal_opinion = -30
 	same_opinion = 5
@@ -969,8 +968,8 @@ dwarf = {
 	child_insult_adj = INSULT_STUPID
 }
 genius = {
-	birth = 50
-	inherit_chance = 15
+	birth = 15 # EMF
+	inherit_chance = 1
 	
 	opposites =  {
 		imbecile
@@ -999,8 +998,8 @@ genius = {
 }
 
 quick = {
-	birth = 100
-	inherit_chance = 15
+	birth = 30
+	inherit_chance = 1
 	
 	opposites =  {
 		imbecile
@@ -1018,8 +1017,8 @@ quick = {
 	ai_rationality = 15
 }
 slow = {
-	birth = 100
-	inherit_chance = 15
+	birth = 30
+	inherit_chance = 1
 	
 	opposites =  {
 		imbecile
@@ -1043,8 +1042,8 @@ slow = {
 	child_insult_adj = INSULT_STUPID
 }
 imbecile = {
-	birth = 50
-	inherit_chance = 15
+	birth = 15 # EMF
+	inherit_chance = 1
 	
 	sex_appeal_opinion = -30
 	
@@ -1101,8 +1100,8 @@ inbred = {
 	child_insult_adj = INSULT_UGLY
 }
 strong = {
-	birth = 100
-	inherit_chance = 15
+	birth = 30 # EMF
+	inherit_chance = 1
 	
 	opposites =  {
 		weak
@@ -1123,8 +1122,8 @@ strong = {
 	male_compliment_adj = COMPL_STRONG
 }
 weak = {
-	birth = 100
-	inherit_chance = 15
+	birth = 30 # EMF
+	inherit_chance = 1
 	
 	opposites =  {
 		strong
