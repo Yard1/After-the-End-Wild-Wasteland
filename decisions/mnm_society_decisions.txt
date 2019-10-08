@@ -362,6 +362,7 @@ society_decisions = {
 			has_dlc = "Mystics"
 			is_christian_monastic_member_trigger = yes
 			has_quest = quest_monastic_order_penance
+			NOT = { has_character_modifier = doing_penance }
 		}
 
 		allow = {
@@ -388,7 +389,7 @@ society_decisions = {
 		}
 		
 		ai_will_do = {
-			factor = 0.1
+			factor = 1
 
 			modifier = {
 				factor = 0.01
@@ -418,6 +419,7 @@ society_decisions = {
 				society_member_of = monastic_order_neutic
 			}
 			has_quest = quest_monastic_order_meditation
+			NOT = { has_character_modifier = in_meditation }
 		}
 
 		allow = {
@@ -444,7 +446,7 @@ society_decisions = {
 		}
 		
 		ai_will_do = {
-			factor = 0.1
+			factor = 1
 
 			modifier = {
 				factor = 0.01
@@ -470,6 +472,7 @@ society_decisions = {
 			has_dlc = "Mystics"
 			society_member_of = monastic_order_jewish
 			has_quest = quest_monastic_order_teshuva
+			NOT = { has_character_modifier = doing_teshuva }
 		}
 
 		allow = {
@@ -496,7 +499,7 @@ society_decisions = {
 		}
 		
 		ai_will_do = {
-			factor = 0.1
+			factor = 1
 
 			modifier = {
 				factor = 0.01
