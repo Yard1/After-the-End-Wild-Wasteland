@@ -599,3 +599,13 @@ is_unimportant_enough_to_marry_trigger = {
 		immortal = yes
 	}
 }
+
+has_astrology = {
+	OR = {
+		religion_openly_gaian_or_heresy_trigger = yes
+		religion = neomayan
+		religion = falling_star
+		has_religion_feature = religion_feature_occultist 
+		has_religion_feature = religion_astrology
+	}	
+}

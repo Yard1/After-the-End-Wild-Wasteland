@@ -1507,12 +1507,7 @@ decisions = {
 				trait = zodiac_taurus
 				trait = zodiac_virgo
 			}
-			OR = {
-				religion_openly_gaian_or_heresy_trigger = yes
-				religion = neomayan
-				has_religion_feature = religion_astrology 
-				has_religion_feature = religion_feature_occultist 
-			}
+			has_astrology = yes
 			NOT = { has_character_flag = flag_child_forsaken_zodiac }
 		}
 		

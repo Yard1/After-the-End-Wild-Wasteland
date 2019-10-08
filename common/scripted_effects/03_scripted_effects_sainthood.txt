@@ -1412,13 +1412,13 @@ check_if_ancestor_worship_worthy_effect = {
         # Positive
         modifier = {
             factor = 1.5
-            has_religion_feature = religion_astrology
+            has_astrology = yes
             has_any_astrology_trait_trigger = yes
         }
         # Negative
         modifier = {
             factor = 0.65
-            has_religion_feature = religion_astrology
+            has_astrology = yes
             NOT = {
                 has_any_astrology_trait_trigger = yes
             }

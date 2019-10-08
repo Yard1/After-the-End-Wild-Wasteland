@@ -1458,11 +1458,7 @@ society_decisions = {
 					add_warrior_lodge_leader_trait_effect_ate = yes
 					if = {
 						limit = {
-							OR = {
-								religion_openly_gaian_or_heresy_trigger = yes
-								religion = neomayan
-								has_religion_feature = religion_astrology
-							}
+							has_astrology = yes
 						}
 						hidden_tooltip = { add_western_zodiac_trait_effect = yes }
 					}

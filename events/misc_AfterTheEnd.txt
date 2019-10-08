@@ -11138,10 +11138,7 @@ character_event = {
 						OR = {
 							AND = {
 								NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
-								OR = {
-									religion_openly_gaian_or_heresy_trigger = yes
-									religion = neomayan
-								}
+								has_astrology = yes
 							}
 							has_religion_feature = religion_astrology
 							has_religion_feature = religion_feature_occultist

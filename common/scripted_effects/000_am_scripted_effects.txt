@@ -4855,12 +4855,7 @@ spawn_good_commander_effect = {
 			#}
 			if = {
 				limit = {
-					OR = {
-						religion_openly_gaian_or_heresy_trigger = yes
-						religion = neomayan
-						has_religion_feature = religion_astrology
-						has_religion_feature = religion_feature_occultist
-					}
+					has_astrology = yes
 				}
 				hidden_tooltip = { add_western_zodiac_trait_effect = yes }
 			}
@@ -5060,12 +5055,7 @@ spawn_great_commander_effect = {
 			#}
 			if = {
 				limit = {
-					OR = {
-						religion_openly_gaian_or_heresy_trigger = yes
-						religion = neomayan
-						has_religion_feature = religion_astrology
-						has_religion_feature = religion_feature_occultist
-					}
+					has_astrology = yes
 				}
 				hidden_tooltip = { add_western_zodiac_trait_effect = yes }
 			}
@@ -5989,12 +5979,7 @@ spawn_debutante_effect = {
 			#}
 			if = {
 				limit = {
-					OR = {
-						religion_openly_gaian_or_heresy_trigger = yes
-						religion = neomayan
-						has_religion_feature = religion_astrology
-						has_religion_feature = religion_feature_occultist
-					}
+					has_astrology = yes
 				}
 				hidden_tooltip = { add_western_zodiac_trait_effect = yes }
 			}
