@@ -84,27 +84,27 @@ baron_newfie;Barún;;;;;;;;;;;;;x
 baron_female_newfie;Banbharún;;;;;;;;;;;;;x
 baron_title_ruler_consort_newfie;Banbharún;;;;;;;;;;;;;x
 baron_title_ruler_consort_female_newfie;Barún;;;;;;;;;;;;;x
-barony_of_newfie;Bairnéad na;;;;;;;;;;;;;x
+barony_of_newfie;Bairnéad nu;;;;;;;;;;;;;x
 count_newfie;Tiarna;;;;;;;;;;;;;x
 count_female_newfie;Bantiarna;;;;;;;;;;;;;x
 count_title_ruler_consort_newfie;Bantiarna;;;;;;;;;;;;;x
 count_title_ruler_consort_female_newfie;Tiarna;;;;;;;;;;;;;x
-county_of_newfie;Tiarnas na;;;;;;;;;;;;;x
+county_of_newfie;Tiarnas nu;;;;;;;;;;;;;x
 duke_newfie;Íseal-Rí;;;;;;;;;;;;;x
 duke_female_newfie;Íseal-Banríon;;;;;;;;;;;;;x
 duke_title_ruler_consort_newfie;Íseal-Banríon;;;;;;;;;;;;;x
 duke_title_ruler_consort_female_newfie;Íseal-Rí;;;;;;;;;;;;;x
-duchy_of_newfie;Íseal-Ríocht na;;;;;;;;;;;;;x
+duchy_of_newfie;Íseal-Ríocht nu;;;;;;;;;;;;;x
 king_newfie;Rí;;;;;;;;;;;;;x
 king_female_newfie;Banríon;;;;;;;;;;;;;x
 king_title_consort_newfie;Banríon;;;;;;;;;;;;;x
 king_title_consort_female_newfie;Rí;;;;;;;;;;;;;x
-kingdom_of_newfie;Ríocht na;;;;;;;;;;;;;x
-emperor_newfie;Ard-rí;;;;;;;;;;;;;x
+kingdom_of_newfie;Ríocht nu;;;;;;;;;;;;;x
+emperor_newfie;Ard-Rí;;;;;;;;;;;;;x
 emperor_female_newfie;Ard-Banríon;;;;;;;;;;;;;x
 emperor_title_consort_newfie;Ard-Banríon;;;;;;;;;;;;;x
 emperor_title_consort_female_newfie;Ard-rí;;;;;;;;;;;;;x
-empire_of_newfie;Impireacht na;;;;;;;;;;;;;x
+empire_of_newfie;Impireacht nu;;;;;;;;;;;;;x
 title_prince_newfie;Flaith;;;;;;;;;;;;;x
 title_prince_female_newfie;Banflaith;;;;;;;;;;;;;x
 city_baron_newfie;Méara;;;;;;;;;;;;;x
@@ -114,7 +114,22 @@ city_king_newfie;Taoiseach;;;;;;;;;;;;;x
 city_barony_of_newfie;Baile nu;;;;;;;;;;;;;x
 city_county_of_newfie;Baile nu;;;;;;;;;;;;;x
 city_duchy_of_newfie;Poblacht nu;;;;;;;;;;;;;x
-city_kingdom_of_newfie;Taibhseach Poblacht nu;;;;;;;;;;;;;x
+city_kingdom_of_newfie;Taibhseach Poblacht na;;;;;;;;;;;;;x
+tribal_baron_newfie;Ceannasaí;;;;;;;;;;;;;x
+tribal_count_newfie;Ceannasaí;;;;;;;;;;;;;x
+tribal_duke_newfie;Íseal-Rí;;;;;;;;;;;;;x
+tribal_king_newfie;Rí;;;;;;;;;;;;;x
+tribal_emperor_newfie;Ard-rí;;;;;;;;;;;;;x
+tribal_baron_female_newfie;Ceannasaí;;;;;;;;;;;;;x
+tribal_count_female_newfie;Ceannasaí;;;;;;;;;;;;;x
+tribal_duke_female_newfie;Íseal-Banríon;;;;;;;;;;;;;x
+tribal_king_female_newfie;Banríon;;;;;;;;;;;;;x
+tribal_emperor_female_newfie;Ard-Banríon;;;;;;;;;;;;;x
+tribal_barony_of_newfie;Sráidbhaile nu;;;;;;;;;;;;;x
+tribal_county_of_newfie;Sráidbhaile nu;;;;;;;;;;;;;x
+tribal_duchy_of_newfie;Íseal-Ríocht nu;;;;;;;;;;;;;x
+tribal_kingdom_of_newfie;Ríocht nu;;;;;;;;;;;;;x
+tribal_empire_of_newfie;Impireacht nu;;;;;;;;;;;;;x
 
 #maratimer titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 baron_maritimer;Baran;;;;;;;;;;;;;x
@@ -127,7 +142,7 @@ count_female_maritimer;Baintighearna;;;;;;;;;;;;;x
 count_title_ruler_consort_maritimer;Baintighearna;;;;;;;;;;;;;x
 count_title_ruler_consort_female_maritimer;Tighearna;;;;;;;;;;;;;x
 county_of_maritimer;Tighearnas;;;;;;;;;;;;;x
-duke_maritimer;Iseal-righ;;;;;;;;;;;;;x
+duke_maritimer;Iseal-Righ;;;;;;;;;;;;;x
 duke_female_maritimer;Iseal-Banrigh;;;;;;;;;;;;;x
 duke_title_ruler_consort_maritimer;Iseal-Banrigh;;;;;;;;;;;;;x
 duke_title_ruler_consort_female_maritimer;Iseal-righ;;;;;;;;;;;;;x
@@ -152,6 +167,21 @@ city_barony_of_maritimer;Baile na;;;;;;;;;;;;;x
 city_county_of_maritimer;Baile na;;;;;;;;;;;;;x
 city_duchy_of_maritimer;Poblachd na;;;;;;;;;;;;;x
 city_kingdom_of_maritimer;Alainn Poblacht na;;;;;;;;;;;;;x
+tribal_baron_maritimer;Ceanncinnidh;;;;;;;;;;;;;x
+tribal_count_maritimer;Ceanncinnidh;;;;;;;;;;;;;x
+tribal_duke_maritimer;Iseal-Righ;;;;;;;;;;;;;x
+tribal_king_maritimer;Righ;;;;;;;;;;;;;x
+tribal_emperor_maritimer;Impire;;;;;;;;;;;;;x
+tribal_baron_female_maritimer;Ceanncinnidh;;;;;;;;;;;;;x
+tribal_count_female_maritimer;Ceanncinnidh;;;;;;;;;;;;;x
+tribal_duke_female_maritimer;Iseal-Banrigh;;;;;;;;;;;;;x
+tribal_king_female_maritimer;Banrigh;;;;;;;;;;;;;x
+tribal_emperor_female_maritimer;Banimpire;;;;;;;;;;;;;x
+tribal_barony_of_maritimer;Bailebeag na;;;;;;;;;;;;;x
+tribal_county_of_maritimer;Bailebeag na;;;;;;;;;;;;;x
+tribal_duchy_of_maritimer;Íseal-Rioghachd na;;;;;;;;;;;;;x
+tribal_kingdom_of_maritimer;Rioghachd na;;;;;;;;;;;;;x
+tribal_empire_of_maritimer;Impireachd na;;;;;;;;;;;;;x
 
 #gael_dubh titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 baron_gael_dubh;Garda;;;;;;;;;;;;;x
@@ -189,6 +219,21 @@ city_barony_of_gael_dubh;Baile nu;;;;;;;;;;;;;x
 city_county_of_gael_dubh;Baile nu;;;;;;;;;;;;;x
 city_duchy_of_gael_dubh;Poblacht nu;;;;;;;;;;;;;x
 city_kingdom_of_gael_dubh;Taibhseach Poblacht nu;;;;;;;;;;;;;x
+tribal_baron_gael_dubh;Ceannasaí;;;;;;;;;;;;;x
+tribal_count_gael_dubh;Ceannasaí;;;;;;;;;;;;;x
+tribal_duke_gael_dubh;Íseal-Rí;;;;;;;;;;;;;x
+tribal_king_gael_dubh;Rí;;;;;;;;;;;;;x
+tribal_emperor_gael_dubh;Ard-rí;;;;;;;;;;;;;x
+tribal_baron_female_gael_dubh;Ceannasaí;;;;;;;;;;;;;x
+tribal_count_female_gael_dubh;Ceannasaí;;;;;;;;;;;;;x
+tribal_duke_female_gael_dubh;Íseal-Banríon;;;;;;;;;;;;;x
+tribal_king_female_gael_dubh;Banríon;;;;;;;;;;;;;x
+tribal_emperor_female_gael_dubh;Ard-Banríon;;;;;;;;;;;;;x
+tribal_barony_of_gael_dubh;Sráidbhaile nu;;;;;;;;;;;;;x
+tribal_county_of_gael_dubh;Sráidbhaile nu;;;;;;;;;;;;;x
+tribal_duchy_of_gael_dubh;Íseal-Ríocht nu;;;;;;;;;;;;;x
+tribal_kingdom_of_gael_dubh;Ríocht nu;;;;;;;;;;;;;x
+tribal_empire_of_gael_dubh;Impireacht nu;;;;;;;;;;;;;x
 
 #texan titles;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 baron_texan;Sheriff;;;;;;;;;;;;;x

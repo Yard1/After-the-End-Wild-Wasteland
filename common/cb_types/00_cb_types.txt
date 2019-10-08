@@ -12523,6 +12523,12 @@ pagan_county_conquest = {
 						}
 						religion = brethren
 						religion = espiritista
+						religion = uahomche
+						religion = rust_cultist
+						AND = {
+							religion = espiritista_reformed
+							has_religion_feature = religion_seafaring
+						}
 					}
 					NOT = { same_realm = FROM }
 				}

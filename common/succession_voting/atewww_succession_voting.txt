@@ -8101,7 +8101,7 @@ militarist_appointment = {
 			value = 98
 			FROMFROM = {
 				holder_scope = {
-					vassal_of = ROOT
+					liege = { character = ROOT }
 					NOT = {
 						ROOT = { has_character_flag = militarist_let_ruler_pick_@PREV }
 					}
@@ -8115,7 +8115,7 @@ militarist_appointment = {
 			value = -1
 			FROMFROM = {
 				holder_scope = {
-					vassal_of = ROOT
+					liege = { character = ROOT }
 					ROOT = { has_character_flag = militarist_let_ruler_pick_@PREV }
 				}
 				has_title_flag = militarist_ruler_pick_@ROOT
@@ -8138,7 +8138,7 @@ militarist_appointment = {
 			government = militarist_government
 			FROMFROM = {
 				holder_scope = {
-					vassal_of = ROOT
+					liege = { character = ROOT }
 				}
 			}
 			#any_vassal = {
@@ -10788,11 +10788,7 @@ militarist_appointment = {
 			NOT = { is_liege_of = ROOT }
 			#Either the candidate is in the realm, or is landless, or the title is independent, or the realm of the title does NOT have protected inheritance.
 			OR = { 
-				vassal_of = ROOT
-				AND = {
-					is_ruler = no
-					host = { character = ROOT }
-				}
+				liege = { character = ROOT }
 				AND = {
 					top_liege = {
 						is_liege_or_above = ROOT
