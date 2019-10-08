@@ -257,3 +257,11 @@
 2029141 = { name="Morrison" culture=gael_dubh }
 2029142 = { name="Skerritt" culture=gael_dubh }
 2029143 = { name="Farrell" culture=gael_dubh }
+
+2029144 = { name="Cohen" culture=yiddish }
+2029145 = { name="Lafitte" culture=haitian }
+2029146 = { name="Hornstein" culture=yiddish }
+2029147 = { name="Barnstein" culture=yiddish }
+2029148 = { name="Dietrich" culture=yiddish }
+2029149 = { name="Edleberg" culture=yiddish }
+2029150 = { name="de la Porta" culture=brazilian }

@@ -1,0 +1,124 @@
+coffee_current = { # Caribbean route
+	wealth = 100			# Total base wealth of silk route
+	
+	trade_post_display_trigger = {
+		OR = {
+			province_id = 3270
+			province_id = 3178
+			province_id = 3245
+			province_id = 3237
+			province_id = 3215
+			province_id = 1183
+			province_id = 1190
+			province_id = 1187
+			province_id = 1174
+			province_id = 1178
+			province_id = 1112
+			province_id = 1100
+			province_id = 1097
+			province_id = 1093
+			province_id = 1043
+			province_id = 1124
+			province_id = 1252
+			province_id = 3401
+			province_id = 3074
+			province_id = 3079
+			province_id = 3119
+			province_id = 3112
+			province_id = 3156
+			province_id = 3167
+			province_id = 3292
+		}
+	}
+
+	modifier = {			# How the trade route modifies the provinces it passes
+		#Nerfed to vanilla values
+		castle_tax_modifier = 0.10
+		city_tax_modifier = 0.10
+		temple_tax_modifier = 0.10
+		tribal_tax_modifier = 0.10
+		trade_route_value = 15
+		local_movement_speed = 0.20
+		tech_growth_modifier = 0.20
+		icon = 4
+	}
+
+	start = {				# Start provinces of trade route
+		638
+		3178
+	}
+	
+	# Guyana Coast route
+	path = {
+		638 3280 1526 1465 3270 1447 1466 3178 3242 3244 3245
+	}
+	# Southern Caribbean - Trinidad-Las Puertas
+	path = {
+		3178 1467 3237 1468 1471 3209 1471 1469 3215 1588 3292
+	}
+	# Southern Caribbean - Las Puertas-El Desaguadero
+	path = {
+		3292 1587 3167
+	}
+	# Southern Caribbean - El Desaguadero-Cancun
+	path = {
+		3167 1579 1578 1577 3156 3132 1576 3112 1543
+	}
+	# Catoche - Gulf - Miami route
+	path = {
+		1543 3116 1573 3119 1571 3079 1544 3074 1545 1541 1224 1540 3401 1539 1514 1249 1124 910 909 1043 1512 1093 1511 1510 
+	}
+	# Florida Coast - Miami
+	path = {
+		1510 1097 
+	}
+	# Southern Antilles route
+	path = {
+		3178 2088 1528 1178 1529 1180 1181 1530 1183
+	}
+	# Southern Hispaniola route 1
+	path = {
+		1183 1585 1190 1584 1583
+	}
+	# Southern Hispaniola route 2
+	path = {
+		1583 1174 1527 1521  
+	}
+	# Northern Hispaniola route 1
+	path = {
+		1183 1532 1533
+	}
+	# Northern Hispaniola route 2
+	path = {
+		1533 1112 1523 1105 1509 1510
+	}
+	# Catoche - Havana
+	path = {
+		1543 1519 1100
+	}
+	# Havana - Miami
+	path = {
+		1100 1510
+	}
+	# Nicaragua Portage
+	path = {
+		3167 3183 
+	}
+	# Panama Portage
+	path = {
+		3292 3189 
+	}
+	# Sancti Spiritus - Catoche
+	path = {
+		1521 2105 1520 1543 
+	}
+	# Windward Passage
+	path = {
+		1533 1522 1521 
+	}
+	# Port-au-Prince
+	path = {
+		1583 1534 1187
+	}
+}
+	

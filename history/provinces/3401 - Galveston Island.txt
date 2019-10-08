@@ -1,0 +1,13 @@
+# 3401 - Galveston Island
+
+# County Title
+title = c_galveston
+
+# Settlements
+max_settlements = 2
+b_galveston_TX = city
+b_jamaica_beach_TX = city
+
+# Misc
+culture = yiddish
+religion = reform

@@ -411,6 +411,7 @@ technology = {
 		d_natchez
 		d_neches
 		d_houston
+		d_galveston
 		d_corpus_christi
 		d_rio_grande_valley
 		d_tamaulipas

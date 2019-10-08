@@ -353,24 +353,21 @@ e_lone_star = {
 				b_manvel_TX = {}
 				b_sharpstown_TX = {}
 			}
-			c_galveston = {
-				color = { 220 187 35 }
+			c_texas_city = {
+				color = { 189 181 50 }
 				color2= { 255 255 20 }
-
-				b_galveston_TX = {}
-				b_port_bolivar_TX = {
-					used_for_dynasty_names = no
-				}
-				b_angleton_TX = {}
 				b_texas_city_TX = {
 					used_for_dynasty_names = no
 				}
 				b_league_city_TX = {
 					used_for_dynasty_names = no
 				}
+				b_angleton_TX = {}
 				b_la_marque_TX = {}
 				b_hitchcock_TX = {}
 				b_dickinson_TX = {}
+				b_danbury_TX = {}
+				b_liverpool_TX = {}
 			}
 			c_brazos = {
 				color = { 190 197 29 }
@@ -405,6 +402,26 @@ e_lone_star = {
 				}
 				b_markham_TX = {}
 				b_blessing_TX = {}
+			}
+		}
+		d_galveston = {
+			color = { 242 204 197 }
+			color2= { 255 255 20 }
+
+			capital = 3401 # Galveston
+			c_galveston = {
+				color = { 220 187 35 }
+				color2= { 255 255 20 }
+
+				b_galveston_TX = {}
+				b_jamaica_beach_TX = {
+					used_for_dynasty_names = no
+				}
+				b_fort_travis_TX = {}
+				b_stewart_beach_TX = {}
+				b_four_points_TX = {}
+				b_pelican_island_TX = {}
+				b_schlitterban_TX = {}
 			}
 		}
 		d_metroplex = {

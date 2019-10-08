@@ -1,0 +1,14 @@
+# 1263 - Galveston
+
+# County Title
+title = c_texas_city
+
+# Settlements
+max_settlements = 4
+b_texas_city_TX = city
+b_league_city_TX = castle
+b_angleton_TX = temple
+
+# Misc
+culture = texan
+religion = catholic

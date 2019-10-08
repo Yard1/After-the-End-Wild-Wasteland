@@ -514,11 +514,14 @@ succession_laws = {
 				}
 			}
 			OR = {
+				is_patrician = yes
 				AND = {
 					title = k_pirate_kingdom
 					has_global_flag = pirate_king_hereditary
 				}
-				holder_scope = { NOT = { religion_group = pirate } }
+				holder_scope = {
+					NOT = { religion_group = pirate } 
+				}
 			}
 			holder_scope = {
 				NOT = { government = communist_republic }
@@ -1962,6 +1965,7 @@ gender_laws = {
 		potential = {
 			is_landless_type_title = no
 			holder_scope = {
+				is_patrician = no
 				is_theocracy = no
 				holy_order = no
 				matriarchal_religion = no
@@ -2367,6 +2371,7 @@ gender_laws = {
 		potential = {
 			is_landless_type_title = no
 			holder_scope = {
+				is_patrician = no
 				is_theocracy = no
 				holy_order = no
 				primary_title = { mercenary = no }

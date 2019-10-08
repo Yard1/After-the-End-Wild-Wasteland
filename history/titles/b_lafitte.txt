@@ -1,0 +1,7 @@
+2300.1.1={
+	holding_dynasty = 2029145
+	liege="d_galveston"
+}
+2648.1.1 = {
+	holder = 1670012
+}

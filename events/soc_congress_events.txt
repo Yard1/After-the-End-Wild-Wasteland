@@ -3217,6 +3217,7 @@ narrative_event = {
 				}
 				primary_title = {
 					e_usa = {
+						add_law = { law = law_voting_power_1 opinion_effect = no }
 						add_law = { law = war_voting_power_1 opinion_effect = no }
 						add_law = { law = execution_voting_power_1 opinion_effect = no }
 						add_law = { law = banish_voting_power_1 opinion_effect = no }

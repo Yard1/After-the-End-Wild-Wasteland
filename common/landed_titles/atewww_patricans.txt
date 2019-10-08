@@ -1,0 +1,11 @@
+b_cohen = {
+	culture = yiddish
+}
+
+b_de_la_porta = {
+	culture = brazillian
+}
+
+b_lafitte = {
+	culture = haitian
+}

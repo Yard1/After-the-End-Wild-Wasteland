@@ -50,6 +50,19 @@ c_montserrat_adj;Montserratian;;;;;;;;;;;;;x
 b_plymouth_ANB;Plymouth;;;;;;;;;;;;;x
 b_brades_ANB;Brades;;;;;;;;;;;;;x
 
+PROV1263;Texas City;;;;;;;;;;;;;x
+PROV3401;Galveston;;;;;;;;;;;;;x
+c_texas_city;Texas City;;;;;;;;;;;;;x
+d_galveston;Galveston;;;;;;;;;;;;;x
+b_danbury_TX;Danbury;;;;;;;;;;;;;x
+b_liverpool_TX;Liverpool;;;;;;;;;;;;;x
+b_jamaica_beach_TX;Jamaica Beach;;;;;;;;;;;;;x
+b_fort_travis_TX;Fort Travis;;;;;;;;;;;;;x
+b_stewart_beach_TX;Stewart Beach;;;;;;;;;;;;;x
+b_four_points_TX;Four Points;;;;;;;;;;;;;x
+b_pelican_island_TX;Pelican Island;;;;;;;;;;;;;x
+b_schlitterban_TX;Schlitterban;;;;;;;;;;;;;x
+
 EVTDESC_ATE_WWW_TITLE_2;Due to [Root.GetBestName]'s culture, the Kingdom of Dixieland has proven to be simply ungovernable. Therefore, it has been split into Alabama and Georgia - the old kingdoms that have held the land before the Collapse.;;;;;;;;;;;;;x
 EVTOPTA_ATE_WWW_TITLE_2;Damn it!;;;;;;;;;;;;;x
 EVTOPTB_ATE_WWW_TITLE_2;I see.;;;;;;;;;;;;;x

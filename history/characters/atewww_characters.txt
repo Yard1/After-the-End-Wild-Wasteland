@@ -874,6 +874,7 @@
 	give_nickname = nick_the_postal_dude 
 	2639.5.12 = {
 		birth = yes
+		effect = { set_character_flag = historical_character }
 		effect = {
 		    add_artifact = old_world_shades
 		} 
@@ -1094,5 +1095,101 @@
 		effect = { 
 		    set_character_flag = historical_character 
 		}
+	}
+}
+
+1670008 = {
+	name = "Edson"
+	dynasty = 2029150 #de la Porta
+	culture = brazilian
+	religion = jewish
+	trait = fortune_builder
+	2598.7.29 = {
+	    birth=yes
+		effect = { set_character_flag = historical_character }
+	}
+	2662.8.13 = {
+		death = yes
+	}
+}
+
+1670009 = {
+	name = "João"
+	dynasty = 2029150 #de la Porta
+	culture = brazilian
+	religion = jewish
+	martial = 4
+	diplomacy = 5
+	stewardship = 6
+	intrigue = 4
+	learning = 4
+	trait = fortune_builder
+	trait = brave
+	trait = adventurer
+	trait = content
+	father = 1670008
+	2623.3.5 = {
+	    birth=yes
+		effect = { set_character_flag = historical_character }
+	}
+}
+
+1670010 = {
+	name = "Morin"
+	dynasty = 2029150 #de la Porta
+	culture = brazilian
+	religion = jewish
+	martial = 5
+	diplomacy = 4
+	stewardship = 3
+	intrigue = 5
+	learning = 3
+	trait = underhanded_rogue
+	trait = gregarious
+	trait = slothful
+	father = 1670008
+	2620.1.11 = {
+	    birth=yes
+		effect = { set_character_flag = historical_character }
+	}
+}
+
+1670011 = {
+	name = "Abraham"
+	dynasty = 2029144 #Cohen
+	culture = yiddish
+	religion = reform
+	martial = 3
+	diplomacy = 5
+	stewardship = 3
+	intrigue = 2
+	learning = 6
+	trait = scholarly_theologian
+	trait = erudite
+	trait = kind
+	trait = theologian
+	2631.4.7 = {
+	    birth=yes
+		effect = { set_character_flag = historical_character }
+	}
+}
+
+1670012 = {
+	name = "Jean"
+	dynasty = 2029145 #Lafitte
+	culture = quebecois
+	religion = voodoo
+	martial = 6
+	diplomacy = 4
+	stewardship = 4
+	trait = tough_soldier
+	trait = lustful
+	trait = groomed
+	trait = quick
+	trait = envious
+	2619.9.25 = {
+	    birth=yes
+		culture = haitian
+		effect = { set_character_flag = historical_character }
 	}
 }
