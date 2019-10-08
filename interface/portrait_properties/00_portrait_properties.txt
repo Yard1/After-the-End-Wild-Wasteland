@@ -3125,7 +3125,11 @@
 		}
 		modifier = {
 			factor = 0
+			is_ruler = yes #Otherwise dead landless Queens don't wear the crown, as they default to nogovernment.
 			is_feudal = no
+			is_tribal = no
+			is_nomadic = no
+			NOT = { is_offmap_tag_including_dead = offmap_china }
 		}
 		modifier = {
 			factor = 0
@@ -3151,7 +3155,11 @@
 		}
 		modifier = {
 			factor = 0
+			is_ruler = yes #Otherwise dead landless Queens don't wear the crown, as they default to nogovernment.
 			is_feudal = no
+			is_tribal = no
+			is_nomadic = no
+			NOT = { is_offmap_tag_including_dead = offmap_china }
 		}
 		modifier = {
 			factor = 0
@@ -3177,7 +3185,11 @@
 		}
 		modifier = {
 			factor = 0
+			is_ruler = yes #Otherwise dead landless Queens don't wear the crown, as they default to nogovernment.
 			is_feudal = no
+			is_tribal = no
+			is_nomadic = no
+			NOT = { is_offmap_tag_including_dead = offmap_china }
 		}
 		modifier = {
 			factor = 0
@@ -3203,7 +3215,11 @@
 		}
 		modifier = {
 			factor = 0
+			is_ruler = yes #Otherwise dead landless Queens don't wear the crown, as they default to nogovernment.
 			is_feudal = no
+			is_tribal = no
+			is_nomadic = no
+			NOT = { is_offmap_tag_including_dead = offmap_china }
 		}
 		modifier = {
 			factor = 0

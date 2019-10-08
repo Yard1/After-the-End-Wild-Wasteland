@@ -101,7 +101,7 @@ e_dixie = {
 		hamiltonian = 5
 		libertarian = 5
 		revelationist_reformed = 100
-		rust_cultist = 5
+		rust_cultist_reformed = 5
 		thelemic_reformed = 5
 
 		culture = dixie
@@ -126,7 +126,7 @@ e_dixie = {
 		hamiltonian = 5
 		libertarian = 5
 		revelationist_reformed = 100
-		rust_cultist = 5
+		rust_cultist_reformed = 5
 		thelemic_reformed = 5
 
 		culture = dixie
@@ -152,7 +152,7 @@ e_dixie = {
 		hamiltonian = 5
 		libertarian = 5
 		revelationist_reformed = 100
-		rust_cultist = 5
+		rust_cultist_reformed = 5
 		thelemic_reformed = 5
 
 		culture = dixie
@@ -679,7 +679,7 @@ e_dixie = {
 		hamiltonian = 100
 		libertarian = 50
 		revelationist_reformed = 200
-		rust_cultist = 5
+		rust_cultist_reformed = 5
 		occultist_reformed = 5
 		thelemic_reformed = 50
 		jewish = 300
@@ -1116,7 +1116,7 @@ e_dixie = {
 		hamiltonian = 5
 		libertarian = 5
 		revelationist_reformed = 100
-		rust_cultist = 5
+		rust_cultist_reformed = 5
 
 		capital = 1128
 		

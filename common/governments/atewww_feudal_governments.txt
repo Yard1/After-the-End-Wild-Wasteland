@@ -140,6 +140,7 @@ feudal_governments = {
 		
 		## Modifiers
 		court_size_modifier = 10
+		vassal_limit = -10
 
 		can_revoke_without_reason = no
 		can_demand_religious_conversion = no

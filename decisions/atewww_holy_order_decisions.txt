@@ -607,7 +607,7 @@ decisions = {
 				d_enclave = {
 					holder_scope = {
 						character_event = {
-							id = NewHolyOrders.36
+							id = NewHolyOrders.35
 						}
 					}
 				}

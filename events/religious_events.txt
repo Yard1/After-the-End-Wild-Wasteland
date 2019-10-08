@@ -1703,12 +1703,14 @@ character_event = {
 	prisoner = no
 	only_men = yes
 	only_playable = yes
-	religion_group = christian
 	war = no
 	
 	trigger = {
 		controls_religion = yes
-		religion_group = christian
+		OR = {
+			religion_group = christian
+			religion_group = latter_day_saints
+		}
 		is_pope = yes
 		
 		religion_authority = 0.20
@@ -1719,9 +1721,10 @@ character_event = {
 			NOT = { has_character_flag = pope_dislikes_heathen_employed }
 			any_courtier = {
 				prisoner = no
-				OR = {
-					religion_group = oldworld
-					religion_group = pagan_group
+				NOR = {
+					religion_group = christian
+					religion_group = latter_day_saints
+					ROOT = { has_sympathy_for_true_religion_of_prev_trigger = yes }
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -1753,9 +1756,10 @@ character_event = {
 
 				any_courtier = {
 					prisoner = no
-					OR = {
-						religion_group = oldworld
-						religion_group = pagan_group
+					NOR = {
+						religion_group = christian
+						religion_group = latter_day_saints
+						ROOT = { has_sympathy_for_true_religion_of_prev_trigger = yes }
 					}
 					OR = {
 						has_job_title = job_chancellor
@@ -1794,9 +1798,10 @@ character_event = {
 		random_courtier = {
 			limit = {
 				prisoner = no
-				OR = {
-					religion_group = oldworld
-					religion_group = pagan_group
+				NOR = {
+					religion_group = christian
+					religion_group = latter_day_saints
+					FROM = { has_sympathy_for_true_religion_of_prev_trigger = yes }
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -1926,9 +1931,10 @@ character_event = {
 			NOT = { has_character_flag = patriarch_dislikes_heathen_employed }
 			any_courtier = {
 				prisoner = no
-				OR = {
-					religion_group = oldworld
-					religion_group = pagan_group
+				NOR = {
+					religion_group = christian
+					religion_group = latter_day_saints
+					ROOT = { has_sympathy_for_true_religion_of_prev_trigger = yes }
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -1964,9 +1970,10 @@ character_event = {
 
 				any_courtier = {
 					prisoner = no
-					OR = {
-						religion_group = oldworld
-						religion_group = pagan_group
+					NOR = {
+						religion_group = christian
+						religion_group = latter_day_saints
+						ROOT = { has_sympathy_for_true_religion_of_prev_trigger = yes }
 					}
 					OR = {
 						has_job_title = job_chancellor
@@ -2005,9 +2012,10 @@ character_event = {
 		random_courtier = {
 			limit = {
 				prisoner = no
-				OR = {
-					religion_group = oldworld
-					religion_group = pagan_group
+				NOR = {
+					religion_group = christian
+					religion_group = latter_day_saints
+					FROM = { has_sympathy_for_true_religion_of_prev_trigger = yes }
 				}
 				OR = {
 					has_job_title = job_chancellor
@@ -3190,7 +3198,14 @@ character_event = {
 							owner = {
 								top_liege = {
 									NAND = {
-										religion_group = pagan_group
+										OR = {
+											religion_group = pagan_group
+											religion = rust_cultist_reformed
+											religion = espiritista_reformed
+											religion = uahomche_reformed
+											religion = midewiwin_reformed
+											religion = raven_tales_reformed
+										}
 										is_reformed_religion = no
 									}
 									any_realm_province = { TECH_RECRUITMENT = 4 } # More cocky when pagan homeland attrition effect is active against neighbors
@@ -3482,7 +3497,14 @@ character_event = {
 							owner = {
 								top_liege = {
 									NAND = {
-										religion_group = pagan_group
+										OR = {
+											religion_group = pagan_group
+											religion = rust_cultist_reformed
+											religion = espiritista_reformed
+											religion = uahomche_reformed
+											religion = midewiwin_reformed
+											religion = raven_tales_reformed
+										}
 										is_reformed_religion = no
 									}
 									any_realm_province = { TECH_RECRUITMENT = 4 } # More cocky when pagan homeland attrition effect is active against neighbors
@@ -3575,7 +3597,14 @@ character_event = {
 			limit = { 
 				has_dlc = "Holy Fury"
 				is_tribal = yes
-				religion_group = pagan_group #may have to change this depending on which other religious groups have access to mass conversion
+				OR = {
+					religion_group = pagan_group
+					religion = rust_cultist_reformed
+					religion = espiritista_reformed
+					religion = uahomche_reformed
+					religion = midewiwin_reformed
+					religion = raven_tales_reformed
+				}
 				NOT = { trait = incapable }
 				higher_tier_than = COUNT
 				NOT = { is_reformed_religion = yes }
@@ -3591,7 +3620,14 @@ character_event = {
 						NOT = { pays_tribute_to = ROOT }
 						NOT = { has_character_flag = flag_sponsoring_baptism }
 						OR = {
-							NOT = { religion_group = pagan_group }
+							NOR = {
+								religion_group = pagan_group
+								religion = rust_cultist_reformed
+								religion = espiritista_reformed
+								religion = uahomche_reformed
+								religion = midewiwin_reformed
+								religion = raven_tales_reformed
+							}
 							is_reformed_religion = yes
 						}
 					}
@@ -4535,18 +4571,26 @@ narrative_event = {
 	
 	only_playable = yes
 	min_age = 16
-	religion_group = pagan_group
 	
 	trigger = {
+		OR = {
+			religion_group = pagan_group
+			religion = espiritista_reformed
+			religion = uahomche_reformed
+			religion = midewiwin_reformed
+			religion = raven_tales_reformed
+		}
+		pacifist = no
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		
+		can_call_crusade = yes
 		controls_religion = yes
 		
 		NOT = { has_global_flag = pagan_ghws_unlocked }
 		
 		OR = {
+			has_global_flag = liberation_wars_unlocked
 			has_global_flag = mormon_expeditions_unlocked
 			has_global_flag = christian_crusades_unlocked
 			has_global_flag = ursuline_crusades_unlocked
@@ -4571,7 +4615,13 @@ narrative_event = {
 	option = {
 		name = EVTOPTB39680
 		trigger = {
-			religion_group = pagan_group
+			OR = {
+				religion_group = pagan_group
+				religion = espiritista_reformed
+				religion = uahomche_reformed
+				religion = midewiwin_reformed
+				religion = raven_tales_reformed
+			}
 			NOT = { religion = ROOT }
 		}
 	}
@@ -4579,7 +4629,13 @@ narrative_event = {
 	option = {
 		name = EVTOPTC39680
 		trigger = {
-			NOT = { religion_group = pagan_group }
+			NOR = {
+				religion_group = pagan_group
+				religion = espiritista_reformed
+				religion = uahomche_reformed
+				religion = midewiwin_reformed
+				religion = raven_tales_reformed
+			}
 		}
 	}
 }

@@ -7,6 +7,10 @@ decisions = {
 			is_playable = yes
 			OR = {
 				is_feudal = yes
+				AND = {
+					is_patrician = yes
+					is_landed = yes
+				}
 				is_tribal = yes
 				is_nomadic = yes
 			}
