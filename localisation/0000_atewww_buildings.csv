@@ -1,0 +1,102 @@
+#CODE;ENGLISH;FRENCH;GERMAN;SPANISH;;;;;;;;;x
+tb_culture_sardinian_1;Ballestero Range;;;;;;;;;;;;;x
+tb_culture_sardinian_2;Ballestero Range;;;;;;;;;;;;;x
+tb_culture_sardinian_3;Ballestero Range;;;;;;;;;;;;;x
+tb_culture_sardinian_4;Ballestero Range;;;;;;;;;;;;;x
+tb_culture_arberian_1;Cossack Training Ground;;;;;;;;;;;;;x
+tb_culture_arberian_2;Cossack Training Ground;;;;;;;;;;;;;x
+tb_culture_arberian_3;Cossack Training Ground;;;;;;;;;;;;;x
+tb_culture_arberian_4;Cossack Training Ground;;;;;;;;;;;;;x
+tb_culture_coptic_1;Pikemen Training Ground;;;;;;;;;;;;;x
+tb_culture_coptic_2;Pikemen Training Ground;;;;;;;;;;;;;x
+tb_culture_coptic_3;Pikemen Training Ground;;;;;;;;;;;;;x
+tb_culture_coptic_4;Pikemen Training Ground;;;;;;;;;;;;;x
+tb_culture_chinese_han_1;Asian Crossbow Range;;;;;;;;;;;;;x
+tb_culture_chinese_han_2;Asian Crossbow Range;;;;;;;;;;;;;x
+tb_culture_chinese_han_3;Asian Crossbow Range;;;;;;;;;;;;;x
+tb_culture_chinese_han_4;Asian Crossbow Range;;;;;;;;;;;;;x
+tb_culture_moors_1;Cowboy Riding Ground;;;;;;;;;;;;;x
+tb_culture_moors_2;Cowboy Riding Ground;;;;;;;;;;;;;x
+tb_culture_moors_3;Cowboy Riding Ground;;;;;;;;;;;;;x
+tb_culture_moors_4;Cowboy Riding Ground;;;;;;;;;;;;;x
+tb_culture_germanic_1;Continental Training Ground;;;;;;;;;;;;;x
+tb_culture_germanic_2;Continental Training Ground;;;;;;;;;;;;;x
+tb_culture_germanic_3;Continental Training Ground;;;;;;;;;;;;;x
+tb_culture_germanic_4;Continental Training Ground;;;;;;;;;;;;;x
+tb_culture_jewish_1;Maccabee Training Ground;;;;;;;;;;;;;x
+tb_culture_jewish_2;Maccabee Training Ground;;;;;;;;;;;;;x
+tb_culture_jewish_3;Maccabee Training Ground;;;;;;;;;;;;;x
+tb_culture_jewish_4;Maccabee Training Ground;;;;;;;;;;;;;x
+tb_culture_dutch_1;New Yorker Militia Quarters;;;;;;;;;;;;;x
+tb_culture_dutch_2;New Yorker Militia Quarters;;;;;;;;;;;;;x
+tb_culture_dutch_3;New Yorker Militia Quarters;;;;;;;;;;;;;x
+tb_culture_dutch_4;New Yorker Militia Quarters;;;;;;;;;;;;;x
+tb_culture_ethiopian_1;Machetero Training Ground;;;;;;;;;;;;;x
+tb_culture_ethiopian_2;Machetero Training Ground;;;;;;;;;;;;;x
+tb_culture_ethiopian_3;Machetero Training Ground;;;;;;;;;;;;;x
+tb_culture_ethiopian_4;Machetero Training Ground;;;;;;;;;;;;;x
+tb_culture_irish_1;Gallowglass Training Ground;;;;;;;;;;;;;x
+tb_culture_irish_2;Gallowglass Training Ground;;;;;;;;;;;;;x
+tb_culture_irish_3;Gallowglass Training Ground;;;;;;;;;;;;;x
+tb_culture_irish_4;Gallowglass Training Ground;;;;;;;;;;;;;x
+tb_culture_group_north_germanic_1;Housecarl Training Ground;;;;;;;;;;;;;x
+tb_culture_group_north_germanic_2;Housecarl Training Ground;;;;;;;;;;;;;x
+tb_culture_group_north_germanic_3;Housecarl Training Ground;;;;;;;;;;;;;x
+tb_culture_group_north_germanic_4;Housecarl Training Ground;;;;;;;;;;;;;x
+tb_culture_italian_1;Pike Training Ground;;;;;;;;;;;;;x
+tb_culture_italian_2;Pike Training Ground;;;;;;;;;;;;;x
+tb_culture_italian_3;Pike Training Ground;;;;;;;;;;;;;x
+tb_culture_italian_4;Pike Training Ground;;;;;;;;;;;;;x
+tb_culture_group_iberian_1;Caballero Training Ground;;;;;;;;;;;;;x
+tb_culture_group_iberian_2;Caballero Training Ground;;;;;;;;;;;;;x
+tb_culture_group_iberian_3;Caballero Training Ground;;;;;;;;;;;;;x
+tb_culture_group_iberian_4;Caballero Training Ground;;;;;;;;;;;;;x
+tb_culture_frank_norman_german_1;Jousting Lists;;;;;;;;;;;;;x
+tb_culture_frank_norman_german_2;Jousting Lists;;;;;;;;;;;;;x
+tb_culture_frank_norman_german_3;Jousting Lists;;;;;;;;;;;;;x
+tb_culture_frank_norman_german_4;Jousting Lists;;;;;;;;;;;;;x
+tb_culture_group_altaic_1;Riding Grounds;;;;;;;;;;;;;x
+tb_culture_group_altaic_2;Riding Grounds;;;;;;;;;;;;;x
+tb_culture_group_altaic_3;Riding Grounds;;;;;;;;;;;;;x
+tb_culture_group_altaic_4;Riding Grounds;;;;;;;;;;;;;x
+tb_culture_group_baltic_1;Housecarl Training Ground;;;;;;;;;;;;;x
+tb_culture_group_baltic_2;Housecarl Training Ground;;;;;;;;;;;;;x
+tb_culture_group_baltic_3;Housecarl Training Ground;;;;;;;;;;;;;x
+tb_culture_group_baltic_4;Housecarl Training Ground;;;;;;;;;;;;;x
+tb_culture_saxon_english_1;Sniper Training Ground;;;;;;;;;;;;;x
+tb_culture_saxon_english_2;Sniper Training Ground;;;;;;;;;;;;;x
+tb_culture_saxon_english_3;Sniper Training Ground;;;;;;;;;;;;;x
+tb_culture_saxon_english_4;Sniper Training Ground;;;;;;;;;;;;;x
+
+RETTYPE_CUL_WEL;Ceidwadorpamp;;;;;;;;;;;;;x
+ca_culture_welsh_1;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
+ca_culture_welsh_2;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
+ca_culture_welsh_3;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
+ca_culture_welsh_4;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
+ca_culture_welsh_1_desc;The Ceidwadorpamp of Puerto Madryn are trained here alongside their dismounted Iwmyn compatriots.;;;;;;;;;;;;;x
+tb_culture_welsh_1;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
+tb_culture_welsh_2;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
+tb_culture_welsh_3;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
+tb_culture_welsh_4;Ceidwadorpamp Training Grounds;;;;;;;;;;;;;x
+
+RETTYPE_CUL_JAM;Sefari;;;;;;;;;;;;;x
+ca_culture_jamaican_1;Sefari Training Grounds;;;;;;;;;;;;;x
+ca_culture_jamaican_2;Sefari Training Grounds;;;;;;;;;;;;;x
+ca_culture_jamaican_3;Sefari Training Grounds;;;;;;;;;;;;;x
+ca_culture_jamaican_4;Sefari Training Grounds;;;;;;;;;;;;;x
+ca_culture_jamaican_1_desc;Allegedly based upon the ancient Imperial guard of Ras-Tafari himself, the heavily armed Caribbean Sefari are equipped with only the finest equipment money can buy, all the while presenting a formidable fighting force unlike any.;;;;;;;;;;;;;x
+tb_culture_jamaican_1;Sefari Training Grounds;;;;;;;;;;;;;x
+tb_culture_jamaican_2;Sefari Training Grounds;;;;;;;;;;;;;x
+tb_culture_jamaican_3;Sefari Training Grounds;;;;;;;;;;;;;x
+tb_culture_jamaican_4;Sefari Training Grounds;;;;;;;;;;;;;x
+
+RETTYPE_CUL_CUBAN;Azucarero;;;;;;;;;;;;;x
+ca_culture_cuban_1;Azucarero Riding Grounds;;;;;;;;;;;;;x
+ca_culture_cuban_2;Azucarero Riding Grounds;;;;;;;;;;;;;x
+ca_culture_cuban_3;Azucarero Riding Grounds;;;;;;;;;;;;;x
+ca_culture_cuban_4;Azucarero Riding Grounds;;;;;;;;;;;;;x
+ca_culture_cuban_1_desc;The infamous machete wielding Cuban Azucarero cavalry are raised and trained here. Specialising in skirmishing and harassment tactics, they are an integral part of any Cuban army;;;;;;;;;;;;;x
+tb_culture_cuban_1;Azucarero Riding Grounds;;;;;;;;;;;;;x
+tb_culture_cuban_2;Azucarero Riding Grounds;;;;;;;;;;;;;x
+tb_culture_cuban_3;Azucarero Riding Grounds;;;;;;;;;;;;;x
+tb_culture_cuban_4;Azucarero Riding Grounds;;;;;;;;;;;;;x

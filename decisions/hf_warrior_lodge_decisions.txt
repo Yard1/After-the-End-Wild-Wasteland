@@ -42,9 +42,7 @@ targeted_decisions = {
 	                is_female = yes
 	                OR = {
 	                    trait = brave
-	                    religion_group = pagan_group
-						religion_group = oldworld
-						religion = neognostic
+	                    trait = shieldmaiden
 	                    is_nomadic = yes
 	                    gender_equality_trigger = yes
 	                }
@@ -341,9 +339,7 @@ targeted_decisions = {
 	                is_female = yes
 	                OR = {
 	                    trait = brave
-	                    religion_group = pagan_group
-	                    religion_group = oldworld
-						religion = neognostic
+	                    trait = shieldmaiden
 	                    is_nomadic = yes
 	                    gender_equality_trigger = yes
 	                }

@@ -1147,6 +1147,7 @@
 	trait=kind
 	trait=erudite
 	trait=humble
+	trait=nun
 	2648.1.1={birth=yes
 		effect = { set_character_flag = historical_character }
 		effect={
