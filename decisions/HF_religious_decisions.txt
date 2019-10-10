@@ -483,6 +483,7 @@ decisions = {
 				has_character_flag = flag_picking_sympathy
 			}
 			OR = { 
+				trait = apostolic_bonfim
 				religion = exovedate
 				has_religion_feature = religion_syncretic
 				has_religion_feature = religion_feature_revelationist
@@ -492,6 +493,7 @@ decisions = {
 		allow = {
 			prisoner = no
 			OR = { 
+				trait = apostolic_bonfim
 				religion = exovedate
 				has_religion_feature = religion_syncretic
 				has_religion_feature = religion_feature_revelationist 

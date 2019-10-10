@@ -8030,6 +8030,7 @@ apostolic_pedro = {
 	opposite_opinion = -5
 	
 	stewardship = 1
+	martial = 1
 
 	potential = { religion = apostolic }
 	religious_branch = apostolic
@@ -8052,12 +8053,15 @@ apostolic_aparecida = {
 	
 	monthly_character_piety = 0.25
 	monthly_character_prestige = 0.25
+	infidel_opinion = -5
 
 	potential = { religion = apostolic }
 	religious_branch = apostolic
 	random = no
 	religious = yes
 	ruler_designer_cost = 0
+
+	ai_zeal = 25
 	
 	male_compliment_adj = COMPL_KINDHEARTED
 	female_compliment_adj = COMPL_KINDHEARTED
@@ -8071,14 +8075,14 @@ apostolic_bonfim = {
 	}
 
 	opposite_opinion = -5
-	combat_rating = 5 #new value!
-	health = 1
 
 	potential = { religion = apostolic }
 	religious_branch = apostolic
 	random = no
 	religious = yes
 	ruler_designer_cost = 0
+
+	ai_zeal = -25
 	
 	male_insult = INSULT_LOVER_OF_HEATHENS
 	female_insult = INSULT_LOVER_OF_HEATHENS
