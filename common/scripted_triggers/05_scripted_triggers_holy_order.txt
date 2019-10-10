@@ -36,6 +36,8 @@ holy_order_check_active_trigger = {
 				d_st_pats = { holder_scope = { character = yes religion = PREVPREV } }
 				d_order_of_brotherhood = { holder_scope = { character = yes religion = PREVPREV } }
 				d_salvation_army = { holder_scope = { character = yes religion = PREVPREV } }
+				d_knights_of_john = { holder_scope = { character = yes religion = PREVPREV } }
+				d_knights_of_lazarus = { holder_scope = { character = yes religion = PREVPREV } }
 			}
 		}
 		AND = {
@@ -130,6 +132,8 @@ can_join_any_holy_order_trigger = {
 				d_st_pats = { holy_order_can_PREV_join = yes }
 				d_order_of_brotherhood = { holy_order_can_PREV_join = yes }
 				d_salvation_army = { holy_order_can_PREV_join = yes }
+				d_knights_of_john = { holy_order_can_PREV_join = yes }
+				d_knights_of_lazarus = { holy_order_can_PREV_join = yes }
 			}
 		}
 		AND = {

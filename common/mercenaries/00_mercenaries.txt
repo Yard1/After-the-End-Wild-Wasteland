@@ -7,7 +7,7 @@
 
 
 d_knights_of_columbus_composition = {
-	levy_size = 1
+	levy_size = 2
 	heavy_infantry = 800
 	knights = 800
 	archers = 200
@@ -29,7 +29,7 @@ d_lebanon_brethren_composition = {
 }
 
 d_st_ursulas_chosen_composition = {
-	levy_size = 1
+	levy_size = 2
 	knights = 200
 	archers = 300
 	light_infantry = 200

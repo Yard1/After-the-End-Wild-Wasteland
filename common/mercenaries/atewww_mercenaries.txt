@@ -10,3 +10,17 @@ d_mounties_composition = {
 	knights = 800
 	horse_archers = 400
 }
+
+d_knights_of_john_composition = {
+	levy_size = 1
+	pikemen = 400
+	knights = 600
+	archers = 100
+}
+
+d_knights_of_lazarus_composition = {
+	levy_size = 1
+	heavy_infantry = 600
+	knights = 400
+	archers = 300
+}

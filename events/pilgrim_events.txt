@@ -1624,328 +1624,48 @@ character_event = {
 		custom_tooltip = { text = gain_friend }
 		if = {
 			limit = {
-				has_character_flag = pilgrimage_to_canterbury
-				is_title_active = d_knights_of_columbus
-				NOT = { is_title_active = d_knights_of_columbus }
-			}
-			hidden_tooltip = { character_event = { id = SoA.5081 } }
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_canterbury
-				is_title_active = d_knights_of_peter_claver
-				NOT = { is_title_active = d_knights_of_peter_claver }
-			}
-			hidden_tooltip = { character_event = { id = SoA.5083 } }
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_canterbury
-				is_title_active = d_knights_of_peter_claver
-				is_title_active = d_knights_of_columbus
+				OR = {
+					has_character_flag = pilgrimage_to_canterbury
+					has_character_flag = pilgrimage_to_koln
+					has_character_flag = pilgrimage_to_rome
+					has_character_flag = pilgrimage_to_santiago
+				}
 			}
 			hidden_tooltip = {
 				random_list = {
-					10 = { character_event = { id = SoA.5081 } }
-					10 = { character_event = { id = SoA.5083 } }
+					10 = {
+						trigger = { is_title_active = d_knights_of_columbus }
+						character_event = { id = SoA.5081 }
+					}
+					10 = {
+						trigger = { is_title_active = d_knights_of_peter_claver }
+						character_event = { id = SoA.5083 }
+					}
 				}
 			}
 		}
 		if = {
 			limit = {
 				has_character_flag = pilgrimage_to_jerusalem
-				is_title_active = d_knights_of_columbus
-				NOT = { is_title_active = d_lebanon_brethren }
-				NOT = { is_title_active = d_knights_of_peter_claver }
-				NOT = { is_title_active = d_national_cathedral }
-			}
-			hidden_tooltip = { character_event = { id = SoA.5081 } }
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_jerusalem
-				NOT = { is_title_active = d_knights_of_columbus }
-				is_title_active = d_lebanon_brethren
-				NOT = { is_title_active = d_knights_of_peter_claver }
-				NOT = { is_title_active = d_national_cathedral }
-			}
-			hidden_tooltip = { character_event = { id = SoA.5082 } }
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_jerusalem
-				NOT = { is_title_active = d_knights_of_columbus }
-				NOT = { is_title_active = d_lebanon_brethren }
-				is_title_active = d_knights_of_peter_claver
-				NOT = { is_title_active = d_national_cathedral }
-			}
-			hidden_tooltip = { character_event = { id = SoA.5083 } }
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_jerusalem
-				NOT = { is_title_active = d_knights_of_columbus }
-				NOT = { is_title_active = d_lebanon_brethren }
-				NOT = { is_title_active = d_knights_of_peter_claver }
-				is_title_active = d_national_cathedral
-			}
-			hidden_tooltip = { character_event = { id = SoA.5048 } }
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_jerusalem
-				is_title_active = d_knights_of_columbus
-				is_title_active = d_lebanon_brethren
-				NOT = { is_title_active = d_knights_of_peter_claver }
-				NOT = { is_title_active = d_national_cathedral }
 			}
 			hidden_tooltip = {
 				random_list = {
-					10 = { character_event = { id = SoA.5081 } }
-					10 = { character_event = { id = SoA.5082 } }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_jerusalem
-				is_title_active = d_knights_of_columbus
-				NOT = { is_title_active = d_lebanon_brethren }
-				is_title_active = d_knights_of_peter_claver
-				NOT = { is_title_active = d_national_cathedral }
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5081 } }
-					10 = { character_event = { id = SoA.5083 } }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_jerusalem
-				is_title_active = d_knights_of_columbus
-				NOT = { is_title_active = d_lebanon_brethren }
-				NOT = { is_title_active = d_knights_of_peter_claver }
-				is_title_active = d_national_cathedral
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5081 } }
-					10 = { character_event = { id = SoA.5048 } }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_jerusalem
-				NOT = { is_title_active = d_knights_of_columbus }
-				is_title_active = d_lebanon_brethren
-				is_title_active = d_knights_of_peter_claver
-				NOT = { is_title_active = d_national_cathedral }
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5082 } }
-					10 = { character_event = { id = SoA.5083 } }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_jerusalem
-				NOT = { is_title_active = d_knights_of_columbus }
-				is_title_active = d_lebanon_brethren
-				NOT = { is_title_active = d_knights_of_peter_claver }
-				is_title_active = d_national_cathedral
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5082 } }
-					10 = { character_event = { id = SoA.5048 } }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_jerusalem
-				NOT = { is_title_active = d_knights_of_columbus }
-				NOT = { is_title_active = d_lebanon_brethren }
-				is_title_active = d_knights_of_peter_claver
-				is_title_active = d_national_cathedral
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5083 } }
-					10 = { character_event = { id = SoA.5048 } }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_jerusalem
-				is_title_active = d_knights_of_columbus
-				is_title_active = d_lebanon_brethren
-				is_title_active = d_knights_of_peter_claver
-				NOT = { is_title_active = d_national_cathedral }
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5081 } }
-					10 = { character_event = { id = SoA.5082 } }
-					10 = { character_event = { id = SoA.5083 } }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_jerusalem
-				is_title_active = d_knights_of_columbus
-				is_title_active = d_lebanon_brethren
-				NOT = { is_title_active = d_knights_of_peter_claver }
-				is_title_active = d_national_cathedral
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5081 } }
-					10 = { character_event = { id = SoA.5082 } }
-					10 = { character_event = { id = SoA.5048 } }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_jerusalem
-				is_title_active = d_knights_of_columbus
-				NOT = { is_title_active = d_lebanon_brethren }
-				is_title_active = d_knights_of_peter_claver
-				is_title_active = d_national_cathedral
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5081 } }
-					10 = { character_event = { id = SoA.5083 } }
-					10 = { character_event = { id = SoA.5048 } }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_jerusalem
-				NOT = { is_title_active = d_knights_of_columbus }
-				is_title_active = d_lebanon_brethren
-				is_title_active = d_knights_of_peter_claver
-				is_title_active = d_national_cathedral
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5082 } }
-					10 = { character_event = { id = SoA.5083 } }
-					10 = { character_event = { id = SoA.5048 } }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_jerusalem
-				is_title_active = d_knights_of_columbus
-				is_title_active = d_lebanon_brethren
-				is_title_active = d_knights_of_peter_claver
-				is_title_active = d_national_cathedral
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5081 } }
-					10 = { character_event = { id = SoA.5082 } }
-					10 = { character_event = { id = SoA.5083 } }
-					10 = { character_event = { id = SoA.5048 } }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_koln
-				is_title_active = d_knights_of_columbus
-				NOT = { is_title_active = d_knights_of_peter_claver }
-			}
-			hidden_tooltip = { character_event = { id = SoA.5081 } }
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_koln
-				NOT = { is_title_active = d_knights_of_columbus }
-				is_title_active = d_knights_of_peter_claver
-			}
-			hidden_tooltip = { character_event = { id = SoA.5083 } }
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_koln
-				is_title_active = d_knights_of_columbus
-				is_title_active = d_knights_of_peter_claver
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5081 } }
-					10 = { character_event = { id = SoA.5083 } }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_rome
-				is_title_active = d_knights_of_columbus
-				NOT = { is_title_active = d_knights_of_peter_claver }
-			}
-			hidden_tooltip = { character_event = { id = SoA.5081 } }
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_rome
-				NOT = { is_title_active = d_knights_of_columbus }
-				is_title_active = d_knights_of_peter_claver
-			}
-			hidden_tooltip = { character_event = { id = SoA.5083 } }
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_rome
-				is_title_active = d_knights_of_columbus
-				is_title_active = d_knights_of_peter_claver
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5081 } }
-					10 = { character_event = { id = SoA.5083 } }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_santiago
-				is_title_active = d_knights_of_columbus
-				NOT = { is_title_active = d_knights_of_peter_claver }
-			}
-			character_event = { id = SoA.5081 }
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_santiago
-				NOT = { is_title_active = d_knights_of_columbus }
-				is_title_active = d_knights_of_peter_claver
-			}
-			character_event = { id = SoA.5083 }
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_santiago
-				is_title_active = d_knights_of_columbus
-				is_title_active = d_knights_of_peter_claver
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5081 } }
-					10 = { character_event = { id = SoA.5083 } }
+					10 = {
+						trigger = { is_title_active = d_knights_of_columbus }
+						character_event = { id = SoA.5081 }
+					}
+					10 = {
+						trigger = { is_title_active = d_lebanon_brethren }
+						character_event = { id = SoA.5082 }
+					}
+					10 = {
+						trigger = { is_title_active = d_knights_of_peter_claver }
+						character_event = { id = SoA.5083 }
+					}
+					10 = {
+						trigger = { is_title_active = d_national_cathedral }
+						character_event = { id = SoA.5048 }
+					}
 				}
 			}
 		}
@@ -1954,160 +1674,81 @@ character_event = {
 				has_character_flag = pilgrimage_to_constantinople
 				is_title_active = d_national_cathedral
 			}
-			character_event = { id = SoA.5048 }
+			hidden_tooltip = { character_event = { id = SoA.5048 } }
 		}
 		if = {
 			limit = {
 				has_character_flag = pilgrimage_to_axum
 				is_title_active = d_lebanon_brethren
 			}
-			character_event = { id = SoA.5082 }
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_antioch
-				is_title_active = d_lebanon_brethren
-				NOT = { is_title_active = d_national_cathedral }
-			}
 			hidden_tooltip = { character_event = { id = SoA.5082 } }
 		}
 		if = {
 			limit = {
 				has_character_flag = pilgrimage_to_antioch
-				NOT = { is_title_active = d_lebanon_brethren }
-				is_title_active = d_national_cathedral
-			}
-			hidden_tooltip = { character_event = { id = SoA.5048 } }
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_antioch
-				is_title_active = d_lebanon_brethren
-				is_title_active = d_national_cathedral
 			}
 			hidden_tooltip = {
 				random_list = {
-					10 = { character_event = { id = SoA.5082 } }
-					10 = { character_event = { id = SoA.5048 } }
+					10 = {
+						trigger = { is_title_active = d_lebanon_brethren }
+						character_event = { id = SoA.5082 }
+					}
+					10 = {
+						trigger = { is_title_active = d_national_cathedral }
+						character_event = { id = SoA.5048 }
+					}
 				}
 			}
 		}
 		if = {
 			limit = {
-				has_character_flag = pilgrimage_to_antioch
-				is_title_active = d_lebanon_brethren
-				is_title_active = d_national_cathedral
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5082 } }
-					10 = { character_event = { id = SoA.5048 } }
+				OR = {
+					has_character_flag = pilgrimage_to_ottawa
+					has_character_flag = pilgrimage_to_new_canterbury
 				}
 			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_ottawa
-				is_title_active = d_st_pats
-				NOT = { is_title_active = d_uel }
-			}
-			hidden_tooltip = {
-				character_event = { id = SoA.5085 }
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_ottawa
-				NOT = { is_title_active = d_st_pats }
-				is_title_active = d_uel
-			}
-			hidden_tooltip = {
-				character_event = { id = SoA.5049 }
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_ottawa
-				is_title_active = d_st_pats
-				is_title_active = d_uel
-			}
 			hidden_tooltip = {
 				random_list = {
-					10 = { character_event = { id = SoA.5085 } }
-					10 = { character_event = { id = SoA.5049 } }
-				}
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_new_canterbury
-				is_title_active = d_st_pats
-				NOT = { is_title_active = d_uel }
-			}
-			hidden_tooltip = {
-				character_event = { id = SoA.5085 }
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_new_canterbury
-				NOT = { is_title_active = d_st_pats }
-				is_title_active = d_uel
-			}
-			hidden_tooltip = {
-				character_event = { id = SoA.5049 }
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_new_canterbury
-				is_title_active = d_st_pats
-				is_title_active = d_uel
-			}
-			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5085 } }
-					10 = { character_event = { id = SoA.5049 } }
+					10 = {
+						trigger = { is_title_active = d_st_pats }
+						character_event = { id = SoA.5085 }
+					}
+					10 = {
+						trigger = { is_title_active = d_uel }
+						character_event = { id = SoA.5049 }
+					}
 				}
 			}
 		}
 		if = {
 			limit = {
 				has_character_flag = pilgrimage_to_quebec
-				is_title_active = d_st_ursulas_chosen
-				NOT = { is_title_active = d_uel }
-			}
-			hidden_tooltip = {
-				character_event = { id = SoA.5084 }
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_quebec
-				NOT = { is_title_active = d_st_ursulas_chosen }
-				is_title_active = d_uel
-			}
-			hidden_tooltip = {
-				character_event = { id = SoA.5049 }
-			}
-		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_quebec
-				is_title_active = d_st_ursulas_chosen
-				is_title_active = d_uel
 			}
 			hidden_tooltip = {
 				random_list = {
-					10 = { character_event = { id = SoA.5084 } }
-					10 = { character_event = { id = SoA.5049 } }
+					10 = {
+						trigger = {
+							OR = {
+								is_title_active = d_st_ursulas_chosen 
+								is_title_active = k_ursuline_state
+							}
+						}
+						character_event = { id = SoA.5084 }
+					}
+					10 = {
+						trigger = { is_title_active = d_uel }
+						character_event = { id = SoA.5049 }
+					}
 				}
 			}
 		}
 		if = {
 			limit = {
 				has_character_flag = pilgrimage_to_detroit
-				is_title_active = d_st_ursulas_chosen
+				OR = {
+					is_title_active = d_st_ursulas_chosen 
+					is_title_active = k_ursuline_state
+				}
 			}
 			hidden_tooltip = {
 				character_event = { id = SoA.5084 }
@@ -2116,7 +1757,10 @@ character_event = {
 		if = {
 			limit = {
 				has_character_flag = pilgrimage_to_new_orleans
-				is_title_active = d_st_ursulas_chosen
+				OR = {
+					is_title_active = d_st_ursulas_chosen 
+					is_title_active = k_ursuline_state
+				}
 			}
 			hidden_tooltip = {
 				character_event = { id = SoA.5084 }
@@ -2159,7 +1803,6 @@ character_event = {
 			holder_scope = {
 				random_courtier = {
 					limit = {
-						is_female = no
 						prisoner = no
 						in_command = no
 						is_priest = no
@@ -2198,7 +1841,6 @@ character_event = {
 			holder_scope = {
 				random_courtier = {
 					limit = {
-						is_female = no
 						prisoner = no
 						in_command = no
 						is_priest = no
@@ -2235,7 +1877,6 @@ character_event = {
 			holder_scope = {
 				random_courtier = {
 					limit = {
-						is_female = no
 						prisoner = no
 						in_command = no
 						is_priest = no
@@ -2268,28 +1909,56 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		d_st_ursulas_chosen = {
-			holder_scope = {
-				random_courtier = {
-					limit = {
-						is_female = no
-						prisoner = no
-						in_command = no
-						is_priest = no
-						age = 16
-						NOT = {
-							sibling = ROOT
+		if = {
+			limit = { is_title_active = k_ursuline_state }
+			k_ursuline_state = {
+				holder_scope = {
+					random_courtier = {
+						limit = {
+							prisoner = no
+							in_command = no
+							is_priest = no
+							age = 16
+							NOT = {
+								sibling = ROOT
+							}
+							NOT = {
+								is_friend = ROOT
+							}
+							NOT = {
+								is_rival = ROOT
+							}
+							NOT = { has_job_title = job_spiritual }
 						}
-						NOT = {
-							is_friend = ROOT
-						}
-						NOT = {
-							is_rival = ROOT
-						}
-						NOT = { has_job_title = job_spiritual }
+						add_friend = ROOT
+						character_event = { id = SoA.5086 }
 					}
-					add_friend = ROOT
-					character_event = { id = SoA.5086 }
+				}
+			}
+		}
+		else = {
+			d_st_ursulas_chosen = {
+				holder_scope = {
+					random_courtier = {
+						limit = {
+							prisoner = no
+							in_command = no
+							is_priest = no
+							age = 16
+							NOT = {
+								sibling = ROOT
+							}
+							NOT = {
+								is_friend = ROOT
+							}
+							NOT = {
+								is_rival = ROOT
+							}
+							NOT = { has_job_title = job_spiritual }
+						}
+						add_friend = ROOT
+						character_event = { id = SoA.5086 }
+					}
 				}
 			}
 		}
@@ -2309,7 +1978,6 @@ character_event = {
 			holder_scope = {
 				random_courtier = {
 					limit = {
-						is_female = no
 						prisoner = no
 						in_command = no
 						is_priest = no
@@ -2346,7 +2014,6 @@ character_event = {
 			holder_scope = {
 				random_courtier = {
 					limit = {
-						is_female = no
 						prisoner = no
 						in_command = no
 						is_priest = no

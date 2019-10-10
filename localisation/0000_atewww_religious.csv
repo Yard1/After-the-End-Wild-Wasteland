@@ -5,6 +5,8 @@ EVTDESC_america_pilgrim_101;You have been invited to join [From.GetTitledFirstNa
 EVTDESCancrel.0020;You have sent out summons to all of your vassals for the divination. Those that do not follow the true faith will have to offer gold to be exempted from this sacred ceremony.;Vous avez envoyé un avis de convocation à tous vos vassaux pour le blót. Ceux qui ont été baptisés ou qui affirment suivre l'enseignement du prophète devront offrir de l'or pour être exemptés de ce festin majestueux. ;Ihr habt all Eure Vasallen zum Blót zusammengerufen. Diejenigen, die getauft wurden oder den Lehren des Propheten folgen, müssen Gold anbieten, um von diesem großartigen Festschmaus fernbleiben zu können.;;Has enviado citaciones a todos tus vasallos para la mancha. Los que han sido bautizados o profesan seguir las enseñanzas del profeta tendrán que ofrecer oro para quedar exentos de esta magnífica fiesta.;;;;;;;;;x
 
 falling_star_FEATURES;\n§Y*§! Are adherents of the ancient practice of Astrology.;;;;;;;;;;;;;x
+revelationist_reformed_FEATURES;§Y*§! Upon reaching adulthood, Revelationist characters may test their faith by handling a live snake.;;;;;;;;;;;;;x
+revelationist_FEATURES;§Y*§! Upon reaching adulthood, Revelationist characters may test their faith by handling a live snake.;;;;;;;;;;;;;x
 
 TITLE_GAINED_RELIGIOUS_SETUP;New Cardinal appointed.;Nouveau cardinal nommé;Neuer Kardinal ernannt;;Nuevo cardenal nombrado.;;;;;;;;;x
 TITLE_GAINED_RELIGIOUS_LETTER;$NEWHOLDER$ was given a seat in the [GetConclaveName].;$NEWHOLDER$ a reçu un siège au Collège des cardinaux.;$NEWHOLDER$ wurde ins Kardinalskollegium berufen.;;$NEWHOLDER$ ha obtenido un asiento en el Colegio Cardenalicio.;;;;;;;;;x

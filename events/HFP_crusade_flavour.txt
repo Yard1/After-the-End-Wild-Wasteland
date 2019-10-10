@@ -3269,6 +3269,38 @@ character_event = {
 	    		}
 	    		10 = {
 	    			trigger = {
+	    				is_title_active = d_knights_of_john
+						OR = {
+							religion = catholic
+							religion = neognostic
+							religion = sedevacantist
+							religion = nestorian
+						}
+	    			}
+	    			d_knights_of_john = {
+	    				owner = {
+	    					save_event_target_as = decided_holy_order
+	    				}
+	    			}
+	    		}
+	    		10 = {
+	    			trigger = {
+	    				is_title_active = d_knights_of_lazarus
+						OR = {
+							religion = catholic
+							religion = neognostic
+							religion = sedevacantist
+							religion = nestorian
+						}
+	    			}
+	    			d_knights_of_lazarus = {
+	    				owner = {
+	    					save_event_target_as = decided_holy_order
+	    				}
+	    			}
+	    		}
+	    		10 = {
+	    			trigger = {
 	    				is_title_active = d_st_ursulas_chosen
 						OR = {
 							religion = ursuline
@@ -3391,6 +3423,22 @@ character_event = {
 				AND = {
 					is_title_active = d_knights_of_peter_claver
 					d_knights_of_peter_claver = {
+						owner = {
+							religion = ROOT
+						}
+					}
+				}
+				AND = {
+					is_title_active = d_knights_of_john
+					d_knights_of_john = {
+						owner = {
+							religion = ROOT
+						}
+					}
+				}
+				AND = {
+					is_title_active = d_knights_of_lazarus
+					d_knights_of_lazarus = {
 						owner = {
 							religion = ROOT
 						}

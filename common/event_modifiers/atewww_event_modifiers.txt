@@ -108,6 +108,14 @@ expelled_d_dead_sun = {
 	icon = 35
 }
 
+expelled_d_knights_of_john = {
+	icon = 35
+}
+
+expelled_d_knights_of_lazarus = {
+	icon = 35
+}
+
 looted_lady_liberty = {
 	icon = 64
 	libertarian_opinion = -50
@@ -172,6 +180,7 @@ commie_cell = {
 }
 
 held_yudtes_timer = {
+	icon = 3
 }
 
 recently_invited_rabbi = {

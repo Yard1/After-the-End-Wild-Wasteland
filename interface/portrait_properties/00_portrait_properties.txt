@@ -1517,6 +1517,8 @@
 				primary_title = {
 					OR = {
 						title = d_knights_of_columbus
+						title = d_knights_of_john
+						title = d_knights_of_lazarus
 						title = d_libertarian
 						title = d_knights_of_peter_claver
 						title = d_st_ursulas_chosen
@@ -1561,6 +1563,8 @@
 						primary_title = {
 							OR = {
 								title = d_knights_of_columbus
+								title = d_knights_of_john
+								title = d_knights_of_lazarus
 								title = d_libertarian
 								title = d_knights_of_peter_claver
 								title = d_st_ursulas_chosen
@@ -3025,6 +3029,8 @@
 				primary_title = { #Holy Orders in peace time should wear martial clothes, but not the helmet.
 					OR = {
 						title = d_knights_of_columbus
+						title = d_knights_of_john
+						title = d_knights_of_lazarus
 						title = d_libertarian
 						title = d_knights_of_peter_claver
 						title = d_st_ursulas_chosen
@@ -3321,6 +3327,8 @@
 				primary_title = { #Holy Orders in peace time should wear martial clothes, but not the helmet.
 					OR = {
 						title = d_knights_of_columbus
+						title = d_knights_of_john
+						title = d_knights_of_lazarus
 						title = d_knights_of_peter_claver
 						title = d_libertarian
 						title = d_st_ursulas_chosen
@@ -3389,6 +3397,8 @@
 				primary_title = { #Holy Orders in peace time should wear martial clothes, but not the helmet.
 					OR = {
 						title = d_knights_of_columbus
+						title = d_knights_of_john
+						title = d_knights_of_lazarus
 						title = d_knights_of_peter_claver
 						title = d_libertarian
 						title = d_st_ursulas_chosen
@@ -3457,6 +3467,8 @@
 				primary_title = { #Holy Orders in peace time should wear martial clothes, but not the helmet.
 					OR = {
 						title = d_knights_of_columbus
+						title = d_knights_of_john
+						title = d_knights_of_lazarus
 						title = d_knights_of_peter_claver
 						title = d_libertarian
 						title = d_st_ursulas_chosen
@@ -3525,6 +3537,8 @@
 				primary_title = { #Holy Orders in peace time should wear martial clothes, but not the helmet.
 					OR = {
 						title = d_knights_of_columbus
+						title = d_knights_of_john
+						title = d_knights_of_lazarus
 						title = d_knights_of_peter_claver
 						title = d_libertarian
 						title = d_st_ursulas_chosen
@@ -4655,7 +4669,6 @@
 			factor = 0
 			OR = {
 				has_minor_title = title_cardinal
-				has_minor_title = title_mormon_cardinal
 				has_minor_title = title_druid_circle_member
 			}
 		}
@@ -4835,7 +4848,6 @@
 			factor = 0
 			OR = {
 				has_minor_title = title_cardinal
-				has_minor_title = title_mormon_cardinal
 				has_minor_title = title_druid_circle_member
 			}
 		}
@@ -5157,7 +5169,6 @@
 			factor = 0
 			NOR = {
 				has_minor_title = title_cardinal
-				has_minor_title = title_mormon_cardinal
 				has_minor_title = title_druid_circle_member
 			}
 		}
@@ -5176,7 +5187,6 @@
 			factor = 0
 			NOR = {
 				has_minor_title = title_cardinal
-				has_minor_title = title_mormon_cardinal
 				has_minor_title = title_druid_circle_member
 			}
 		}
@@ -6835,12 +6845,9 @@
 				value = on
 			}
 			OR = {
-				religion = catholic
-				religion = ursuline
-				religion = confederated
-			}
-			OR = {
-				has_landed_title = d_knights_of_columbus 
+				has_landed_title = d_knights_of_columbus
+				has_landed_title = d_knights_of_john
+				has_landed_title = d_knights_of_lazarus
 				has_landed_title = d_knights_of_peter_claver
 				has_landed_title = d_st_ursulas_chosen
 				has_landed_title = k_ursuline_state
@@ -6848,6 +6855,8 @@
 				has_landed_title = d_flaming_sword
 				has_landed_title = d_national_cathedral
 				liege = { has_landed_title = d_knights_of_columbus }
+				liege = { has_landed_title = d_knights_of_john }
+				liege = { has_landed_title = d_knights_of_lazarus }
 				liege = { has_landed_title = d_knights_of_peter_claver }
 				liege = { has_landed_title = d_st_ursulas_chosen }
 				liege = { has_landed_title = k_ursuline_state }

@@ -43,12 +43,24 @@ c_sable;Sable Island;;;;;;;;;;;;;x
 c_sable_adj;Sable;;;;;;;;;;;;;x
 b_sable;Sable;;;;;;;;;;;;;x
 b_sable_adj;Sable;;;;;;;;;;;;;x
+b_the_station;The Station;;;;;;;;;;;;;x
+b_sable_2;Sable;;;;;;;;;;;;;x
+b_sable_3;Sable;;;;;;;;;;;;;x
+b_sable_4;Sable;;;;;;;;;;;;;x
+b_sable_5;Sable;;;;;;;;;;;;;x
+b_sable_6;Sable;;;;;;;;;;;;;x
 
 PROV3400;Montserrat;;;;;;;;;;;;;x
 c_montserrat;Montserrat;;;;;;;;;;;;;x
 c_montserrat_adj;Montserratian;;;;;;;;;;;;;x
 b_plymouth_ANB;Plymouth;;;;;;;;;;;;;x
 b_brades_ANB;Brades;;;;;;;;;;;;;x
+b_little_bay_ANB;Little Bay;;;;;;;;;;;;;x
+b_davy_hill_ANB;Davy Hill;;;;;;;;;;;;;x
+b_salem_ANB;Salem;;;;;;;;;;;;;x
+b_look_out_ANB;Look Out;;;;;;;;;;;;;x
+b_st_peters_ANB;St. Peter's;;;;;;;;;;;;;x
+b_baker_hill_ANB;Baker Hill;;;;;;;;;;;;;x
 
 PROV1263;Texas City;;;;;;;;;;;;;x
 PROV3401;Galveston;;;;;;;;;;;;;x
@@ -62,6 +74,9 @@ b_stewart_beach_TX;Stewart Beach;;;;;;;;;;;;;x
 b_four_points_TX;Four Points;;;;;;;;;;;;;x
 b_pelican_island_TX;Pelican Island;;;;;;;;;;;;;x
 b_schlitterban_TX;Schlitterban;;;;;;;;;;;;;x
+
+galveston_movement;Galveston Movement;;;;;;;;;;;;;x
+galveston_movement_desc;Galveston Island was once the port through many Jews entered America - let us turn it into a save haven for all once again.;;;;;;;;;;;;;x
 
 EVTDESC_ATE_WWW_TITLE_2;Due to [Root.GetBestName]'s culture, the Kingdom of Dixieland has proven to be simply ungovernable. Therefore, it has been split into Alabama and Georgia - the old kingdoms that have held the land before the Collapse.;;;;;;;;;;;;;x
 EVTOPTA_ATE_WWW_TITLE_2;Damn it!;;;;;;;;;;;;;x

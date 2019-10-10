@@ -71,3 +71,49 @@ d_order_airmen = {
 
 	mercenary_type = d_atlanta_composition
 }
+
+d_knights_of_john = {
+
+	color = { 214 6 6 } #
+	color2= { 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 63 # Washington
+
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	culture = beltway
+	religion = catholic
+	
+	landless = yes
+	holy_order = yes
+	primary = yes
+	monthly_income = 1
+
+	mercenary_type = d_knights_of_john_composition
+}
+
+d_knights_of_lazarus = {
+
+	color = { 2 204 26 } #
+	color2= { 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 1093 # Tampa
+
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	culture = gulfard
+	religion = catholic
+	
+	landless = yes
+	holy_order = yes
+	primary = yes
+	monthly_income = 1
+
+	mercenary_type = d_knights_of_lazarus_composition
+}

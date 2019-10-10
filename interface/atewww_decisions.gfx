@@ -203,4 +203,24 @@ spriteTypes = {
 		name = "GFX_change_cetic_way_decision"
 		texturefile = "gfx/interface/cetic_pilgrim.dds"
 	}
+	spriteType = {
+		name = "GFX_galveston_movement"
+		texturefile = "gfx\\interface\\decision_icon_conscript_merchant_ships.dds"
+	}
+	spriteType = {
+		name = "GFX_expel_knights_of_john"
+		texturefile = "gfx\\interface\\decision_icon_expel_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_donate_money_to_knights_of_john"
+		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_expel_knights_of_lazarus"
+		texturefile = "gfx\\interface\\decision_icon_expel_holy_order.dds"
+	}
+	spriteType = {
+		name = "GFX_donate_money_to_knights_of_lazarus"
+		texturefile = "gfx\\interface\\decision_icon_donate_to_holy_order.dds"
+	}
 }

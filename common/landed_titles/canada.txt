@@ -1585,6 +1585,12 @@ e_canada = {
 				horse = "Stable Island"
 				
 				b_sable = {}
+				b_the_station = {}
+				b_sable_2 = {}
+				b_sable_3 = {}
+				b_sable_4 = {}
+				b_sable_5 = {}
+				b_sable_6 = {}
 			}
 		}
 		

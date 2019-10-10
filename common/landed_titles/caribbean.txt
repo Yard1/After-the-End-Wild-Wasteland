@@ -675,6 +675,12 @@ e_caribbean = {
 				
 				b_plymouth_ANB = {}
 				b_brades_ANB = {}
+				b_look_out_ANB = {}
+				b_st_peters_ANB = {}
+				b_baker_hill_ANB = {}
+				b_little_bay_ANB = {}
+				b_davy_hill_ANB = {}
+				b_salem_ANB = {}
 			}
 			
 			c_virgin_islands = {

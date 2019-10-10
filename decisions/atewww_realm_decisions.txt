@@ -115,4 +115,43 @@ decisions = {
 			}
 		}
 	}
+
+	galveston_movement = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 80
+
+		potential = {
+			religion_group = jewish_group
+			has_landed_title = d_galveston
+			is_republic = yes
+			c_galveston = {
+				location = {
+					religion_group = jewish_group
+					NOT = {
+						num_of_max_settlements = 7
+					}
+				}
+				holder_scope = {
+					OR = {
+						character = ROOT
+						liege = { character = ROOT }
+					}
+				}
+			}
+		}
+		allow = {
+			war = no
+			wealth = 300
+			piety = 100
+		}
+		effect = {
+			wealth = -300
+			piety = -100
+			3401 = {
+				add_holding_slot = 1
+				culture = yiddish
+			}
+		}
+	}
 }

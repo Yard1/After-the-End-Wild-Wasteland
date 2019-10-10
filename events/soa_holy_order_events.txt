@@ -344,20 +344,6 @@ character_event = {
 			}
 			preferred_limit = {
 				any_province_holding = {
-					NOT = {
-						holder_scope = {
-							OR = {
-								has_landed_title = d_knights_of_columbus
-								any_liege = {
-									has_landed_title = d_knights_of_columbus
-								}
-							}
-						}
-					}
-				}
-			}
-			preferred_limit = {
-				any_province_holding = {
 					is_holy_site = ROOT
 				}
 			}
@@ -630,6 +616,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 3.0 # Prefer Peter Claver
+			is_title_active = d_knights_of_peter_claver
 			OR = {
 				culture = tuskegean
 				culture = motowner
@@ -638,6 +625,27 @@ character_event = {
 				culture_group = caribbanglo
 				culture_group = antillais
 				culture_group = laurentian
+			}
+		}
+		modifier = {
+			factor = 2.0 # Prefer St. Lazarus
+			is_title_active = d_knights_of_lazarus
+			NOT = { culture = riverlander }
+			OR = {
+				culture_group = south_anglo
+				culture_group = west_anglo
+				culture_group = plains
+			}
+		}
+		modifier = {
+			factor = 2.0 # Prefer St. John
+			is_title_active = d_knights_of_john
+			OR = {
+				culture_group = gallomerican
+				culture_group = amerodeutsch
+				culture_group = laurentian
+				culture_group = north_atlantic
+				culture = riverlander
 			}
 		}
 		modifier = {
@@ -781,6 +789,18 @@ character_event = {
 				region = world_west_canada
 				region = world_central_america_caribbean
 			}
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_knights_of_columbus
+							any_liege = {
+								has_landed_title = d_knights_of_columbus
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -846,8 +866,6 @@ character_event = {
 					region = world_west_canada
 					region = world_central_america_caribbean
 				}
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -859,6 +877,34 @@ character_event = {
 							}
 						}
 					}
+				}
+			}
+			preferred_limit = {
+				any_province_holding = {
+					is_holy_site = ROOT
+				}
+				NOR = {
+					culture_group = south_anglo
+					culture_group = west_anglo
+					culture_group = plains
+					culture_group = gallomerican
+					culture_group = amerodeutsch
+					culture_group = laurentian
+					culture_group = north_atlantic
+					culture = riverlander
+				}
+			}
+			preferred_limit = {
+				religion = ROOT
+				NOR = {
+					culture_group = south_anglo
+					culture_group = west_anglo
+					culture_group = plains
+					culture_group = gallomerican
+					culture_group = amerodeutsch
+					culture_group = laurentian
+					culture_group = north_atlantic
+					culture = riverlander
 				}
 			}
 			preferred_limit = {
@@ -1244,6 +1290,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 3.0 # Prefer Knights of Columbus
+			is_title_active = d_knights_of_columbus
 			NOR = {
 				culture = tuskegean
 				culture = motowner
@@ -1252,6 +1299,36 @@ character_event = {
 				culture_group = caribbanglo
 				culture_group = antillais
 				culture_group = laurentian
+				
+				culture_group = south_anglo
+				culture_group = west_anglo
+				culture_group = plains
+				culture_group = gallomerican
+				culture_group = amerodeutsch
+				culture_group = laurentian
+				culture_group = north_atlantic
+				culture = riverlander
+			}
+		}
+		modifier = {
+			factor = 2.0 # Prefer St. Lazarus
+			is_title_active = d_knights_of_lazarus
+			NOT = { culture = riverlander }
+			OR = {
+				culture_group = south_anglo
+				culture_group = west_anglo
+				culture_group = plains
+			}
+		}
+		modifier = {
+			factor = 2.0 # Prefer St. John
+			is_title_active = d_knights_of_john
+			OR = {
+				culture_group = gallomerican
+				culture_group = amerodeutsch
+				culture_group = laurentian
+				culture_group = north_atlantic
+				culture = riverlander
 			}
 		}
 		modifier = {
@@ -1447,6 +1524,18 @@ character_event = {
 				region = world_caribbean
 				region = world_south_america
 			}
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_knights_of_peter_claver
+							any_liege = {
+								has_landed_title = d_knights_of_peter_claver
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -1518,8 +1607,6 @@ character_event = {
 					region = world_caribbean
 					region = world_south_america
 				}
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -2143,20 +2230,6 @@ character_event = {
 			}
 			preferred_limit = {
 				any_province_holding = {
-					NOT = {
-						holder_scope = {
-							OR = {
-								has_landed_title = d_oppenheimer
-								any_liege = {
-									has_landed_title = d_oppenheimer
-								}
-							}
-						}
-					}
-				}
-			}
-			preferred_limit = {
-				any_province_holding = {
 					is_holy_site = ROOT
 				}
 			}
@@ -2538,6 +2611,18 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_oppenheimer
+							any_liege = {
+								has_landed_title = d_oppenheimer
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -2589,8 +2674,6 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -2765,6 +2848,7 @@ character_event = {
 				religion = ursuline
 				religion = angeline
 				religion = confederated
+				religion = exovedate
 			}
 			liege = {
 				holy_order = no
@@ -3024,6 +3108,18 @@ character_event = {
 				region = world_eastern_canada
 				region = world_central_canada
 			}
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_st_ursulas_chosen
+							any_liege = {
+								has_landed_title = d_st_ursulas_chosen
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -3095,8 +3191,6 @@ character_event = {
 					region = world_eastern_canada
 					region = world_central_canada
 				}
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -3592,20 +3686,6 @@ character_event = {
 			}
 			preferred_limit = {
 				any_province_holding = {
-					NOT = {
-						holder_scope = {
-							OR = {
-								has_landed_title = d_men_in_black
-								any_liege = {
-									has_landed_title = d_men_in_black
-								}
-							}
-						}
-					}
-				}
-			}
-			preferred_limit = {
-				any_province_holding = {
 					is_holy_site = ROOT
 				}
 			}
@@ -4061,6 +4141,18 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_men_in_black
+							any_liege = {
+								has_landed_title = d_men_in_black
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		NOT = { has_character_modifier = expelled_d_hashshashin }
@@ -4111,11 +4203,6 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
-			}
-			preferred_limit = {
-				port = yes
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -4128,6 +4215,19 @@ character_event = {
 						}
 					}
 				}
+			}
+			preferred_limit = {
+				any_province_holding = {
+					is_holy_site = ROOT
+				}
+				port = yes
+			}
+			preferred_limit = {
+				port = yes
+				religion = ROOT
+			}
+			preferred_limit = {
+				port = yes
 			}
 			preferred_limit = {
 				any_province_holding = {
@@ -4636,6 +4736,18 @@ character_event = {
 		any_demesne_province = {
 			has_empty_holding = yes
 			port = yes
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_fh
+							any_liege = {
+								has_landed_title = d_fh
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		NOT = { has_character_modifier = expelled_d_jomsvikings }
@@ -4694,8 +4806,6 @@ character_event = {
 			limit = {
 				has_empty_holding = yes
 				port = yes
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -5447,6 +5557,18 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_national_cathedral
+							any_liege = {
+								has_landed_title = d_national_cathedral
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -5514,8 +5636,6 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -6220,6 +6340,18 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_lebanon_brethren
+							any_liege = {
+								has_landed_title = d_lebanon_brethren
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -6281,8 +6413,6 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -6954,6 +7084,18 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_judah_lions
+							any_liege = {
+								has_landed_title = d_judah_lions
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -7021,8 +7163,6 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -7692,6 +7832,18 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_shomrim
+							any_liege = {
+								has_landed_title = d_shomrim
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -7759,8 +7911,6 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -8297,6 +8447,18 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_fm
+							any_liege = {
+								has_landed_title = d_fm
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -8364,8 +8526,6 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -8378,6 +8538,16 @@ character_event = {
 						}
 					}
 				}
+			}
+			preferred_limit = {
+				any_province_holding = {
+					is_holy_site = ROOT
+				}
+				port = yes
+			}
+			preferred_limit = {
+				religion = ROOT
+				port = yes
 			}
 			preferred_limit = {
 				port = yes
@@ -9057,6 +9227,18 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_flaming_sword
+							any_liege = {
+								has_landed_title = d_flaming_sword
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -9124,8 +9306,6 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -9809,6 +9989,18 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_midwestern_brotherhood
+							any_liege = {
+								has_landed_title = d_midwestern_brotherhood
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -9876,8 +10068,6 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -10570,6 +10760,18 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_keepers_of_the_green_peace
+							any_liege = {
+								has_landed_title = d_keepers_of_the_green_peace
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -10636,8 +10838,6 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -11332,6 +11532,18 @@ character_event = {
 				region = world_northeast
 				region = world_west_coast
 			}
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_nauvoo_legion
+							any_liege = {
+								has_landed_title = d_nauvoo_legion
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -11404,8 +11616,6 @@ character_event = {
 					region = world_northeast
 					region = world_west_coast
 				}
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -11940,6 +12150,18 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_oto
+							any_liege = {
+								has_landed_title = d_oto
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -12006,8 +12228,6 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -12718,6 +12938,18 @@ character_event = {
 		any_demesne_province = {
 			has_empty_holding = yes
 			region = custom_neoladino
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_masked_knights
+							any_liege = {
+								has_landed_title = d_masked_knights
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -12784,8 +13016,7 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
-			}
-			preferred_limit = {
+				region = custom_neoladino
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -13500,7 +13731,18 @@ character_event = {
 		
 		any_demesne_province = {
 			has_empty_holding = yes
-			region = custom_neoladino
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_order_of_brotherhood
+							any_liege = {
+								has_landed_title = d_order_of_brotherhood
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -13567,8 +13809,6 @@ character_event = {
 		random_demesne_province = {
 			limit = {
 				has_empty_holding = yes
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -14285,6 +14525,18 @@ character_event = {
 				region = world_norselands
 				region = world_rustlands
 			}
+			any_province_holding = {
+				NOT = {
+					holder_scope = {
+						OR = {
+							has_landed_title = d_st_pats
+							any_liege = {
+								has_landed_title = d_st_pats
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		
@@ -14358,8 +14610,6 @@ character_event = {
 					region = world_norselands
 					region = world_rustlands
 				}
-			}
-			preferred_limit = {
 				any_province_holding = {
 					NOT = {
 						holder_scope = {
@@ -14833,6 +15083,18 @@ character_event = {
 			has_character_flag = expel_dead_sun_check
 		}
 		text = expel_dead_sun
+	}
+	title = { # Knights of St. John
+		trigger = {
+			has_character_flag = expel_knights_of_john_check
+		}
+		text = expel_knights_of_john
+	}
+	title = { # Knights of St. Lazarus
+		trigger = {
+			has_character_flag = expel_knights_of_lazarus_check
+		}
+		text = expel_knights_of_lazarus
 	}
 	title = { # Sons of Kaleva
 		trigger = {
@@ -15647,6 +15909,66 @@ character_event = {
 				inherit = yes
 			}
 			clr_character_flag = expel_dead_sun_check
+		}
+	}
+	option = { # Knights of St. John
+		trigger = {
+			has_character_flag = expel_knights_of_john_check
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_knights_of_john = {
+				holder_scope = {
+					character_event = {
+						id = NewHolyOrders.148
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_knights_of_john
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_knights_of_john_check
+		}
+	}
+	option = { # Knights of St. Lazarus
+		trigger = {
+			has_character_flag = expel_knights_of_lazarus_check
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_knights_of_lazarus = {
+				holder_scope = {
+					character_event = {
+						id = NewHolyOrders.161
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_knights_of_lazarus
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_knights_of_lazarus_check
 		}
 	}
 	option = { # Sons of Kaleva
