@@ -66,9 +66,7 @@ narrative_event = {
 				primary_title = {
 					title = e_china_west_governor
 				}
-				primary_title = {
-					title = offmap_china
-				}
+				offmap_power = offmap_china
 			}
 		}
 		primary_title = {

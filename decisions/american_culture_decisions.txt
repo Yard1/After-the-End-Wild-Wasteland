@@ -36,7 +36,7 @@ decisions = {
 						}
 						if = {
 							limit = { 
-								culture = beltway
+								culture = north_atlantic
 								NOT = { distance = { where = 63 distance = 100 } } 
 							}
 							random = { 
@@ -46,7 +46,7 @@ decisions = {
 						}
 						if = {
 							limit = { 
-								culture_group = beltway
+								culture_group = north_atlantic
 								NOT = { distance = { where = 63 distance = 200 } } 
 							}
 							random = { 
@@ -56,7 +56,7 @@ decisions = {
 						}
 						if = {
 							limit = { 
-								culture_group = beltway
+								culture_group = north_atlantic
 								NOT = { distance = { where = 63 distance = 400 } } 
 							}
 							random = { 
@@ -108,9 +108,9 @@ decisions = {
 			always = no
 		}
 		ai_will_do = {
-			factor = .3
+			factor = 0.3
 			modifier = {
-				factor = 0.2
+				factor = 2
 				religion = americanist
 			}
 			modifier = {
@@ -164,7 +164,7 @@ decisions = {
 						}
 						if = {
 							limit = { 
-								culture = beltway
+								culture = north_atlantic
 								capital_scope = { NOT = { distance = { where = PREV distance = 100 } } } 
 							}
 							random = { 
@@ -174,7 +174,7 @@ decisions = {
 						}
 						if = {
 							limit = { 
-								culture_group = beltway
+								culture_group = north_atlantic
 								capital_scope = { NOT = { distance = { where = PREV distance = 200 } } } 
 							}
 							random = { 
@@ -184,7 +184,7 @@ decisions = {
 						}
 						if = {
 							limit = { 
-								culture_group = beltway
+								culture_group = north_atlantic
 								capital_scope = { NOT = { distance = { where = PREV distance = 400 } } } 
 							}
 							random = { 
@@ -236,13 +236,13 @@ decisions = {
 			always = no
 		}
 		ai_will_do = {
-			factor = .3
+			factor = 0.3
 			modifier = {
-				factor = 0.2
+				factor = 2
 				religion = americanist
 			}
 			modifier = {
-				factor = 0.2
+				factor = 2
 				capital_scope = { culture = american } 
 			}
 			modifier = {

@@ -66,6 +66,10 @@ decisions = {
 		
 		potential = {
 			is_playable = yes
+			NOR = {
+				culture = cajun
+				culture = creole
+			}
 			OR = { 
 				culture_group = galloamerican 
 				culture = ontarian
@@ -131,6 +135,10 @@ decisions = {
 		revoke_allowed = {
 			always = no
 		}
+
+		ai_will_do = {
+			factor = 0.4
+		}
 	}
 	embrace_canadian_culture = {
 		ai_check_interval = 120 #check only once every 120 months.
@@ -165,12 +173,11 @@ decisions = {
 			always = no
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0.3
 			modifier = {
-				factor = 3
+				factor = 2
 				capital_scope = { culture = canadian } 
 			}
 		}
 	}
-
 }

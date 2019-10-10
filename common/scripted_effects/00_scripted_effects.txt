@@ -13968,15 +13968,7 @@ add_ascetic_trait_effect = {
 			limit = { religion_group = christian }
 			add_trait = nun
 		}
-		if = {
-			limit = { religion = jain }
-			add_trait = aryika
-		}
-		if = {
-			limit = { religion = buddhist }
-			add_trait = bhikkhuni
-		}
-		if = {
+		else_if = {
 			limit = { religion = hindu }
 			add_trait = sanyasini
 		}
@@ -13987,15 +13979,7 @@ add_ascetic_trait_effect = {
 			limit = { religion_group = christian }
 			add_trait = monk
 		}
-		if = {
-			limit = { religion = jain }
-			add_trait = muni
-		}
-		if = {
-			limit = { religion = buddhist }
-			add_trait = bhikkhu
-		}
-		if = {
+		else_if = {
 			limit = { religion = hindu }
 			add_trait = sanyasi
 		}
@@ -22258,57 +22242,6 @@ stable_attribute_improvement_effect = {
 					}
 				}
 			}
-		}
-	}
-}
-
-add_sympathy_for_religion_effect = {
-	if = {
-		limit = {
-			religion_group = christian
-		}
-		ROOT = {
-			add_trait = sympathy_christendom
-		}
-	}
-	else_if = {
-		limit = {
-			religion_group = indian_group
-		}
-		ROOT = {
-			add_trait = sympathy_indian
-		}
-	}
-	else_if = {
-		limit = {
-			religion_group = muslim
-		}
-		ROOT = {
-			add_trait = sympathy_islam
-		}
-	}
-	else_if = {
-		limit = {
-			religion_group = jewish_group
-		}
-		ROOT = {
-			add_trait = sympathy_judaism
-		}
-	}
-	else_if = {
-		limit = {
-			religion_group = pagan_group
-		}
-		ROOT = {
-			add_trait = sympathy_pagans
-		}
-	}
-	else_if = {
-		limit = {
-			religion_group = zoroastrian_group
-		}
-		ROOT = {
-			add_trait = sympathy_zoroastrianism
 		}
 	}
 }

@@ -194,3 +194,7 @@ held_pioneers_day_timer = {
 faction_pro_imperial_ultimatum_timer = {
 	icon = 3
 }
+
+jd_brazilian_regiment_timer = {
+	icon = 3
+}
