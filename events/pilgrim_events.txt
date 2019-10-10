@@ -607,6 +607,8 @@ character_event = {
 				limit = {
 						OR = {
 							is_title_active = d_knights_of_columbus
+							is_title_active = d_knights_of_john
+							is_title_active = d_knights_of_lazarus
 							is_title_active = d_lebanon_brethren
 							is_title_active = d_knights_of_peter_claver
 							is_title_active = d_national_cathedral
@@ -674,6 +676,8 @@ character_event = {
 				limit = {
 						OR = {
 							is_title_active = d_knights_of_columbus
+							is_title_active = d_knights_of_john
+							is_title_active = d_knights_of_lazarus
 							is_title_active = d_knights_of_peter_claver
 						}
 				}
@@ -738,6 +742,8 @@ character_event = {
 				limit = {
 						OR = {
 							is_title_active = d_knights_of_columbus
+							is_title_active = d_knights_of_john
+							is_title_active = d_knights_of_lazarus
 							is_title_active = d_lebanon_brethren
 							is_title_active = d_knights_of_peter_claver
 							is_title_active = d_national_cathedral
@@ -804,6 +810,8 @@ character_event = {
 				limit = {
 						OR = {
 							is_title_active = d_knights_of_columbus
+							is_title_active = d_knights_of_john
+							is_title_active = d_knights_of_lazarus
 							is_title_active = d_knights_of_peter_claver
 						}
 				}
@@ -869,6 +877,8 @@ character_event = {
 				limit = {
 						OR = {
 							is_title_active = d_knights_of_columbus
+							is_title_active = d_knights_of_john
+							is_title_active = d_knights_of_lazarus
 							is_title_active = d_lebanon_brethren
 							is_title_active = d_knights_of_peter_claver
 						}
@@ -934,6 +944,8 @@ character_event = {
 				limit = {
 						OR = {
 							is_title_active = d_knights_of_columbus
+							is_title_active = d_knights_of_john
+							is_title_active = d_knights_of_lazarus
 							is_title_active = d_knights_of_peter_claver
 						}
 				}
@@ -1635,6 +1647,29 @@ character_event = {
 				random_list = {
 					10 = {
 						trigger = { is_title_active = d_knights_of_columbus }
+						d_knights_of_columbus = {
+							holder_scope = {
+								save_event_target_as = scoped_grandmaster
+							}
+						}
+						character_event = { id = SoA.5081 }
+					}
+					5 = {
+						trigger = { is_title_active = d_knights_of_john }
+						d_knights_of_john = {
+							holder_scope = {
+								save_event_target_as = scoped_grandmaster
+							}
+						}
+						character_event = { id = SoA.5081 }
+					}
+					5 = {
+						trigger = { is_title_active = d_knights_of_lazarus }
+						d_knights_of_lazarus = {
+							holder_scope = {
+								save_event_target_as = scoped_grandmaster
+							}
+						}
 						character_event = { id = SoA.5081 }
 					}
 					10 = {
@@ -1652,6 +1687,29 @@ character_event = {
 				random_list = {
 					10 = {
 						trigger = { is_title_active = d_knights_of_columbus }
+						d_knights_of_columbus = {
+							holder_scope = {
+								save_event_target_as = scoped_grandmaster
+							}
+						}
+						character_event = { id = SoA.5081 }
+					}
+					5 = {
+						trigger = { is_title_active = d_knights_of_john }
+						d_knights_of_john = {
+							holder_scope = {
+								save_event_target_as = scoped_grandmaster
+							}
+						}
+						character_event = { id = SoA.5081 }
+					}
+					5 = {
+						trigger = { is_title_active = d_knights_of_lazarus }
+						d_knights_of_lazarus = {
+							holder_scope = {
+								save_event_target_as = scoped_grandmaster
+							}
+						}
 						character_event = { id = SoA.5081 }
 					}
 					10 = {
@@ -1799,28 +1857,34 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		d_knights_of_columbus = {
-			holder_scope = {
-				random_courtier = {
-					limit = {
-						prisoner = no
-						in_command = no
-						is_priest = no
-						age = 16
-						NOT = {
-							sibling = ROOT
-						}
-						NOT = {
-							is_friend = ROOT
-						}
-						NOT = {
-							is_rival = ROOT
-						}
-						NOT = { has_job_title = job_spiritual }
+		if = {
+			limit = {
+				NOT = { event_target:scoped_grandmaster = { always = yes } }
+			}
+			d_knights_of_columbus = {
+				holder_scope = { save_event_target_as = scoped_grandmaster }
+			}
+		}
+		event_target:scoped_grandmaster = {
+			random_courtier = {
+				limit = {
+					prisoner = no
+					in_command = no
+					is_priest = no
+					age = 16
+					NOT = {
+						is_close_relative = ROOT
 					}
-					add_friend = ROOT
-					character_event = { id = SoA.5086 }
+					NOT = {
+						is_friend = ROOT
+					}
+					NOT = {
+						is_rival = ROOT
+					}
+					NOT = { has_job_title = job_spiritual }
 				}
+				add_friend = ROOT
+				character_event = { id = SoA.5086 }
 			}
 		}
 	}
@@ -1846,7 +1910,7 @@ character_event = {
 						is_priest = no
 						age = 16
 						NOT = {
-							sibling = ROOT
+							is_close_relative = ROOT
 						}
 						NOT = {
 							is_friend = ROOT
@@ -1882,7 +1946,7 @@ character_event = {
 						is_priest = no
 						age = 16
 						NOT = {
-							sibling = ROOT
+							is_close_relative = ROOT
 						}
 						NOT = {
 							is_friend = ROOT
@@ -1920,7 +1984,7 @@ character_event = {
 							is_priest = no
 							age = 16
 							NOT = {
-								sibling = ROOT
+								is_close_relative = ROOT
 							}
 							NOT = {
 								is_friend = ROOT
@@ -1946,7 +2010,7 @@ character_event = {
 							is_priest = no
 							age = 16
 							NOT = {
-								sibling = ROOT
+								is_close_relative = ROOT
 							}
 							NOT = {
 								is_friend = ROOT
@@ -1983,7 +2047,7 @@ character_event = {
 						is_priest = no
 						age = 16
 						NOT = {
-							sibling = ROOT
+							is_close_relative = ROOT
 						}
 						NOT = {
 							is_friend = ROOT
@@ -2019,7 +2083,7 @@ character_event = {
 						is_priest = no
 						age = 16
 						NOT = {
-							sibling = ROOT
+							is_close_relative = ROOT
 						}
 						NOT = {
 							is_friend = ROOT
@@ -2050,13 +2114,12 @@ character_event = {
 			holder_scope = {
 				random_courtier = {
 					limit = {
-						is_female = no
 						prisoner = no
 						in_command = no
 						is_priest = no
 						age = 16
 						NOT = {
-							sibling = ROOT
+							is_close_relative = ROOT
 						}
 						NOT = {
 							is_friend = ROOT
