@@ -11250,7 +11250,7 @@ character_event = {
 			add_building = tp_shrine_washington
 		}
 		c_sable = {
-			holder_scope = { character_event = { id = ATE_WWW_DEBUG.3 days = 1 } }
+			holder_scope = { character_event = { id = ATE_WWW_DEBUG.3 } }
 		}
 		c_1788025 = {
 			if = {

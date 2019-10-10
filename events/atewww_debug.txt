@@ -81,6 +81,19 @@ character_event = {
 	}
 
 	option = {
+		if = {
+			limit = { ai = no }
+			set_global_flag = horse_player
+			random_playable_ruler = {
+				limit = { 
+					is_landed = yes
+					is_playable = yes
+					is_feudal = yes 
+					government = feudal_government
+				}
+				set_player_character = THIS
+			}
+		}
 		c_sable = {
 			location = { culture = horse }
 		}
@@ -91,7 +104,42 @@ character_event = {
 			set_graphical_culture = horse
 			culture = horse
 		}
+		create_character = {
+			random_traits = yes
+			culture = horse
+			race = horse
+			female = no
+			religion = brethren
+			dynasty = ROOT
+			trait = stubborn
+			trait = fair
+			trait = strong
+			martial = 5
+			diplomacy = 1
+			stewardship = 7
+			intrigue = 7
+			learning = 8
+			flag = historical_character
+		}
+		new_character = {
+			set_name = "Thomas"
+			ROOT = {
+				any_child_even_if_dead = {
+					set_father = PREVPREV
+				}
+				any_spouse = {
+					add_spouse = PREVPREV
+				}
+				abdicate_to = PREV
+			}
+			if = {
+				limit = { has_global_flag = horse_player }
+				set_player_character = THIS
+			}
+		}
+		death = yes
 		culture = horse
+		clr_global_flag = horse_player
 	}
 }
 

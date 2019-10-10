@@ -1193,3 +1193,96 @@
 		effect = { set_character_flag = historical_character }
 	}
 }
+
+2100220 = {
+	name = "Santiago"
+	dynasty = 2004024 #da Silva
+	culture = brazilian
+	religion = apostolic
+	martial = 7
+	diplomacy = 7
+	stewardship = 9
+	intrigue = 5
+	learning = 8
+	trait = midas_touched
+	trait = zealous
+	trait = quick
+	trait = strong
+	trait = greedy
+	trait = patient
+	trait = diligent
+	father = 2100221
+	2649.12.25={
+		birth=yes
+		effect = {
+			add_claim = d_leeward_antilles
+		}
+		effect = {add_artifact = soccer_ball}
+		effect = {add_artifact = jungle_knife}
+		effect = {add_artifact = brazilian_firearm}
+		effect = {add_artifact = brazilian_tapestry_grand}
+		effect = { set_character_flag = historical_character }
+	}
+}
+
+2100221 = {
+	name = "Eduardo"
+	dynasty = 2004024 #da Silva
+	culture = brazilian
+	religion = apostolic
+	trait = quick
+	father = 2100222
+	2601.9.24={
+		birth=yes
+	}
+	2663.12.1={
+		death=yes
+	}
+}
+
+2100222 = {
+	name = "Eduardo"
+	dynasty = 2004024 #da Silva
+	culture = brazilian
+	religion = apostolic
+	trait = strong
+	father = 2100223
+	2560.5.3={
+		birth=yes
+	}
+	2617.6.19={
+		death=yes
+	}
+}
+
+2100223 = {
+	name = "Santiago"
+	dynasty = 2004024 #da Silva
+	culture = brazilian
+	religion = apostolic
+	trait = strong
+	father = 2100224
+	2533.11.17={
+		birth=yes
+	}
+	2568.1.29={
+		death=yes
+	}
+}
+
+2100224 = {
+	name = "Afonso"
+	dynasty = 2004024 #da Silva
+	culture = brazilian
+	religion = apostolic
+	trait = quick
+	trait = strong
+	father = 2100009
+	trait = adventurer
+	2488.11.13={
+		birth=yes
+	}
+	2560.12.28={
+		death=yes
+	}
+}
