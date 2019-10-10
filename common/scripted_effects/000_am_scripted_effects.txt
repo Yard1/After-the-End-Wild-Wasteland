@@ -3564,6 +3564,7 @@ clean_up_after_leaving_society_effect = {
 		clr_character_flag = 4212_pranked_them_flag
 		remove_character_modifier = in_meditation
 		remove_character_modifier = doing_penance
+		remove_character_modifier = doing_teshuva
 		clr_character_flag = holy_seclusion_timer
 		clr_character_flag = holy_seclusion_struggled_with_vice
 		clr_character_flag = holy_seclusion_lustful

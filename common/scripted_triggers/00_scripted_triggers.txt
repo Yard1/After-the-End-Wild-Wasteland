@@ -4650,24 +4650,7 @@ can_be_asked_to_leave_court_trigger = {
 			limit = { has_dlc = "Reapers"}
 			in_seclusion = yes
 		}
-		custom_tooltip = {
-			text = is_inaccessible_tt
-			OR = {
-				has_character_flag = flag_holding_great_tribal_festival
-				trait = in_hiding
-				trait = on_hajj
-				trait = on_pilgrimage
-				trait = on_indian_pilgrimage
-				trait = kow_tow_travels
-				trait = travelling
-				trait = troubled_pregnancy
-				trait = pregnancy_finishing
-				has_character_modifier = mother_minor_rest
-				has_character_modifier = in_meditation
-				has_character_modifier = doing_penance
-				has_character_modifier = out_traveling
-			}
-		}
+		is_inaccessible_trigger = yes
 
 		#Special circumstances
 		custom_tooltip = {

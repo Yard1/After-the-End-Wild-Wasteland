@@ -90,7 +90,7 @@ character_event = {
 	only_capable = yes
 	trigger = {
 		OR = {
-			has_gender_equality_trigger = yes
+			gender_equality_trigger = yes
 			is_female = no
 		}
 		in_command = no
@@ -99,7 +99,7 @@ character_event = {
 			age = 9
 			OR = {
 				is_female = no
-				has_gender_equality_trigger = yes
+				gender_equality_trigger = yes
 			}
 			guardian = {
 				has_character_flag = hero_knight
@@ -115,7 +115,7 @@ character_event = {
 				age = 9
 				OR = {
 					is_female = no
-					has_gender_equality_trigger = yes
+					gender_equality_trigger = yes
 				}
 				guardian = {
 					has_character_flag = hero_knight
