@@ -188,8 +188,14 @@ vassalize_st_ursulas_chosen_desc;As a long-standing ally of the St. Ursula's Cho
 hire_ursuline_honor_guard;Hire an Ursuline Honor Guard;Embaucher une garde d'honneur teutonique;Deutsche Ehrenwache anheuern;;Contrata una guardia de honor de caballeros teutónicos;;;;;x
 hire_ursuline_honor_guard_desc;As a long-standing ally of the St. Ursula's Chosen, we can hire a part of the Order as honor guards temporarily.;Puisque nous sommes un allié de longue date des Chevaliers teutoniques, nous pouvons engager temporairement une partie de l'Ordre en tant que gardes d'honneur.;Als langjährige Verbündete des Deutschen Ordens können wir vorübergehend einen Teil ihrer Ehrengarde anheuern.;;Como aliados fieles de los Caballeros teutónicos, podemos contratar temporalmente una parte de la orden como guardia de honor.;;;;;x
 
+d_knights_of_john;Knights of St. John;;;;;;;;;;;;;x
+d_knights_of_john_adj;Hospitaller;;;;;;;;;;;;;x
+
+d_knights_of_lazarus;Knights of St. Lazarus;;;;;;;;;;;;;x
+d_knights_of_lazarus_adj;Lazarian;;;;;;;;;;;;;x
+
 EVTNAME_KoJ_creation;The Knights of St. John;;;;;;;;;;;;;x
-EVTDESC_KoC_creation;In these turbulent times the Pope in New Rome has decided to revive an ancient brotherhood established in the time of first crusades. An antediluvian organization has been hereby re-established and will now take up the sword for the defense of Christendom once again.;;;;;;;;;;;;;x
+EVTDESC_KoJ_creation;In these turbulent times the Pope in New Rome has decided to revive an ancient brotherhood established in the time of first crusades. An antediluvian organization has been hereby re-established and will now take up the sword for the defense of Christendom once again.;;;;;;;;;;;;;x
 EVTOPTA_KoJ_creation;Pro Fide Pro Utilitate Hominum.;;;;;;;;;;;;;x
 EVTOPTB_KoJ_creation;We will be wary in the future.;;;;;;;;;;;;;x
 EVTOPTC_KoJ_creation;They're no use to us.;;;;;;;;;;;;;x

@@ -6307,8 +6307,10 @@ narrative_event = {
 		activate_title = { title = d_knights_of_john status = yes }
 		create_random_soldier = {
 			dynasty = none
+			female = no
 			random_traits = yes
 			religion = ROOT
+			culture = beltway
 		}
 		new_character = {
 			character_event = { id = misc.3 } # Diversity
@@ -6390,8 +6392,10 @@ narrative_event = {
 		activate_title = { title = d_knights_of_lazarus status = yes }
 		create_random_soldier = {
 			dynasty = none
+			female = no
 			random_traits = yes
 			religion = ROOT
+			culture = gulfard
 		}
 		new_character = {
 			character_event = { id = misc.3 } # Diversity
