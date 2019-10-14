@@ -12,6 +12,7 @@ TITLE_GAINED_RELIGIOUS_SETUP;New Cardinal appointed.;Nouveau cardinal nommé;Neue
 TITLE_GAINED_RELIGIOUS_LETTER;$NEWHOLDER$ was given a seat in the [GetConclaveName].;$NEWHOLDER$ a reçu un siège au Collège des cardinaux.;$NEWHOLDER$ wurde ins Kardinalskollegium berufen.;;$NEWHOLDER$ ha obtenido un asiento en el Colegio Cardenalicio.;;;;;;;;;x
 TITLE_GAINED_RELIGIOUS_LOG;$NEWHOLDER$ was given a seat in the [GetConclaveName].;$NEWHOLDER$ a reçu un siège au Collège des cardinaux.;$NEWHOLDER$ wurde ins Kardinalskollegium berufen.;;$NEWHOLDER$ ha obtenido un asiento en el Colegio Cardenalicio.;;;;;;;;;x
 
+jain;Pacifist;jaïne;Jainistisch;;Jaina;;;;;;;;;x
 ROADMEN;Roadmen;;;;;;;;;;;;;x
 PRIEST_PLURAL;[This.GetPriest]s;;;;;;;;;;;;;x
 monetarist_opinion;[monetarist.GetName] Opinion;;;;;;;;;;;;;x

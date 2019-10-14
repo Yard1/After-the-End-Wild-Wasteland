@@ -29,9 +29,9 @@ narrative_event = {
 		}
 		NOT = { has_global_flag = consumerist_revolt_ongoing }
 		any_realm_province = {
-			owner = {
-				ai = yes
-			}
+			#owner = {
+			#	ai = yes
+			#}
 			kingdom = {
 				OR = {
 					has_holder = no
@@ -96,9 +96,9 @@ narrative_event = {
 		
 		random_realm_province = {
 			limit = {
-				owner = {
-					ai = yes
-				}
+				#owner = {
+				#	ai = yes
+				#}
 				kingdom = {
 					OR = {
 						has_holder = no

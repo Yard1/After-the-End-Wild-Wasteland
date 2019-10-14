@@ -282,12 +282,14 @@ feudal_governments = {
 		can_imprison_without_reason = no
 		can_revoke_without_reason = no
 		dukes_called_kings = yes
-		barons_need_dynasty = yes
+		barons_need_dynasty = no
 		can_usurp_kingdoms_and_empires = no
 		can_grant_kingdoms_and_empires_to_other_government = no
 		can_be_granted_kingdoms_and_empires_by_other_government = no
 		can_inherit = no
 		free_retract_vassalage = yes
+		## Modifiers
+		court_size_modifier = 10
 
 		unit_modifier = {		
 			garrison_size = 0.1			
