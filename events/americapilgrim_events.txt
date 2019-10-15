@@ -169,24 +169,24 @@ narrative_event = {
 					}
 				}
 				random_list = {
-					10 = { trigger = { NOT = { has_character_flag = pilgrim_carriage } } character_event = { id = SoA.5026 days = 5 random = 9 } } # List for longer journeys only
-					10 = {  character_event = { id = SoA.5027 days = 5 random = 9 } }
-					10 = {  narrative_event = { id = SoA.5028 days = 5 random = 9 } }
-					10 = { trigger = { NOT = { has_character_flag = pilgrim_bodyguards } } character_event = { id = SoA.5029 days = 5 random = 9 } }
-					10 = {  character_event = { id = SoA.5030 days = 5 random = 9 } }
+					10 = { trigger = { NOT = { has_character_flag = pilgrim_carriage } } character_event = { id = SoA.5026 days = 5 random = 18 } } # List for longer journeys only
+					10 = {  character_event = { id = SoA.5027 days = 5 random = 18 } }
+					10 = {  narrative_event = { id = SoA.5028 days = 5 random = 18 } }
+					10 = { trigger = { NOT = { has_character_flag = pilgrim_bodyguards } } character_event = { id = SoA.5029 days = 5 random = 18 } }
+					10 = {  character_event = { id = SoA.5030 days = 5 random = 18 } }
 				}
 			}
 	
 			random_list = {
-				10 = {  character_event = { id = SoA.5031 days = 15 random = 7 } } # List that is always checked
-				10 = {  character_event = { id = SoA.5032 days = 15 random = 7 } }
-				10 = {  narrative_event = { id = SoA.5033 days = 15 random = 7 } }
-				10 = {  character_event = { trigger = { NOT = { has_character_flag = pilgrim_carriage } } id = SoA.5034 days = 15 random = 7 } }
-				10 = {  character_event = { id = SoA.5035 days = 15 random = 7 } }
-				10 = {  character_event = { id = SoA.5036 days = 15 random = 7 } }
-				10 = {  character_event = { trigger = { NOT = { has_character_flag = pilgrim_carriage } } id = SoA.5037 days = 15 random = 7 } }
-				10 = {  character_event = { id = SoA.5038 days = 15 random = 7 } }
-				10 = {  character_event = { id = SoA.5039 days = 15 random = 7 } }
+				10 = {  character_event = { id = SoA.5031 days = 15 random = 14 } } # List that is always checked
+				10 = {  character_event = { id = SoA.5032 days = 15 random = 14 } }
+				10 = {  narrative_event = { id = SoA.5033 days = 15 random = 14 } }
+				10 = {  character_event = { trigger = { NOT = { has_character_flag = pilgrim_carriage } } id = SoA.5034 days = 15 random = 14 } }
+				10 = {  character_event = { id = SoA.5035 days = 15 random = 14 } }
+				10 = {  character_event = { id = SoA.5036 days = 15 random = 14 } }
+				10 = {  character_event = { trigger = { NOT = { has_character_flag = pilgrim_carriage } } id = SoA.5037 days = 15 random = 14 } }
+				10 = {  character_event = { id = SoA.5038 days = 15 random = 14 } }
+				10 = {  character_event = { id = SoA.5039 days = 15 random = 14 } }
 			}
 		}
 	}
