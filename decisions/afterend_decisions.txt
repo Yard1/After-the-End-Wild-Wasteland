@@ -71,9 +71,7 @@ decisions = {
 			is_ruler = yes
 			age = 16
 			block_general_event_trigger = no
-			religion_openly_rust_cultist_or_heresy_trigger = yes
-			NOT = { trait = on_pilgrimage }
-			NOT = { trait = travelling }
+			can_do_salvage = yes
 			NOT = { has_character_modifier = recent_salvage }
 			NOT = { has_character_modifier = preparing_expedition }
 			NOT = { #immersion-breaking

@@ -2214,7 +2214,7 @@ pacific = {
 		character_modifier = {
 			martial = 1
 			learning = 1
-			cult_of_marx_opinion = -50
+			cult_of_marx_opinion = -25
 		}
 	}
 }

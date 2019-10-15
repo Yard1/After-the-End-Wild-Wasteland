@@ -609,3 +609,10 @@ has_astrology = {
 		has_religion_feature = religion_astrology
 	}	
 }
+
+can_do_salvage = {
+	OR = {
+		religion_openly_rust_cultist_or_heresy_trigger = yes
+		religion = nousthreskeia
+	}
+}

@@ -7,6 +7,7 @@ EVTDESCancrel.0020;You have sent out summons to all of your vassals for the divi
 falling_star_FEATURES;\n§Y*§! Are adherents of the ancient practice of Astrology.;;;;;;;;;;;;;x
 revelationist_reformed_FEATURES;§Y*§! Upon reaching adulthood, Revelationist characters may test their faith by handling a live snake.;;;;;;;;;;;;;x
 revelationist_FEATURES;§Y*§! Upon reaching adulthood, Revelationist characters may test their faith by handling a live snake.;;;;;;;;;;;;;x
+nousthreskeia_FEATURES;§Y*§! May undertake journeys to seek & salvage old world technology.;;;;;;;;;;;;;x
 
 TITLE_GAINED_RELIGIOUS_SETUP;New Cardinal appointed.;Nouveau cardinal nommé;Neuer Kardinal ernannt;;Nuevo cardenal nombrado.;;;;;;;;;x
 TITLE_GAINED_RELIGIOUS_LETTER;$NEWHOLDER$ was given a seat in the [GetConclaveName].;$NEWHOLDER$ a reçu un siège au Collège des cardinaux.;$NEWHOLDER$ wurde ins Kardinalskollegium berufen.;;$NEWHOLDER$ ha obtenido un asiento en el Colegio Cardenalicio.;;;;;;;;;x

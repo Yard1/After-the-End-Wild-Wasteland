@@ -565,13 +565,13 @@ narrative_event = {
 		OR = {
 			AND = {
 				trait = on_pilgrimage
-				religion_openly_rust_cultist_or_heresy_trigger = yes
+				can_do_salvage = yes
 			}
 			has_character_flag = discover_salvage
 		}
 		NAND = {
 			trait = on_pilgrimage
-			religion_openly_rust_cultist_or_heresy_trigger = yes
+			can_do_salvage = yes
 		}
 		NOT = { trait = kow_tow_travels }
 		NOT = { trait = travelling }
@@ -1186,7 +1186,7 @@ narrative_event = {
 	option = {
 		name = EVTOPT_salvage_study_donate
 		trigger = {
-			religion_openly_rust_cultist_or_heresy_trigger = yes
+			can_do_salvage = yes
 		}
 		piety = 50
 		religion_authority = { modifier = donated_tech_prize }
@@ -1208,7 +1208,7 @@ narrative_event = {
 	picture = GFX_evt_pilgrims_epic_journey
 	
 	trigger = {
-		religion_openly_rust_cultist_or_heresy_trigger = yes
+		can_do_salvage = yes
 		trait = on_pilgrimage
 	}
 
@@ -1230,7 +1230,7 @@ narrative_event = {
 	picture = GFX_evt_pilgrims_epic_journey
 
 	trigger = {
-		religion_openly_rust_cultist_or_heresy_trigger = yes
+		can_do_salvage = yes
 		trait = on_pilgrimage
 	}
 
@@ -1273,7 +1273,7 @@ narrative_event = {
 	picture = GFX_evt_pilgrims_epic_journey
 
 	trigger = {
-		religion_openly_rust_cultist_or_heresy_trigger = yes
+		can_do_salvage = yes
 		trait = on_pilgrimage
 	}
 
@@ -1349,7 +1349,7 @@ narrative_event = {
 	picture = GFX_evt_pilgrims_epic_journey
 
 	trigger = {
-		religion_openly_rust_cultist_or_heresy_trigger = yes
+		can_do_salvage = yes
 		trait = on_pilgrimage
 	}
 
