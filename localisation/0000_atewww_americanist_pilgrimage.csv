@@ -45,3 +45,5 @@ EVTDESC_pilgrim_claimwashington;[FromFrom.GetTitledFirstName] of [Root.GetCurren
 EVTDESC_pilgrim_claimrichmond;[FromFrom.GetTitledFirstName] of [Root.GetCurrentAmericanistPilgrimageCity] has violated sacred law by refusing me entrance during my pilgrimage. By ancient rights, I may now claim the city if I choose.;;;;;;;;;;;;;x
 
 EVTDESC_pilgrim_anycity;[FromFrom.GetTitledFirstName] of [Root.GetCurrentAmericanistPilgrimageCity] has violated sacred law by refusing me entrance during my pilgrimage. By ancient rights, I may now claim the city if I choose.;;;;;;;;;;;;;x
+
+EVTDESC_SoA_5026;The rain has been pouring down for days, it's almost impossible to travel the roads. Why does [Root.Religion.GetHighGodName] punish the faithful pilgrims so?;Il pleut depuis des jours et les routes sont presque impraticables. Pourquoi le bon Dieu punit-il ainsi ses pèlerins ?;Es schüttet seit Tagen, die Straßen sind fast unpassierbar! Warum bestraft der Herr seine treuen Pilger auf diese Weise?;;Ha estado lloviendo durante días, es casi imposible recorrer los caminos. ¿Por qué castiga el Señor a sus fieles peregrinos de este modo?;;;;;;;;;x
