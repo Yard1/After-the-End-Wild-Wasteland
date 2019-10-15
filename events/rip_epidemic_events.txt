@@ -854,6 +854,10 @@ character_event = { #you decide what to do
 		prestige = -100
 			scaled_wealth = 2
 			banish_religion = jewish
+			hidden_tooltip = {
+				banish_religion = reform
+				banish_religion = meshichist
+			}
 			add_trait = arbitrary
 			if = {
 				limit = { has_character_modifier = borrowed_from_jews }

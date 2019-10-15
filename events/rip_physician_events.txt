@@ -130,20 +130,10 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							remove_trait = temperate
 							remove_trait = scholar
 							remove_trait = mystic
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								5 = { 
-									religion = reform
-								}
-								5 = { 
-									religion = meshichist
-								}
-							}
 							random_list = { # Is the Physician a Quack?
 								90 = {
 								}
@@ -201,17 +191,11 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							remove_trait = temperate
 							remove_trait = scholar
 							remove_trait = mystic
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								10 = { 
-									religion = reform
-								}
-							}
+							new_character_chance_to_become_heretic = yes
 							random_list = { # Is the Physician a Quack?
 								90 = {
 								}
@@ -269,17 +253,11 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							remove_trait = temperate
 							remove_trait = scholar
 							remove_trait = mystic
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								10 = { 
-									religion = reform
-								}
-							}
+							new_character_chance_to_become_heretic = yes
 							random_list = { # Is the Physician a Quack?
 								90 = {
 								}
@@ -527,6 +505,7 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							remove_trait = charitable
 							remove_trait = mystic
 							remove_trait = scholar
@@ -551,17 +530,6 @@ character_event = {
 								}
 								50 = {
 									
-								}
-							}
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								5 = { 
-									religion = reform
-								}
-								5 = { 
-									religion = meshichist
 								}
 							}
 							random_list = { # Is the Physician a Quack?
@@ -618,6 +586,7 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							remove_trait = charitable
 							remove_trait = mystic
 							remove_trait = scholar
@@ -644,14 +613,7 @@ character_event = {
 									
 								}
 							}
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								10 = { 
-									religion = reform
-								}
-							}
+							new_character_chance_to_become_heretic = yes
 							random_list = { # Is the Physician a Quack?
 								90 = {
 								}
@@ -706,6 +668,7 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							remove_trait = charitable
 							remove_trait = mystic
 							remove_trait = scholar
@@ -732,14 +695,7 @@ character_event = {
 									
 								}
 							}
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								10 = { 
-									religion = reform
-								}
-							}
+							new_character_chance_to_become_heretic = yes
 							random_list = { # Is the Physician a Quack?
 								90 = {
 								}
@@ -797,6 +753,7 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							remove_trait = charitable
 							remove_trait = scholar
 							remove_trait = socializer
@@ -820,17 +777,6 @@ character_event = {
 								}
 								50 = {
 									
-								}
-							}
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								5 = { 
-									religion = reform
-								}
-								5 = { 
-									religion = meshichist
 								}
 							}
 							random_list = { # Is the Physician a Quack?
@@ -887,6 +833,7 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							remove_trait = charitable
 							remove_trait = scholar
 							remove_trait = socializer
@@ -912,14 +859,7 @@ character_event = {
 									
 								}
 							}
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								10 = { 
-									religion = reform
-								}
-							}
+							new_character_chance_to_become_heretic = yes
 							random_list = { # Is the Physician a Quack?
 								90 = {
 								}
@@ -974,6 +914,7 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							remove_trait = charitable
 							remove_trait = scholar
 							remove_trait = socializer
@@ -999,14 +940,7 @@ character_event = {
 									
 								}
 							}
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								10 = { 
-									religion = reform
-								}
-							}
+							new_character_chance_to_become_heretic = yes
 							random_list = { # Is the Physician a Quack?
 								90 = {
 								}
@@ -1155,6 +1089,7 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							set_character_flag = no_court_invites
 							remove_trait = scholar
 							remove_trait = socializer
@@ -1171,17 +1106,7 @@ character_event = {
 							remove_trait = seducer
 							remove_trait = seductress
 							remove_trait = theologian
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								5 = { 
-									religion = reform
-								}
-								5 = { 
-									religion = meshichist
-								}
-							}
+							new_character_chance_to_become_heretic = yes
 							random_list = { # Is the Physician a Quack?
 								80 = {
 								}
@@ -1239,6 +1164,7 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							set_character_flag = no_court_invites
 							remove_trait = scholar
 							remove_trait = socializer
@@ -1255,17 +1181,7 @@ character_event = {
 							remove_trait = seducer
 							remove_trait = seductress
 							remove_trait = theologian
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								5 = { 
-									religion = reform
-								}
-								5 = { 
-									religion = meshichist
-								}
-							}
+							new_character_chance_to_become_heretic = yes
 							random_list = { # Is the Physician a Quack?
 								80 = {
 								}
@@ -1323,6 +1239,7 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							set_character_flag = no_court_invites
 							remove_trait = scholar
 							remove_trait = socializer
@@ -1339,14 +1256,7 @@ character_event = {
 							remove_trait = seducer
 							remove_trait = seductress
 							remove_trait = theologian
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								10 = { 
-									religion = reform
-								}
-							}
+							new_character_chance_to_become_heretic = yes
 							random_list = { # Is the Physician a Quack?
 								80 = {
 								}
@@ -2459,6 +2369,7 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							set_character_flag = no_court_invites
 							remove_trait = scholar
 							remove_trait = socializer
@@ -2476,17 +2387,7 @@ character_event = {
 							remove_trait = seductress
 							remove_trait = theologian
 							give_nickname = nick_the_blind
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								5 = { 
-									religion = reform
-								}
-								5 = { 
-									religion = meshichist
-								}
-							}
+							new_character_chance_to_become_heretic = yes
 							random_list = { # Is the Physician a Quack?
 								90 = {
 								}
@@ -2544,6 +2445,7 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							set_character_flag = no_court_invites
 							remove_trait = scholar
 							remove_trait = socializer
@@ -2561,14 +2463,7 @@ character_event = {
 							remove_trait = seductress
 							remove_trait = theologian
 							give_nickname = nick_the_blind
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								10 = { 
-									religion = reform
-								}
-							}
+							new_character_chance_to_become_heretic = yes
 							random_list = { # Is the Physician a Quack?
 								90 = {
 								}
@@ -2626,6 +2521,7 @@ character_event = {
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
 							character_event = { id = misc.4 } # Physique
+							new_character_chance_to_become_heretic = yes
 							set_character_flag = no_court_invites
 							remove_trait = scholar
 							remove_trait = socializer
@@ -2643,14 +2539,7 @@ character_event = {
 							remove_trait = seductress
 							remove_trait = theologian
 							give_nickname = nick_the_blind
-							random_list = { # Randomize Religion
-								90 = { 
-									religion = jewish
-								}
-								10 = { 
-									religion = reform
-								}
-							}
+							new_character_chance_to_become_heretic = yes
 							random_list = { # Is the Physician a Quack?
 								90 = {
 								}

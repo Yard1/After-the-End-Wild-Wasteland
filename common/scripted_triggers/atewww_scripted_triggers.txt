@@ -421,7 +421,6 @@ does_not_care_about_homosexuality = {
 	OR = {
 		religion = thelemic
 		religion = thelemic_reformed
-		religion = neognostic
 		AND = {
 			is_female = yes
 			OR = {
@@ -435,6 +434,8 @@ does_not_care_about_homosexuality = {
 religion_supports_adoption = { #anyone can adopt, but those guys don't take penalties
 	OR = {
 		matriarchal_religion = yes
+		religion = neognostic
+		religion = chrome_cultist
 		#add more
 	}
 }

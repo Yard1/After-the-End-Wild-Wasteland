@@ -739,6 +739,10 @@ character_event = {
 					culture_group = south_anglo 
 					culture_group = north_atlantic
 				}
+				NOR = {
+					culture = newfie
+					culture = maritimer
+				}
 			}
 		}
 		modifier = {

@@ -267,12 +267,13 @@ character_event = {
 		modifier = {
 			factor = 3.0
 			has_job_action = action_inquisition
-			OR = {
-				religion = sacred_heart
-				religion = gracia_divina
-			}
+			religion_group = cult_of_saints
 			location = {
-				NOT = { religion_group = cult_of_saints }
+				NOR = {
+					religion_group = cult_of_saints
+					religion_group = pagan_group
+					religion_group = mesoamerican_gods
+				}
 			}
 		}
 		# Gaians and Cetics have trouble converting most religious groups
@@ -295,7 +296,35 @@ character_event = {
 				}
 			}
 		}
+
+		modifier = {
+			factor = 3.5
+			has_job_action = action_inquisition
+			religion_group = jewish_group
+			location = {
+				NOR = {
+					religion_group = jewish_group
+					culture = yiddish
+					culture = neoladino
+					culture = sheban
+				}
+			}
+		}
 		
+		modifier = {
+			factor = 3.5
+			has_job_action = action_inquisition
+			NOT = { religion_group = jewish_group }
+			location = {
+				religion_group = jewish_group
+				OR = {
+					culture = yiddish
+					culture = neoladino
+					culture = sheban
+				}
+			}
+		}
+
 		modifier = {
 			factor = 3.0
 			has_job_action = action_inquisition

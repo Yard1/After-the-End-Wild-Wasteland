@@ -766,6 +766,10 @@ decisions = {
 			prestige = -100
 			scaled_wealth = 2
 			banish_religion = jewish
+			hidden_tooltip = {
+				banish_religion = reform
+				banish_religion = meshichist
+			}
 			if = {
 				limit = { trait = sympathy_judaism }
 				remove_trait = sympathy_judaism

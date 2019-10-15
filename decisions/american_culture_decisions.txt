@@ -36,7 +36,11 @@ decisions = {
 						}
 						if = {
 							limit = { 
-								culture = north_atlantic
+								OR = { culture_group = north_atlantic culture_group = south_anglo }
+								NOR = {
+									culture = newfie
+									culture = maritimer
+								}
 								NOT = { distance = { where = 63 distance = 100 } } 
 							}
 							random = { 
@@ -46,7 +50,11 @@ decisions = {
 						}
 						if = {
 							limit = { 
-								culture_group = north_atlantic
+								OR = { culture_group = north_atlantic culture_group = south_anglo }
+								NOR = {
+									culture = newfie
+									culture = maritimer
+								}
 								NOT = { distance = { where = 63 distance = 200 } } 
 							}
 							random = { 
@@ -56,7 +64,11 @@ decisions = {
 						}
 						if = {
 							limit = { 
-								culture_group = north_atlantic
+								OR = { culture_group = north_atlantic culture_group = south_anglo }
+								NOR = {
+									culture = newfie
+									culture = maritimer
+								}
 								NOT = { distance = { where = 63 distance = 400 } } 
 							}
 							random = { 
@@ -129,7 +141,11 @@ decisions = {
 			NOT = { culture = american }
 			OR = { 
 				culture_group = south_anglo 
-				culture_group = north_atlantic
+				OR = { culture_group = north_atlantic culture_group = south_anglo }
+			}
+			NOR = {
+				culture = newfie
+				culture = maritimer
 			}
 			NOT = { government = chinese_imperial_government }
 			has_global_flag = flag_started_american_renaissance
@@ -142,7 +158,11 @@ decisions = {
 			#show_only_failed_conditions = yes
 			OR = { 
 				culture_group = south_anglo 
-				culture_group = north_atlantic
+				OR = { culture_group = north_atlantic culture_group = south_anglo }
+			}
+			NOR = {
+				culture = newfie
+				culture = maritimer
 			}
 		}
 		effect = {
@@ -164,7 +184,11 @@ decisions = {
 						}
 						if = {
 							limit = { 
-								culture = north_atlantic
+								OR = { culture_group = north_atlantic culture_group = south_anglo }
+								NOR = {
+									culture = newfie
+									culture = maritimer
+								}
 								capital_scope = { NOT = { distance = { where = PREV distance = 100 } } } 
 							}
 							random = { 
@@ -174,7 +198,11 @@ decisions = {
 						}
 						if = {
 							limit = { 
-								culture_group = north_atlantic
+								OR = { culture_group = north_atlantic culture_group = south_anglo }
+								NOR = {
+									culture = newfie
+									culture = maritimer
+								}
 								capital_scope = { NOT = { distance = { where = PREV distance = 200 } } } 
 							}
 							random = { 
@@ -184,7 +212,11 @@ decisions = {
 						}
 						if = {
 							limit = { 
-								culture_group = north_atlantic
+								OR = { culture_group = north_atlantic culture_group = south_anglo }
+								NOR = {
+									culture = newfie
+									culture = maritimer
+								}
 								capital_scope = { NOT = { distance = { where = PREV distance = 400 } } } 
 							}
 							random = { 

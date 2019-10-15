@@ -508,6 +508,7 @@ decisions = {
 			OR = {
 				religion = jewish
 				religion = reform
+				religion = meshichist
 			}
 			is_heretic = no
 			

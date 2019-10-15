@@ -176,6 +176,18 @@ character_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
+				factor = 219 #fuckit
+				culture = american
+			}
+			modifier = {
+				factor = 25
+				culture = canadian
+			}
+			modifier = {
+				factor = 0
+				culture = ontarois
+			}
+			modifier = {
 				factor = 0
 				culture = gael_dubh
 			}
@@ -787,7 +799,19 @@ character_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 50
+				factor = 115
+				culture = american
+			}
+			modifier = {
+				factor = 41
+				culture = canadian
+			}
+			modifier = {
+				factor = 5
+				culture = ontarois
+			}
+			modifier = {
+				factor = 80
 				culture = gael_dubh
 			}
 			modifier = {
@@ -1397,6 +1421,18 @@ character_event = {
 	option = {
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 76
+				culture = american
+			}
+			modifier = {
+				factor = 49
+				culture = canadian
+			}
+			modifier = {
+				factor = 5
+				culture = ontarois
+			}
 			modifier = {
 				factor = 0
 				culture = gael_dubh
@@ -2009,6 +2045,18 @@ character_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
+				factor = 9
+				culture = american
+			}
+			modifier = {
+				factor = 135
+				culture = canadian
+			}
+			modifier = {
+				factor = 5
+				culture = ontarois
+			}
+			modifier = {
 				factor = 0
 				culture = gael_dubh
 			}
@@ -2619,6 +2667,18 @@ character_event = {
 	option = {
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 18
+				culture = american
+			}
+			modifier = {
+				factor = 71
+				culture = canadian
+			}
+			modifier = {
+				factor = 5
+				culture = ontarois
+			}
 			modifier = {
 				factor = 0
 				culture = gael_dubh
@@ -3232,6 +3292,18 @@ character_event = {
 			factor = 1
 			modifier = {
 				factor = 0
+				culture = american
+			}
+			modifier = {
+				factor = 0
+				culture = canadian
+			}
+			modifier = {
+				factor = 0
+				culture = ontarois
+			}
+			modifier = {
+				factor = 0
 				culture = gael_dubh
 			}
 			modifier = {
@@ -3838,7 +3910,19 @@ character_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 40
+				factor = 54
+				culture = american
+			}
+			modifier = {
+				factor = 203
+				culture = canadian
+			}
+			modifier = {
+				factor = 0
+				culture = ontarois
+			}
+			modifier = {
+				factor = 15
 				culture = gael_dubh
 			}
 			modifier = {
@@ -4450,6 +4534,18 @@ character_event = {
 			factor = 1
 			modifier = {
 				factor = 0
+				culture = american
+			}
+			modifier = {
+				factor = 0
+				culture = canadian
+			}
+			modifier = {
+				factor = 0
+				culture = ontarois
+			}
+			modifier = {
+				factor = 0
 				culture = gael_dubh
 			}
 			modifier = {
@@ -5056,8 +5152,20 @@ character_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
+				factor = 58
+				culture = american
+			}
+			modifier = {
+				factor = 0
+				culture = canadian
+			}
+			modifier = {
 				factor = 0
 				culture = gael_dubh
+			}
+			modifier = {
+				factor = 0
+				culture = ontarois
 			}
 			modifier = {
 				factor = 0
@@ -5666,6 +5774,18 @@ character_event = {
 	option = {
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 4
+				culture = american
+			}
+			modifier = {
+				factor = 19
+				culture = canadian
+			}
+			modifier = {
+				factor = 2
+				culture = ontarois
+			}
 			modifier = {
 				factor = 0
 				culture = gael_dubh
@@ -6277,6 +6397,18 @@ character_event = {
 	option = {
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 4
+				culture = american
+			}
+			modifier = {
+				factor = 4
+				culture = canadian
+			}
+			modifier = {
+				factor = 0
+				culture = ontarois
+			}
 			modifier = {
 				factor = 0
 				culture = gael_dubh
@@ -6890,6 +7022,18 @@ character_event = {
 			factor = 1
 			modifier = {
 				factor = 0
+				culture = american
+			}
+			modifier = {
+				factor = 19
+				culture = canadian
+			}
+			modifier = {
+				factor = 0
+				culture = ontarois
+			}
+			modifier = {
+				factor = 0
 				culture = gael_dubh
 			}
 			modifier = {
@@ -7501,6 +7645,18 @@ character_event = {
 			factor = 1
 			modifier = {
 				factor = 0
+				culture = american
+			}
+			modifier = {
+				factor = 43
+				culture = canadian
+			}
+			modifier = {
+				factor = 2
+				culture = ontarois
+			}
+			modifier = {
+				factor = 0
 				culture = gael_dubh
 			}
 			modifier = {
@@ -8095,7 +8251,19 @@ character_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 10
+				factor = 389
+				culture = american
+			}
+			modifier = {
+				factor = 151
+				culture = canadian
+			}
+			modifier = {
+				factor = 22
+				culture = ontarois
+			}
+			modifier = {
+				factor = 5
 				culture = gael_dubh
 			}
 			modifier = {
@@ -8701,6 +8869,18 @@ character_event = {
 	option = {
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 4
+				culture = american
+			}
+			modifier = {
+				factor = 0
+				culture = canadian
+			}
+			modifier = {
+				factor = 0
+				culture = ontarois
+			}
 			modifier = {
 				factor = 0
 				culture = gael_dubh
@@ -9313,6 +9493,18 @@ character_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
+				factor = 38
+				culture = american
+			}
+			modifier = {
+				factor = 11
+				culture = canadian
+			}
+			modifier = {
+				factor = 4
+				culture = ontarois
+			}
+			modifier = {
 				factor = 0
 				culture = gael_dubh
 			}
@@ -9923,6 +10115,18 @@ character_event = {
 	option = {
 		ai_chance = {
 			factor = 1
+			modifier = {
+				factor = 12
+				culture = american
+			}
+			modifier = {
+				factor = 229
+				culture = canadian
+			}
+			modifier = {
+				factor = 51
+				culture = ontarois
+			}
 			modifier = {
 				factor = 0
 				culture = gael_dubh

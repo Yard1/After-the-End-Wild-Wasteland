@@ -4724,6 +4724,10 @@ character_event = {
     option = {      
         name = EVTOPTB_HFP_42322
 		banish_religion = jewish
+		hidden_tooltip = {
+			banish_religion = reform
+			banish_religion = meshichist
+		}
 		if = {
 			limit = { trait = sympathy_judaism }
 			remove_trait = sympathy_judaism

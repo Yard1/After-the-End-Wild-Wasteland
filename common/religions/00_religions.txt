@@ -4229,7 +4229,6 @@ jewish_group = {
 		allow_rivermovement = yes
 		priests_can_marry = yes
 		priests_can_inherit = yes
-		hard_to_convert = yes
 		
 		religious_clothing_head = 7
 		religious_clothing_priest = 7
@@ -4303,7 +4302,6 @@ jewish_group = {
 		allow_rivermovement = yes
 		priests_can_marry = yes
 		priests_can_inherit = yes
-		hard_to_convert = yes
 
 		religious_clothing_head = 7
 		religious_clothing_priest = 7
