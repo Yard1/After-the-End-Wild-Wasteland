@@ -418,10 +418,17 @@ religion_openly_gaian_or_heresy_trigger = {
 }
 
 does_not_care_about_homosexuality = {
-	is_female = yes
 	OR = {
-		religion = gaian
-		religion = amazonian
+		religion = thelemic
+		religion = thelemic_reformed
+		religion = neognostic
+		AND = {
+			is_female = yes
+			OR = {
+				religion = gaian
+				religion = amazonian
+			}
+		}
 	}
 }
 

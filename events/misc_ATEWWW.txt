@@ -38,6 +38,16 @@ character_event = {
 				}
 				random = {
 					chance = 10
+					modifier = {
+						factor = 5
+						FROMFROM = {
+							holy_order = yes
+						}
+						OR = {
+							religion = gaian
+							religion = amazonian
+						}
+					}
 					add_trait = homosexual
 				}
 			}
