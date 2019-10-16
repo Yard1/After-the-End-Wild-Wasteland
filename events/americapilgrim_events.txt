@@ -181,10 +181,10 @@ narrative_event = {
 				10 = {  character_event = { id = SoA.5031 days = 15 random = 14 } } # List that is always checked
 				10 = {  character_event = { id = SoA.5032 days = 15 random = 14 } }
 				10 = {  narrative_event = { id = SoA.5033 days = 15 random = 14 } }
-				10 = {  character_event = { trigger = { NOT = { has_character_flag = pilgrim_carriage } } id = SoA.5034 days = 15 random = 14 } }
+				10 = { trigger = { NOT = { has_character_flag = pilgrim_carriage } } character_event = { id = SoA.5034 days = 15 random = 14 } }
 				10 = {  character_event = { id = SoA.5035 days = 15 random = 14 } }
 				10 = {  character_event = { id = SoA.5036 days = 15 random = 14 } }
-				10 = {  character_event = { trigger = { NOT = { has_character_flag = pilgrim_carriage } } id = SoA.5037 days = 15 random = 14 } }
+				10 = { trigger = { NOT = { has_character_flag = pilgrim_carriage } } character_event = { id = SoA.5037 days = 15 random = 14 } }
 				10 = {  character_event = { id = SoA.5038 days = 15 random = 14 } }
 				10 = {  character_event = { id = SoA.5039 days = 15 random = 14 } }
 			}

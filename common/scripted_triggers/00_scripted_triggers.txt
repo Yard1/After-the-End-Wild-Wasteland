@@ -1761,6 +1761,7 @@ gender_equality_trigger_rebellion = {
 }
 
 male_can_hold_minor_title_trigger = {
+	is_adult = yes
 	trigger_if = {
 		limit = {
 			NOT = {
@@ -1784,6 +1785,7 @@ male_can_hold_minor_title_trigger = {
 }
 
 female_can_hold_minor_title_trigger = {
+	is_adult = yes
 	trigger_if = {
 		limit = {
 			NOT = {
@@ -8788,6 +8790,7 @@ can_still_be_marshal_byzantine_trigger = {
 
 ###AtE-Specific TRIGGERS###
 warrior_trigger = {
+	pacifist = no
 	OR = {
 		AND = {
 			is_female = yes
@@ -8819,7 +8822,8 @@ warrior_trigger = {
 				martial = 20
 			}
 		}
-		
+		trait = shieldmaiden
+		trait = heresiarch
 		trait = adventurer
 		trait = viking
 		trait = duelist

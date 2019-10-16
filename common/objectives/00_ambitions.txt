@@ -642,7 +642,12 @@ obj_become_paragon_of_virtue = {
 	type = character
 	
 	potential = {
-		NOT = { religion_group = indian_group }
+		NOR = {
+			religion_group = pacific
+			religion = neognostic
+			religion = chrome_cultist
+			religion_group = indian_group
+		}
 	}
 	
 	allow = {

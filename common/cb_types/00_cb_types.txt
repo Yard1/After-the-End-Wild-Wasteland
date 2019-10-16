@@ -3756,10 +3756,15 @@ crusade = {
 	on_add = {
 		hidden_tooltip = { 
 			fire_haruspicy_event_effect = yes 
-			ROOT = {
-				religion_scope = {
-					clr_flag = crusade_fired
-					set_flag = crusade_fired
+			if = {
+				limit = {
+					has_game_rule = { name = holy_war_cooldown_rule value = off }
+				}
+				ROOT = {
+					religion_scope = {
+						clr_flag = crusade_fired
+						set_flag = crusade_fired
+					}
 				}
 			}
 		}
@@ -4867,10 +4872,15 @@ new_crusade = {
 	on_add = {
 		hidden_tooltip = {
 			fire_haruspicy_event_effect = yes
-			ROOT = {
-				religion_scope = {
-					clr_flag = crusade_fired
-					set_flag = crusade_fired
+			if = {
+				limit = {
+					has_game_rule = { name = holy_war_cooldown_rule value = off }
+				}
+				ROOT = {
+					religion_scope = {
+						clr_flag = crusade_fired
+						set_flag = crusade_fired
+					}
 				}
 			}
 		}
@@ -6262,6 +6272,7 @@ religious = {
 		ROOT = {
 			if = {
 				limit = {
+					NOT = { religion = cult_of_marx }
 					NOT = { has_character_flag = the_prophet }
 					has_game_rule = { name = holy_war_cooldown_rule value = on }
 				}
@@ -10502,12 +10513,7 @@ pagan_subjugation = {
 					is_reformed_religion = no
 				}
 				AND = {
-					OR = {
-						religion = midewiwin
-						religion = raven_tales
-						religion = uahomche
-						religion = rust_cultist
-					}
+					pacifist = no
 					is_tribal = yes
 				}
 			}
@@ -10577,65 +10583,12 @@ pagan_subjugation = {
 			}
 			AND = {
 				ROOT = {
-					OR = {
-						religion = midewiwin
-						religion = raven_tales
-					}
+					pacifist = no
 				}
 				FROM = {
 					in_revolt = no
 					is_nomadic = no
-					AND = {
-						OR = {
-							religion = midewiwin
-							religion = raven_tales
-						}
-						is_tribal = yes
-					}
-					NOT = {
-						any_war = {
-							defender = { character = PREVPREV }
-							OR = {
-								using_cb = pagan_subjugation
-								using_cb = nomad_subjugation
-							}
-						}
-					}
-				}
-			}
-			AND = {
-				ROOT = {
-					religion = uahomche
-				}
-				FROM = {
-					in_revolt = no
-					is_nomadic = no
-					AND = {
-						religion = uahomche
-						is_tribal = yes
-					}
-					NOT = {
-						any_war = {
-							defender = { character = PREVPREV }
-							OR = {
-								using_cb = pagan_subjugation
-								using_cb = nomad_subjugation
-							}
-						}
-					}
-				}
-			}
-			AND = {
-				ROOT = {
-					religion = rust_cultist
-				}
-				FROM = {
-					in_revolt = no
-					is_nomadic = no
-					AND = {
-						religion = rust_cultist
-						is_tribal = yes
-					}
+					is_tribal = yes
 					NOT = {
 						any_war = {
 							defender = { character = PREVPREV }
@@ -12082,6 +12035,7 @@ pagan_holy_war = { #
 		ROOT = {
 			if = {
 				limit = {
+					NOT = { religion = cult_of_marx }
 					has_game_rule = { name = holy_war_cooldown_rule value = on }
 				}
 				custom_tooltip = {
@@ -16087,7 +16041,10 @@ cb_liberate_nomad_duchy = {
 		}
 		ROOT = {
 			is_nomadic = no
-			NOT = { pacifist = yes }
+			OR = {
+				pacifist = no
+				trait = pagan_branch_3
+			}
 			NOT = { same_realm = FROM }
 			mercenary = no
 		}
@@ -16158,13 +16115,17 @@ cb_liberate_nomad_duchy = {
 		}
 		ROOT = {
 			is_nomadic = no
-			NOT = { pacifist = yes }
+			OR = {
+				pacifist = no
+				trait = pagan_branch_3
+			}
 			NOT = { same_realm = FROM }
 			mercenary = no
 		}
 	}
 
 	on_add = {
+		pacifists_lose_big_piety_effect = yes
 		hidden_tooltip = { fire_haruspicy_event_effect = yes }
 		if = {
 			limit = { defender = { is_offmap_governor = offmap_china } }

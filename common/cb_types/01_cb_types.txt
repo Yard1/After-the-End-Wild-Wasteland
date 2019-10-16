@@ -461,11 +461,15 @@ force_vassalization = { # New2
 		}
 		ROOT = {
 			NOT = { trait = figurehead }
-			pacifist = no
+			OR = {
+				pacifist = no
+				trait = pagan_branch_3
+			}
 		}
 	}
 	
 	on_add = {
+		pacifists_lose_big_piety_effect = yes
 		FROM = {
 			if = {
 				limit = {
@@ -678,7 +682,10 @@ great_realm_conflict = { # New3
 			prestige = 3000
 			piety = 1500
 			NOT = { trait = figurehead }
-			pacifist = no
+			OR = {
+				pacifist = no
+				trait = pagan_branch_3
+			}
 		}
 		FROM = {
 			relative_power = {
@@ -689,6 +696,7 @@ great_realm_conflict = { # New3
 	}
 	
 	on_add = {
+		pacifists_lose_big_piety_effect = yes
 		ROOT = {
 			prestige = -3000
 			piety = -1500
@@ -1592,6 +1600,7 @@ liberate_religion = { # New6
 					}
 				}
 			}
+			pacifists_lose_big_piety_effect = yes
 			piety = -200
 		}
 		hidden_tooltip = {
@@ -1653,7 +1662,10 @@ liberate_religion = { # New6
 			}
 			is_nomadic = no
 			mercenary = no
-			NOT = { pacifist = yes }
+			OR = {
+				pacifist = no
+				trait = pagan_branch_3
+			}
 			NOT = { same_realm = FROM }
 			NOT = { religion = FROM }
 			top_liege = {
@@ -1770,7 +1782,10 @@ liberate_religion = { # New6
 
 	is_valid = {
 		ROOT = {
-			NOT = { pacifist = yes }
+			OR = {
+				pacifist = no
+				trait = pagan_branch_3
+			}
 			NOT = { same_realm = FROM }
 			NOT = { religion = FROM }
 			top_liege = {
@@ -2291,7 +2306,10 @@ unjust_conquest = { # New7
 				scaled_wealth = { value = 1.0 min = 400 }
 			}
 			NOT = { trait = figurehead }
-			pacifist = no
+			OR = {
+				pacifist = no
+				trait = pagan_branch_3
+			}
 		}
 	}
 	
@@ -2419,6 +2437,8 @@ unjust_conquest = { # New7
 				piety = -200
 				scaled_wealth = { value = -1.0 min = -100 }
 			}
+
+			pacifists_lose_big_piety_effect = yes
 						
 			if = { # Opinion hit for same religion
 				limit = {
@@ -2571,7 +2591,10 @@ unjust_conquest = { # New7
 			}
 			NOT = { is_liege_or_above = FROM }
 			mercenary = no
-			NOT = { pacifist = yes }
+			OR = {
+				pacifist = no
+				trait = pagan_branch_3
+			}
 			is_nomadic = no # Use the 'pagan_county_conquest' CB instead
 			#NOT = {
 			#	religion_group = muslim # Use 'muslim_county_conquest' instead

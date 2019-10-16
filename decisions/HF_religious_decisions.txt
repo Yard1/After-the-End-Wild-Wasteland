@@ -30,7 +30,7 @@ targetted_decisions = {
 			prisoner = yes
 			OR = {
 				is_female = no
-				NOT = { religion = amazonian }
+				FROM = { NOT = { religion = amazonian } }
 			}
 			host = { character = FROM }
 		}

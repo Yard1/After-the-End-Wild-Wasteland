@@ -24,7 +24,7 @@ narrative_event = {
 		}		
 		OR = {
 			NOT = {
-					realm_size = 120
+				realm_size = 120
 			}
 			AND = {
 				NOT = {
@@ -66,19 +66,18 @@ narrative_event = {
 				primary_title = {
 					title = e_china_west_governor
 				}
-				offmap_power = offmap_china
+				is_offmap_ruler = yes
 			}
 		}
 		primary_title = {
 			is_titular = yes
 			temporary = no
 		}
-	
-	}	
+	}
 	immediate = {
 		ROOT = {
 			primary_title = {
-				destroy_landed_title = yes
+				destroy_landed_title = THIS
 			}
 			prestige = -500
 		}
@@ -157,7 +156,7 @@ narrative_event = {
 	}
 	immediate = {
 		primary_title = {
-			destroy_landed_title = yes
+			destroy_landed_title = THIS
 		}
 		prestige = -500
 	}	

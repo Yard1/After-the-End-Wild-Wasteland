@@ -684,9 +684,9 @@ decisions = {
 			always = no
 		}
 		ai_will_do = {
-			factor = 0.05
+			factor = 0.03
 			modifier = {
-				factor = 10
+				factor = 12
 				trait = homosexual
 			}
 			modifier = {
@@ -694,7 +694,7 @@ decisions = {
 				trait = celibate
 			}
 			modifier = {
-				factor = 6
+				factor = 8
 				religion = amazonian
 			}
 			modifier = {

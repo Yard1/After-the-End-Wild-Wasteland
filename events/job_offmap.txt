@@ -1119,6 +1119,20 @@ character_event = {
 	immediate = {
 		if = {
 			limit = {
+				matriarchal_religion = yes
+			}
+			create_random_soldier = {
+				random_traits = yes
+				dynasty = none
+				female = yes
+				attributes = {
+					martial = 10
+				}
+				flag = keep_male
+			}
+		}
+		else_if = {
+			limit = {
 				gender_equality_trigger = yes
 			}
 			create_random_soldier = {
@@ -1128,19 +1142,7 @@ character_event = {
 				attributes = {
 					martial = 10
 				}
-			}
-		}
-		else_if = {
-			limit = {
-				matriarchal_religion = yes
-			}
-			create_random_soldier = {
-				random_traits = yes
-				dynasty = none
-				female = 90
-				attributes = {
-					martial = 10
-				}
+				flag = keep_male
 			}
 		}
 		else = {
@@ -1151,6 +1153,7 @@ character_event = {
 				attributes = {
 					martial = 10
 				}
+				flag = keep_male
 			}
 		}
 		new_character = {

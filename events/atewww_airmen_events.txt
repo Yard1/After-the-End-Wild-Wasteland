@@ -429,15 +429,9 @@ narrative_event = {
 		name = EVTOPTB200 # No concern of ours
 		trigger = {
 			NOT = {
-				new_character = {
-					character = event_target:airmen_destroyer
-				}
+				character = event_target:airmen_destroyer
 			}
 			NOT = { religion = ROOT }
-			new_character = {
-				NOT = { religion = PREV }
-				NOT = { character = PREV }
-			}
 		}
 	}
 	option = {
@@ -451,10 +445,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTE200 # Terrible News!
 		trigger = {
-			OR = {
-				character = event_target:airmen_destroyer
-				NOT = { religion = PREV }
-			}
+			character = event_target:airmen_destroyer
 		}
 	}
 }

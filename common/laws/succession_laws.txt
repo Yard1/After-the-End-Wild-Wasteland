@@ -421,7 +421,7 @@ succession_laws = {
 		}
 		default_selection = {
 			modifier = {
-				factor = 10
+				factor = 100
 				holder_scope = {
 					OR = {
 						religion_group = american_native
@@ -1261,6 +1261,7 @@ succession_laws = {
 						culture = maritimer
 						culture = newfie
 						culture = carpetbagger
+						culture = gael_dubh
 						AND = {
 							religion_openly_gaian_or_heresy_trigger = yes
 							is_tribal = no
@@ -1333,6 +1334,13 @@ succession_laws = {
 			succession = {
 				base_type = tanistry
 				voting_rules = tanistry
+			}
+		}
+		default_selection = {
+			modifier = {
+				factor = 5
+				is_feudal = yes
+				religion = gaian
 			}
 		}
 		revoke_allowed = {
@@ -1578,6 +1586,12 @@ succession_laws = {
 		}
 		effect = {
 			succession = turkish_succession
+		}
+		default_selection = {
+			modifier = {
+				factor = 0.01
+				religion = gaian
+			}
 		}
 		revoke_allowed = {
 			always = no

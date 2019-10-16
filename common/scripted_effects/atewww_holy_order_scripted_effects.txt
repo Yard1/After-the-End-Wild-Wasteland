@@ -259,3 +259,13 @@ new_character_chance_to_become_heretic = {
 		become_heretic = yes
 	}
 }
+
+pacifists_lose_big_piety_effect = {
+	if = {
+		limit = {
+			pacifist = yes
+		}
+		piety = -200
+		custom_tooltip = { text = pacifist_alt_tooltip }
+	}
+}

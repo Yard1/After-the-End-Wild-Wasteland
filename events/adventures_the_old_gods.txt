@@ -33,7 +33,10 @@ character_event = {
 
 		OR = {
 			warrior_trigger = yes
-			is_female = no
+			AND = {
+				is_female = no
+				matriarchal_religion = no
+			}
 			gender_equality_trigger = yes
 			liege = { has_law = true_cognatic_succession }
 			has_game_rule = {
@@ -913,8 +916,10 @@ character_event = {
 		NOT = { any_spouse = { is_ruler = yes } }
 
 		OR = {
-			is_female = no
-			liege = { has_law = status_of_women_4 }
+			AND = {
+				is_female = no
+				matriarchal_religion = no
+			}
 			liege = { has_law = true_cognatic_succession }
 			gender_equality_trigger = yes
 			has_game_rule = {

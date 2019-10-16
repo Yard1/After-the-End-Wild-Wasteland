@@ -441,7 +441,7 @@ secret_religious_society_amazonian;[GetReligiousCommunityName_amazonian];[GetRel
 secret_religious_society_REAL_amazonian;The Daughters of Diana;;;;;;;;;;;;x
 alt_start_community_name_amazonian;The [amazonian.GetName] Faithful;;;;;;;;;;;;;x
 secret_religious_society_amazonian_desc;[GetReligiousSocietyDesc_amazonian];[GetReligiousSocietyDesc_amazonian];[GetReligiousSocietyDesc_amazonian];;[GetReligiousSocietyDesc_amazonian];;;;;;;;;x
-secret_religious_society_amazonian_desc_REAL;Diana's faithful are forced to live in secret, and their beliefs have been deemed radical and disruptive by an oppressive and destructive society. Although they are forced to participate in this society, true Themysciraians continue to live simple lives and tell others about Diana's grace in secret. Hopefully,  soon they will realize the extend of the Patriarchy's bondage..;;;;;;;;;x
+secret_religious_society_amazonian_desc_REAL;Diana's faithful are forced to live in secret, and their beliefs have been deemed radical and disruptive by an oppressive and destructive society. Although they are forced to participate in this society, true Themysciraians continue to live simple lives and tell others about Diana's grace in secret. Hopefully, soon others will realize the extend of the Patriarchy's bondage...;;;;;;;;;x
 secretly_convert_to_amazonian_holy_site;Secretly Convert to Themysciraian;;;;;;;;;;;;;x
 secretly_convert_to_amazonian_holy_site_desc;The §YThemysciraian§! pilgrims that flock to the holy site in §Y[Root.Location.GetName]§! impress me with the depth and passion of their faith. I am tempted to convert in secrecy...;;;;;;;;;;;;;x
 secret_religious_society_amazonian_currency;Devotion;Dévotion;Hingabe;;Devoción;;;;;;;;;x
@@ -484,6 +484,8 @@ EVTOPTB_WOL_520_MAT;Give her a tumble and I'll have the most loyal bodyguard eve
 EVTDESC_ATE_WWW_RELIGION_29;After a long search, a young [adopted_child.GetBoyGirl] by the name of [adopted_child.GetFirstName] has been found who might make for an ideal candidate. Your councillors tell you [adopted_child.GetSheHe] comes from an orphanage in [adopted_province.GetName], [adopted_child.GetHerHis] parents both killed recently. Although a bit grimy and shy, you feel the child might make a good ruler one day, provided [adopted_child.GetSheHe] is cleaned up and raised properly.;;;;;;;;;;;;;x
 EVTOPTA_ATE_WWW_RELIGION_29;I suppose [adopted_child.GetSheHe] will do.;;;;;;;;;;;;;x
 EVTOPTB_ATE_WWW_RELIGION_29;I have changed my mind.;;;;;;;;;;;;;x
+
+EVTDESC401_MAT;I am surely with child...;Célibataire et enceinte... Le sort s'acharne contre moi !;Unverheiratet und schwanger ... Das Schicksal hat mich verflucht!;;Soltera y preñada... ¡El destino me ha maldecido!;;;;;;;;;x
 
 adoption_decision_unlock_tooltip;Allows to §YAdopt a Heir§! if there are no suitable children of your blood to inherit;;;;;;;;;;;;;x
 
@@ -620,26 +622,26 @@ empire_rust_cultist_reformed;Autarchy;;;;;;;;;;;;;x
 
 exovedate_opinion;[exovedate.GetName] Opinion;;;;;;;;;;;;;x
 
-secret_religious_society_Exovedate;[GetReligiousCommunityName_Exovedate];[GetReligiousCommunityName_Exovedate];[GetReligiousCommunityName_Exovedate];;[GetReligiousCommunityName_Exovedate];;;;;;;;;x
-secret_religious_society_REAL_Exovedate;The Followers of Riel;Pure Laine;;;;;;;;;;;;;x
-alt_start_community_name_Exovedate;The [Exovedate.GetName] Faithful;;;;;;;;;;;;;x
-secret_religious_society_Exovedate_desc;[GetReligiousSocietyDesc_Exovedate];[GetReligiousSocietyDesc_Exovedate];[GetReligiousSocietyDesc_Exovedate];;[GetReligiousSocietyDesc_Exovedate];;;;;;;;;x
-secret_religious_society_Exovedate_desc_REAL;Ever since its humble roots, Christians have marked themselves by their refusal to abandon their faith in the face of persecution. So it is that a rich tradition of martyrs and underground parishes can give hope to groups of believers in even the darkest of times, no matter what they are outwardly forced to profess. To each other they can profess their true faith in God, and their God is love.;;;;;;;;x
-secretly_convert_to_Exovedate_holy_site;Secretly Convert to Exovedate;;;;;;;;;;;;;x
-secretly_convert_to_Exovedate_holy_site_desc;The §YExovedate§! pilgrims that flock to the holy site in §Y[Root.Location.GetName]§! impress me with the depth and passion of their faith. I am tempted to convert in secrecy...;;;;;;;;;;;;;x
-secret_religious_society_Exovedate_currency;Devotion;Dévotion;Hingabe;;Devoción;;;;;;;;;x
-secret_religious_society_Exovedate_rank_1_female;Faithful;Fidèle;Getreue;;Fiel;;;;x
-secret_religious_society_Exovedate_rank_2_female;Adherent;Adhérente;Anhängerin;;Seguidora;;;;x
-secret_religious_society_Exovedate_rank_3_female;Preacher;Prêcheuse;Predigerin;;Predicadora;;;;x
-secret_religious_society_Exovedate_rank_4_female;Herald;Messagère;Herold;;Mensajera;;;;x
-secret_religious_society_Exovedate_rank_1_male;Faithful;Fidèle;Getreuer;;Fiel;;;;x
-secret_religious_society_Exovedate_rank_2_male;Adherent;Adhérent;Anhänger;;Seguidor;;;;x
-secret_religious_society_Exovedate_rank_3_male;Preacher;Prêcheur;Prediger;;Predicador;;;;x
-secret_religious_society_Exovedate_rank_4_male;Herald;Messager;Herold;;Mensajero;;;;x
-secret_religious_community_Exovedate;Secret Exovedate Community;;;;;;;;;;;;;x
-secret_Exovedate_community;Secret Exovedate Community;;;;;;;;;;;;;x
-secret_Exovedate_community_desc;In secret, Exovedate faithful have organized themselves as a community in this province. From there it converts others, grows, and protects their own.;En secret, les fidèles se sont organisés en tant que communauté dans cette province. De là, la commaunauté convertit d'autres personnes, grandit et protège les siens.;;;;;;;;;;;;x
-secret_religious_society_Exovedate_leader_desc;The High Priest, leading the international effort of bringing more people into the fold.;Le grand prêtre dirige l'effort mondial visant à réunir davantage de personnes dans les rangs de sa société.;Der Hohepriester des $SOCIETY|Y$-Zirkels, der die internationalen Bemühungen leitet, mehr Menschen in den Schoß der Familie zu führen.;;El Sumo sacerdote, que dirige la misión a escala internacional para atraer a más fieles.;;;;;;;;;x
+secret_religious_society_exovedate;[GetReligiousCommunityName_exovedate];[GetReligiousCommunityName_exovedate];[GetReligiousCommunityName_exovedate];;[GetReligiousCommunityName_exovedate];;;;;;;;;x
+secret_religious_society_REAL_exovedate;The Followers of Riel;Pure Laine;;;;;;;;;;;;;x
+alt_start_community_name_exovedate;The [Exovedate.GetName] Faithful;;;;;;;;;;;;;x
+secret_religious_society_exovedate_desc;[GetReligiousSocietyDesc_exovedate];[GetReligiousSocietyDesc_exovedate];[GetReligiousSocietyDesc_exovedate];;[GetReligiousSocietyDesc_exovedate];;;;;;;;;x
+secret_religious_society_exovedate_desc_REAL;Ever since its humble roots, Christians have marked themselves by their refusal to abandon their faith in the face of persecution. So it is that a rich tradition of martyrs and underground parishes can give hope to groups of believers in even the darkest of times, no matter what they are outwardly forced to profess. To each other they can profess their true faith in God, and their God is love.;;;;;;;;x
+secretly_convert_to_exovedate_holy_site;Secretly Convert to Exovedate;;;;;;;;;;;;;x
+secretly_convert_to_exovedate_holy_site_desc;The §YExovedate§! pilgrims that flock to the holy site in §Y[Root.Location.GetName]§! impress me with the depth and passion of their faith. I am tempted to convert in secrecy...;;;;;;;;;;;;;x
+secret_religious_society_exovedate_currency;Devotion;Dévotion;Hingabe;;Devoción;;;;;;;;;x
+secret_religious_society_exovedate_rank_1_female;Faithful;Fidèle;Getreue;;Fiel;;;;x
+secret_religious_society_exovedate_rank_2_female;Adherent;Adhérente;Anhängerin;;Seguidora;;;;x
+secret_religious_society_exovedate_rank_3_female;Preacher;Prêcheuse;Predigerin;;Predicadora;;;;x
+secret_religious_society_exovedate_rank_4_female;Herald;Messagère;Herold;;Mensajera;;;;x
+secret_religious_society_exovedate_rank_1_male;Faithful;Fidèle;Getreuer;;Fiel;;;;x
+secret_religious_society_exovedate_rank_2_male;Adherent;Adhérent;Anhänger;;Seguidor;;;;x
+secret_religious_society_exovedate_rank_3_male;Preacher;Prêcheur;Prediger;;Predicador;;;;x
+secret_religious_society_exovedate_rank_4_male;Herald;Messager;Herold;;Mensajero;;;;x
+secret_religious_community_exovedate;Secret Exovedate Community;;;;;;;;;;;;;x
+secret_exovedate_community;Secret Exovedate Community;;;;;;;;;;;;;x
+secret_exovedate_community_desc;In secret, Exovedate faithful have organized themselves as a community in this province. From there it converts others, grows, and protects their own.;En secret, les fidèles se sont organisés en tant que communauté dans cette province. De là, la commaunauté convertit d'autres personnes, grandit et protège les siens.;;;;;;;;;;;;x
+secret_religious_society_exovedate_leader_desc;The High Priest, leading the international effort of bringing more people into the fold.;Le grand prêtre dirige l'effort mondial visant à réunir davantage de personnes dans les rangs de sa société.;Der Hohepriester des $SOCIETY|Y$-Zirkels, der die internationalen Bemühungen leitet, mehr Menschen in den Schoß der Familie zu führen.;;El Sumo sacerdote, que dirige la misión a escala internacional para atraer a más fieles.;;;;;;;;;x
 
 GOD_RIEL;Riel;;;;;;;;;;;;;x
 

@@ -1066,6 +1066,13 @@ defined_text = {
 			true_religion_gaian_trigger = yes
 		}
 	}
+
+	text = {
+		localisation_key = String_Amazonian
+		trigger = {
+			true_religion_amazonian_trigger = yes
+		}
+	}
 	
 	text = {
 		localisation_key = String_Cetic
@@ -6369,6 +6376,15 @@ defined_text = {
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_REAL_gaian
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_amazonian
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_amazonian
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_amazonian
 	}
 }
 defined_text = {

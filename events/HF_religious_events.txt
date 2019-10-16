@@ -11538,6 +11538,7 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = { 
+		log = "HF.23701: [Root.GetBestName], [Root.Religion.GetName], [FromFrom.GetName]"
 		if = {
 			limit = { 
 				ROOT = { 
@@ -11548,7 +11549,7 @@ character_event = {
 					}
 				}
 			}
-			FROMFROM = { 
+			FROMFROM = {
 				if = {
 					limit = { ROOT = { is_female = no } }
 					add_law = {
@@ -11569,22 +11570,22 @@ character_event = {
 					cooldown = no
 					opinion_effect = no
 				}
-				if = { 
+				if = {
 					limit = { 
-						NOR = { 
+						NOT = { 
 							has_law = succ_byzantine_elective 
-							has_law = succ_eldership
-							has_law = succ_tanistry
-							has_law = succ_turkish_succession 
 						}
-						OR = { 
-							is_feudal = yes 
-							is_tribal = yes
-							is_nomadic = yes
+						ROOT = {
+							OR = { 
+								is_feudal = yes 
+								is_tribal = yes
+								is_nomadic = yes
+							}
 						}
 					}
 					if = {
 						limit = { is_law_potential = succ_eldership }
+						log = "HF.23701: [FromFrom.GetName] eldership"
 						add_law = {
 							law = succ_eldership
 							cooldown = no
@@ -11593,6 +11594,7 @@ character_event = {
 					}
 					else_if = {
 						limit = { is_law_potential = succ_tanistry }
+						log = "HF.23701: [FromFrom.GetName] tanistry"
 						add_law = {
 							law = succ_tanistry
 							cooldown = no
@@ -11600,6 +11602,7 @@ character_event = {
 						}
 					}
 					else = {
+						log = "HF.23701: [FromFrom.GetName] open"
 						add_law = {
 							law = succ_turkish_succession
 							cooldown = no
@@ -11633,10 +11636,12 @@ character_event = {
 				if = { 
 					limit = {  
 						NOT = { has_law = succ_byzantine_elective }
-						OR = { 
-							is_feudal = yes 
-							is_tribal = yes
-							is_nomadic = yes
+						ROOT = {
+							OR = { 
+								is_feudal = yes 
+								is_tribal = yes
+								is_nomadic = yes
+							}
 						}
 					}
 					add_law = {
@@ -11665,10 +11670,12 @@ character_event = {
 				if = { 
 					limit = { 
 						NOT = { has_law = succ_byzantine_elective }
-						OR = { 
-							is_feudal = yes 
-							is_tribal = yes
-							is_nomadic = yes
+						ROOT = {
+							OR = { 
+								is_feudal = yes 
+								is_tribal = yes
+								is_nomadic = yes
+							}
 						}
 					}
 					add_law = {
