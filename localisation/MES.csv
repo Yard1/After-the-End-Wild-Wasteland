@@ -1,0 +1,21 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x,,,
+mend_ursuline_schism;Mend the Ursuline Schism;;;;;;;;;;;;;x,,,
+mend_ursuline_schism_desc;The Ursuline Schism saw the Catholic Church divided, but if all of the major Catholic sees could be restored under our rule and the Ursuline faith, there may be a chance to finally reconnect with New Rome.;;;;;;;;;;;;;x,
+mend_catholic_ursuline_schism;Mend the Ursuline Schism;;;;;;;;;;;;;x,,,
+mend_catholic_ursuline_schism_desc;The Ursuline Schism saw the Catholic Church divided, but if all of the major Ursuline sees could be restored under our rule and the Catholic faith, there may be a chance to finally reunite the Catholic faith once more.;;;;;;;;;;;;;x,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+EVTTOOLTIPMES.1;The Ursuline Schism is mended and the Catholic Church reunited.;;;;;;;;;;;;;x,,,
+EVTTOOLTIPMES.2;The Ursuline Schism is mended and the Catholic Church reunited.;;;;;;;;;;;;;x,,,
+EVTNAMEMES.1;The Ursuline Schism Mended;;;;;;;;;;;;;x,,,
+EVTDESCMES.1;At last the Ursuline Schism within the Catholic Church has been mended. With the spread of the [Root.Religion.GetName] faith and the reunification of the sees of Peter and Agrippine, including the vital episcopal see of New Rome, the Catholic faith now holds little sway over true Christians. There will be those who still foolishly cling to it, but they will be few in number and the Abbess-General can once more claim universal rule over Catholic Christendom.;;;;;;;;;;;;;x
+EVTDESCMES.11;At last the Ursuline Schism within the Catholic Church has been mended. With the spread of the [From.Religion.GetName] faith and the reunification of the sees of Peter and Agrippine, including the vital episcopal see of New Rome, the Catholic faith now holds little sway over true Christians. There will be those who still doggedly cling to it, but they will be few in number and the Abbess-General can once more claim universal rule over Catholic Christendom.;;;;;;;;;;;;;x
+EVTNAMEMES.2;The Ursuline Schism Mended;;;;;;;;;;;;;x,,,
+EVTDESCMES.2;At last the Ursuline Schism within the Catholic Church has been mended. With the spread of the [Root.Religion.GetName] faith and the reunification of the sees of Peter and Agrippine, including the vital episcopal see of Quebec, the Ursuline faith now holds little sway over true Christians. There will be those who foolishly still cling to it, but they will be few in number and the true Pope can once more claim universal rule over Catholic Christendom.;;;;;;;;;;;;;x
+EVTDESCMES.21;At last the Ursuline Schism within the Catholic Church has been mended. With the spread of the [From.Religion.GetName] faith and the reunification of the sees of Peter and Agrippine, including the vital episcopal see of Quebec, the Ursuline faith now holds little sway over true Christians. There will be those who foolishly still cling to it, but they will be few in number and the true Pope can once more claim universal rule over Eastern Christendom.;;;;;;;;;;;;;x

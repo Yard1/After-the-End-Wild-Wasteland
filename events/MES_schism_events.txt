@@ -1,0 +1,173 @@
+#######################################
+#
+# MES Schism Events
+#
+# Event ID ID LoR.200 - LoR.399 reserved
+#
+#######################################
+
+namespace = MES
+
+### The Pentarchy
+
+### Schism Mended
+
+# The Ursuline Schism Mended
+narrative_event = {
+	id = MES.1
+	title = EVTNAMEMES.1
+	desc = EVTDESCMES.1
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTALoR.200
+
+		set_parent_religion = { religion = catholic parent = ROOT }
+
+		set_global_flag = ursuline_schism_mended
+		give_nickname = nick_the_saint
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					religion = catholic
+					controls_religion = no
+				}
+				narrative_event = { id = MES.11 }
+			}
+		}
+	}
+}
+
+# Convert or Not?
+narrative_event = {
+	id = MES.11
+	title = EVTNAMEMES.1
+	desc = EVTDESCMES.11
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = EVTOPTALoR.211
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
+		religion = FROM
+		any_courtier = {
+			limit = {
+				religion = catholic
+				liege = { character = ROOT }
+			}
+			religion = FROM
+		}
+		capital_scope = {
+			religion = FROM
+		}
+	}
+	option = { # No
+		name = EVTOPTBLoR.211
+		ai_chance = { 
+			factor = 40
+			modifier = {
+				factor = 1.2
+				trait = content
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 0.5
+				trait = trusting
+			}
+		}
+	}
+}
+
+# The Catholic_Ursuline Schism Mended
+narrative_event = {
+	id = MES.2
+	title = EVTNAMEMES.2
+	desc = EVTDESCMES.2
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTALoR.200
+
+		set_parent_religion = { religion = ursuline parent = ROOT }
+
+		set_global_flag = catholic_ursuline_schism_mended
+		give_nickname = nick_the_saint
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					religion = ursuline
+					controls_religion = no
+				}
+				narrative_event = { id = MES.21 }
+			}
+		}
+	}
+}
+
+# Convert or Not?
+narrative_event = {
+	id = MES.21
+	title = EVTNAMEMES.2
+	desc = EVTDESCMES.21
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = EVTOPTALoR.211
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+		}
+		religion = FROM
+		any_courtier = {
+			limit = {
+				religion = ursuline
+				liege = { character = ROOT }
+			}
+			religion = FROM
+		}
+		capital_scope = {
+			religion = FROM
+		}
+	}
+	option = { # No
+		name = EVTOPTBLoR.211
+		ai_chance = { 
+			factor = 40
+			modifier = {
+				factor = 1.2
+				trait = content
+			}
+			modifier = {
+				factor = 0.5
+				trait = humble
+			}
+			modifier = {
+				factor = 0.5
+				trait = trusting
+			}
+		}
+	}
+}

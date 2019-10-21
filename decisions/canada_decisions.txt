@@ -15,7 +15,9 @@ decisions = {
 				religion = nonconformist
 				religion = exovedate
 			}
-			NOT = { has_global_flag = canadian_church_unified }
+			NOT = { has_global_flag = ursuline_schism_mended }
+			NOT = { has_global_flag = catholic_ursuline_schism_mended }
+			NOT = { has_global_flag = canadian_church_unified }  
 		}
 		allow = {
 			tier = EMPEROR

@@ -1,0 +1,163 @@
+decisions = {
+
+	# Ursuline > Catholic = Ursuline becomes parent
+	mend_ursuline_schism = {
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential = {
+			has_dlc = "Legacy of Rome"
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			independent = yes
+			NOT = { trait = incapable }
+			OR = {
+				religion = ursuline
+				religion = angeline
+				religion = exovedate
+			}
+			num_of_emperor_titles = 1
+			is_heretic = no
+			NOT = { has_global_flag = ursuline_schism_mended }
+			NOT = { has_global_flag = catholic_ursuline_schism_mended }
+			NOT = { has_global_flag = canadian_church_unified }  
+			k_papal_state = {
+				holder_scope = {
+					is_heretic = no # If the Pope (and thus Catholicism) is heretical, mending the schism is no longer possible
+				}
+			}
+		}
+		allow = {
+			piety = 2000
+			religion_authority = 0.75
+			completely_controls = c_st_louis
+			b_st_louis_MO = {
+				holder_scope = {
+					religion = ROOT
+					is_heretic = no
+				}
+			}
+			completely_controls = c_chicago
+			b_chicago_IL = {
+				holder_scope = {
+					religion = ROOT
+					is_heretic = no
+				}
+			}
+			completely_controls = c_washington
+			b_washington_DC = {
+				holder_scope = {
+					religion = ROOT
+					is_heretic = no
+				}
+			}
+			completely_controls = c_denver
+			b_aurora_CO = {
+				holder_scope = {
+					religion = ROOT
+					is_heretic = no
+				}
+			}
+			completely_controls = c_cap_diamant
+			b_quebec_QC = {
+				holder_scope = {
+					religion = ROOT
+					is_heretic = no
+				}
+			}
+			completely_controls = c_bexar
+			b_leon_valley_TX = {
+				holder_scope = {
+					religion = ROOT
+					is_heretic = no
+				}
+			}
+		}
+		effect = {
+			narrative_event = { id = MES.1 tooltip = EVTTOOLTIPMES.1}
+			set_global_flag = ursuline_schism_mended
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Catholic > Ursuline
+	mend_catholic_ursuline_schism = {
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential = {
+			has_dlc = "Legacy of Rome"
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			independent = yes
+			NOT = { trait = incapable }
+			OR = {
+				religion = catholic
+				religion = nestorian
+				religion = sedevacantist
+				religion = neognostic
+			}
+			num_of_emperor_titles = 1
+			is_heretic = no
+			NOT = { has_global_flag = catholic_ursuline_schism_mended }
+			NOT = { has_global_flag = ursuline_schism_mended }
+			NOT = { has_global_flag = canadian_church_unified } 
+			k_ursuline = {
+				holder_scope = {
+					is_heretic = no # If the Abbess-General (and thus the Ursuline faith) is heretical, mending the schism is no longer possible
+				}
+			}
+		}
+		allow = {
+			piety = 2000
+			religion_authority = 0.75
+			completely_controls = c_st_louis
+			b_st_louis_MO = {
+				holder_scope = {
+					religion = ROOT
+					is_heretic = no
+				}
+			}
+			completely_controls = c_cap_diamant
+			b_quebec_QC = {
+				holder_scope = {
+					religion = ROOT
+					is_heretic = no
+				}
+			}
+			completely_controls = c_detroit
+			b_dearborn_MI = {
+				holder_scope = {
+					religion = ROOT
+					is_heretic = no
+				}
+			}
+			completely_controls = c_bawating
+			b_richards_landing_ON = {
+				holder_scope = {
+					religion = ROOT
+					is_heretic = no
+				}
+			}
+			completely_controls = c_hochelaga
+			b_st_laurent_QC = {
+				holder_scope = {
+					religion = ROOT
+					is_heretic = no
+				}
+			}
+		}
+		effect = {
+			narrative_event = { id = MES.2 tooltip = EVTTOOLTIPMES.2}
+			set_global_flag = catholic_ursuline_schism_mended
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
