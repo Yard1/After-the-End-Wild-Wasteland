@@ -428,7 +428,7 @@ narrative_event = {
 				prisoner = no
 			}
 			show_scope_change = no
-			unsafe_religion = confederated
+			religion = confederated
 		}
 		if = {
 			limit = { is_landed = yes }
@@ -440,9 +440,6 @@ narrative_event = {
 	}
 	option = { # No
 		name = EVTOPTBcanada.2
-		trigger = {
-			holy_order = no
-		}
 		ai_chance = { 
 			factor = 25
 			modifier = {
