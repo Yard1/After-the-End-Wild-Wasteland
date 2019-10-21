@@ -15,6 +15,7 @@ decisions = {
 				religion = nonconformist
 				religion = exovedate
 			}
+			is_heretic = no
 			NOT = { has_global_flag = ursuline_schism_mended }
 			NOT = { has_global_flag = catholic_ursuline_schism_mended }
 			NOT = { has_global_flag = canadian_church_unified }  
