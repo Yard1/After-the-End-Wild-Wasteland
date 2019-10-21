@@ -49,6 +49,7 @@ decisions = {
 						OR = {
 							religion = ursuline
 							religion = angeline
+							religion = exovedate
 						}
 					}
 					set_character_flag = was_ursuline
@@ -60,9 +61,6 @@ decisions = {
 			religion = confederated
 			activate_title = { title = k_confederated status = yes }
 			narrative_event = { id = canada.1 }
-			#activate_title = { title = k_ursuline status = no }
-			#activate_title = { title = d_high_church status = no }
-			set_global_flag = canadian_church_unified
 		}
 		ai_will_do = {
 			factor = 1

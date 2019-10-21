@@ -999,6 +999,7 @@ succession_laws = {
 					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
 				}
 			}
+			NOT = { holder_scope = { government = constitutional_rep } }
 		}
 		effect = {
 			succession = {

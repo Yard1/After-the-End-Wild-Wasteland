@@ -8,6 +8,7 @@ character_event = {
 	ai = yes
 
 	trigger = {
+		prisoner = no
 		FROMFROM = {
 			ai = yes
 			OR = {

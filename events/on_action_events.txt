@@ -4490,6 +4490,7 @@ narrative_event = {
 			}
 		}
 		hidden_tooltip = {
+
 			if = {
 				limit = {
 					ROOT = { religion = rust_cultist_reformed }
@@ -5016,6 +5017,20 @@ narrative_event = {
 				is_heresy_of = ROOT
 			}
 			religion = ROOT
+		}
+		any_playable_ruler = {
+			limit = {
+				holy_order = yes
+				is_heresy_of = ROOT
+			}
+			unsafe_religion = ROOT
+			any_realm_character = {
+				limit = {
+					prisoner = no
+					is_heresy_of = ROOT
+				}
+				unsafe_religion = ROOT
+			}
 		}
 		capital_scope = {
 			if = {
