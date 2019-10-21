@@ -53,6 +53,7 @@ character_event = {
         OR = {
             #DEBUG
             has_character_flag = force_saint
+            has_nickname = nick_the_saint
             AND = {
                 OR = {
                     AND = {
@@ -147,7 +148,12 @@ character_event = {
                 save_event_target_as = first_priest
                 if = {
                     limit = {
-                        event_target:saint_person = { has_character_flag = force_saint }
+                        event_target:saint_person = {
+                            OR = {
+                                has_character_flag = force_saint
+                                has_nickname = nick_the_saint
+                            }
+                        }
                     }
                     random_realm_province = {
                         province_event = { id = HF.40001 }
@@ -214,7 +220,10 @@ character_event = {
         #Potential for sainthood
         if = {
             limit = {
-                has_character_flag = force_saint
+                OR = {
+                    has_character_flag = force_saint
+                    has_nickname = nick_the_saint
+                }
                 NOT = { religion_group = latter_day_saints }
             }
             random_realm_province = {
@@ -716,7 +725,8 @@ character_event = {
 							religion_group = christian
 							religion_group = cult_of_saints
 							religion_group = latter_day_saints
-						}
+                        }
+                        NOT = { has_nickname = nick_the_saint }
                     }
                 }
                 random_list = {
@@ -873,6 +883,10 @@ character_event = {
                         }
                     }
                 }
+            }
+            else_if = {
+                limit = { event_target:saint_person = { limit = { has_nickname = nick_the_saint } } }
+                set_variable = { which = global_miracle value = 7 }
             }
             # Give nickname - Pagan only
             if = {
@@ -1123,7 +1137,6 @@ character_event = {
                         if = {
                             limit = {
 								religion = evangelical
-								evangelical_can_have_saints = yes
                             }
                             create_bloodline = {
                                 type = saintly_bloodline_evangelical_01
@@ -1526,7 +1539,6 @@ character_event = {
                          if = {
                             limit = {
 								religion = evangelical
-								evangelical_can_have_saints = yes
                             }
                             create_bloodline = {
                                 type = saintly_bloodline_evangelical_02
@@ -1538,7 +1550,8 @@ character_event = {
                             limit = {
                                 OR = {
 									religion = ursuline
-									religion = angeline
+                                    religion = angeline
+                                    religion = exovedate
 									religion = confederated
 								}
                             }
@@ -1623,7 +1636,6 @@ character_event = {
                         if = {
                             limit = {
 								religion = evangelical
-								evangelical_can_have_saints = yes
                             }
                             create_bloodline = {
                                 type = saintly_bloodline_evangelical_03
@@ -1635,7 +1647,8 @@ character_event = {
                             limit = {
                                 OR = {
 									religion = ursuline
-									religion = angeline
+                                    religion = angeline
+                                    religion = exovedate
 									religion = confederated
 								}
                             }
@@ -2012,7 +2025,6 @@ character_event = {
                         if = {
                             limit = {
 								religion = evangelical
-								evangelical_can_have_saints = yes
                             }
                             create_bloodline = {
                                 type = saintly_bloodline_evangelical_04
@@ -2024,7 +2036,8 @@ character_event = {
                             limit = {
                                 OR = {
 									religion = ursuline
-									religion = angeline
+                                    religion = angeline
+                                    religion = exovedate
 									religion = confederated
 								}
                             }
@@ -2395,7 +2408,6 @@ character_event = {
                         if = {
                             limit = {
 								religion = evangelical
-								evangelical_can_have_saints = yes
                             }
                             create_bloodline = {
                                 type = saintly_bloodline_evangelical_05
@@ -2407,7 +2419,8 @@ character_event = {
                             limit = {
                                 OR = {
 									religion = ursuline
-									religion = angeline
+                                    religion = angeline
+                                    religion = exovedate
 									religion = confederated
 								}
                             }
@@ -2773,7 +2786,6 @@ character_event = {
                         if = {
                             limit = {
 								religion = evangelical
-								evangelical_can_have_saints = yes
                             }
                             create_bloodline = {
                                 type = saintly_bloodline_evangelical_06
@@ -2785,7 +2797,8 @@ character_event = {
                             limit = {
                                 OR = {
 									religion = ursuline
-									religion = angeline
+                                    religion = angeline
+                                    religion = exovedate
 									religion = confederated
 								}
                             }
