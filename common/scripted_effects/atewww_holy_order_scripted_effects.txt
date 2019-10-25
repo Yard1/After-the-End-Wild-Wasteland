@@ -33,6 +33,7 @@ ROOT_join_PREV_holy_order_holder = {
 		add_trait = celibate
 		if = {
 			limit = {
+				is_female = yes
 				OR = {
 					religion = gaian
 					religion = amazonian
