@@ -6,6 +6,10 @@ eunuch = {
 	sex_appeal_opinion = -20
 	fertility = -50.0
 
+	potential = {
+		is_female = no
+	}
+
 	customizer = no
 	
 	cannot_marry = yes
