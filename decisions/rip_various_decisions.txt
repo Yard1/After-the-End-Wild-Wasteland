@@ -1118,6 +1118,7 @@ decisions = {
 					}
 				}
 			}
+			is_travelling_trigger = no
 			NOT = { has_character_modifier = out_traveling }
 			NOT = { has_character_modifier = recently_opened_gates }
 		}

@@ -236,7 +236,7 @@ decisions = {
 			holy_order = no
 			mercenary = no
 			is_landed = yes
-			NOT = { trait = travelling }
+			is_inaccessible_trigger = no
 			# Reduce the number of candidates somewhat
 			hidden_tooltip = { 
 				OR = {

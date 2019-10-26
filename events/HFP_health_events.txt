@@ -591,19 +591,7 @@ character_event = {
 		}
 		if = { 
 			limit = { 
-				trait = on_pilgrimage
-			}
-			change_variable = { which = physique_variable value = -2 }
-		}
-		if = { 
-			limit = { 
-				trait = on_indian_pilgrimage
-			}
-			change_variable = { which = physique_variable value = -2 }
-		}
-		if = { 
-			limit = { 
-				trait = travelling
+				is_travelling_trigger = yes
 			}
 			change_variable = { which = physique_variable value = -2 }
 		}

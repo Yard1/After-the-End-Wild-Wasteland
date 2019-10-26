@@ -1225,13 +1225,7 @@ character_event = {
 	option = { #Yes, staying at court.
 		name = EVTOPTAHFP20406
 		trigger = {  
-			NOR = {
-				#trait = on_hajj
-				trait = on_pilgrimage
-				trait = on_indian_pilgrimage
-				trait = kow_tow_travels
-				trait = travelling
-			}
+			is_travelling_trigger = no
 		}
 		custom_tooltip = { text = mother_staying_court }
 		add_trait = in_hiding
@@ -9796,13 +9790,7 @@ character_event = {
 				is_married = ROOT
 				is_mother = ROOT
 			}
-			NOR = {
-				trait = on_hajj
-				trait = on_pilgrimage
-				trait = on_indian_pilgrimage
-				trait = kow_tow_travels
-				trait = travelling
-			}
+			is_travelling_trigger = no
 		}
 	}
 
@@ -9983,13 +9971,7 @@ character_event = {
 			trait = pregnant
 			is_alive = yes
 			is_lover = ROOT
-			NOR = {
-				trait = on_hajj
-				trait = on_pilgrimage
-				trait = on_indian_pilgrimage
-				trait = kow_tow_travels
-				trait = travelling
-			}
+			is_inaccessible_trigger = no
 		}
 	}
 
@@ -11865,11 +11847,7 @@ character_event = {
 			NOR = {
 				trait = incapable
 				trait = troubled_pregnancy
-				trait = on_hajj
-				trait = on_pilgrimage
-				trait = on_indian_pilgrimage
-				trait = kow_tow_travels
-				trait = travelling
+				is_travelling_trigger = yes
 			}
 		}
 	}
@@ -14348,11 +14326,7 @@ character_event = {
 			NOR = {
 				trait = incapable
 				trait = troubled_pregnancy
-				trait = on_hajj
-				trait = on_pilgrimage
-				trait = on_indian_pilgrimage
-				trait = kow_tow_travels
-				trait = travelling
+				is_travelling_trigger = yes
 			}
 		}
 	}
@@ -14866,15 +14840,10 @@ character_event = {
 			}
 			NOR = {
 				trait = incapable
-				has_character_modifier = out_traveling
-				trait = travelling
 				trait = troubled_pregnancy
 				has_character_modifier = mother_fertility_festival_1
 				has_character_modifier = mother_fertility_festival_2
-				trait = on_hajj
-				trait = on_pilgrimage
-				trait = on_indian_pilgrimage
-				trait = kow_tow_travels
+				is_travelling_trigger = yes
 			} 
 		}
 		OR = {

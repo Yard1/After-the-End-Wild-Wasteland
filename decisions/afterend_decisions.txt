@@ -10,11 +10,8 @@ decisions = {
 				religion = jeffersonian
 			}
 			age = 16
-			prisoner = no
-			in_seclusion = no
-			NOT = { trait = incapable }
+			block_general_event_trigger = no
 			NOT = { trait = pilgrim }
-			NOT = { trait = on_pilgrimage }
 			NOT = { has_character_flag = failed_pilgrim }
 			NOT = { trait = legendary }
 			NOT = { #immersion-breaking
@@ -389,9 +386,8 @@ decisions = {
 			age = 16
 			prisoner = no
 			in_seclusion = no
-			NOT = { trait = incapable }
+			block_general_event_trigger = no
 			NOT = { trait = pilgrim }
-			NOT = { trait = travelling }
 			controls_religion = no
 			e_california = { has_holder = yes } #you know, we'll have to figure out the cetic religious head situation if we want random world to work right
 			NOT = { #immersion-breaking
@@ -979,8 +975,7 @@ decisions = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 			NOT = { has_character_modifier = recent_mayan_pilgrimage }
-			NOT = { trait = travelling }
-			NOT = { trait = on_pilgrimage }
+			block_general_event_trigger = no
 		}
 		
 		allow = {

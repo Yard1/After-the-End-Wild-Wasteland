@@ -1427,11 +1427,7 @@ is_inaccessible_trigger = { #Remember to write this "is_inaccessible_trigger = n
 			OR = {
 				has_character_flag = flag_holding_great_tribal_festival
 				trait = in_hiding
-				#trait = on_hajj
-				trait = on_pilgrimage
-				trait = on_indian_pilgrimage
-				trait = kow_tow_travels
-				trait = travelling
+				is_travelling_trigger = yes
 				trait = troubled_pregnancy
 				trait = pregnancy_finishing
 				has_character_modifier = mother_minor_rest
@@ -1439,9 +1435,25 @@ is_inaccessible_trigger = { #Remember to write this "is_inaccessible_trigger = n
 				has_character_modifier = in_meditation
 				has_character_modifier = doing_penance
 				has_character_modifier = doing_teshuva
-				has_character_modifier = out_traveling
 			}
 		}
+	}
+}
+
+is_travelling_trigger = {
+	OR = {
+		is_on_pilgrimage = yes
+		has_character_modifier = out_traveling
+		trait = kow_tow_travels
+		trait = travelling
+	}
+}
+
+is_on_pilgrimage = {
+	OR = {
+		#trait = on_hajj
+		trait = on_pilgrimage
+		trait = on_indian_pilgrimage
 	}
 }
 

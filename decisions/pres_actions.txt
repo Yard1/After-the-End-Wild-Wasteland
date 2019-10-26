@@ -84,7 +84,6 @@ decisions = {
 			holy_order = no
 			mercenary = no
 			is_playable = yes
-			NOT = { trait = travelling }
 			OR = {
 				ai = no
 				independent = yes

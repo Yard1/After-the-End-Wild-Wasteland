@@ -1080,8 +1080,7 @@ character_event = {
 	}
 
 	trigger = {
-		NOT = { trait = on_pilgrimage }
-		#NOT = { trait = on_hajj }
+		is_travelling_trigger = no
 	}
 	
 	option = {
