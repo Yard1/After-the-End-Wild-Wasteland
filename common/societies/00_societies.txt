@@ -3014,9 +3014,6 @@ banking_society = {
 				has_religion_feature = religion_jizya
 			}
 			is_patrician = yes
-			stewardship = 10
-			trait = greedy
-			trait = cynical
 		}
 		NOT = { trait = incapable }
 		prisoner = no
