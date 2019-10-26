@@ -12074,11 +12074,11 @@ character_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	only_rulers = yes
+	trigger = {
+		is_theocracy = yes
+	}
 	option = {
-		log = "misc.7: [Root.GetBestName], [Root.Religion.GetName]"
-		primary_title = {
-			holder_scope = { character_event = { id = misc.6 } }
-		}
+		character_event = { id = misc.70 days = 1 }
 	}
 }
 
@@ -12089,62 +12089,23 @@ character_event = {
 	hide_window = yes
 	only_rulers = yes
 
-	immediate = {
-		if = {
-			limit = {
+	trigger = {
+		is_theocracy = yes
+		OR = {
+			AND = {
 				is_female = yes
-				religion_allows_male_temple_holders = yes
 				religion_allows_female_temple_holders = no
-				any_demesne_title = { 
-					holding_type = TEMPLE
-				}
 			}
-			create_random_priest = {
-				female = no
-				religion = ROOT
-				random_traits = yes
-			}
-			new_character = {
-				character_event = { id = misc.3 } # Diversity
-				character_event = { id = misc.4 } # Physique
-				log = "misc.70: [Root.GetBestName], [Root.Religion.GetName], spawn new - [This.GetBestName]"
-				ROOT = {
-					any_demesne_title = { 
-						limit = { holding_type = TEMPLE }
-						gain_title = PREVPREV 
-					}
-				}
-				primary_title = { add_law = { law = agnatic_succession cooldown = no opinion_effect = no } log = "misc.70: set agnatic_succession in [This.GetName]" }
-			}
-		}
-		else_if = {
-			limit = {
+			AND = {
 				is_female = no
-				religion_allows_female_temple_holders = yes
 				religion_allows_male_temple_holders = no
-				any_demesne_title = { 
-					holding_type = TEMPLE
-				}
-			}
-			create_random_priest = {
-				female = yes
-				religion = ROOT
-				random_traits = yes
-			}
-			new_character = {
-				character_event = { id = misc.3 } # Diversity
-				character_event = { id = misc.4 } # Physique
-				log = "misc.70: [Root.GetBestName], [Root.Religion.GetName], spawn new - [This.GetBestName]"
-				ROOT = {
-					any_demesne_title = { 
-						limit = { holding_type = TEMPLE }
-						gain_title = PREVPREV 
-					}
-				}
-				primary_title = { add_law = { law = enatic_succession cooldown = no opinion_effect = no } log = "misc.70: set enatic_succession in [This.GetName]" }
 			}
 		}
-		character_event = { id = misc.6 }
+	}
+
+	immediate = {
+		log = "misc.70: [Root.GetBestName], [Root.Religion.GetName]"
+		abdicate = yes
 	}
 
 }
