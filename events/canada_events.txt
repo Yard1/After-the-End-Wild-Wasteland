@@ -24,80 +24,17 @@ narrative_event = {
 				set_global_flag = canadian_church_unified
 				activate_title = { title = k_confederated status = yes }
 				save_event_target_as = unifier
-				if = {
-					limit = {
-						any_vassal = {
-							OR = {
-								has_landed_title = d_high_church
-								has_landed_title = k_ursuline
-							}
-						}
-					}
-					random_vassal = {
-						limit = {
-							OR = {
-								has_landed_title = d_high_church
-								has_landed_title = k_ursuline
-							}
-						}
-						preferred_limit = {
-							has_landed_title = d_high_church
-							ROOT = {
-								has_character_flag = was_high_church
-							}
-						}
-						preferred_limit = {
-							has_landed_title = k_ursuline
-							ROOT = {
-								has_character_flag = was_ursuline
-							}
-						}
-						save_event_target_as = new_pope
-					}
-				}
-				else = {
-					job_spiritual = {
-						save_event_target_as = new_pope
-					}
+				job_spiritual = {
+					save_event_target_as = new_pope
 				}
 				event_target:new_pope = {
-					any_vassal = {
-						set_character_flag = old_new_pope_vassal
-					}
-					any_demesne_title = {
-						limit = {
-							NOR = {
-								title = k_confederated
-								title = k_ursuline
-								title = d_high_church 
-							}
-						}
-						set_title_flag = old_new_pope_title
-					}
-					unsafe_religion = confederated
-					b_the_glebe_ON = { gain_title = PREV }
-					k_confederated = { gain_title = PREV }
-					k_confederated = { add_law = succ_papal_succession }
-					set_name = ""
-					succession = papal_succession
-					set_defacto_liege = event_target:unifier
 					opinion = {
 						who = event_target:unifier
-						modifier = opinion_granted_kingdom
+						modifier = opinion_creator_of_rel_heal
 					}
-					any_vassal = {
-						set_character_flag = old_new_pope_vassal
-					}
-					any_demesne_title = {
-						limit = {
-							NOR = {
-								title = k_confederated
-								title = k_ursuline
-								title = d_high_church 
-							}
-						}
-						set_title_flag = old_new_pope_title
-					}
+					religion = confederated
+					b_the_glebe_ON = { gain_title = PREV }
+					k_confederated = { gain_title = PREV }
 					character_event = { id = canada.999 }
 				}
 				if = {
@@ -118,6 +55,7 @@ narrative_event = {
 								limit = { NOT = { title = d_high_church } }
 								set_title_flag = old_bishop_title
 							}
+							abdicate = yes
 						}
 						create_title = {
 							tier = DUKE
@@ -133,11 +71,9 @@ narrative_event = {
 							copy_title_history = PREV
 							add_law = succ_open_elective
 						}
-						activate_title = { title = d_high_church status = no }
-						unsafe_destroy_landed_title = d_high_church
 					}
 					event_target:old_bishop = {
-						unsafe_religion = confederated
+						religion = confederated
 						any_courtier = {
 							limit = { prisoner = no }
 							religion = confederated
@@ -146,6 +82,7 @@ narrative_event = {
 							show_scope_change = no
 							religion = confederated
 						}
+						give_minor_title = title_confederated_cardinal
 						character_event = { id = canada.999 }
 					}
 				}
@@ -170,6 +107,7 @@ narrative_event = {
 								log = "[This.GetName] is title of [old_pope.GetBestName]"
 								set_title_flag = old_pope_title
 							}
+							abdicate = yes
 						}
 						create_title = {
 							tier = DUKE
@@ -190,11 +128,9 @@ narrative_event = {
 							set_title_flag = ursuline_dynamic_title
 							add_law = succ_open_elective
 						}
-						activate_title = { title = k_ursuline status = no }
-						unsafe_destroy_landed_title = k_ursuline
 					}
 					event_target:old_pope = {
-						unsafe_religion = confederated
+						religion = confederated
 						any_courtier = {
 							limit = { prisoner = no }
 							religion = confederated
@@ -203,6 +139,7 @@ narrative_event = {
 							show_scope_change = no
 							religion = confederated
 						}
+						give_minor_title = title_confederated_cardinal
 						character_event = { id = canada.999 }
 					}
 				}
@@ -267,7 +204,7 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		unsafe_religion = confederated
+		religion = confederated
 		if = {
 			limit = { character = event_target:old_bishop }
 			any_title = {
@@ -302,8 +239,6 @@ character_event = {
 				}
 				clr_character_flag = old_bishop_vassal
 			}
-			activate_title = { title = d_high_church status = no }
-			unsafe_destroy_landed_title = d_high_church
 		}
 		else_if = {
 			limit = { character = event_target:old_pope }
@@ -338,8 +273,6 @@ character_event = {
 				}
 				clr_character_flag = old_pope_vassal
 			}
-			activate_title = { title = k_ursuline status = no }
-			unsafe_destroy_landed_title = k_ursuline
 		}
 		else_if = {
 			limit = { character = event_target:new_pope }
@@ -370,16 +303,6 @@ character_event = {
 			religion = confederated
 		}
 		set_defacto_liege = event_target:new_pope
-		if = {
-			limit = { controls_religion = no }
-			give_minor_title = title_confederated_cardinal
-		}
-		event_target:unifier = {
-			if = {
-				limit = { job_spiritual = { is_theocracy = yes } }
-				job_spiritual = { give_minor_title = title_confederated_cardinal }
-			}
-		}
 		event_target:new_pope = {
 			set_defacto_liege = event_target:unifier
 		}
@@ -415,7 +338,7 @@ narrative_event = {
 				trait = zealous
 			}
 		}
-		unsafe_religion = confederated
+		religion = confederated
 		any_courtier = {
 			limit = {
 				OR = {
