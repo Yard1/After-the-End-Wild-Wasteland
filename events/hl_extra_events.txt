@@ -33,6 +33,7 @@ character_event = {
 	}
 
 	immediate = {
+		save_event_target_as = sky_burial_target
 		if = {
 			limit = {
 				prestige = 20000
