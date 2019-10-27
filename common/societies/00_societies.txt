@@ -3003,18 +3003,6 @@ banking_society = {
 	
 	potential = {
 		NOT = { religion = cult_of_marx }
-		OR = {
-			religion_group = oldworld
-			religion_group = jewish_group
-			AND = {
-				OR = {
-					religion_group = pagan_group
-					religion_group = afro_syncretic
-				}
-				has_religion_feature = religion_jizya
-			}
-			is_patrician = yes
-		}
 		NOT = { trait = incapable }
 		prisoner = no
 		is_landed = yes
