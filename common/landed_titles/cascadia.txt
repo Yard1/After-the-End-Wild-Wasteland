@@ -470,6 +470,7 @@ e_cascadia = {
 		wakashan = "Tla'qit'at" #Nuu-chah-nulth for Interior people
 		dakelh = "Dene Keyoh" #Traditional territory of the Dene
 		ktunaxa = "Amak" #Country, earth, ground.
+		plautdietsch="Leedjeisthiepen"
 		
 		
 		mormon = 20
@@ -486,6 +487,7 @@ e_cascadia = {
 			shuswap = "Nekéct" #forest, thicket
 			dakelh = "Nda Ts'un" #towards the south
 			ktunaxa = "Ka'ipu" #transliteration
+			plautdietsch="Reintier"
 			
 			capital = 567 #Cariboo
 			
@@ -498,6 +500,7 @@ e_cascadia = {
 				wakashan = "Texelc"
 				dakelh = "Texelc"
 				ktunaxa = "Texelc"
+				plautdietsch="Hundatmielhus"
 				
 				b_williams_lake_BC = {}
 				b_100_mile_house_BC = {}
@@ -581,6 +584,7 @@ e_cascadia = {
 				wakashan = "Stuctuws"
 				dakelh = "Stuctuws"
 				ktunaxa = "Stuctuws"
+				plautdietsch="Vekrupbeck"
 				
 				b_cache_creek_BC = {}
 				b_lillooet_BC = {
@@ -601,6 +605,7 @@ e_cascadia = {
 				
 				haida = "Tl'áadaan"	#Canyon/Gorge
 				shuswap = "Scw'exmx"
+				plautdietsch="Vebiehopen"
 				
 				b_hope_BC = {}
 				b_lytton_BC = {}
@@ -709,6 +714,7 @@ e_cascadia = {
 				wakashan = "Sinixt"
 				dakelh = "Sinixt"
 				ktunaxa = "Sinixt"
+				plautdietsch="Jrensland"
 				
 				b_trail_BC = {}
 				b_grand_forks_BC = {}
@@ -863,6 +869,7 @@ e_cascadia = {
 			wakashan = "Haisla"
 			dakelh = "'Onyaz Ts'e" #On the other side
 			ktunaxa = "Apakitlhak" #inlet
+			plautdietsch="Eewaland"
 
 			c_fjordland = {
 				color = { 115 160 219 }
@@ -873,6 +880,7 @@ e_cascadia = {
 				wakashan = "Heiltsuk"
 				dakelh = "Heiltsuk"
 				ktunaxa = "Heiltsuk"
+				plautdietsch="Hagensborg"
 			
 				b_bella_bella_BC = {
 					shuswap = "Waglisla"
@@ -927,6 +935,7 @@ e_cascadia = {
 				wakashan = "Haisla"
 				dakelh = "'Utna"
 				ktunaxa = "Haisla"
+				plautdietsch="Rieejhiess"
 				
 				b_kitimat_BC = {}
 				b_terrace_BC = {}
@@ -944,10 +953,11 @@ e_cascadia = {
 				color2 = { 182 182 182 }
 				
 				haida = "Chíináay" #the fish
-				wakashan = "Ts’msyan" #name of local indigenous group
-				shuswap = "Ts’msyan" #name of local indigenous group
+				wakashan = "Ts'msyan" #name of local indigenous group
+				shuswap = "Ts'msyan" #name of local indigenous group
+				plautdietsch="Prins Ruprecht"
 				
-				b_prince_rupert_BC = {}
+				b_prince_rupert_BC = {plautdietsch="Prins Ruprecht"}
 				b_port_essington_BC = {}
 				b_oona_river_BC = {}
 				b_kitkatla_BC = {}
@@ -969,6 +979,7 @@ e_cascadia = {
 			shuswap = "T'ki'ékst" #north wind
 			dakelh = "Dakelh Keyoh"
 			ktunaxa = "Amin'ika" #transliteration
+			plautdietsch="Langsomläacht"
 			
 			c_prince_george = {
 				color = { 162 133 33 }
@@ -979,8 +990,9 @@ e_cascadia = {
 				wakashan = "Dakelh"
 				dakelh = "Dakelh"
 				ktunaxa = "Dakelh"
+				plautdietsch="Prins Jürgen"
 				
-				b_prince_george_BC = {}
+				b_prince_george_BC = {plautdietsch="Prins Jürgen"}
 				b_quesnel_BC = {}
 				b_mackenzie_BC = {}
 				b_barkerville_BC = {}
@@ -1023,10 +1035,11 @@ e_cascadia = {
 				wakashan = "Netja Koh"
 				dakelh = "Necha-Koh"
 				ktunaxa = "Netja Koh"
+				plautdietsch="Jäckelborg"
 				
 				b_vanderhoof_BC = {}
 				b_fraser_lake_BC = {}
-				b_fort_st_james_BC = {}
+				b_fort_st_james_BC = {plautdietsch="Jäckelborg"}
 				b_fort_fraser_BC = {}
 				b_endako_BC = {}
 				b_nautley_BC = {}

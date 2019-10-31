@@ -351,9 +351,10 @@ upgrade_skydome = {
 	gold_cost_ticking = 1
 	local_modifier = {
 		garrison_size = 0.2
+		levy_size = 0.2
 	}
 	owner_modifier = {
-		retinuesize = 500
+		monthly_character_prestige = 0.01
 	}
 }
 

@@ -44,6 +44,7 @@ semi_equal_religion = {
 		}
 		religion = consumerist
 		religion = monetarist
+		religion = exovedate
 	}
 }
 
@@ -316,6 +317,7 @@ has_religion_with_temporal_head = {
 		religion = rust_cultist_reformed
 		religion = brethren
 		religion = cetic
+		religion = exovedate
 	}
 }
 
@@ -530,7 +532,6 @@ can_have_pagan_religion_interpretation = {
 		religion = gaian
 		has_religion_feature = religion_no_leader
 		religion = peyotist
-		religion = exovedate
 		religion = sol_invicta
 		religion = mictlantec
 		religion = neomayan
@@ -555,7 +556,6 @@ has_no_religious_head = {
 		religion = falling_star
 		religion = moravian
 		religion = nonconformist
-		religion = exovedate
 		religion = sacred_heart
 		religion = gracia_divina
 		religion = neutic

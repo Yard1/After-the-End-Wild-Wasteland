@@ -109,7 +109,8 @@
 ##################################################
 
 wonder_parliament_hill = {
-	picture = GFX_wonder_strip_royalpalace
+	picture = GFX_wonder_strip_parliament_hill
+	default_picture_stage = 4
 	allow_construction = no
 	potential = {
 	}
@@ -221,7 +222,8 @@ wonder_parliament_hill = {
 }
 
 wonder_cn_tower = {
-	picture = GFX_wonder_strip_lighthouse
+	picture = GFX_wonder_strip_cn_tower
+	default_picture_stage = 4
 	allow_construction = no
 	potential = {
 	}

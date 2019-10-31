@@ -8,5 +8,5 @@ dependencies = {
 	"After the End Fan Fork" 
 	"After the End Fan Fork - Americanist Flavor" 
 	"After The End - Guruism"
-	"Canada Expanded"
+	"After the End Fan Fork - Canada Expanded"
 }

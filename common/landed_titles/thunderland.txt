@@ -261,27 +261,6 @@ e_thunderland = {
 				b_ulm_MT = {}
 				b_gibson_flats_MT = {}
 			}
-			c_freezeout = {
-				color = { 29 151 195 }
-				color2 = { 51 51 51 }
-				
-				b_choteau_MT = {}
-				b_dutton_MT = {}
-				b_pendroy_MT = {}
-				b_sun_river_MT = {}
-				b_bynum_MT = {}
-				b_fairfield_MT = {}
-				b_power_MT = {}
-			}
-		}
-		d_glacier = {
-			color = { 75 122 147 }
-			color2 = { 255 255 255 }
-			
-			capital = 495
-			
-			culture = mountainer
-				
 			c_milk_river = {
 				color = { 0 146 58 }
 				color2 = { 255 244 2 }
@@ -294,6 +273,15 @@ e_thunderland = {
 				b_rudyard_MT = {}
 				b_laredo_MT = {}
 			}
+		}
+		d_glacier = {
+			color = { 75 122 147 }
+			color2 = { 255 255 255 }
+			
+			capital = 495
+			
+			culture = mountainer
+				
 			c_pondera = {
 				color = { 254 153 51 }
 				color2 = { 0 0 0 }
@@ -306,46 +294,6 @@ e_thunderland = {
 				b_brady_MT = {}
 				b_dupuyer_MT = {}
 			}
-			c_medicine_hat = {
-				color = { 255 186 18 }
-				color2 = { 0 0 0 }
-				
-				b_medicine_hat_AB = {}
-				b_redcliff_AB = {}
-				b_seven_persons_AB = {}
-				b_bow_island_AB = {}
-				b_dunmore_AB = {}
-				b_manyberries_AB = {}
-				b_foremost_AB = {}
-			}
-			c_warner = {
-				color = { 73 141 175 }
-				color2 = { 255 255 255 }
-				blackfoot = "Aksaysim"
-				
-				b_lethbridge_AB = {}
-				b_coaldale_AB = {}
-				b_taber_AB = {}
-				b_vauxhall_AB = {}
-				b_shelby_MT = {}
-				b_galata_MT = {}
-				b_sweet_grass_MT = {}
-				b_stirling_AB = {}
-			}
-			c_pincher_creek = {
-				color = { 132 40 10 }
-				color2 = { 255 255 255 }
-				
-				b_cardston_AB = {}
-				b_magrath_AB = {}
-				b_cut_bank_MT = {}
-				b_browning_MT = {
-					ktunaxa = "Tlawat'inak"}
-				b_glenwood_AB = {}
-				b_hill_spring_AB = {}
-				b_aetna_AB = {}
-			}
-			
 			c_glacier_pass = {
 				color = { 200 6 35 }
 				color2 = { 255 255 255 }
@@ -358,6 +306,18 @@ e_thunderland = {
 				b_singleshot_MT = {}
 				b_west_glacier_MT = {}
 				b_east_glacier_MT = {}
+			}
+			c_freezeout = {
+				color = { 29 151 195 }
+				color2 = { 51 51 51 }
+				
+				b_choteau_MT = {}
+				b_dutton_MT = {}
+				b_pendroy_MT = {}
+				b_sun_river_MT = {}
+				b_bynum_MT = {}
+				b_fairfield_MT = {}
+				b_power_MT = {}
 			}
 		}
 		d_deer_lodge = {
@@ -438,6 +398,9 @@ e_thunderland = {
 			c_piapot = {
 				color = { 4 116 58 }
 				color2 = { 255 255 255 }
+
+				plautdietsch="Schwindstroom"
+				cree="Piapot"
 				
 				b_swift_current_SK = {}
 				b_burstall_SK = {}
@@ -450,6 +413,9 @@ e_thunderland = {
 			c_javia = {
 				color = { 89 72 29 }
 				color2 = { 254 234 0 }
+
+				plautdietsch="Elgkjeew"
+				cree="Moscâstani-sîpiy"
 				
 				b_moose_jaw_SK = {}
 				b_mossbank_SK = {}
@@ -476,6 +442,8 @@ e_thunderland = {
 				color2 = { 252 209 23 }
 
 				holy_site = exovedate
+
+				plautdietsch="Knoakenhupen"
 				
 				b_regina_SK = {}
 				b_emerald_park_SK = {}
@@ -492,11 +460,17 @@ e_thunderland = {
 			color2 = { 118 170 220 }
 			
 			capital = 2101 #Ahtahkakoop
+
+			cree = "Missinipi"
 			
 			c_ahtahkakoop = {
 				color = { 150 116 98 }
 				color2 = { 255 232 0 }
+
+				cree = "Kistahpinanihk"
+				plautdietsch="Prins Albert"
 			
+				b_prince_albert_SK = {plautdietsch="Prins Albert"}
 				b_ahtahkakoop_SK = {}
 				b_shellbrook_SK = {}
 				b_leask_SK = {}
@@ -509,6 +483,8 @@ e_thunderland = {
 			c_northlakes = {
 				color = { 145 127 54 }
 				color2 = { 255 232 0 }
+
+				plautdietsch="Nuadenläacht"
 			
 				b_cold_lake_AL = {}
 				b_loon_lake_SK = {}
@@ -521,6 +497,8 @@ e_thunderland = {
 			c_waskesiu = {
 				color = { 227 177 168 }
 				color2 = { 117 35 114 }
+
+				plautdietsch="Grootstroom"
 				
 				b_big_river_SK = {}
 				b_murray_point_SK = {}
@@ -540,10 +518,14 @@ e_thunderland = {
 			culture = prairielander
 		
 			capital = 574 #Saskatoon
+
+			cree = "Kisiskaciwani"
 		
 			c_saskatoon = {
 				color = { 0 136 48 }
 				color2 = { 255 232 0 }
+
+				cree = "Sâskwâton"
 			
 				b_saskatoon_SK = {}
 				b_warman_SK = {}
@@ -557,6 +539,8 @@ e_thunderland = {
 			c_kindersley = {
 				color = { 50 151 23 }
 				color2 = { 255 232 0 }
+
+				cree = "Minahequosis"
 			
 				b_kindersley_SK = {}
 				b_eston_SK = {}
@@ -570,6 +554,10 @@ e_thunderland = {
 			c_muskowekwan = {
 				color = { 0 154 167 }
 				color2 = { 255 255 255 }
+
+				ojibwe = "Muskowekwan"
+				ojicree = "Muskowekwan"
+				cree = "Muskowekwan"
 				
 				b_davidson_SK = {}
 				b_foam_lake_SK = {}
@@ -588,49 +576,11 @@ e_thunderland = {
 			
 				b_nipawin_SK = {}
 				b_tobin_SK = {}
-				b_prince_albert_SK = {}
 				b_smoky_burn_SK = {}
 				b_strong_pine_SK = {}
 				b_meath_park_SK = {}
 				b_fairy_glen_SK = {}
 				b_arborfield_SK = {}
-			}
-			
-			c_lloydminster = {
-				color = { 221 12 35 }
-				color2 = { 255 255 255 }
-				
-				ojibwe = "Thunderchild"
-				algonquin = "Thunderchild"
-				ojicree = "Thunderchild"
-				innu = "Thunderchild"
-				inuit = "Thunderchild"
-				mikmaq = "Thunderchild"
-				cree = "Thunderchild"
-				sioux = "Thunderchild"
-				blackfoot = "Thunderchild"
-				crow = "Thunderchild"
-				metis = "Thunderchild"
-				
-				b_lloydminster_AB = {
-				ojibwe = "Thunderchild"
-				algonquin = "Thunderchild"
-				ojicree = "Thunderchild"
-				innu = "Thunderchild"
-				inuit = "Thunderchild"
-				mikmaq = "Thunderchild"
-				cree = "Thunderchild"
-				sioux = "Thunderchild"
-				blackfoot = "Thunderchild"
-				crow = "Thunderchild"
-				metis = "Thunderchild"
-				}
-				b_north_battleford_SK = {}
-				b_blackfoot_AB = {}
-				b_streamstown_AB = {}
-				b_rivercourse_AB = {}
-				b_maidstone_SK = {}
-				b_lashburn_SK = {}
 			}
 		}
 	
@@ -641,12 +591,21 @@ e_thunderland = {
 			capital = 499 #Foothills
 			
 			culture = prairielander
+
+			blackfoot = "Makhabn"
+			plautdietsch="Grootboagen"
+
 			
 			c_foothills = {
 				color = { 231 50 0 }
 				color2 = { 255 255 255 }
 
 				haida = "Kat'a'eehl"	#climb down, descend
+				blackfoot = "Mohkínstsis"
+				cree = "Otoskwanihk"
+				sioux = "Wichispa Oyade" 
+				ktunaxa = "Aknuqtaptsik'"
+				plautdietsch="Boajichland"
 				
 				b_calgary_AB = {
 					ktunaxa = "Aknuqtaptsik'" }
@@ -676,6 +635,7 @@ e_thunderland = {
 				color2 = { 175 4 7 }
 				
 				haida = "Kaajuu"	#to hunt on land
+				blackfoot="Siksika"
 				
 				b_vulcan_AB = {}
 				b_arrowwood_AB = {}
@@ -714,6 +674,7 @@ e_thunderland = {
 				color2 = { 20 72 156 }
 				
 				plautdietsch="Dawsonbeck"
+				cree="Kakwa" 
 				
 				b_dawson_creek_BC = {
 					plautdietsch="Dawsonbeck"
@@ -731,6 +692,7 @@ e_thunderland = {
 				color2 = { 20 72 156 }
 				
 				plautdietsch="Groot Grassteppe"
+				cree="Waapiti"
 				
 				b_grande_prairie_AB = {
 					plautdietsch="Groot Grassteppe"
@@ -745,27 +707,12 @@ e_thunderland = {
 				b_rycroft_AB = {}
 				b_grande_cache_AB = {}
 			}
-			c_greenview = {
-				color = { 95 131 227 }
-				color2 = { 20 72 156 }
-				
-				plautdietsch = "Gräunutkiek"
-				
-				b_valleyview_AB = {}
-				b_whitecourt_AB = {}
-				b_high_prairie_AB = {}
-				b_sunset_house_AB = {}
-				b_swan_hills_AB = {}
-				b_fox_creek_AB = {}
-				b_little_smoky_AB = {}
-				b_mclennan_AB = {}
-				b_crooked_creek_AB = {}
-			}
 			c_peace_river = {
 				color = { 55 111 241 }
 				color2 = { 20 72 156 }
 				
 				plautdietsch = "Fredenstroom"
+				cree="Unjegah"
 				
 				b_peace_river_AB = {
 					plautdietsch = "Fredenstroom"
@@ -809,18 +756,24 @@ e_thunderland = {
 			c_red_deer = {
 				color = { 153 57 20 }
 				color2 = { 255 255 255 }
+
+				cree = "Waskasoo Seepee"
+				plautdietsch="Roothersch"
 								
 				b_red_deer_AB = {}
 				b_sylvan_lake_AB = {}
-				b_lacomb_AB = {}
+				b_delburne_AB = {}
 				b_blackfalds_AB = {}
 				b_alix_AB = {}
 				b_innisfail_AB = {}
-				b_stettler_AB = {}
+				b_eckville_AB = {}
 			}
 			c_edmonton = {
 				color = { 111 75 55 }
 				color2 = { 255 255 255 }
+
+				cree = "Amiskwaciy"
+				blackfoot = "Omahkoyis"
 				
 				b_edmonton_AB = {}
 				b_st_albert_AB = {}
@@ -834,6 +787,8 @@ e_thunderland = {
 				color = { 152 95 75 }
 				color2 = { 255 255 255 }
 				
+				plautdietsch="Kloarenwota"
+				
 				b_rocky_mountain_house_AB = {}
 				b_alexo_AB = {}
 				b_coalspur_AB = {}
@@ -842,9 +797,36 @@ e_thunderland = {
 				b_cadomin_AB = {}
 				b_pembina_forks_AB = {}
 			}
+			
+			c_wetaskiwin = {
+				color = { 129 168 224 }
+				color2 = { 20 72 156 }
+				
+				b_wetaskiwin_AB = {}
+				b_lacombe_AB = {}
+				b_camrose_AB = {}
+				b_ponoka_AB = {}
+				b_rimbey_AB = {}
+				b_bon_accord_AB = {}
+				b_maskwacis_AB = {}
+			}
+
+		}
+
+		d_athabasca = {
+			color = { 2 186 80 }
+			color2 = { 118 170 220 }
+			
+			capital = 2090
+			
+			culture = prairielander
+			
+			
 			c_yellowhead = {
 				color = { 55 153 233 }
 				color2 = { 20 72 156 }
+
+				plautdietsch="Jälkopp"
 				
 				b_hinton_AB = {}
 				b_edson_AB = {}
@@ -857,6 +839,8 @@ e_thunderland = {
 			c_athabasca = {
 				color = { 74 145 245 }
 				color2 = { 20 72 156 }
+
+				cree = "Atapaskaw"
 				
 				b_slave_lake_AB = {}
 				b_athabasca_AB = {}
@@ -871,6 +855,174 @@ e_thunderland = {
 				b_atmore_AB = {}
 				b_bondiss_AB = {}
 				b_whispering_hills_AB = {}
+			}
+			c_greenview = {
+				color = { 95 131 227 }
+				color2 = { 20 72 156 }
+				
+				plautdietsch = "Gräunutkiek"
+				
+				b_valleyview_AB = {}
+				b_whitecourt_AB = {}
+				b_high_prairie_AB = {}
+				b_sunset_house_AB = {}
+				b_swan_hills_AB = {}
+				b_fox_creek_AB = {}
+				b_little_smoky_AB = {}
+				b_mclennan_AB = {}
+				b_crooked_creek_AB = {}
+			}
+			c_lloydminster = {
+				color = { 221 12 35 }
+				color2 = { 255 255 255 }
+				
+				ojibwe = "Thunderchild"
+				algonquin = "Thunderchild"
+				ojicree = "Thunderchild"
+				innu = "Thunderchild"
+				inuit = "Thunderchild"
+				mikmaq = "Thunderchild"
+				cree = "Thunderchild"
+				sioux = "Thunderchild"
+				blackfoot = "Thunderchild"
+				crow = "Thunderchild"
+				metis = "Thunderchild"
+				plautdietsch="Jedäwkjint"
+				
+				b_lloydminster_AB = {
+				ojibwe = "Thunderchild"
+				algonquin = "Thunderchild"
+				ojicree = "Thunderchild"
+				innu = "Thunderchild"
+				inuit = "Thunderchild"
+				mikmaq = "Thunderchild"
+				cree = "Thunderchild"
+				sioux = "Thunderchild"
+				blackfoot = "Thunderchild"
+				crow = "Thunderchild"
+				metis = "Thunderchild"
+				plautdietsch="Jedäwkjint"
+				}
+				b_kitscoty_SK = {}
+				b_blackfoot_AB = {}
+				b_streamstown_AB = {}
+				b_rivercourse_AB = {}
+				b_maidstone_SK = {}
+				b_lashburn_SK = {}
+			}
+		}
+
+		d_chinook = {
+			color = { 129 93 84 }
+			color2 = { 0 102 0 }
+		
+			culture = prairielander
+		
+			capital = 3391
+
+			plautdietsch="Wintschoden"
+		
+			c_hoodoo = {
+				color = { 45 162 223 }
+				color2 = { 20 72 156 }
+
+				plautdietsch="Steenland"
+				
+				b_drumheller_AB = {}
+				b_castor_AB = {}
+				b_hanna_AB = {}
+				b_stettler_AB = {}
+				b_oyen_AB = {}
+				b_coronation_AB = {}
+				b_trochu_AB = {}
+			}
+
+			c_battleford = {
+				color = { 87 165 96 }
+				color2 = { 20 72 156 }
+
+				plautdietsch="Schlachtstroom"
+				
+				b_north_battleford_SK = {}
+				b_rosetown_SK = {}
+				b_unity_SK = {}
+				b_cochin_SK = {}
+				b_spiritwood_SK = {}
+				b_zealandia_SK = {}
+				b_edam_SK = {}
+			}
+			
+			c_kindersley = {
+				color = { 50 151 23 }
+				color2 = { 255 232 0 }
+
+				cree = "Minahequosis"
+			
+				b_kindersley_SK = {}
+				b_eston_SK = {}
+				b_rosetown_SK = {}
+				b_kerrobert_SK = {}
+				b_eatonia_SK = {}
+				b_brock_SK = {}
+				b_alsask_SK = {}
+			}
+		}
+
+		d_palliser = {
+			color = { 87 75 81 }
+			color2 = { 0 102 0 }
+		
+			culture = prairielander
+		
+			capital = 3391
+		
+			c_medicine_hat = {
+				color = { 255 186 18 }
+				color2 = { 0 0 0 }
+
+				blackfoot = "Saamis"
+				plautdietsch="Heelmeddelhoot"
+				
+				b_medicine_hat_AB = {}
+				b_redcliff_AB = {}
+				b_seven_persons_AB = {}
+				b_bow_island_AB = {}
+				b_dunmore_AB = {}
+				b_manyberries_AB = {}
+				b_foremost_AB = {}
+			}
+			c_warner = {
+				color = { 73 141 175 }
+				color2 = { 255 255 255 }
+				blackfoot = "Aksaysim"
+				cree = "Kuskusukisay"
+				ktunaxa = "'A'kwum"
+				sioux = "Ipubinsabakabin"
+				
+				b_lethbridge_AB = {}
+				b_coaldale_AB = {}
+				b_taber_AB = {}
+				b_vauxhall_AB = {}
+				b_shelby_MT = {}
+				b_galata_MT = {}
+				b_sweet_grass_MT = {}
+				b_stirling_AB = {}
+			}
+			c_pincher_creek = {
+				color = { 132 40 10 }
+				color2 = { 255 255 255 }
+
+				blackfoot="Aapátohsipikáni"
+				plautdietsch="Kraujenast"
+				
+				b_cardston_AB = {}
+				b_magrath_AB = {}
+				b_cut_bank_MT = {}
+				b_browning_MT = {
+					ktunaxa = "Tlawat'inak"}
+				b_glenwood_AB = {}
+				b_hill_spring_AB = {}
+				b_aetna_AB = {}
 			}
 		}
 	}
@@ -887,6 +1039,7 @@ e_thunderland = {
 		midewiwin_reformed = 1000
 		
 		british = "Rupert's Land"
+		cree = "Manitou-wapow" 
 
 		d_winnipeg = {
 			color = { 71 33 0 }
@@ -902,7 +1055,6 @@ e_thunderland = {
 				holy_site = midewiwin
 				holy_site = midewiwin_reformed
 				holy_site = exovedate
-				#holy_site = cult_of_marx
 				
 				b_winnipeg_MB = {}
 				b_whiteshell_MB = {} 
@@ -1037,12 +1189,13 @@ e_thunderland = {
 				cree = "Ochapowace"
 				
 				b_melita_MB = {}
+				b_oxbow_SK = {}
 				b_boissevain_MB = {}
 				b_deloraine_MB = {}
-				b_lauder_MB = {}
-				b_reston_MB = {}
-				b_antler_ND = {}
+				b_redvers_SK = {}
+				b_carnduff_SK = {}
 				b_waskada_MB = {}
+				b_alida_SK = {}
 			}
 			c_dauphin = {
 				color = { 218 36 42 }
@@ -1050,10 +1203,10 @@ e_thunderland = {
 				
 				b_dauphin_MB = {}
 				b_russell_MB = {}
-				b_robin_MB = {}
+				b_roblin_MB = {}
 				b_neepawa_MB = {}
-				b_rossburn_MB = {}
-				b_laurier_MB = {}
+				b_minnedosa_MB = {}
+				b_rorketon_MB = {}
 				b_alonsa_MB = {}
 			}
 			c_assiniboine = {
@@ -1062,11 +1215,12 @@ e_thunderland = {
 				
 				b_brandon_MB = {}
 				b_virden_MB = {}
-				b_carman_MB = {}
-				b_gladstone_MB = {}
-				b_carberry_MB = {}
+				b_treherne_MB = {}
+				b_killarney_MB = {}
+				b_hamiota_MB = {}
 				b_wawanesa_MB = {}
 				b_glenboro_MB = {}
+				b_carberry_MB = {}
 			}
 			c_wuskwi_sipihk = {
 				color = { 153 12 192 }
@@ -1075,26 +1229,24 @@ e_thunderland = {
 				cree = "Wuskwi Sipihk"
 				
 				b_wuskwi_sipihk_MB = {}
-				b_novra_MB = {}
 				b_swan_river_MB = {}
+				b_camperville_MB = {}
 				b_mafeking_MB = {}
-				b_indian_birch_MB = {}
+				b_bowsman_MB = {}
 				b_bellsite_MB = {}
-				b_barrows_MB = {}
+				b_novra_MB = {}
 			}
 			c_paskoyac = {
 				color = { 180 151 110 }
 				color2 = { 117 35 114 }
 				
 				b_the_pas_MB = {}
+				b_flin_flon_MB = {}
 				b_cormorant_MB = {}
 				b_moose_lake_MB = {}
-				b_cranberry_portage_MB = {}
+				b_sherridon_MB = {}
 				b_wanless_MB = {}
-				b_flin_flon_MB = {}
-				b_deschambault_lake_SK = {}
-				b_pelican_narrows_SK = {}
-				b_jan_lakes_SK = {}
+				b_bakers_narrows_SK = {}
 			}
 		}
 
@@ -1105,6 +1257,9 @@ e_thunderland = {
 			culture = ojicree
 			
 			capital = 764 # Opasquia
+
+			ojibwe = "Giiwedin" 
+			algonquin = "Giiwedin" 
 			
 			c_osnaburgh = {
 				color = { 88 80 155 }
@@ -1191,8 +1346,6 @@ e_thunderland = {
 		# Crusade target weight
 		catholic = 20
 		americanist = 100
-		hamiltonian = 100
-		libertarian = 100
 		norse_pagan_reformed = 500
 		
 		pagan_coa = {

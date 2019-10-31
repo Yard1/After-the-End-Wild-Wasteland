@@ -201,10 +201,12 @@ d_high_church = {
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 
 	male_names = {
-		Thomas Rowan William John Matthew Charles Frederick Edward Randall Geoffrey Gilbert Richard Reginald Henry Roger Simon Walter Robert Stephen Theobald Dunstan Lanfranck
+		Thomas Rowan William John Matthew Charles Frederick Edward Randall Geoffrey Gilbert Richard Reginald Henry Roger Simon Walter Robert Stephen Theobald Dunstan Lanfranck 
+		Cranmer Edmund Clarendon Derwyn Howard Inglis Erasmus Wycliffe Whitaker Hopkin Healey Stuart Gower Percy Lewis Solemn Lancelot Andrewes Parker Latimer Ridley Ryle Ussher
 	}
 	female_names = {
-		Elizabeth Anne Catherine Mary Jane Victoria Matilda Margaret Charlotte Adelaide Alexandra
+		Elizabeth Anne Catherine Mary Jane Victoria Matilda Margaret Charlotte Adelaide Alexandra Linda Eleanor Hilda Melissa Riscylla Lydia Emilia Lambeth Joan Adrienne Sophia
+		Camilla
 	}
 }
 

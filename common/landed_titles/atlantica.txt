@@ -472,7 +472,6 @@ e_atlantica = {
 				b_godmanchester_QC = {}
 				b_champlain_NY = {}
 				b_ormstown_QC = {}
-				b_huntingdon_QC = {}
 			}
 			c_ticonderoga = {
 				color={ 75 100 90 }

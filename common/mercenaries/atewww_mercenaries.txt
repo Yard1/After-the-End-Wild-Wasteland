@@ -24,3 +24,10 @@ d_knights_of_lazarus_composition = {
 	knights = 400
 	archers = 300
 }
+
+d_coureurs_des_bois_composition = {
+	levy_size = 1
+	light_cavalry = 500
+	horse_archers = 200
+	heavy_infantry = 500
+}

@@ -248,6 +248,8 @@ e_canada = {
 			color2= { 255 255 20 }
 
 			capital = 1277 #Wellington
+
+			iroquois = "Attawandaron"
 			
 			c_huron = {
 				color = { 112 146 190 }
@@ -257,12 +259,14 @@ e_canada = {
 				b_seaforth_ON = {}
 				b_wingham_ON = {}
 				b_clinton_ON = {}
-				b_stratford_ON = {}
 				b_howick_ON = {}
 				b_listowel_ON = {}
 			}
 			c_simcoe = {
 				color = { 63 115 167 }
+
+				iroquois = "Ouentarionk"
+				ojibwe = "Gojijing"
 
 				b_barrie_ON = {}
 				b_collingwood_ON = {}
@@ -275,23 +279,25 @@ e_canada = {
 			c_wellington = {
 				color = { 95 145 194 }
 
-				b_kitchener_ON = {
-					deitsch = "Berlin"
-					rostmann = "Berlin"
-					dellsman = "Berlin"
-					northlander = "Berlin"
-					yiddish = "Berlin"
-				}
+				iroquois = "Unnemosah"
+				deitsch = "Blücher"
+				rostmann = "Blücher"
+				dellsman = "Blücher"
+				yiddish = "Blücher"
+
 				b_guelph_ON = {}
-				b_cambridge_ON = {}
-				b_waterloo_ON = {}
-				b_fergus_ON = {}
-				b_eramosa_ON = {}
 				b_erin_ON = {}
-				b_breslau_ON = {}
+				b_elora_ON = {}
+				b_fergus_ON = {}
+				b_palmerston_ON = {}
+				b_drayton_ON = {}
+				b_harriston_ON = {}
+				b_aberfoyle_ON = {}
 			}
 			c_bruce = {
 				color = { 62 100 132 }
+
+				ojibwe = "Nochemoweniing"
 
 				b_tobermory_ON = {}
 				b_owen_sound_ON = { 
@@ -303,6 +309,43 @@ e_canada = {
 				b_hanover_ON = {}
 				b_walkerton_ON = {}
 				b_chesley_ON = {}
+			}
+			c_waterloo = {
+				color = { 171 156 222 }
+
+				iroquos = "Kenhionhatatie"
+				deitsch = "Berlin"
+				rostmann = "Berlin"
+				dellsman = "Berlin"
+				northlander = "Berlin"
+				yiddish = "Berlin"
+
+				b_kitchener_ON = {
+					deitsch = "Berlin"
+					rostmann = "Berlin"
+					dellsman = "Berlin"
+					northlander = "Berlin"
+					yiddish = "Berlin"
+				}
+				b_cambridge_ON = {
+					deitsch = "Hespeler"
+					rostmann = "Hespeler"
+					dellsman = "Hespeler"
+					northlander = "Hespeler"
+					yiddish = "Hespeler"
+				}
+				b_waterloo_ON = {}
+				b_stratford_ON = {}
+				b_elmira_ON = {}
+				b_new_hamburg_ON = {
+					deitsch = "Neu Hamburg"
+					rostmann = "Neu Hamburg"
+					dellsman = "Neu Hamburg"
+					northlander = "Neu Hamburg"
+					yiddish = "Neu Hamburg"
+				}
+				b_breslau_ON = {}
+				b_ayr_ON = {}
 			}
 		}
 		
@@ -331,16 +374,21 @@ e_canada = {
 				holy_site = thelemic
 				holy_site = thelemic_reformed
 
+				iroquois = "Tkaronto"
+
 				b_toronto_ON = {}
 				b_york_ON = {}
-				b_thornhill_ON = {}
-				b_mimico_ON = {}
 				b_scarborough_ON = {}
 				b_etobicoke_ON = {}
 				b_downsview_ON = {}
+				b_leaside_ON = {}
+				b_thornhill_ON = {}
 			}
 			c_oshawa = {
 				color = { 240 200 66 }
+
+				ojibwe = "Aazhaway"		
+				iroquois = "Gandatsetiagon"
 
 				b_oshawa_ON = {}
 				b_pickering_ON = {}
@@ -387,6 +435,8 @@ e_canada = {
 			c_halton = {
 				color = { 45 177 98 }
 
+				ojibwe = "Nazhesahgewayyong"
+
 				b_oakville_ON = {}
 				b_burlington_ON = {}
 				b_milton_ON = {}
@@ -397,20 +447,17 @@ e_canada = {
 			}
 			c_welland = {
 				color = { 252 174 12 }
+
+				ojibwe = "Kahkejewung"
+				iroquois = "Erige"
 				
 				b_thorold_ON = {}
-				b_niagara_falls_ON = {
-					used_for_dynasty_names = no
-				}
+				b_niagara_falls_ON = {}
 				b_st_catharines_ON = {}
 				b_grimsby_ON = {}
 				b_welland_ON = {}
-				b_port_colborne_ON = {
-					used_for_dynasty_names = no
-				}
-				b_fort_erie_ON = {
-					used_for_dynasty_names = no
-				}
+				b_port_colborne_ON = {}
+				b_fort_erie_ON = {}
 				b_pelham_ON = {}
 			}
 		}
@@ -638,17 +685,18 @@ e_canada = {
 		british = "Lower Canada"
 		algonquin = "Kébec"
 		ojibwe = "Kébec"
+		mikmaq = "Kepék"
 
 		capital = 1199 # Cap Diamant / Quebec City
 		
 		# Crusade target weight
 		catholic = 5
 		ursuline = 5000
-		confederated = 4000
 		americanist = 5
 		jeffersonian = 5
 		hamiltonian = 5
 		libertarian = 5
+		confederated = 4000
 		rust_cultist_reformed = 5
 		occultist_reformed = 50
 		thelemic_reformed = 50
@@ -750,6 +798,9 @@ e_canada = {
 				holy_site = ursuline
 				holy_site = confederated
 				holy_site = exovedate
+				
+				iroquois = "Kawenote"
+				ojibwe = "Moniyaang"
 
 				b_montreal_QC = {
 					quebecois = "Montréal"
@@ -1119,7 +1170,6 @@ e_canada = {
 				b_gracefield_QC = {}
 				b_grand_remous_QC = {}
 				b_lac_marguerite_QC = {}
-				b_ferme_neuve_QC = {}
 				b_deleage_QC = {}
 				b_egan_sud_QC = {}
 			}
@@ -1134,7 +1184,6 @@ e_canada = {
 				b_rapides_des_joachims_QC = {}
 				b_lac_nilgaut_QC = {}
 				b_demers_centre_QC = {}
-				b_quyon_QC = {}
 			}
 		}
 		d_laurentides = {
@@ -1269,6 +1318,7 @@ e_canada = {
 		# Crusade target weight
 		ursuline = 500
 		confederated = 500
+		americanist = 5
 		jeffersonian = 5
 		hamiltonian = 5
 		libertarian = 5
@@ -1572,11 +1622,9 @@ e_canada = {
 			color = { 244 164 96 }
 			color2= { 255 255 20 }
 			capital = 610
-
 			c_sable = {
 				color = { 194 178 128 }
 				color2= { 255 255 20 }
-
 				quebecois = "Île de Sable"
 				cajun = "Île de Sable"
 				acadien = "Île de Sable"
@@ -1605,13 +1653,15 @@ e_canada = {
 			haitian = "Île-du-Prince-Édouard"
 			creole = "Île-du-Prince-Édouard"
 			maritimer = "Eilean Eòin"
-			mikmaq = "Pigtogeoag"
+			mikmaq = "Epekwitk"
 			newfie = "Oileán Phrionsa Éadbhard"
 			gael_dubh = "Oileán Phrionsa Éadbhard"
 
 			c_epekwitk = {
 				color = { 36 187 82 }
 				color2= { 255 255 20 }
+
+				mikmaq = "Piktuk"
 
 				b_charlottetown_PEI = {acadien = "Port-Lajoie"}
 				b_cornwall_PEI = {}
@@ -1628,6 +1678,10 @@ e_canada = {
 			c_summerside = {
 				color = { 39 167 78 }
 				color2= { 255 255 20 }
+
+				mikmaq = "Mniku"
+				quebecois = "Malpeque"
+				acadien = "Malpeque"
 
 				b_summerside_PEI = {}
 				b_alberton_PEI = {}
@@ -1873,7 +1927,7 @@ e_canada = {
 		# Crusade target weight
 		ursuline = 500 #contains a holy site now
 		confederated = 500
-		midewiwin_reformed = 500
+		midewiwin_reformed  = 500
 		rust_cultist_reformed = 5
 		norse_pagan_reformed = 50
 
@@ -1920,6 +1974,8 @@ e_canada = {
 			c_manitoulin = {
 				color = { 152 24 108 }
 				color2= { 255 255 255 }
+
+				iroquois = "Ekaenouton"
 
 				b_mindemoya_ON = {}
 				b_wikwemikong_ON = {}
