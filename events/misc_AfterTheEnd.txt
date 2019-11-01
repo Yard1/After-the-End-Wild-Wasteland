@@ -297,6 +297,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = terreneuvien
+			}
+			modifier = {
+				factor = 0
 				culture = creole
 			}
 			modifier = {
@@ -917,6 +921,10 @@ character_event = {
 			modifier = {
 				factor = 5
 				culture = acadien
+			}
+			modifier = {
+				factor = 5
+				culture = terreneuvien
 			}
 			modifier = {
 				factor = 45
@@ -1542,6 +1550,10 @@ character_event = {
 				culture = acadien
 			}
 			modifier = {
+				factor = 5
+				culture = terreneuvien
+			}
+			modifier = {
 				factor = 15
 				culture = creole
 			}
@@ -2165,6 +2177,10 @@ character_event = {
 				culture = acadien
 			}
 			modifier = {
+				factor = 5
+				culture = terreneuvien
+			}
+			modifier = {
 				factor = 0
 				culture = creole
 			}
@@ -2786,6 +2802,10 @@ character_event = {
 			modifier = {
 				factor = 5
 				culture = acadien
+			}
+			modifier = {
+				factor = 5
+				culture = terreneuvien
 			}
 			modifier = {
 				factor = 0
@@ -3412,6 +3432,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = terreneuvien
+			}
+			modifier = {
+				factor = 0
 				culture = creole
 			}
 			modifier = {
@@ -4028,6 +4052,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = acadien
+			}
+			modifier = {
+				factor = 0
+				culture = terreneuvien
 			}
 			modifier = {
 				factor = 0
@@ -4654,6 +4682,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = terreneuvien
+			}
+			modifier = {
+				factor = 0
 				culture = creole
 			}
 			modifier = {
@@ -5270,6 +5302,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = acadien
+			}
+			modifier = {
+				factor = 0
+				culture = terreneuvien
 			}
 			modifier = {
 				factor = 20
@@ -5896,6 +5932,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = terreneuvien
+			}
+			modifier = {
+				factor = 0
 				culture = creole
 			}
 			modifier = {
@@ -6516,6 +6556,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = acadien
+			}
+			modifier = {
+				factor = 0
+				culture = terreneuvien
 			}
 			modifier = {
 				factor = 0
@@ -7142,6 +7186,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = terreneuvien
+			}
+			modifier = {
+				factor = 0
 				culture = creole
 			}
 			modifier = {
@@ -7765,6 +7813,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = terreneuvien
+			}
+			modifier = {
+				factor = 0
 				culture = creole
 			}
 			modifier = {
@@ -8369,6 +8421,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = acadien
+			}
+			modifier = {
+				factor = 0
+				culture = terreneuvien
 			}
 			modifier = {
 				factor = 0
@@ -8988,6 +9044,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				culture = acadien
+			}
+			modifier = {
+				factor = 0
+				culture = terreneuvien
 			}
 			modifier = {
 				factor = 0
@@ -9614,6 +9674,10 @@ character_event = {
 			}
 			modifier = {
 				factor = 0
+				culture = terreneuvien
+			}
+			modifier = {
+				factor = 0
 				culture = creole
 			}
 			modifier = {
@@ -10234,6 +10298,10 @@ character_event = {
 			modifier = {
 				factor = 80
 				culture = acadien
+			}
+			modifier = {
+				factor = 80
+				culture = terreneuvien
 			}
 			modifier = {
 				factor = 20
