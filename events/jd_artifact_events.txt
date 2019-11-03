@@ -70,12 +70,7 @@ character_event = {
 				random_list = {
 					50 = {
 						modifier = {
-							NOT = {
-								has_game_rule = {
-									name = gender
-									value = all
-								}
-							}
+							PREV = { gender_equality_trigger = no }
 							factor = 0.05
 						}
 						create_character = {
@@ -89,6 +84,10 @@ character_event = {
 						}
 					}
 					50 = {
+						modifier = {
+							PREV = { matriarchal_religion = yes }
+							factor = 0.05
+						}
 						create_character = {
 							age = 32
 							culture = PREV

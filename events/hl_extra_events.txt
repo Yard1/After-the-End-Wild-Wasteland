@@ -323,6 +323,20 @@ character_event = {
 	picture = GFX_evt_lunatic
 	
 	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { matriarchal_religion = yes }
+			set_character_flag = female_new_char
+		}
+		else_if = {
+			limit = { gender_equality_trigger = yes }
+			random = {
+				chance = 50
+				set_character_flag = female_new_char
+			}
+		}
+	}
 	
 	option = { # Give gift
 		name = EVTOPTA_HL_8008
@@ -357,16 +371,33 @@ character_event = {
 		ai_chance = {
 			factor = 0
 		}
-		create_character = {
-			random_traits = yes
-			dynasty = NONE
-			female = no
-			age = 40
-			religion = ROOT
-			culture = ROOT
-			trait = brilliant_strategist
-			attributes = {
-				martial = 10
+		if = {
+			limit = { has_character_flag = female_new_char }
+			create_character = {
+				random_traits = yes
+				dynasty = NONE
+				female = yes
+				age = 40
+				religion = ROOT
+				culture = ROOT
+				trait = brilliant_strategist
+				attributes = {
+					martial = 10
+				}
+			}
+		}
+		else = {
+			create_character = {
+				random_traits = yes
+				dynasty = NONE
+				female = no
+				age = 40
+				religion = ROOT
+				culture = ROOT
+				trait = brilliant_strategist
+				attributes = {
+					martial = 10
+				}
 			}
 		}
 		new_character = { 
@@ -382,6 +413,10 @@ character_event = {
 		hidden_tooltip = {
 			character_event = { id = HLF.8010 days = 5 }
 		}
+	}
+
+	after = {
+		clr_character_flag = female_new_char
 	}
 }
 

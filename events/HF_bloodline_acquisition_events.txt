@@ -1523,25 +1523,75 @@ character_event = { # Meet Wandering Wise Man
 			}
 		}
 		else = {
-			create_character = {
-				religion = event_target:child_of_destiny
-				culture = random
-				dynasty = none
-				age = 43
-				random_traits = yes
-				female = no
-				attributes = {
-					learning = 12
+			if = {
+				limit = {
+					event_target:child_of_destiny = { matriarchal_religion = yes }
 				}
-				health = 6
-				trait = mastermind_theologian 
-				trait = genius
-				trait = adventurer
-				trait = one_eyed
-				trait = celibate
-				flag = is_court_physician
-				flag = physician_wandering_genius
-				flag = ai_flag_refuse_conversion
+				create_character = {
+					religion = event_target:child_of_destiny
+					culture = random
+					dynasty = none
+					age = 43
+					random_traits = yes
+					female = yes
+					attributes = {
+						learning = 12
+					}
+					health = 6
+					trait = mastermind_theologian 
+					trait = genius
+					trait = adventurer
+					trait = one_eyed
+					trait = celibate
+					flag = is_court_physician
+					flag = physician_wandering_genius
+					flag = ai_flag_refuse_conversion
+				}
+			}
+			else_if = {
+				event_target:child_of_destiny = { gender_equality_trigger = yes }
+				create_character = {
+					religion = event_target:child_of_destiny
+					culture = random
+					dynasty = none
+					age = 43
+					random_traits = yes
+					female = 50
+					attributes = {
+						learning = 12
+					}
+					health = 6
+					trait = mastermind_theologian 
+					trait = genius
+					trait = adventurer
+					trait = one_eyed
+					trait = celibate
+					flag = is_court_physician
+					flag = physician_wandering_genius
+					flag = ai_flag_refuse_conversion
+				}
+			}
+			else = {
+				create_character = {
+					religion = event_target:child_of_destiny
+					culture = random
+					dynasty = none
+					age = 43
+					random_traits = yes
+					female = no
+					attributes = {
+						learning = 12
+					}
+					health = 6
+					trait = mastermind_theologian 
+					trait = genius
+					trait = adventurer
+					trait = one_eyed
+					trait = celibate
+					flag = is_court_physician
+					flag = physician_wandering_genius
+					flag = ai_flag_refuse_conversion
+				}
 			}
 			new_character = {
 				set_character_flag = no_court_invites

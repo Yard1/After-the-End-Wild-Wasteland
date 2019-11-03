@@ -8887,6 +8887,13 @@ character_event = {
 						character = FROM
 						is_married = ROOT
 						is_close_relative = ROOT
+						has_character_flag = eternal_life_mystic
+						trait = horse
+						trait = cat
+						trait = dog
+						has_character_modifier = in_seclusion
+						has_character_modifier = elder_long_life_modifier
+						immortal = yes
 					}
 					is_adult = yes
 					prisoner = no

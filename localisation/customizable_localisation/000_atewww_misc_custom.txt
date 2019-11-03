@@ -67,3 +67,123 @@ defined_text = {
 		localisation_key = ""
 	}
 }
+
+defined_text = {
+	name = GetSheHeFlag
+
+	text = {
+		localisation_key = "she"
+		trigger = {
+			OR = {
+				has_character_flag = female_architect
+				has_character_flag = female_new_char
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = "he"
+	}
+}
+
+defined_text = {
+	name = GetSheHeFlagCap
+
+	text = {
+		localisation_key = "She"
+		trigger = {
+			OR = {
+				has_character_flag = female_architect
+				has_character_flag = female_new_char
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = "He"
+	}
+}
+
+defined_text = {
+	name = GetHerHimFlag
+
+	text = {
+		localisation_key = "her"
+		trigger = {
+			OR = {
+				has_character_flag = female_architect
+				has_character_flag = female_new_char
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = "him"
+	}
+}
+
+defined_text = {
+	name = GetHerHimFlagCap
+
+	text = {
+		localisation_key = "Her"
+		trigger = {
+			OR = {
+				has_character_flag = female_architect
+				has_character_flag = female_new_char
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = "Him"
+	}
+}
+
+defined_text = {
+	name = GetHerHisFlag
+
+	text = {
+		localisation_key = "her"
+		trigger = {
+			OR = {
+				has_character_flag = female_architect
+				has_character_flag = female_new_char
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = "his"
+	}
+}
+
+defined_text = {
+	name = GetHerHisFlagCap
+
+	text = {
+		localisation_key = "Her"
+		trigger = {
+			OR = {
+				has_character_flag = female_architect
+				has_character_flag = female_new_char
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = "His"
+	}
+}
+
+
+defined_text = {
+	name = GetWomanManFlag
+
+	text = {
+		localisation_key = "woman"
+		trigger = {
+			OR = {
+				has_character_flag = female_architect
+				has_character_flag = female_new_char
+			}
+		}
+	}
+	fallback_text = {
+		localisation_key = "man"
+	}
+}

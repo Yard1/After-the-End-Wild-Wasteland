@@ -39,6 +39,17 @@ character_event = {
 	immediate = {
 		clr_character_flag = looking_for_court_physician
 		set_character_flag = found_court_physician
+		if = {
+			limit = { matriarchal_religion = yes }
+			set_character_flag = female_new_char
+		}
+		else_if = {
+			limit = { gender_equality_trigger = yes }
+			random = {
+				chance = 50
+				set_character_flag = female_new_char
+			}
+		}
 		random_list = {
 			4 = { # Drunk Village Physician (Unschooled, 18+ Learning)
 				modifier = {
@@ -50,21 +61,42 @@ character_event = {
 				}
 				random_list = {
 					75 = { # Same Religion & Culture as ROOT
-						create_character = {
-							religion = ROOT
-							culture = ROOT
-							dynasty = none
-							age = 35
-							random_traits = yes
-							female = no
-							attributes = {
-								learning = 20
+						if = {
+							limit = { has_character_flag = female_new_char }
+							create_character = {
+								religion = ROOT
+								culture = ROOT
+								dynasty = none
+								age = 35
+								random_traits = yes
+								female = yes
+								attributes = {
+									learning = 20
+								}
+								health = 6
+								trait = detached_priest
+								trait = drunkard
+								flag = is_court_physician
+								flag = physician_village_drunkard
 							}
-							health = 6
-							trait = detached_priest
-							trait = drunkard
-							flag = is_court_physician
-							flag = physician_village_drunkard
+						}
+						else = {
+							create_character = {
+								religion = ROOT
+								culture = ROOT
+								dynasty = none
+								age = 35
+								random_traits = yes
+								female = no
+								attributes = {
+									learning = 20
+								}
+								health = 6
+								trait = detached_priest
+								trait = drunkard
+								flag = is_court_physician
+								flag = physician_village_drunkard
+							}
 						}
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
@@ -378,27 +410,54 @@ character_event = {
 					}
 					save_event_target_as = physician_forest_target
 				}
-				create_character = {
-					religion = ROOT
-					culture = ROOT
-					dynasty = none
-					age = 40
-					random_traits = yes
-					female = no
-					attributes = {
-						learning = 8
-						martial = 1
+				if = {
+					limit = { has_character_flag = female_new_char }
+					create_character = {
+						religion = ROOT
+						culture = ROOT
+						dynasty = none
+						age = 40
+						random_traits = yes
+						female = yes
+						attributes = {
+							learning = 8
+							martial = 1
+						}
+						health = 6
+						trait = martial_cleric 
+						trait = physician
+						trait = ugly
+						trait = dwarf
+						trait = shrewd
+						trait = shy
+						flag = is_court_physician
+						flag = physician_wise_dwarf
+						flag = ai_flag_refuse_conversion
 					}
-					health = 6
-					trait = martial_cleric 
-					trait = physician
-					trait = ugly
-					trait = dwarf
-					trait = shrewd
-					trait = shy
-					flag = is_court_physician
-					flag = physician_wise_dwarf
-					flag = ai_flag_refuse_conversion
+				}
+				else = {
+					create_character = {
+						religion = ROOT
+						culture = ROOT
+						dynasty = none
+						age = 40
+						random_traits = yes
+						female = no
+						attributes = {
+							learning = 8
+							martial = 1
+						}
+						health = 6
+						trait = martial_cleric 
+						trait = physician
+						trait = ugly
+						trait = dwarf
+						trait = shrewd
+						trait = shy
+						flag = is_court_physician
+						flag = physician_wise_dwarf
+						flag = ai_flag_refuse_conversion
+					}
 				}
 				new_character = {
 					character_event = { id = misc.3 } # Diversity
@@ -995,21 +1054,42 @@ character_event = {
 				}
 				random_list = {
 					75 = { # Same Religion & Culture as ROOT
-						create_character = {
-							religion = ROOT
-							culture = ROOT
-							dynasty = none
-							age = 28
-							random_traits = yes
-							female = no
-							attributes = {
-								learning = 9
+						if = {
+							limit = { has_character_flag = female_new_char }
+							create_character = {
+								religion = ROOT
+								culture = ROOT
+								dynasty = none
+								age = 28
+								random_traits = yes
+								female = yes
+								attributes = {
+									learning = 9
+								}
+								health = 6
+								trait = naive_appeaser
+								trait = mystic
+								flag = is_court_physician
+								flag = physician_condemned_sorcerer
 							}
-							health = 6
-							trait = naive_appeaser
-							trait = mystic
-							flag = is_court_physician
-							flag = physician_condemned_sorcerer
+						}
+						else = {
+							create_character = {
+								religion = ROOT
+								culture = ROOT
+								dynasty = none
+								age = 28
+								random_traits = yes
+								female = no
+								attributes = {
+									learning = 9
+								}
+								health = 6
+								trait = naive_appeaser
+								trait = mystic
+								flag = is_court_physician
+								flag = physician_condemned_sorcerer
+							}
 						}
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
@@ -1301,22 +1381,70 @@ character_event = {
 					save_event_target_as = clergyman_temple_target
 					}
 				}
-				create_character = {
-					religion = ROOT
-					culture = ROOT
-					dynasty = none
-					age = 60
-					random_traits = yes
-					female = no
-					attributes = {
-						learning = 4
+				if = {
+					limit = {
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = no
 					}
-					health = 7
-					trait = mastermind_theologian 
-					trait = mystic
-					trait = cynical
-					flag = is_court_physician
-					flag = physician_cynical_clergyman
+					create_character = {
+						religion = ROOT
+						culture = ROOT
+						dynasty = none
+						age = 60
+						random_traits = yes
+						female = yes
+						attributes = {
+							learning = 4
+						}
+						health = 7
+						trait = mastermind_theologian 
+						trait = mystic
+						trait = cynical
+						flag = is_court_physician
+						flag = physician_cynical_clergyman
+					}
+				}
+				else_if = {
+					limit = {
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = yes
+					}
+					create_character = {
+						religion = ROOT
+						culture = ROOT
+						dynasty = none
+						age = 60
+						random_traits = yes
+						female = 50
+						attributes = {
+							learning = 4
+						}
+						health = 7
+						trait = mastermind_theologian 
+						trait = mystic
+						trait = cynical
+						flag = is_court_physician
+						flag = physician_cynical_clergyman
+					}
+				}
+				else = {
+					create_character = {
+						religion = ROOT
+						culture = ROOT
+						dynasty = none
+						age = 60
+						random_traits = yes
+						female = no
+						attributes = {
+							learning = 4
+						}
+						health = 7
+						trait = mastermind_theologian 
+						trait = mystic
+						trait = cynical
+						flag = is_court_physician
+						flag = physician_cynical_clergyman
+					}
 				}
 				new_character = {
 					character_event = { id = misc.3 } # Diversity
@@ -1477,6 +1605,10 @@ character_event = {
 				}
 				random_list = {
 					75 = {
+						modifier = {
+							factor = 0.667
+							gender_equality_trigger = yes
+						}
 						create_character = {
 							religion = ROOT
 							culture = ROOT
@@ -1546,6 +1678,10 @@ character_event = {
 						}
 					}
 					25 = {
+						modifier = {
+							factor = 3
+							matriarchal_religion = yes
+						}
 						create_character = {
 							religion = ROOT
 							culture = ROOT
@@ -1624,25 +1760,50 @@ character_event = {
 						NOT = { had_character_flag = { flag = got_physician_wandering_genius days = 3650 } }
 					}
 				}
-				create_character = {
-					religion = ROOT
-					culture = random
-					dynasty = none
-					age = 43
-					random_traits = yes
-					female = no
-					attributes = {
-						learning = 12
+				if = {
+					limit = { has_character_flag = female_new_char }
+					create_character = {
+						religion = ROOT
+						culture = random
+						dynasty = none
+						age = 43
+						random_traits = yes
+						female = yes
+						attributes = {
+							learning = 12
+						}
+						health = 6
+						trait = mastermind_theologian 
+						trait = genius
+						trait = adventurer
+						trait = one_eyed
+						trait = celibate
+						flag = is_court_physician
+						flag = physician_wandering_genius
+						flag = ai_flag_refuse_conversion
 					}
-					health = 6
-					trait = mastermind_theologian 
-					trait = genius
-					trait = adventurer
-					trait = one_eyed
-					trait = celibate
-					flag = is_court_physician
-					flag = physician_wandering_genius
-					flag = ai_flag_refuse_conversion
+				}
+				else = {
+					create_character = {
+						religion = ROOT
+						culture = random
+						dynasty = none
+						age = 43
+						random_traits = yes
+						female = no
+						attributes = {
+							learning = 12
+						}
+						health = 6
+						trait = mastermind_theologian 
+						trait = genius
+						trait = adventurer
+						trait = one_eyed
+						trait = celibate
+						flag = is_court_physician
+						flag = physician_wandering_genius
+						flag = ai_flag_refuse_conversion
+					}
 				}
 				new_character = {
 					character_event = { id = misc.3 } # Diversity
@@ -1675,6 +1836,10 @@ character_event = {
 				}
 				random_list = {
 					75 = {
+						modifier = {
+							factor = 0.667
+							gender_equality_trigger = yes
+						}
 						create_character = {
 							religion = ROOT
 							culture = ROOT
@@ -1723,6 +1888,10 @@ character_event = {
 						}
 					}
 					25 = {
+						modifier = {
+							factor = 3
+							matriarchal_religion = yes
+						}
 						create_character = {
 							religion = ROOT
 							culture = ROOT
@@ -2018,25 +2187,79 @@ character_event = {
 					save_event_target_as = zealot_temple_target
 					}
 				}
-				create_character = {
-					religion = ROOT
-					culture = ROOT
-					dynasty = none
-					age = 54
-					random_traits = yes
-					female = no
-					attributes = {
-						learning = 2
+				if = {
+					limit = {
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = no
 					}
-					health = 6
-					trait = mastermind_theologian 
-					trait = scholar
-					trait = zealous
-					trait = cruel
-					trait = possessed
-					trait = stubborn
-					flag = is_court_physician
-					flag = physician_insane_zealot
+					create_character = {
+						religion = ROOT
+						culture = ROOT
+						dynasty = none
+						age = 54
+						random_traits = yes
+						female = yes
+						attributes = {
+							learning = 2
+						}
+						health = 6
+						trait = mastermind_theologian 
+						trait = scholar
+						trait = zealous
+						trait = cruel
+						trait = possessed
+						trait = stubborn
+						flag = is_court_physician
+						flag = physician_insane_zealot
+					}
+				}
+				else_if = {
+					limit = {
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = yes
+					}
+					create_character = {
+						religion = ROOT
+						culture = ROOT
+						dynasty = none
+						age = 54
+						random_traits = yes
+						female = 50
+						attributes = {
+							learning = 2
+						}
+						health = 6
+						trait = mastermind_theologian 
+						trait = scholar
+						trait = zealous
+						trait = cruel
+						trait = possessed
+						trait = stubborn
+						flag = is_court_physician
+						flag = physician_insane_zealot
+					}
+				}
+				else = {
+					create_character = {
+						religion = ROOT
+						culture = ROOT
+						dynasty = none
+						age = 54
+						random_traits = yes
+						female = no
+						attributes = {
+							learning = 2
+						}
+						health = 6
+						trait = mastermind_theologian 
+						trait = scholar
+						trait = zealous
+						trait = cruel
+						trait = possessed
+						trait = stubborn
+						flag = is_court_physician
+						flag = physician_insane_zealot
+					}
 				}
 				new_character = {
 					character_event = { id = misc.3 } # Diversity
@@ -2093,24 +2316,48 @@ character_event = {
 						NOT = { had_character_flag = { flag = got_physician_well_traveled_pilgrim days = 3650 } }
 					}
 				}
-				create_character = {
-					religion = ROOT
-					culture = ROOT
-					dynasty = none
-					age = 41
-					random_traits = yes
-					female = no
-					attributes = {
-						learning = 6
+				if = {
+					limit = { has_character_flag = female_new_char }
+					create_character = {
+						religion = ROOT
+						culture = ROOT
+						dynasty = none
+						age = 41
+						random_traits = yes
+						female = yes
+						attributes = {
+							learning = 6
+						}
+						health = 6
+						trait = scholarly_theologian 
+						trait = mystic
+						trait = pilgrim
+						trait = scarred
+						trait = humble
+						flag = is_court_physician
+						flag = physician_well_traveled_pilgrim
 					}
-					health = 6
-					trait = scholarly_theologian 
-					trait = mystic
-					trait = pilgrim
-					trait = scarred
-					trait = humble
-					flag = is_court_physician
-					flag = physician_well_traveled_pilgrim
+				}
+				else = {
+					create_character = {
+						religion = ROOT
+						culture = ROOT
+						dynasty = none
+						age = 41
+						random_traits = yes
+						female = no
+						attributes = {
+							learning = 6
+						}
+						health = 6
+						trait = scholarly_theologian 
+						trait = mystic
+						trait = pilgrim
+						trait = scarred
+						trait = humble
+						flag = is_court_physician
+						flag = physician_well_traveled_pilgrim
+					}
 				}
 				new_character = {
 					character_event = { id = misc.3 } # Diversity
@@ -2189,21 +2436,42 @@ character_event = {
 					save_event_target_as = student_city_target
 					}
 				}
-				create_character = {
-					religion = ROOT
-					culture = ROOT
-					dynasty = none
-					age = 19
-					random_traits = yes
-					female = no
-					attributes = {
-						learning = 2
+				if = {
+					limit = { has_character_flag = female_new_char }
+					create_character = {
+						religion = ROOT
+						culture = ROOT
+						dynasty = none
+						age = 19
+						random_traits = yes
+						female = yes
+						attributes = {
+							learning = 2
+						}
+						health = 6
+						trait = martial_cleric 
+						trait = physician
+						flag = is_court_physician
+						flag = physician_student_of_medicine
 					}
-					health = 6
-					trait = martial_cleric 
-					trait = physician
-					flag = is_court_physician
-					flag = physician_student_of_medicine
+				}
+				else = {
+					create_character = {
+						religion = ROOT
+						culture = ROOT
+						dynasty = none
+						age = 19
+						random_traits = yes
+						female = no
+						attributes = {
+							learning = 2
+						}
+						health = 6
+						trait = martial_cleric 
+						trait = physician
+						flag = is_court_physician
+						flag = physician_student_of_medicine
+					}
 				}
 				new_character = {
 					character_event = { id = misc.3 } # Diversity
@@ -2255,41 +2523,46 @@ character_event = {
 						NOT = { had_character_flag = { flag = got_physician_blind_miracle_worker days = 3650 } }
 					}
 				}
-				create_character = {
-					religion = ROOT
-					culture = ROOT
-					dynasty = none
-					age = 37
-					random_traits = yes
-					female = no
-					attributes = {
-						learning = 15
-					}
-					health = 6
-					trait = martial_cleric
-					trait = mystic
-					trait = blinded
-					flag = is_court_physician
-					flag = physician_blind_miracle_worker
-				}
 				random_list = {
 					75 = { # Same Religion & Culture as ROOT
-						create_character = {
-							religion = ROOT
-							culture = ROOT
-							dynasty = none
-							age = 37
-							random_traits = yes
-							female = no
-							attributes = {
-								learning = 15
+						if = {
+							limit = { has_character_flag = female_new_char }
+							create_character = {
+								religion = ROOT
+								culture = ROOT
+								dynasty = none
+								age = 37
+								random_traits = yes
+								female = yes
+								attributes = {
+									learning = 15
+								}
+								health = 6
+								trait = martial_cleric
+								trait = mystic
+								trait = blinded
+								flag = is_court_physician
+								flag = physician_blind_miracle_worker
 							}
-							health = 6
-							trait = martial_cleric
-							trait = mystic
-							trait = blinded
-							flag = is_court_physician
-							flag = physician_blind_miracle_worker
+						}
+						else = {
+							create_character = {
+								religion = ROOT
+								culture = ROOT
+								dynasty = none
+								age = 37
+								random_traits = yes
+								female = no
+								attributes = {
+									learning = 15
+								}
+								health = 6
+								trait = martial_cleric
+								trait = mystic
+								trait = blinded
+								flag = is_court_physician
+								flag = physician_blind_miracle_worker
+							}
 						}
 						new_character = {
 							character_event = { id = misc.3 } # Diversity
@@ -2561,26 +2834,52 @@ character_event = {
 						NOT = { had_character_flag = { flag = got_physician_field_surgeon days = 3650 } }
 					}
 				}
-				create_character = {
-					religion = ROOT
-					culture = ROOT
-					dynasty = none
-					age = 30
-					random_traits = yes
-					female = no
-					attributes = {
-						martial = 8
-						learning = 15
+				if = {
+					limit = { has_character_flag = female_new_char }
+					create_character = {
+						religion = ROOT
+						culture = ROOT
+						dynasty = none
+						age = 30
+						random_traits = yes
+						female = yes
+						attributes = {
+							martial = 8
+							learning = 15
+						}
+						health = 6
+						trait = tough_soldier 
+						trait = physician
+						trait = scarred
+						trait = robust
+						trait = wroth
+						trait = cruel
+						flag = is_court_physician
+						flag = physician_field_surgeon
 					}
-					health = 6
-					trait = tough_soldier 
-					trait = physician
-					trait = scarred
-					trait = robust
-					trait = wroth
-					trait = cruel
-					flag = is_court_physician
-					flag = physician_field_surgeon
+				}
+				else = {
+					create_character = {
+						religion = ROOT
+						culture = ROOT
+						dynasty = none
+						age = 30
+						random_traits = yes
+						female = no
+						attributes = {
+							martial = 8
+							learning = 15
+						}
+						health = 6
+						trait = tough_soldier 
+						trait = physician
+						trait = scarred
+						trait = robust
+						trait = wroth
+						trait = cruel
+						flag = is_court_physician
+						flag = physician_field_surgeon
+					}
 				}
 				new_character = {
 					character_event = { id = misc.3 } # Diversity
@@ -3139,6 +3438,7 @@ character_event = {
 				}
 			}
 		}
+		clr_character_flag = female_new_char
 	}
 }
 

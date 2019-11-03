@@ -11033,15 +11033,12 @@ character_event = {
 			random_list = {
 				45 = {
 					gain_weight_small_effect = yes
-					weight_trait_check_effect = yes
 				}
 				35 = {
 					gain_weight_medium_effect = yes
-					weight_trait_check_effect = yes
 				}
 				20 = {
 					gain_weight_large_effect = yes
-					weight_trait_check_effect = yes
 				}
 			}
 		}
@@ -11060,15 +11057,12 @@ character_event = {
 			random_list = {
 				60 = {
 					gain_weight_small_effect = yes
-					weight_trait_check_effect = yes
 				}
 				30 = {
 					gain_weight_medium_effect = yes
-					weight_trait_check_effect = yes
 				}
 				10 = {
 					gain_weight_large_effect = yes
-					weight_trait_check_effect = yes
 				}
 			}
 		}
@@ -11076,18 +11070,16 @@ character_event = {
 			random_list = {
 				80 = {
 					gain_weight_small_effect = yes
-					weight_trait_check_effect = yes
 				}
 				15 = {
 					gain_weight_medium_effect = yes
-					weight_trait_check_effect = yes
 				}
 				5 = {
 					gain_weight_large_effect = yes
-					weight_trait_check_effect = yes
 				}
 			}
 		}
+		weight_trait_check_effect = yes
 	}
 	
 	#Remove weight
@@ -11173,15 +11165,12 @@ character_event = {
 			random_list = {
 				45 = {
 					lose_weight_small_effect = yes
-					weight_trait_check_effect = yes
 				}
 				35 = {
 					lose_weight_medium_effect = yes
-					weight_trait_check_effect = yes
 				}
 				20 = {
 					lose_weight_large_effect = yes
-					weight_trait_check_effect = yes
 				}
 			}
 		}
@@ -11199,15 +11188,12 @@ character_event = {
 			random_list = {
 				60 = {
 					lose_weight_small_effect = yes
-					weight_trait_check_effect = yes
 				}
 				30 = {
 					lose_weight_medium_effect = yes
-					weight_trait_check_effect = yes
 				}
 				10 = {
 					lose_weight_large_effect = yes
-					weight_trait_check_effect = yes
 				}
 			}
 		}
@@ -11215,18 +11201,16 @@ character_event = {
 			random_list = {
 				80 = {
 					lose_weight_small_effect = yes
-					weight_trait_check_effect = yes
 				}
 				15 = {
 					lose_weight_medium_effect = yes
-					weight_trait_check_effect = yes
 				}
 				5 = {
 					lose_weight_large_effect = yes
-					weight_trait_check_effect = yes
 				}
 			}
 		}
+		weight_trait_check_effect = yes
 	}	
 }
 
@@ -11291,12 +11275,12 @@ character_event = {
 	desc = "Game initialization"
 	is_triggered_only = yes
 	hide_window = yes
+	religion = catholic # only for the Pope
 	
 	trigger = {
 		is_save_game = no
 		NOT = { has_global_flag = scenario_initialized }
 		controls_religion = yes
-		religion = catholic # only for the Pope
 	}
 	
 	option = {

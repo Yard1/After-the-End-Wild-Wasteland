@@ -873,20 +873,53 @@ character_event = {
 	is_triggered_only = yes
 	
 	desc = EVTDESC_WoL_5040
-	
-	option = {
-		name = EVTOPTA_WoL_5040  # Invite him to your court
-		create_character = {
-			random_traits = yes
-			dynasty = NONE
-			religion = ROOT
-			culture = ROOT
-			female = no
-			age = 36
-			trait = hunter
-			trait = brave
-			attributes = {
-				martial = 8
+
+	immediate = {
+		if = {
+			limit = { matriarchal_religion = yes }
+			create_character = {
+				random_traits = yes
+				dynasty = NONE
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 36
+				trait = hunter
+				trait = brave
+				attributes = {
+					martial = 8
+				}
+			}
+		}
+		else_if = {
+			limit = { gender_equality_trigger = yes }
+			create_character = {
+				random_traits = yes
+				dynasty = NONE
+				religion = ROOT
+				culture = ROOT
+				female = 50
+				age = 36
+				trait = hunter
+				trait = brave
+				attributes = {
+					martial = 8
+				}
+			}
+		}
+		else = {
+			create_character = {
+				random_traits = yes
+				dynasty = NONE
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 36
+				trait = hunter
+				trait = brave
+				attributes = {
+					martial = 8
+				}
 			}
 		}
 		new_character = {
@@ -894,6 +927,14 @@ character_event = {
 			character_event = { id = misc.4 } # Physique
 			hidden_tooltip = { add_random_education_trait = martial }
 			give_nickname = nick_the_hunter
+			save_event_target_as = hunter_char
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_WoL_5040  # Invite him to your court
+		event_target:hunter_char = {
+			move_character = ROOT
 		}
 		if = {
 			limit = {
@@ -940,6 +981,11 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTB_WoL_5040  # Leave him be
+		hidden_tooltip = {
+			event_target:hunter_char = {
+				leave_court_and_die_effect = yes
+			}
+		}
 		if = {
 			limit = {
 				has_character_flag = white_stag
@@ -985,6 +1031,9 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTC_WoL_5040  # He's a rival, kill him!
+		event_target:hunter_char = {
+			death = { death_reason = death_duel killer = ROOT }
+		}
 		trigger = {
 			OR = {
 				trait = impaler

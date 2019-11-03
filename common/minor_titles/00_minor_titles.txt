@@ -2024,8 +2024,9 @@ title_guru = {
 		}
 		is_adult = yes
 		OR = {
-			religion_group = pacific
 			has_dharmic_religion_trigger = yes
+			religion = cetic
+			religion = neutic
 		}
 	}
 	

@@ -455,18 +455,52 @@ character_event = {
 	
 	immediate = {
 		hidden_effect = {
-			create_character = {
-				religion = ROOT
-				culture = ROOT
-				dynasty = none
-				age = 43
-				random_traits = yes
-				female = no
-				attributes = {
-					learning = 12
+			if = {
+				limit = { matriarchal_religion = yes }
+				create_character = {
+					religion = ROOT
+					culture = ROOT
+					dynasty = none
+					age = 43
+					random_traits = yes
+					female = yes
+					attributes = {
+						learning = 12
+					}
+					health = 6
+					trait = scholarly_theologian
 				}
-				health = 6
-				trait = scholarly_theologian
+			}
+			else_if = {
+				limit = { gender_equality_trigger = yes }
+				create_character = {
+					religion = ROOT
+					culture = ROOT
+					dynasty = none
+					age = 43
+					random_traits = yes
+					female = 50
+					attributes = {
+						learning = 12
+					}
+					health = 6
+					trait = scholarly_theologian
+				}
+			}
+			else = {
+				create_character = {
+					religion = ROOT
+					culture = ROOT
+					dynasty = none
+					age = 43
+					random_traits = yes
+					female = no
+					attributes = {
+						learning = 12
+					}
+					health = 6
+					trait = scholarly_theologian
+				}
 			}
 			event_target:book_province = {
 				holder_scope = {
@@ -474,6 +508,7 @@ character_event = {
 					new_character = {
 						character_event = { id = misc.3 } # Diversity
 						character_event = { id = misc.4 } # Physique
+						save_event_target_as = book_holder
 						move_character = PREV
 					}
 					realm = { save_event_target_as = book_province_realm }

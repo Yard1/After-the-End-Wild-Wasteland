@@ -728,13 +728,41 @@ character_event = {
 		name = EVTOPTA_ZE_22300
 		
 		prestige = -50
-		create_character = {
-			random_traits = yes
-			dynasty = RANDOM
-			female = no
-			age = 20
-			religion = ROOT
-			culture = ROOT
+		if = {
+			limit = {
+				matriarchal_religion = yes
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = RANDOM
+				female = yes
+				age = 20
+				religion = ROOT
+				culture = ROOT
+			}
+		}
+		else_if = {
+			limit = {
+				gender_equality_trigger = yes
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = RANDOM
+				female = 50
+				age = 20
+				religion = ROOT
+				culture = ROOT
+			}
+		}
+		else = {
+			create_character = {
+				random_traits = yes
+				dynasty = RANDOM
+				female = no
+				age = 20
+				religion = ROOT
+				culture = ROOT
+			}
 		}
 		new_character = {
 			character_event = { id = misc.3 } # Diversity

@@ -42,23 +42,73 @@ character_event = {
 		set_character_flag = found_guru
 		random_list = {
 			15 = { # Finds great guru
-				create_character = {
-					random_traits = no
-					dynasty = NONE
-					religion = ROOT
-					culture = ROOT
-					female = no
-					age = 50
-					attributes = {
-						diplomacy = 12
-						stewardship = 10
-						intrigue = 11
-						learning = 14
+				if = {
+					limit = {
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = no
 					}
-					trait = genius
-					trait = scholar
-					trait = patient
-					trait = mastermind_theologian
+					create_character = {
+						random_traits = no
+						dynasty = NONE
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 50
+						attributes = {
+							diplomacy = 12
+							stewardship = 10
+							intrigue = 11
+							learning = 14
+						}
+						trait = genius
+						trait = scholar
+						trait = patient
+						trait = mastermind_theologian
+					}
+				}
+				else_if = {
+					limit = {
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = yes
+					}
+					create_character = {
+						random_traits = no
+						dynasty = NONE
+						religion = ROOT
+						culture = ROOT
+						female = 50
+						age = 50
+						attributes = {
+							diplomacy = 12
+							stewardship = 10
+							intrigue = 11
+							learning = 14
+						}
+						trait = genius
+						trait = scholar
+						trait = patient
+						trait = mastermind_theologian
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = no
+						dynasty = NONE
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 50
+						attributes = {
+							diplomacy = 12
+							stewardship = 10
+							intrigue = 11
+							learning = 14
+						}
+						trait = genius
+						trait = scholar
+						trait = patient
+						trait = mastermind_theologian
+					}
 				}
 				new_character = {
 					character_event = { id = misc.3 } # Diversity
@@ -81,23 +131,73 @@ character_event = {
 				}
 			}
 			80 = { # Finds ordinary guru
-				create_character = {
-					random_traits = no
-					dynasty = NONE
-					religion = ROOT
-					culture = ROOT
-					female = no
-					age = 50
-					attributes = {
-						diplomacy = 10
-						stewardship = 8
-						intrigue = 9
-						learning = 12
+				if = {
+					limit = {
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = no
 					}
-					trait = quick
-					trait = scholar
-					trait = patient
-					trait = mastermind_theologian
+					create_character = {
+						random_traits = no
+						dynasty = NONE
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 50
+						attributes = {
+							diplomacy = 10
+							stewardship = 8
+							intrigue = 9
+							learning = 12
+						}
+						trait = quick
+						trait = scholar
+						trait = patient
+						trait = mastermind_theologian
+					}
+				}
+				else_if = {
+					limit = {
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = yes
+					}
+					create_character = {
+						random_traits = no
+						dynasty = NONE
+						religion = ROOT
+						culture = ROOT
+						female = 59
+						age = 50
+						attributes = {
+							diplomacy = 10
+							stewardship = 8
+							intrigue = 9
+							learning = 12
+						}
+						trait = quick
+						trait = scholar
+						trait = patient
+						trait = mastermind_theologian
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = no
+						dynasty = NONE
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 50
+						attributes = {
+							diplomacy = 10
+							stewardship = 8
+							intrigue = 9
+							learning = 12
+						}
+						trait = quick
+						trait = scholar
+						trait = patient
+						trait = mastermind_theologian
+					}
 				}
 				new_character = {
 					character_event = { id = misc.3 } # Diversity
@@ -115,22 +215,70 @@ character_event = {
 				}
 			}
 			5 = { # Finds con artist pretending to be guru - but doesn't know it yet...
-				create_character = {
-					random_traits = no
-					dynasty = NONE
-					religion = ROOT
-					culture = ROOT
-					female = no
-					age = 40
-					attributes = {
-						diplomacy = 12
-						stewardship = 8
-						intrigue = 16
-						learning = 10
+				if = {
+					limit = {
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = no
 					}
-					trait = quick
-					trait = martial_cleric
-					trait = weak
+					create_character = {
+						random_traits = no
+						dynasty = NONE
+						religion = ROOT
+						culture = ROOT
+						female = yes
+						age = 40
+						attributes = {
+							diplomacy = 12
+							stewardship = 8
+							intrigue = 16
+							learning = 10
+						}
+						trait = quick
+						trait = martial_cleric
+						trait = weak
+					}
+				}
+				else_if = {
+					limit = {
+						religion_allows_female_temple_holders = yes
+						religion_allows_male_temple_holders = yes
+					}
+					create_character = {
+						random_traits = no
+						dynasty = NONE
+						religion = ROOT
+						culture = ROOT
+						female = 59
+						age = 40
+						attributes = {
+							diplomacy = 12
+							stewardship = 8
+							intrigue = 16
+							learning = 10
+						}
+						trait = quick
+						trait = martial_cleric
+						trait = weak
+					}
+				}
+				else = {
+					create_character = {
+						random_traits = no
+						dynasty = NONE
+						religion = ROOT
+						culture = ROOT
+						female = no
+						age = 40
+						attributes = {
+							diplomacy = 12
+							stewardship = 8
+							intrigue = 16
+							learning = 10
+						}
+						trait = quick
+						trait = martial_cleric
+						trait = weak
+					}
 				}
 				new_character = {
 					character_event = { id = misc.3 } # Diversity

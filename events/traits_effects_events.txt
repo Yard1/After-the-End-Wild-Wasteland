@@ -611,7 +611,10 @@ character_event = {
 		any_courtier = {
 			learning = 9
 			age = 55
-			is_female = no
+			OR = {
+				is_female = no
+				gender_equality_trigger = yes
+			}
 			trait = chaste
 			trait = zealous
 			trait = celibate
@@ -639,7 +642,10 @@ character_event = {
 			limit = {
 				learning = 9
 				age = 55
-				is_female = no
+				OR = {
+					is_female = no
+					gender_equality_trigger = yes
+				}
 				trait = chaste
 				trait = zealous
 				trait = celibate
@@ -18246,6 +18252,20 @@ character_event = {
 	war = no
 	
 	is_triggered_only = yes 
+
+	immediate = {
+		if = {
+			limit = { matriarchal_religion = yes }
+			set_character_flag = female_new_char
+		}
+		else_if = {
+			limit = { gender_equality_trigger = yes }
+			random = {
+				chance = 50
+				set_character_flag = female_new_char
+			}
+		}
+	}
 	
 	trigger = {
 		trait = poet
@@ -18288,15 +18308,30 @@ character_event = {
 	option = {
 		name = EVTOPTA3660 #Demand
 		piety = -10
-		create_character = {
-			attributes = {
-				diplomacy = 10
+		if = {
+			limit = { has_character_flag = female_new_char }
+			create_character = {
+				attributes = {
+					diplomacy = 10
+				}
+				dynasty = random
+				trait = poet
+				age = 30
+				female = yes
+				has_nickname = nick_the_troubadour
 			}
-			dynasty = random
-			trait = poet
-			age = 30
-			female = no
-			has_nickname = nick_the_troubadour
+		}
+		else = {
+			create_character = {
+				attributes = {
+					diplomacy = 10
+				}
+				dynasty = random
+				trait = poet
+				age = 30
+				female = no
+				has_nickname = nick_the_troubadour
+			}
 		}
 		new_character = {
 			set_character_flag = pressured_poet
@@ -18310,15 +18345,30 @@ character_event = {
 	option = {
 		name = EVTOPTB3660 #Ask nicely
 		prestige = -10
-		create_character = {
-			attributes = {
-				diplomacy = 10
+		if = {
+			limit = { has_character_flag = female_new_char }
+			create_character = {
+				attributes = {
+					diplomacy = 10
+				}
+				dynasty = random
+				trait = poet
+				age = 30
+				female = yes
+				has_nickname = nick_the_troubadour
 			}
-			dynasty = random
-			trait = poet
-			age = 30
-			female = no
-			has_nickname = nick_the_troubadour
+		}
+		else = {
+			create_character = {
+				attributes = {
+					diplomacy = 10
+				}
+				dynasty = random
+				trait = poet
+				age = 30
+				female = no
+				has_nickname = nick_the_troubadour
+			}
 		}
 		new_character = {
 			set_character_flag = asked_poet
@@ -18332,15 +18382,30 @@ character_event = {
 	option = {
 		name = EVTOPTC3660 #Bribe
 		scaled_wealth = -0.10
-		create_character = {
-			attributes = {
-				diplomacy = 10
+		if = {
+			limit = { has_character_flag = female_new_char }
+			create_character = {
+				attributes = {
+					diplomacy = 10
+				}
+				dynasty = random
+				trait = poet
+				age = 30
+				female = yes
+				has_nickname = nick_the_troubadour
 			}
-			dynasty = random
-			trait = poet
-			age = 30
-			female = no
-			has_nickname = nick_the_troubadour
+		}
+		else = {
+			create_character = {
+				attributes = {
+					diplomacy = 10
+				}
+				dynasty = random
+				trait = poet
+				age = 30
+				female = no
+				has_nickname = nick_the_troubadour
+			}
 		}
 		new_character = {
 			set_character_flag = bribed_poet
@@ -18354,16 +18419,35 @@ character_event = {
 	option = {
 		name = EVTOPTD3660 #Ignore
 		add_trait = content
-		create_character = {
-			attributes = {
-				diplomacy = 10
+		if = {
+			limit = { has_character_flag = female_new_char }
+			create_character = {
+				attributes = {
+					diplomacy = 10
+				}
+				dynasty = random
+				trait = poet
+				age = 30
+				female = yes
+				has_nickname = nick_the_troubadour
 			}
-			dynasty = random
-			trait = poet
-			age = 30
-			female = no
-			has_nickname = nick_the_troubadour
 		}
+		else = {
+			create_character = {
+				attributes = {
+					diplomacy = 10
+				}
+				dynasty = random
+				trait = poet
+				age = 30
+				female = no
+				has_nickname = nick_the_troubadour
+			}
+		}
+	}
+
+	after = {
+		clr_character_flag = female_new_char
 	}
 }
 

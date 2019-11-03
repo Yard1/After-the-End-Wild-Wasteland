@@ -771,6 +771,20 @@ character_event = {
 	only_playable = yes
 	prisoner = no
 	ai = no
+
+	immediate = {
+		if = {
+			limit = { matriarchal_religion = yes }
+			set_character_flag = female_new_char
+		}
+		else_if = {
+			limit = { gender_equality_trigger = yes }
+			random = {
+				chance = 50
+				set_character_flag = female_new_char
+			}
+		}
+	}
 	
 	trigger = {
 		is_landed = yes
@@ -791,11 +805,11 @@ character_event = {
 	option = {
 		name = EVTOPTA73008 #Hire him.
 		if = {
-			limit = { gender_equality_trigger = yes }
+			limit = { has_character_flag = female_new_char }
 			create_random_diplomat = {
 				random_traits = yes
 				dynasty = random
-				female = 50
+				female = yes
 			}
 		}
 		else = {
@@ -812,6 +826,9 @@ character_event = {
 		prestige = -5
 	}
 
+	after = {
+		clr_character_flag = female_new_char
+	}
 }
 
 # A destitute noble FROM a former enemy court ask for permanent hospitality
@@ -830,6 +847,20 @@ character_event = {
 	trigger = {
 		any_current_enemy = {
 			culture = ROOT
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { matriarchal_religion = yes }
+			set_character_flag = female_new_char
+		}
+		else_if = {
+			limit = { gender_equality_trigger = yes }
+			random = {
+				chance = 50
+				set_character_flag = female_new_char
+			}
 		}
 	}
 
@@ -929,19 +960,11 @@ character_event = {
 		name = EVTOPTA73009  #Welcome him to your court
 		scaled_wealth = -0.2
 		if = {
-			limit = { matriarchal_religion = yes }
+			limit = { has_character_flag = female_new_char }
 			create_random_soldier = {
 				random_traits = yes
 				dynasty = random
 				female = yes
-			}
-		}
-		else_if = {
-			limit = { gender_equality_trigger = yes }
-			create_random_soldier = {
-				random_traits = yes
-				dynasty = random
-				female = 50
 			}
 		}
 		else = {
@@ -977,7 +1000,9 @@ character_event = {
 		name = EVTOPTB73009 #Tell him he can only stay for the night
 		piety = 15
 	}
-
+	after = {
+		clr_character_flag = female_new_char
+	}
 }
 
 #I've been readin 'Ars Moriendi', and it claims that death is not something to be afraid of. 

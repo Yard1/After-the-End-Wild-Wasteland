@@ -2626,21 +2626,67 @@ character_event = {
 					}
 				}
 			}
-			create_character = {
-				religion = THIS
-				culture = THIS
-				dynasty = none
-				age = 35
-				random_traits = yes
-				female = no
-				attributes = {
-					learning = 6
+			if = {
+				limit = {
+					religion_allows_female_temple_holders = yes
+					religion_allows_male_temple_holders = no
 				}
-				health = 6
-				trait = scholarly_theologian
-				trait = zealous
-				trait = physician
-				flag = is_court_physician
+				create_character = {
+					religion = THIS
+					culture = THIS
+					dynasty = none
+					age = 35
+					random_traits = yes
+					female = yes
+					attributes = {
+						learning = 6
+					}
+					health = 6
+					trait = scholarly_theologian
+					trait = zealous
+					trait = physician
+					flag = is_court_physician
+				}
+			}
+			else_if = {
+				limit = {
+					religion_allows_female_temple_holders = yes
+					religion_allows_male_temple_holders = yes
+				}
+				create_character = {
+					religion = THIS
+					culture = THIS
+					dynasty = none
+					age = 35
+					random_traits = yes
+					female = 50
+					attributes = {
+						learning = 6
+					}
+					health = 6
+					trait = scholarly_theologian
+					trait = zealous
+					trait = physician
+					flag = is_court_physician
+				}
+			}
+			else = {
+				create_character = {
+					religion = THIS
+					culture = THIS
+					dynasty = none
+					age = 35
+					random_traits = yes
+					female = no
+					attributes = {
+						learning = 6
+					}
+					health = 6
+					trait = scholarly_theologian
+					trait = zealous
+					trait = physician
+					flag = is_court_physician
+				}
 			}
 			new_character = {
 				character_event = { id = misc.3 } # Diversity
@@ -10722,6 +10768,10 @@ character_event = {
 					}
 				}
 				50 = {
+					modifier = {
+						factor = 0
+						religion_allows_male_temple_holders = no
+					}
 					create_character = {
 						random_traits = no
 						age = 32
