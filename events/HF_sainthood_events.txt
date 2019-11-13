@@ -260,7 +260,7 @@ province_event = {
 
 #Decision has been made to be Beatified
 province_event = {
-    id = HF.40002
+	id = HF.40002
     hide_window = yes
     is_triggered_only = yes
     has_dlc = "Holy Fury"
@@ -331,7 +331,7 @@ province_event = {
 
 #Local priest sends out letters declaring beatification
 character_event = {
-    id = HF.40003
+	id = HF.40003
     is_triggered_only = yes
     hide_window = yes
     has_dlc = "Holy Fury"
@@ -467,7 +467,7 @@ narrative_event = {
 
 #Pope sends out letters declaring beatification
 character_event = {
-    id = HF.40005
+	id = HF.40005
     is_triggered_only = yes
     hide_window = yes
     has_dlc = "Holy Fury"
@@ -531,7 +531,7 @@ character_event = {
 
 #Papal beatification Event
 narrative_event = {
-    id = HF.40006
+	id = HF.40006
     desc = EVTDESC_HF_40006
     title = TITLEHF.40006
     picture = GFX_evt_beatification
@@ -575,7 +575,7 @@ narrative_event = {
 
 #Checking time left to Canonization
 character_event = {
-    id = HF.40010
+	id = HF.40010
     hide_window = yes
     is_triggered_only = yes
     has_dlc = "Holy Fury"
@@ -608,7 +608,7 @@ character_event = {
 
 #Preparing Canonization
 province_event = {
-    id = HF.40015
+	id = HF.40015
     hide_window = yes
     is_triggered_only = yes
     has_dlc = "Holy Fury"
@@ -654,7 +654,7 @@ province_event = {
 
 #Canonization
 character_event = {
-    id = HF.40020
+	id = HF.40020
     desc = {
         trigger = {
             event_target:saint_person = {
@@ -3178,7 +3178,7 @@ character_event = {
 
 #Notification about Burial Site
 province_event = {
-    id = HF.40021
+	id = HF.40021
     is_triggered_only = yes
     hide_window = yes
     has_dlc = "Holy Fury"
@@ -3192,7 +3192,7 @@ province_event = {
 
 #Notification sent out to all players
 character_event = {
-    id = HF.40022
+	id = HF.40022
     desc = EVTDESC_HF_40022
     picture = GFX_evt_large_army
     is_triggered_only = yes
@@ -3206,7 +3206,7 @@ character_event = {
 
 #Canonization Official
 narrative_event = {
-    id = HF.40025
+	id = HF.40025
     desc = {
         trigger = {
             event_target:saint_person = {
@@ -3296,7 +3296,7 @@ narrative_event = {
 
 #Bad Beatification
 character_event = {
-    id = HF.40050
+	id = HF.40050
     is_triggered_only = yes
     hide_window = yes
     has_dlc = "Holy Fury"
@@ -3415,7 +3415,7 @@ character_event = {
 
 #Bishop considers making a sinful Beatified
 province_event = {
-    id = HF.40051
+	id = HF.40051
     is_triggered_only = yes
     hide_window = yes
     has_dlc = "Holy Fury"
@@ -3435,7 +3435,7 @@ province_event = {
 
 #Bishop decided to make a Sinful Beatified
 province_event = {
-    id = HF.40052
+	id = HF.40052
     hide_window = yes
     is_triggered_only = yes
     has_dlc = "Holy Fury"
@@ -3485,7 +3485,7 @@ province_event = {
 
 #Bishop sends out the letters with the news of the sinful Beatification
 character_event = {
-    id = HF.40053
+	id = HF.40053
     is_triggered_only = yes
     hide_window = yes
     has_dlc = "Holy Fury"
@@ -3606,7 +3606,7 @@ character_event = {
 
 #Sinful Beatification event
 narrative_event = {
-    id = HF.40055
+	id = HF.40055
 
     #Disapprove of sinful Blessed
     desc = {
@@ -3722,7 +3722,7 @@ narrative_event = {
 
 #Pope preparing a response
 province_event = {
-    id = HF.40056
+	id = HF.40056
     is_triggered_only = yes
     hide_window = yes
     has_dlc = "Holy Fury"
@@ -3742,7 +3742,7 @@ province_event = {
 
 #Pope finished response
 province_event = {
-    id = HF.40057
+	id = HF.40057
     hide_window = yes
     is_triggered_only = yes
     has_dlc = "Holy Fury"
@@ -3792,7 +3792,7 @@ province_event = {
 
 #Pope sending out letters
 character_event = {
-    id = HF.40058
+	id = HF.40058
     hide_window = yes
     is_triggered_only = yes
     has_dlc = "Holy Fury"
@@ -3872,7 +3872,7 @@ character_event = {
 
 #Vatican Outrage over Sinful Beatification
 narrative_event = {
-    id = HF.40060
+	id = HF.40060
 
     #Approve of Papal decision
     desc = {
@@ -4009,7 +4009,7 @@ narrative_event = {
 
 #Bad Papal saint
 character_event = {
-    id = HF.40090
+	id = HF.40090
     hide_window = yes
     is_triggered_only = yes
     min_age = 16
@@ -4439,7 +4439,7 @@ character_event = {
 
 #Bad Papal Saint decision
 character_event = {
-    id = HF.40091
+	id = HF.40091
     is_triggered_only = yes
     hide_window = yes
     has_dlc = "Holy Fury"
@@ -4459,7 +4459,7 @@ character_event = {
 
 #Pope sends out letters deciding bad Saint
 character_event = {
-    id = HF.40092
+	id = HF.40092
     is_triggered_only = yes
     hide_window = yes
     has_dlc = "Holy Fury"
@@ -4627,7 +4627,7 @@ character_event = {
 
 #Bad Papal Saint main event
 narrative_event = {
-    id = HF.40098
+	id = HF.40098
     desc = {
     	trigger = {
 			rightful_religious_head_scope = {
@@ -4769,7 +4769,7 @@ narrative_event = {
 
 #War against the Pope
 narrative_event = {
-    id = HF.40093
+	id = HF.40093
     desc = EVTDESC_HF_40093
     title = EVTTITLE_HF_40093
     picture = GFX_evt_large_army
@@ -4922,7 +4922,7 @@ narrative_event = {
 
 #The Pope loses and have to abdicate
 narrative_event = {
-    id = HF.40094
+	id = HF.40094
     desc = EVTDESC_HF_40094
     title = EVTTITLE_HF_40094
     picture = GFX_evt_church_council
@@ -4958,7 +4958,7 @@ narrative_event = {
 
 #The Pope wins
 narrative_event = {
-    id = HF.40095
+	id = HF.40095
     desc = EVTDESC_HF_40095
     title = EVTTITLE_HF_40095
     picture = GFX_evt_church_council
@@ -4986,7 +4986,7 @@ narrative_event = {
 
 # TEST SCRIPT
 character_event = {
-    id = HF.40097
+	id = HF.40097
     hide_window = yes
     is_triggered_only = yes
     trigger = {

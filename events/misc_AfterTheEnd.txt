@@ -11379,6 +11379,13 @@ character_event = {
 						}
 					}
 					character_event = { id = ATE_WWW_RELIGION.16 }
+					if = {
+						limit = {
+							is_feudal = yes
+							primary_title = { is_law_potential = succ_feudal_elective }
+						}
+						primary_title = { add_law = { law = succ_feudal_elective cooldown = no opinion_effect = no } }
+					}
 				}
 
 				if = {
@@ -11744,6 +11751,7 @@ character_event = {
 					set_gender = female
 					add_trait = hidden_female_trait
 					remove_trait = hidden_male_trait
+					remove_trait = eunuch
 					give_ROOT_random_name = yes
 					character_event = { id = misc.6 days = 1 }
 				}
@@ -11853,6 +11861,7 @@ character_event = {
 					set_gender = female
 					add_trait = hidden_female_trait
 					remove_trait = hidden_male_trait
+					remove_trait = eunuch
 					give_ROOT_random_name = yes
 					character_event = { id = misc.6 days = 1 }
 				}
@@ -11960,6 +11969,7 @@ character_event = {
 					set_gender = female
 					add_trait = hidden_female_trait
 					remove_trait = hidden_male_trait
+					remove_trait = eunuch
 					give_ROOT_random_name = yes
 					character_event = { id = misc.6 days = 1 }
 				}
@@ -12065,6 +12075,7 @@ character_event = {
 					set_gender = female
 					add_trait = hidden_female_trait
 					remove_trait = hidden_male_trait
+					remove_trait = eunuch
 					give_ROOT_random_name = yes
 					character_event = { id = misc.6 days = 1 }
 				}

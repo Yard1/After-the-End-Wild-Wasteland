@@ -7,7 +7,7 @@ namespace = HFP
 
 ### Testing events ###
 character_event = { #On-death event to log commander deaths in game.
-    id = HFP.10997
+	id = HFP.10997
     hide_window = yes
     is_triggered_only = yes
 
@@ -23,7 +23,7 @@ character_event = { #On-death event to log commander deaths in game.
 
 
 character_event = { #TEST event to set correct paths - how? Fire on the ("ENEMY") LIEGE of a commander for testing
-    id = HFP.10998
+	id = HFP.10998
     hide_window = yes
     is_triggered_only = yes
     immediate = {
@@ -38,7 +38,7 @@ character_event = { #TEST event to set correct paths - how? Fire on the ("ENEMY"
     }
 }
 character_event = { #TEST event to set correct paths - fires for a commander (Can also be used to test being a commander)
-    id = HFP.10999
+	id = HFP.10999
     hide_window = yes
     is_triggered_only = yes
     immediate = {
@@ -62,7 +62,7 @@ character_event = { #TEST event to set correct paths - fires for a commander (Ca
 #### Tombola for battle events - fires for a commander leading a unit in battle ####
 ####################################################################################
 character_event = {
-    id = HFP.11000
+	id = HFP.11000
     is_triggered_only = yes
 	hide_window = yes
 
@@ -2267,7 +2267,7 @@ character_event = {
 
 ### BATTLE EVENT: Flat improvement to martial skill (fired from HFP.11000)
 character_event = {
-	id = HFP.11014#247
+	id = HFP.11014 #247
 	title = the_battle_at_location
 	desc = EVTDESC_HFP_11014_A
 	picture = GFX_evt_battle
@@ -2333,7 +2333,7 @@ character_event = {
 
 # Follow-up: Liege gets notified about commander doing well, inspiring troops!
 character_event = {
-    id = HFP.11015
+	id = HFP.11015
     title = the_battle_at_location
     desc = EVTDESC_HFP_11015
     picture = GFX_evt_battle
@@ -3153,7 +3153,7 @@ character_event = {
 
 ### BATTLE EVENT: Pet Animal to the rescue! Or choose to duel! (fired from HFP.11000)
 character_event = {
-    id = HFP.11025
+	id = HFP.11025
     title = the_battle_at_location
 	picture = GFX_evt_battle
 	border = GFX_event_normal_frame_war
@@ -3362,7 +3362,7 @@ character_event = {
 #######################################################
 ### BATTLE EVENT: Find a weapon on the battlefield... (fired from HFP.11000)
 character_event = {
-    id = HFP.11026
+	id = HFP.11026
     title = the_battle_at_location
     desc = EVTDESC_HF_11026
 	picture = GFX_evt_battle
@@ -3455,7 +3455,7 @@ character_event = {
 
 ### BATTLE EVENT: Choose a nickname...! "Call me.." what? (fired from HFP.11000)
 character_event = {
-    id = HFP.11027
+	id = HFP.11027
     title = the_battle_at_location
     desc = EVTDESC_HF_11027
 	picture = GFX_evt_battle
@@ -4270,7 +4270,7 @@ character_event = {
 
 ### BATTLE EVENT: You become brawny! (fired from HFP.11000)
 character_event = {
-    id = HFP.11034
+	id = HFP.11034
     title = the_battle_at_location
     desc = EVTDESC_HFP_11034
 	picture = GFX_evt_battle
@@ -4411,7 +4411,7 @@ character_event = {
 
 # Potential follow-up: Fellow commander gets to move a rock.
 character_event = {
-    id = HFP.11035
+	id = HFP.11035
     title = the_battle_at_location
     desc = EVTDESC_HFP_11035
     picture = GFX_evt_battle
@@ -4474,7 +4474,7 @@ character_event = {
 
 ### BATTLE EVENT: You are impressed by a fellow commander (fired from HFP.11000)
 character_event = {
-    id = HFP.11036
+	id = HFP.11036
     title = the_battle_at_location
     desc = EVTDESC_HFP_11036
     picture = GFX_evt_battle
@@ -4566,7 +4566,7 @@ character_event = {
 
 # Potential follow-up: Fellow commander reacts to praise.
 character_event = {
-    id = HFP.11039
+	id = HFP.11039
     title = the_battle_at_location
     desc = EVTDESC_HFP_11039
     picture = GFX_evt_battle
@@ -4661,7 +4661,7 @@ character_event = {
 
 ### BATTLE EVENT: You reminisce about previous battles (hooked from previous events, fired from HFP.11000)
 character_event = {
-    id = HFP.11037
+	id = HFP.11037
     title = the_battle_at_location
     picture = GFX_evt_battle
     border = GFX_event_normal_frame_war
@@ -4833,7 +4833,7 @@ character_event = {
 
 ### BATTLE EVENT: You personally kill a ton of enemies. And get a lodge specific nickname. (fired from HFP.11000)
 character_event = {
-    id = HFP.11038
+	id = HFP.11038
     title = the_battle_at_location
     desc = EVTDESC_HFP_11038
     picture = GFX_evt_battle
@@ -4916,7 +4916,7 @@ character_event = {
 
 # Potential follow-up (from battlefield duels): commander_to_the_rescue pushed you out of the way...
 character_event = {
-    id = HFP.11040
+	id = HFP.11040
     title = the_battle_at_location
     desc = EVTDESC_HFP_11040
     picture = GFX_evt_battle
@@ -5064,7 +5064,7 @@ character_event = {
 
 # Potential follow-up: for liege (from battlefield duels): commander_to_the_rescue pushed another commander out of the way...
 character_event = {
-    id = HFP.11041
+	id = HFP.11041
     title = the_battle_at_location
     desc = EVTDESC_HFP_11041
     picture = GFX_evt_battle
@@ -5107,7 +5107,7 @@ character_event = {
 
 ### BATTLE EVENT: a battle duel outcome... Fired from send_duel_result_event_effect (01_scripted_effects_duels.txt)
 character_event = {
-    id = HFP.11042
+	id = HFP.11042
     title = getDuelTitle
     picture = GFX_evt_battle
     border = GFX_event_normal_frame_war
@@ -5292,7 +5292,7 @@ character_event = {
 
 # Potential follow-up: As the dueling opponent, find out that you killed home_commander... (Fired from the event above)
 character_event = {
-    id = HFP.11043
+	id = HFP.11043
     title = getDuelTitle
     picture = GFX_evt_battle
     border = GFX_event_normal_frame_war
@@ -5332,7 +5332,7 @@ character_event = {
 
 # Delayed clean-up event: For the enemy_commander (sent from apply_opinion_reward_effect, above, for instance, but multiple places in this file)
 character_event = {
-    id = HFP.11044
+	id = HFP.11044
     
     is_triggered_only = yes
     hide_window = yes
@@ -5357,7 +5357,7 @@ character_event = {
 ### BATTLE EVENT: a battle duel outcome... Fired from send_duel_result_event_effect (01_scripted_effects_duels.txt)
 # Defending AI has to choose whether to be taken prisoner or killed...
 character_event = {
-    id = HFP.11045
+	id = HFP.11045
     is_triggered_only = yes
 	hide_window = yes
     trigger = {
@@ -5414,7 +5414,7 @@ character_event = {
 
 # Potential follow-up: As the dueling home_commander, get presented with a choice... (Fired from the event above)
 character_event = {
-    id = HFP.11046
+	id = HFP.11046
     title = getDuelTitle
     picture = GFX_evt_battle
     border = GFX_event_normal_frame_war
@@ -5624,7 +5624,7 @@ character_event = {
 
 # Potential follow-up: AI (enemy_commander) actually dies and sends notification to their liege...
 character_event = {
-    id = HFP.11047
+	id = HFP.11047
     is_triggered_only = yes
 
     hide_window = yes
@@ -6114,7 +6114,7 @@ character_event = { # Duelist Bloodline Earned
 
 # Hidden event to give commanders (who do not have it already) the commander bonus
 character_event = {
-    id = HFP.11051
+	id = HFP.11051
     is_triggered_only = yes
     hide_window = yes
 

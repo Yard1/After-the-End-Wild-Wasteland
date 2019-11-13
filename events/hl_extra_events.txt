@@ -739,7 +739,7 @@ character_event = {
 }
 
 character_event = {
-	id = HLF.9001 # Wrestling Event
+	id = HLF.9001 #Wrestling Event
 	desc =  EVTDESC_HL_9001
 	picture = GFX_evt_steppe_mercenaries
 	border = GFX_event_normal_frame_war
@@ -861,7 +861,7 @@ character_event = {
 }
 
 character_event = {
-	id = HLF.9002 # Wrestling Resolver
+	id = HLF.9002 #Wrestling Resolver
 
 	hide_window = yes
 	
@@ -974,7 +974,7 @@ character_event = {
 }
 
 long_character_event = {
-	id = HLF.9003 # Win Wrestling
+	id = HLF.9003 #Win Wrestling
 	desc =  EVTDESC_HL_9003
 	picture = GFX_evt_tengri_throneroom_oldgods
 	border = GFX_event_long_frame_war
@@ -1069,7 +1069,7 @@ long_character_event = {
 }
 
 long_character_event = {
-	id = HLF.9004 # Lose Wrestling
+	id = HLF.9004 #Lose Wrestling
 	desc =  EVTDESC_HL_9004
 	picture = GFX_evt_mongols
 	border = GFX_event_long_frame_war

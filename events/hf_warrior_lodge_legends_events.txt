@@ -69,7 +69,7 @@ namespace = HF
 # Root = The affected society grandmaster
 # From = The affected society
 character_event = {
-    id = HF.11999
+	id = HF.11999
     hide_window = yes
     is_triggered_only = yes
 
@@ -96,7 +96,7 @@ character_event = {
 
 # Sent from event_target:legendary_society (above)
 province_event = {
-    id = HF.12000 
+	id = HF.12000
     is_triggered_only = yes
     hide_window = yes
     
@@ -167,7 +167,7 @@ province_event = {
 
 #LEGEND START: Our warrior lodge is *legendary*. My brothers and sisters are saying we have a name to live up to! Or to make for ourselves!
 character_event = {
-    id = HF.12001
+	id = HF.12001
     title = legendary_prep_title
     desc = EVTDESC_HF_12001
     sound = rowdy_banter_short
@@ -360,7 +360,7 @@ character_event = {
 
 #Potential follow-up, for OTHER HEROES only (if there were more heroes at rank 4).
 character_event = {
-    id = HF.12002
+	id = HF.12002
     title = legendary_prep_title
     desc = EVTDESC_HF_12002
     picture = GFX_evt_camaraderie
@@ -436,7 +436,7 @@ character_event = {
 
 #Other society members are informed of the journey starting...
 character_event = {
-    id = HF.12011
+	id = HF.12011
     title = legendary_prep_title
     desc = EVTDESC_HF_12011
     picture = GFX_evt_camaraderie
@@ -486,7 +486,7 @@ character_event = {
 
 ### Hidden Tombola (prep/travel? events)
 character_event = {
-    id = HF.12003
+	id = HF.12003
     is_triggered_only = yes
 
     hide_window = yes
@@ -802,7 +802,7 @@ character_event = {
 
 # For dead travelers (essentially the same as the last part of the tombola above)
 character_event = {
-    id = HF.12304
+	id = HF.12304
     is_triggered_only = yes
     hide_window = yes
     
@@ -865,7 +865,7 @@ character_event = {
 
 # Prep phase: pepp by fellow member
 character_event = {
-    id = HF.12004
+	id = HF.12004
     is_triggered_only = yes
     hide_window = yes
 
@@ -891,7 +891,7 @@ character_event = {
 
 ## Prep phase: an artifact is given to you
 character_event = {
-    id = HF.12005
+	id = HF.12005
     title = legendary_prep_title
     desc = EVTDESC_HF_12005_A #Hey, I have a gift for you, for the upcoming battles to come.
     picture = GFX_evt_battle
@@ -959,7 +959,7 @@ character_event = {
 
 ## Prep phase: past battle events inspire
 character_event = {
-    id = HF.12006
+	id = HF.12006
     title = legendary_prep_title
     desc = EVTDESC_HF_12006 #Heroes of old are with me!
     picture = GFX_evt_battle
@@ -1053,7 +1053,7 @@ character_event = {
 
 #I could turn my skull trophy into a skull cup!
 character_event = {
-    id = HF.12007
+	id = HF.12007
     title = legendary_prep_title
     desc = EVTDESC_HF_12007 #"You should turn this into a cup!"
     picture = GFX_evt_battle
@@ -1118,7 +1118,7 @@ character_event = {
 
 #Bond with your bird
 character_event = {
-    id = HF.12008
+	id = HF.12008
     title = legendary_prep_title
     desc = EVTDESC_HF_12008 #Fierce bird
     picture = GFX_evt_battle
@@ -1198,7 +1198,7 @@ character_event = {
 
 #Because you have a battlefield-weapon... Upgrade?
 character_event = {
-    id = HF.12012
+	id = HF.12012
     title = legendary_prep_title
     desc = EVTDESC_HF_12012
     picture = GFX_evt_battle
@@ -1339,7 +1339,7 @@ character_event = {
 
 ### TRAVEL TO THE DISTANT LAND ###
 character_event = {
-    id = HF.12009
+	id = HF.12009
     title = legendary_raid_title
     desc = EVTDESC_HF_12009
     picture = GFX_evt_battle
@@ -1393,7 +1393,7 @@ character_event = {
 
 ### A DUEL!
 character_event = {
-    id = HF.12010
+	id = HF.12010
     title = legendary_raid_title
     picture = GFX_evt_bandits
     border = GFX_event_normal_frame_war
@@ -1978,7 +1978,7 @@ character_event = {
 
 ### AI ONLY: AI picks some targets to fight...
 character_event = {
-    id = HF.12100
+	id = HF.12100
     is_triggered_only = yes
     
     trigger = {
@@ -2017,7 +2017,7 @@ character_event = {
 
 ### AI'S TARGET: Random realm character (my_duel_target) gets to accept or not
 character_event = {
-    id = HF.12101
+	id = HF.12101
     is_triggered_only = yes
     trigger = {
         FROM = { is_alive = yes }
@@ -2081,7 +2081,7 @@ character_event = {
 
 # on_become_imprisoned_any_reason: make sure people know what happened!
 character_event = {
-    id = HF.12305
+	id = HF.12305
     hide_window = yes
     is_triggered_only = yes
     
@@ -2137,7 +2137,7 @@ character_event = {
 
 # PLAYER: Original hero (and other players involved in the chain) finds out their friend was imprisoned...
 character_event = {
-    id = HF.12102
+	id = HF.12102
     title = legendary_loss_title
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
@@ -2289,7 +2289,7 @@ character_event = {
 
 # PLAYER: Original hero (and other players involved in the chain) finds out their friend died...
 character_event = {
-    id = HF.12103
+	id = HF.12103
     title = legendary_loss_title
     desc = EVTDESC_HF_12103 #They were killed by the enemy...
     picture = GFX_evt_battle
@@ -2401,7 +2401,7 @@ character_event = {
 
 # PLAYER: Original hero (and other players involved in the chain) finds out their friend did well!
 character_event = {
-    id = HF.12104
+	id = HF.12104
     title = legendary_victory_title
     desc = EVTDESC_HF_12104 #They did so well!
     picture = GFX_evt_battle
@@ -2425,7 +2425,7 @@ character_event = {
 ### New duel outcomes ###
 #DEATH: I killed my opponent - I won!
 character_event = {
-    id = HF.12200
+	id = HF.12200
     title = getDuelTitle
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
@@ -2583,7 +2583,7 @@ character_event = {
 
 #DEATH: I died in the duel - I lost (fired from HFP.10103 above)
 character_event = {
-    id = HF.12201
+	id = HF.12201
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
     title = getDuelTitle
@@ -2690,7 +2690,7 @@ character_event = {
 
 #Double death - Attacker
 character_event = {
-    id = HF.12204
+	id = HF.12204
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
     title = getDuelTitle
@@ -2791,7 +2791,7 @@ character_event = {
 
 #Double death - Defender
 character_event = {
-    id = HF.12205
+	id = HF.12205
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
     title = getDuelTitle
@@ -2895,7 +2895,7 @@ character_event = {
 
 #Cowardly display? Humiliation? - I won!
 character_event = {
-    id = HF.12202
+	id = HF.12202
     desc = EVTDESC_HFP_10107
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
@@ -2920,7 +2920,7 @@ character_event = {
 
 #Cowardly display - I lost
 character_event = {
-    id = HF.12203
+	id = HF.12203
     desc = EVTDESC_HFP_10108 #I ran away...!
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
@@ -2967,7 +2967,7 @@ character_event = {
 
 ### Final event. Found a bloodline?! ALIVE ###
 narrative_event = {
-    id = HF.12300
+	id = HF.12300
     title = EVTTITLE_HF_12300
     desc = EVTDESC_HF_12300
     picture = GFX_evt_diplomatic_greeting
@@ -3073,7 +3073,7 @@ narrative_event = {
 
 ### Final event. Found a bloodline?! DEAD. ### For current heir
 narrative_event = {
-    id = HF.12301
+	id = HF.12301
     title = EVTTITLE_HF_12300
     desc = EVTDESC_HF_12301
     picture = GFX_evt_bloodlines
@@ -3104,7 +3104,7 @@ narrative_event = {
 
 ### News events to society members ###
 narrative_event = {
-    id = HF.12302
+	id = HF.12302
     title = EVTTITLE_HF_12300
     picture = GFX_evt_diplomatic_greeting
     border = GFX_event_narrative_frame_war
@@ -3142,7 +3142,7 @@ narrative_event = {
 
 ### News events to target_ruler ###
 narrative_event = {
-    id = HF.12303
+	id = HF.12303
     title = EVTTITLE_HF_12300
     desc = EVTDESC_HF_12303
     picture = GFX_evt_bloodlines
@@ -3164,7 +3164,7 @@ narrative_event = {
 
 # EAGLE: Dream about hunting with your bird and tadaaa: an eagle has snuck into your chambers!
 character_event = {
-    id = HF.12400
+	id = HF.12400
     desc = EVTDESC_HF_12400
     picture = GFX_evt_hunt
     border = GFX_event_normal_frame_war
@@ -3245,7 +3245,7 @@ character_event = {
 
 # DOG: Sparring, hear barking dog and tadaaa: it's for you!
 character_event = {
-    id = HF.12401
+	id = HF.12401
     desc = EVTDESC_HF_12401
     picture = GFX_evt_hunting_scene
     border = GFX_event_normal_frame_war
@@ -3323,7 +3323,7 @@ character_event = {
 
 # DOG: New dog funeral event (for non-WoL dog above)
 character_event = {
-    id = HF.12402
+	id = HF.12402
     desc = EVTDESC_HF_12402
     picture = GFX_evt_hunting_scene
     border = GFX_event_normal_frame_war
@@ -3350,7 +3350,7 @@ character_event = {
 
 # BATTLE EVENT: Bonus battle event for any *battle bard bloodline*
 character_event = {
-    id = HF.12405
+	id = HF.12405
     title = the_battle_at_location
     desc = EVTDESC_HF_12405
     picture = GFX_evt_duel_scene

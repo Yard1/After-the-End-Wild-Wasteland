@@ -1336,7 +1336,7 @@ character_event = {
 
 ### WRITE A BOOK ### Start (fired from decision)
 character_event = { 
-    id = JD.10060
+	id = JD.10060
     title = EVTTITLE_JD_10060
     picture = GFX_evt_council
     border = GFX_event_normal_frame_religion
@@ -1767,7 +1767,7 @@ character_event = {
 
 
 character_event = { #Progress event type 1!  #invest more time/money/hire scribes
-    id = JD.10061
+	id = JD.10061
     picture = GFX_evt_monk
     title = EVTTITLE_JD_10061
     border = GFX_event_normal_frame_religion
@@ -1848,7 +1848,7 @@ character_event = { #Progress event type 1!  #invest more time/money/hire scribe
 }
 
 character_event = { #Progress event type 2! #Unhappy with work (gain stressed or not)
-    id = JD.10062
+	id = JD.10062
     title = EVTTITLE_JD_10062
     desc = EVTDESC_JD_10062
     picture = GFX_evt_library
@@ -2082,7 +2082,7 @@ character_event = { #Progress event type 2! #Unhappy with work (gain stressed or
 
 
 character_event = { #Progress event type 3!  #deal with writer's block (risk doing something stupid?
-    id = JD.10063
+	id = JD.10063
     title = EVTTITLE_JD_10063
     desc = EVTDESC_JD_10063
     picture = GFX_evt_princess_byzantine
@@ -2160,7 +2160,7 @@ character_event = { #Progress event type 3!  #deal with writer's block (risk doi
 }
 ##
 character_event = { #Progress event type 4!  #stay up all night or not
-    id = JD.10064
+	id = JD.10064
     title = EVTTITLE_JD_10064
     picture = GFX_evt_daughter_asking_father
     border = GFX_event_normal_frame_religion
@@ -2337,7 +2337,7 @@ character_event = { #Progress event type 4!  #stay up all night or not
 }
 
 character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
-    id = JD.10070    
+	id = JD.10070
     title = EVTTITLE_JD_10070
     desc = EVTDESC_JD_10070_A
     picture = GFX_evt_library
@@ -5121,7 +5121,7 @@ character_event = {
 
 ### A Chinese Prince/Princess has died - Sends event to spouse or child ### (fired from on_death)
 character_event = { #
-    id = JD.10080
+	id = JD.10080
     is_triggered_only = yes
     hide_window = yes
     has_dlc = "Jade Dragon"
@@ -5432,7 +5432,7 @@ character_event = { #
 ### Delayed gating event to make sure the Protector General is still alive, and still has the artifact
 # Sent on target character, from JD.10080
 character_event = {
-    id = JD.10079
+	id = JD.10079
     hide_window = yes
     is_triggered_only = yes
     has_dlc = "Jade Dragon"
@@ -5502,7 +5502,7 @@ character_event = {
 
 ### For a spouse or child ###
 character_event = { #China sends their condolences, in the form of a LETTER...
-    id = JD.10081
+	id = JD.10081
     desc = EVTDESC_JD_10081
     picture = GFX_evt_chinese_bureaucrat
     border = GFX_event_normal_frame_diplomacy
@@ -5574,7 +5574,7 @@ character_event = { #China sends their condolences, in the form of a LETTER...
 
 ### For a spouse or child ###
 character_event = { #China sends their condolences, in the form of a GIFT...
-    id = JD.10082
+	id = JD.10082
     desc = EVTDESC_JD_10082
     picture = GFX_evt_chinese_bureaucrat
     border = GFX_event_normal_frame_diplomacy
@@ -5641,7 +5641,7 @@ character_event = { #China sends their condolences, in the form of a GIFT...
 
 ### For a spouse or child ###
 character_event = { #You find their journal...
-    id = JD.10083
+	id = JD.10083
     desc = EVTDESC_JD_10083
     picture = GFX_evt_library
     border = GFX_event_normal_frame_diplomacy

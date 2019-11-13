@@ -13,7 +13,7 @@ namespace = JD
 
 ####China launches an invasion... [Hidden, picks an invasion type - Tributary OR Major OR nothing happens]
 character_event = {
-    id = JD.10100
+	id = JD.10100
     has_dlc = "Jade Dragon"
     is_triggered_only = yes
 
@@ -1139,7 +1139,7 @@ character_event = {
 
 ##Visible event for player: "Become tributary of China, or prepare to be conquered"
 character_event = {
-    id = JD.10130
+	id = JD.10130
     is_triggered_only = yes
     picture = GFX_evt_brazil_invades
     desc = EVTDESC_JD_10130_A
@@ -1270,7 +1270,7 @@ character_event = {
 
 ##### Tributary Invasion [where the CB is set and troops are spawned] #####
 character_event = {
-    id = JD.10101
+	id = JD.10101
     desc = EVTDESC_JD_10101
 
     has_dlc = "Jade Dragon"
@@ -1368,7 +1368,7 @@ character_event = {
 }
 
 narrative_event = { #NEWS: visible event for player (someone PEACEFULLY became a tributary to China, from accepting the demand) 
-    id = JD.10105
+	id = JD.10105
 	has_dlc = "Jade Dragon"
     title = NEWS_FROM_CHINA
 	picture = GFX_evt_brazil_invades
@@ -1403,7 +1403,7 @@ narrative_event = { #NEWS: visible event for player (someone PEACEFULLY became a
 }
 
 narrative_event = { # NEWS: visible event for player (tributary invasion)
-    id = JD.10102
+	id = JD.10102
 	has_dlc = "Jade Dragon"
     title = NEWS_FROM_CHINA
 	picture = GFX_evt_brazil_invades
@@ -1481,7 +1481,7 @@ narrative_event = { # NEWS: visible event for player (tributary invasion)
 
 ##### Major Invasion [where the CB is set and troops are spawned] ##### WIP
 character_event = {
-    id = JD.10103
+	id = JD.10103
 
     has_dlc = "Jade Dragon"
 
@@ -1762,7 +1762,7 @@ character_event = {
 }
 
 narrative_event = { # NEWS: Major invasion declared on <target>! (Visible event for players + player target, fired from JD.10103)
-    id = JD.10104
+	id = JD.10104
     title = NEWS_FROM_CHINA
 	picture = GFX_evt_brazil_invades
 	portrait = offmap_china
@@ -1850,7 +1850,7 @@ narrative_event = { # NEWS: Major invasion declared on <target>! (Visible event 
 
 #Cleanup event REGULAR [sent from yearly pulse]
 character_event = {
-    id = JD.10200
+	id = JD.10200
 
     has_dlc = "Jade Dragon"
 
@@ -1895,7 +1895,7 @@ character_event = {
 
 #Cleanup event for MAJOR invasion [sent from yearly pulse] 
 character_event = {
-    id = JD.10201
+	id = JD.10201
 
     has_dlc = "Jade Dragon"
 
@@ -1929,7 +1929,7 @@ character_event = {
 
 #Sets exception flag for new rulers - makes sure China's new Emperor can be a belligerent as they please [fired from on_offmap_ruler_changed]
 character_event = {
-    id = JD.10202
+	id = JD.10202
 
     has_dlc = "Jade Dragon"
 
@@ -1962,7 +1962,7 @@ character_event = {
 ###### ... in case the old Protector General left some paper-work behind when they abandoned office #########
 ###### (Fires for the current governor, from offmap_monthly_pulse) 									#########
 character_event = {
-    id = JD.10121
+	id = JD.10121
     has_dlc = "Jade Dragon"
 
     hide_window = yes
@@ -2016,7 +2016,7 @@ character_event = {
 #News event for Jurchen tribe/Displaced prince invasion/adventurer (stand-alone, fired further down, from JD.10109)
 ############################################################################################################################
 narrative_event = {
-    id = JD.10108
+	id = JD.10108
 	has_dlc = "Jade Dragon"
     title = NEWS_FROM_CHINA
 	picture = GFX_evt_brazil_unrest
@@ -2059,7 +2059,7 @@ narrative_event = {
 ### Spawning Altaic Tribe adventurer... (fires for the governor, from jd_chinese_status_and_policy_events file)
 #########################################################################################################
 character_event = {
-    id = JD.10109
+	id = JD.10109
 
     has_dlc = "Jade Dragon"
 
@@ -2141,7 +2141,7 @@ character_event = {
 ### Spawning Displaced Prince - Only in case of dynasty change...  (fires for the governor, from JD.50300, jd_chinese_status_and_policy_events file )
 #########################################################################################################
 character_event = {
-    id = JD.10113 #Sorry about the wrong ID order. Don't let it get to you!
+	id = JD.10113 #Sorry about the wrong ID order. Don't let it get to you!
 
     has_dlc = "Jade Dragon"
 
@@ -2667,7 +2667,7 @@ character_event = { #"[Root.GetBestName] prepares to settle (declare war)"
 
 
 character_event = { #returns home in a state of war [NOT USED?]
-	id = JD.10114 # clone of HL.113
+	id = JD.10114 #clone of HL.113
 
 	has_dlc = "Jade Dragon"
 
@@ -2698,7 +2698,7 @@ character_event = { #returns home in a state of war [NOT USED?]
 
 # Clean-up
 character_event = {
-	id = JD.10115#clone of HL.199
+	id = JD.10115 #clone of HL.199
 
 	has_dlc = "Jade Dragon"
 	

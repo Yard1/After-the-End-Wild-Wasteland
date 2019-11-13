@@ -6350,7 +6350,7 @@ narrative_event = {
 
 # Formation of the Knights of St.Lazarus
 narrative_event = {
-	id =  NewHolyOrders.136
+	id = NewHolyOrders.136
 	title = "EVTNAME_KoL_creation"
 	desc = "EVTDESC_KoL_creation"
 	picture = "GFX_evt_crusaders"

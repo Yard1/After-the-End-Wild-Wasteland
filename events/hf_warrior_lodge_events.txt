@@ -12,7 +12,7 @@ namespace = HF
 #From on_character_ask_to_join_society
 #Set up for finding an appropriate Hero character, who will tell the new recruit about the initation duel
 character_event = {
-    id = HF.10003
+	id = HF.10003
     is_triggered_only = yes
     hide_window = yes
     #ai = no
@@ -77,7 +77,7 @@ character_event = {
 
 #Event for hero character (unless MP, this is an AI)
 character_event = {
-    id = HF.10004
+	id = HF.10004
     desc = EVTDESC_HF_10004
     picture = GFX_evt_melee
     border = GFX_event_normal_frame_war
@@ -98,7 +98,7 @@ character_event = {
 
 #Do you want to accept the challenge to fight a member of the society, or not?
 character_event = {
-    id = HF.10005
+	id = HF.10005
     desc = EVTDESC_HF_10005
     picture = GFX_evt_teaching_moment
     border = GFX_event_normal_frame_war
@@ -211,7 +211,7 @@ character_event = {
 
 #The new recruit accepted/chickened out (for the hero character)
 character_event = {
-    id = HF.10006
+	id = HF.10006
     picture = GFX_evt_melee
     border = GFX_event_normal_frame_war
     is_triggered_only = yes
@@ -388,7 +388,7 @@ character_event = {
 
 #Ping to player to set scopes
 character_event = {
-    id = HF.10007
+	id = HF.10007
     hide_window = yes
     is_triggered_only = yes
     immediate = {
@@ -409,7 +409,7 @@ character_event = {
 }
 
 character_event = { #Hero character's reaction, who then sends acceptance/refusal letter to player
-    id = HF.10008
+	id = HF.10008
     picture = GFX_evt_melee
     border = GFX_event_normal_frame_war
     is_triggered_only = yes
@@ -499,7 +499,7 @@ character_event = { #Hero character's reaction, who then sends acceptance/refusa
 }
 
 letter_event = { #SUCCESS: Welcome to the society!
-    id = HF.10009
+	id = HF.10009
     picture = GFX_evt_melee
     border = GFX_event_letter_frame_war
     is_triggered_only = yes
@@ -624,7 +624,7 @@ letter_event = { #SUCCESS: Welcome to the society!
 }
 
 letter_event = { #FAILURE: You can't sit with us
-    id = HF.10010
+	id = HF.10010
     desc = EVTDESC_HF_10010
     picture = GFX_evt_melee
     border = GFX_event_letter_frame_war
@@ -667,7 +667,7 @@ letter_event = { #FAILURE: You can't sit with us
 #In case the hero character has died or something odd happens:
 ### Gating event on player to make sure societies are joined correctly! [sent from clean up, after duels]
 character_event = {
-    id = HF.10011
+	id = HF.10011
     hide_window = yes
     is_triggered_only = yes
     immediate = {
@@ -738,7 +738,7 @@ character_event = {
 # Recruit/Induct your Child into your Warrior Lodge
 ########################################################
 character_event = { #Fires for the adult child (from decision)
-    id = HF.10016
+	id = HF.10016
     desc = EVTDESC_HF_10016
     picture = GFX_evt_melee
     border = GFX_event_normal_frame_war
@@ -832,7 +832,7 @@ character_event = { #Fires for the adult child (from decision)
 
 #Delayed clean up event (for child who turned down recruitment)
 character_event = {
-    id = HF.10015
+	id = HF.10015
     hide_window = yes
     is_triggered_only = yes
     immediate = {
@@ -843,7 +843,7 @@ character_event = {
 
 #For the parent - Child said yes/no. If yes, you will updated after the trial again.
 character_event = {
-    id = HF.10012
+	id = HF.10012
     picture = GFX_evt_melee
     border = GFX_event_normal_frame_war
     is_triggered_only = yes
@@ -915,7 +915,7 @@ character_event = {
 
 #For the parent - Child made it through the duel and has joined the Warrior Lodge!
 character_event = {
-    id = HF.10013
+	id = HF.10013
     picture = GFX_evt_camaraderie
     desc = EVTDESC_HF_10013_A #"I am one of you guys now!"
     border = GFX_event_normal_frame_war
@@ -1006,7 +1006,7 @@ character_event = {
 
 #For the parent - Child somehow failed to join Warrior Lodge...
 character_event = {
-    id = HF.10014
+	id = HF.10014
     picture = GFX_evt_teaching_moment
     border = GFX_event_normal_frame_war
     is_triggered_only = yes
@@ -1100,7 +1100,7 @@ character_event = {
 
 #Adult Child receives parent's reaction to failure to join Warrior Lodge.
 character_event = {
-    id = HF.10017
+	id = HF.10017
     picture = GFX_evt_camaraderie
     border = GFX_event_normal_frame_war
     is_triggered_only = yes
@@ -1173,7 +1173,7 @@ character_event = {
 
 # START & END: Has either Duelist, Strategist, or Hunter already - Replace the existing trait
 character_event = {
-    id = HF.10020
+	id = HF.10020
     picture = GFX_evt_armory
     border = GFX_event_normal_frame_war
     
@@ -1244,7 +1244,7 @@ character_event = {
 
 # START: No Previous Lifestyle trait - Choose one
 character_event = {
-    id = HF.10021
+	id = HF.10021
     desc = EVTDESC_HF_10021
     picture = GFX_evt_armory
     border = GFX_event_normal_frame_war
@@ -1322,7 +1322,7 @@ character_event = {
 
 # Become a Duelist
 character_event = {
-    id = HF.10022
+	id = HF.10022
     desc = EVTDESC_HF_10022
     picture = GFX_evt_armory
     border = GFX_event_normal_frame_war
@@ -1473,7 +1473,7 @@ character_event = {
 
 #[Sidetrack from option A] - For the mentor: how involved do you wanna be?
 character_event = {
-    id = HF.10023
+	id = HF.10023
     desc = EVTDESC_HF_10023
     picture = GFX_evt_teaching_moment
     border = GFX_event_normal_frame_war
@@ -1539,7 +1539,7 @@ character_event = {
 
 #Lifestyle achieved: DUELIST
 character_event = {
-    id = HF.10024
+	id = HF.10024
     picture = GFX_evt_duel_team
     border = GFX_event_normal_frame_war
     
@@ -1601,7 +1601,7 @@ character_event = {
 
 # Become a Strategist
 character_event = {
-    id = HF.10025
+	id = HF.10025
     desc = EVTDESC_HF_10025
     picture = GFX_evt_upsetting_letter
     border = GFX_event_normal_frame_war
@@ -1678,7 +1678,7 @@ character_event = {
 
 #Lifestyle achieved: STRATEGIST
 character_event = {
-    id = HF.10026
+	id = HF.10026
     desc = EVTDESC_HF_10026
     picture = GFX_evt_teaching_moment
     border = GFX_event_normal_frame_war
@@ -1705,7 +1705,7 @@ character_event = {
 
 # Become a Hunter
 character_event = {
-    id = HF.10030
+	id = HF.10030
     desc = EVTDESC_HF_10030
     picture = GFX_evt_hunt
     border = GFX_event_normal_frame_war
@@ -1760,7 +1760,7 @@ character_event = {
 
 #Lifestyle achieved: HUNTER
 character_event = {
-    id = HF.10031
+	id = HF.10031
     desc = EVTDESC_HF_10031
     picture = GFX_evt_hunt
     border = GFX_event_normal_frame_war
@@ -1792,7 +1792,7 @@ character_event = {
 # RANK 2 POWER - Warrior Training
 ########################################################
 character_event = {
-    id = HF.10040
+	id = HF.10040
     picture = GFX_evt_teaching_moment
     border = GFX_event_normal_frame_war
     has_dlc = "Holy Fury"
@@ -1841,7 +1841,7 @@ character_event = {
 # RANK 1 POWER - Toughness (Bon only)
 ########################################################
 character_event = {
-    id = HF.10055
+	id = HF.10055
     picture = GFX_evt_religious_exultation
     border = GFX_event_normal_frame_war
     has_dlc = "Holy Fury"
@@ -1987,7 +1987,7 @@ character_event = {
 # RANK 1 POWER - Go Berserk (Norse only)
 ########################################################
 character_event = {
-    id = HF.10056
+	id = HF.10056
     picture = GFX_evt_duel_team
     border = GFX_event_normal_frame_war
     has_dlc = "Holy Fury"
@@ -2260,7 +2260,7 @@ character_event = {
 
 # Ping to relation of the casualty. To become rivals, or nah?
 character_event = {
-    id = HF.10057
+	id = HF.10057
     desc = EVTDESC_HF_10057
     picture = GFX_evt_duel_team
     border = GFX_event_normal_frame_war
@@ -2288,7 +2288,7 @@ character_event = {
 
 # Someone has sworn to take vengeance upon you (fires for the original berserker)...
 character_event = {
-    id = HF.10058
+	id = HF.10058
     desc = EVTDESC_HF_10058
     picture = GFX_evt_upsetting_letter
     border = GFX_event_normal_frame_war
@@ -2308,7 +2308,7 @@ character_event = {
 
 ### IN PRISON VERSION ### 
 character_event = {
-    id = HF.10070
+	id = HF.10070
     title = HF_10070_title
     picture = GFX_evt_jailbreak
     border = GFX_event_normal_frame_war
@@ -2706,7 +2706,7 @@ character_event = {
 
 # Ping to relation of the casualty. To become rivals, or nah?
 character_event = {
-    id = HF.10071
+	id = HF.10071
     title = HF_10070_title
     picture = GFX_evt_jailbreak
     border = GFX_event_normal_frame_war
@@ -2749,7 +2749,7 @@ character_event = {
 # RANK 3 POWER - Inspire Warriors
 ########################################################
 character_event = {
-    id = HF.10059
+	id = HF.10059
     desc = EVTDESC_HF_10059
     picture = GFX_evt_battle
     border = GFX_event_normal_frame_war
@@ -2788,7 +2788,7 @@ character_event = {
 # Root = Character
 # From = Society
 character_event = { 
-    id = HF.10050
+	id = HF.10050
     picture = GFX_evt_battle
     border = GFX_event_normal_frame_war
     hide_window = yes
@@ -2862,7 +2862,7 @@ character_event = {
 
 ### Follow-up: If was eligible, AI joins a warrior lodge
 character_event = {
-    id = HF.10051
+	id = HF.10051
     hide_window = yes
     is_triggered_only = yes
     immediate = {
@@ -2969,7 +2969,7 @@ character_event = {
 
 #Notification for players, that their warrior lodge is growing
 character_event = {
-    id = HF.10052
+	id = HF.10052
     desc = EVTDESC_HF_10052
     picture = GFX_evt_battle
     is_triggered_only = yes
@@ -3002,7 +3002,7 @@ character_event = {
 # Root = Character
 # From = Society
 character_event = {
-    id = HF.10053
+	id = HF.10053
     is_triggered_only = yes
     has_dlc = "Holy Fury"
     hide_window = yes
@@ -3101,7 +3101,7 @@ character_event = {
 
 ### Maintenance: Rank up event (AI only)
 character_event = {
-    id = HF.10054
+	id = HF.10054
     hide_window = yes
     is_triggered_only = yes
     has_dlc = "Holy Fury"
@@ -3165,7 +3165,7 @@ character_event = {
 
 ### Trying to rank up to Hero: To duel a current hero or not? (for players)
 character_event = {
-    id = HF.10060
+	id = HF.10060
     title = proving_your_worth_title
     desc = EVTDESC_HF_10060
     picture = GFX_evt_camaraderie
@@ -3213,7 +3213,7 @@ character_event = {
 
 #Ping to opponent (provided they did not die)...
 character_event = {
-    id = HF.10061
+	id = HF.10061
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -3238,7 +3238,7 @@ character_event = {
 
 #Hero admits defeat: "YES, you may take my place at rank 4"... (for player)
 letter_event = {
-    id = HF.10062
+	id = HF.10062
     border = GFX_event_letter_frame_intrigue
     has_dlc = "Holy Fury"
     ai = no
@@ -3270,7 +3270,7 @@ letter_event = {
 
 #No, you may *not* take my place at rank 4... (for player)
 letter_event = {
-    id = HF.10063
+	id = HF.10063
     border = GFX_event_letter_frame_intrigue
     has_dlc = "Holy Fury"
     ai = no
@@ -3297,7 +3297,7 @@ namespace = HFP
 # From = the previous host
 # FromFrom = new employer
 character_event = {
-    id = HFP.19000
+	id = HFP.19000
     hide_window = yes
 
     has_dlc = "Reapers"

@@ -2032,8 +2032,9 @@ title_guru = {
 	
 	allowed_to_grant = { 
 		OR = {
-			religion_group = pacific
 			has_dharmic_religion_trigger = yes
+			religion = cetic
+			religion = neutic
 		}
 	}
 	

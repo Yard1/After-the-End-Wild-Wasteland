@@ -32,7 +32,7 @@ character_event = {
 
 # Religious Head is notified about potential Ancestor material
 character_event = {
-    id = HF.40101
+	id = HF.40101
     desc = EVTDESC_HF_40020_B
     picture = GFX_evt_council
     border = GFX_event_normal_frame_religion
@@ -349,7 +349,7 @@ character_event = {
 
 # Test Script
 character_event = {
-    id = HF.40105
+	id = HF.40105
     hide_window = yes
     is_triggered_only = yes
     trigger = {

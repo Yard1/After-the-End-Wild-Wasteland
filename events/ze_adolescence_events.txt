@@ -6689,7 +6689,7 @@ character_event = {
 
 #Clean Up event
 character_event = {
-    id = ZE.40000
+	id = ZE.40000
     is_triggered_only = yes
     hide_window = yes
 

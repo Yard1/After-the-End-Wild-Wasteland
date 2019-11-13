@@ -720,6 +720,13 @@ defined_text = {
 			true_religion_gaian_trigger = yes
 		}
 	}
+
+	text = {
+		localisation_key = String_Amazonians
+		trigger = {
+			true_religion_amazonian_trigger = yes
+		}
+	}
 	
 	text = {
 		localisation_key = String_Cetics
@@ -871,6 +878,13 @@ defined_text = {
 		localisation_key = String_Gaian
 		trigger = {
 			true_religion_gaian_trigger = yes
+		}
+	}
+
+	text = {
+		localisation_key = String_Amazonian
+		trigger = {
+			true_religion_amazonian_trigger = yes
 		}
 	}
 	
@@ -1270,6 +1284,10 @@ defined_text = {
 		trigger = { true_religion_gaian_trigger = yes }
 	}
 	text = { 
+		localisation_key = GOD_DIANA
+		trigger = { true_religion_amazonian_trigger = yes }
+	}
+	text = { 
 		localisation_key = GOD_THE_EMPEROR
 		trigger = { true_religion_cetic_trigger = yes }
 	}
@@ -1471,7 +1489,10 @@ defined_text = {
     text = { 
         localisation_key = String_Book_of_Shadows
         trigger = { 
-            true_religion_gaian_trigger = yes
+            OR = {
+				true_religion_gaian_trigger = yes
+				true_religion_amazonian_trigger = yes
+			}
         }
     }
     text = { 
@@ -1667,6 +1688,13 @@ defined_text = {
 		localisation_key = String_Gaian
 		trigger = {
 			true_religion_gaian_trigger = yes
+		}
+	}
+
+	text = {
+		localisation_key = String_Amazonian
+		trigger = {
+			true_religion_amazonian_trigger = yes
 		}
 	}
 	
@@ -2171,7 +2199,12 @@ defined_text = {
 	}
 	text = {
 		localisation_key = String_world_tree_symbol
-		trigger = { true_religion_gaian_trigger = yes }
+		trigger = { 
+			OR = {
+				true_religion_gaian_trigger = yes
+				true_religion_amazonian_trigger = yes
+			}
+		}
 	}
 	text = {
 		localisation_key = String_totem

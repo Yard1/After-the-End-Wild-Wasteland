@@ -11703,6 +11703,89 @@ character_event = {
 				}
 			} 
 		}
+		if = {
+			limit = {
+				OR = {
+					is_merchant_republic = yes
+					is_patrician = yes
+				}
+			}
+			any_vassal = {
+				limit = {
+					OR = {
+						is_merchant_republic = yes
+						is_patrician = yes
+					}
+				}
+				character_event = { id = miscATEWW.9 }
+			}
+			if = {
+				limit = { matriarchal_religion = yes }
+				FROMFROM = {
+					add_law = {
+						law = enatic_succession
+						cooldown = no
+						opinion_effect = no
+					}
+					add_law = {
+						law = status_of_women_4
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+				if = {
+					limit = {
+						ai = yes
+						NOT = { father_even_if_dead = { always = yes } }
+						NOT = { mother_even_if_dead = { always = yes } }
+					}
+					ROOT = {
+						set_gender = female
+						add_trait = hidden_female_trait
+						remove_trait = hidden_male_trait
+						remove_trait = eunuch
+						give_ROOT_random_name = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = { 
+						gender_equality_trigger = yes 
+						has_religion_feature = religion_feature_midewiwin
+					}
+				}
+				FROMFROM = {
+					add_law = {
+						law = true_cognatic_succession
+						cooldown = no
+						opinion_effect = no
+					}
+					add_law = {
+						law = status_of_women_4
+						cooldown = no
+						opinion_effect = no
+					}
+				}
+				if = {
+					limit = {
+						ai = yes
+						NOT = { father_even_if_dead = { always = yes } }
+						NOT = { mother_even_if_dead = { always = yes } }
+					}
+					random = {
+						chance = 50
+						ROOT = {
+							set_gender = female
+							add_trait = hidden_female_trait
+							remove_trait = hidden_male_trait
+							remove_trait = eunuch
+							give_ROOT_random_name = yes
+						}
+					}
+				}
+			}
+		}
 
 		character_event = { id = misc.6 }
 	}

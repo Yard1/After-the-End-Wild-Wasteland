@@ -6,7 +6,7 @@ namespace = HFP
 ## Official Crusade Recipient
 # Set Official Recipient
 character_event = {
-    id = HFP.41000
+	id = HFP.41000
     hide_window = yes
     is_triggered_only = yes
     border = GFX_event_normal_frame_religion
@@ -290,7 +290,7 @@ character_event = {
 
 # Checks if Crusade Recipient is viable religion
 character_event = {
-    id = HFP.41001
+	id = HFP.41001
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -337,7 +337,7 @@ character_event = {
 
 # Change Official Crusade Recipient if the current recipient die
 character_event = {
-    id = HFP.41002
+	id = HFP.41002
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -380,7 +380,7 @@ character_event = {
 ## Crusade Prep Announcement Events
 # Crusade preparation pre-Announcement event
 character_event = {
-    id = HFP.41003
+	id = HFP.41003
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -412,7 +412,7 @@ character_event = {
 
 # Crusade preparation Announcement event
 narrative_event = {
-    id = HFP.41004
+	id = HFP.41004
     desc = {
 		text = EVTDESC_HFP_41004
 		trigger = {
@@ -505,7 +505,7 @@ narrative_event = {
 ## Pledge and Beneficiary Events
 # Pledge preperation start event - AI only
 character_event = {
-    id = HFP.41005
+	id = HFP.41005
     hide_window = yes
     is_triggered_only = yes
 
@@ -619,7 +619,7 @@ character_event = {
 
 # Pledge monthly event - AI only
 character_event = {
-    id = HFP.41006
+	id = HFP.41006
     hide_window = yes
     is_triggered_only = yes
 
@@ -1166,7 +1166,7 @@ character_event = {
 
 # Beneficiary event - AI only
 character_event = {
-    id = HFP.41007
+	id = HFP.41007
     hide_window = yes
     is_triggered_only = yes
     ai = yes
@@ -2778,7 +2778,7 @@ character_event = {
 ## Launch Related Announcements
 # Crusade Launch pre-announcement event
 character_event = {
-    id = HFP.41008
+	id = HFP.41008
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -2822,7 +2822,7 @@ character_event = {
 
 # Crusade Launch announcement event
 narrative_event = {
-    id = HFP.41009
+	id = HFP.41009
     desc = {
 		text = EVTDESC_HFP_41009
 		trigger = {
@@ -2986,7 +2986,7 @@ narrative_event = {
 
 # Crusade fail to launch pre-announcement event
 character_event = {
-    id = HFP.41010
+	id = HFP.41010
     hide_window = yes
     is_triggered_only = yes
     immediate = {
@@ -3009,7 +3009,7 @@ character_event = {
 
 # Crusade fail to launch Announcement event
 narrative_event = {
-    id = HFP.41011
+	id = HFP.41011
     desc = {
 		text = EVTDESC_HFP_41011
 		trigger = {
@@ -3037,7 +3037,7 @@ narrative_event = {
 
 # Crusade cancelled check
 character_event = {
-    id = HFP.41012
+	id = HFP.41012
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -3059,7 +3059,7 @@ character_event = {
 ## Favor Related Events
 # Pope forcing people owing him a favor to pledge - AI only
 character_event = {
-    id = HFP.41020
+	id = HFP.41020
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -3116,7 +3116,7 @@ character_event = {
 
 # Pope asking a player owing him a favor, to pledge
 character_event = {
-    id = HFP.41021
+	id = HFP.41021
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -3166,7 +3166,7 @@ character_event = {
 
 # Player receives the Popes letter about joining the war - Player Only
 letter_event = {
-    id = HFP.41022
+	id = HFP.41022
     desc = EVTDESC_HFP_41022
     border = GFX_event_letter_frame_religion
     is_triggered_only = yes
@@ -3237,7 +3237,7 @@ letter_event = {
 ## Pledge Event Tombola
 # Random Event Tombola when you pledge to join the Crusade - Player Only
 character_event = {
-    id = HFP.41030
+	id = HFP.41030
     hide_window = yes
     is_triggered_only = yes
     ai = no
@@ -3319,7 +3319,7 @@ character_event = {
 
 # Courtier pleased with your decision to pledge to the Crusade - Player Only
 character_event = {
-    id = HFP.41031
+	id = HFP.41031
     desc = EVTDESC_HFP_41031
     border = GFX_event_normal_frame_religion
     picture = GFX_evt_courtiers_talking
@@ -3387,7 +3387,7 @@ character_event = {
 
 # Another participant pleased with your decision to pledge to the Crusade - Player Only
 character_event = {
-    id = HFP.41032
+	id = HFP.41032
     desc = EVTDESC_HFP_41032
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_religion
@@ -3457,7 +3457,7 @@ character_event = {
 
 # A rival participant tries to make amends with you, as you are Crusading together - Player Only
 character_event = {
-    id = HFP.41033
+	id = HFP.41033
     desc = EVTDESC_HFP_41033
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_religion
@@ -3510,7 +3510,7 @@ character_event = {
 
 # Feeling Zealous about the upcoming Crusade - Player Only
 character_event = {
-    id = HFP.41034
+	id = HFP.41034
     desc = EVTDESC_HFP_41034
     picture = GFX_evt_religious_exultation
     border = GFX_event_normal_frame_religion
@@ -3537,7 +3537,7 @@ character_event = {
 
 # Saying good bye to the local monster - Player Lunatics Only
 character_event = {
-    id = HFP.41035
+	id = HFP.41035
     desc = {
     	trigger = {
     		OR = {
@@ -3621,7 +3621,7 @@ character_event = {
 ## Unpledge Event Tombola
 # Random Event Tombola when you remove your pledge from the Crusade - Player Only
 character_event = {
-    id = HFP.41040
+	id = HFP.41040
     hide_window = yes
     is_triggered_only = yes
     ai = no
@@ -3722,7 +3722,7 @@ character_event = {
 
 # Courtier disapproves of your decision to leave the Crusade - Player Only
 character_event = {
-    id = HFP.41041
+	id = HFP.41041
     desc = EVTDESC_HFP_41041
     picture = GFX_evt_courtiers_talking
     border = GFX_event_normal_frame_religion
@@ -3809,7 +3809,7 @@ character_event = {
 
 # Another participant displeased with your decision to leave the Crusade - Player Only
 character_event = {
-    id = HFP.41042
+	id = HFP.41042
     desc = EVTDESC_HFP_41042
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_religion
@@ -3860,7 +3860,7 @@ character_event = {
 
 # Another participant declares you a rival for leaving the Crusade - Player Only
 character_event = {
-    id = HFP.41043
+	id = HFP.41043
     desc = EVTDESC_HFP_41043
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_religion
@@ -3916,7 +3916,7 @@ character_event = {
 
 # Pope sends out letters declaring Excommunication
 narrative_event = {
-    id = HFP.41044
+	id = HFP.41044
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -3943,7 +3943,7 @@ narrative_event = {
 
 # Ruler Excommunicated by the Pope
 narrative_event = {
-    id = HFP.41045
+	id = HFP.41045
     title = EVTTITLE_HFP_41045
     desc = {
 		text = EVTDESC_HFP_41045
@@ -4015,7 +4015,7 @@ narrative_event = {
 ## Misc Events
 # The Pope decides to ask a player for their pledge for the Crusade 
 character_event = {
-    id = HFP.41050
+	id = HFP.41050
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -4061,7 +4061,7 @@ character_event = {
 
 # The player receives a letter from the Pope, asking to pledge to the Crusade - Player Only
 letter_event = {
-    id = HFP.41051
+	id = HFP.41051
     desc = EVTDESC_HFP_41051
     border = GFX_event_letter_frame_religion
     is_triggered_only = yes
@@ -4209,7 +4209,7 @@ letter_event = {
 
 # Recheck Beneficiary every month
 character_event = {
-    id = HFP.41052
+	id = HFP.41052
     hide_window = yes
     is_triggered_only = yes
 
@@ -4428,7 +4428,7 @@ character_event = {
 
 # Recheck Beneficiary when someone die / gain a new title
 character_event = {
-    id = HFP.41053
+	id = HFP.41053
     hide_window = yes
     is_triggered_only = yes
 
@@ -4455,7 +4455,7 @@ character_event = {
 
 # Play as Crusader King / Queen
 narrative_event = {
-    id = HFP.41054
+	id = HFP.41054
     desc = {
 		text = EVTDESC_HFP_41054
 		trigger = {
@@ -4513,7 +4513,7 @@ narrative_event = {
 
 # Monthly Pulse check
 character_event = {
-    id = HFP.41055
+	id = HFP.41055
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -4556,7 +4556,7 @@ character_event = {
 
 # Religious Head pre-de-excommunication
 character_event = {
-    id = HFP.41056
+	id = HFP.41056
     hide_window = yes
     is_triggered_only = yes
 
@@ -4569,7 +4569,7 @@ character_event = {
 
 # De-Excommunicated
 letter_event = {
-    id = HFP.41057
+	id = HFP.41057
     desc = EVTDESC_HFP_41057
     is_triggered_only = yes
     trigger = {
@@ -4591,7 +4591,7 @@ letter_event = {
 
 # Pre-event to play as a Beneficiary
 character_event = {
-    id = HFP.41060
+	id = HFP.41060
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -4611,7 +4611,7 @@ character_event = {
 
 # Event to play as a Beneficiary
 narrative_event = {
-    id = HFP.41061
+	id = HFP.41061
     desc = EVTDESC_HFP_41061
     title = EVTTITLE_HFP_41061
     picture = GFX_evt_book_carolingian_script
@@ -4686,7 +4686,7 @@ narrative_event = {
 ## Counter Pledge Events
 # Getting AI defense pledges
 character_event = {
-    id = HFP.41070
+	id = HFP.41070
     hide_window = yes
     is_triggered_only = yes
 
@@ -4796,7 +4796,7 @@ character_event = {
 
 # Characters pledging defense from Crusade - AI only
 character_event = {
-    id = HFP.41071
+	id = HFP.41071
     hide_window = yes
     is_triggered_only = yes
     ai = yes
@@ -4831,7 +4831,7 @@ character_event = {
 
 # Get new pledges, if the target is changed to someone of another religion - AI only
 character_event = {
-    id = HFP.41072
+	id = HFP.41072
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -4849,7 +4849,7 @@ character_event = {
 
 # Defense severely outmatched - AI only
 character_event = {
-    id = HFP.41073
+	id = HFP.41073
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -5120,7 +5120,7 @@ character_event = {
 
 # Any character owing a favor of the same religion will pledge to the defense - AI only
 character_event = {
-    id = HFP.41074
+	id = HFP.41074
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -5174,7 +5174,7 @@ character_event = {
 
 # Receiving letter with pledge
 letter_event = {
-    id = HFP.41075
+	id = HFP.41075
     desc = EVTDESC_HFP_41075
     border = GFX_event_letter_frame_religion
     is_triggered_only = yes
@@ -5200,7 +5200,7 @@ letter_event = {
 ## The Pot events
 # Initial Rewards
 character_event = {
-    id = HFP.41080
+	id = HFP.41080
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -5223,7 +5223,7 @@ character_event = {
 
 # Seeking Christian Monetary support - AI
 character_event = {
-    id = HFP.41081
+	id = HFP.41081
     hide_window = yes
     is_triggered_only = yes
 	
@@ -5305,7 +5305,7 @@ character_event = {
 
 # Receiving Christian Monetary Support - AI
 character_event = {
-    id = HFP.41082
+	id = HFP.41082
     hide_window = yes
     is_triggered_only = yes
     ai = yes
@@ -5433,7 +5433,7 @@ character_event = {
 
 # Giving out gold at the start of a Crusade
 character_event = {
-    id = HFP.41083
+	id = HFP.41083
     hide_window = yes
     is_triggered_only = yes
     
@@ -5447,7 +5447,7 @@ character_event = {
 
 # Add to pot at the end of every won siege
 character_event = {
-    id = HFP.41084
+	id = HFP.41084
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -5491,7 +5491,7 @@ character_event = {
 
 # Add to pot at the end of every won battle
 character_event = {
-    id = HFP.41085
+	id = HFP.41085
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -5529,7 +5529,7 @@ character_event = {
 
 # No Pot rewards for Holy Orders - AI only
 character_event = {
-    id = HFP.41086
+	id = HFP.41086
     hide_window = yes
     is_triggered_only = yes
 
@@ -5550,7 +5550,7 @@ character_event = {
 
 # No Pot rewards for Holy Orders when they get a new Grandmaster either - AI only
 character_event = {
-    id = HFP.41087
+	id = HFP.41087
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -5571,7 +5571,7 @@ character_event = {
 
 # Add gold to pot
 character_event = {
-    id = HFP.41088
+	id = HFP.41088
     desc = EVTDESC_HFP_41088
     picture = GFX_evt_throne_room
     border = GFX_event_normal_frame_religion
@@ -5711,7 +5711,7 @@ character_event = {
 
 # Test script to add an additional Crusade Artifact to the pot
 character_event = {
-    id = HFP.41089
+	id = HFP.41089
     hide_window = yes
     is_triggered_only = yes
 
@@ -5723,7 +5723,7 @@ character_event = {
 ## Post Crusade Events
 # Refill the levy, and remove the negative modifiers
 character_event = {
-    id = HFP.41090
+	id = HFP.41090
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -5772,7 +5772,7 @@ character_event = {
 ## Stance Selection
 # Stance event
 character_event = {
-    id = HFP.41091
+	id = HFP.41091
     desc = {
 		text = EVTDESC_HFP_41091
 		trigger = {
@@ -5972,7 +5972,7 @@ character_event = {
 
 # Test script to make every Catholic ruler Ursuline
 character_event = {
-    id = HFP.41105
+	id = HFP.41105
     hide_window = yes
     is_triggered_only = yes
 
@@ -5989,7 +5989,7 @@ character_event = {
 ## Loss of Beneficiary Notification
 # Beneficiary message check - Player Only
 character_event = {
-    id = HFP.41110
+	id = HFP.41110
     hide_window = yes
     is_triggered_only = yes
     ai = no
@@ -6020,7 +6020,7 @@ character_event = {
 
 # Dead Beneficiary Message - Player Only
 character_event = {
-    id = HFP.41111
+	id = HFP.41111
     desc = EVTDESC_HFP_41111
     picture = GFX_evt_throne_room
     notification = yes
@@ -6034,7 +6034,7 @@ character_event = {
 
 # Landed Beneficiary Message - Player Only
 character_event = {
-    id = HFP.41112
+	id = HFP.41112
     desc = EVTDESC_HFP_41112
     picture = GFX_evt_throne_room
     notification = yes
@@ -6048,7 +6048,7 @@ character_event = {
 
 # Heir Beneficiary Message - Player Only
 character_event = {
-    id = HFP.41113
+	id = HFP.41113
     desc = EVTDESC_HFP_41113
     picture = GFX_evt_throne_room
     notification = yes
@@ -6062,7 +6062,7 @@ character_event = {
 
 # Mercenary Beneficiary Message - Player Only
 character_event = {
-    id = HFP.41114
+	id = HFP.41114
     desc = EVTDESC_HFP_41114
     picture = GFX_evt_throne_room
     notification = yes
@@ -6076,7 +6076,7 @@ character_event = {
 
 # Holy Order Beneficiary Message - Player Only
 character_event = {
-    id = HFP.41115
+	id = HFP.41115
     desc = EVTDESC_HFP_41115
     picture = GFX_evt_throne_room
     notification = yes
@@ -6090,7 +6090,7 @@ character_event = {
 
 # Underage Beneficiary Message - Player Only
 character_event = {
-    id = HFP.41116
+	id = HFP.41116
     desc = EVTDESC_HFP_41116
     picture = GFX_evt_throne_room
     notification = yes
@@ -6104,7 +6104,7 @@ character_event = {
 
 # Sick or Injured Beneficiary Message - Player Only
 character_event = {
-    id = HFP.41117
+	id = HFP.41117
     desc = EVTDESC_HFP_41117
     picture = GFX_evt_throne_room
     notification = yes
@@ -6118,7 +6118,7 @@ character_event = {
 
 # Monk or Nun Beneficiary Message - Player Only
 character_event = {
-    id = HFP.41118
+	id = HFP.41118
     desc = EVTDESC_HFP_41118
     picture = GFX_evt_throne_room
     notification = yes
@@ -6133,7 +6133,7 @@ character_event = {
 ## New Official Crusade Recipient notification
 # Recipient remove and replaced message
 letter_event = {
-    id = HFP.41120
+	id = HFP.41120
     desc = {
         trigger = {
             event_target:old_crusade_recipient = {
@@ -6244,7 +6244,7 @@ letter_event = {
 
 # Recipient removed and no replacement message
 letter_event = {
-    id = HFP.41121
+	id = HFP.41121
     desc = {
         trigger = {
             event_target:old_crusade_recipient = {
@@ -6277,7 +6277,7 @@ letter_event = {
 ## Not pledged to Crusade
 # Pope finds people to be disappointed in - AI only
 character_event = {
-    id = HFP.41130
+	id = HFP.41130
     hide_window = yes
     is_triggered_only = yes
 
@@ -6326,7 +6326,7 @@ character_event = {
 
 # Pope is disappointed in a character
 letter_event = {
-    id = HFP.41131
+	id = HFP.41131
     desc = {
 		text = EVTDESC_HFP_41131
 		trigger = {
@@ -6444,7 +6444,7 @@ letter_event = {
 ## Pope checking if anyone hasn't been properly Crusading
 # Prepare check
 character_event = {
-    id = HFP.41140
+	id = HFP.41140
     hide_window = yes
     is_triggered_only = yes
 
@@ -6462,7 +6462,7 @@ character_event = {
 
 # Inbetween province event, to make sure the event go through
 province_event = {
-    id = HFP.41141
+	id = HFP.41141
     hide_window = yes
     is_triggered_only = yes
 
@@ -6473,7 +6473,7 @@ province_event = {
 
 # Second part of the inbetween province event
 province_event = {
-    id = HFP.41142
+	id = HFP.41142
     hide_window = yes
     is_triggered_only = yes
 
@@ -6549,7 +6549,7 @@ province_event = {
 
 # Pope sends out angry letters to everyone who hasn't been Crusading properly
 character_event = {
-    id = HFP.41143
+	id = HFP.41143
     hide_window = yes
     is_triggered_only = yes
 
@@ -6592,7 +6592,7 @@ character_event = {
 
 # Receiving angry Pope letters
 letter_event = {
-    id = HFP.41144
+	id = HFP.41144
     desc = EVTDESC_HFP_41144
     picture = GFX_evt_throne_room
     is_triggered_only = yes
@@ -6660,7 +6660,7 @@ letter_event = {
 
 # Second round of angry letters
 province_event = {
-    id = HFP.41145
+	id = HFP.41145
     hide_window = yes
     is_triggered_only = yes
 
@@ -6718,7 +6718,7 @@ province_event = {
 
 # Pope sends out angry letters to everyone who hasn't been Crusading properly
 character_event = {
-    id = HFP.41146
+	id = HFP.41146
     hide_window = yes
     is_triggered_only = yes
 
@@ -6744,7 +6744,7 @@ character_event = {
 
 # Receiving angry Pope letter V2.0
 letter_event = {
-    id = HFP.41147
+	id = HFP.41147
     desc = EVTDESC_HFP_41147
     picture = GFX_evt_throne_room
     is_triggered_only = yes
@@ -6782,7 +6782,7 @@ letter_event = {
 ## Winning Crusade Victories
 # Winning Crusade
 narrative_event = {
-    id = HFP.41160
+	id = HFP.41160
     title = EVTTITLE_HFP_41160
     desc = EVTDESC_HFP_41160
     picture = GFX_evt_mass_crusade
@@ -6816,7 +6816,7 @@ narrative_event = {
 ## Dynasty Modifiers
 # Remove Dynasty Modifier on death
 character_event = {
-    id = HFP.41170
+	id = HFP.41170
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -6840,7 +6840,7 @@ character_event = {
 
 # Cleanup Event
 character_event = {
-    id = HFP.41199
+	id = HFP.41199
     hide_window = yes
     is_triggered_only = yes
 

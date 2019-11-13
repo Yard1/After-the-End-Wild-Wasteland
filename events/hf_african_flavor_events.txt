@@ -5,7 +5,7 @@ namespace = HF
 
 # Story-telling
 character_event = {
-    id = HF.15000
+	id = HF.15000
     title = EVTTITLE_HF_15000
     desc = EVTDESC_HF_15000
     picture = GFX_evt_moonlit_mountains_hf
@@ -101,7 +101,7 @@ character_event = {
 
 # Rains down in Africa (SETUP)
 character_event = {
-    id = HF.15099
+	id = HF.15099
     is_triggered_only = yes
     hide_window = yes
     has_dlc = "Holy Fury"
@@ -135,7 +135,7 @@ character_event = {
 
 # Rain development (on 5 year pulse)
 character_event = {
-    id = HF.15100
+	id = HF.15100
     is_triggered_only = yes
     hide_window = yes
     has_dlc = "Holy Fury"
@@ -200,7 +200,7 @@ character_event = {
 
 # Delay for the tombola below (from on bi_yearly_pulse)
 character_event = {
-    id = HF.15098
+	id = HF.15098
     hide_window = yes
     is_triggered_only = yes
     
@@ -215,7 +215,7 @@ character_event = {
 
 # Tombola for flavor/risks/bonuses related to the rain/drought... (from event above )
 character_event = {
-    id = HF.15120
+	id = HF.15120
     is_triggered_only = yes
     hide_window = yes
     
@@ -602,7 +602,7 @@ character_event = {
 
 # Positive news (Rain dances had an effect??)
 character_event = {
-    id = HF.15101
+	id = HF.15101
     title = africa_rain_positive_title
     picture = GFX_evt_west_african_ruler
     border = GFX_event_normal_frame_religion
@@ -722,7 +722,7 @@ character_event = {
 
 # Positive news (Surprise, things are great - keep it going?)
 character_event = {
-    id = HF.15102
+	id = HF.15102
     title = africa_rain_positive_title
     desc = EVTDESC_HF_15102
     picture = GFX_evt_west_african_ruler
@@ -781,7 +781,7 @@ character_event = {
 
 # Negative news (Attempt a rain dance?)
 character_event = {
-    id = HF.15103
+	id = HF.15103
     title = africa_rain_negative_title
     picture = GFX_evt_desert
     border = GFX_event_normal_frame_religion
@@ -858,7 +858,7 @@ character_event = {
 
 # Rains: "The Winds Over <Realm>" (Choose to prepare for the future somehow)
 character_event = {
-    id = HF.15110
+	id = HF.15110
     title = africa_rain_status_title
     desc = EVTDESC_HF_15110
     picture = GFX_evt_market_hf
@@ -1254,7 +1254,7 @@ character_event = {
 
 # Drought: "The Winds Over <Realm>" (Choose a province to feed)
 character_event = {
-    id = HF.15111
+	id = HF.15111
     title = africa_drought_status_title
     desc = EVTDESC_HF_15110
     picture = GFX_evt_market_hf
@@ -1475,7 +1475,7 @@ character_event = {
 
 # Landslide (negative heavy rain)
 character_event = {
-    id = HF.15121
+	id = HF.15121
     title = EVTTITLE_HF_15121 
     desc = EVTDESC_HF_15121
     picture = GFX_evt_dead_body_hf
@@ -1711,7 +1711,7 @@ character_event = {
 
 # Drought kills people (negative drought)
 character_event = {
-    id = HF.15122
+	id = HF.15122
     title = EVTTITLE_HF_15122
     desc = EVTDESC_HF_15122
     picture = GFX_evt_desert
@@ -1898,7 +1898,7 @@ character_event = {
 
 # Rotting Library (negative heavy rain)
 character_event = {
-    id = HF.15123
+	id = HF.15123
     title = EVTTITLE_HF_15123
     desc = EVTDESC_HF_15123
     picture = GFX_evt_monk
@@ -1975,7 +1975,7 @@ character_event = {
 
 # Flooded Armory (negative heavy rain)
 character_event = {
-    id = HF.15124
+	id = HF.15124
     title = EVTTITLE_HF_15124
     desc = EVTDESC_HF_15124
     picture = GFX_evt_armory
@@ -2059,7 +2059,7 @@ character_event = {
 
 # People are suffering from the drought. (negative drought)
 character_event = {
-    id = HF.15125
+	id = HF.15125
     is_triggered_only = yes
     picture = GFX_evt_desert
     notification = yes

@@ -11,7 +11,7 @@
 namespace = ADV
 
 character_event = {
-    id = ADV.1
+	id = ADV.1
 
     is_triggered_only = yes
     hide_window = yes
@@ -295,7 +295,7 @@ character_event = {
 
 #Ping event
 character_event = {
-    id = ADV.2
+	id = ADV.2
     hide_window = yes
     is_triggered_only = yes
     immediate = { FROM = { letter_event = { id = ADV.3 } } }
@@ -303,7 +303,7 @@ character_event = {
 
 #Negotiation start
 letter_event = {
-    id = ADV.3
+	id = ADV.3
     border = GFX_event_letter_frame_war
 
     desc = {
@@ -530,7 +530,7 @@ letter_event = {
 
 #Raiding adventurer evaluates 
 character_event = {
-    id = ADV.10
+	id = ADV.10
     hide_window = yes
     is_triggered_only = yes
     immediate = { 
@@ -603,7 +603,7 @@ character_event = {
 
 #They accept the offer
 letter_event = {
-    id = ADV.4
+	id = ADV.4
     desc = EVTDESC_ADV_4
     border = GFX_event_letter_frame_diplomacy
 
@@ -1013,7 +1013,7 @@ letter_event = {
 
 #Change religion etc. of settled adventurer
 character_event = {
-    id = ADV.20
+	id = ADV.20
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -1044,7 +1044,7 @@ character_event = {
 }
 
 letter_event = { # Religion flip notification event
-    id = ADV.21
+	id = ADV.21
     desc = EVTDESC_ADV_21
 	
     is_triggered_only = yes

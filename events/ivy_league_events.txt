@@ -4,7 +4,7 @@ namespace = faculty
 
 #This is the quest_collaborator receiving the mission and giving it back to you.
 character_event = {
-    id = faculty.140
+	id = faculty.140
     hide_window = yes #instant event, no need to show it
     is_triggered_only = yes
     immediate = { FROM = { society_quest_event = { id = faculty.141 days = 7 random = 7 } } }
@@ -39,7 +39,7 @@ society_quest_event = {
 
 ###Funding quest
 character_event = {
-    id = faculty.142
+	id = faculty.142
     desc = EVTDESC_faculty_142
     picture = GFX_evt_throne_room
     border = GFX_event_normal_frame_war
@@ -117,7 +117,7 @@ character_event = {
 
 # Students fighting
 character_event = {
-    id = faculty.150
+	id = faculty.150
     desc = EVTDESC_faculty_150
     picture = GFX_evt_throne_room
     border = GFX_event_normal_frame_war
@@ -273,7 +273,7 @@ society_quest_event = {
 
 #Purchase books
 character_event = {
-    id = faculty.162
+	id = faculty.162
     desc = EVTDESC_faculty_162
     picture = GFX_evt_throne_room
     border = GFX_event_normal_frame_war
@@ -364,7 +364,7 @@ character_event = {
 
 #Fix roof and plumbing
 character_event = {
-    id = faculty.163
+	id = faculty.163
     desc = EVTDESC_faculty_163
     picture = GFX_evt_throne_room
     border = GFX_event_normal_frame_war
@@ -455,7 +455,7 @@ character_event = {
 
 # Build printing engine
 character_event = {
-    id = faculty.164
+	id = faculty.164
     desc = EVTDESC_faculty_164
     picture = GFX_evt_throne_room
     border = GFX_event_normal_frame_war
@@ -531,7 +531,7 @@ character_event = {
 
 # Library finished
 character_event = {
-    id = faculty.165
+	id = faculty.165
     desc = EVTDESC_faculty_165
     picture = GFX_evt_throne_room
     border = GFX_event_normal_frame_war

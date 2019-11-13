@@ -1232,7 +1232,7 @@ narrative_event = {
 
 #Formation of PEI
 narrative_event = {
-    id = canada.26
+	id = canada.26
     desc = EVTDESC_canada_26
     title = EVTTITLE_canada_26
     picture = GFX_evt_western_knights_byzantine
@@ -1246,7 +1246,7 @@ narrative_event = {
 
 # Removes the prince / princess titles from the children of the Prince of Prince Edward Island
 character_event = {
-    id = canada.27
+	id = canada.27
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -1274,7 +1274,7 @@ character_event = {
 
 # Clean up Abbey Guards 
 character_event = {
-    id = canada.28
+	id = canada.28
     hide_window = yes
     is_triggered_only = yes
     trigger = {

@@ -12,7 +12,7 @@ namespace = HFP
 ### CLAIM DUELS 
 # Get challenged (sent from duel_decision )
 character_event = {
-    id = HF.10095
+	id = HF.10095
     title = claim_duel_challenge_title
     picture = GFX_evt_bloodlines
     border = GFX_event_normal_frame_war
@@ -194,7 +194,7 @@ character_event = {
 
 # Start the duel - For the attacker (combatant_1)
 character_event = {
-    id = HF.10096
+	id = HF.10096
     title = challenge_accepted_title
     is_triggered_only = yes
     picture = GFX_evt_bloodlines
@@ -314,7 +314,7 @@ character_event = {
 ### "REGULAR" duels start here...
 # Get challenged (sent from duel_decision )
 character_event = {
-    id = HFP.10095
+	id = HFP.10095
     picture = GFX_evt_armory
     border = GFX_event_normal_frame_war
     
@@ -652,7 +652,7 @@ character_event = {
 
 # Start the duel - For the attacker (combatant_1)
 character_event = {
-    id = HFP.10096
+	id = HFP.10096
     is_triggered_only = yes
     picture = GFX_evt_armory
     border = GFX_event_normal_frame_war
@@ -824,7 +824,7 @@ character_event = {
 
 # Duel rejected
 character_event = {
-    id = HFP.10097
+	id = HFP.10097
     is_triggered_only = yes
     desc = EVTDESC_HFP_10097
     picture = GFX_evt_bad_news
@@ -965,7 +965,7 @@ character_event = {
 }
 
 character_event = { #You were cornered!
-    id = HFP.10098
+	id = HFP.10098
     desc = EVTDESC_HFP_10098 #"You WILL duel me..." knifey threat-style
     picture = GFX_evt_shadow
     border = GFX_event_normal_frame_intrigue
@@ -987,7 +987,7 @@ character_event = { #You were cornered!
 }
 
 character_event = { #I failed to corner them...
-    id = HFP.10099
+	id = HFP.10099
     desc = EVTDESC_HFP_10099 #
     picture = GFX_evt_shadow
     border = GFX_event_normal_frame_intrigue
@@ -1019,7 +1019,7 @@ character_event = { #I failed to corner them...
 # Duel set-up event (sends outcome events to combatant_1 and combatant_2)
 # The meat's in here! Send this event when you want to start any duel, that is supposed to have an outcome displaying the fight.
 character_event = {
-    id = HFP.10100
+	id = HFP.10100
     is_triggered_only = yes
 
     hide_window = yes
@@ -1052,7 +1052,7 @@ character_event = {
 
 #Double death - Attacker
 character_event = {
-    id = HFP.10101
+	id = HFP.10101
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
     title = getDuelTitle
@@ -1193,7 +1193,7 @@ character_event = {
 
 #Double death - Defender
 character_event = {
-    id = HFP.10102
+	id = HFP.10102
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
     title = getDuelTitle
@@ -1336,7 +1336,7 @@ character_event = {
 
 #DEATH: I killed my opponent - I won!
 character_event = {
-    id = HFP.10103
+	id = HFP.10103
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
     title = getDuelTitle
@@ -1702,7 +1702,7 @@ character_event = {
 
 #DEATH: I died in the duel - I lost (fired from HFP.10103 above)
 character_event = {
-    id = HFP.10104
+	id = HFP.10104
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
     title = getDuelTitle
@@ -1986,7 +1986,7 @@ character_event = {
 
 #DEATH: I should've died in the duel - I lost (fired from HFP.10103)
 character_event = {
-    id = HF.10104
+	id = HF.10104
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
     title = getDuelTitle
@@ -2154,7 +2154,7 @@ character_event = {
 
 #For the merciful fighter: (FROM chose to live)...
 character_event = {
-    id = HF.10105
+	id = HF.10105
     title = duel_aftermath_title
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
@@ -2292,7 +2292,7 @@ character_event = {
 
 #For the merciful fighter: (FROM chose to die)...
 character_event = {
-    id = HF.10106
+	id = HF.10106
     title = getDuelTitle
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
@@ -2336,7 +2336,7 @@ character_event = {
 
 #Final event for the defeated fighter, whose life has been spared...
 character_event = {
-    id = HF.10107
+	id = HF.10107
     title = duel_aftermath_title
     desc = EVTDESC_HF_10107_A
     picture = GFX_evt_duel_scene
@@ -2410,7 +2410,7 @@ character_event = {
 
 #Wounded (specifics?) - I won!
 character_event = {
-    id = HFP.10105
+	id = HFP.10105
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
     title = getDuelTitle
@@ -2738,7 +2738,7 @@ character_event = {
 
 #Wounded (specifics?) - I lost (sent from HFP.10105 above)
 character_event = {
-    id = HFP.10106
+	id = HFP.10106
     title = getDuelTitle
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
@@ -2930,7 +2930,7 @@ character_event = {
 
 #Cowardly display? Humiliation? - I won!
 character_event = {
-    id = HFP.10107
+	id = HFP.10107
     desc = EVTDESC_HFP_10107
     picture = GFX_evt_bad_news
     border = GFX_event_normal_frame_war
@@ -2957,7 +2957,7 @@ character_event = {
 
 #Cowardly display - I lost
 character_event = {
-    id = HFP.10108
+	id = HFP.10108
     desc = EVTDESC_HFP_10108 #I ran away...!
     picture = GFX_evt_bad_news
     border = GFX_event_normal_frame_war
@@ -3028,7 +3028,7 @@ character_event = {
 
 #Both wounded - I won!
 character_event = {
-    id = HFP.10109
+	id = HFP.10109
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
     title = getDuelTitle
@@ -3109,7 +3109,7 @@ character_event = {
 
 #Both wounded - I lost
 character_event = {
-    id = HFP.10110
+	id = HFP.10110
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
     title = getDuelTitle
@@ -3213,7 +3213,7 @@ character_event = {
 
 #Winner decided to kill me, mercilessly (send from HFP.10105)
 character_event = {
-    id = HFP.10111
+	id = HFP.10111
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
     title = getDuelTitle
@@ -3317,7 +3317,7 @@ character_event = {
 
 #Duel led to rivarly (sent from HFP.10106 (I lost a duel - Wounded)) 
 character_event = {
-    id = HFP.10112
+	id = HFP.10112
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
     is_triggered_only = yes
@@ -3379,7 +3379,7 @@ character_event = {
 
 # Gain rival notification
 character_event = {
-    id = HFP.10113
+	id = HFP.10113
     is_triggered_only = yes
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_war
@@ -3421,7 +3421,7 @@ character_event = {
 
 #Duel led to friendship (sent from HFP.10106 (I lost a duel - Wounded)) 
 character_event = {
-    id = HFP.10115
+	id = HFP.10115
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_diplomacy
     is_triggered_only = yes
@@ -3497,7 +3497,7 @@ character_event = {
 
 # Gain friend notification (send from HFP.10115, above - to the winner)
 character_event = {
-    id = HFP.10116
+	id = HFP.10116
     is_triggered_only = yes
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_diplomacy
@@ -3576,7 +3576,7 @@ character_event = {
 
 #Duel led to romance (sent from HFP.10106 (I lost a duel - Wounded)) 
 character_event = {
-    id = HFP.10118
+	id = HFP.10118
     picture = GFX_evt_duel_scene
     border = GFX_event_normal_frame_diplomacy
     is_triggered_only = yes
@@ -3743,7 +3743,7 @@ character_event = {
 
 # Gain crush notification (reciprocate or not?)
 character_event = {
-    id = HFP.10119
+	id = HFP.10119
     is_triggered_only = yes
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_diplomacy
@@ -3876,7 +3876,7 @@ character_event = {
     }
 }
 character_event = { #Response: Embraced! (for the one originally struck with feelings)
-    id = HFP.10120
+	id = HFP.10120
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_diplomacy
     is_triggered_only = yes
@@ -4031,7 +4031,7 @@ character_event = { #Response: Embraced! (for the one originally struck with fee
 }
 
 character_event = { #Response: Rejected! (for the one originally struck with feelings)
-    id = HFP.10121
+	id = HFP.10121
     desc = EVTDESC_HFP_10121
     picture = GFX_evt_bad_news
     border = GFX_event_normal_frame_diplomacy
@@ -4070,7 +4070,7 @@ character_event = { #Response: Rejected! (for the one originally struck with fee
 
 #Delayed hidden event for figuring out who is your main crush, sort of
 character_event = {
-    id = HFP.10195
+	id = HFP.10195
     hide_window = yes
     is_triggered_only = yes
     immediate = {
@@ -4081,7 +4081,7 @@ character_event = {
 
 #Delayed hidden event for cleaning up after duels...
 character_event = {
-    id = HFP.10196
+	id = HFP.10196
     hide_window = yes
     is_triggered_only = yes
     immediate = {
@@ -4092,7 +4092,7 @@ character_event = {
 
 # Notification "My duel target died before we could start the duel..."
 character_event = {
-    id = HFP.10197
+	id = HFP.10197
     desc = EVTDESC_HFP_10196
     picture = GFX_evt_battle
     
@@ -4111,7 +4111,7 @@ character_event = {
 
 # Consequence of turning down duels: Random subjects: Become Craven, like your liege!
 character_event = {
-    id = HF.16000
+	id = HF.16000
     picture = GFX_evt_camaraderie
     border = GFX_event_normal_frame_war
     is_triggered_only = yes
@@ -4279,7 +4279,7 @@ character_event = {
 
 #Liege finds out their subject wants to be Craven, just like them
 character_event = {
-    id = HF.16001
+	id = HF.16001
     desc = EVTDESC_HF_16001
     picture = GFX_evt_camaraderie
     border = GFX_event_normal_frame_war
@@ -4319,7 +4319,7 @@ character_event = {
 
 #Liege finds out their subject is ashamed of them, just like them
 character_event = {
-    id = HF.16002
+	id = HF.16002
     desc = EVTDESC_HF_16002
     picture = GFX_evt_upsetting_letter
     border = GFX_event_normal_frame_war

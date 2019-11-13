@@ -6,7 +6,7 @@ namespace = HF
 ## Fourth Crusade Event (Crusade for the Maritimes)
 # Start event (the moment the Crusade starts)
 character_event = {
-    id = HF.49000
+	id = HF.49000
     hide_window = yes
     is_triggered_only = yes
     has_dlc = "Holy Fury"
@@ -106,7 +106,7 @@ character_event = {
 ## Story Events prior to the Fourth Crusade launch
 # Part 1 - The Maritimer Prince/Princess flees Constantinople
 narrative_event = {
-    id = HF.49001
+	id = HF.49001
     title = EVTTITLE_HF_49001
     desc = EVTDESC_HF_49001
     picture = GFX_evt_quarrel
@@ -249,7 +249,7 @@ narrative_event = {
 
 # Part 2 - The Mercantile Refuge
 narrative_event = {
-    id = HF.49002
+	id = HF.49002
     title = EVTTITLE_HF_49002
     desc = EVTDESC_HF_49002
     picture = GFX_evt_busy_trading_dock_republic
@@ -287,7 +287,7 @@ narrative_event = {
 
 # Part 3 - The Merchant Lord decides to restore the Byzantine Prince/Princess to her/his throne
 narrative_event = {
-    id = HF.49003
+	id = HF.49003
     title = EVTTITLE_HF_49003
     desc = EVTDESC_HF_49003
     picture = GFX_evt_courtiers_talking
@@ -398,7 +398,7 @@ narrative_event = {
 
 # Part 3 - Narrative event that the Merchant Lord will support the Byzantine Prince/Princess for the Throne
 narrative_event = {
-    id = HF.49004
+	id = HF.49004
     title = EVTTITLE_HF_49004
     desc = EVTDESC_HF_49004
     picture = GFX_evt_doge_republic
@@ -431,7 +431,7 @@ narrative_event = {
 
 # The Pope declares the launch of the Fourth Crusade
 character_event = {
-    id = HF.49006
+	id = HF.49006
     hide_window = yes
     is_triggered_only = yes
     has_dlc = "Holy Fury"
@@ -459,7 +459,7 @@ character_event = {
 
 # The Fourth Crusade Launches
 narrative_event = {
-    id = HF.49007
+	id = HF.49007
     title = EVTTITLE_HF_49007
     desc = EVTDESC_HF_49007
     picture = GFX_evt_mass_crusade
@@ -531,7 +531,7 @@ narrative_event = {
 
 # Byzantium falls
 narrative_event = {
-    id = HF.49008
+	id = HF.49008
     title = EVTTITLE_HF_49008
     desc = EVTDESC_HF_49008
     picture = GFX_evt_mass_crusade
@@ -607,7 +607,7 @@ narrative_event = {
 ## Crusader Bloodlines
 # Grand Crusader Bloodline
 narrative_event = {
-    id = HF.49020
+	id = HF.49020
     title = EVTTITLE_HF_49020
     desc = EVTDESC_HF_49020
     picture = GFX_evt_knight_kneeling
@@ -656,7 +656,7 @@ narrative_event = {
 
 # Crusader Commander Bloodline
 narrative_event = {
-    id = HF.49021
+	id = HF.49021
     title = EVTTITLE_HF_49021
     desc = EVTDESC_HF_49021
     picture = GFX_evt_melee
@@ -726,7 +726,7 @@ narrative_event = {
 ## The Northern Crusade
 # St. Ursula's Chosen looking elsewhere - Pre event
 character_event = {
-    id = HF.49100
+	id = HF.49100
     hide_window = yes
     is_triggered_only = yes
     has_dlc = "Holy Fury"
@@ -787,7 +787,7 @@ character_event = {
 
 # The Teutonic Order looking elsewhere event
 narrative_event = {
-    id = HF.49101
+	id = HF.49101
     desc = EVTDESC_HF_49101
     title = EVTTITLE_HF_49101
     picture = GFX_evt_crusaders
@@ -846,7 +846,7 @@ narrative_event = {
 
 # Setting up Northern Crusade - 1
 province_event = {
-    id = HF.49102
+	id = HF.49102
     hide_window = yes
     is_triggered_only = yes
 
@@ -869,7 +869,7 @@ province_event = {
 
 # Setting up Northern Crusade - 2
 province_event = {
-    id = HF.49103
+	id = HF.49103
     hide_window = yes
     is_triggered_only = yes
 
@@ -893,7 +893,7 @@ province_event = {
 
 # Potentially starting the Northern Crusade
 character_event = {
-    id = HF.49104
+	id = HF.49104
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -1026,7 +1026,7 @@ character_event = {
 
 # Teutonic Order receives target suggestion
 character_event = {
-    id = HF.49105
+	id = HF.49105
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -1315,7 +1315,7 @@ character_event = {
 
 # Piety is all that is needed
 letter_event = {
-    id = HF.49106
+	id = HF.49106
     desc = EVTDESC_HF_49106
     is_triggered_only = yes
 
@@ -1412,7 +1412,7 @@ letter_event = {
 
 # Some gold will be needed
 letter_event = {
-    id = HF.49107
+	id = HF.49107
     desc = EVTDESC_HF_49107
     is_triggered_only = yes
 
@@ -1713,7 +1713,7 @@ letter_event = {
 
 # Some land will be needed
 letter_event = {
-    id = HF.49108
+	id = HF.49108
     desc = EVTDESC_HF_49108
     is_triggered_only = yes
 
@@ -1872,7 +1872,7 @@ letter_event = {
 
 # The donation has been given to the Teutonics, and they launch the Northern Crusade
 character_event = {
-    id = HF.49109
+	id = HF.49109
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -2032,7 +2032,7 @@ character_event = {
 
 # Narrative Event - Northern Crusade Launch
 narrative_event = {
-    id = HF.49110
+	id = HF.49110
     title = EVTTITLE_HF_49110
     desc = EVTDESC_HF_49110
     picture = GFX_evt_northern_crusade
@@ -2076,7 +2076,7 @@ narrative_event = {
 
 # Finding a supporter for the Northern Crusade
 character_event = {
-    id = HF.49111
+	id = HF.49111
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -2122,7 +2122,7 @@ character_event = {
 
 # Reward letter from Teutons after the war
 letter_event = {
-    id = HF.49112
+	id = HF.49112
     desc = {
         trigger = {
             NOT = {
@@ -2177,7 +2177,7 @@ letter_event = {
 
 # The Northern Crusades has failed
 narrative_event = {
-    id = HF.49113
+	id = HF.49113
     desc = EVTDESC_HF_49113
     title = EVTTITLE_HF_49113
     picture = GFX_evt_viking_battle_oldgods
@@ -2245,7 +2245,7 @@ narrative_event = {
 
 # Northern Crusade Bloodline
 narrative_event = {
-    id = HF.49114
+	id = HF.49114
     desc = EVTDESC_HF_49114
     title = EVTTITLE_HF_49114
     picture = GFX_evt_bloodlines
@@ -2297,7 +2297,7 @@ narrative_event = {
 
 # Northern Crusade Successful 
 narrative_event = {
-    id = HF.49115
+	id = HF.49115
     desc = EVTDESC_HF_49115
     title = EVTTITLE_HF_49115 
     picture = GFX_evt_crusaders
@@ -2340,7 +2340,7 @@ narrative_event = {
 
 # Northern Crusade check if victory yearly
 character_event = {
-    id = HF.49116
+	id = HF.49116
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -2398,7 +2398,7 @@ character_event = {
 
 # Northern Crusade flavor event tombola
 character_event = {
-    id = HF.49120
+	id = HF.49120
     hide_window = yes
     is_triggered_only = yes
     ai = no
@@ -2461,7 +2461,7 @@ character_event = {
 
 # Northern Crusade flavor event randomizer
 character_event = {
-    id = HF.49121
+	id = HF.49121
     hide_window = yes
     is_triggered_only = yes
     ai = no

@@ -10,7 +10,7 @@ namespace = ZE
 
 # Tombola (reworked original script to stop MP spam)
 character_event = {
-    id = ZE.22899
+	id = ZE.22899
     hide_window = yes
     is_triggered_only = yes
 

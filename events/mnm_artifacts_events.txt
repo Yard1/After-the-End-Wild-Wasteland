@@ -636,7 +636,7 @@ character_event = {
 
 #Rumors [Major/Extraordinary rumor]
 character_event = {
-	id = MNM.9004 
+	id = MNM.9004
 	desc = EVTDESC_MNM_9004
 	picture = GFX_evt_treasure_chamber
 	border = GFX_event_normal_frame_religion
@@ -2172,7 +2172,7 @@ character_event = {
 
 #If the searcher can no longer fulfill their duties
 character_event = {
-    id = MNM.9009
+	id = MNM.9009
     picture = "GFX_evt_recieve_letter"
     border = GFX_event_normal_frame_religion
 
@@ -2496,7 +2496,7 @@ character_event = {
 
 #Upgrade to bigger rumor
 character_event = {
-    id = MNM.9028
+	id = MNM.9028
     desc = EVTDESC_MNM_9028
     picture = GFX_evt_treasure_chamber
     border = GFX_event_normal_frame_religion
@@ -2542,7 +2542,7 @@ character_event = {
 
 #Terrible accident
 character_event = {
-    id = MNM.9029
+	id = MNM.9029
     desc = EVTDESC_MNM_9029
     picture = GFX_evt_burning_house
     border = GFX_event_normal_frame_religion
@@ -2579,7 +2579,7 @@ character_event = {
 
 #Artifact search update event - progress
 character_event = {
-    id = MNM.9031
+	id = MNM.9031
     desc = EVTDESC_MNM_9031_B
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_religion
@@ -2596,7 +2596,7 @@ character_event = {
 
 #Artifact search update event - setback
 character_event = {
-    id = MNM.9032
+	id = MNM.9032
     desc = EVTDESC_MNM_9032
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_religion
@@ -2648,7 +2648,7 @@ character_event = {
 
 #Artifact search update event - progress nearing end
 character_event = {
-    id = MNM.9035
+	id = MNM.9035
     desc = EVTDESC_MNM_9031_A
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_religion
@@ -2669,7 +2669,7 @@ character_event = {
 #Famous Head
 #Quality 1
 character_event = {
-    id = MNM.9835
+	id = MNM.9835
     desc = EVTDESC_MNM_9835
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -2769,7 +2769,7 @@ character_event = {
 #Famous Tongue
 #Quality 1
 character_event = {
-    id = MNM.9836
+	id = MNM.9836
     desc = EVTDESC_MNM_9836
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -2869,7 +2869,7 @@ character_event = {
 #Infamous Tongue
 #Quality 1
 character_event = {
-    id = MNM.9837
+	id = MNM.9837
     desc = EVTDESC_MNM_9837
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -2969,7 +2969,7 @@ character_event = {
 #Famous Hand
 #Quality 1
 character_event = {
-    id = MNM.9838
+	id = MNM.9838
     desc = EVTDESC_MNM_9838
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -3069,7 +3069,7 @@ character_event = {
 #Famous Arm
 #Quality 1
 character_event = {
-    id = MNM.9839
+	id = MNM.9839
     desc = EVTDESC_MNM_9839
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -3169,7 +3169,7 @@ character_event = {
 #Famous Foot
 #Quality 1
 character_event = {
-    id = MNM.9840
+	id = MNM.9840
     desc = EVTDESC_MNM_9840
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -3269,7 +3269,7 @@ character_event = {
 #Famous Ancient Weapon
 #Quality 1
 character_event = {
-    id = MNM.9841
+	id = MNM.9841
     desc = EVTDESC_MNM_9841
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -3370,7 +3370,7 @@ character_event = {
 
 #Sword of Michael
 narrative_event = {
-    id = MNM.9804
+	id = MNM.9804
     title = EVTNAME_MNM_9804
     desc = EVTDESC_MNM_9804
     picture = GFX_evt_relic_box
@@ -3470,7 +3470,7 @@ narrative_event = {
 
 #Stone of Golgotha
 narrative_event = {
-    id = MNM.98160
+	id = MNM.98160
     title = EVTNAME_MNM_9816
     desc = EVTDESC_MNM_9816
     picture = GFX_evt_relic_box
@@ -3570,7 +3570,7 @@ narrative_event = {
 
 #Bell of Batoche
 narrative_event = { # Who am I? TWO-FOUR-SIX-OH-ONE!!!!!!
-    id = MNM.24601
+	id = MNM.24601
     title = EVTNAME_MNM_9815
     desc = EVTDESC_MNM_9815
     picture = GFX_evt_relic_box
@@ -3670,7 +3670,7 @@ narrative_event = { # Who am I? TWO-FOUR-SIX-OH-ONE!!!!!!
 
 #St. Stanley's Chalice
 character_event = {
-    id = MNM.9805
+	id = MNM.9805
     desc = EVTDESC_MNM_9805
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -3769,7 +3769,7 @@ character_event = {
 
 #Horn of Gabriel
 character_event = {
-    id = MNM.9806
+	id = MNM.9806
     desc = EVTDESC_MNM_9806
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -3868,7 +3868,7 @@ character_event = {
 
 #Fragment of the True Cross
 character_event = {
-    id = MNM.9807
+	id = MNM.9807
     desc = EVTDESC_MNM_9807
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -3967,7 +3967,7 @@ character_event = {
 
 #Gutenberg Bible
 character_event = {
-    id = MNM.9808
+	id = MNM.9808
     desc = EVTDESC_MNM_9808
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -4067,7 +4067,7 @@ character_event = {
 #Fingerbone of Saint
 #Quality 1
 character_event = {
-    id = MNM.9809
+	id = MNM.9809
     desc = EVTDESC_MNM_9809
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -4166,7 +4166,7 @@ character_event = {
 
 #Right Hand of Petrus Romanus
 character_event = {
-    id = MNM.9843
+	id = MNM.9843
     desc = EVTDESC_MNM_9843
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -4266,7 +4266,7 @@ character_event = {
 #Weeping Statue
 #Quality 2
 character_event = {
-    id = MNM.9846
+	id = MNM.9846
     desc = EVTDESC_MNM_9846
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -4368,7 +4368,7 @@ character_event = {
 #Golden Menorah
 #Quality 5
 narrative_event = {
-    id = MNM.9810
+	id = MNM.9810
     title = EVTNAME_MNM_9810
     desc = EVTDESC_MNM_9810
     picture = GFX_evt_relic_box
@@ -4468,7 +4468,7 @@ narrative_event = {
 
 #Ark of the Covenant
 narrative_event = {
-    id = MNM.9890
+	id = MNM.9890
     title = EVTTITLE_MNM_9890
     desc = EVTDESC_MNM_9890
     picture = GFX_evt_relic_box
@@ -4569,7 +4569,7 @@ narrative_event = {
 #Judah Crown
 #Quality 4
 narrative_event = {
-    id = MNM.9811
+	id = MNM.9811
     title = EVTNAME_MNM_9811
     desc = EVTDESC_MNM_9811
     picture = GFX_evt_relic_box
@@ -4670,7 +4670,7 @@ narrative_event = {
 #Left Hand of the Lubavitcher Rebbe
 #Quality 4
 narrative_event = {
-    id = MNM.9812
+	id = MNM.9812
     title = EVTNAME_MNM_9812
     desc = EVTDESC_MNM_9812
     picture = GFX_evt_relic_box
@@ -4771,7 +4771,7 @@ narrative_event = {
 #Ancient Torah
 #Quality 3
 character_event = {
-    id = MNM.9814
+	id = MNM.9814
     desc = EVTDESC_MNM_9814
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -4871,7 +4871,7 @@ character_event = {
 #Jewish Banner
 #Quality 2
 character_event = {
-    id = MNM.9854
+	id = MNM.9854
     desc = EVTDESC_MNM_9854
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -4971,7 +4971,7 @@ character_event = {
 #Fingerbone of a rabbi
 #Quality 3
 character_event = {
-    id = MNM.9853
+	id = MNM.9853
     desc = EVTDESC_MNM_9853
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -5071,7 +5071,7 @@ character_event = {
 #Old Tefillah
 #Quality 3
 character_event = {
-    id = MNM.9855
+	id = MNM.9855
     desc = EVTDESC_MNM_9855
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -5173,7 +5173,7 @@ character_event = {
 #Urim and Thummim
 #Quality 5
 narrative_event = {
-    id = MNM.9820
+	id = MNM.9820
     title = EVTNAME_MNM_9820
     desc = EVTDESC_MNM_9820
     picture = GFX_evt_relic_box
@@ -5273,7 +5273,7 @@ narrative_event = {
 
 #Seer Stone
 character_event = {
-    id = MNM.9823
+	id = MNM.9823
     desc = EVTDESC_MNM_9823
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -5373,7 +5373,7 @@ character_event = {
 #Nauvoo Fragment
 #Quality 2
 character_event = {
-    id = MNM.9825
+	id = MNM.9825
     desc = EVTDESC_MNM_9825
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -5475,7 +5475,7 @@ character_event = {
 
 #Gjallarhorn
 character_event = {
-    id = MNM.9600
+	id = MNM.9600
     desc = EVTDESC_MNM_9600
     picture = GFX_evt_pagan_artifacts
     border = GFX_event_normal_frame_religion
@@ -5574,7 +5574,7 @@ character_event = {
 
 #Andvaranaut/Andvari's Gift
 narrative_event = {
-    id = MNM.9601
+	id = MNM.9601
     title = EVTNAME_MNM_9601
     desc = EVTDESC_MNM_9601
     picture = GFX_evt_pagan_artifacts
@@ -5674,7 +5674,7 @@ narrative_event = {
 
 #Mjolnir
 narrative_event = {
-    id = MNM.9602
+	id = MNM.9602
     title = EVTNAME_MNM_9602
     desc = EVTDESC_MNM_9602
     picture = GFX_evt_pagan_artifacts
@@ -5776,7 +5776,7 @@ narrative_event = {
 
 #Fetish of Souls
 narrative_event = {
-    id = MNM.9603
+	id = MNM.9603
     title = EVTNAME_MNM_9603
     desc = EVTDESC_MNM_9603
     picture = GFX_evt_pagan_artifacts
@@ -5878,7 +5878,7 @@ narrative_event = {
 
 #Sampo
 narrative_event = {
-    id = MNM.9604
+	id = MNM.9604
     title = EVTNAME_MNM_9604
     desc = EVTDESC_MNM_9604
     picture = GFX_evt_pagan_artifacts
@@ -5981,7 +5981,7 @@ narrative_event = {
 #The Constitution
 #Quality 5
 narrative_event = {
-    id = MNM.9618
+	id = MNM.9618
     title = EVTNAME_MNM_9618
     desc = EVTDESC_MNM_9618
     picture = GFX_evt_relic_box
@@ -6082,7 +6082,7 @@ narrative_event = {
 #Betsy Ross Flag
 #Quality 5
 narrative_event = {
-    id = MNM.9617
+	id = MNM.9617
     title = EVTNAME_MNM_9617
     desc = EVTDESC_MNM_9617
     picture = GFX_evt_relic_box
@@ -6182,7 +6182,7 @@ narrative_event = {
 
 #Presidential Portrait
 character_event = {
-    id = MNM.9619
+	id = MNM.9619
     desc = EVTDESC_MNM_9619
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -6281,7 +6281,7 @@ character_event = {
 
 #Washington's Teeth
 character_event = {
-    id = MNM.9620
+	id = MNM.9620
     desc = EVTDESC_MNM_9620
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -6380,7 +6380,7 @@ character_event = {
 
 #Stamp Collection
 character_event = {
-    id = MNM.9621
+	id = MNM.9621
     desc = EVTDESC_MNM_9621
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -6480,7 +6480,7 @@ character_event = {
 ##Consumerist Artifacts##
 #Platinum Chip
 narrative_event = {
-    id = MNM.9622
+	id = MNM.9622
     title = EVTNAME_MNM_9622
     desc = EVTDESC_MNM_9622
     picture = GFX_evt_relic_box
@@ -6580,7 +6580,7 @@ narrative_event = {
 
 #Treasury Bond
 character_event = {
-    id = MNM.9623
+	id = MNM.9623
     desc = EVTDESC_MNM_9623
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -6679,7 +6679,7 @@ character_event = {
 
 #Coin Collection
 character_event = {
-    id = MNM.9624
+	id = MNM.9624
     desc = EVTDESC_MNM_9624
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -6780,7 +6780,7 @@ character_event = {
 
 #Divine Egg
 narrative_event = {
-    id = MNM.9625
+	id = MNM.9625
     title = EVTNAME_MNM_9625
     desc = EVTDESC_MNM_9625
     picture = GFX_evt_relic_box
@@ -6880,7 +6880,7 @@ narrative_event = {
 
 #Demon Core
 narrative_event = {
-    id = MNM.9626
+	id = MNM.9626
     title = EVTNAME_MNM_9626
     desc = EVTDESC_MNM_9626
     picture = GFX_evt_relic_box
@@ -6980,7 +6980,7 @@ narrative_event = {
 
 #Holy Isotope
 character_event = {
-    id = MNM.9627
+	id = MNM.9627
     desc = EVTDESC_MNM_9627
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -7079,7 +7079,7 @@ character_event = {
 
 #Geiger Counter
 character_event = {
-    id = MNM.9628
+	id = MNM.9628
     desc = EVTDESC_MNM_9628
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -7178,7 +7178,7 @@ character_event = {
 
 #Radium Watch
 character_event = {
-    id = MNM.9629
+	id = MNM.9629
     desc = EVTDESC_MNM_9629
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -7278,7 +7278,7 @@ character_event = {
 ##Pirate Artifacts##
 #Chest of Booty
 narrative_event = {
-    id = MNM.9630
+	id = MNM.9630
     title = EVTNAME_MNM_9630
     desc = EVTDESC_MNM_9630
     picture = GFX_evt_pagan_artifacts
@@ -7378,7 +7378,7 @@ narrative_event = {
 
 #Treasure Map (to-do in future: event where Treasure Map leads you to Chest of Booty)
 character_event = {
-    id = MNM.9631
+	id = MNM.9631
     desc = EVTDESC_MNM_9631
     picture = GFX_evt_pagan_artifacts
     border = GFX_event_normal_frame_religion
@@ -7477,7 +7477,7 @@ character_event = {
 
 #Queen Anne's Revenge
 character_event = {
-    id = MNM.9632
+	id = MNM.9632
     desc = EVTDESC_MNM_9632
     picture = GFX_evt_pagan_artifacts
     border = GFX_event_normal_frame_religion
@@ -7576,7 +7576,7 @@ character_event = {
 
 #Blackbeard's Black Beard
 character_event = {
-    id = MNM.9633
+	id = MNM.9633
     desc = EVTDESC_MNM_9633
     picture = GFX_evt_pagan_artifacts
     border = GFX_event_normal_frame_religion
@@ -7676,7 +7676,7 @@ character_event = {
 ##Cetic/Shinto Artifacts##
 #Maltese Falcon
 narrative_event = {
-    id = MNM.9634
+	id = MNM.9634
     title = EVTNAME_MNM_9634
     desc = EVTDESC_MNM_9634
     picture = GFX_evt_relic_box
@@ -7776,7 +7776,7 @@ narrative_event = {
 
 #Emperor's Sword
 narrative_event = {
-    id = MNM.9635
+	id = MNM.9635
     title = EVTNAME_MNM_9635
     desc = EVTDESC_MNM_9635
     picture = GFX_evt_relic_box
@@ -7876,7 +7876,7 @@ narrative_event = {
 
 #Idol of America Kami
 character_event = {
-    id = MNM.9636
+	id = MNM.9636
     desc = EVTDESC_MNM_9636
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -7975,7 +7975,7 @@ character_event = {
 
 #Ruby Slipper
 character_event = {
-    id = MNM.9637
+	id = MNM.9637
     desc = EVTDESC_MNM_9637
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -8075,7 +8075,7 @@ character_event = {
 ##Gaian/Nousthreskeia Artifacts##
 #Heart of the Oasis
 narrative_event = {
-    id = MNM.9638
+	id = MNM.9638
     title = EVTNAME_MNM_9638
     desc = EVTDESC_MNM_9638
     picture = GFX_evt_relic_box
@@ -8175,7 +8175,7 @@ narrative_event = {
 
 #Core of Methuselah
 narrative_event = {
-    id = MNM.9639
+	id = MNM.9639
     title = EVTNAME_MNM_9639
     desc = EVTDESC_MNM_9639
     picture = GFX_evt_relic_box
@@ -8275,7 +8275,7 @@ narrative_event = {
 
 #Everlasting Flower Wreath
 character_event = {
-    id = MNM.9640
+	id = MNM.9640
     desc = EVTDESC_MNM_9640
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -8374,7 +8374,7 @@ character_event = {
 
 #Redwood Core
 character_event = {
-    id = MNM.9641
+	id = MNM.9641
     desc = EVTDESC_MNM_9641
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -8473,7 +8473,7 @@ character_event = {
 
 #Healing Crystal
 character_event = {
-    id = MNM.9642
+	id = MNM.9642
     desc = EVTDESC_MNM_9642
     picture = GFX_evt_relic_box
     border = GFX_event_normal_frame_religion
@@ -8573,7 +8573,7 @@ character_event = {
 ##Native American Artifacts##
 #Sitting Bull's Rifle
 narrative_event = {
-    id = MNM.9643
+	id = MNM.9643
     title = EVTNAME_MNM_9643
     desc = EVTDESC_MNM_9643
     picture = GFX_evt_pagan_artifacts
@@ -8673,7 +8673,7 @@ narrative_event = {
 
 #Skull of Geronimo
 narrative_event = {
-    id = MNM.9644
+	id = MNM.9644
     title = EVTNAME_MNM_9644
     desc = EVTDESC_MNM_9644
     picture = GFX_evt_pagan_artifacts
@@ -8773,7 +8773,7 @@ narrative_event = {
 
 #Ancient War Bonnet
 character_event = {
-    id = MNM.9645
+	id = MNM.9645
     desc = EVTDESC_MNM_9645
     picture = GFX_evt_pagan_artifacts
     border = GFX_event_normal_frame_religion
@@ -8872,7 +8872,7 @@ character_event = {
 
 #Ancient Izze-Kloth
 character_event = {
-    id = MNM.9646
+	id = MNM.9646
     desc = EVTDESC_MNM_9646
     picture = GFX_evt_pagan_artifacts
     border = GFX_event_normal_frame_religion
@@ -8972,7 +8972,7 @@ character_event = {
 ##Mesoamerican Artifacts##
 #Monetezuma's Headdress
 narrative_event = {
-    id = MNM.9647
+	id = MNM.9647
     title = EVTNAME_MNM_9647
     desc = EVTDESC_MNM_9647
     picture = GFX_evt_pagan_artifacts
@@ -9072,7 +9072,7 @@ narrative_event = {
 
 #Crystal Skull
 character_event = {
-    id = MNM.9648
+	id = MNM.9648
     desc = EVTDESC_MNM_9648
     picture = GFX_evt_pagan_artifacts
     border = GFX_event_normal_frame_religion
@@ -9171,7 +9171,7 @@ character_event = {
 
 #Aztec Codex
 character_event = {
-    id = MNM.9649
+	id = MNM.9649
     desc = EVTDESC_MNM_9649
     picture = GFX_evt_pagan_artifacts
     border = GFX_event_normal_frame_religion
@@ -9270,7 +9270,7 @@ character_event = {
 
 #Excalibur
 narrative_event = {
-    id = MNM.9650
+	id = MNM.9650
     title = EVTNAME_MNM_9650
     desc = EVTDESC_MNM_9650
     picture = GFX_evt_relic_box
@@ -9371,7 +9371,7 @@ narrative_event = {
 
 ###Crown jewels events###
 character_event = {
-    id = MNM.9100
+	id = MNM.9100
     desc = EVTDESC_MNM_9100
     picture = GFX_evt_treasure_chamber
     border = GFX_event_normal_frame_economy
@@ -9492,7 +9492,7 @@ character_event = {
 
 #Ping event for goldsmith
 character_event = {
-    id = MNM.9101
+	id = MNM.9101
     hide_window = yes
     is_triggered_only = yes
     
@@ -9508,7 +9508,7 @@ character_event = {
 
 #How much will I spend on the crown jewels?
 character_event = {
-    id = MNM.9103
+	id = MNM.9103
     desc = EVTDESC_MNM_9103
     picture = GFX_evt_emissary
     border = GFX_event_normal_frame_economy
@@ -9817,7 +9817,7 @@ character_event = {
 }
 #Amazing Crown Jewels
 character_event = {
-    id = MNM.40001
+	id = MNM.40001
     desc = EVTDESC_MNM_40001
     picture = GFX_evt_treasure_chamber
     border = GFX_event_normal_frame_economy
@@ -9903,7 +9903,7 @@ character_event = {
 }
 #Expensive crown jewels
 character_event = {
-    id = MNM.9105
+	id = MNM.9105
     picture = GFX_evt_treasure_chamber
     border = GFX_event_normal_frame_economy
 
@@ -10005,7 +10005,7 @@ character_event = {
 
 #Good crown jewels
 character_event = {
-    id = MNM.9106
+	id = MNM.9106
     picture = GFX_evt_treasure_chamber
     border = GFX_event_normal_frame_economy
 
@@ -10107,7 +10107,7 @@ character_event = {
 
 #Okay crown jewels
 character_event = {
-    id = MNM.9107
+	id = MNM.9107
     desc = {
     	trigger = {
     		tier = EMPEROR
@@ -10229,7 +10229,7 @@ character_event = {
 
 #Problems
 character_event = {
-    id = MNM.9109
+	id = MNM.9109
     desc = EVTDESC_MNM_9109_NEW
     picture = GFX_evt_merchant_caravan
     border = GFX_event_normal_frame_economy
@@ -10360,7 +10360,7 @@ character_event = {
 
 #Goldsmith died
 character_event = {
-    id = MNM.9112
+	id = MNM.9112
     desc = EVTDESC_MNM_9112
     picture = GFX_evt_weaponsmith
     border = GFX_event_normal_frame_economy
@@ -10411,7 +10411,7 @@ character_event = {
 
 ###WEAPON EVENTS###
 character_event = {
-    id = MNM.9115
+	id = MNM.9115
     desc = {
 		text = EVTDESC_MNM_9115
 		trigger = {
@@ -10628,7 +10628,7 @@ character_event = {
 }
 
 character_event = { #Your own smiths have a go
-    id = MNM.9999
+	id = MNM.9999
 	desc = MNM_9999_DESC
     picture = GFX_evt_weaponsmith
     border = GFX_event_normal_frame_economy
@@ -10659,7 +10659,7 @@ character_event = { #Your own smiths have a go
 
 #Ping event for weaponsmith
 character_event = {
-    id = MNM.9116
+	id = MNM.9116
     hide_window = yes
     is_triggered_only = yes
     
@@ -10675,7 +10675,7 @@ character_event = {
 
 #What kind of weapon would you like?
 character_event = {
-    id = MNM.9118
+	id = MNM.9118
     desc = EVTDESC_MNM_9118
     picture = GFX_evt_weaponsmith
     border = GFX_event_normal_frame_economy
@@ -10769,7 +10769,7 @@ character_event = {
 
 #Ping event for weaponsmith
 character_event = {
-    id = MNM.9119
+	id = MNM.9119
     hide_window = yes
     is_triggered_only = yes
     
@@ -10786,7 +10786,7 @@ character_event = {
 
 #And how much are you willing to pay?
 character_event = {
-    id = MNM.9120
+	id = MNM.9120
     desc =  EVTDESC_MNM_9120_NEW
     picture = GFX_evt_weaponsmith
     border = GFX_event_normal_frame_economy
@@ -11532,7 +11532,7 @@ character_event = {
 
 #Expensive weapon done
 character_event = {
-    id = MNM.9122
+	id = MNM.9122
     picture = GFX_evt_weaponsmith
     border = GFX_event_normal_frame_economy
 
@@ -11746,7 +11746,7 @@ character_event = {
 
 #Good weapon done
 character_event = {
-    id = MNM.9123
+	id = MNM.9123
     desc = EVTDESC_MNM_9123
     picture = GFX_evt_weaponsmith
     border = GFX_event_normal_frame_economy
@@ -11853,7 +11853,7 @@ character_event = {
 
 #Cheap weapon done
 character_event = {
-    id = MNM.9124
+	id = MNM.9124
     desc = {
     	trigger = {
     		tier = EMPEROR
@@ -12009,7 +12009,7 @@ character_event = {
 
 #Potentially better
 character_event = {
-    id = MNM.9129
+	id = MNM.9129
     desc = EVTDESC_MNM_9129_NEW
     picture = GFX_evt_merchant_caravan
     border = GFX_event_normal_frame_economy
@@ -12114,7 +12114,7 @@ character_event = {
 
 #Weaponsmith died
 character_event = {
-    id = MNM.9126
+	id = MNM.9126
     desc = EVTDESC_MNM_9112
     picture = GFX_evt_weaponsmith
     border = GFX_event_normal_frame_economy

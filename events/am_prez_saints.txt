@@ -1,7 +1,7 @@
 namespace = APS
 
 character_event = {
-    id = APS.1
+	id = APS.1
 	hide_window = yes
 	is_triggered_only = yes
 	has_dlc = "Holy Fury"
@@ -41,7 +41,7 @@ character_event = {
 }
 
 character_event = {
-    id = APS.3
+	id = APS.3
     title = EVTNAMEAPS3
     desc = EVTDESCAPS3
 	is_triggered_only = yes

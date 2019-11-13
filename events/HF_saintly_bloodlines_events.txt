@@ -5,7 +5,7 @@ namespace = HF
 
 #Zealots joining a war (not necessarily Catholic anymore)
 character_event = {
-    id = HF.43000
+	id = HF.43000
     desc = EVTDESC_HF_43000
     picture = GFX_evt_melee
     is_triggered_only = yes
@@ -67,7 +67,7 @@ character_event = {
 
 #Great Theologian Event
 character_event = {
-    id = HF.43200
+	id = HF.43200
     is_triggered_only = yes
     hide_window = yes
     min_age = 16
@@ -225,7 +225,7 @@ character_event = {
 }
 
 character_event = {
-    id = HF.43250
+	id = HF.43250
     desc = EVTDESC_HF_43250
     picture = GFX_evt_heretic
     is_triggered_only = yes
@@ -240,7 +240,7 @@ character_event = {
 
 #Random event for Saintly Bloodline - Defender of the Faith, Random Zealots crashing your Capital
 character_event = {
-    id = HF.43300
+	id = HF.43300
     desc = EVTDESC_HF_43300
     picture = GFX_evt_secluded_in_prayer
     min_age = 16
@@ -555,7 +555,7 @@ character_event = {
 
 #Notification events for the zealot responses
 character_event = {
-    id = HF.43301
+	id = HF.43301
     desc = EVTDESC_HF_43301
     picture = GFX_evt_large_army
     notification = yes
@@ -568,7 +568,7 @@ character_event = {
 }
 
 character_event = {
-    id = HF.43302
+	id = HF.43302
     desc = EVTDESC_HF_43302
     picture = GFX_evt_large_army
     notification = yes
@@ -581,7 +581,7 @@ character_event = {
 }
 
 character_event = {
-    id = HF.43303
+	id = HF.43303
     desc = EVTDESC_HF_43303
     picture = GFX_evt_large_army
     notification = yes
@@ -594,7 +594,7 @@ character_event = {
 }
 
 character_event = {
-    id = HF.43304
+	id = HF.43304
     desc = EVTDESC_HF_43304
     picture = GFX_evt_large_army
     notification = yes
@@ -607,7 +607,7 @@ character_event = {
 }
 
 character_event = {
-    id = HF.43305
+	id = HF.43305
     desc = EVTDESC_HF_43305
     picture = GFX_evt_large_army
     notification = yes
@@ -620,7 +620,7 @@ character_event = {
 }
 
 character_event = {
-    id = HF.43306
+	id = HF.43306
     desc = EVTDESC_HF_43306
     picture = GFX_evt_large_army
     notification = yes
@@ -633,7 +633,7 @@ character_event = {
 }
 
 character_event = {
-    id = HF.43307
+	id = HF.43307
     desc = EVTDESC_HF_43307
     picture = GFX_evt_large_army
     notification = yes
@@ -645,7 +645,7 @@ character_event = {
     }
 }
 character_event = { #PLEASE NO
-    id = HF.43400
+	id = HF.43400
     desc = EVTDESC_HF_43400
     picture = GFX_evt_monk
     is_triggered_only = yes

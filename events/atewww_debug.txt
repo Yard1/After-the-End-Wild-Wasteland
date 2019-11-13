@@ -153,9 +153,21 @@ character_event = {
 	#hide_window = yes
 	
 	option = {
-		set_global_flag = qa_testing
-		set_character_flag = force_saint
-		death = yes
+		any_independent_ruler = {
+			any_realm_character = {
+				limit = {
+					OR = {
+						religion = americanist
+						religion = hamiltonian
+						religion = jeffersonian
+						religion = libertarian
+					}
+					primary_title = { is_law_potential = succ_feudal_elective }
+					primary_title = { has_law = succ_gavelkind }
+				}
+				primary_title = { add_law = { law = succ_feudal_elective cooldown = no opinion_effect = no } }
+			}
+		}
 	}
 }
 

@@ -566,7 +566,7 @@ character_event = {
 
 #Becoming stressed about keeping a secret
 character_event = {
-    id = MNM.10020
+	id = MNM.10020
     picture = GFX_evt_uncomfortable
     border = GFX_event_normal_frame_intrigue
 
@@ -673,7 +673,7 @@ character_event = {
 
 
 character_event = {
-    id = MNM.10022
+	id = MNM.10022
     hide_window = yes
     is_triggered_only = yes
     immediate = { FROM = { letter_event = { id = MNM.10023 } } }
@@ -759,7 +759,7 @@ letter_event = {
 }
 
 character_event = {
-    id = MNM.10019
+	id = MNM.10019
     desc = EVTDESC_MNM_10019
     picture = GFX_evt_society_joining
     border = GFX_event_normal_frame_religion
@@ -2541,7 +2541,7 @@ character_event = {
 
 #Making an enemy
 character_event = {
-    id = MNM.10040
+	id = MNM.10040
     hide_window = yes
     is_triggered_only = yes
     capable_only = yes
@@ -2574,7 +2574,7 @@ character_event = {
 
 
 character_event = {
-    id = MNM.10041
+	id = MNM.10041
     hide_window = yes
     is_triggered_only = yes
     immediate = { FROM = { character_event = { id = MNM.10042 } } }
@@ -2582,7 +2582,7 @@ character_event = {
 
 
 character_event = {
-    id = MNM.10042
+	id = MNM.10042
     picture = GFX_evt_rival_rulers
     border = GFX_event_normal_frame_war
 
@@ -2648,7 +2648,7 @@ character_event = {
 
 #Making a friend
 character_event = {
-    id = MNM.10043
+	id = MNM.10043
     hide_window = yes
     is_triggered_only = yes
     capable_only = yes
@@ -2692,7 +2692,7 @@ character_event = {
 }
 
 character_event = {
-    id = MNM.10044
+	id = MNM.10044
     hide_window = yes
     is_triggered_only = yes
     immediate = { FROM = { character_event = { id = MNM.10045 } } }
@@ -2700,7 +2700,7 @@ character_event = {
 
 
 character_event = {
-    id = MNM.10045
+	id = MNM.10045
     picture = GFX_evt_state_diplomacy
     border = GFX_event_normal_frame_diplomacy
 
@@ -3154,7 +3154,7 @@ character_event = {
 }
 
 character_event = { # Fired from on_character_leave_society (meant to clear any society related flags and effects)
-    id = MNM.10018
+	id = MNM.10018
     is_triggered_only = yes
     hide_window = yes
     
@@ -3164,7 +3164,7 @@ character_event = { # Fired from on_character_leave_society (meant to clear any 
 }
 
 character_event = {
-    id = MNM.10024
+	id = MNM.10024
     desc = EVTDESC_MNM_10024
     picture = GFX_evt_ritual_scroll
     border = GFX_event_normal_frame_religion

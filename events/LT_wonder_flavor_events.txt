@@ -1928,7 +1928,7 @@ character_event = {
 
 #What kind of weapon would you like? (Equivalent to MNM.9118)
 character_event = {
-    id = LT.20201
+	id = LT.20201
     desc = EVTDESC_LT_20201
 
     picture = GFX_evt_weaponsmith
@@ -2077,7 +2077,7 @@ character_event = {
 
 # Good weapon produced in the Armory (equivalent to MNM.9123)
 character_event = {
-    id = LT.20210
+	id = LT.20210
     desc = EVTDESC_MNM_9123
     picture = GFX_evt_weaponsmith
     border = GFX_event_normal_frame_economy

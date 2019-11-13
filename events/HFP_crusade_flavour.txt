@@ -8,7 +8,7 @@ namespace = HFP
 
 # Narrative Event for new Crusader State
 narrative_event = {
-    id = HFP.42001
+	id = HFP.42001
     title = EVTTITLE_HFP_42001
     desc = EVTDESC_HFP_42001
     picture = GFX_evt_mounted_knights_hf
@@ -81,7 +81,7 @@ narrative_event = {
 
 # Remove the Crusader Titular Title
 character_event = {
-    id = HFP.42002
+	id = HFP.42002
     desc = EVTDESC_HFP_42002
     picture = GFX_evt_throne_room
     border = GFX_event_normal_frame_religion
@@ -231,7 +231,7 @@ character_event = {
 
 # Narrative Event if ruler takes Crusader State lands for himself/herself
 narrative_event = {
-    id = HFP.42003
+	id = HFP.42003
     title = EVTTITLE_HFP_42003
     desc = EVTDESC_HFP_42003
     picture = GFX_evt_mounted_knights_hf
@@ -267,7 +267,7 @@ narrative_event = {
 ## New Crusader State Event
 # Intro Event
 character_event = {
-    id = HFP.42100
+	id = HFP.42100
     desc = EVTDESC_HFP_42000
     picture = GFX_evt_mountaintop_castle_hf
     border = GFX_event_normal_frame_religion
@@ -1024,7 +1024,7 @@ narrative_event = {
 ## Monthly Pulse Crusade Events
 # Tombola
 character_event = {
-    id = HFP.42200
+	id = HFP.42200
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -1079,7 +1079,7 @@ character_event = {
 ## Generic Events
 # Meeting other Crusaders
 character_event = {
-    id = HFP.42201
+	id = HFP.42201
     desc = EVTDESC_HFP_42201
     picture = GFX_evt_group_hf
     portrait = event_target:other_crusader
@@ -1160,7 +1160,7 @@ character_event = {
 
 # Seeing the local culture
 character_event = {
-    id = HFP.42202
+	id = HFP.42202
     desc = EVTDESC_HFP_42202
     picture = GFX_evt_market_hf
     portrait = none
@@ -1656,7 +1656,7 @@ character_event = {
 
 # Dead Crusaders
 character_event = {
-    id = HFP.42203
+	id = HFP.42203
     desc = EVTDESC_HFP_42203
     picture = GFX_evt_died_battle
     portrait = none
@@ -1742,7 +1742,7 @@ character_event = {
 
 # Meeting caravan
 character_event = {
-    id = HFP.42204
+	id = HFP.42204
     desc = EVTDESC_HFP_42204
     picture = GFX_evt_merchant_caravan
     portrait = none
@@ -2176,7 +2176,7 @@ character_event = {
 
 # Reminiscing about home
 character_event = {
-    id = HFP.42205
+	id = HFP.42205
     desc = EVTDESC_HFP_42205
     picture = GFX_evt_riders_night_hf
     portrait = none
@@ -2294,7 +2294,7 @@ character_event = {
 
 # The Holy Comet 
 character_event = {
-    id = HFP.42206
+	id = HFP.42206
     desc = EVTDESC_HFP_42206
     picture = GFX_evt_comet
     portrait = none
@@ -2423,7 +2423,7 @@ character_event = {
 
 # Questioning the faith
 character_event = {
-    id = HFP.42207
+	id = HFP.42207
     desc = EVTDESC_HFP_42207
     picture = GFX_evt_beheading
     portrait = none
@@ -2637,7 +2637,7 @@ character_event = {
 
 # The little group of faithful
 character_event = {
-    id = HFP.42208
+	id = HFP.42208
     desc = EVTDESC_HFP_42208
     picture = GFX_evt_woman_praying_hf
     portrait = none
@@ -2844,7 +2844,7 @@ character_event = {
 
 # The little thief
 character_event = {
-    id = HFP.42209
+	id = HFP.42209
     desc = EVTDESC_HFP_42209
     picture = GFX_evt_market_hf
     portrait = none
@@ -2984,7 +2984,7 @@ character_event = {
 
 # Meeting the wise man
 character_event = {
-    id = HFP.42210
+	id = HFP.42210
     desc = EVTDESC_HFP_42210
     picture = GFX_evt_meeting_hf
     portrait = none
@@ -3069,7 +3069,7 @@ character_event = {
 
 # Coming across a local festival
 character_event = {
-    id = HFP.42211
+	id = HFP.42211
     desc = EVTDESC_HFP_42211
     picture = GFX_evt_jugglers
     portrait = none
@@ -3223,7 +3223,7 @@ character_event = {
 
 # Guided by God or Alcohol
 character_event = {
-    id = HFP.42212
+	id = HFP.42212
     desc = EVTDESC_HFP_42212
     picture = GFX_evt_religious_exultation
     portrait = none
@@ -3467,7 +3467,7 @@ character_event = {
 
 # Meeting a Holy Order
 character_event = {
-    id = HFP.42213
+	id = HFP.42213
     desc = EVTDESC_HFP_42213
     picture = GFX_evt_riders_night_hf
     portrait = none
@@ -3576,7 +3576,7 @@ character_event = {
 
 # Crusader Brothels
 character_event = {
-    id = HFP.42214
+	id = HFP.42214
     desc = {
     	trigger = {
     		prefers_men_trigger = no
@@ -3746,7 +3746,7 @@ character_event = {
 
 # The men are restless
 character_event = {
-    id = HFP.42215
+	id = HFP.42215
     desc = EVTDESC_HFP_42215
     picture = GFX_evt_large_army
     portrait = none
@@ -3881,7 +3881,7 @@ character_event = {
 ## Shepherds' Crusade
 # Failed Crusade start of event chain
 character_event = {
-    id = HFP.42300
+	id = HFP.42300
     hide_window = yes
     is_triggered_only = yes
     has_dlc = "Sons of Abraham"
@@ -3895,7 +3895,7 @@ character_event = {
 
 # Set up
 province_event = {
-	id = HFP.42301 
+	id = HFP.42301
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -3916,7 +3916,7 @@ province_event = {
 
 # Set up
 province_event = {
-	id = HFP.42302 
+	id = HFP.42302
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -4593,7 +4593,7 @@ character_event = {
 
 # The Shepherds Crusade drops by, asking for help (Christian)
 character_event = {
-    id = HFP.42321
+	id = HFP.42321
     desc = EVTDESC_HFP_42321
     picture = GFX_evt_peasants
     is_triggered_only = yes
@@ -4657,7 +4657,7 @@ character_event = {
 
 # Demanding the expulsion of Jews (Christian)
 character_event = {
-    id = HFP.42322
+	id = HFP.42322
     desc = EVTDESC_HFP_42322
     picture = GFX_evt_peasants
     is_triggered_only = yes
@@ -4798,7 +4798,7 @@ character_event = {
 
 # Some of the peasants settle in the area (Christian)
 character_event = {
-    id = HFP.42324
+	id = HFP.42324
     desc = EVTDESC_HFP_42324
     picture = GFX_evt_culture_change
     is_triggered_only = yes
@@ -4854,7 +4854,7 @@ character_event = {
 
 # Killing the local bishop (Christian)
 character_event = {
-    id = HFP.42325
+	id = HFP.42325
     desc = EVTDESC_HFP_42325
     picture = GFX_evt_dead_body_hf
     is_triggered_only = yes
@@ -4926,7 +4926,7 @@ character_event = {
 
 # Chaos among the local populace (Other Religion)
 character_event = {
-    id = HFP.42330
+	id = HFP.42330
     desc = EVTDESC_HFP_42330
     picture = GFX_evt_peasants
     is_triggered_only = yes

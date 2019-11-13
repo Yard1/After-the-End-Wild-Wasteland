@@ -350,7 +350,7 @@ narrative_event = {
 
 #Reformation Ended through Martial Skill
 character_event = {
-	id = eva.5 
+	id = eva.5
 	desc = EVTDESC_eva.5
 	picture = GFX_evt_holy_emperor
 	
@@ -698,7 +698,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = eva.15 # Diplomatic resolution 
+	id = eva.15 #Diplomatic resolution
 	desc = EVTDESC_eva.15
 	title = EVTNAME_eva.15
 	picture = GFX_evt_emissary
@@ -733,7 +733,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = eva.16 # Learning resolution 
+	id = eva.16 #Learning resolution
 	desc = EVTDESC_eva.16
 	title = EVTNAME_eva.16
 	picture = GFX_evt_icon
@@ -762,7 +762,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = eva.17 # Intrigue resolution 
+	id = eva.17 #Intrigue resolution
 	title = EVTNAME_eva.17
 	desc = EVTDESC_eva.17
 	picture = GFX_evt_shadowy_cabal
@@ -985,7 +985,7 @@ narrative_event = {
 
 #Council of Augusta succeeds
 narrative_event = {
-	id = eva.22 
+	id = eva.22
 	desc = EVTDESC_eva.22
 	title = EVTNAME_eva.22
 	picture = GFX_evt_cathedral
@@ -1020,7 +1020,7 @@ narrative_event = {
 }
 
 narrative_event = { #Council of Augusta sends heresy underground
-	id = eva.23 
+	id = eva.23
 	desc = EVTDESC_eva.23
 	title = EVTNAME_eva.23
 	picture = GFX_evt_shadowy_cabal
@@ -1055,7 +1055,7 @@ narrative_event = { #Council of Augusta sends heresy underground
 }
 
 narrative_event = { #Council of Augusta fails
-	id = eva.24 
+	id = eva.24
 	desc = EVTDESC_eva.24
 	title = EVTNAME_eva.24
 	picture = GFX_evt_church_council
@@ -1090,7 +1090,7 @@ narrative_event = { #Council of Augusta fails
 }
 
 character_event = { #Vassals informed of Emperor's decision to ignore the monk
-	id = eva.25 
+	id = eva.25
 	desc = EVTDESC_eva.25
 	picture = GFX_evt_pope_feast
 	
@@ -1229,7 +1229,7 @@ narrative_event = {
 }
 
 narrative_event = { #Monks Ideas Fail
-	id = eva.29 
+	id = eva.29
 	desc = EVTDESC_eva.29
 	title = EVTNAME_eva.29
 	picture = GFX_evt_drunk
@@ -1264,7 +1264,7 @@ narrative_event = { #Monks Ideas Fail
 }
 
 narrative_event = {
-	id = eva.30 
+	id = eva.30
 	desc = EVTDESC_eva.30
 	title = EVTNAME_eva.30
 	picture = GFX_evt_heretic
@@ -1898,7 +1898,7 @@ character_event = {
 }
 
 character_event = {
-	id = eva.208 
+	id = eva.208
 	desc = EVTDESC_eva.208
 	picture = GFX_evt_knight_kneeling
 	
@@ -2269,7 +2269,7 @@ character_event = {
 }
 
 character_event = {
-	id = eva.308 
+	id = eva.308
 	desc = EVTDESC_eva.308
 	picture = GFX_evt_knight_kneeling
 	
@@ -2649,7 +2649,7 @@ character_event = {
 }
 
 character_event = {
-	id = eva.408 
+	id = eva.408
 	desc = EVTDESC_eva.408
 	picture = GFX_evt_knight_kneeling
 	
@@ -3030,7 +3030,7 @@ character_event = {
 }
 
 character_event = {
-	id = eva.508 
+	id = eva.508
 	desc = EVTDESC_eva.508
 	picture = GFX_evt_knight_kneeling
 	
@@ -3409,7 +3409,7 @@ character_event = {
 }
 
 character_event = {
-	id = eva.608 
+	id = eva.608
 	desc = EVTDESC_eva.608
 	picture = GFX_evt_knight_kneeling
 	
@@ -3789,7 +3789,7 @@ character_event = {
 }
 
 character_event = {
-	id = eva.708 
+	id = eva.708
 	desc = EVTDESC_eva.708
 	picture = GFX_evt_knight_kneeling
 	

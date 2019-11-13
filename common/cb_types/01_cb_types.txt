@@ -6348,6 +6348,29 @@ matriarchal_deposition_war = {
 						}
 					}
 
+					event_target:new_swapped_ruler = {
+						if = {
+							limit = { tier = DUKE }
+							opinion = {
+								who = ROOT
+								modifier = opinion_granted_duchy
+							}
+						}
+						else_if = {
+							limit = { tier = DUKE }
+							opinion = {
+								who = ROOT
+								modifier = opinion_granted_kingdom
+							}
+						}
+						else = {
+							opinion = {
+								who = ROOT
+								modifier = opinion_granted_empire
+							}
+						}
+					}
+
 					#Titles assigned, now onto laws.
 					if = {
 						limit = {
@@ -6872,6 +6895,29 @@ patriarchal_deposition_war = {
 								modifier = in_non_aggression_pact
 								years = 50
 								who = event_target:new_swapped_ruler
+							}
+						}
+					}
+
+					event_target:new_swapped_ruler = {
+						if = {
+							limit = { tier = DUKE }
+							opinion = {
+								who = ROOT
+								modifier = opinion_granted_duchy
+							}
+						}
+						else_if = {
+							limit = { tier = DUKE }
+							opinion = {
+								who = ROOT
+								modifier = opinion_granted_kingdom
+							}
+						}
+						else = {
+							opinion = {
+								who = ROOT
+								modifier = opinion_granted_empire
 							}
 						}
 					}

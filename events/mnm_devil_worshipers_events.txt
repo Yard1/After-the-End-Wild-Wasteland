@@ -3210,7 +3210,7 @@ character_event = {
 
 #Soul corruption adds stress
 character_event = {
-    id = MNM.7051
+	id = MNM.7051
     desc = EVTDESC_MNM_7051
     picture = GFX_evt_illness
     border = GFX_event_normal_frame_intrigue
@@ -3231,7 +3231,7 @@ character_event = {
 
 #Soul corruption adds lunatic
 character_event = {
-    id = MNM.7052
+	id = MNM.7052
     desc = EVTDESC_MNM_7052
     picture = GFX_evt_lunatic
     border = GFX_event_normal_frame_intrigue
@@ -3252,7 +3252,7 @@ character_event = {
 
 #Soul corruption adds stutter
 character_event = {
-    id = MNM.7053
+	id = MNM.7053
     desc = EVTDESC_MNM_7053
     picture = GFX_evt_uncomfortable
     border = GFX_event_normal_frame_intrigue
@@ -3273,7 +3273,7 @@ character_event = {
 
 #Soul corruption adds clubfooted
 character_event = {
-    id = MNM.7054
+	id = MNM.7054
     desc = EVTDESC_MNM_7054
     picture = GFX_evt_uncomfortable
     border = GFX_event_normal_frame_intrigue
@@ -3294,7 +3294,7 @@ character_event = {
 
 #Soul corruption adds hunchback
 character_event = {
-    id = MNM.7055
+	id = MNM.7055
     desc = EVTDESC_MNM_7055
     picture = GFX_evt_uncomfortable
     border = GFX_event_normal_frame_intrigue
@@ -3315,7 +3315,7 @@ character_event = {
 
 #Soul corruption adds ugly
 character_event = {
-    id = MNM.7056
+	id = MNM.7056
     desc = EVTDESC_MNM_7056
     picture = GFX_evt_uncomfortable
     border = GFX_event_normal_frame_intrigue
@@ -3337,7 +3337,7 @@ character_event = {
 
 #Soul corruption adds corrupting_magic_major
 character_event = {
-    id = MNM.7057
+	id = MNM.7057
     desc = EVTDESC_MNM_7057
     picture = GFX_evt_illness
     border = GFX_event_normal_frame_intrigue
@@ -3366,7 +3366,7 @@ character_event = {
 
 #Soul corruption adds corrupting_magic_minor
 character_event = {
-    id = MNM.7058
+	id = MNM.7058
     desc = EVTDESC_MNM_7058
     picture = GFX_evt_illness
     border = GFX_event_normal_frame_intrigue
@@ -3394,7 +3394,7 @@ character_event = {
 
 #Soul corruption adds frail
 character_event = {
-    id = MNM.7059
+	id = MNM.7059
     desc = EVTDESC_MNM_7059
     picture = GFX_evt_illness
     border = GFX_event_normal_frame_intrigue
@@ -6186,7 +6186,7 @@ character_event = {
 
 #Power: Summon familiar
 character_event = {
-	id = MNM.7815 
+	id = MNM.7815
 	desc = EVTDESC_MNM_7815
 	picture = GFX_evt_mysterious_forest
 	border = GFX_event_normal_frame_religion
@@ -7157,7 +7157,7 @@ character_event = { #birth
 }
 
 character_event = { #Announcement
-    id = MNM.7511
+	id = MNM.7511
     picture = GFX_evt_magic_ritual
     border = GFX_event_normal_frame_intrigue
 
@@ -13131,7 +13131,7 @@ character_event = {
 
 ####### Hidden: Demon/Witch-hunters SET-UP ########
 character_event = {
-    id = MNM.7854
+	id = MNM.7854
     hide_window = yes
     is_triggered_only = yes
 
@@ -13328,7 +13328,7 @@ character_event = {
 
 #Demon/Witch-hunters have tracked you down!
 character_event = {
-    id = MNM.7855
+	id = MNM.7855
     title = EVTTITLE_MNM_7855
     picture = GFX_evt_catching_heretic
     border = GFX_event_normal_frame_war

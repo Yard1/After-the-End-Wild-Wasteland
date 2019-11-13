@@ -96,6 +96,7 @@ succession_laws = {
 				}
 			}
 			holder_scope = {
+				religion_openly_americanist_or_heresy_trigger = no
 				NOT = { religion_group = american_native } #uses Eldership instead
 				NOT = { religion_group = pirate }
 				NOT = { government = communist_republic }
@@ -238,6 +239,7 @@ succession_laws = {
 				}
 			}
 			holder_scope = {
+				religion_openly_americanist_or_heresy_trigger = no
 				NOT = { religion_group = american_native } #uses Eldership instead
 				NOT = { religion_group = pirate }
 				NOT = { government = communist_republic }
@@ -1015,6 +1017,10 @@ succession_laws = {
 			additive_modifier = {
 				value = 2
 				government = militarist_government
+			}
+			additive_modifier = {
+				value = 2
+				religion_openly_americanist_or_heresy_trigger = yes
 			}
 		}
 	}

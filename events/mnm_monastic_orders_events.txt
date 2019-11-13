@@ -21,7 +21,7 @@ namespace = MNM_ATEWWW
 
 #From on_character_ask_to_join_society
 character_event = {
-    id = MNM.4450
+	id = MNM.4450
 	hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -34,7 +34,7 @@ character_event = {
 
 #Ping event
 character_event = {
-    id = MNM.4451
+	id = MNM.4451
 	hide_window = yes
     is_triggered_only = yes
     immediate = {
@@ -44,7 +44,7 @@ character_event = {
 
 #Welcome letter
 letter_event = {
-    id = MNM.4452
+	id = MNM.4452
     desc = EVTDESC_MNM_4452
     border = GFX_event_letter_frame_religion
 
@@ -3629,7 +3629,7 @@ character_event = {
 
 #POWER: Invite monk or nun 
 character_event = {
-    id = MNM.4432
+	id = MNM.4432
     hide_window = yes
 
     is_triggered_only = yes
@@ -7888,7 +7888,7 @@ character_event = { # loss - death
 
 #Ran off with it despite leaving witnesses
 character_event = {
-    id = MNM.4615
+	id = MNM.4615
     desc = EVTDESC_MNM_4615
     picture = GFX_evt_uncomfortable
     border = GFX_event_normal_frame_religion
@@ -8431,7 +8431,7 @@ character_event = {
 ####   Advising a Poet: Hidden start    ####
 ############################################
 character_event = {
-    id = MNM.3260
+	id = MNM.3260
     hide_window = yes
 	
 	is_in_society = yes
@@ -8534,7 +8534,7 @@ character_event = {
 
 #Ping event for other member (the poet)
 character_event = {
-    id = MNM.3261
+	id = MNM.3261
     hide_window = yes
     is_triggered_only = yes
     immediate = { FROM = { character_event = { id = MNM.3262 } } }
@@ -8542,7 +8542,7 @@ character_event = {
 
 # A fellow member seeks your advice on some writing of theirs
 character_event = {
-    id = MNM.3262
+	id = MNM.3262
     desc = EVTDESC_MNM_3262
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_religion
@@ -8582,7 +8582,7 @@ character_event = {
 
 #Ping event for other member (the poet)
 character_event = {
-    id = MNM.3263
+	id = MNM.3263
     hide_window = yes
     is_triggered_only = yes
     trigger = { is_alive = yes }
@@ -8590,7 +8590,7 @@ character_event = {
 }
 
 character_event = {
-    id = MNM.3264
+	id = MNM.3264
     desc = EVTDESC_MNM_3264
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_religion
@@ -8657,7 +8657,7 @@ character_event = {
 
 #Ping event for other member (the poet)
 character_event = {
-    id = MNM.3265
+	id = MNM.3265
     hide_window = yes
     is_triggered_only = yes
     immediate = {
@@ -8692,7 +8692,7 @@ character_event = {
 
 # The writer's reaction - PUBLISHED AGAINST THEIR WISHES
 character_event = {
-    id = MNM.3266
+	id = MNM.3266
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_religion
     is_triggered_only = yes
@@ -8725,7 +8725,7 @@ character_event = {
 
 # The writer's reaction - WRITINGS WILL BE SENT TO THE ORDER
 character_event = {
-    id = MNM.3267
+	id = MNM.3267
     desc = EVTDESC_MNM_3267
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_religion
@@ -8770,7 +8770,7 @@ character_event = {
 
 # The writer's reaction 3 - THEIR WRITING SAVED YOU FROM DEPRESSION
 character_event = {
-    id = MNM.3268
+	id = MNM.3268
     desc = EVTDESC_MNM_3268
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_religion
@@ -8804,7 +8804,7 @@ character_event = {
 
 # The writer's reaction - YOU STOLE THEIR WORK
 character_event = {
-    id = MNM.3269
+	id = MNM.3269
     picture = GFX_evt_recieve_letter
     border = GFX_event_normal_frame_religion
     is_triggered_only = yes
@@ -8854,7 +8854,7 @@ character_event = {
 }
 
 character_event = { #clean up event
-    id = MNM.3270
+	id = MNM.3270
     is_triggered_only = yes
     hide_window = yes
 
@@ -8873,7 +8873,7 @@ character_event = { #clean up event
 #######################################################
 
 character_event = {
-    id = MNM.4200
+	id = MNM.4200
     hide_window = yes
     
     is_triggered_only = yes
@@ -8973,7 +8973,7 @@ character_event = {
 
 #Ping event for other member (the botanist)
 character_event = {
-    id = MNM.4201
+	id = MNM.4201
     hide_window = yes
     is_triggered_only = yes
     immediate = { FROM = { character_event = { id = MNM.4202 } } }
@@ -8981,7 +8981,7 @@ character_event = {
 
 #Fellow member asks if you want to check out their roses
 character_event = {
-    id = MNM.4202
+	id = MNM.4202
     desc = EVTDESC_MNM_4202
     picture = GFX_evt_gathering_of_minds
     border = GFX_event_normal_frame_religion
@@ -9030,7 +9030,7 @@ character_event = {
 
 #Ping event for other member (the botanist)
 character_event = {
-    id = MNM.4203
+	id = MNM.4203
     hide_window = yes
     is_triggered_only = yes
     immediate = {
@@ -9056,7 +9056,7 @@ character_event = {
 
 #Visited the monastery
 character_event = {
-    id = MNM.4204
+	id = MNM.4204
     desc = EVTDESC_MNM_4204
     picture = GFX_evt_garden
     border = GFX_event_normal_frame_religion
@@ -9139,7 +9139,7 @@ character_event = {
 
 #I hired someone who brought me roses
 character_event = {
-    id = MNM.4205
+	id = MNM.4205
     desc = EVTDESC_MNM_4205
     picture = GFX_evt_garden
     border = GFX_event_normal_frame_religion
@@ -9166,7 +9166,7 @@ character_event = {
 
 #I sent some of my own flowers to the botanist
 character_event = {
-    id = MNM.4206
+	id = MNM.4206
     desc = EVTDESC_MNM_4206
     picture = GFX_evt_garden
     border = GFX_event_normal_frame_religion
@@ -9197,7 +9197,7 @@ character_event = {
 #######################################################
 
 character_event = { #Hidden start
-    id = MNM.4210
+	id = MNM.4210
     hide_window = yes
     
     is_triggered_only = yes
@@ -9284,7 +9284,7 @@ character_event = { #Hidden start
 
 #Ping event for other member (the sleeper)
 character_event = {
-    id = MNM.4211
+	id = MNM.4211
     hide_window = yes
     is_triggered_only = yes
     immediate = { FROM = { character_event = { id = MNM.4212 } } }
@@ -9292,7 +9292,7 @@ character_event = {
 
 #Fellow member is snoring in temple
 character_event = {
-    id = MNM.4212
+	id = MNM.4212
     desc = EVTDESC_MNM_4212
     picture = GFX_evt_gathering_of_minds
     border = GFX_event_normal_frame_religion
@@ -9321,7 +9321,7 @@ character_event = {
 
 #Ping event for other member (the sleeper)
 character_event = {
-    id = MNM.4213
+	id = MNM.4213
     hide_window = yes
     is_triggered_only = yes
     immediate = {
@@ -9347,7 +9347,7 @@ character_event = {
 
 # Woke them up
 character_event = {
-    id = MNM.4214
+	id = MNM.4214
     desc = EVTDESC_MNM_4214
     picture = GFX_evt_gathering_of_minds
     border = GFX_event_normal_frame_religion
@@ -9379,7 +9379,7 @@ character_event = {
 
 # I let them sleep
 character_event = {
-    id = MNM.4215
+	id = MNM.4215
     desc = EVTDESC_MNM_4215
     picture = GFX_evt_gathering_of_minds
     border = GFX_event_normal_frame_religion
@@ -9399,7 +9399,7 @@ character_event = {
 
 #I pranked them
 character_event = {
-    id = MNM.4216
+	id = MNM.4216
     desc = EVTDESC_MNM_4216
     picture = GFX_evt_gathering_of_minds
     border = GFX_event_normal_frame_religion
@@ -9418,7 +9418,7 @@ character_event = {
 
 #I own heretical books!
 character_event = {
-    id = MNM.4217
+	id = MNM.4217
     title = EVTTITLE_MNM_4217
     desc = EVTDESC_MNM_4217
     picture = GFX_evt_gathering_of_minds
@@ -9608,7 +9608,7 @@ character_event = {
 
 #The Necronomicon comes back
 character_event = {
-    id = MNM.4218
+	id = MNM.4218
     title = EVTTITLE_MNM_4218
     desc = EVTDESC_MNM_4218
     picture = GFX_evt_ritual_scroll

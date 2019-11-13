@@ -145,6 +145,7 @@ on_create_title = {
 		ATE_WWW_RELIGION.9
 		ATE_WWW_TITLE.1
 		ATE_WWW_COMMIES.18
+		miscATEWW.9
 	}
 }
 

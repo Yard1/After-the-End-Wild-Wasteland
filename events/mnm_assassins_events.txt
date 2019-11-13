@@ -3862,7 +3862,7 @@ society_quest_event = {
 
 #Helps AI do mission
 character_event = {
-    id = MNM.6948
+	id = MNM.6948
     hide_window = yes
     is_triggered_only = yes
     trigger = { 
@@ -3876,7 +3876,7 @@ character_event = {
 
 #AI clean-up
 character_event = {
-    id = MNM.6949
+	id = MNM.6949
     hide_window = yes
     is_triggered_only = yes
     trigger = { 
@@ -3892,7 +3892,7 @@ character_event = {
 }
 
 character_event = {
-    id = MNM.6950
+	id = MNM.6950
     desc = EVTDESC_MNM_6950
     picture = GFX_evt_assassination
     border = GFX_event_normal_frame_intrigue
@@ -7878,7 +7878,7 @@ character_event = { # Fallback - apprentice has died somehow during chain
 }
 
 character_event = { #Fallback doublecheck - apprentice died before the Assassins could be notified of the success (leads to fail of mission)
-    id = MNM.6261
+	id = MNM.6261
     hide_window = yes
 
 	has_character_flag = training_protege
@@ -7985,7 +7985,7 @@ character_event = {
 
 #They're so infuriating! What do?
 character_event = {
-    id = MNM.6901
+	id = MNM.6901
     desc = EVTDESC_MNM_6901
     picture = GFX_evt_quarrel
     border = GFX_event_normal_frame_war
@@ -8159,7 +8159,7 @@ character_event = {
 }
 
 character_event = {
-    id = MNM.6908
+	id = MNM.6908
     picture = GFX_evt_market_byzantine
     border = GFX_event_normal_frame_war
 
@@ -8195,7 +8195,7 @@ character_event = {
 
 #Nice win/draw/nice lose
 character_event = {
-    id = MNM.6903
+	id = MNM.6903
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_market_byzantine
 
@@ -8314,7 +8314,7 @@ character_event = {
 
 #Mean win
 character_event = {
-    id = MNM.6904
+	id = MNM.6904
     border = GFX_event_normal_frame_war
     picture = GFX_evt_market_byzantine
 
@@ -8392,7 +8392,7 @@ character_event = {
 
 #Mean lose
 character_event = {
-    id = MNM.6905
+	id = MNM.6905
     border = GFX_event_normal_frame_war
     picture = GFX_evt_assassination
 
@@ -8478,7 +8478,7 @@ character_event = {
 
 #Love outcome
 character_event = {
-    id = MNM.6907
+	id = MNM.6907
     border = GFX_event_normal_frame_diplomacy
     picture = GFX_evt_lovers
 
@@ -8623,7 +8623,7 @@ character_event = {
 
 
 character_event = {
-    id = MNM.6911
+	id = MNM.6911
     hide_window = yes
     is_triggered_only = yes
     immediate = { FROM = { character_event = { id = MNM.6912 } } }
@@ -8631,7 +8631,7 @@ character_event = {
 
 #I can offer my help, but against what?
 character_event = {
-    id = MNM.6912
+	id = MNM.6912
     desc = EVTDESC_MNM_6912
     picture = GFX_evt_assassination
     border = GFX_event_normal_frame_intrigue
@@ -8905,7 +8905,7 @@ character_event = {
 
 #I found out their secret, what do?
 character_event = {
-    id = MNM.6922
+	id = MNM.6922
     picture = GFX_evt_shady_meeting
     border = GFX_event_normal_frame_intrigue
 

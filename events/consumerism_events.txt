@@ -726,7 +726,7 @@ narrative_event = {
 
 # Death of the Prophet
 narrative_event = {
-	id = consumer.5 # He's dead
+	id = consumer.5 #He's dead
 	title = EVTNAMECONSUMER5
 	picture = GFX_evt_death
 	border = GFX_event_narrative_frame_religion
@@ -788,7 +788,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = consumer.6 # Monetarist heresy appears, given to an Investor
+	id = consumer.6 #Monetarist heresy appears, given to an Investor
 	title = EVTNAMECONSUMER6
 	picture = GFX_evt_rival_rulers
 	border = GFX_event_narrative_frame_religion
@@ -860,7 +860,7 @@ narrative_event = {
 }
 
 character_event = {
-	id = consumer.7 # ping event so FROM in rivalry event is holder of d_monetarist
+	id = consumer.7 #ping event so FROM in rivalry event is holder of d_monetarist
 	hide_window = yes
 	is_triggered_only = yes
 	option = {

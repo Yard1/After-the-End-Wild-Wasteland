@@ -10,14 +10,9 @@ character_event = {
 	trigger = {
 		is_ruler = no
 		prisoner = no
+		religion = FROMFROM
 		FROMFROM = {
 			ai = yes
-			OR = {
-				holy_order = yes
-				is_theocracy = yes
-				mercenary = yes
-				primary_title = { is_landless_type_title = yes }
-			}
 		}
 	}
 	
@@ -81,6 +76,7 @@ character_event = {
 					set_gender = female
 					add_trait = hidden_female_trait
 					remove_trait = hidden_male_trait
+					remove_trait = eunuch
 					if = {
 						limit = { religion = libertarian }
 						give_ROOT_random_female_libertarian_name = yes
@@ -116,6 +112,7 @@ character_event = {
 					set_gender = female
 					add_trait = hidden_female_trait
 					remove_trait = hidden_male_trait
+					remove_trait = eunuch
 					if = {
 						limit = { religion = libertarian }
 						give_ROOT_random_female_libertarian_name = yes
@@ -143,7 +140,10 @@ character_event = {
 				set_character_flag = 80_20_female
 				character_event = { id = miscATEWW.5 }
 			}
-			else = {
+			else_if = {
+				limit = {
+					FROMFROM = { gender_equality_trigger = yes }
+				}
 				log = "miscATEWW.1: [Root.GetBestName] 50/50"
 				character_event = { id = miscATEWW.5 }
 			}
@@ -663,6 +663,7 @@ character_event = {
 		set_gender = female
 		add_trait = hidden_female_trait
 		remove_trait = hidden_male_trait
+		remove_trait = eunuch
 		give_ROOT_random_name = yes
 		clr_character_flag = 80_20_female
 		ai_chance = {
@@ -997,5 +998,108 @@ character_event = {
 			}
 		}
 	}
+}
 
+character_event = {
+	id = miscATEWW.9
+	hide_window = yes
+	ai = yes
+	is_patrician = yes
+	capable_only = yes
+	prisoner = no
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		OR = {
+			AND = {
+				matriarchal_religion = yes
+				primary_title = { NOT = { has_law = enatic_succession } }
+			}
+			AND = {
+				matriarchal_religion = no
+				gender_equality_trigger = yes
+				primary_title = { NOT = { has_law = true_cognatic_succession } }
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { matriarchal_religion = yes }
+			primary_title = {
+				add_law = {
+					law = enatic_succession
+					cooldown = no
+					opinion_effect = no
+				}
+				add_law = {
+					law = status_of_women_4
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { father_even_if_dead = { always = yes } }
+					NOT = { mother_even_if_dead = { always = yes } }
+					NOT = { spouse_even_if_dead = { always = yes } }
+					NOT = { any_child = { always = yes } }
+					NOR = { 
+						has_character_flag = historical_character 
+						has_character_flag = keep_male 
+					}
+				}
+				ROOT = {
+					set_gender = female
+					add_trait = hidden_female_trait
+					remove_trait = hidden_male_trait
+					remove_trait = eunuch
+					give_ROOT_random_name = yes
+				}
+			}
+			set_character_flag = keep_male 
+		}
+		else_if = {
+			limit = {
+				OR = { 
+					gender_equality_trigger = yes 
+					has_religion_feature = religion_feature_midewiwin
+				}
+			}
+			primary_title = {
+				add_law = {
+					law = true_cognatic_succession
+					cooldown = no
+					opinion_effect = no
+				}
+				add_law = {
+					law = status_of_women_4
+					cooldown = no
+					opinion_effect = no
+				}
+			}
+			if = {
+				limit = {
+					NOT = { father_even_if_dead = { always = yes } }
+					NOT = { mother_even_if_dead = { always = yes } }
+					NOT = { spouse_even_if_dead = { always = yes } }
+					NOT = { any_child = { always = yes } }
+					NOR = { 
+						has_character_flag = historical_character 
+						has_character_flag = keep_male 
+					}
+				}
+				random = {
+					chance = 50
+					ROOT = {
+						set_gender = female
+						add_trait = hidden_female_trait
+						remove_trait = hidden_male_trait
+						remove_trait = eunuch
+						give_ROOT_random_name = yes
+					}
+				}
+			}
+			set_character_flag = keep_male 
+		}
+	}
 }
