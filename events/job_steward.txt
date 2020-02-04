@@ -54,7 +54,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 360		
+		months = 180
 		job_event_mtth_modifier_stewardship_score = yes
 	}
 	
@@ -293,7 +293,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 240
+		months = 340
 	
 		job_event_mtth_modifier_inverted_stewardship_score = yes
 
@@ -435,7 +435,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 480
+		months = 240
 		job_event_mtth_modifier_stewardship_score = yes
 	}
 	
@@ -518,7 +518,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 240
 		job_event_mtth_modifier_inverted_stewardship_score = yes
 	}
 	
@@ -705,7 +705,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 600
+		months = 120
 		
 		modifier = {
 			factor = 3
@@ -870,7 +870,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 500
+		months = 600
 		
 		job_event_mtth_modifier_inverted_stewardship_score = yes
 
@@ -967,7 +967,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 60
 		
 		modifier = {
 			factor = 3.0

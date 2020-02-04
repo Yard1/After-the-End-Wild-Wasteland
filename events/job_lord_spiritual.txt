@@ -48,7 +48,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 960
+		months = 420
 		
 		modifier = {
 			factor = 2.0
@@ -98,7 +98,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 2.5
+			factor = 2.0
 			has_religion_feature = religion_cosmopolitan
 		}
 		modifier = {
@@ -150,23 +150,23 @@ character_event = {
 		job_event_mtth_modifier_learning_score = yes
 		
 		modifier = {
-			factor = 3.0
+			factor = 1.5
 			NOT = { religion_authority = 0.1 }
 		}
 		modifier = {
-			factor = 2.0
+			factor = 1.4
 			NOT = { religion_authority = 0.2 }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.3
 			NOT = { religion_authority = 0.3 }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			NOT = { religion_authority = 0.4 }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.1
 			NOT = { religion_authority = 0.5 }
 		}
 		modifier = {
@@ -174,15 +174,15 @@ character_event = {
 			religion_authority = 0.6
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.70
 			religion_authority = 0.7
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.65
 			religion_authority = 0.8
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.60
 			religion_authority = 0.9
 		}
 		modifier = {
@@ -326,7 +326,7 @@ character_event = {
 		}
 
 		modifier = {
-			factor = 3.0
+			factor = 1.5
 			has_job_action = action_inquisition
 			OR = {
 				religion_group = pagan_group
@@ -358,7 +358,7 @@ character_event = {
 			}
 		}
 		modifier = {
-			factor = 3.0
+			factor = 2.0
 			has_job_action = action_inquisition
 			location = {
 				has_province_modifier = heretic_stronghold
@@ -541,7 +541,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 60
 	
 		modifier = {
 			factor = 0.75
@@ -579,7 +579,7 @@ character_event = {
 			religion_authority = 0.8
 		}
 		modifier = {
-			factor = 3.0
+			factor = 1.5
 			OR = {
 				religion_group = pagan_group
 				religion_group = american_native
@@ -729,7 +729,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 160
 		
 		modifier = {
 			factor = 2.0
@@ -1181,7 +1181,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 240
+		months = 340
 	
 		modifier = {
 			factor = 1.25
@@ -1680,7 +1680,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = { 
-		months = 240
+		months = 120
 		
 		job_event_mtth_modifier_learning_score = yes
 		

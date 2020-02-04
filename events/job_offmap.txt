@@ -30,7 +30,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 120
+		months = 60
 		
 		job_event_mtth_modifier_diplomacy_score = yes
 	}
@@ -404,7 +404,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 220
+		months = 120
 		
 		job_event_mtth_modifier_diplomacy_score = yes
 	}
@@ -761,7 +761,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 200
+		months = 100
 		
 		job_event_mtth_modifier_martial_score = yes
 	}
@@ -1097,7 +1097,7 @@ character_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 320
+		months = 160
 		
 		job_event_mtth_modifier_martial_score = yes
 	}

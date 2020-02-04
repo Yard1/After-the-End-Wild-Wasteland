@@ -2780,214 +2780,344 @@ prev_likes_this_score = { #increases the more PREV likes target
 
 #For Good events
 job_event_mtth_modifier_diplomacy_score = {
-	modifier = { factor = 1.25 NOT = { diplomacy = 2 } }
-	modifier = { factor = 1.25 NOT = { diplomacy = 4 } }
-	modifier = { factor = 1.25 NOT = { diplomacy = 6 } }
-	modifier = { factor = 1.25 NOT = { diplomacy = 8 } }
+	modifier = { factor = 1.15 NOT = { diplomacy = 1 } }
+	modifier = { factor = 1.15 NOT = { diplomacy = 2 } }
+	modifier = { factor = 1.10 NOT = { diplomacy = 3 } }
+	modifier = { factor = 1.10 NOT = { diplomacy = 4 } }
+	modifier = { factor = 1.10 NOT = { diplomacy = 5 } }
+	modifier = { factor = 1.05 NOT = { diplomacy = 6 } }
+	modifier = { factor = 1.05 NOT = { diplomacy = 7 } }
+	modifier = { factor = 1.05 NOT = { diplomacy = 8 } }
+	modifier = { factor = 1.05 NOT = { diplomacy = 9 } }
 	modifier = { factor = 0.85 diplomacy = 10 }
 	modifier = { factor = 0.85 diplomacy = 11 }
 	modifier = { factor = 0.85 diplomacy = 12 }
 	modifier = { factor = 0.85 diplomacy = 13 }
 	modifier = { factor = 0.85 diplomacy = 14 }
-	modifier = { factor = 0.85 diplomacy = 15 }
-	modifier = { factor = 0.85 diplomacy = 16 }
-	modifier = { factor = 0.90 diplomacy = 17 }
-	modifier = { factor = 0.90 diplomacy = 18 }
-	modifier = { factor = 0.90 diplomacy = 19 }
-	modifier = { factor = 0.95 diplomacy = 20 }
-	modifier = { factor = 0.95 diplomacy = 21 }
-	modifier = { factor = 0.95 diplomacy = 22 }
+	modifier = { factor = 0.87 diplomacy = 15 }
+	modifier = { factor = 0.87 diplomacy = 16 }
+	modifier = { factor = 0.87 diplomacy = 17 }
+	modifier = { factor = 0.87 diplomacy = 18 }
+	modifier = { factor = 0.87 diplomacy = 19 }
+	modifier = { factor = 0.89 diplomacy = 20 }
+	modifier = { factor = 0.89 diplomacy = 21 }
+	modifier = { factor = 0.89 diplomacy = 22 }
+	modifier = { factor = 0.89 diplomacy = 23 }
+	modifier = { factor = 0.89 diplomacy = 24 }
+	modifier = { factor = 0.91 diplomacy = 25 }
+	modifier = { factor = 0.91 diplomacy = 26 }
+	modifier = { factor = 0.91 diplomacy = 27 }
+	modifier = { factor = 0.91 diplomacy = 28 }
+	modifier = { factor = 0.91 diplomacy = 29 }
+	modifier = { factor = 0.93 diplomacy = 30 }
 }
 
 #For bad avents
 job_event_mtth_modifier_inverted_diplomacy_score = {
-	modifier = { factor = 0.75 NOT = { diplomacy = 2 } }
-	modifier = { factor = 0.75 NOT = { diplomacy = 4 } }
-	modifier = { factor = 0.75 NOT = { diplomacy = 6 } }
-	modifier = { factor = 0.75 NOT = { diplomacy = 8 } }
+	modifier = { factor = 0.55 NOT = { diplomacy = 1 } }
+	modifier = { factor = 0.60 NOT = { diplomacy = 2 } }
+	modifier = { factor = 0.65 NOT = { diplomacy = 3 } }
+	modifier = { factor = 0.70 NOT = { diplomacy = 4 } }
+	modifier = { factor = 0.75 NOT = { diplomacy = 5 } }
+	modifier = { factor = 0.80 NOT = { diplomacy = 6 } }
+	modifier = { factor = 0.85 NOT = { diplomacy = 7 } }
+	modifier = { factor = 0.90 NOT = { diplomacy = 8 } }
+	modifier = { factor = 0.95 NOT = { diplomacy = 9 } }
 	modifier = { factor = 1.15 diplomacy = 10 }
 	modifier = { factor = 1.15 diplomacy = 11 }
 	modifier = { factor = 1.15 diplomacy = 12 }
 	modifier = { factor = 1.15 diplomacy = 13 }
-	modifier = { factor = 1.10 diplomacy = 14 }
-	modifier = { factor = 1.10 diplomacy = 15 }
-	modifier = { factor = 1.10 diplomacy = 16 }
-	modifier = { factor = 1.10 diplomacy = 17 }
-	modifier = { factor = 1.10 diplomacy = 18 }
-	modifier = { factor = 1.10 diplomacy = 19 }
-	modifier = { factor = 1.05 diplomacy = 20 }
-	modifier = { factor = 1.05 diplomacy = 21 }
-	modifier = { factor = 1.05 diplomacy = 22 }
+	modifier = { factor = 1.15 diplomacy = 14 }
+	modifier = { factor = 1.20 diplomacy = 15 }
+	modifier = { factor = 1.20 diplomacy = 16 }
+	modifier = { factor = 1.20 diplomacy = 17 }
+	modifier = { factor = 1.20 diplomacy = 18 }
+	modifier = { factor = 1.20 diplomacy = 19 }
+	modifier = { factor = 1.25 diplomacy = 20 }
+	modifier = { factor = 1.25 diplomacy = 21 }
+	modifier = { factor = 1.25 diplomacy = 22 }
+	modifier = { factor = 1.25 diplomacy = 23 }
+	modifier = { factor = 1.25 diplomacy = 24 }
+	modifier = { factor = 1.30 diplomacy = 25 }
+	modifier = { factor = 1.30 diplomacy = 26 }
+	modifier = { factor = 1.30 diplomacy = 27 }
+	modifier = { factor = 1.30 diplomacy = 28 }
+	modifier = { factor = 1.30 diplomacy = 29 }
+	modifier = { factor = 1.35 diplomacy = 30 }
 }
 
 
 #For Good events
 job_event_mtth_modifier_martial_score = {
-	modifier = { factor = 1.25 NOT = { martial = 2 } }
-	modifier = { factor = 1.25 NOT = { martial = 4 } }
-	modifier = { factor = 1.25 NOT = { martial = 6 } }
-	modifier = { factor = 1.25 NOT = { martial = 8 } }
+	modifier = { factor = 1.15 NOT = { martial = 1 } }
+	modifier = { factor = 1.15 NOT = { martial = 2 } }
+	modifier = { factor = 1.10 NOT = { martial = 3 } }
+	modifier = { factor = 1.10 NOT = { martial = 4 } }
+	modifier = { factor = 1.10 NOT = { martial = 5 } }
+	modifier = { factor = 1.05 NOT = { martial = 6 } }
+	modifier = { factor = 1.05 NOT = { martial = 7 } }
+	modifier = { factor = 1.05 NOT = { martial = 8 } }
+	modifier = { factor = 1.05 NOT = { martial = 9 } }
 	modifier = { factor = 0.85 martial = 10 }
 	modifier = { factor = 0.85 martial = 11 }
 	modifier = { factor = 0.85 martial = 12 }
 	modifier = { factor = 0.85 martial = 13 }
 	modifier = { factor = 0.85 martial = 14 }
-	modifier = { factor = 0.85 martial = 15 }
-	modifier = { factor = 0.85 martial = 16 }
-	modifier = { factor = 0.90 martial = 17 }
-	modifier = { factor = 0.90 martial = 18 }
-	modifier = { factor = 0.90 martial = 19 }
-	modifier = { factor = 0.95 martial = 20 }
-	modifier = { factor = 0.95 martial = 21 }
-	modifier = { factor = 0.95 martial = 22 }
+	modifier = { factor = 0.87 martial = 15 }
+	modifier = { factor = 0.87 martial = 16 }
+	modifier = { factor = 0.87 martial = 17 }
+	modifier = { factor = 0.87 martial = 18 }
+	modifier = { factor = 0.87 martial = 19 }
+	modifier = { factor = 0.89 martial = 20 }
+	modifier = { factor = 0.89 martial = 21 }
+	modifier = { factor = 0.89 martial = 22 }
+	modifier = { factor = 0.89 martial = 23 }
+	modifier = { factor = 0.89 martial = 24 }
+	modifier = { factor = 0.91 martial = 25 }
+	modifier = { factor = 0.91 martial = 26 }
+	modifier = { factor = 0.91 martial = 27 }
+	modifier = { factor = 0.91 martial = 28 }
+	modifier = { factor = 0.91 martial = 29 }
+	modifier = { factor = 0.93 martial = 30 }
 }
 
 #For bad avents
 job_event_mtth_modifier_inverted_martial_score = {
-	modifier = { factor = 0.75 NOT = { martial = 2 } }
-	modifier = { factor = 0.75 NOT = { martial = 4 } }
-	modifier = { factor = 0.75 NOT = { martial = 6 } }
-	modifier = { factor = 0.75 NOT = { martial = 8 } }
+	modifier = { factor = 0.55 NOT = { martial = 1 } }
+	modifier = { factor = 0.60 NOT = { martial = 2 } }
+	modifier = { factor = 0.65 NOT = { martial = 3 } }
+	modifier = { factor = 0.70 NOT = { martial = 4 } }
+	modifier = { factor = 0.75 NOT = { martial = 5 } }
+	modifier = { factor = 0.80 NOT = { martial = 6 } }
+	modifier = { factor = 0.85 NOT = { martial = 7 } }
+	modifier = { factor = 0.90 NOT = { martial = 8 } }
+	modifier = { factor = 0.95 NOT = { martial = 9 } }
 	modifier = { factor = 1.15 martial = 10 }
 	modifier = { factor = 1.15 martial = 11 }
 	modifier = { factor = 1.15 martial = 12 }
 	modifier = { factor = 1.15 martial = 13 }
-	modifier = { factor = 1.10 martial = 14 }
-	modifier = { factor = 1.10 martial = 15 }
-	modifier = { factor = 1.10 martial = 16 }
-	modifier = { factor = 1.10 martial = 17 }
-	modifier = { factor = 1.10 martial = 18 }
-	modifier = { factor = 1.10 martial = 19 }
-	modifier = { factor = 1.05 martial = 20 }
-	modifier = { factor = 1.05 martial = 21 }
-	modifier = { factor = 1.05 martial = 22 }
+	modifier = { factor = 1.15 martial = 14 }
+	modifier = { factor = 1.20 martial = 15 }
+	modifier = { factor = 1.20 martial = 16 }
+	modifier = { factor = 1.20 martial = 17 }
+	modifier = { factor = 1.20 martial = 18 }
+	modifier = { factor = 1.20 martial = 19 }
+	modifier = { factor = 1.25 martial = 20 }
+	modifier = { factor = 1.25 martial = 21 }
+	modifier = { factor = 1.25 martial = 22 }
+	modifier = { factor = 1.25 martial = 23 }
+	modifier = { factor = 1.25 martial = 24 }
+	modifier = { factor = 1.30 martial = 25 }
+	modifier = { factor = 1.30 martial = 26 }
+	modifier = { factor = 1.30 martial = 27 }
+	modifier = { factor = 1.30 martial = 28 }
+	modifier = { factor = 1.30 martial = 29 }
+	modifier = { factor = 1.35 martial = 30 }
 }
 
 
 #For Good events
 job_event_mtth_modifier_stewardship_score = {
-	modifier = { factor = 1.25 NOT = { stewardship = 2 } }
-	modifier = { factor = 1.25 NOT = { stewardship = 4 } }
-	modifier = { factor = 1.25 NOT = { stewardship = 6 } }
-	modifier = { factor = 1.25 NOT = { stewardship = 8 } }
+	modifier = { factor = 1.15 NOT = { stewardship = 1 } }
+	modifier = { factor = 1.15 NOT = { stewardship = 2 } }
+	modifier = { factor = 1.10 NOT = { stewardship = 3 } }
+	modifier = { factor = 1.10 NOT = { stewardship = 4 } }
+	modifier = { factor = 1.10 NOT = { stewardship = 5 } }
+	modifier = { factor = 1.05 NOT = { stewardship = 6 } }
+	modifier = { factor = 1.05 NOT = { stewardship = 7 } }
+	modifier = { factor = 1.05 NOT = { stewardship = 8 } }
+	modifier = { factor = 1.05 NOT = { stewardship = 9 } }
 	modifier = { factor = 0.85 stewardship = 10 }
 	modifier = { factor = 0.85 stewardship = 11 }
 	modifier = { factor = 0.85 stewardship = 12 }
 	modifier = { factor = 0.85 stewardship = 13 }
 	modifier = { factor = 0.85 stewardship = 14 }
-	modifier = { factor = 0.85 stewardship = 15 }
-	modifier = { factor = 0.85 stewardship = 16 }
-	modifier = { factor = 0.90 stewardship = 17 }
-	modifier = { factor = 0.90 stewardship = 18 }
-	modifier = { factor = 0.90 stewardship = 19 }
-	modifier = { factor = 0.95 stewardship = 20 }
-	modifier = { factor = 0.95 stewardship = 21 }
-	modifier = { factor = 0.95 stewardship = 22 }
+	modifier = { factor = 0.87 stewardship = 15 }
+	modifier = { factor = 0.87 stewardship = 16 }
+	modifier = { factor = 0.87 stewardship = 17 }
+	modifier = { factor = 0.87 stewardship = 18 }
+	modifier = { factor = 0.87 stewardship = 19 }
+	modifier = { factor = 0.89 stewardship = 20 }
+	modifier = { factor = 0.89 stewardship = 21 }
+	modifier = { factor = 0.89 stewardship = 22 }
+	modifier = { factor = 0.89 stewardship = 23 }
+	modifier = { factor = 0.89 stewardship = 24 }
+	modifier = { factor = 0.91 stewardship = 25 }
+	modifier = { factor = 0.91 stewardship = 26 }
+	modifier = { factor = 0.91 stewardship = 27 }
+	modifier = { factor = 0.91 stewardship = 28 }
+	modifier = { factor = 0.91 stewardship = 29 }
+	modifier = { factor = 0.93 stewardship = 30 }
 }
 
 #For bad avents
 job_event_mtth_modifier_inverted_stewardship_score = {
-	modifier = { factor = 0.75 NOT = { stewardship = 2 } }
-	modifier = { factor = 0.75 NOT = { stewardship = 4 } }
-	modifier = { factor = 0.75 NOT = { stewardship = 6 } }
-	modifier = { factor = 0.75 NOT = { stewardship = 8 } }
+	modifier = { factor = 0.55 NOT = { stewardship = 1 } }
+	modifier = { factor = 0.60 NOT = { stewardship = 2 } }
+	modifier = { factor = 0.65 NOT = { stewardship = 3 } }
+	modifier = { factor = 0.70 NOT = { stewardship = 4 } }
+	modifier = { factor = 0.75 NOT = { stewardship = 5 } }
+	modifier = { factor = 0.80 NOT = { stewardship = 6 } }
+	modifier = { factor = 0.85 NOT = { stewardship = 7 } }
+	modifier = { factor = 0.90 NOT = { stewardship = 8 } }
+	modifier = { factor = 0.95 NOT = { stewardship = 9 } }
 	modifier = { factor = 1.15 stewardship = 10 }
 	modifier = { factor = 1.15 stewardship = 11 }
 	modifier = { factor = 1.15 stewardship = 12 }
 	modifier = { factor = 1.15 stewardship = 13 }
-	modifier = { factor = 1.10 stewardship = 14 }
-	modifier = { factor = 1.10 stewardship = 15 }
-	modifier = { factor = 1.10 stewardship = 16 }
-	modifier = { factor = 1.10 stewardship = 17 }
-	modifier = { factor = 1.10 stewardship = 18 }
-	modifier = { factor = 1.10 stewardship = 19 }
-	modifier = { factor = 1.05 stewardship = 20 }
-	modifier = { factor = 1.05 stewardship = 21 }
-	modifier = { factor = 1.05 stewardship = 22 }
+	modifier = { factor = 1.15 stewardship = 14 }
+	modifier = { factor = 1.20 stewardship = 15 }
+	modifier = { factor = 1.20 stewardship = 16 }
+	modifier = { factor = 1.20 stewardship = 17 }
+	modifier = { factor = 1.20 stewardship = 18 }
+	modifier = { factor = 1.20 stewardship = 19 }
+	modifier = { factor = 1.25 stewardship = 20 }
+	modifier = { factor = 1.25 stewardship = 21 }
+	modifier = { factor = 1.25 stewardship = 22 }
+	modifier = { factor = 1.25 stewardship = 23 }
+	modifier = { factor = 1.25 stewardship = 24 }
+	modifier = { factor = 1.30 stewardship = 25 }
+	modifier = { factor = 1.30 stewardship = 26 }
+	modifier = { factor = 1.30 stewardship = 27 }
+	modifier = { factor = 1.30 stewardship = 28 }
+	modifier = { factor = 1.30 stewardship = 29 }
+	modifier = { factor = 1.35 stewardship = 30 }
 }
 
 
 #For Good events
 job_event_mtth_modifier_intrigue_score = {
-	modifier = { factor = 1.25 NOT = { intrigue = 2 } }
-	modifier = { factor = 1.25 NOT = { intrigue = 4 } }
-	modifier = { factor = 1.25 NOT = { intrigue = 6 } }
-	modifier = { factor = 1.25 NOT = { intrigue = 8 } }
+	modifier = { factor = 1.15 NOT = { intrigue = 1 } }
+	modifier = { factor = 1.15 NOT = { intrigue = 2 } }
+	modifier = { factor = 1.10 NOT = { intrigue = 3 } }
+	modifier = { factor = 1.10 NOT = { intrigue = 4 } }
+	modifier = { factor = 1.10 NOT = { intrigue = 5 } }
+	modifier = { factor = 1.05 NOT = { intrigue = 6 } }
+	modifier = { factor = 1.05 NOT = { intrigue = 7 } }
+	modifier = { factor = 1.05 NOT = { intrigue = 8 } }
+	modifier = { factor = 1.05 NOT = { intrigue = 9 } }
 	modifier = { factor = 0.85 intrigue = 10 }
 	modifier = { factor = 0.85 intrigue = 11 }
 	modifier = { factor = 0.85 intrigue = 12 }
 	modifier = { factor = 0.85 intrigue = 13 }
 	modifier = { factor = 0.85 intrigue = 14 }
-	modifier = { factor = 0.85 intrigue = 15 }
-	modifier = { factor = 0.85 intrigue = 16 }
-	modifier = { factor = 0.90 intrigue = 17 }
-	modifier = { factor = 0.90 intrigue = 18 }
-	modifier = { factor = 0.90 intrigue = 19 }
-	modifier = { factor = 0.95 intrigue = 20 }
-	modifier = { factor = 0.95 intrigue = 21 }
-	modifier = { factor = 0.95 intrigue = 22 }
+	modifier = { factor = 0.87 intrigue = 15 }
+	modifier = { factor = 0.87 intrigue = 16 }
+	modifier = { factor = 0.87 intrigue = 17 }
+	modifier = { factor = 0.87 intrigue = 18 }
+	modifier = { factor = 0.87 intrigue = 19 }
+	modifier = { factor = 0.89 intrigue = 20 }
+	modifier = { factor = 0.89 intrigue = 21 }
+	modifier = { factor = 0.89 intrigue = 22 }
+	modifier = { factor = 0.89 intrigue = 23 }
+	modifier = { factor = 0.89 intrigue = 24 }
+	modifier = { factor = 0.91 intrigue = 25 }
+	modifier = { factor = 0.91 intrigue = 26 }
+	modifier = { factor = 0.91 intrigue = 27 }
+	modifier = { factor = 0.91 intrigue = 28 }
+	modifier = { factor = 0.91 intrigue = 29 }
+	modifier = { factor = 0.93 intrigue = 30 }
 }
 
 #For bad avents
 job_event_mtth_modifier_inverted_intrigue_score = {
-	modifier = { factor = 0.75 NOT = { intrigue = 2 } }
-	modifier = { factor = 0.75 NOT = { intrigue = 4 } }
-	modifier = { factor = 0.75 NOT = { intrigue = 6 } }
-	modifier = { factor = 0.75 NOT = { intrigue = 8 } }
+	modifier = { factor = 0.55 NOT = { intrigue = 1 } }
+	modifier = { factor = 0.60 NOT = { intrigue = 2 } }
+	modifier = { factor = 0.65 NOT = { intrigue = 3 } }
+	modifier = { factor = 0.70 NOT = { intrigue = 4 } }
+	modifier = { factor = 0.75 NOT = { intrigue = 5 } }
+	modifier = { factor = 0.80 NOT = { intrigue = 6 } }
+	modifier = { factor = 0.85 NOT = { intrigue = 7 } }
+	modifier = { factor = 0.90 NOT = { intrigue = 8 } }
+	modifier = { factor = 0.95 NOT = { intrigue = 9 } }
 	modifier = { factor = 1.15 intrigue = 10 }
 	modifier = { factor = 1.15 intrigue = 11 }
 	modifier = { factor = 1.15 intrigue = 12 }
 	modifier = { factor = 1.15 intrigue = 13 }
-	modifier = { factor = 1.10 intrigue = 14 }
-	modifier = { factor = 1.10 intrigue = 15 }
-	modifier = { factor = 1.10 intrigue = 16 }
-	modifier = { factor = 1.10 intrigue = 17 }
-	modifier = { factor = 1.10 intrigue = 18 }
-	modifier = { factor = 1.10 intrigue = 19 }
-	modifier = { factor = 1.05 intrigue = 20 }
-	modifier = { factor = 1.05 intrigue = 21 }
-	modifier = { factor = 1.05 intrigue = 22 }
+	modifier = { factor = 1.15 intrigue = 14 }
+	modifier = { factor = 1.20 intrigue = 15 }
+	modifier = { factor = 1.20 intrigue = 16 }
+	modifier = { factor = 1.20 intrigue = 17 }
+	modifier = { factor = 1.20 intrigue = 18 }
+	modifier = { factor = 1.20 intrigue = 19 }
+	modifier = { factor = 1.25 intrigue = 20 }
+	modifier = { factor = 1.25 intrigue = 21 }
+	modifier = { factor = 1.25 intrigue = 22 }
+	modifier = { factor = 1.25 intrigue = 23 }
+	modifier = { factor = 1.25 intrigue = 24 }
+	modifier = { factor = 1.30 intrigue = 25 }
+	modifier = { factor = 1.30 intrigue = 26 }
+	modifier = { factor = 1.30 intrigue = 27 }
+	modifier = { factor = 1.30 intrigue = 28 }
+	modifier = { factor = 1.30 intrigue = 29 }
+	modifier = { factor = 1.35 intrigue = 30 }
 }
 
 
 #For Good events
 job_event_mtth_modifier_learning_score = {
-	modifier = { factor = 1.25 NOT = { learning = 2 } }
-	modifier = { factor = 1.25 NOT = { learning = 4 } }
-	modifier = { factor = 1.25 NOT = { learning = 6 } }
-	modifier = { factor = 1.25 NOT = { learning = 8 } }
+	modifier = { factor = 1.15 NOT = { learning = 1 } }
+	modifier = { factor = 1.15 NOT = { learning = 2 } }
+	modifier = { factor = 1.10 NOT = { learning = 3 } }
+	modifier = { factor = 1.10 NOT = { learning = 4 } }
+	modifier = { factor = 1.10 NOT = { learning = 5 } }
+	modifier = { factor = 1.05 NOT = { learning = 6 } }
+	modifier = { factor = 1.05 NOT = { learning = 7 } }
+	modifier = { factor = 1.05 NOT = { learning = 8 } }
+	modifier = { factor = 1.05 NOT = { learning = 9 } }
 	modifier = { factor = 0.85 learning = 10 }
 	modifier = { factor = 0.85 learning = 11 }
 	modifier = { factor = 0.85 learning = 12 }
 	modifier = { factor = 0.85 learning = 13 }
 	modifier = { factor = 0.85 learning = 14 }
-	modifier = { factor = 0.85 learning = 15 }
-	modifier = { factor = 0.85 learning = 16 }
-	modifier = { factor = 0.90 learning = 17 }
-	modifier = { factor = 0.90 learning = 18 }
-	modifier = { factor = 0.90 learning = 19 }
-	modifier = { factor = 0.95 learning = 20 }
-	modifier = { factor = 0.95 learning = 21 }
-	modifier = { factor = 0.95 learning = 22 }
+	modifier = { factor = 0.87 learning = 15 }
+	modifier = { factor = 0.87 learning = 16 }
+	modifier = { factor = 0.87 learning = 17 }
+	modifier = { factor = 0.87 learning = 18 }
+	modifier = { factor = 0.87 learning = 19 }
+	modifier = { factor = 0.89 learning = 20 }
+	modifier = { factor = 0.89 learning = 21 }
+	modifier = { factor = 0.89 learning = 22 }
+	modifier = { factor = 0.89 learning = 23 }
+	modifier = { factor = 0.89 learning = 24 }
+	modifier = { factor = 0.91 learning = 25 }
+	modifier = { factor = 0.91 learning = 26 }
+	modifier = { factor = 0.91 learning = 27 }
+	modifier = { factor = 0.91 learning = 28 }
+	modifier = { factor = 0.91 learning = 29 }
+	modifier = { factor = 0.93 learning = 30 }
 }
 
 #For bad avents
 job_event_mtth_modifier_inverted_learning_score = {
-	modifier = { factor = 0.75 NOT = { learning = 2 } }
-	modifier = { factor = 0.75 NOT = { learning = 4 } }
-	modifier = { factor = 0.75 NOT = { learning = 6 } }
-	modifier = { factor = 0.75 NOT = { learning = 8 } }
+	modifier = { factor = 0.55 NOT = { learning = 1 } }
+	modifier = { factor = 0.60 NOT = { learning = 2 } }
+	modifier = { factor = 0.65 NOT = { learning = 3 } }
+	modifier = { factor = 0.70 NOT = { learning = 4 } }
+	modifier = { factor = 0.75 NOT = { learning = 5 } }
+	modifier = { factor = 0.80 NOT = { learning = 6 } }
+	modifier = { factor = 0.85 NOT = { learning = 7 } }
+	modifier = { factor = 0.90 NOT = { learning = 8 } }
+	modifier = { factor = 0.95 NOT = { learning = 9 } }
 	modifier = { factor = 1.15 learning = 10 }
 	modifier = { factor = 1.15 learning = 11 }
 	modifier = { factor = 1.15 learning = 12 }
 	modifier = { factor = 1.15 learning = 13 }
-	modifier = { factor = 1.10 learning = 14 }
-	modifier = { factor = 1.10 learning = 15 }
-	modifier = { factor = 1.10 learning = 16 }
-	modifier = { factor = 1.10 learning = 17 }
-	modifier = { factor = 1.10 learning = 18 }
-	modifier = { factor = 1.10 learning = 19 }
-	modifier = { factor = 1.05 learning = 20 }
-	modifier = { factor = 1.05 learning = 21 }
-	modifier = { factor = 1.05 learning = 22 }
+	modifier = { factor = 1.15 learning = 14 }
+	modifier = { factor = 1.20 learning = 15 }
+	modifier = { factor = 1.20 learning = 16 }
+	modifier = { factor = 1.20 learning = 17 }
+	modifier = { factor = 1.20 learning = 18 }
+	modifier = { factor = 1.20 learning = 19 }
+	modifier = { factor = 1.25 learning = 20 }
+	modifier = { factor = 1.25 learning = 21 }
+	modifier = { factor = 1.25 learning = 22 }
+	modifier = { factor = 1.25 learning = 23 }
+	modifier = { factor = 1.25 learning = 24 }
+	modifier = { factor = 1.30 learning = 25 }
+	modifier = { factor = 1.30 learning = 26 }
+	modifier = { factor = 1.30 learning = 27 }
+	modifier = { factor = 1.30 learning = 28 }
+	modifier = { factor = 1.30 learning = 29 }
+	modifier = { factor = 1.35 learning = 30 }
 }
