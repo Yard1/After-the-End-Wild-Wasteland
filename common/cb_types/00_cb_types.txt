@@ -495,7 +495,7 @@ other_claim = {
 			# Anti-Popes take all the gold of the Vatican.
 			if = {
 				limit = {
-					is_pope = yes
+					FROM = { holder_scope = { is_pope = yes } }
 				}
 				FROM = {
 					transfer_scaled_wealth = {
