@@ -10939,17 +10939,21 @@ eldership_rules = {
 			value = -200
 			is_female = no
 			FROMFROM = { holder_scope = { matriarchal_religion = yes } }
-			NOT = { FROMFROM = { holder_scope = { character = ROOT } } }
+			NOT = { FROMFROM = { holder_scope = { character = PREVPREV } } }
 		}
 		additive_modifier = {
 			value = -200
 			is_female = yes
 			FROMFROM = { holder_scope = { has_religion_feature = religion_patriarchal } }
-			NOT = { FROMFROM = { holder_scope = { character = ROOT } } }
+			NOT = { FROMFROM = { holder_scope = { character = PREVPREV } } }
 		}
 		additive_modifier = { #Ruler is also always an Elector.
-			value = 200
-			FROMFROM = { holder_scope = { character = ROOT } }
+			value = 205
+			FROMFROM = {
+				holder_scope = {
+					character = PREVPREV
+				}
+			}
 		}
 		additive_modifier = {
 			value = 4

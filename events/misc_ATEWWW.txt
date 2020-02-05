@@ -63,33 +63,7 @@ character_event = {
 					}
 				}
 				log = "miscATEWW.1: [FromFrom.GetBestName] is holy order or mercenary"
-				#all female
-				if = {
-					limit = {
-						FROMFROM = {
-							primary_title = {
-								has_law = enatic_succession
-							}
-						}
-					}
-					log = "miscATEWW.1: [Root.GetBestName] holy order/merc"
-					set_gender = female
-					add_trait = hidden_female_trait
-					remove_trait = hidden_male_trait
-					remove_trait = eunuch
-					if = {
-						limit = { religion = libertarian }
-						give_ROOT_random_female_libertarian_name = yes
-					}
-					else = {
-						give_ROOT_random_name = yes
-					}
-				}
-				else = {
-					#50/50
-					log = "miscATEWW.1: [Root.GetBestName] 50/50 holy order/merc"
-					character_event = { id = miscATEWW.5 }
-				}
+				character_event = { id = miscATEWW.5 }
 			}
 			else_if = {
 				limit = {
@@ -101,36 +75,8 @@ character_event = {
 						trait = mastermind_theologian
 					}
 				}
-				if = {
-					limit = {
-						FROMFROM = {
-							religion_allows_female_temple_holders = yes
-							religion_allows_male_temple_holders = no
-						}
-					}
-					log = "miscATEWW.1: [Root.GetBestName] priest"
-					set_gender = female
-					add_trait = hidden_female_trait
-					remove_trait = hidden_male_trait
-					remove_trait = eunuch
-					if = {
-						limit = { religion = libertarian }
-						give_ROOT_random_female_libertarian_name = yes
-					}
-					else = {
-						give_ROOT_random_name = yes
-					}
-				}
-				else_if = {
-					limit = {
-						FROMFROM = {
-							religion_allows_female_temple_holders = yes
-							religion_allows_male_temple_holders = yes
-						}
-					}
-					log = "miscATEWW.1: [Root.GetBestName] 50/50 priest"
-					character_event = { id = miscATEWW.5 }
-				}
+				log = "miscATEWW.1: [Root.GetBestName] is a priest"
+				character_event = { id = miscATEWW.5 }
 			}
 			else_if = {
 				limit = {
@@ -308,6 +254,10 @@ character_event = {
 					society = the_assassins
 				}
 			}
+			if = {
+				limit = { is_society_grandmaster = no }
+				set_society_grandmaster = yes
+			}
 		}
 		else_if = {
 			limit = { has_landed_title = d_libertarian }
@@ -407,6 +357,21 @@ character_event = {
 					}
 					add_trait = amazon_trait
 				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						OR = {
+							holy_order = yes
+							mercenary = yes
+						}
+						primary_title = {
+							has_law = enatic_succession
+						}
+					}
+					is_female = no
+				}
+				character_event = { id = miscATEWW.5 }
 			}
 			if = {
 				limit = {
@@ -647,6 +612,13 @@ character_event = {
 		OR = {
 			NOT = { has_global_flag = scenario_initialization }
 			is_landed = no
+			AND = {
+				is_ruler = yes
+				OR = {
+					holy_order = yes
+					mercenary = yes
+				}
+			}
 			lower_tier_than = DUKE
 		}
 		NOT = { father_even_if_dead = { always = yes } }
@@ -664,7 +636,16 @@ character_event = {
 		add_trait = hidden_female_trait
 		remove_trait = hidden_male_trait
 		remove_trait = eunuch
-		give_ROOT_random_name = yes
+		if = {
+			limit = {
+				holy_order = yes
+				religion = libertarian
+			}
+			give_ROOT_random_female_libertarian_name = yes
+		}
+		else = {
+			give_ROOT_random_name = yes
+		}
 		clr_character_flag = 80_20_female
 		ai_chance = {
 			factor = 50
