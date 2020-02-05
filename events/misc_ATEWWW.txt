@@ -636,15 +636,17 @@ character_event = {
 		add_trait = hidden_female_trait
 		remove_trait = hidden_male_trait
 		remove_trait = eunuch
-		if = {
-			limit = {
-				holy_order = yes
-				religion = libertarian
+		random_list = {
+			70 = {
+				trigger = {
+					holy_order = yes
+					religion = libertarian
+				}
+				give_ROOT_random_female_libertarian_name = yes
 			}
-			give_ROOT_random_female_libertarian_name = yes
-		}
-		else = {
-			give_ROOT_random_name = yes
+			30 = {
+				give_ROOT_random_name = yes
+			}
 		}
 		clr_character_flag = 80_20_female
 		ai_chance = {
